@@ -1,0 +1,29 @@
+<?
+$MESS["SPTEN_NO_PERMS2ADD"] = "Usted no tiene permisos para agregar un nuevo tipo de pagador  ";
+$MESS["SPTEN_NO_PERSON_TYPE"] = "El tipo de pagador ##ID# no fue encontrado";
+$MESS["SPTEN_ERROR_SAVING_PERSON_TYPE"] = "Error al guardar el tipo de pagador";
+$MESS["SPTEN_UPDATING"] = "Editar parámetros del tipo de pagador";
+$MESS["SPTEN_ADDING"] = "Agregar un nuevo tipo de pagador";
+$MESS["SPTEN_TO_LIST"] = "Tipos de pagador";
+$MESS["SPTEN_TIMESTAMP"] = "Fecha de última modifcación:";
+$MESS["SPTEN_SAVE"] = "Guardar";
+$MESS["SPTEN_SAVE_ADD"] = "Agregar";
+$MESS["SPTEN_APPLY"] = "Aplicar";
+$MESS["SPTEN_CANCEL"] = "Cancelar";
+$MESS["SPTEN_2FLIST"] = "Tipos de pagador";
+$MESS["SPTEN_NEW_PERSON_TYPE"] = "Crear un nuevo tipo de pagador";
+$MESS["SPTEN_DELETE_PERSON_TYPE"] = "Eliminar tipo de pagador";
+$MESS["SPTEN_DELETE_PERSON_TYPE_CONFIRM"] = "¿Está seguro que desea eliminar este tipo de pagador?";
+$MESS["SPTEN_TAB_PERSON_TYPE"] = "Tipo de pagador";
+$MESS["SPTEN_TAB_PERSON_TYPE_DESCR"] = "Parámetros de tipos de pagador";
+$MESS["SPTEN_NAME"] = "Nombre";
+$MESS["SPTEN_SITE"] = "Sitio";
+$MESS["SPTEN_PRICE"] = "Aplicable a órdenes";
+$MESS["SPTEN_PRICE_FROM"] = "desde";
+$MESS["SPTEN_PRICE_TO"] = "para";
+$MESS["SPTEN_PERSON_TYPE_VALUE"] = "Valor de descuento";
+$MESS["SPTEN_ACTIVE"] = "Activo";
+$MESS["SPTEN_SORT"] = "Índice de clasificación";
+$MESS["SPTEN_ERROR"] = "Error al guardar";
+$MESS["F_ACTIVE"] = "Activo";
+?>

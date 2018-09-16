@@ -1,0 +1,35 @@
+<?
+$MESS["VOTE_ADD_QUESTION"] = "Agregar una pregunta";
+$MESS["VOTE_PAGE_TITLE"] = "Lista de preguntas";
+$MESS["VOTE_VOTE_LIST"] = "Lista de encuestas";
+$MESS["VOTE_F_ACTIVE"] = "Activo:";
+$MESS["VOTE_F_DIAGRAM"] = "Incluir en gráfico:";
+$MESS["VOTE_F_QUESTION"] = "Pregunta:";
+$MESS["VOTE_PAGES"] = "Pregunta";
+$MESS["VOTE_TIMESTAMP_X"] = "Modificado";
+$MESS["VOTE_C_SORT"] = "Orden";
+$MESS["VOTE_DIAGRAM"] = "Gráfico";
+$MESS["VOTE_QUESTION"] = "Pregunta";
+$MESS["VOTE_FLT_ID"] = "Id de pregunta";
+$MESS["VOTE_DELETE"] = "borrar";
+$MESS["VOTE_ACTIVATE"] = "activado";
+$MESS["VOTE_DEACTIVATE"] = "desactivado";
+$MESS["VOTE_FLT_ACTIVE"] = "Actividad";
+$MESS["VOTE_FLT_DIAGRAM"] = "Incluido en el diagrama";
+$MESS["VOTE_SAVE_ERROR"] = "Error al escribir en la base de datos";
+$MESS["VOTE_CONFIRM_DEL_QUESTION"] = "¿Está seguro que desea borrar la pregunta?";
+$MESS["VOTE_ACTIVE"] = "Activar";
+$MESS["VOTE_ALL"] = "(todo)";
+$MESS["VOTE_YES"] = "si";
+$MESS["VOTE_NO"] = "no";
+$MESS["VOTE_CREATE"] = "Crear";
+$MESS["VOTE_NOT_FOUND"] = "ID de la encuesta es incorrecto";
+$MESS["VOTE_EXACT_MATCH"] = "Usar coincidencia exacta";
+$MESS["SAVE_ERROR"] = "Se produjo un error al guardar un objeto.";
+$MESS["DELETE_ERROR"] = "Se produjo un error al eliminar un objeto.";
+$MESS["VOTE_FLT_REQUIRED"] = "Pregunta obligatorio";
+$MESS["VOTE_F_REQUIRED"] = "Obligatorio";
+$MESS["VOTE_REQUIRED"] = "Obligatorio";
+$MESS["VOTE_BACK_TO_VOTE"] = "Ir a encuesta";
+$MESS["VOTE_IMAGE_ID"] = "Imagen de la encuesta";
+?>

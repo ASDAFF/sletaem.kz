@@ -1,0 +1,30 @@
+<?
+$MESS["USERTYPE_NAV"] = "Propiedades";
+$MESS["USERTYPE_ENTITY_ID"] = "Entidad";
+$MESS["USERTYPE_FIELD_NAME"] = "Nombre del campo";
+$MESS["USERTYPE_USER_TYPE_ID"] = "Tipo de base de datos";
+$MESS["USERTYPE_XML_ID"] = "XML_ID";
+$MESS["USERTYPE_SORT"] = "Clasificar";
+$MESS["USERTYPE_MULTIPLE"] = "Mult.";
+$MESS["USERTYPE_MANDATORY"] = "Req.";
+$MESS["USERTYPE_DELETE_CONF"] = "¿Está usted seguro que desea borrar esta entidad?";
+$MESS["USERTYPE_ADD_TITLE"] = "Agregar campo del cliente";
+$MESS["USERTYPE_TITLE"] = "Campos de cliente";
+$MESS["USERTYPE_F_FIND"] = "Buscar";
+$MESS["USERTYPE_DEL_ERROR"] = "Error al borrar el campo";
+$MESS["USERTYPE_UPDATE_ERROR"] = "Error al actualizar el campo";
+$MESS["USERTYPE_SHOW_FILTER"] = "Fijar filtro";
+$MESS["USERTYPE_SHOW_IN_LIST"] = "Mostrar";
+$MESS["USERTYPE_EDIT_IN_LIST"] = "Editar";
+$MESS["USERTYPE_IS_SEARCHABLE"] = "Buscabilidad";
+$MESS["USER_TYPE_FILTER_N"] = "no mostrar";
+$MESS["USER_TYPE_FILTER_I"] = "coincidencia exacta";
+$MESS["USER_TYPE_FILTER_E"] = "Comodines de búsqueda";
+$MESS["USER_TYPE_FILTER_S"] = "coincidencia parcial";
+$MESS["USERTYPE_BACK_URL_BUTTON"] = "Atrás";
+$MESS["MAIN_YES"] = "si";
+$MESS["MAIN_EDIT"] = "Modificar";
+$MESS["MAIN_DELETE"] = "Eliminar";
+$MESS["MAIN_ADD"] = "Agregar";
+$MESS["MAIN_ALL"] = "(todo)";
+?>

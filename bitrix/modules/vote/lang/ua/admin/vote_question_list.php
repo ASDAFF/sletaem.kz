@@ -1,0 +1,32 @@
+<?
+$MESS["VOTE_ADD_QUESTION"] = "Додати питання";
+$MESS["VOTE_VOTE_LIST"] = "Список опитувань";
+$MESS["VOTE_F_ACTIVE"] = "Активний:";
+$MESS["VOTE_F_DIAGRAM"] = "Включений до діаграми:";
+$MESS["VOTE_F_QUESTION"] = "Питання:";
+$MESS["VOTE_PAGES"] = "Питання";
+$MESS["VOTE_TIMESTAMP_X"] = "Змінено";
+$MESS["VOTE_C_SORT"] = "Сорт.";
+$MESS["VOTE_DIAGRAM"] = "Діагр.";
+$MESS["VOTE_QUESTION"] = "Питання";
+$MESS["VOTE_CONFIRM_DEL_QUESTION"] = "Ви впевнені, що бажаєте видалити питання?";
+$MESS["VOTE_FLT_ID"] = "з";
+$MESS["VOTE_FLT_ACTIVE"] = "Активність";
+$MESS["VOTE_FLT_DIAGRAM"] = "Включений до діаграми";
+$MESS["VOTE_DELETE"] = "видалити";
+$MESS["VOTE_ACTIVATE"] = "активувати";
+$MESS["VOTE_DEACTIVATE"] = "деактивувати";
+$MESS["VOTE_SAVE_ERROR"] = "Помилка запису до бази даних";
+$MESS["VOTE_NOT_FOUND"] = "Невірний ID опитування";
+$MESS["VOTE_YES"] = "так";
+$MESS["VOTE_NO"] = "ні";
+$MESS["VOTE_ALL"] = "(усі)";
+$MESS["VOTE_EXACT_MATCH"] = "Шукати точний збіг при фільтрації";
+$MESS["VOTE_CREATE"] = "Створити";
+$MESS["VOTE_ACTIVE"] = "Акт.";
+$MESS["SAVE_ERROR"] = "Помилка збереження";
+$MESS["DELETE_ERROR"] = "Помилка видалення";
+$MESS["VOTE_FLT_REQUIRED"] = "Обов'язкове питання";
+$MESS["VOTE_F_REQUIRED"] = "Обов'язкове";
+$MESS["VOTE_REQUIRED"] = "Обов'язкове";
+?>

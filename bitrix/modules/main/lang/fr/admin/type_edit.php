@@ -1,0 +1,32 @@
+<?
+$MESS["ADD"] = "Ajouter un modèle de messagerie";
+$MESS["MAIN_NEW_TEMPLATE"] = "Ajouter un modèle";
+$MESS["type_edit_add_message_template"] = "Ajouter un modèle de message";
+$MESS["LANG_FIELDS"] = "Au moins un champ linguistique doit être rempli";
+$MESS["EVENT_NAME_LANG"] = "Dénomination";
+$MESS["EVENT_DESCR_LANG"] = "Description";
+$MESS["MAIN_ERROR_SAVING"] = "Erreur de sauvegarde";
+$MESS["TEMPLATE_LIST_TITLE"] = "Accéder à la liste de modèles";
+$MESS["TEMPLATES_DESCR"] = "Liste de modèles";
+$MESS["RESET"] = "Annuler";
+$MESS["EVENT_SORT_LANG"] = "Classification";
+$MESS["SAVE"] = "Enregistrer les modifications";
+$MESS["RECORD_LIST"] = "Liste des types";
+$MESS["TEMPLATE_LIST"] = "Liste de modèles";
+$MESS["EVENT_NAME_TITLE"] = "Type d'événement";
+$MESS["TEMPLATES_TITLE"] = "Liste de modèles";
+$MESS["MAIN_DELETE_RECORD_CONF"] = "tes-vous sûr de vouloir effacer le type de courant y compris les modèles?";
+$MESS["MAIN_NEW_RECORD_TITLE"] = "Ajouter un nouveau type d'événement de messagerie";
+$MESS["MAIN_NEW_TEMPLATE_TITLE"] = "Ajouter un nouveau modèle de ce type d'événement";
+$MESS["MAIN_NEW_RECORD"] = "Ajouter un type";
+$MESS["NEW_TITLE"] = "Ajouter un nouvel événement";
+$MESS["ERROR_LANG_EMPTY"] = "Aucun paramètre de langue spécifiés";
+$MESS["RECORD_LIST_TITLE"] = "Accédez à la liste des événements par email";
+$MESS["EDIT_TITLE"] = "Modifier l'événement #TYPE#";
+$MESS["EVENT_NAME"] = "Email type d'événement";
+$MESS["EVENT_NAME_DESCR"] = "Email type d'événement";
+$MESS["MAIN_DELETE_RECORD"] = "Supprimer un type";
+$MESS["MAIN_DELETE_RECORD_TITLE"] = "Supprimer un type y compris les modèles";
+$MESS["LANG_PARAMS"] = "Paramètres de langue dépendait";
+$MESS["LANGUAGE_PARAMS"] = "Paramètres de langue dépendait";
+?>

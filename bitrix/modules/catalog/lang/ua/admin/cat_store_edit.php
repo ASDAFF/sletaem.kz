@@ -1,0 +1,31 @@
+<?
+$MESS["STORE_TITLE_UPDATE"] = "Редагування складу #ID#";
+$MESS["STORE_TITLE_ADD"] = "Новий склад";
+$MESS["STORE_LIST"] = "Список";
+$MESS["STORE_NEW"] = "Додати";
+$MESS["STORE_DELETE"] = "Видалити";
+$MESS["STORE_DELETE_CONFIRM"] = "Ви впевнені, що хочете видалити цей склад?";
+$MESS["STORE_TAB"] = "Склади";
+$MESS["STORE_TAB_DESCR"] = "Склад";
+$MESS["STORE_TITLE"] = "Назва";
+$MESS["STORE_ADDRESS"] = "Адреса";
+$MESS["STORE_DESCR"] = "Опис";
+$MESS["CVAT_SORT"] = "Сорт.";
+$MESS["STORE_IMAGE"] = "Зображення";
+$MESS["STORE_GPS_N"] = "GPS широта";
+$MESS["STORE_GPS_S"] = "GPS довгота";
+$MESS["STORE_PHONE"] = "Телефон";
+$MESS["STORE_SCHEDULE"] = "Графік роботи";
+$MESS["STORE_ACTIVE"] = "Активний";
+$MESS["ADDRESS_EMPTY"] = "Введіть адресу складу.";
+$MESS["CSTORE_SORT"] = "Сорт.";
+$MESS["STORE_SITE_ID"] = "Сайт";
+$MESS["STORE_SELECT_SITE_ID"] = "Виберіть сайт";
+$MESS["SHIPPING_CENTER"] = "Для відвантаження";
+$MESS["ISSUING_CENTER"] = "Пункт видачі";
+$MESS["CAT_FEATURE_NOT_ALLOW"] = "Даний функціонал не входить у Вашу редакцію продукту.";
+$MESS["STORE_E_USER_FIELDS_ADD_HREF"] = "Додати користувальницьку властивість";
+$MESS["STORE_SAVE_ERROR"] = "Помилка збереження складу";
+$MESS["STORE_CODE"] = "Символьний код";
+$MESS["STORE_XML_ID"] = "Зовнішній код";
+?>

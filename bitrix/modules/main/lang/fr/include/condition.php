@@ -1,0 +1,18 @@
+<?
+$MESS["MAIN_USERGROUPS"] = "Groupes de l'utilisateur";
+$MESS["MAIN_PERIOD_NOTE"] = "Si la frontière de la période n'est pas indiquée - la période est illimitée.";
+$MESS["MAIN_URL_FIELD"] = "Paramètre";
+$MESS["TYPES_URL"] = "Paramètres d'enregistrement";
+$MESS["TYPES_EMPTY_COND"] = "&lt;sans condition&gt;";
+$MESS["TYPES_FALSE_COND"] = "&lt;caher&gt;";
+$MESS["TYPES_EMPTY"] = "[sans condition]";
+$MESS["TYPES_FALSE"] = "[éteint]";
+$MESS["TYPES_PHP"] = "Expression PHP";
+$MESS["TYPES_UGROUPS"] = "Pour le groupe d'utilisateur";
+$MESS["TYPES_FOLDER"] = "Pour fichier ou un dossier";
+$MESS["TYPES_PERIOD"] = "Période de temps";
+$MESS["MAIN_PATH"] = "Chemin vers le fichier ou le dossier";
+$MESS["MAIN_URL_VALUE"] = "valeur";
+$MESS["MAIN_PERIOD_TO"] = "date de fin";
+$MESS["MAIN_PERIOD_FROM"] = "Date de début de";
+?>

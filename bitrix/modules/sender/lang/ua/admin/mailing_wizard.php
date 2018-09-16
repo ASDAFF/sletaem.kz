@@ -1,0 +1,34 @@
+<?
+$MESS["sender_wizard_title"] = "Майстер створення розсилок";
+$MESS["sender_wizard_step_mailing_title"] = "Вибір або створення розсилки";
+$MESS["sender_wizard_step_mailing_title_sub"] = "Основні параметри розсилки";
+$MESS["sender_wizard_step_mailing_group_title"] = "Вибір або створення групи";
+$MESS["sender_wizard_step_mailing_group_title_sub"] = "Вибір груп одержувачів";
+$MESS["sender_wizard_step_group_title"] = "Створення групи адрес";
+$MESS["sender_wizard_step_chain_title"] = "Створення випуску";
+$MESS["sender_wizard_step_chain_title_sub"] = "Шаблон повідомлення";
+$MESS["sender_wizard_step_chain_title_sub_desc"] = "Шаблон повідомлення дозволяє швидко створити і відправити лист. Для цього складіть поєднання стандартних блоків. Якщо зберегти цей шаблон, він з'явиться в папці «Мої шаблони» і ви зможете в подальшому використовувати його.";
+$MESS["sender_wizard_step_chain_send_type_title"] = "Розклад відправлення";
+$MESS["sender_wizard_step_mailing_bnt_next"] = "Наступний крок";
+$MESS["sender_wizard_step_mailing_bnt_end"] = "Зберегти і виконати";
+$MESS["sender_wizard_status_mailing"] = "Вибір або створення <br>розсилки";
+$MESS["sender_wizard_status_group"] = "Вибір або <br>створення групи";
+$MESS["sender_wizard_status_chain"] = "Створення <br>випуску";
+$MESS["sender_wizard_status_chain_send_type"] = "Розклад <br>розсилки";
+$MESS["sender_wizard_status_final"] = "Готово";
+$MESS["sender_wizard_text"] = "Майстер покроково допоможе вам створити розсилку. Ви можете створити нову або вибрати раніше створену розсилку зі списку.";
+$MESS["sender_wizard_step_mailing_existed_not_selected"] = "Ви не вибрали розсилку";
+$MESS["sender_wizard_step_mailing_field_new"] = "Створити нову розсилку";
+$MESS["sender_wizard_step_mailing_field_exist"] = "Вибрати розсилку";
+$MESS["sender_wizard_step_mailing_field_exist_list"] = "Вибрати зі списку ...";
+$MESS["sender_wizard_step_mailing_group_field_bnt_add"] = "Створити нову групу";
+$MESS["sender_group_conn_cnt"] = "Вибрано";
+$MESS["sender_wizard_access_denied"] = "Ви не можете скористатися майстром додавання, так як у вас права на читання.";
+$MESS["sender_wizard_step_trig_mailing_title"] = "Створення тригерної розсилки";
+$MESS["sender_wizard_step_trig_mailing_title_sub"] = "Вибір готових розсилок";
+$MESS["sender_wizard_step_trig_mailing_group_title"] = "Умови запуску і зупинки";
+$MESS["sender_wizard_status_trig_mailing"] = "Створення або редагування розсилки";
+$MESS["sender_wizard_status_trig_mailing_group"] = "Умови запуску";
+$MESS["sender_wizard_status_trig_chain"] = "Налаштування листів";
+$MESS["sender_wizard_step_trig_mailing_exist_title"] = "Зміна тригерної розсилки";
+?>

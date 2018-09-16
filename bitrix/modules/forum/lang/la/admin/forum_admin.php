@@ -1,0 +1,34 @@
+<?
+$MESS["FORUMS"] = "Foro";
+$MESS["NAV"] = "Foros";
+$MESS["ACTIVE"] = "Activar";
+$MESS["LAND"] = "Sitio";
+$MESS["SORT"] = "Orden";
+$MESS["NAME"] = "Nombre";
+$MESS["FORUM_EDIT"] = "Editar";
+$MESS["FORUM_DELETE"] = "Borrar";
+$MESS["DELETE_CONFIRM"] = "El foro será borrado irreversiblemente. Continuar?";
+$MESS["FA_NO_PERMS2UPDATE"] = "Permisos insuficientes para editar el foro";
+$MESS["FA_ERROR_UPDATE"] = "Error al actualizar el foro";
+$MESS["FA_DELETE_NO_PERMS"] = "Permisos insuficientes para borrar el foro";
+$MESS["FA_DELETE_ERROR"] = "Error al borrar el foro. Algunos datos son obligatorios y quizás existan cuyas prohibiciones desde la prohibición.";
+$MESS["FFAN_ADD_NEW"] = "Nuevo foro";
+$MESS["FFAN_ADD_NEW_ALT"] = "Oprimir para agregar un nuevo foro";
+$MESS["FFAN_SITE_ID"] = "Sitio";
+$MESS["FFAN_ALL"] = "Todos";
+$MESS["FFAN_YES"] = "Si";
+$MESS["FFAN_NO"] = "No";
+$MESS["FFAN_ACTIVE"] = "Activar";
+$MESS["FFAN_GROUP_ID"] = "Grupo del foro";
+$MESS["MAIN_ADMIN_LIST_CLEAR_HTML"] = "limpiar";
+$MESS["FORUM_GROUP_ID"] = "Grupo";
+$MESS["MODERATION"] = "Premoderación";
+$MESS["INDEXATION"] = "Indexación";
+$MESS["ORDER_BY"] = "Ordenar por";
+$MESS["ORDER_DIRECTION"] = "Orden de clasificación";
+$MESS["MAIN_ADMIN_LIST_SELECTED"] = "Seleccionado:";
+$MESS["MAIN_ADMIN_LIST_CHECKED"] = "Marcado:";
+$MESS["MAIN_ADMIN_LIST_DELETE"] = "eliminar";
+$MESS["MAIN_ADMIN_LIST_ACTIVATE"] = "activar";
+$MESS["MAIN_ADMIN_LIST_DEACTIVATE"] = "desactivar";
+?>

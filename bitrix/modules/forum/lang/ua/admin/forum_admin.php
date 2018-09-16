@@ -1,0 +1,34 @@
+<?
+$MESS["ACTIVE"] = "Активність";
+$MESS["FFAN_ACTIVE"] = "Активність";
+$MESS["FFAN_ALL"] = "Всі";
+$MESS["FORUM_GROUP_ID"] = "Група";
+$MESS["FFAN_GROUP_ID"] = "Група форумів";
+$MESS["FFAN_YES"] = "Так";
+$MESS["FORUM_EDIT"] = "Змінити";
+$MESS["NAME"] = "Ім'я";
+$MESS["INDEXATION"] = "Індексація";
+$MESS["FFAN_ADD_NEW_ALT"] = "Натисніть для додавання нового форума";
+$MESS["FA_NO_PERMS2UPDATE"] = "Недостатньо прав для зміни форуму з кодом";
+$MESS["FA_DELETE_NO_PERMS"] = "Недостатньо прав для видалення форуму";
+$MESS["FFAN_NO"] = "Ні";
+$MESS["FFAN_ADD_NEW"] = "Новий форум";
+$MESS["MAIN_ADMIN_LIST_CLEAR_HTML"] = "очистити кеш повідомлень форуму";
+$MESS["FA_ERROR_UPDATE"] = "Помилка відновлення форуму з кодом";
+$MESS["FA_DELETE_ERROR"] = "Помилка видалення форуму. Можливо є пов'язані з ним дані, які перешкоджають видаленню";
+$MESS["MODERATION"] = "Премодерація";
+$MESS["LAND"] = "Сайт";
+$MESS["FFAN_SITE_ID"] = "Сайт";
+$MESS["SORT"] = "Сорт.";
+$MESS["ORDER_BY"] = "Сорт. тем";
+$MESS["ORDER_DIRECTION"] = "Сорт. тем (напрямок)";
+$MESS["FORUMS"] = "Список форумів";
+$MESS["FORUM_DELETE"] = "Видалити";
+$MESS["DELETE_CONFIRM"] = "Форум буде видалений без можливості відновлення. Видалити?";
+$MESS["NAV"] = "Форуми";
+$MESS["MAIN_ADMIN_LIST_SELECTED"] = "Обрано:";
+$MESS["MAIN_ADMIN_LIST_CHECKED"] = "Позначено:";
+$MESS["MAIN_ADMIN_LIST_DELETE"] = "видалити";
+$MESS["MAIN_ADMIN_LIST_ACTIVATE"] = "активувати";
+$MESS["MAIN_ADMIN_LIST_DEACTIVATE"] = "деактивувати";
+?>

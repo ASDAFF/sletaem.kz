@@ -1,0 +1,29 @@
+<?
+$MESS["ACTIVE"] = "Ativo";
+$MESS["FFAN_ACTIVE"] = "Ativo";
+$MESS["FFAN_ALL"] = "Todos";
+$MESS["MAIN_ADMIN_LIST_CLEAR_HTML"] = "limpar";
+$MESS["FFAN_ADD_NEW_ALT"] = "Clique para adicionar um novo fórum";
+$MESS["FORUM_DELETE"] = "Excluir";
+$MESS["FORUM_EDIT"] = "Editar";
+$MESS["FA_DELETE_ERROR"] = "Erro ao excluir o fórum. Alguns dados ligados podem existir, o que o previne de ser excluído.";
+$MESS["FA_ERROR_UPDATE"] = "Erro ao atualizar o fórum";
+$MESS["FFAN_GROUP_ID"] = "Grupo do fórum";
+$MESS["FORUMS"] = "Fóruns";
+$MESS["NAV"] = "Fóruns";
+$MESS["FORUM_GROUP_ID"] = "Grupo";
+$MESS["INDEXATION"] = "Indexando";
+$MESS["FA_DELETE_NO_PERMS"] = "Permissões insuficientes para excluir o fórum";
+$MESS["FA_NO_PERMS2UPDATE"] = "Permissões insuficientes para editar o fórum";
+$MESS["NAME"] = "Nome:";
+$MESS["FFAN_ADD_NEW"] = "Novo fórum";
+$MESS["FFAN_NO"] = "Não";
+$MESS["MODERATION"] = "Pré-moderação";
+$MESS["FFAN_SITE_ID"] = "Site";
+$MESS["LAND"] = "Site";
+$MESS["ORDER_BY"] = "Ordenar por";
+$MESS["ORDER_DIRECTION"] = "Colocar em ordem";
+$MESS["SORT"] = "Ordenar";
+$MESS["DELETE_CONFIRM"] = "O fórum será excluído de forma irreversível. Continuar?";
+$MESS["FFAN_YES"] = "Sim";
+?>

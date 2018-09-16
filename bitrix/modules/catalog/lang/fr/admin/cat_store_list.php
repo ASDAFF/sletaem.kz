@@ -1,0 +1,29 @@
+<?
+$MESS["GPS_S"] = "Longitude GPS";
+$MESS["GPS_N"] = "Latitude GPS";
+$MESS["ADDRESS"] = "Adresse";
+$MESS["STORE_ACTIVE"] = "Actif(ve)";
+$MESS["DELETE_STORE_CONFIRM"] = "tes-vous sûr de vouloir supprimer l'entrepôt?";
+$MESS["SCHEDULE"] = "Heures";
+$MESS["DATE_MODIFY"] = "Date de modification";
+$MESS["DATE_CREATE"] = "Date de création";
+$MESS["SHIPPING_CENTER"] = "Pour l'expédition";
+$MESS["STORE_ADD_NEW"] = "Ajouter";
+$MESS["STORE_ADD_NEW_ALT"] = "Ajouter un nouveau stock";
+$MESS["STORE_IMAGE"] = "Image";
+$MESS["MODIFIED_BY"] = "Modifié(e)s par";
+$MESS["USER_ID"] = "Créé par";
+$MESS["TITLE"] = "Dénomination";
+$MESS["DESCRIPTION"] = "Description";
+$MESS["ISSUING_CENTER"] = "Point de délivrance";
+$MESS["EDIT_STORE_ALT"] = "Editer";
+$MESS["STORE_SITE_ID"] = "Site web";
+$MESS["STORE_TITLE"] = "Entrepôts";
+$MESS["group_admin_nav"] = "Entrepôts";
+$MESS["CSTORE_SORT"] = "Trier";
+$MESS["CAT_STORE_INDEX_TITLE"] = "Liste URL de la page (à partir de paramètres de blocage de l'information par défaut)";
+$MESS["PHONE"] = "Numéro de téléphone";
+$MESS["DELETE_STORE_ALT"] = "Supprimer";
+$MESS["STORE_CODE"] = "Code symbolique";
+$MESS["STORE_XML_ID"] = "ID externe";
+?>

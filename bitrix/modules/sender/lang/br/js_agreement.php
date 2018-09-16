@@ -1,0 +1,3 @@
+<?
+$MESS["SENDER_AGREEMENT_BUTTON_ACCEPT"] = "Concordo";
+?>

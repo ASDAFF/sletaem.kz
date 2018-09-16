@@ -1,0 +1,30 @@
+<?
+$MESS["TITLE"] = "Tipos de eventos de email";
+$MESS["SAVE_ERROR"] = "Error al modificar tipo de evento #";
+$MESS["DELETE_ERROR"] = "Error al borrar tipo de evento";
+$MESS["F_FILTER"] = "Filtro";
+$MESS["ACTIVE"] = "Activar";
+$MESS["LANG"] = "Idioma";
+$MESS["EVENT_TYPE"] = "Tipo";
+$MESS["EVENT_NAME"] = "Nombre";
+$MESS["EVENT_DESCRIPTION"] = "Descripción";
+$MESS["EVENT_TEMPLATES"] = "Plantillas";
+$MESS["SORT"] = "Clasificación";
+$MESS["ADD_TYPE"] = "Agregar tipo";
+$MESS["ADD_TYPE_TITLE"] = "Agregar tipo de evento de email";
+$MESS["DELETE_LANG"] = "Limpiar";
+$MESS["CONFIRM_DEL_MESSAGE"] = "¿Está usted seguro que desea limpiar los parámetros de idioma para tipo de evento de email?";
+$MESS["CONFIRM_DEL_ALL_MESSAGE"] = "¿Está usted seguro que desea borrar el tipo actual incluyendo plantillas?";
+$MESS["F_ID"] = "Identificador";
+$MESS["F_SEARCH"] = "Buscar";
+$MESS["F_SEARCH_TITLE"] = "Ingresar cadena de búsqueda para";
+$MESS["F_EVENT_NAME"] = "Tipo de evento de email";
+$MESS["F_NAME"] = "Tipo de nombre";
+$MESS["F_DESCRIPTION"] = "Tipo de descripción";
+$MESS["F_TYPE"] = "tipo de evento de email";
+$MESS["F_TMPL"] = "plantilla";
+$MESS["PAGES"] = "tipos de evento";
+$MESS["type_admin_edit_title"] = "Editar correo electrónico de avento";
+$MESS["MAIN_ADMIN_MENU_EDIT"] = "Editar";
+$MESS["MAIN_ADMIN_MENU_DELETE"] = "Eliminar";
+?>

@@ -1,0 +1,31 @@
+<?
+$MESS["calend_aug"] = "Août";
+$MESS["calend_apr"] = "Avril";
+$MESS["calend_su"] = "Dim";
+$MESS["calend_tu"] = "Mar";
+$MESS["calend_des"] = "Décembre";
+$MESS["calend_jul"] = "Juillet";
+$MESS["calend_jun"] = "Juin";
+$MESS["calend_title"] = "Calendrier";
+$MESS["calend_may"] = "Mai";
+$MESS["calend_mar"] = "Mars";
+$MESS["calend_nov"] = "Novembre";
+$MESS["calend_okt"] = "Octobre";
+$MESS["calend_mo"] = "Lun";
+$MESS["calend_prev_mon"] = "Mois précédent";
+$MESS["calend_fr"] = "Ven";
+$MESS["calend_sa"] = "Sam";
+$MESS["calend_sep"] = "Septembre";
+$MESS["calend_next_mon"] = "Mois suivant";
+$MESS["calend_we"] = "Mer";
+$MESS["calend_feb"] = "Février";
+$MESS["calend_th"] = "Jeu";
+$MESS["calend_jan"] = "Janvier";
+$MESS["calend_date"] = "Date d'insertion";
+$MESS["calend_curr"] = "Aller au mois en cours";
+$MESS["calend_per_year"] = "Période: année";
+$MESS["calend_per_mon"] = "Période: mois";
+$MESS["calend_per_week"] = "Période: semaine";
+$MESS["calend_prev_year"] = "Afficher l'année précédente";
+$MESS["calend_next_year"] = "Afficher l'année prochaine";
+?>

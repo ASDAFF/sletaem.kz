@@ -1,0 +1,36 @@
+<?
+$MESS["LETTER"] = "Caractère";
+$MESS["KERNEL"] = "Module principal";
+$MESS["MAIN_YES"] = "oui";
+$MESS["ADD"] = "Ajouter";
+$MESS["MAIN_NEW_RECORD"] = "Ajouter";
+$MESS["MAIN_COPY_RECORD"] = "Copie";
+$MESS["TASK_BINDING_MODULE"] = "Module";
+$MESS["TASK_NONE_OPERATIONS"] = "Le module '#MODULE_ID#' ne contient pas d'opérations ayant le rattachement '#BINDING#'";
+$MESS["MODULE_ID"] = "Module:";
+$MESS["NAME"] = "Dénomination:";
+$MESS["TAB_2_TITLE"] = "Opérations qui ont un niveau d'accès donné";
+$MESS["DESCRIPTION"] = "Description";
+$MESS["TAB_1"] = "Paramètres";
+$MESS["TBL_GROUP_DATE"] = "Période d'activité";
+$MESS["TASK_BINDING"] = "Objet cible";
+$MESS["RESET"] = "Annuler";
+$MESS["TASK_NAME_WARNING"] = "L'identifiant symboles n'est pas entré, mais il est déjà utilisé dans le système";
+$MESS["STRING_ID"] = "Identificateur de caractères:";
+$MESS["SYS_TITLE"] = "Systémique";
+$MESS["SAVE"] = "Enregistrer les modifications";
+$MESS["MAIN_DELETE_RECORD"] = "Supprimer";
+$MESS["RECORD_LIST"] = "Niveaux d'accès";
+$MESS["DEFAULT"] = "< par défaut >";
+$MESS["TAB_2"] = "Opérations";
+$MESS["MAIN_DELETE_RECORD_CONF"] = "tes-vous sûr de vouloir supprimer ce niveau d'accès?";
+$MESS["MAIN_NEW_RECORD_TITLE"] = "Ajoute un nouveau niveau d'accès";
+$MESS["NEW_TASK_TITLE"] = "Ajouter un niveau d'accès";
+$MESS["MAIN_COPY_RECORD_TITLE"] = "Niveau d'accès actuel doublons";
+$MESS["TASK_SAVE_ERROR"] = "Enregistrement de la tâche erreur";
+$MESS["TAB_1_TITLE"] = "Paramètres du niveau d'accès";
+$MESS["RECORD_LIST_TITLE"] = "Affiche tous les niveaux d'accès";
+$MESS["EDIT_TASK_TITLE"] = "Modifier les niveaux d'accès pour les # #ID#";
+$MESS["MAIN_DELETE_RECORD_TITLE"] = "Supprime niveau d'accès actuel";
+$MESS["TASK_BINDING_FILE"] = "Dossier / Fichiers";
+?>

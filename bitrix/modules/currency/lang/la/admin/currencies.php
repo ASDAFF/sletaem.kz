@@ -1,0 +1,31 @@
+<?
+$MESS["CURRENCY_SAVE_ERR"] = "Error al actualizar la moneda #ID#: #ERROR_TEXT#";
+$MESS["CURRENCY_SAVE_ERR2"] = "Error al actualizar la moneda #ID#";
+$MESS["currency_err1"] = "Error al eliminar la moneda.";
+$MESS["currency_err2"] = "Error de configuración de la moneda base.";
+$MESS["CURRENCY_TITLE"] = "Monedas";
+$MESS["currency_curr"] = "Moneda";
+$MESS["CURRENCY_FULL_NAME"] = "Nombre";
+$MESS["currency_sort"] = "Ordenar";
+$MESS["currency_rate_cnt"] = "Importe";
+$MESS["currency_rate"] = "Tasa predeterminada";
+$MESS["CURRENCY_A_EDIT"] = "Editar propiedades de la moneda";
+$MESS["CURRENCY_A_EDIT_TITLE"] = "Editar propiedades de la moneda";
+$MESS["currency_add"] = "Agregar nueva moneda";
+$MESS["currency_list"] = "Tipos de cambio de moneda";
+$MESS["CURRENCY_CODES_ISO_STANDART"] = "Consulte <a target=\"_blank\" href=\"#ISO_LINK#\">ISO 4217</a> estándar para los posibles códigos de moneda.";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_BASE"] = "Base";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_NUMCODE"] = "Código numérico";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_DATE_UPDATE"] = "Modificado el ";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_MODIFIED_BY"] = "Modificado por";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_CREATED_BY"] = "Creado por ";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_DATE_CREATE"] = "Creado el ";
+$MESS["BASE_CURRENCY_YES"] = "si";
+$MESS["BASE_CURRENCY_NO"] = "no ";
+$MESS["CURRENCY_SET_BASE"] = "Marcar moneda base";
+$MESS["CURRENCY_SET_BASE_TITLE"] = "Utilice esta moneda como moneda base";
+$MESS["CONFIRM_SET_BASE_MESSAGE"] = "¿Está seguro que desea establecer esta moneda como base?";
+$MESS["CONFIRM_DEL_MESSAGE"] = "¿Está seguro de que desea eliminar esta moneda?";
+$MESS["currency_add_from_classifier"] = "Agregar desde el registro del código";
+$MESS["currency_add_from_classifier_title"] = "Agregar la moneda desde el registro del código";
+?>

@@ -1,0 +1,35 @@
+<?
+$MESS["VOTE_C_SORT"] = "Ordenar.";
+$MESS["VOTE_F_SITE"] = "Sites:";
+$MESS["VOTE_SITE"] = "Sites";
+$MESS["VOTE_PAGE_TITLE"] = "Lista de canais de enquete";
+$MESS["VOTE_F_SID"] = "Código Mnemônico:";
+$MESS["VOTE_PAGES"] = "Canais";
+$MESS["VOTE_SID"] = "Código Mnemônico:";
+$MESS["VOTE_CONFIRM_DEL_CHANNEL"] = "Tem certeza de que deseja excluir o canal de votação e as urnas estão incluídas?";
+$MESS["VOTE_VOTES"] = "Enquetes";
+$MESS["VOTE_TIMESTAMP"] = "Modificado";
+$MESS["VOTE_F_ACTIVE"] = "Ativo:";
+$MESS["VOTE_FLT_ID"] = "ID do grupo";
+$MESS["VOTE_FLT_ACTIVE"] = "Atividade";
+$MESS["VOTE_ADD_GROUP_TITLE"] = "Clique para adicionar um novo canal de enquete";
+$MESS["VOTE_SITE_EDIT"] = "Modificar as configurações do site";
+$MESS["VOTE_OPEN_VOTES"] = "Lista de votações abertas";
+$MESS["VOTE_ADD_VOTE"] = "Adicionar uma enquete para um canal de pesquisa";
+$MESS["VOTE_SAVE_ERROR"] = "Erro ao gravar no banco de dados";
+$MESS["VOTE_DELETE"] = "excluir";
+$MESS["VOTE_ACTIVATE"] = "ativar";
+$MESS["VOTE_DEACTIVATE"] = "desativar";
+$MESS["VOTE_EDIT_TITLE"] = "Modificar as configurações de canal de votação";
+$MESS["VOTE_YES"] = "Sim";
+$MESS["VOTE_NO"] = "Não";
+$MESS["VOTE_ALL"] = "(Todos)";
+$MESS["VOTE_TITLE"] = "Título";
+$MESS["VOTE_EXACT_MATCH"] = "Usar a correspondência exata";
+$MESS["VOTE_CREATE"] = "Criar";
+$MESS["VOTE_ACTIVE"] = "Ativo";
+$MESS["VOTE_HIDDEN"] = "Escondido";
+$MESS["VOTE_F_TITLE"] = "Título:";
+$MESS["DELETE_ERROR"] = "Ocorreu um erro ao excluir um objeto.";
+$MESS["SAVE_ERROR"] = "Ocorreu um erro ao salvar um objeto.";
+?>

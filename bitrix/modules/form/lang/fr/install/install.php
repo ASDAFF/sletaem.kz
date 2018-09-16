@@ -1,0 +1,29 @@
+<?
+$MESS["FORM_MODULE_NAME"] = "Formulaires web";
+$MESS["FORM_NO"] = "Non";
+$MESS["FORM_YOU_CAN_SAVE_TABLES"] = "Vous pouvez stocker des données dans les tables de la base de données, si vous installez le drapeau &quot;Sauvegarder les tables&quot;";
+$MESS["FORM_SAVE_TABLES"] = "Sauvegarder les tables";
+$MESS["FORM_BACK"] = "Retourner";
+$MESS["FORM_INSTALL"] = "Installer";
+$MESS["FORM_DENIED"] = "L'L'accès est refusé";
+$MESS["FORM_FULL"] = "Accès complet";
+$MESS["FORM_DEMO_DIR"] = "Vous pouvez voir le fonctionnement des fichiers démonstratifs à l'aide des liens suivants:";
+$MESS["FORM_RESET"] = "Réinitialiser";
+$MESS["FORM_SITE"] = "Site";
+$MESS["FORM_LINK"] = "Référence";
+$MESS["COPY_PUBLIC_FILES"] = "Copier les fichiers publiques";
+$MESS["COPY_FOLDER"] = "Dossier dans lequel seront copiés des fichiers (par rapport à la racine du site)";
+$MESS["INSTALL_PUBLIC_REW"] = "Remplacer les fichiers existants";
+$MESS["FORM_OPENED"] = "accès autorisé";
+$MESS["FORM_ERRORS"] = "Erreurs :";
+$MESS["FORM_URL_PUBLIC"] = "Dossier pour les fichiers démo :";
+$MESS["FORM_COMPLETE"] = "Installation terminée.";
+$MESS["FORM_SELECT_INITITAL"] = "Veuillez sélectionner le dossier pour les fichiers démo :";
+$MESS["FORM_MODULE_DESCRIPTION"] = "Ce module gère divers formulaire web et vous permet de stocker et de filtrer les données des formulaires remplis.";
+$MESS["FORM_WRONG_MAIN_VERSION"] = "Pour installer ce module, vous devez mettre à niveau le noyau du système et passer à la version #VER#";
+$MESS["FORM_DELETE"] = "Désinstaller";
+$MESS["FORM_DELETE_COMLETE"] = "Désinstallation terminée";
+$MESS["FORM_ATTENTION"] = "Attention ! Le module va être désinstallé.";
+$MESS["FORM_INSTALL_TITLE"] = "Installation du module Formulaires web";
+$MESS["FORM_UNINSTALL_TITLE"] = "Désinstallation du module Formulaires web";
+?>

@@ -1,0 +1,4 @@
+<?
+$MESS["EVENT_LIST_USER_FIELD"] = "Employé";
+$MESS["EVENT_LIST_DATE_FIELD"] = "Date";
+?>

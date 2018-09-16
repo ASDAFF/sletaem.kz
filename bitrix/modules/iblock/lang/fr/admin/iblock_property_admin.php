@@ -1,0 +1,36 @@
+<?
+$MESS["IBP_ADM_TITLE"] = "#IBLOCK_NAME#: Propriétés";
+$MESS["IBLOCK_ALL"] = "(n'importe lesquel(el)s)";
+$MESS["IBP_ADM_ID"] = "ID";
+$MESS["MAIN_ADMIN_LIST_ACTIVATE"] = "activer";
+$MESS["IBP_ADM_ACTIVE"] = "Actif(ve)";
+$MESS["IBP_ADM_CONFIRM_DEL_MESSAGE"] = "Toutes les valeurs de cette propriété seront effacées. Continuer ?";
+$MESS["IBP_ADM_XML_ID"] = "ID externe";
+$MESS["IBLOCK_YES"] = "Oui";
+$MESS["IBP_ADM_TO_ADD_TITLE"] = "Ajouter un nouveau  propriété";
+$MESS["IBP_ADM_TO_ADD"] = "Ajouter une  propriété";
+$MESS["IBP_ADM_WITH_DESCRIPTION"] = "A une description";
+$MESS["IBP_ADM_MULTIPLE"] = "Multiple";
+$MESS["IBP_ADM_NAME"] = "Dénomination";
+$MESS["IBP_ADM_IS_REQUIRED"] = "Oblig.";
+$MESS["IBP_ADM_SAVE_ERROR"] = "Erreur de sauvegarde de note ##ID#: #ERROR_TEXT#";
+$MESS["IBP_ADM_DELETE_ERROR"] = "Chec de suppression.";
+$MESS["IBP_ADM_HINT"] = "Invite";
+$MESS["IBP_ADM_SEARCHABLE"] = "Recherche";
+$MESS["IBP_ADM_FILTRABLE"] = "Montrer dans le filtre";
+$MESS["IBP_ADM_PAGER"] = "Propriétés";
+$MESS["IBP_ADM_CODE"] = "Code symbolique";
+$MESS["IBP_ADM_SORT"] = "Trier";
+$MESS["IBP_ADM_PROPERTY_TYPE"] = "Entité";
+$MESS["MAIN_ADMIN_LIST_DELETE"] = "supprimer";
+$MESS["IBLOCK_PROP_F"] = "Fichier";
+$MESS["MAIN_ADMIN_LIST_SELECTED"] = "Sélectionné:";
+$MESS["MAIN_ADMIN_LIST_DEACTIVATE"] = "Désactiver";
+$MESS["IBLOCK_NO"] = "Non";
+$MESS["MAIN_ADMIN_LIST_CHECKED"] = "Coché:";
+$MESS["IBLOCK_PROP_G"] = "Liste des rubriques à rattacher";
+$MESS["IBLOCK_PROP_E"] = "Rattachement aux éléments";
+$MESS["IBLOCK_PROP_L"] = "Liste";
+$MESS["IBLOCK_PROP_S"] = "Ligne";
+$MESS["IBLOCK_PROP_N"] = "Chiffre";
+?>

@@ -1,0 +1,29 @@
+<?
+$MESS["SPTEN_NO_PERMS2ADD"] = "У вас недостатньо прав для додавання нового типу платника";
+$MESS["SPTEN_NO_PERSON_TYPE"] = "Тип платника ##ID# не знайдений";
+$MESS["SPTEN_ERROR_SAVING_PERSON_TYPE"] = "Помилка збереження типу платника";
+$MESS["SPTEN_UPDATING"] = "Змінення параметрів типу платника";
+$MESS["SPTEN_ADDING"] = "Додавання нового типу платника";
+$MESS["SPTEN_TO_LIST"] = "Список типів платників";
+$MESS["SPTEN_TIMESTAMP"] = "Дата останнього змінення:";
+$MESS["SPTEN_SAVE"] = "Зберегти";
+$MESS["SPTEN_SAVE_ADD"] = "Додати";
+$MESS["SPTEN_APPLY"] = "Застосувати";
+$MESS["SPTEN_CANCEL"] = "Скинути";
+$MESS["SPTEN_2FLIST"] = "Список типів платників";
+$MESS["SPTEN_NEW_PERSON_TYPE"] = "Створити новий тип";
+$MESS["SPTEN_DELETE_PERSON_TYPE"] = "Видалити тип";
+$MESS["SPTEN_DELETE_PERSON_TYPE_CONFIRM"] = "Ви впевнені, що хочете видалити цей тип платника?";
+$MESS["SPTEN_TAB_PERSON_TYPE"] = "Тип платника";
+$MESS["SPTEN_TAB_PERSON_TYPE_DESCR"] = "Параметри типу платника";
+$MESS["SPTEN_NAME"] = "Назва";
+$MESS["SPTEN_SITE"] = "Сайт";
+$MESS["SPTEN_PRICE"] = "Застосовується при сумі замовлення";
+$MESS["SPTEN_PRICE_FROM"] = "від";
+$MESS["SPTEN_PRICE_TO"] = "до";
+$MESS["SPTEN_PERSON_TYPE_VALUE"] = "Величина знижки";
+$MESS["SPTEN_ACTIVE"] = "Активність";
+$MESS["SPTEN_SORT"] = "Індекс сортування";
+$MESS["SPTEN_ERROR"] = "Помилка збереження";
+$MESS["F_ACTIVE"] = "Активність";
+?>

@@ -1,0 +1,29 @@
+<?
+$MESS["GROUP_TITLE"] = "Tipos de preços";
+$MESS["ADD_GROUP"] = "Adicionar";
+$MESS["GROUP_PAGES"] = "Tipos";
+$MESS["ACTIONS"] = "Ações";
+$MESS["NAME"] = "Nome";
+$MESS["BASE"] = "Base";
+$MESS["BASE_YES"] = "Sim";
+$MESS["EDIT_STATUS_ALT"] = "Modificar tipo";
+$MESS["EDIT"] = "Modificar";
+$MESS["DELETE_STATUS_ALT"] = "Deletar tipo de preço";
+$MESS["DELETE"] = "Deletar ";
+$MESS["DELETE_STATUS_CONFIRM"] = "Você tem certeza que deseja deletar este tipo de preço?";
+$MESS["RESET"] = "Resetar";
+$MESS["SAVE"] = "Salvar";
+$MESS["SORT"] = "Classificar";
+$MESS["ERROR_DELETING_TYPE"] = "Erro ao deletar o tipo de preço.";
+$MESS["ERROR_UPDATING_REC"] = "Erro ao atualizar o registro";
+$MESS["CODE"] = "Código";
+$MESS["CGAN_ADD_NEW"] = "Novo tipo de preço";
+$MESS["CGAN_ADD_NEW_ALT"] = "Clique para adicionar um novo tipo de preço";
+$MESS["group_admin_nav"] = "Tipos";
+$MESS["BT_CAT_GROUP_ADM_TITLE_XML_ID"] = "ID externa";
+$MESS["BT_CAT_GROUP_ADM_LANG_MESS"] = "#LANG#: #VALUE#";
+$MESS["BT_CAT_GROUP_ADM_TITLE_MODIFIED_BY"] = "Modificado por";
+$MESS["BT_CAT_GROUP_ADM_TITLE_TIMESTAMP_X"] = "Modificado em";
+$MESS["BT_CAT_GROUP_ADM_TITLE_CREATED_BY"] = "Criado por";
+$MESS["BT_CAT_GROUP_ADM_TITLE_DATE_CREATE"] = "Criado em";
+?>

@@ -1,0 +1,36 @@
+<?
+$MESS["DEFAULT"] = "< padrão >";
+$MESS["TAB_1_TITLE"] = "Parâmetros de nível de acesso";
+$MESS["RECORD_LIST"] = "Níveis de Acesso";
+$MESS["TBL_GROUP_DATE"] = "Período ativo";
+$MESS["ADD"] = "Adicionar";
+$MESS["MAIN_NEW_RECORD"] = "Adicionar";
+$MESS["NEW_TASK_TITLE"] = "Adicionar nível de acesso";
+$MESS["MAIN_NEW_RECORD_TITLE"] = "Adiciona um novo nível de acesso";
+$MESS["MAIN_DELETE_RECORD_CONF"] = "Tem certeza de que deseja excluir este nível de acesso?";
+$MESS["TASK_BINDING"] = "Vínculando";
+$MESS["MAIN_COPY_RECORD"] = "Copiar";
+$MESS["MAIN_DELETE_RECORD"] = "Excluir";
+$MESS["MAIN_DELETE_RECORD_TITLE"] = "Exclui nível de acesso atual";
+$MESS["DESCRIPTION"] = "Descrição: ";
+$MESS["RECORD_LIST_TITLE"] = "Exibe todos os níveis de acesso";
+$MESS["MAIN_COPY_RECORD_TITLE"] = "Duplicatas no nível de acesso atual";
+$MESS["EDIT_TASK_TITLE"] = "Editar níveis de acesso para # #ID#";
+$MESS["TASK_SAVE_ERROR"] = "Erro ao salvar a tarefa";
+$MESS["TASK_BINDING_FILE"] = "Arquivo/pasta";
+$MESS["SYS_TITLE"] = "o sistema";
+$MESS["KERNEL"] = "Módulo do kernel";
+$MESS["LETTER"] = "Carta";
+$MESS["TASK_BINDING_MODULE"] = "Módulo";
+$MESS["TASK_NONE_OPERATIONS"] = "Módulo \"#MODULE_ID#\" não tem operações com a vinculação \"#BINDING#\"";
+$MESS["MODULE_ID"] = "Módulo:";
+$MESS["NAME"] = "Nome:";
+$MESS["TAB_2"] = "Operações";
+$MESS["TAB_2_TITLE"] = "Operações que estão sob controle deste nível de acesso";
+$MESS["TAB_1"] = "Parâmetros";
+$MESS["RESET"] = "Redefinir";
+$MESS["SAVE"] = "Salvar alterações";
+$MESS["STRING_ID"] = "ID simbólico:";
+$MESS["TASK_NAME_WARNING"] = "O ID simbólico não foi fornecido ou já existe no sistema";
+$MESS["MAIN_YES"] = "Sim";
+?>

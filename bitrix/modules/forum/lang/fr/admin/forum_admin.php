@@ -1,0 +1,34 @@
+<?
+$MESS["MAIN_ADMIN_LIST_ACTIVATE"] = "activer";
+$MESS["ACTIVE"] = "Actif(ve)";
+$MESS["FFAN_ACTIVE"] = "Actif(ve)";
+$MESS["FFAN_ALL"] = "Tous";
+$MESS["FORUM_GROUP_ID"] = "Groupe";
+$MESS["FFAN_YES"] = "Oui";
+$MESS["FORUM_EDIT"] = "Editer";
+$MESS["NAME"] = "Dénomination";
+$MESS["INDEXATION"] = "Indexation";
+$MESS["FA_NO_PERMS2UPDATE"] = "Droits insuffisants pour modifier le forum avec code";
+$MESS["FA_DELETE_NO_PERMS"] = "Vous ne disposez pas de droits requis pour supprimer le forum";
+$MESS["FFAN_NO"] = "Non";
+$MESS["MODERATION"] = "Pré-modération";
+$MESS["LAND"] = "Site";
+$MESS["FFAN_SITE_ID"] = "Site";
+$MESS["SORT"] = "Classification";
+$MESS["ORDER_BY"] = "Mettre en ordre";
+$MESS["ORDER_DIRECTION"] = "Tri des thèmes (ordre)";
+$MESS["FORUM_DELETE"] = "Supprimer";
+$MESS["MAIN_ADMIN_LIST_DELETE"] = "supprimer";
+$MESS["NAV"] = "Forums";
+$MESS["MAIN_ADMIN_LIST_SELECTED"] = "Sélectionné:";
+$MESS["MAIN_ADMIN_LIST_DEACTIVATE"] = "Désactiver";
+$MESS["FFAN_ADD_NEW"] = "Créer un nouveau forum";
+$MESS["MAIN_ADMIN_LIST_CHECKED"] = "Coché:";
+$MESS["FORUMS"] = "Forums";
+$MESS["FFAN_GROUP_ID"] = "Groupe Forum";
+$MESS["FFAN_ADD_NEW_ALT"] = "Cliquez sur pour ajouter un nouveau forum";
+$MESS["FA_ERROR_UPDATE"] = "Erreur de mise à jour du forum";
+$MESS["FA_DELETE_ERROR"] = "Erreur de suppression du forum. Certaines données liées peuvent exister qui lui interdit de suppression.";
+$MESS["DELETE_CONFIRM"] = "Le forum sera supprimé de façon irréversible. Continuer?";
+$MESS["MAIN_ADMIN_LIST_CLEAR_HTML"] = "claire";
+?>

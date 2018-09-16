@@ -1,0 +1,30 @@
+<?
+$MESS["TRANS_TITLE"] = "Переклад повідомлень";
+$MESS["TRANS_TITLE_TITLE"] = "Переклад мовних повідомлень";
+$MESS["TRANS_FOLDERS_LIST"] = "Список папок";
+$MESS["TRANS_FILENAME"] = "Ім'я файла:";
+$MESS["TRANS_NOT_TRANS"] = "Не перекладено:";
+$MESS["TRANS_SAVE"] = "Зберегти";
+$MESS["TRANS_RESET"] = "Скинути";
+$MESS["TRANS_TOTAL"] = "Усього повідомлень:";
+$MESS["TRANS_DELETE"] = "видалити:";
+$MESS["TRANS_SHOW_ONLY_ERROR"] = "Показати тільки неперекладені";
+$MESS["TRANS_SHOW_ALL"] = "Показати усі повідомлення";
+$MESS["TRANS_SHOW_ALL_TITLE"] = "Натисніть для показу всіх мовних повідомлень";
+$MESS["TRANS_SHOW_ONLY_ERROR_TITLE"] = "Натисніть для показу тільки неперекладених мовних повідомлень";
+$MESS["TRANS_LIST"] = "Список";
+$MESS["TRANS_LIST_TITLE"] = "Натисніть для повернення до списку";
+$MESS["TRANS_CHAIN_FOLDER_ROOT"] = "Натисніть для переходу в кореневу папку";
+$MESS["TRANS_CHAIN_FOLDER"] = "Натисніть для переходу в папку";
+$MESS["TRANS_DELETE_ALL"] = "Видалити все:";
+$MESS["trans_edit_err"] = "Некоректне ім'я файлу.";
+$MESS["TR_FILE_EDIT"] = "Редагувати PHP";
+$MESS["TR_FILE_EDIT_TITLE"] = "Редагувати PHP";
+$MESS["TR_FILE_SHOW"] = "Показати PHP код";
+$MESS["TR_FILE_SHOW_TITLE"] = "Показати PHP код";
+$MESS["TR_CREATE_BACKUP_ERROR"] = "Не вдалося створити бекап файлу \"%FILE%\"";
+$MESS["TRANS_DELETE_CURRENT"] = "Видалити повідомлення, переклад яких відсутній для поточної мови:";
+$MESS["TR_FILE_PHP"] = "PHP код";
+$MESS["TRANS_GET_UNTRANSLATE"] = "Вивантажити непереведені повідомлення";
+$MESS["TRANS_GET_UNTRANSLATE_TITLE"] = "Вивантажити непереведені фрази цього файлу";
+?>

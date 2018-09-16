@@ -1,0 +1,1 @@
+<a href="mailto:info@sletaem.kz">info@sletaem.kz</a>

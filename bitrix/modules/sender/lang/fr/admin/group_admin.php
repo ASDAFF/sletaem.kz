@@ -1,0 +1,31 @@
+<?
+$MESS["rub_edit"] = "Modifier";
+$MESS["rub_title"] = "Groupes De Bénéficiaires";
+$MESS["rub_del_err"] = "Impossible de supprimer le groupe.";
+$MESS["rub_nav"] = "Les groupes";
+$MESS["rub_name"] = "Nom";
+$MESS["rub_code"] = "Code symbolique";
+$MESS["rub_sort"] = "Tri";
+$MESS["rub_act"] = "Active";
+$MESS["rub_del"] = "Supprimer";
+$MESS["rub_save_error"] = "Erreur de mise à jour du groupe:";
+$MESS["rub_no_rubric"] = "Le groupe n'a pas été trouvé.";
+$MESS["POST_ADD_TITLE"] = "Cliquez sur pour ajouter un nouveau groupe de bénéficiaires";
+$MESS["rub_f_active"] = "Active";
+$MESS["rub_f_find"] = "Recherche";
+$MESS["rub_f_find_title"] = "Saisissez le texte à rechercher";
+$MESS["rub_del_conf"] = "Supprimer le groupe?";
+$MESS["rub_f_name"] = "Nom";
+$MESS["sender_group_adm_addr_cnt"] = "Le nombre Total de destinataires";
+$MESS["sender_group_adm_flt_mailing"] = "Newsletter";
+$MESS["sender_group_adm_flt_mailing_include"] = "exclure des groupes";
+$MESS["POST_U_YES"] = "Oui";
+$MESS["POST_U_NO"] = "Pas de";
+$MESS["MAIN_ADMIN_LIST_SELECTED"] = "Sélectionné:";
+$MESS["MAIN_ADD"] = "Ajouter";
+$MESS["MAIN_ADMIN_LIST_CHECKED"] = "Cochée:";
+$MESS["MAIN_ALL"] = "(tous)";
+$MESS["MAIN_ADMIN_LIST_DELETE"] = "supprimer";
+$MESS["MAIN_ADMIN_LIST_ACTIVATE"] = "activer";
+$MESS["MAIN_ADMIN_LIST_DEACTIVATE"] = "désactiver";
+?>

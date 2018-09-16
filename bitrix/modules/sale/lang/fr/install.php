@@ -1,0 +1,37 @@
+<?
+$MESS["SALE_INSTALL_BACK"] = "Revenir à la commande des modules";
+$MESS["SALE_UNINSTALL_WARNING"] = "Attention ! Le module sera supprimé du système.";
+$MESS["SALE_UNINSTALL_SAVEDATA"] = "Vous pouvez stocker des données dans les tables de la base de données, si vous installez le drapeau &quot;Sauvegarder les tables&quot;";
+$MESS["SINS_PERM_D"] = "Fermé";
+$MESS["SALE_INSTALL_NAME"] = "Boutique en ligne";
+$MESS["SALE_INSTALL_BASKET"] = "Contenu de commande";
+$MESS["SALE_UNINSTALL_ERROR"] = "Erreurs lors de la suppression:";
+$MESS["SALE_INSTALL_ERROR"] = "Erreurs au cours de l'installation";
+$MESS["SIM_COPY_FOLDER"] = "Dossier dans lequel seront copiés des fichiers (par rapport à la racine du site):";
+$MESS["SALE_INSTALL_PUBLIC_REW"] = "Remplacer les fichiers existants";
+$MESS["SALE_INSTALL_PERSON"] = "Section personnelle";
+$MESS["SINS_PERM_W"] = "Accès administratif complet";
+$MESS["SALE_INSTALL_PUBLIC_DIR"] = "Dossier public";
+$MESS["SIM_COPY_PUBLIC_FILES"] = "Copier les fichiers publiques";
+$MESS["SALE_UNINSTALL_SAVETABLE"] = "Sauvegarder les tables";
+$MESS["SALE_UNINSTALL_SAVECURRENCY"] = "Sauvegarder les tables de Devises (elles sont utilisées avec le module du catalogue de marchandises et le module 'e-commerce')";
+$MESS["SALE_UNINSTALL_COMPLETE"] = "La suppression est terminée.";
+$MESS["SALE_UNINSTALL_DEL"] = "Supprimer";
+$MESS["SALE_INSTALL_SETUP"] = "Installation";
+$MESS["SALE_INSTALL_PUBLIC_SETUP"] = "Installation";
+$MESS["SALE_INSTALL_COMPLETE_ERROR"] = "L'installation est terminée";
+$MESS["SALE_INSTALL_COMPLETE_OK"] = "L'installation est terminée. Pour une assistance supplémentaire veuillez contacter la section d'assistance.";
+$MESS["SALE_VARIANT_NUM"] = "Version";
+$MESS["SINS_PERM_U"] = "Gestion de commandes";
+$MESS["SINS_PERM_R"] = "Lecture";
+$MESS["SALE_INST_PUB_VAR"] = "Versions des fichiers publics";
+$MESS["SALE_INSTALL_DEFAULT"] = "S'il vous plaît sélectionnez les fichiers d'échantillons du module e-Store à installer";
+$MESS["SALE_VARIANT2_DESCR"] = "Pour en deux étapes. Il est nécessaire de faire un réglage manuel supplémentaire de ce script avant de l'utiliser (voir les détails dans le script de order.php).";
+$MESS["SALE_INSTALL_CURRENCY"] = "Module de e-Store nécessite le module de devises à être installé.<br/>S'il vous plaît d'abord installer le module de devises.";
+$MESS["SIM_REWRITE_ADD"] = "Ecraser les fichiers auxiliaires";
+$MESS["SALE_INSTALL_DESCRIPTION"] = "Fournit la fonctionnalité e-Store de vendre des produits aux visiteurs du site.";
+$MESS["SALE_INSTALL_PUBLIC"] = "Installation dossier public";
+$MESS["SALE_VARIANT1_DESCR"] = "Recommandé. Son universel.";
+$MESS["SALE_INSTALL_TITLE"] = "e-Store installation du module";
+$MESS["SALE_UPDATER_16036_MIGRATE_NOTIFY"] = "Les réductions du catalogue commercial <a href=\"#LINK#\">peuvent être converties</a> en réductions de l'e-Store.";
+?>

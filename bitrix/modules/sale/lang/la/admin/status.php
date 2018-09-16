@@ -1,0 +1,37 @@
+<?
+$MESS["STATUS_TITLE"] = "Estados de la orden";
+$MESS["ERROR_DELETE"] = "Error al eliminar el estado";
+$MESS["STATUS_DEL_CONF"] = "¿Está seguro que desea eliminar este estado? Si este estado tiene ordenes adjuntas, no se eliminará.";
+$MESS["STATUS_NAV"] = "Estados";
+$MESS["STATUS_ID"] = "Código";
+$MESS["STATUS_SORT"] = "Clasificar.";
+$MESS["STATUS_UPD"] = "Guardar";
+$MESS["STATUS_RESET"] = "Cancelar";
+$MESS["STATUS_F_DESCR"] = "Descripción:";
+$MESS["STATUS_F_NAME"] = "Nombre:";
+$MESS["ERROR_ADD_REC"] = "Error al agregar un estado";
+$MESS["ERROR_EMPTY_NAME1"] = "Por favor, establezca el nombre del estado";
+$MESS["ERROR_EMPTY_NAME2"] = "para el idioma";
+$MESS["ERROR_UPDATE_REC"] = "Error al actualizar el estado";
+$MESS["ERROR_EMPTY_NEW_NAME"] = "Por favor, establezca el nombre del nuevo estado del idioma";
+$MESS["ERROR_ADD_NEW_REC"] = "Error al agregar un nuevo estado";
+$MESS["STATUS_DEL"] = "Eliminar";
+$MESS["ERROR_DEL_STATUS"] = "Error al eliminar el estado.";
+$MESS["SALE_ADD_STATUS"] = "Agregar";
+$MESS["SALE_NAME"] = "Nombre";
+$MESS["SALE_ACTIONS"] = "Acciones";
+$MESS["SALE_EDIT_DESCR"] = "Modificar la configuración del estado";
+$MESS["SALE_EDIT"] = "Modificar";
+$MESS["SALE_DELETE_DESCR"] = "Eliminar estado";
+$MESS["SSAN_ADD_NEW"] = "Nuevo estado";
+$MESS["SSAN_ADD_NEW_ALT"] = "Haz clic aquí para agregar un nuevo estado";
+$MESS["SSAN_NOTIFY"] = "Notificaciones";
+$MESS["SSAN_NOTIFY_Y"] = "Si";
+$MESS["SSAN_NOTIFY_N"] = "No";
+$MESS["SSAN_TYPE"] = "Tipo de estado";
+$MESS["SSEN_TYPE_O"] = "Orden";
+$MESS["SSEN_TYPE_D"] = "Envío";
+$MESS["SALE_NOTES1"] = "<b>N</b> es el estado de la orden inicial aplicado sobre la creación. No se puede eliminar este estado.";
+$MESS["SALE_NOTES2"] = "<b>F</b> es el estado de la orden final aplicado al termino de la orden. No se puede eliminar este estado.";
+$MESS["SSAN_COLOR"] = "Color del estado";
+?>

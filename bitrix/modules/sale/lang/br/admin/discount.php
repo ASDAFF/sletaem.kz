@@ -1,0 +1,32 @@
+<?
+$MESS["LANG_FILTER_NAME"] = "Site";
+$MESS["ERROR_UPDATE_REC"] = "Erro ao atualizar o registro";
+$MESS["PERS_TYPE_ACTIVE"] = "Ativo";
+$MESS["PERS_TYPE_LID"] = "Site";
+$MESS["PERS_TYPE_ID"] = "ID";
+$MESS["PERS_TYPE_SORT"] = "Classificação";
+$MESS["DS_ALL"] = "(todos)";
+$MESS["SDSN_ACTIVE_FROM"] = "Ativo desde";
+$MESS["SDSN_ACTIVE_TO"] = "Ativo até";
+$MESS["SDSN_PRIORITY"] = "Prioridade de aplicação";
+$MESS["SDSN_LAST_DISCOUNT"] = "Finalizar a prioridade de aplicação";
+$MESS["SDSN_CREATED_BY"] = "Criado por";
+$MESS["SDSN_DATE_CREATE"] = "Criado";
+$MESS["SDSN_MODIFIED_BY"] = "Modificado por";
+$MESS["SDSN_TIMESTAMP_X"] = "Modificado";
+$MESS["SDSN_XML_ID"] = "ID";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_TITLE"] = "Regras do carrinho de compras";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_NAV"] = "Regras";
+$MESS["BT_SALE_DISCOUNT_LIST_ERR_DELETE_DISCOUNT"] = "Erro ao deletar regra";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_EDIT_DISCOUNT"] = "Modificar os parâmetros da regra";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_EDIT_DISCOUNT_SHORT"] = "Modificar";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_DELETE_DISCOUNT_SHORT"] = "Deletar";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_DELETE_DISCOUNT_CONFIRM"] = "Você tem certeza que deseja deletar esta regra?";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_NEW_DISCOUNT"] = "Adicionar regra";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_NEW_DISCOUNT_TITLE"] = "Adicionar regra";
+$MESS["BT_SALE_DISCOUNT_ADM_TITLE_NAME"] = "Nome";
+$MESS["SDSN_CREATED_BY_NEW"] = "Criado por";
+$MESS["SDSN_MODIFIED_BY_NEW"] = "Modificado por";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_COPY_DISCOUNT_SHORT"] = "Copiar";
+$MESS["SDSN_LAST_DISCOUNT_NEW"] = "Não usar regras";
+?>

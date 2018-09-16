@@ -1,0 +1,30 @@
+<?
+$MESS["ACTIVE"] = "Actif(ve)";
+$MESS["F_SEARCH_TITLE"] = "Veuillez saisir la phrase à rechercher";
+$MESS["F_ID"] = "Identificateur";
+$MESS["MAIN_ADMIN_MENU_EDIT"] = "Editer";
+$MESS["EVENT_NAME"] = "Dénomination";
+$MESS["F_SEARCH"] = "Recherche";
+$MESS["EVENT_DESCRIPTION"] = "Description";
+$MESS["DELETE_LANG"] = "Annuler";
+$MESS["SORT"] = "Classification";
+$MESS["EVENT_TYPE"] = "Entité";
+$MESS["MAIN_ADMIN_MENU_DELETE"] = "Supprimer";
+$MESS["F_FILTER"] = "Filtre";
+$MESS["EVENT_TEMPLATES"] = "Liste de modèles";
+$MESS["LANG"] = "Langue";
+$MESS["CONFIRM_DEL_MESSAGE"] = "Etes-vous sûr que vous voulez effacer les paramètres de langue pour le type d'événement email?";
+$MESS["CONFIRM_DEL_ALL_MESSAGE"] = "tes-vous sûr de vouloir effacer le type de courant y compris les modèles?";
+$MESS["ADD_TYPE"] = "Ajouter Type";
+$MESS["ADD_TYPE_TITLE"] = "Ajouter un type d'événement de messagerie";
+$MESS["F_NAME"] = "Nom du type";
+$MESS["F_DESCRIPTION"] = "Type de description";
+$MESS["SAVE_ERROR"] = "Modification de l'erreur type d'événement #";
+$MESS["DELETE_ERROR"] = "Erreur type d'événement de suppression";
+$MESS["type_admin_edit_title"] = "Modifier Adresse email d'événement";
+$MESS["F_EVENT_NAME"] = "Email type d'événement";
+$MESS["TITLE"] = "Email types d'événements";
+$MESS["PAGES"] = "Les types d'événements";
+$MESS["F_TYPE"] = "email type d'événement";
+$MESS["F_TMPL"] = "modèle";
+?>

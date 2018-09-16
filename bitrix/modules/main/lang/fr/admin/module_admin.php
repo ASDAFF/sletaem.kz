@@ -1,0 +1,35 @@
+<?
+$MESS["MOD_BACK"] = "Cliquez ici pour revenir à la liste";
+$MESS["MOD_VERSION"] = "Version";
+$MESS["MOD_UNINST_WARN"] = "Attention!<br>Le module sera supprimé dans le système";
+$MESS["MOD_UNINST_SAVE"] = "Vous pouvez stocker les données dans les tableaux de base de données:";
+$MESS["MOD_MAIN_MODULE"] = "Module principal";
+$MESS["MOD_DATE_UPDATE"] = "Date de la mise à jour";
+$MESS["MOD_ACTION"] = "Action";
+$MESS["MOD_PARTNER_NAME"] = "Entreprise <a target='_blank' href='#URI#'> #NAME# </a>";
+$MESS["MOD_NAME"] = "Dénomination";
+$MESS["MOD_NOT_INSTALLED"] = "Non installé";
+$MESS["MOD_UNINST_DEN"] = "Vous ne pouvez pas supprimer ce module.";
+$MESS["MOD_UNINST_ERR"] = "Erreurs lors de la suppression:";
+$MESS["MOD_INST_ERR"] = "Problèmes d'installation:";
+$MESS["COPY_FOLDER"] = "Le dossier où des fichiers seront copiés:";
+$MESS["INSTALL_PUBLIC_REW"] = "Remplacer les fichiers existants";
+$MESS["MOD_DEMO_DIR"] = "Vous pouvez contrôler le fonctionnement du composant dans la partie publique à l'aide des liens ci-dessous:";
+$MESS["MOD_DEMO_SITE"] = "Site";
+$MESS["RESET"] = "Annuler";
+$MESS["COPY_PUBLIC_FILES"] = "Copier les fichiers publiques";
+$MESS["SAVE"] = "Enregistrer les modifications";
+$MESS["MOD_UNINST_SAVE_TABLES"] = "Sauvegarder les tables";
+$MESS["MOD_UNINST_SAVE_EVENTS"] = "Sauvegarder les types et les modèles des messages";
+$MESS["MOD_DEMO_LINK"] = "Lien au commentaire";
+$MESS["MOD_SETUP"] = "Statut";
+$MESS["MOD_UNINST_OK"] = "La suppression du module est terminée avec succès";
+$MESS["MOD_DELETE"] = "Annuler";
+$MESS["MOD_UNINST_DEL"] = "Supprimer le module";
+$MESS["MOD_INSTALL_BUTTON"] = "Installation";
+$MESS["MOD_INSTALL"] = "Installation";
+$MESS["MOD_INST_OK"] = "Installation du module achevée avec accès";
+$MESS["MOD_INSTALLED"] = "Désuet";
+$MESS["TITLE"] = "Gestion des modules";
+$MESS["MOD_MAIN_DESCRIPTION"] = "Le noyau du produit avec la technologie #A1#'SiteUpdate'#A2#.";
+?>

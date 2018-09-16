@@ -1,0 +1,4 @@
+<?
+$MESS["DELIVERY_EXTRA_SERVICE_CHECKBOX_TITLE"] = "Opción individual";
+$MESS["DELIVERY_EXTRA_SERVICE_CHECKBOX_PRICE"] = "Precio de la opción";
+?>

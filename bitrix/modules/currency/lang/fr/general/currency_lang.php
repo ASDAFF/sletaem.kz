@@ -1,0 +1,9 @@
+<?
+$MESS["BT_CUR_LANG_SEP_VARIANT_EMPTY"] = "Sans séparateur";
+$MESS["BT_CUR_LANG_SEP_VARIANT_COMMA"] = "Virgule";
+$MESS["BT_CUR_LANG_SEP_VARIANT_NBSPACE"] = "Espace insécable";
+$MESS["BT_CUR_LANG_SEP_VARIANT_SPACE"] = "Blanc";
+$MESS["BT_CUR_LANG_SEP_VARIANT_DOT"] = "Point";
+$MESS["BT_CUR_LANG_ERR_FORMAT_STRING_IS_EMPTY"] = "Le champ 'Format' pour la langue #LANG# est vide.";
+$MESS["BT_CUR_LANG_CURRENCY_RUBLE"] = "RUB";
+?>

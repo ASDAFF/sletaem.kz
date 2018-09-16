@@ -1,0 +1,30 @@
+<?
+$MESS["ACTIVE"] = "Ativo";
+$MESS["ADD_TYPE_TITLE"] = "Adicionar tipo de evento de e-mail";
+$MESS["ADD_TYPE"] = "Adicionar tipo";
+$MESS["CONFIRM_DEL_MESSAGE"] = "Tem certeza de que deseja limpar parâmetros de linguagem para o tipo de evento de e-mail?";
+$MESS["CONFIRM_DEL_ALL_MESSAGE"] = "Tem certeza de que deseja excluir o tipo atual incluindo modelos?";
+$MESS["DELETE_LANG"] = "Limpar";
+$MESS["EVENT_DESCRIPTION"] = "Descrição";
+$MESS["type_admin_edit_title"] = "Editar e-mail do evento";
+$MESS["F_EVENT_NAME"] = "Tipo de evento de e-mail";
+$MESS["F_TYPE"] = "tipo de evento de e-mail";
+$MESS["TITLE"] = "Tipo de evento de e-mail";
+$MESS["F_SEARCH_TITLE"] = "Digite o texto que deseja pesquisar";
+$MESS["DELETE_ERROR"] = "Erro ao excluir tipo de evento.";
+$MESS["SAVE_ERROR"] = "Erro ao modificar tipo de evento #";
+$MESS["PAGES"] = "Tipos de eventos";
+$MESS["F_FILTER"] = "Filtro";
+$MESS["F_ID"] = "Identificador";
+$MESS["LANG"] = "Idioma";
+$MESS["EVENT_NAME"] = "Nome";
+$MESS["F_SEARCH"] = "Buscar";
+$MESS["SORT"] = "Classificando";
+$MESS["F_TMPL"] = "modelo";
+$MESS["EVENT_TEMPLATES"] = "Modelos";
+$MESS["EVENT_TYPE"] = "Digitar";
+$MESS["F_DESCRIPTION"] = "Escrever descrição";
+$MESS["F_NAME"] = "Nome do tipo";
+$MESS["MAIN_ADMIN_MENU_EDIT"] = "editar";
+$MESS["MAIN_ADMIN_MENU_DELETE"] = "Excluir";
+?>

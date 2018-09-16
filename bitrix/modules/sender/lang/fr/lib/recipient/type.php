@@ -1,0 +1,5 @@
+<?
+$MESS["SENDER_TYPE_CAPTION_EMAIL"] = "E-mail";
+$MESS["SENDER_TYPE_CAPTION_PHONE"] = "Téléphone";
+$MESS["SENDER_TYPE_CAPTION_IM"] = "Messagerie";
+?>
