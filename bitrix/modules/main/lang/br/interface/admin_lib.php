@@ -1,4 +1,5 @@
 <?
+$MESS["admin_lib_grid_page_sizes_all_title"] = "Todas";
 $MESS["admin_lib_hide_menu"] = "Ocultar menu";
 $MESS["admin_lib_show_menu"] = "Exibir Menu";
 $MESS["admin_lib_less_buttons"] = "Usar botões pequenos no menu";
@@ -222,5 +223,4 @@ $MESS["admin_lib_required"] = "Campos obrigatórios";
 $MESS["admin_lib_menu_marketing"] = "Marketing";
 $MESS["admin_lib_sso_auth"] = "Autenticação";
 $MESS["admin_lib_sso_auth_title"] = "Para visualizar sites disponíveis, entre usando sua conta Bitrix24 e ative o acesso à lista de sites.";
-$MESS["admin_lib_grid_page_sizes_all_title"] = "Todas";
 ?>

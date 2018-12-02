@@ -1,5 +1,5 @@
 <?
-$MESS["authprov_last"] = "ltimo";
+$MESS["authprov_last"] = "Último";
 $MESS["authprov_all_groups"] = "Todos os grupos";
 $MESS["authprov_search"] = "Buscar";
 $MESS["authprov_group_name"] = "Digite o nome do grupo.";

@@ -1,3 +1,3 @@
 <?
-$MESS ['VOTE_DIALOGS_BAD_TYPE'] = "Tipo de dialogo incorrecto";
+$MESS["VOTE_DIALOGS_BAD_TYPE"] = "Tipo de dialogo incorrecto";
 ?>

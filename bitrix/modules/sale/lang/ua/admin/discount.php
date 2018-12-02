@@ -1,4 +1,6 @@
 <?
+$MESS["BX_SALE_ADM_DSC_HEADER_TITLE_ACTIVE_FROM"] = "Дата початку активності";
+$MESS["BX_SALE_ADM_DSC_HEADER_TITLE_ACTIVE_TO"] = "Дата закінчення активності";
 $MESS["LANG_FILTER_NAME"] = "Сайт";
 $MESS["ERROR_UPDATE_REC"] = "Помилка змінення запису";
 $MESS["PERS_TYPE_ACTIVE"] = "Акт.";

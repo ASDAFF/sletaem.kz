@@ -1,4 +1,5 @@
 <?
+$MESS["RATING_LIST_FLT_find"] = "Rechercher:";
 $MESS["RATING_LIST_FLT_ALL"] = "(partout)";
 $MESS["RATING_LIST_FLT_ID"] = "ID";
 $MESS["RATING_ACTIVE"] = "Actif(ve)";
@@ -10,7 +11,6 @@ $MESS["RATING_LIST_EDIT"] = "Modifier les paramètres du classement";
 $MESS["RATING_LAST_MODIFIED"] = "Modifié";
 $MESS["RATING_NAME"] = "Dénomination";
 $MESS["RATING_LIST_FLT_NAME"] = "Dénomination";
-$MESS["RATING_LIST_FLT_find"] = "Recherche:";
 $MESS["RATING_LIST_FLT_INACTIVE"] = "démissionné";
 $MESS["RATING_ACTIVE_NO"] = "Non";
 $MESS["RATING_LIST_ADD"] = "Création de la cote de Popularité";

@@ -1,4 +1,8 @@
 <?
+$MESS["PULL_OPTIONS_SIGNATURE_KEY"] = "Code de signature pour interaction avec le serveur";
+$MESS["PULL_OPTIONS_NGINX_2"] = "<b>\"Push server\"</b> est installé et actif sur le serveur";
+$MESS["PULL_OPTIONS_NGINX_VERSION_710"] = "Bitrix Virtual Appliance 7.1 ou version ultérieure (Bitrix Push server)";
+$MESS["PULL_BATCH_MAX_COUNT_MESSAGES"] = "Nombre maximum de notifications push à envoyer simultanément";
 $MESS["PULL_OPTIONS_STATUS_Y"] = "Actif(ve)";
 $MESS["PULL_OPTIONS_NGINX_VERSION_034"] = "Machine virtuelle 4.2 - 4.3 (nginx-push-stream-module 0.3.4)";
 $MESS["PULL_OPTIONS_NGINX_VERSION_040"] = "Machine virtuelle 4.4 et plus (nginx-push-stream-module 0.4.0)";
@@ -38,8 +42,4 @@ $MESS["PULL_OPTIONS_HEAD_SUB"] = "URL de lecture de commande pour les navigateur
 $MESS["PULL_OPTIONS_PATH_TO_LISTENER_MODERN_DESC"] = "Notez que les navigateurs modernes peuvent se connecter à un serveur de poussoir de la télécommande, même sur un domaine différent (des demandes CORS).";
 $MESS["PULL_OPTIONS_GUEST"] = "Activer le module pour les utilisateurs anonymes";
 $MESS["PULL_OPTIONS_GUEST_DESC"] = "Informations utilisateur fournies par le module Web Analytics";
-$MESS["PULL_OPTIONS_SIGNATURE_KEY"] = "Code de signature pour interaction avec le serveur";
-$MESS["PULL_OPTIONS_NGINX_2"] = "<b>\"Push server\"</b> est installé et actif sur le serveur";
-$MESS["PULL_OPTIONS_NGINX_VERSION_710"] = "Bitrix Virtual Appliance 7.1 ou version ultérieure (Bitrix Push server)";
-$MESS["PULL_BATCH_MAX_COUNT_MESSAGES"] = "Nombre maximum de notifications push à envoyer simultanément";
 ?>

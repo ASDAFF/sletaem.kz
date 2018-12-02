@@ -35,7 +35,7 @@ $MESS["FORUM_USE_COOKIE"] = "Дозволити зберігання в кука
 $MESS["FORUM_USER_SHOW_NAME"] = "Показувати ім'я користувача (за умовчанням для нових користувачів)";
 $MESS["FORUM_LOGS_TITLE"] = "Журналювати дії користувачів";
 $MESS["FORUM_LOGS"] = "модерування форума";
-$MESS["FORUM_LOGS_ADDITIONAL"] = "Змінення повідомлення автором";
+$MESS["FORUM_LOGS_ADDITIONAL"] = "зміна повідомлення автором";
 $MESS["F_FORUM_STATUSES"] = "Назви статусів користувачів";
 $MESS["F_PARSER_NOFOLLOW"] = "Додавати до посилань";
 $MESS["F_PARSER_LINK_TARGET"] = "Відкривати посилання в новому вікні (target = '_blank'):";

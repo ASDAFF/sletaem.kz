@@ -18,6 +18,7 @@ $MESS["FORM_PAGES_Q"] = "Preguntas";
 $MESS["FORM_SID"] = "Identificador simbólico";
 $MESS["FORM_C_SORT"] = "Ordenamiento";
 $MESS["FORM_REQUIRED"] = "Req.";
+$MESS["FORM_EDIT_ALT"] = "Editar configuración de campos";
 $MESS["FORM_EDIT_ALT_Q"] = "Modificar parámetros de preguntas";
 $MESS["FORM_DELETE_ALT"] = "Eliminar campos y todos los resultados realtivos";
 $MESS["FORM_CONFIRM_DELETE"] = "¿Está seguro que desea borrar el campo y todos los resultados relativos a él?";
@@ -44,6 +45,5 @@ $MESS["FORM_RESULT_TITLE"] = "Abrir resultados de formulario";
 $MESS["FORM_EDIT"] = "Parámetro de formularios";
 $MESS["FORM_FIELD_EDIT"] = "Parámetros de pregunta";
 $MESS["FORM_EDIT_TITLE"] = "Modificar parámetros de formulario";
-$MESS["FORM_EDIT_ALT"] = "Editar configuración de campos";
 $MESS["FORM_DELETE_FIELD"] = "Borrar";
 ?>

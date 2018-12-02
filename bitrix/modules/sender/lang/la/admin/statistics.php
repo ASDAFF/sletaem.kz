@@ -1,4 +1,5 @@
 <?
+$MESS["SENDER_STATS_CREATE_NEW_LETTER"] = "Crea un nuevo boletín";
 $MESS["SENDER_STATS_TITLE"] = "inicio";
 $MESS["SENDER_STATS_EFFICIENCY_TITLE"] = "Eficiencia del boletín";
 $MESS["SENDER_STATS_EFFICIENCY_LEVEL_1"] = "Malo";

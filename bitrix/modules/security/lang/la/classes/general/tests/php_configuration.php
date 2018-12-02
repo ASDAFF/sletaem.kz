@@ -1,7 +1,7 @@
 <?
 $MESS["SECURITY_SITE_CHECKER_PhpConfigurationTest_NAME"] = "Configuración de PHP";
 $MESS["SECURITY_SITE_CHECKER_PHP_ENTROPY"] = "Ninguna otra fuente de entropía de ID de sesión se define";
-$MESS["SECURITY_SITE_CHECKER_PHP_ENTROPY_DETAIL"] = "La falta de entropía adicional puede ser usado para predecir números aleatorios y ID de sesión.";
+$MESS["SECURITY_SITE_CHECKER_PHP_ENTROPY_RECOMMENDATION"] = "Agregue la siguiente línea a la configuración de PHP: <br>session.entropy_file = /dev/urandom<br>session.entropy_length = 128";
 $MESS["SECURITY_SITE_CHECKER_PHP_INCLUDE"] = "URL wrappers están habilitados";
 $MESS["SECURITY_SITE_CHECKER_PHP_INCLUDE_DETAIL"] = "Definitivamente no se recomienda esta opción.";
 $MESS["SECURITY_SITE_CHECKER_PHP_INCLUDE_RECOMMENDATION"] = "Agregar o editar la siguiente línea en la configuración de PHP:<br>allow_url_include = Off";
@@ -11,10 +11,10 @@ $MESS["SECURITY_SITE_CHECKER_PHP_FOPEN_RECOMMENDATION"] = "Agregar o editar la s
 $MESS["SECURITY_SITE_CHECKER_PHP_ASP"] = "Etiquetas de estilo ASP están habilitados";
 $MESS["SECURITY_SITE_CHECKER_PHP_ASP_DETAIL"] = "Sólo unos pocos desarrolladores saben que existe esta opción. Esta opción es redundante.";
 $MESS["SECURITY_SITE_CHECKER_PHP_ASP_RECOMMENDATION"] = "Agregar o editar la siguiente línea en la configuración de PHP:<br>asp_tags = Off";
-$MESS["SECURITY_SITE_CHECKER_PHP_ENTROPY_RECOMMENDATION"] = "Agregue la siguiente línea a la configuración de PHP: <br>session.entropy_file = /dev/urandom<br>session.entropy_length = 128";
 $MESS["SECURITY_SITE_CHECKER_LOW_PHP_VERSION_ENTROPY"] = "La versión PHP no está actualizado";
 $MESS["SECURITY_SITE_CHECKER_LOW_PHP_VERSION_ENTROPY_DETAIL"] = "La versión actual de php no soporta la instalación de una fuente adicional de entropía al crear un ID de sesión.";
 $MESS["SECURITY_SITE_CHECKER_LOW_PHP_VERSION_ENTROPY_RECOMMENDATION"] = "Actualizar php a la versión 5.3.3 o superior, de ser posible a la más reciente y estable versión ";
+$MESS["SECURITY_SITE_CHECKER_PHP_ENTROPY_DETAIL"] = "La falta de entropía adicional puede ser usado para predecir números aleatorios y ID de sesión.";
 $MESS["SECURITY_SITE_CHECKER_PHP_HTTPONLY"] = "Las cookies son accesibles desde JavaScript";
 $MESS["SECURITY_SITE_CHECKER_PHP_HTTPONLY_DETAIL"] = "Hacer cookies accesible desde JavaScript aumentará la gravedad de los ataques de XSS.";
 $MESS["SECURITY_SITE_CHECKER_PHP_HTTPONLY_RECOMMENDATION"] = "Agregar o editar la siguiente línea en la configuración de PHP:<br>session.cookie_httponly = On";

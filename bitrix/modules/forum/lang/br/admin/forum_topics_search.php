@@ -7,7 +7,7 @@ $MESS["FM_TITLE_AUTHOR"] = "Autor";
 $MESS["FM_TITLE_MESSAGES"] = "Mensagens";
 $MESS["FM_TITLE_VIEWS"] = "Visualizações";
 $MESS["FM_TITLE_FORUM"] = "Fórum";
-$MESS["FM_TITLE_LAST_MESSAGE"] = "ltima mensagem";
+$MESS["FM_TITLE_LAST_MESSAGE"] = "Última mensagem";
 $MESS["FM_TITLE_DATE_CREATE"] = "Criado";
 $MESS["FM_TITLE_DATE_LAST_POST"] = "Modificado";
 ?>

@@ -1,7 +1,7 @@
 <?
+$MESS["navigation_prev"] = "Page précédente";
 $MESS["navigation_records_all"] = "tous";
 $MESS["navigation_records_of"] = "de";
-$MESS["navigation_prev"] = "Page précédente";
 $MESS["navigation_next"] = "Page suivante";
 $MESS["navigation_records"] = "Enregistrements :";
 $MESS["navigation_first"] = "Première page";

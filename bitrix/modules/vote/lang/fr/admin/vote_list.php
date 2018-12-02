@@ -1,4 +1,7 @@
 <?
+$MESS["VOTE_F_DATE_START"] = "Date de début";
+$MESS["VOTE_F_CHANNEL_ID"] = "Canal de sondage [ID] :";
+$MESS["VOTE_RESULTS_DIAGRAM"] = "Graphique des résultats";
 $MESS["VOTE_ALL"] = "(partout)";
 $MESS["VOTE_FL_ID"] = "ID du sondage";
 $MESS["VOTE_ACTIVE"] = "Actif(ve)";
@@ -11,7 +14,6 @@ $MESS["VOTE_CHANNEL"] = "Groupe";
 $MESS["VOTE_FL_CHANNEL"] = "Groupe";
 $MESS["VOTE_F_CHANNEL"] = "Groupe de sondages:";
 $MESS["VOTE_YES"] = "Oui";
-$MESS["VOTE_F_DATE_START"] = "Date du début";
 $MESS["VOTE_FL_DATE_START"] = "A partir de la date";
 $MESS["VOTE_F_DATE_END"] = "Date de clôture";
 $MESS["VOTE_FL_DATE_END"] = "Date de clôture";
@@ -63,6 +65,4 @@ $MESS["VOTE_QUESTIONS_TITLE"] = "Liste de questions";
 $MESS["VOTE_F_ACTIVE"] = "Avec le drapeaux d'activité: ";
 $MESS["VOTE_F_COUNTER"] = "Nombre de votes:";
 $MESS["VOTE_COUNTER"] = "Votes";
-$MESS["VOTE_F_CHANNEL_ID"] = "Canal de sondage [ID] :";
-$MESS["VOTE_RESULTS_DIAGRAM"] = "Graphique des résultats";
 ?>

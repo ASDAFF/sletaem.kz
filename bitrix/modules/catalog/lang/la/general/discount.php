@@ -17,6 +17,6 @@ $MESS["BT_MOD_CATALOG_DISC_ERR_EMPTY_CONDITIONS"] = "No existen condiciones de d
 $MESS["BT_MOD_CATALOG_DISC_ERR_BAD_CONDITIONS"] = "Es incorrecto el formato de condición de descuento ";
 $MESS["BT_CAT_DISCOUNT_TYPE_PERCENT"] = "Porcentaje";
 $MESS["BT_CAT_DISCOUNT_TYPE_FIX"] = "Cantidad fija";
-$MESS["BT_MOD_CATALOG_DISC_ERR_CONDITIONS_TOO_LONG"] = "No se puede guardar porque hay demasiadas condiciones.";
 $MESS["BT_CAT_DISCOUNT_TYPE_SALE_EXT"] = "Establecer precios de los productos";
+$MESS["BT_MOD_CATALOG_DISC_ERR_CONDITIONS_TOO_LONG"] = "No se puede guardar porque hay demasiadas condiciones.";
 ?>

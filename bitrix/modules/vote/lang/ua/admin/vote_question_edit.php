@@ -37,4 +37,5 @@ $MESS["VOTE_NOT_FOUND"] = "Невірний ID опитування";
 $MESS["VOTE_DELETE"] = "Видалити";
 $MESS["VOTE_CREATE"] = "Створити";
 $MESS["VOTE_REQUIRED"] = "Обов'язкове питання";
+$MESS["VOTE_QUESTIONS"] = "Питання";
 ?>

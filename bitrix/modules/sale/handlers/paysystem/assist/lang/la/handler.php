@@ -14,7 +14,7 @@ $MESS["SALE_PS_MESSAGE_APPROVED"] = "Esta orden fue pagada correctamente";
 $MESS["SALE_PS_MESSAGE_PARTIALAPPROVED"] = "El pago parcial completado (no se utiliza)";
 $MESS["SALE_PS_MESSAGE_PARTIALDELAYED"] = "Confirmado el pago de sólo una parte del importe";
 $MESS["SALE_PS_MESSAGE_CANCELED"] = "Cancelado en su totalidad";
+$MESS["SALE_PS_MESSAGE_PARTIALCCANCELED"] = "Cancelado parte del monto a pagar";
 $MESS["SALE_PS_MESSAGE_DECLINED"] = "Pago fallido";
 $MESS["SALE_PS_MESSAGE_TIMEOUT"] = "Tiempo agotado de la orden";
-$MESS["SALE_PS_MESSAGE_PARTIALCCANCELED"] = "Cancelado parte del monto a pagar";
 ?>

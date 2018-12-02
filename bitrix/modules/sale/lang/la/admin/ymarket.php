@@ -11,7 +11,9 @@ $MESS["SALE_YM_DLV_PS_CASH_ON_DELIVERY"] = "Pagar contra entrega";
 $MESS["SALE_YM_DLV_PS_METHODS_AVAILABLE"] = "Opciones de pago disponibles";
 $MESS["SALE_YM_SITE"] = "Sitio Web";
 $MESS["SALE_YM_TAB_MAIN"] = "General";
+$MESS["SALE_YM_TAB_MAIN_TITLE"] = "Configuración general";
 $MESS["SALE_YM_TAB_PAY"] = "Opciones de pago";
+$MESS["SALE_YM_TAB_PAY_TITLE"] = "Opciones de pago";
 $MESS["SALE_YM_TAB_DLV"] = "Servicio de entrega";
 $MESS["SALE_YM_TAB_DLV_TITLE"] = "Mapa de servicios de entrega";
 $MESS["SALE_YM_TAB_STATUS"] = "Estados";
@@ -19,6 +21,4 @@ $MESS["SALE_YM_TAB_STATUS_TITLE"] = "Mapa de los estados";
 $MESS["SALE_YM_TAB_PROPS"] = "Propiedades de la orden";
 $MESS["SALE_YM_TAB_PROPS_TITLE"] = "Propiedades del pedido de mapa";
 $MESS["SALE_YM_DELIVERY_NOTE"] = "<b>Atención!</b> El sitio web de la tienda debe responder al pedido del producto, servicio de entrega o solicitud de pago dentro de <b>5.5 sec</b>. Debe tener en cuenta este tiempo y planificar el tiempo de ejecución necesario para calcular el precio de entrega de todos los servicios.";
-$MESS["SALE_YM_TAB_PAY_TITLE"] = "Opciones de pago";
-$MESS["SALE_YM_TAB_MAIN_TITLE"] = "Configuración general";
 ?>

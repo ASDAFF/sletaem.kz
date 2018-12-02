@@ -1,4 +1,15 @@
 <?
+$MESS["mnu_sender_sect1"] = "Marketing24";
+$MESS["mnu_sender_sect_title1"] = "Marketing24";
+$MESS["mnu_sender_blacklist_alt"] = "Destinatarios excluidos de todas las campañas";
+$MESS["mnu_sender_segments"] = "Segmentos";
+$MESS["mnu_sender_blacklist"] = "Lista negra";
+$MESS["mnu_sender_letters"] = "Boletines informativos";
+$MESS["mnu_sender_letters_alt"] = "Administrar boletines informativos";
+$MESS["mnu_sender_campaigns"] = "Campañas";
+$MESS["mnu_sender_campaigns_alt"] = "Administrar campañas";
+$MESS["mnu_sender_ads"] = "Anuncios";
+$MESS["mnu_sender_ads_alt"] = "Administrar anuncios";
 $MESS["mnu_sender_report"] = "Estadísticas";
 $MESS["mnu_sender_report_alt"] = "Estadísticas";
 $MESS["mnu_sender_group"] = "Grupos de Destinatarios";

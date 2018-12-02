@@ -1,4 +1,5 @@
 <?
+$MESS["SEC_REDIRECT_SHOW_MESSAGE_AND_STAY"] = "Afficher le message de notification redirection vers une autre URL.";
 $MESS["SEC_REDIRECT_NOTE"] = "<p>Le phishing (angl. phishing, de password - mot de passe et fishing - pèche) - est un genre de fraude internet utilisée pour obtenir des renseignements personnels de l'utilisateur (par exemple, les logins et les mots de passe).</p>
 <p>Ce résultat est obtenu en effectuant des diffusions de masse d'e-mails au nom de marques populaires, par exemple, au nom des réseaux sociaux, des banques, des portails. Le message contient souvent un lien direct vers un site qui ressemble en apparence à l'original.</p>
 <p>Le phishing est basé sur l'ignorance par les utilisateurs des principes de base de la sécurité réseau: en particulier, beaucoup d'eux ignorent le simple fait que les services n'envoient pas de messages demandant de fournir les données de compte, mots de passe etc.</p>
@@ -44,5 +45,4 @@ $MESS["SEC_REDIRECT_REFERER_CHECK"] = "Vérifier la présence du titre HTTP qui 
 $MESS["SEC_REDIRECT_TIMEOUT_SEC"] = "(sec.)";
 $MESS["SEC_REDIRECT_SYSTEM"] = "De système";
 $MESS["SEC_REDIRECT_MESSAGE"] = "Message:";
-$MESS["SEC_REDIRECT_SHOW_MESSAGE_AND_STAY"] = "Afficher le message de notification redirection vers une autre URL.";
 ?>

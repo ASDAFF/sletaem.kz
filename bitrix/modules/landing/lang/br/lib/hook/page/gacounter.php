@@ -1,0 +1,5 @@
+<?
+$MESS["LANDING_HOOK_GACOUNTER_USE"] = "Google Analytics";
+$MESS["LANDING_HOOK_GACOUNTER_COUNTER"] = "Google Analytics";
+$MESS["LANDING_HOOK_GACOUNTER_PLACEHOLDER"] = "Digite o ID";
+?>

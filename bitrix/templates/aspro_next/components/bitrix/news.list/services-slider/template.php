@@ -25,8 +25,8 @@
 								// use detail link?
 								$bDetailLink = $arParams['SHOW_DETAIL_LINK'] != 'N' && (!strlen($arItem['DETAIL_TEXT']) ? ($arParams['HIDE_LINK_WHEN_NO_DETAIL'] !== 'Y' && $arParams['HIDE_LINK_WHEN_NO_DETAIL'] != 1) : true);
 								// preview image
-								$bImage = strlen($arItem['FIELDS']['PREVIEW_PICTURE']['SRC']);
-								$imageSrc = ($bImage ? $arItem['FIELDS']['PREVIEW_PICTURE']['SRC'] : false);
+								$bImage = isset($arItem['FIELDS']['PREVIEW_PICTURE']) && strlen($arItem['PREVIEW_PICTURE']['SRC']);
+								$imageSrc = ($bImage ? $arItem['PREVIEW_PICTURE']['SRC'] : false);
 								?>
 								<li class="col-md-<?=$colmd?> col-sm-<?=$colsm?>">
 									<div class="item clearfix1" data-slice-block="Y" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
@@ -46,7 +46,7 @@
 													<?if($bDetailLink):?></a><?endif;?>
 												</div>
 											<?endif;?>
-											
+
 											<?// element preview text?>
 											<?if(strlen($arItem['FIELDS']['PREVIEW_TEXT'])):?>
 												<div class="previewtext">

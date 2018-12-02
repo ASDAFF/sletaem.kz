@@ -1,4 +1,6 @@
 <?
+$MESS["mnu_sender_stat"] = "Début";
+$MESS["mnu_sender_stat_alt"] = "Statistiques de toutes les lettres d'information ";
 $MESS["mnu_sender_report"] = "Statistiques";
 $MESS["mnu_sender_report_alt"] = "Statistiques";
 $MESS["mnu_sender_group"] = "Groupes De Bénéficiaires";
@@ -31,6 +33,4 @@ $MESS["mnu_sender_site_mailing_trig_chain"] = "Messages";
 $MESS["mnu_sender_site_mailing_trig_chain_alt"] = "Éditer et tester les messages";
 $MESS["mnu_sender_site_mailing_trig_stat"] = "Statistiques";
 $MESS["mnu_sender_site_mailing_trig_stat_alt"] = "Statistiques";
-$MESS["mnu_sender_stat"] = "Début";
-$MESS["mnu_sender_stat_alt"] = "Statistiques de toutes les lettres d'information ";
 ?>

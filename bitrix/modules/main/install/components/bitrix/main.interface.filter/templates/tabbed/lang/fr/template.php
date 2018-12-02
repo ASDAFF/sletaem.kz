@@ -1,4 +1,5 @@
 <?
+$MESS["INTERFACE_FILTER_FIND"] = "Rechercher";
 $MESS["CT_BMIF_INTERFACE_FILTER_LIST_VALUE_NOT_SELECTED"] = "(non)";
 $MESS["CT_BMIF_INTERFACE_FILTER_SETTINGS"] = "Actions avec le filtre";
 $MESS["CT_BMIF_INTERFACE_FILTER_ADD_FIELD"] = "Conditions supplémentaires de recherche";
@@ -24,7 +25,6 @@ $MESS["INTERFACE_FILTER_HIDE_ALL"] = "Masquer tous les filtres";
 $MESS["INTERFACE_FILTER_SAVE_AS"] = "Enregistrer sous...";
 $MESS["INTERFACE_FILTER_SAVE"] = "Enregistrer";
 $MESS["INTERFACE_FILTER_DELETE"] = "Supprimer";
-$MESS["INTERFACE_FILTER_FIND"] = "Rechercher";
 $MESS["INTERFACE_FILTER_CANCEL"] = "Annuler";
 $MESS["INTERFACE_FILTER_SAVE_AS_DIALOG_TITLE"] = "Enregistrer le filtre";
 $MESS["INTERFACE_FILTER_SAVE_AS_DIALOG_FIELD_NAME"] = "Nom du filtre";

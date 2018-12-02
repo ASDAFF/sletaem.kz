@@ -32,4 +32,10 @@ $MESS["SALE_DH_PECOM_LOC_GNA_17"] = "ЖИЛРАЙОН";
 $MESS["SALE_DH_PECOM_LOC_GNA_18"] = "ЗАЛІЗНИЧНА СТАНЦІЯ";
 $MESS["SALE_DH_PECOM_LOC_GNA_19"] = "СІЛЬСЬКАРАДА";
 $MESS["SALE_DH_PECOM_LOC_PNU_2"] = "РЕСПУБЛІКА";
+$MESS["SALE_DH_PECOM_LOC_RN_1"] = "ПЭК";
+$MESS["SALE_DH_PECOM_LOC_RN_1_R"] = "АСТРАХАНСЬКА";
+$MESS["SALE_DH_PECOM_LOC_RN_2"] = "ЄКАТЕРИНБУРГ";
+$MESS["SALE_DH_PECOM_LOC_RN_2_R"] = "СВЕРДЛОВСЬКА";
+$MESS["SALE_DH_PECOM_LOC_RN_3"] = "КЕМЕРОВО";
+$MESS["SALE_DH_PECOM_LOC_RN_3_R"] = "КЕМЕРОВСЬКА";
 ?>

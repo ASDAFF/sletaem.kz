@@ -12,7 +12,7 @@ $MESS["SEO_MENU_GOOGLE"] = "Google";
 $MESS["SEO_MENU_ADV_ENGINES"] = "Contexto automático";
 $MESS["SEO_MENU_ADV_ENGINES_ALT"] = "Integración de la plataforma de publicidad";
 $MESS["SEO_MENU_ADV_AUTOLOG"] = "Registro de contexto automático";
+$MESS["SEO_MENU_ADV_AUTOLOG_ALT"] = "Anuncio robot log";
 $MESS["SEO_MENU_YANDEX_DIRECT"] = "Yandex.Direct";
 $MESS["SEO_MENU_GOOGLE_ADWORDS"] = "AdWords de Google";
-$MESS["SEO_MENU_ADV_AUTOLOG_ALT"] = "Anuncio robot log";
 ?>

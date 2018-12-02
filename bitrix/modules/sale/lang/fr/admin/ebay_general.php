@@ -1,4 +1,7 @@
 <?
+$MESS["SALE_EBAY_CAT_MAP_EMPTY"] = "<p>Les catégories de votre e-Store ne sont pas encore reliées aux catégories eBay.</p><p>Pour relier une catégorie, ouvrez la page des propriétés de la catégorie, cliquez sur l'onglet \"Plateformes commerciales\" et sélectionnez la bonne catégorie eBay.</p>";
+$MESS["SALE_EBAY_MAX_PRODUCT_QUANTITY"] = "Maximum des produits à exporter";
+$MESS["SALE_EBAY_TP_EMPTY_ERROR"] = "Au moins un type de payeur doit être assigné à ce site";
 $MESS["SALE_MODULE_NOT_INSTALLED"] = "Le module e-Store n'est pas installé.";
 $MESS["SALE_ACCESS_DENIED"] = "Accès refusé";
 $MESS["SALE_EBAY_TITLE"] = "Paramètres E-bay";
@@ -76,7 +79,4 @@ $MESS["SALE_EBAY_CAT_EBAY_NAME"] = "Nom de catégorie eBay";
 $MESS["SALE_EBAY_CAT_MAP_ADD"] = "Ajouter cartographie";
 $MESS["SALE_EBAY_CAT_SETT_EDIT"] = "Éditer les paramètres des catégories";
 $MESS["SALE_EBAY_NOT_USE"] = "Ne pas utiliser";
-$MESS["SALE_EBAY_CAT_MAP_EMPTY"] = "<p>Les catégories de votre e-Store ne sont pas encore reliées aux catégories eBay.</p><p>Pour relier une catégorie, ouvrez la page des propriétés de la catégorie, cliquez sur l'onglet \"Plateformes commerciales\" et sélectionnez la bonne catégorie eBay.</p>";
-$MESS["SALE_EBAY_MAX_PRODUCT_QUANTITY"] = "Maximum des produits à exporter";
-$MESS["SALE_EBAY_TP_EMPTY_ERROR"] = "Au moins un type de payeur doit être assigné à ce site";
 ?>

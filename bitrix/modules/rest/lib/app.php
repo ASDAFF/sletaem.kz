@@ -57,6 +57,10 @@ class AppTable extends Main\Entity\DataManager
 
 	protected static $applicationCache = array();
 
+	protected static $localAppDeniedScope = array(
+		'landing_cloud', 'rating',
+	);
+
 	/**
 	 * Returns DB table name for entity.
 	 *
@@ -157,6 +161,10 @@ class AppTable extends Main\Entity\DataManager
 				'data_type' => 'string',
 			),
 			'MOBILE' => array(
+				'data_type' => 'boolean',
+				'values' => array(static::INACTIVE, static::ACTIVE),
+			),
+			'USER_INSTALL' => array(
 				'data_type' => 'boolean',
 				'values' => array(static::INACTIVE, static::ACTIVE),
 			),
@@ -874,5 +882,18 @@ class AppTable extends Main\Entity\DataManager
 		return array(
 			new Main\Entity\Validator\Length(null, 2000),
 		);
+	}
+
+	public static function cleanLocalPermissionList(array $permissionList)
+	{
+		foreach($permissionList as $key => $perm)
+		{
+			if(in_array($perm, static::$localAppDeniedScope))
+			{
+				unset($permissionList[$key]);
+			}
+		}
+
+		return array_values($permissionList);
 	}
 }

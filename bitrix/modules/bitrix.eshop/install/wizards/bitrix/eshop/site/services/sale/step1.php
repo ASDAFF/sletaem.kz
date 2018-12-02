@@ -717,6 +717,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 				"IS_LOCATION4TAX" => "N",
 				"CODE" => "ADDRESS",
 				"IS_FILTERED" => "N",
+				"IS_ADDRESS" => "Y"
 			);
 	}
 
@@ -768,6 +769,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"IS_LOCATION4TAX" => "N",
 					"CODE" => "COMPANY_ADR",
 					"IS_FILTERED" => "N",
+					"IS_ADDRESS" => "Y"
 				);
 
 			$businessValueCodes['COMPANY_INN'] = array('GROUP' => 'COMPANY', 'SORT' =>  220, 'DOMAIN' => $BIZVAL_ENTITY_DOMAIN);
@@ -990,6 +992,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"IS_LOCATION4TAX" => "N",
 					"CODE" => "ADDRESS",
 					"IS_FILTERED" => "N",
+					"IS_ADDRESS" => "Y"
 				);
 		}
 		else
@@ -1081,6 +1084,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 				"IS_LOCATION4TAX" => "N",
 				"CODE" => "COMPANY_ADR",
 				"IS_FILTERED" => "N",
+				"IS_ADDRESS" => "Y"
 			);
 
 			$businessValueCodes['COMPANY_EGRPU'] = array('GROUP' => 'COMPANY', 'SORT' =>  150, 'DOMAIN' => $BIZVAL_ENTITY_DOMAIN);
@@ -1214,6 +1218,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 				"IS_LOCATION4TAX" => "N",
 				"CODE" => "ADDRESS",
 				"IS_FILTERED" => "N",
+				"IS_ADDRESS" => "Y"
 			);
 
 			$businessValueCodes['COMPANY_PHONE'] = array('GROUP' => 'COMPANY', 'SORT' =>  210, 'DOMAIN' => $BIZVAL_ENTITY_DOMAIN);
@@ -1467,6 +1472,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 			"IS_LOCATION4TAX" => "N",
 			"CODE" => "ADDRESS",
 			"IS_FILTERED" => "N",
+			"IS_ADDRESS" => "Y"
 		);
 
 		$businessValueCodes['CLIENT_PHONE'] = array('GROUP' => 'CLIENT', 'SORT' =>  210, 'DOMAIN' => $BIZVAL_INDIVIDUAL_DOMAIN);
@@ -1658,6 +1664,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 				"PSA_NAME" => GetMessage("SALE_WIZARD_PS_CASH"),
 				"SORT" => 80,
 				"ACTIVE" => "Y",
+				"IS_CASH" => "Y",
 				"DESCRIPTION" => GetMessage("SALE_WIZARD_PS_CASH_DESCR"),
 				"ACTION_FILE" => "cash",
 				"RESULT_FILE" => "",
@@ -1668,6 +1675,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 				"HAVE_RESULT" => "N",
 				"HAVE_PREPAY" => "N",
 				"HAVE_RESULT_RECEIVE" => "N",
+				'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 			),
 			'PERSON_TYPE' => array($arGeneralInfo["personType"]["fiz"])
 		);
@@ -1690,6 +1698,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 				"HAVE_RESULT" => "N",
 				"HAVE_PREPAY" => "N",
 				"HAVE_RESULT_RECEIVE" => "N",
+				'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 			),
 			'PERSON_TYPE' => array($arGeneralInfo["personType"]["fiz"], $arGeneralInfo["personType"]["ur"])
 		);
@@ -1712,7 +1721,8 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"HAVE_ACTION" => "N",
 					"HAVE_RESULT" => "N",
 					"HAVE_PREPAY" => "N",
-					"HAVE_RESULT_RECEIVE" => "Y"
+					"HAVE_RESULT_RECEIVE" => "Y",
+					'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 				),
 				'PERSON_TYPE' => array($arGeneralInfo["personType"]["fiz"]),
 				"BIZVAL" => array('' => array(
@@ -1744,7 +1754,8 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"HAVE_PREPAY" => "N",
 					"HAVE_RESULT_RECEIVE" => "Y",
 					"PS_MODE" => "AC",
-					"LOGOTIP" => $arPicture
+					"LOGOTIP" => $arPicture,
+					'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 				),
 				"BIZVAL" => array('' => array(
 					"PAYMENT_ID" => array("TYPE" => "ORDER", "VALUE" => "ID"),
@@ -1774,7 +1785,8 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"HAVE_RESULT" => "N",
 					"HAVE_PREPAY" => "N",
 					"HAVE_RESULT_RECEIVE" => "Y",
-					"LOGOTIP" => $arPicture
+					"LOGOTIP" => $arPicture,
+					'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 				),
 				"BIZVAL" => array('' => array(
 					"PAYMENT_ID" => array("TYPE" => "ORDER", "VALUE" => "ID"),
@@ -1804,6 +1816,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"HAVE_RESULT" => "Y",
 					"HAVE_PREPAY" => "N",
 					"HAVE_RESULT_RECEIVE" => "N",
+					'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 				),
 				"PERSON_TYPE" => array($arGeneralInfo["personType"]["fiz"]),
 			);
@@ -1824,6 +1837,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 						"HAVE_RESULT" => "N",
 						"HAVE_PREPAY" => "N",
 						"HAVE_RESULT_RECEIVE" => "N",
+						'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 					),
 					"PERSON_TYPE" => array($arGeneralInfo["personType"]["fiz"]),
 					"BIZVAL" => array('' => array(
@@ -1863,6 +1877,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"HAVE_RESULT" => "N",
 					"HAVE_PREPAY" => "N",
 					"HAVE_RESULT_RECEIVE" => "Y",
+					'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 				),
 				"BIZVAL" => array('' => array(
 					"PAYMENT_ID" => array("TYPE" => "PAYMENT", "VALUE" => "ID"),
@@ -1890,6 +1905,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 				"HAVE_RESULT" => "N",
 				"HAVE_PREPAY" => "N",
 				"HAVE_RESULT_RECEIVE" => "N",
+				'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 			),
 			"PERSON_TYPE" => array($arGeneralInfo["personType"]["ur"]),
 			"BIZVAL" => array('' => array(
@@ -1932,6 +1948,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"HAVE_RESULT" => "N",
 					"HAVE_PREPAY" => "N",
 					"HAVE_RESULT_RECEIVE" => "N",
+					'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 				),
 				"PERSON_TYPE" => array($arGeneralInfo["personType"]["fiz"], $arGeneralInfo["personType"]["fiz_ua"]),
 				"BIZVAL" => array(
@@ -1971,6 +1988,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"HAVE_RESULT" => "N",
 					"HAVE_PREPAY" => "N",
 					"HAVE_RESULT_RECEIVE" => "Y",
+					'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 				),
 				"PERSON_TYPE" => array($arGeneralInfo["personType"]["fiz"]),
 				"PARAMS" => array(
@@ -1996,6 +2014,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"HAVE_RESULT" => "N",
 					"HAVE_PREPAY" => "N",
 					"HAVE_RESULT_RECEIVE" => "Y",
+					'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 				),
 				"PERSON_TYPE" => array($arGeneralInfo["personType"]["fiz"]),
 				"BIZVAL" => array(
@@ -2020,7 +2039,8 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					"HAVE_RESULT" => "N",
 					"HAVE_PREPAY" => "N",
 					"HAVE_RESULT_RECEIVE" => "Y",
-					"PS_MODE" => "GP"
+					"PS_MODE" => "GP",
+					'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 				),
 				"PERSON_TYPE" => array($arGeneralInfo["personType"]["fiz"]),
 				"BIZVAL" => array(
@@ -2046,6 +2066,7 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 				"HAVE_RESULT" => "N",
 				"HAVE_PREPAY" => "N",
 				"HAVE_RESULT_RECEIVE" => "N",
+				'ENTITY_REGISTRY_TYPE' => Sale\Registry::REGISTRY_TYPE_ORDER,
 			);
 
 			$arPaySystem['PERSON_TYPE'] = array();
@@ -2139,7 +2160,6 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 			unset($val['LOGOTIP']);
 		}
 
-
 		$dbRes = \Bitrix\Sale\PaySystem\Manager::getList(array('select' => array("ID", "NAME"), 'filter' => array("NAME" => $val["NAME"])));
 		$tmpPaySystem = $dbRes->fetch();
 		if (!$tmpPaySystem)
@@ -2155,7 +2175,9 @@ if($bRus || COption::GetOptionString("eshop", "wizard_installed", "N", WIZARD_SI
 					foreach ($arPaySystem['BIZVAL'] as $personType => $codes)
 					{
 						foreach ($codes as $code => $map)
-							\Bitrix\Sale\BusinessValue::setMapping($code, 'PAYSYSTEM_'.$id, $personType, array('PROVIDER_KEY' => $map['TYPE'], 'PROVIDER_VALUE' => $map['VALUE']), true);
+						{
+							\Bitrix\Sale\BusinessValue::setMapping($code, 'PAYSYSTEM_'.$id, $personType, array('PROVIDER_KEY' => $map['TYPE'] ?: 'VALUE', 'PROVIDER_VALUE' => $map['VALUE']), true);
+						}
 					}
 				}
 

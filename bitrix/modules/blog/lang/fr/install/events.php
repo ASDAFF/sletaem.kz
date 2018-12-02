@@ -1,4 +1,29 @@
 <?
+$MESS["BLOG_POST_BROADCAST_NAME"] = "Nouveau message ajouté";
+$MESS["BLOG_POST_BROADCAST_DESC"] = "
+#MESSAGE_TITLE# - Objet du message
+#MESSAGE_TEXT# - Texte du message
+#MESSAGE_PATH# - URL du message
+#AUTHOR# - Auteur du message
+#EMAIL_TO# - E-mail du destinataire";
+$MESS["BLOG_POST_BROADCAST_SUBJECT"] = "#SITE_NAME# : #MESSAGE_TITLE#";
+$MESS["BLOG_POST_BROADCAST_MESSAGE"] = "Nouvelle activité sur #SITE_NAME#
+------------------------------------------
+
+Un nouveau message a été publié depuis votre dernière visite.
+
+Objet :
+#MESSAGE_TITLE#
+
+Auteur : #AUTHOR#
+
+Texte du message :
+#MESSAGE_TEXT#
+
+Adresse du message :
+#MESSAGE_PATH#
+
+Ce message a été généré automatiquement.";
 $MESS["BLOG_YOUR_BLOG_TO_USER_DESC"] = "#BLOG_ID# - ID du blog
 #BLOG_NAME# - Nom du blog
 #BLOG_URL# - Nom du blog en lettres latines
@@ -244,29 +269,4 @@ $MESS["BLOG_SONET_POST_SHARE_NAME"] = "Nouveaux destinataires ajoutés";
 $MESS["BLOG_SONET_POST_SHARE_DESC"] = "#EMAIL_TO# - E-mail du destinataire
 #POST_ID# - ID du message
 #URL_ID# - URL du message";
-$MESS["BLOG_POST_BROADCAST_NAME"] = "Nouveau message ajouté";
-$MESS["BLOG_POST_BROADCAST_DESC"] = "
-#MESSAGE_TITLE# - Objet du message
-#MESSAGE_TEXT# - Texte du message
-#MESSAGE_PATH# - URL du message
-#AUTHOR# - Auteur du message
-#EMAIL_TO# - E-mail du destinataire";
-$MESS["BLOG_POST_BROADCAST_SUBJECT"] = "#SITE_NAME# : #MESSAGE_TITLE#";
-$MESS["BLOG_POST_BROADCAST_MESSAGE"] = "Nouvelle activité sur #SITE_NAME#
-------------------------------------------
-
-Un nouveau message a été publié depuis votre dernière visite.
-
-Objet :
-#MESSAGE_TITLE#
-
-Auteur : #AUTHOR#
-
-Texte du message :
-#MESSAGE_TEXT#
-
-Adresse du message :
-#MESSAGE_PATH#
-
-Ce message a été généré automatiquement.";
 ?>

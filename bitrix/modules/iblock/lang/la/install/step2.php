@@ -13,7 +13,7 @@ $MESS["IBLOCK_INSTALL_CATALOG_SECTIONS_NAME"] = "Secciones";
 $MESS["IBLOCK_INSTALL_CATALOG_ELEMENTS_NAME"] = "Productos";
 $MESS["IBLOCK_INSTALL_CATALOG_SECTION_NAME"] = "Sección";
 $MESS["IBLOCK_INSTALL_CATALOG_ELEMENT_NAME"] = "Producto";
+$MESS["IBLOCK_DEMO_DIR"] = "Usted puede ver como estos componentes trabajan en los siguientes links:";
 $MESS["IBLOCK_SITE"] = "Sitio";
 $MESS["IBLOCK_LINK"] = "Enlace";
-$MESS["IBLOCK_DEMO_DIR"] = "Usted puede ver como estos componentes trabajan en los siguientes links:";
 ?>

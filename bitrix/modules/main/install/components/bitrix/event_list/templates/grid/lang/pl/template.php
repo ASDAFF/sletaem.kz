@@ -1,0 +1,17 @@
+<?
+$MESS["EVENT_LIST_SUBMIT"] = "Wybierz";
+$MESS["EVENT_LIST_FILTER_CREATED_BY"] = "Stworzone przez";
+$MESS["EVENT_LIST_FILTER_DATE"] = "Data";
+$MESS["EVENTLIST_HEADER_TIME"] = "Czas";
+$MESS["EVENT_LIST_FILTER_FEATURES_TITLE"] = "Wydarzenia";
+$MESS["EVENT_LIST_FILTER_TITLE"] = "Ustaw filtr";
+$MESS["EVENT_LIST_NO_UPDATES"] = "Brak aktualizacji.";
+$MESS["EVENT_LIST_PAGE_NAV"] = "Pokazywanie rekordów";
+$MESS["EVENT_LIST_DATE_FILTER_DAYS"] = "dni";
+$MESS["EVENT_LIST_FILTER_SHOW"] = "wyświetl";
+$MESS["EVENT_LIST_FILTER_HIDE"] = "ukryj";
+$MESS["EVENT_LIST_NO_ACTIVE_FEATURES_ERROR"] = "Nie wybrano wydarzeń w filtrze.";
+$MESS["EVENTLIST_HEADER_EVENT_NAME"] = "Wydarzenie";
+$MESS["EVENTLIST_HEADER_NAME"] = "Użytkownik";
+$MESS["EVENTLIST_HEADER_IP"] = "IP";
+?>

@@ -1,4 +1,7 @@
 <?
+$MESS["SALE_DSE_REQUIRED_FIELD"] = "Ce champ est obligatoire :";
+$MESS["SALE_DSE_2DS_EDIT"] = "Retour au service de livraison";
+$MESS["SALE_DSE_BUSINESS_VALUES"] = "Significations commerciales";
 $MESS["SALE_DSE_TAB_GENERAL"] = "Paramètres généraux";
 $MESS["SALE_DSE_TAB_DELIVERY_GENERAL"] = "Paramètres généraux pour le service de livraison";
 $MESS["SALE_DSE_ERROR_NO_NAME"] = "Le nom n'est pas spécifié.";
@@ -67,7 +70,4 @@ $MESS["SALE_DSE_TAB_TRACKING_DESCR"] = "Paramètres du suivi";
 $MESS["SALE_DSE_TAB_TRACKING_PARAMS"] = "Paramètres";
 $MESS["SALE_DSE_TAB_TRACKING_PARAMS_EMPTY"] = "Aucune configuration supplémentaire requise";
 $MESS["SALE_DSE_FORM_ALLOW_EDIT_SHIPMENT"] = "Mettre automatiquement à jour l'expédition dans le statut initial si la commande correspondante change";
-$MESS["SALE_DSE_REQUIRED_FIELD"] = "Ce champ est obligatoire :";
-$MESS["SALE_DSE_2DS_EDIT"] = "Retour au service de livraison";
-$MESS["SALE_DSE_BUSINESS_VALUES"] = "Significations commerciales";
 ?>

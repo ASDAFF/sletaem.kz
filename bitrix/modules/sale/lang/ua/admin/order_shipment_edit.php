@@ -34,4 +34,10 @@ $MESS["SOPE_SHIPMENT_TRANSITION"] = "Перейти до замовлення";
 $MESS["SOPE_SHIPMENT_TRANSITION_TITLE"] = "Перейти до замовлення";
 $MESS["SOPE_SHIPMENT_ERROR_MESSAGE"] = "Помилка при збереженні відвантаження";
 $MESS["SOPE_SHIPMENT_DELETE_MESSAGE"] = "Ви дійсно хочете видалити дане відвантаження?";
+$MESS["SOPE_DELIVERY_REQUEST_SHIPMENT_DELETE"] = "Видалити відвантаження із заявки";
+$MESS["SOPE_DELIVERY_REQUEST_SHIPMENT_UPDATE"] = "Оновити відвантаження в заявці";
+$MESS["SOPE_DELIVERY_REQUEST_CREATE"] = "Створити нову заявку і додати відвантаження";
+$MESS["SOPE_DELIVERY_REQUEST_ADD"] = "Додати відвантаження в існуючу заявку";
+$MESS["SOPE_DELIVERY_REQUEST"] = "Транспортна заявка";
+$MESS["SOPE_DELIVERY_REQUEST_TITLE"] = "Дії з транспортною заявкою";
 ?>

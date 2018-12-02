@@ -105,4 +105,8 @@ $MESS["STOREAS_ITEMS_info_api_doc"] = "Документація для розр�
 $MESS["STOREAS_ITEMS_info_courses"] = "Список всіх курсів";
 $MESS["STOREAS_ITEMS_support_developer"] = "Технічна підтримка компанією-розробником #NAME#";
 $MESS["STOREAS_ITEMS_support_bitrix"] = "Технічна підтримка 1С-Бітрікс";
+$MESS["STOREAS_ITEMS_sale_delivery_service_list"] = "Служби доставки";
+$MESS["STOREAS_ITEMS_sale_personalization"] = "Персоналізація";
+$MESS["STOREAS_ITEMS_composite_auto"] = "запустити автоматично";
+$MESS["STOREAS_ITEMS_composite_dev"] = "запустити через розробника";
 ?>

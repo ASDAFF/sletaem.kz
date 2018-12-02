@@ -36,7 +36,7 @@ $MESS["BLBE_EDITOR_USE_FONT"] = "Permitir a los usuarios elegir estilos de fuent
 $MESS["BLBE_EDITOR_USE_LINK"] = "Permitir a los usuarios agregar hipervínculos";
 $MESS["BLBE_EDITOR_USE_FORMAT"] = "Habilitar opciones de formato extendido";
 $MESS["BLBE_EDITOR_USE_FORMAT_HINT"] = "Tablas, alineación de texto, etc.";
-$MESS["BLBE_EDITOR_USE_IMAGE"] = "Permitir a los usuarios insertar imágenes";
 $MESS["BLBE_EDITOR_USE_VIDEO"] = "Permitir a los usuarios agregar video";
 $MESS["BLBE_EDITOR_USE_VIDEO_HINT"] = "Una opción correspondiente tiene que estar habilitado en la configuración del módulo de Blog";
+$MESS["BLBE_EDITOR_USE_IMAGE_AND_FILES"] = "Habilitar carga de archivo e imagen";
 ?>

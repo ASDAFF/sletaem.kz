@@ -19,18 +19,6 @@ $MESS["CT_BSP_DATES_TO"] = "a #TO#";
 $MESS["CT_BSP_DATES_ALL"] = "todo";
 $MESS["CT_BSP_ERROR"] = "Error en la búsqueda de la frase:";
 $MESS["CT_BSP_CORRECT_AND_CONTINUE"] = "Por favor corrija la frase de búsqueda y vuelva a intentarlo.";
-$MESS["CT_BSP_LOGIC"] = "Operadores Logicos:";
-$MESS["CT_BSP_OPERATOR"] = "Operador";
-$MESS["CT_BSP_SYNONIM"] = "Sinonimos";
-$MESS["CT_BSP_DESCRIPTION"] = "Descripción";
-$MESS["CT_BSP_AND"] = "y";
-$MESS["CT_BSP_AND_ALT"] = "El operador <i>logical and</i> esta implicado y puede ser omitido; una consulta de &quot;contact information&quot; \" es equivalente a &quot;contact and information&quot;.";
-$MESS["CT_BSP_OR"] = "o";
-$MESS["CT_BSP_OR_ALT"] = "El operador <i>logical or</i> permite la búsqueda de entidades que contengan al menos uno de los operandos.";
-$MESS["CT_BSP_NOT"] = "no";
-$MESS["CT_BSP_NOT_ALT"] = "El operador <i>logical not</i> restringe la búsqueda a páginas que no contengan el operando.";
-$MESS["CT_BSP_BRACKETS_ALT"] = "<i>Round brackets</i> definir la prioridad de los operadores lógicos.";
-$MESS["CT_BSP_NOTHING_TO_FOUND"] = "Lamentablemente, su búsqueda no obtuvo ningún resultado.";
 $MESS["CT_BSP_SINTAX"] = "<b>Sintaxis de cadenas a buscar :</b><br />
 <br />
 Una cadena de búsqueda común es una cadena de 1 o más palabras: por ejemplo:<br />
@@ -45,5 +33,17 @@ Esta consulta nos dará como resultado a las páginas que contienen Contacto e I
 <i>Contacto Información not teléfono</i><br />
 Esta consulta nos dará como resultado a páginas que contienen las cadenas contacto e información, pero que no contienen a la palabra teléfono.<br />
 Usted puede utilizar paréntesis para construir sus consultas y priorizar algunas operaciones. <br />";
+$MESS["CT_BSP_LOGIC"] = "Operadores Logicos:";
+$MESS["CT_BSP_OPERATOR"] = "Operador";
+$MESS["CT_BSP_SYNONIM"] = "Sinonimos";
+$MESS["CT_BSP_DESCRIPTION"] = "Descripción";
+$MESS["CT_BSP_AND"] = "y";
+$MESS["CT_BSP_AND_ALT"] = "El operador <i>logical and</i> esta implicado y puede ser omitido; una consulta de &quot;contact information&quot; \" es equivalente a &quot;contact and information&quot;.";
+$MESS["CT_BSP_OR"] = "o";
+$MESS["CT_BSP_OR_ALT"] = "El operador <i>logical or</i> permite la búsqueda de entidades que contengan al menos uno de los operandos.";
+$MESS["CT_BSP_NOT"] = "no";
+$MESS["CT_BSP_NOT_ALT"] = "El operador <i>logical not</i> restringe la búsqueda a páginas que no contengan el operando.";
+$MESS["CT_BSP_BRACKETS_ALT"] = "<i>Round brackets</i> definir la prioridad de los operadores lógicos.";
+$MESS["CT_BSP_NOTHING_TO_FOUND"] = "Lamentablemente, su búsqueda no obtuvo ningún resultado.";
 $MESS["CT_BSP_KEYBOARD_WARNING"] = "Consulta de entrada del idioma cambiado para \"#query#\".";
 ?>

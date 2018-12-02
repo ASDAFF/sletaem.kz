@@ -11,4 +11,7 @@ $MESS["PERFMON_ROW_EDIT_TAB_TITLE"] = "Редагування запису в т
 $MESS["PERFMON_ROW_CACHE_TAB"] = "Керований кеш";
 $MESS["PERFMON_ROW_CACHE_TAB_TITLE"] = "Управління скиданням керованого кеша після збереження запису.";
 $MESS["PERFMON_ROW_CACHE_CLEAR"] = "Скинути керований кеш";
+$MESS["PERFMON_ROW_EDIT_MENU_DELETE"] = "Видалити";
+$MESS["PERFMON_ROW_EDIT_MENU_DELETE_TITLE"] = "Видалити запис";
+$MESS["PERFMON_ROW_EDIT_MENU_DELETE_CONF"] = "Ви впевнені, що хочете видалити запис?";
 ?>

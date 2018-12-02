@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_DH_DEPRECATED_MESSAGE"] = "Ce gestionnaire de service de livraison est dépassé et n'est plus pris en charge. Veuillez utiliser le #A1#nouveau gestionnaire SPSR#A2#";
 $MESS["SALE_DH_CPCR_BIZON_TITLE"] = "Squirrel Cargo";
 $MESS["SALE_DH_CPCR_SIMPLE13_TITLE"] = "Exprimez 13h00";
 $MESS["SALE_DH_CPCR_SIMPLE18_TITLE"] = "Exprimez 18h00";
@@ -32,5 +33,4 @@ $MESS["SALE_DH_CPCR_CONFIG_CATEGORY_5"] = "bijoux";
 $MESS["SALE_DH_CPCR_CONFIG_CATEGORY_1"] = "documents";
 $MESS["SALE_DH_CPCR_NEXT_STEP"] = "Modifier les emplacements";
 $MESS["SALE_DH_CPCR_DAYS"] = "jours";
-$MESS["SALE_DH_DEPRECATED_MESSAGE"] = "Ce gestionnaire de service de livraison est dépassé et n'est plus pris en charge. Veuillez utiliser le #A1#nouveau gestionnaire SPSR#A2#";
 ?>

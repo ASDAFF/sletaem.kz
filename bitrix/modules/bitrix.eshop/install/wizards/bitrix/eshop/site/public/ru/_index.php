@@ -27,6 +27,10 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 );?>
 <?endif?>
 
+<?
+global $trendFilter;
+$trendFilter = array('PROPERTY_TREND' => '#TREND_PROPERTY_VALUE_ID#');
+?>
 <h2>Тренды сезона</h2>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section",
@@ -47,7 +51,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"ELEMENT_SORT_ORDER" => "desc",
 		"ELEMENT_SORT_FIELD2" => "id",
 		"ELEMENT_SORT_ORDER2" => "desc",
-		"FILTER_NAME" => "arrFilter",
+		"FILTER_NAME" => "trendFilter",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"SHOW_ALL_WO_SECTION" => "Y",
 		"HIDE_NOT_AVAILABLE" => "N",
@@ -71,7 +75,6 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"OFFERS_SORT_ORDER" => "desc",
 		"OFFERS_SORT_FIELD2" => "id",
 		"OFFERS_SORT_ORDER2" => "desc",
-		"OFFERS_LIMIT" => "5",
 		"TEMPLATE_THEME" => "site",
 		"PRODUCT_DISPLAY_MODE" => "Y",
 		"ADD_PICT_PROP" => "MORE_PHOTO",
@@ -149,7 +152,8 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"SET_STATUS_404" => "N",
 		"SHOW_404" => "N",
-		"MESSAGE_404" => ""
+		"MESSAGE_404" => "",
+		"COMPATIBLE_MODE" => "N",
 	),
 	false
 );?>

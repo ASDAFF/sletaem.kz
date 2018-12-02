@@ -1,4 +1,6 @@
 <?
+$MESS["CATALOG_ERR_NO_PRODUCT_SET"] = "Les contenus du lot sont introuvables.";
+$MESS["CATALOG_ERR_NO_PRODUCT_SET_ITEM"] = "Les produits en lot sont introuvables.";
 $MESS["DDCT_DEDUCTION_BARCODE_ERROR"] = "Pour le produit #PRODUCT_NAME# (##PRODUCT_ID#) le code à barres '#BARCODE#' n'est pas trouvé.";
 $MESS["RSRV_QUANTITY_NOT_ENOUGH_ERROR"] = "Quantité insuffisante du produit #PRODUCT_NAME# (##PRODUCT_ID#) en dépôt.";
 $MESS["RSRV_QUANTITY_NEGATIVE_ERROR"] = "La quantité en stock du produit #PRODUCT_NAME# (##PRODUCT_ID#) est négative.";
@@ -18,6 +20,4 @@ $MESS["DDCT_DEDUCTION_MULTI_BARCODE_EMPTY"] = "Le code barre du produit \"#PRODU
 $MESS["CATALOG_ERR_SKU_PRODUCT"] = "Vous ne pouvez pas ajouter au panier un produit disposant de plusieurs UGS. Seule une UGS spécifique peut être ajoutée au panier.";
 $MESS["RSRV_SKU_FOUND"] = "Le produit ##PRODUCT_ID# dispose de plusieurs UGS. Seule une UGS spécifique peut être réservée ou délivrée.";
 $MESS["DDCT_DEDUCTION_PRODUCT_NOT_FOUND_ERROR"] = "Le produit à expédier n'a pas été trouvé (##PRODUCT_ID#)";
-$MESS["CATALOG_ERR_NO_PRODUCT_SET"] = "Les contenus du lot sont introuvables.";
-$MESS["CATALOG_ERR_NO_PRODUCT_SET_ITEM"] = "Les produits en lot sont introuvables.";
 ?>

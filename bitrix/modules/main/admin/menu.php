@@ -67,6 +67,15 @@ if($USER->CanDoOperation('edit_php') || $USER->CanDoOperation('view_all_users') 
 		);
 	}
 
+	if($USER->CanDoOperation('edit_all_users'))
+	{
+		$array_user_items[] = array(
+			"text" => GetMessage("MAIN_MENU_PROFILE_HISTORY"),
+			"url" => "profile_history.php?lang=".LANGUAGE_ID,
+			"title" => GetMessage("MAIN_MENU_PROFILE_HISTORY_TITLE"),
+		);
+	}
+
 	if ($USER->CanDoOperation('edit_php'))
 	{
 		$array_user_items[] = array(
@@ -227,7 +236,7 @@ if($USER->CanDoOperation('view_other_settings') || $USER->CanDoOperation('manage
 						"sort" => $sort,
 					);
 
-					if(BX_SEARCH_ADMIN===true)
+					if(defined('BX_SEARCH_ADMIN') && BX_SEARCH_ADMIN===true)
 					{
 						$lfile = getLocalPath("modules/".$module."/lang/".LANGUAGE_ID."/options.php");
 						if($lfile !== false)
@@ -238,7 +247,10 @@ if($USER->CanDoOperation('view_other_settings') || $USER->CanDoOperation('manage
 
 					$aModuleItems[] = $aModule;
 				}
-				usort($aModuleItems, create_function('$a, $b', 'if($a["sort"] == $b["sort"]) return strcasecmp($a["text"], $b["text"]); return ($a["sort"] < $b["sort"])? -1 : 1;'));
+				\Bitrix\Main\Type\Collection::sortByColumn(
+					$aModuleItems,
+					['sort' => SORT_ASC, 'text' => SORT_STRING]
+				);
 			}
 		}
 
@@ -263,7 +275,7 @@ if($USER->CanDoOperation('view_other_settings') || $USER->CanDoOperation('manage
 		);
 	}
 
-	if($USER->CanDoOperation('view_other_settings'))
+	if($USER->CanDoOperation('view_other_settings') && !\Bitrix\Main\Composite\Engine::isSelfHostedPortal())
 	{
 		$settingsItems[] = array(
 			"text" => GetMessage("MAIN_MENU_COMPOSITE"),
@@ -291,6 +303,10 @@ if($USER->CanDoOperation('view_other_settings') || $USER->CanDoOperation('manage
 				)
 			)
 		);
+	}
+
+	if($USER->CanDoOperation('view_other_settings'))
+	{
 
 		$urlItems[] = array(
 			"text" => GetMessage("MAIN_MENU_RATING_RULE_LIST"),

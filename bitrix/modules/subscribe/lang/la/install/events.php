@@ -1,13 +1,13 @@
 <?
-$MESS ['SUBSCRIBE_CONFIRM_NAME'] = "Confirmación de suscripción";
-$MESS ['SUBSCRIBE_CONFIRM_DESC'] = "#ID# - ID de la suscripción
+$MESS["SUBSCRIBE_CONFIRM_NAME"] = "Confirmación de suscripción";
+$MESS["SUBSCRIBE_CONFIRM_DESC"] = "#ID# - ID de la suscripción
 #EMAIL# - email de suscripción
 #CONFIRM_CODE# - código de confirmación
 #SUBSCR_SECTION# - sección con suscripción de la página(especificar las configuraciones)
 #USER_NAME# - nombre del suscriptor (puede estar ausente)
 #DATE_SUBSCR# - fecha de adición/cambio de dirección";
-$MESS ['SUBSCRIBE_CONFIRM_SUBJECT'] = "#SITE_NAME#: Confirmación de suscripción";
-$MESS ['SUBSCRIBE_CONFIRM_MESSAGE'] = "Mensaje interno de #SITE_NAME#
+$MESS["SUBSCRIBE_CONFIRM_SUBJECT"] = "#SITE_NAME#: Confirmación de suscripción";
+$MESS["SUBSCRIBE_CONFIRM_MESSAGE"] = "Mensaje interno de #SITE_NAME#
 ---------------------------------------
 
 Hola,

@@ -1,3 +1,3 @@
 <?
-$MESS ['FILEMAN_T_FILES'] = "Archivos";
+$MESS["FILEMAN_T_FILES"] = "Archivos";
 ?>

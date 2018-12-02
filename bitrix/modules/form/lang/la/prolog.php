@@ -1,3 +1,3 @@
 <?
-$MESS ['FORM_MODULE_TITLE'] = "Formularios web";
+$MESS["FORM_MODULE_TITLE"] = "Formularios web";
 ?>

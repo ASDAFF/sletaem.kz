@@ -147,7 +147,7 @@ if(!empty($arBlog) && $arBlog["ACTIVE"] == "Y" && $arGroup["SITE_ID"] == SITE_ID
 			$path = $request->isHttps() ? "https://" : "http://";
 			$path.= $request->getHttpHost();
 			$path.=	CComponentEngine::MakePathFromTemplate($arParams["PATH_TO_POST"], array("blog" => $arBlog["URL"],"post_id"=> $arResult["Post"]["CODE"],"user_id" => $arPost["AUTHOR_ID"]));
-			Asset::getInstance()->addString('<link rel="canonical" href="'.$path.'" />');
+			// Asset::getInstance()->addString('<link rel="canonical" href="'.$path.'" />');
 		}
 		
 		if($_GET["become_friend"]=="Y" && $arResult["PostPerm"]<BLOG_PERMS_READ)

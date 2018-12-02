@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_BASKET_DISCOUNT_MESS_ORDERS_ABSENT"] = "Aucune commande ne nécessite la conversion de données de coupon.";
 $MESS["SALE_BASKET_DISCOUNT_CONVERT_ERRORS_RIGHTS"] = "Permissions insuffisantes.";
 $MESS["SALE_BASKET_DISCOUNT_CONVERT_ERRORS_INCORRECT_SESSION"] = "Votre session a expiré. Veuillez fermer la boîte de dialogue, vous reconnecter au système et réessayer.";
 $MESS["SALE_BASKET_DISCOUNT_CONVERT_ERRORS_MODULE_SALE_ABSENT"] = "Impossible d'inclure le module \"e-Store\".";
@@ -19,5 +20,4 @@ $MESS["SALE_BASKET_DISCOUNT_FILTER_RANGE_FROM"] = "de";
 $MESS["SALE_BASKET_DISCOUNT_FILTER_RANGE_TO"] = "via";
 $MESS["SALE_BASKET_DISCOUNT_UPDATE_BTN"] = "Démarrer";
 $MESS["SALE_BASKET_DISCOUNT_STOP_BTN"] = "Arrêter";
-$MESS["SALE_BASKET_DISCOUNT_MESS_ORDERS_ABSENT"] = "Aucune commande ne nécessite la conversion de données de coupon.";
 ?>

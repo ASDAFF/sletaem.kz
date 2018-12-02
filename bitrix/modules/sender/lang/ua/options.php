@@ -1,4 +1,5 @@
 <?
+$MESS["opt_track_mails"] = "Відстежувати прочитання і переходи за посиланнями:";
 $MESS["MAIN_RESTORE_DEFAULTS"] = "За замовчуванням";
 $MESS["opt_def_from"] = "Адреса відправника за замовчуванням:";
 $MESS["opt_method_agent"] = "Агент";

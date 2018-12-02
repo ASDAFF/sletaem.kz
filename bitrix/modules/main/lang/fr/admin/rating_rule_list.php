@@ -1,4 +1,5 @@
 <?
+$MESS["RATING_RULE_LIST_FLT_find"] = "Rechercher:";
 $MESS["RATING_RULE_LIST_FLT_ALL"] = "(partout)";
 $MESS["RATING_RULE_LIST_FLT_ID"] = "ID";
 $MESS["RATING_RULE_ACTIVE"] = "Actif(ve)";
@@ -12,7 +13,6 @@ $MESS["RATING_RULE_LIST_EDIT"] = "Modifier les paramètres";
 $MESS["RATING_RULE_LAST_MODIFIED"] = "Modifié";
 $MESS["RATING_RULE_NAME"] = "Dénomination";
 $MESS["RATING_RULE_LIST_FLT_NAME"] = "Dénomination";
-$MESS["RATING_RULE_LIST_FLT_find"] = "Recherche:";
 $MESS["RATING_RULE_LIST_FLT_ACTIVE_N"] = "démissionné";
 $MESS["RATING_RULE_ACTIVE_NO"] = "Non";
 $MESS["RATING_RULE_LIST_ADD"] = "Nouvelle règle";

@@ -1,4 +1,5 @@
 <?
+$MESS["IBSEL_CATALOG_EXTRA_DESCRIPTION"] = "Surtaxer #VALUE# jusqu'à atteindre le prix de base";
 $MESS["IBSEL_A_ACTIVATE"] = "Activer";
 $MESS["IB_SE_L_REQUIRED_FIELDS_FIND"] = "Désélectionnez les champs obligatoires du bloc d'information qui empêchent le fonctionnement du 'Générateur des offres commerciales'";
 $MESS["IB_SE_L_GENERATE"] = "Générer";
@@ -18,5 +19,4 @@ $MESS["IBSEL_A_CLEAR_COUNTER"] = "Réinitialiser views counter";
 $MESS["IBSEL_A_DEACTIVATE"] = "Désactiver";
 $MESS["IBSEL_A_CLEAR_COUNTER_CONFIRM"] = "Voulez-vous vraiment réinitialiser le compteur et la date de première vue ?";
 $MESS["IBEL_CATALOG_QUANTITY_RESERVED"] = "Réservé";
-$MESS["IBSEL_CATALOG_EXTRA_DESCRIPTION"] = "Surtaxer #VALUE# jusqu'à atteindre le prix de base";
 ?>

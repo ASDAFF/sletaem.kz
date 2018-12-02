@@ -16,9 +16,9 @@ $MESS["CATALOG_PRODUCT_SUBSCRIBE_LIST_CONFIRM_HTML_TEXT"] = "Ви отримал
 Ви також можете ввести код на сторінці: #LIST_SUBSCRIBES# <br><br>
 Лист містить інформацію для авторизації.<br>
 Використовуючи код підтвердження, ви зможете отримати доступ до списку підписок.<br>
-Не відповідайте на лист, він сформовано автоматично.<br><br>
+Не відповідайте на лист, він сформований автоматично.<br><br>
 Дякуємо, що ви з нами!<br>";
-$MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_NAME"] = "Повідомлення про надходження товару";
+$MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_NAME"] = "Сповіщення про надходження товару";
 $MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_DESC"] = "#USER_NAME# - ім'я користувача
 #EMAIL_TO# - email користувача
 #NAME# - назва товару
@@ -28,8 +28,8 @@ $MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_DESC"] = "#USER_NAME# - ім'я кори
 #PRODUCT_ID# - id товару для формування посилань
 #UNSUBSCRIBE_URL# - посилання відписки від товару
 #UNSUBSCRIBE_URL_PARAMETERS# - параметри посилання відписки від товару";
-$MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_SUBJECT"] = "#SITE_NAME#: Повідомлення про надходження товару";
-$MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_HTML_TITLE"] = "Повідомлення про надходження товару в магазин #SITE_NAME#";
+$MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_SUBJECT"] = "#SITE_NAME#: Сповіщення про надходження товару";
+$MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_HTML_TITLE"] = "Сповіщення про надходження товару в магазин #SITE_NAME#";
 $MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_HTML_SUB_TITLE"] = "Шановний, #USER_NAME#!";
 $MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_HTML_TEXT"] = "Товар \"#NAME#\" (#PAGE_URL#) надійшов на склад.<br><br>
 Ви просили оповістити вас про надходження товару.<br><br>
@@ -44,8 +44,8 @@ $MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_REPEATED_DESC"] = "#USER_NAME# - ім'я
 #PRODUCT_ID# - id товару для формування посилань
 #UNSUBSCRIBE_URL# - посилання відписки від товару
 #UNSUBSCRIBE_URL_PARAMETERS# - параметри посилання відписки від товару";
-$MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_REPEATED_SUBJECT"] = "Повідомлення про товар в магазині #SITE_NAME#";
-$MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_REPEATED_HTML_TITLE"] = "Повідомлення про товар в магазині #SITE_NAME#";
+$MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_REPEATED_SUBJECT"] = "Сповіщення про товар в магазині #SITE_NAME#";
+$MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_REPEATED_HTML_TITLE"] = "Сповіщення про товар в магазині #SITE_NAME#";
 $MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_REPEATED_HTML_SUB_TITLE"] = "Шановний, #USER_NAME#!";
 $MESS["CATALOG_PRODUCT_SUBSCRIBE_NOTIFY_REPEATED_HTML_TEXT"] = "Товар \"#NAME#\" (#PAGE_URL#) на жаль знову закінчився.<br><br>
 Ми обов'язково повідомимо вам про надходження товару.<br><br>

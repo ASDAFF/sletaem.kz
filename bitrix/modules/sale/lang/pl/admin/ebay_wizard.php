@@ -1,0 +1,6 @@
+<?
+$MESS["SALE_EBAY_W_BACK"] = "Wstecz";
+$MESS["SALE_EBAY_W_FURTHER"] = "Dalej";
+$MESS["SALE_EBAY_W_STEP_MIP_TO_CONNECT"] = "Połącz";
+$MESS["SALE_EBAY_W_STEP_CATALOG_ADD"] = "Dodaj";
+?>

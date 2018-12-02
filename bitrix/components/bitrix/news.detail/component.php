@@ -503,7 +503,7 @@ if(isset($arResult["ID"]))
 
 	if ($arParams['SET_CANONICAL_URL'] === 'Y' && $arResult["CANONICAL_PAGE_URL"])
 	{
-		$APPLICATION->SetPageProperty('canonical', $arResult["CANONICAL_PAGE_URL"]);
+		//$APPLICATION->SetPageProperty('canonical', $arResult["CANONICAL_PAGE_URL"]);
 	}
 
 	if($arParams["SET_TITLE"])

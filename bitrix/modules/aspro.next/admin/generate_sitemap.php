@@ -10,6 +10,7 @@ $moduleID = "aspro.next";
 \Bitrix\Main\Loader::includeModule($moduleID);
 
 use \Bitrix\Main\Config\Option;
+use CNextCache as Cache;
 
 $RIGHT = $APPLICATION->GetGroupRight($moduleID);
 if($RIGHT >= "R"){
@@ -98,11 +99,11 @@ if($RIGHT >= "R"){
 						{
 							if(!$_POST[$optionCode."_".$optionsSiteID])
 								$arErrors[$optionsSiteID][] = GetMessage('NEXT_MODULE_FIELD_NO_VALUE', array('#FIELD#' => GetMessage('NEXT_MODULE_'.$optionCode.'_TITLE'), "#SITE_ID#" => $optionsSiteID));
-						}						
+						}
 						if($_POST[$optionCode."_".$optionsSiteID])
 						{
-							Option::set("aspro.next", $optionCode, $_POST[$optionCode."_".$optionsSiteID], $optionsSiteID);							
-						}							
+							Option::set("aspro.next", $optionCode, $_POST[$optionCode."_".$optionsSiteID], $optionsSiteID);
+						}
 					}
 					$siteMapName =  Option::get("aspro.next", "SITEMAP_NAME", $arTab["OPTIONS"]["SITEMAP_NAME"]["DEFAULT"], $optionsSiteID);
 					$siteMapNewName =  Option::get("aspro.next", "SITEMAP_NEW_NAME", $arTab["OPTIONS"]["SITEMAP_NEW_NAME"]["DEFAULT"], $optionsSiteID);
@@ -118,14 +119,76 @@ if($RIGHT >= "R"){
 					{
 						if($arTab["ITEMS"])
 						{
+
 							$arName = explode(".xml", $siteMapName);
 							$siteMapNameTmp = reset($arName);
 							$siteMapNameTmp2 = $siteMapNameTmp;
+
+							// get iblock id of landings in search
+							if($LANDINGS_SEARCH_IBLOCK_ID = Cache::$arIBlocks[$optionsSiteID]['aspro_next_catalog']['aspro_next_search'][0]){
+								// get sitemap file for this iblock
+								$sitemapLandingsSearch = $siteMapNameTmp.'_iblock_'.$LANDINGS_SEARCH_IBLOCK_ID.'.xml';
+							}
+
 							$arFiles = array();
 							foreach(glob($arTab["SITE_DIR_FORMAT"].$siteMapNameTmp.'*.xml', 0) as $dir){
 								$dir = str_replace($arTab["SITE_DIR_FORMAT"], '', basename($dir));
 								$arFiles[] = $dir;
+
+								if($LANDINGS_SEARCH_IBLOCK_ID && strpos($dir, $sitemapLandingsSearch) !== false){
+									$sitemapLandingsSearch = $dir;
+								}
 							}
+
+
+							// get content of sitemap of landings in search
+							if($sitemapLandingsSearch && file_exists($arTab['SITE_DIR_FORMAT'].$sitemapLandingsSearch)){
+								$content = @file_get_contents($arTab['SITE_DIR_FORMAT'].$sitemapLandingsSearch);
+
+								// get landings items
+								$arLandings = $arLandingsIDs = array();
+								if($content && preg_match_all('/<url>\s*<loc>(([^<]*)=(\d*))<\/loc>\s*<lastmod>([^<]*)<\/lastmod>\s*<\/url>/i', $content, $arLandingsMatches)){
+									$arLandingsIDs = $arLandingsMatches[3];
+									$arLandings = Cache::CIBLockElement_GetList(
+										array(
+											'ID' => 'ASC',
+											'CACHE' => array(
+												'MULTI' => 'N',
+												'TAG' => Cache::GetIBlockCacheTag($LANDINGS_SEARCH_IBLOCK_ID),
+												'GROUP' => array('ID'),
+											),
+										),
+										array(
+											'ID' => $arLandingsIDs,
+											'ACTIVE' => 'Y',
+										),
+										false,
+										false,
+										array(
+											'ID',
+											'IBLOCK_ID',
+											'NAME',
+											'DETAIL_PAGE_URL',
+											'PROPERTY_IS_INDEX',
+											'PROPERTY_URL_CONDITION',
+											'PROPERTY_REDIRECT_URL',
+											'PROPERTY_QUERY',
+											'PROPERTY_LINK_REGION',
+										)
+									);
+
+									// get enum id of property IS_INDEX with XML_ID = Y
+									$arEnumID_IS_INDEX = \CIBlockPropertyEnum::GetList(
+										array(),
+										array(
+											'IBLOCK_ID' => $LANDINGS_SEARCH_IBLOCK_ID,
+											'CODE' => 'IS_INDEX',
+											'XML_ID' => 'Y',
+										)
+									)->GetNext();
+								}
+							}
+
 							$bInsertRobots = ($_POST["SITEMAP_ADD_ROBOTS_".$optionsSiteID] && $_POST["SITEMAP_ADD_ROBOTS_".$optionsSiteID]);
 							if($bInsertRobots)
 							{
@@ -147,7 +210,7 @@ if($RIGHT >= "R"){
 									$strr = implode("", $arFile);
 									file_put_contents($arTab["SITE_DIR_FORMAT"].'robots.txt', $strr);
 								}
-								$el = new CIBlockElement;									
+								$el = new CIBlockElement;
 								foreach($arTab["ITEMS"] as $arItem)
 									$res = $el->Update($arItem["ID"], array("ACTIVE" => "Y", "SITE_MAP" => $siteMapName));
 							}
@@ -172,8 +235,43 @@ if($RIGHT >= "R"){
 												$file = str_replace(array("sitemap_", "sitemap."), array($siteMapNameTmp."_", $siteMapNameTmp."."), $file);
 												file_put_contents($arTab["SITE_DIR_FORMAT"].$siteMapNameTmp.".php", $file);
 											}
+
 											//@copy($arTab["SITE_DIR_FORMAT"].$xmlfile, $arTab["SITE_DIR_FORMAT"].'aspro_regions/sitemap/'.$siteMapNameTmp.'_'.$arItem["PROPERTY_MAIN_DOMAIN_VALUE"].'.xml');
 											CopyDirFiles($arTab["SITE_DIR_FORMAT"].$xmlfile, $arTab["SITE_DIR_FORMAT"].'aspro_regions/sitemap/'.$siteMapNameTmp.'_'.$arItem["PROPERTY_MAIN_DOMAIN_VALUE"].'.xml', true, true);
+
+											// rewrite sitemap for landings in search iblock
+											if($xmlfile === $sitemapLandingsSearch && $arLandings){
+												$regionSitemapLandingSearch = $arTab["SITE_DIR_FORMAT"].'aspro_regions/sitemap/'.$siteMapNameTmp.'_'.$arItem["PROPERTY_MAIN_DOMAIN_VALUE"].'.xml';
+												if($content = @file_get_contents($regionSitemapLandingSearch)){
+													foreach($arLandingsMatches[0] as $i => $match){
+														$LID = $arLandingsMatches[3][$i];
+														if($arLandings[$LID]){
+															$arLandings[$LID]['PROPERTY_LINK_REGION_VALUE'] = (array)$arLandings[$LID]['PROPERTY_LINK_REGION_VALUE'];
+															if((!$arEnumID_IS_INDEX || ($arEnumID_IS_INDEX && $arLandings[$LID]['PROPERTY_IS_INDEX_ENUM_ID'] == $arEnumID_IS_INDEX['ID'])) && (!$arLandings[$LID]['PROPERTY_LINK_REGION_VALUE'] || in_array($arItem['ID'], $arLandings[$LID]['PROPERTY_LINK_REGION_VALUE']))){
+
+																$catalogDir = preg_replace('/[\?].*/', '', $arLandings[$LID]['DETAIL_PAGE_URL']);
+																$url = \Aspro\Next\SearchQuery::getLandingUrl(
+																	$catalogDir,
+																	$arLandings[$LID]['PROPERTY_URL_CONDITION_VALUE'],
+																	$arLandings[$LID]['PROPERTY_REDIRECT_URL_VALUE'],
+																	$arLandings[$LID]['PROPERTY_QUERY_VALUE']
+																);
+
+																if(strpos($url, 'http') === false){
+																	$url = (CMain::isHTTPS() ? 'https://' : 'http://').str_replace('//', '/', $siteMapUrl.$url);
+																}
+																$content = str_replace($arLandingsMatches[1][$i], $url, $content);
+
+																continue;
+															}
+														}
+
+														// delete if not IS_INDEX
+														$content = str_replace($match, '', $content);
+													}
+													@file_put_contents($regionSitemapLandingSearch, $content);
+												}
+											}
 
 											$file = file_get_contents($arTab["SITE_DIR_FORMAT"].'aspro_regions/sitemap/'.$siteMapNameTmp.'_'.$arItem["PROPERTY_MAIN_DOMAIN_VALUE"].'.xml');
 											$file = str_replace($siteMapUrl, $arItem["PROPERTY_MAIN_DOMAIN_VALUE"], $file);
@@ -192,13 +290,13 @@ if($RIGHT >= "R"){
 \tRewriteCond %{REQUEST_FILENAME} ".$siteMapNameTmp.".xml
 \tRewriteCond %{DOCUMENT_ROOT}/".$siteMapNameTmp.".php -f
 \tRewriteRule ^(.*)$ /".$siteMapNameTmp.".php [L]", $file);
-												file_put_contents($file_access, $file);	
+												file_put_contents($file_access, $file);
 											}
 										}
 									}
 								}
 								$arOK[$optionsSiteID][] = GetMessage("NEXT_MODULE_FILENAME_GENERATE", array("#FILE#" => $siteMapName, "#SITE_ID#" => $optionsSiteID));
-							}	
+							}
 						}
 					}
 				}
@@ -207,7 +305,7 @@ if($RIGHT >= "R"){
 		if(!$arErrors && !$arOK)
 			$APPLICATION->RestartBuffer();
 	}
-	
+
 	CJSCore::Init(array("jquery"));
 	CAjax::Init();
 
@@ -216,7 +314,7 @@ if($RIGHT >= "R"){
 		foreach($arErrors as $siteID => $arError)
 			CAdminMessage::ShowMessage(join("\n", $arError));
 	}
-	
+
 	if(!empty($arOK))
 	{
 		foreach($arOK as $siteID => $arError)
@@ -240,7 +338,7 @@ if($RIGHT >= "R"){
 		<?$tabControl->Begin();?>
 		<?$bShowBtn = true;?>
 		<form method="post" class="next_options" enctype="multipart/form-data" action="<?=$APPLICATION->GetCurPage()?>?mid=<?=urlencode($mid)?>&amp;lang=<?=LANGUAGE_ID?>">
-		<?=bitrix_sessid_post();?>		
+		<?=bitrix_sessid_post();?>
 		<?
 		foreach($arTabs as $key => $arTab)
 		{
@@ -254,7 +352,7 @@ if($RIGHT >= "R"){
 						<?$val = Option::get("aspro.next", $optionCode, $arOption["DEFAULT"], $optionsSiteID);?>
 						<tr>
 							<td>
-								<?=$arOption["TITLE"];?>							
+								<?=$arOption["TITLE"];?>
 							</td>
 							<td style="width:50%;">
 								<input type="<?=$arOption["TYPE"];?>" size="" maxlength="255" value="<?=$val;?>" name="<?=$optionCode;?>_<?=$optionsSiteID;?>">
@@ -266,7 +364,7 @@ if($RIGHT >= "R"){
 				$siteMapName =  Option::get("aspro.next", "SITEMAP_NAME", $arTab["OPTIONS"]["SITEMAP_NAME"]["DEFAULT"], $optionsSiteID);
 				$bExistSiteMap = (file_exists($arTab["SITE_DIR_FORMAT"].$siteMapName));
 				if(!$bExistSiteMap)
-				{?>	
+				{?>
 					<td><?=GetMessage("NEXT_MODULE_FILENAME", array("#FILE#" => $siteMapName))?></td>
 					<td><?=GetMessage("NEXT_MODULE_NOT_EXISTS")?></td>
 				<?}?>
@@ -323,7 +421,7 @@ if($RIGHT >= "R"){
 							}
 						});
 					})
-				});			
+				});
 			</script>
 		</form>
 		<?$tabControl->End();?>

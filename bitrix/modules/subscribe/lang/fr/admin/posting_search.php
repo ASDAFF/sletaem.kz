@@ -1,7 +1,7 @@
 <?
+$MESS["post_search"] = "Recherche";
 $MESS["post_format_any"] = "(n'importe lesquel(el)s)";
 $MESS["post_cancel"] = "Annuler";
-$MESS["post_search"] = "Recherche";
 $MESS["post_rub"] = "Distribution:";
 $MESS["post_reset"] = "Annuler";
 $MESS["post_format_text"] = "inscription (texte)";

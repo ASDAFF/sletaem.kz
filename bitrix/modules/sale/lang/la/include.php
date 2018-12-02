@@ -57,4 +57,5 @@ $MESS["SI_MARKED"] = "Problema con la orden";
 $MESS["SI_MARKED_ORD"] = "Problema con la orden";
 $MESS["SALE_TYPE_FILE"] = "Archivo";
 $MESS["SALE_PAYSYSTEM_CONVERT_ERROR"] = "Algo salió mal! El sistemas de pago no se actualizó a la versión más reciente. Por favor <a href='/bitrix/admin/sale_pay_system_convert.php?lang=#LANG#'>click here</a> actualizar.";
+$MESS["SI_AFFILIATE"] = "Afiliado";
 ?>

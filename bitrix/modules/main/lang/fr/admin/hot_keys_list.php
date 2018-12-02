@@ -1,4 +1,5 @@
 <?
+$MESS["HK_FLT_FIND"] = "Rechercher";
 $MESS["MAIN_ALL"] = "(partout)";
 $MESS["HK_DB_BUT_MSET"] = "(Test) Paramètres du module";
 $MESS["HK_URL"] = "Adresse (URL)";
@@ -29,7 +30,6 @@ $MESS["HK_CLASS_NAME"] = "Dénomination de la classe";
 $MESS["HK_CODE_ID"] = "nom de l'opération";
 $MESS["HK_CODE_NAME"] = "nom de l'opération";
 $MESS["HK_CODE_CLASS_NAME"] = "Nom de l'élément";
-$MESS["HK_FLT_FIND"] = "Recherche";
 $MESS["HK_FLT_FALSE"] = "Non";
 $MESS["HK_TITLE_OBJ"] = "Objet du lien Title";
 $MESS["HK_UPDATE_ERROR"] = "Erreur de sauvegarde.";

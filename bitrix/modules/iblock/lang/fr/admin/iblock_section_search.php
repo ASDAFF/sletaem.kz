@@ -1,4 +1,8 @@
 <?
+$MESS["IBLOCK_SECSEARCH_IBLOCK"] = "Bloc d'information";
+$MESS["IBLOCK_SECSEARCH_PARENT_ID"] = "Section parent";
+$MESS["IBLOCK_SECSEARCH_ALL_PARENTS"] = "(n'importe)";
+$MESS["IBLOCK_SECSEARCH_ROOT_PARENT_ID"] = "Niveau supérieur";
 $MESS["IBLOCK_SECSEARCH_ID"] = "ID de la section";
 $MESS["IBLOCK_SECSEARCH_ACTIVE"] = "Actif(ve)";
 $MESS["IBLOCK_SECSEARCH_XML_ID"] = "Code externe";
@@ -18,8 +22,4 @@ $MESS["IBLOCK_SECSEARCH_CODE"] = "Code symbolique";
 $MESS["IBLOCK_SECSEARCH_SORT"] = "Trier";
 $MESS["IBLOCK_SECSEARCH_ELEMENT_CNT"] = "Des documents";
 $MESS["IBLOCK_SECSEARCH_TITLE"] = "Section de recherche";
-$MESS["IBLOCK_SECSEARCH_IBLOCK"] = "Bloc d'information";
-$MESS["IBLOCK_SECSEARCH_PARENT_ID"] = "Section parent";
-$MESS["IBLOCK_SECSEARCH_ALL_PARENTS"] = "(n'importe)";
-$MESS["IBLOCK_SECSEARCH_ROOT_PARENT_ID"] = "Niveau supérieur";
 ?>

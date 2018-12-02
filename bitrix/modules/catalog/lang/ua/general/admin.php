@@ -1,4 +1,6 @@
 <?
+$MESS["CAT_MENU_CATALOG_MARKETPLACE_CATALOG_TOOLS"] = "Встановити інструменти з Маркетплейс";
+$MESS["CAT_MENU_ROOT_TITLE"] = "Товарний каталог";
 $MESS["CAT_MENU_ROOT"] = "Каталог товарів";
 $MESS["CAT_MENU_PRODUCT_LIST"] = "Список товарів";
 $MESS["CAT_MENU_PRODUCT_PROPERTIES"] = "Властивості товарів";

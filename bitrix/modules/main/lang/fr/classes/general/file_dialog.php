@@ -1,4 +1,7 @@
 <?
+$MESS["FD_INCORRECT_NAME"] = "Le nom du fichier (dossier) ne doit pas contenir les caractères: !\$()[]{}-.;=@^_~";
+$MESS["FD_FOLDER_NOT_FOUND"] = "Le fichier '#PATH#' est introuvable";
+$MESS["FD_ELEMENT_NOT_FOUND"] = "Le fichier ou le dossier '#PATH#' est introuvable";
 $MESS["BX_FD_ERROR"] = "Erreur du dialogue de fichier";
 $MESS["BX_FD_ACCESS_DENIED"] = "Accès interdit";
 $MESS["BX_FD_SESS_EXPIRED"] = "La session de l'utilisateur a expiré";
@@ -59,7 +62,6 @@ $MESS["FD_BYTE"] = "B";
 $MESS["FD_NEWFOLDER_EXISTS"] = "Le dossier du même nom existe déjà";
 $MESS["FD_NEWFILE_EXISTS"] = "Le fichier du même nom existe déjà.";
 $MESS["FD_EMPTY_NAME"] = "Erreur! Le nom du fichier n'est pas spécifié";
-$MESS["FD_INCORRECT_NAME"] = "Le nom du fichier (dossier) ne doit pas contenir les caractères: !\$()[]{}-.;=@^_~";
 $MESS["FD_NEW_FOLDER"] = "Créer un nouveau dossier";
 $MESS["FD_RENAME"] = "Renommer";
 $MESS["FD_DELETE"] = "Supprimer";
@@ -69,8 +71,6 @@ $MESS["FD_CONFIRM_DEL_DIR"] = "tes-vous sûr de vouloir supprimer ce dossier?";
 $MESS["FD_CONFIRM_DEL_FILE"] = "tes-vous sûr de vouloir supprimer le fichier ?";
 $MESS["FD_LOADING"] = "Chargement";
 $MESS["FD_REFRESH"] = "Recalculer";
-$MESS["FD_FOLDER_NOT_FOUND"] = "Le fichier '#PATH#' est introuvable";
-$MESS["FD_ELEMENT_NOT_FOUND"] = "Le fichier ou le dossier '#PATH#' est introuvable";
 $MESS["FD_NEWFOLDER_ENTER_NAME"] = "Nom du dossier n'est pas spécifié";
 $MESS["FD_ELEMENT_ENTER_NAME"] = "Le nom du fichier ou du dossier n'est pas spécifié";
 $MESS["FD_ELEMENT_EXISTS"] = "Un fichier ou dossier du même nom existe déjà";

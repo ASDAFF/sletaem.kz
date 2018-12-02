@@ -37,4 +37,6 @@ $MESS["SALE_EBAY_AT_DATA_PROCESSOR_ORDER_CHANGE_STATUS_ERROR"] = "Помилка
 $MESS["SALE_EBAY_AT_DATA_PROCESSOR_ORDER_SAVE_ERROR"] = "Помилка збереження замовлення";
 $MESS["SALE_EBAY_AT_DATA_PROCESSOR_ORDER_CORR_SAVE_ERROR"] = "Помилка збереження кореспонденції замовлення";
 $MESS["SALE_EBAY_AT_DATA_PROCESSOR_SFTPQUEUE_FLUSHING"] = "Підготовлені дані для обміну";
+$MESS["SALE_EBAY_AT_SFTP_TOKEN_EXP"] = "Закінчився термін дії SFTP токена";
+$MESS["SALE_EBAY_AT_SFTP_TOKEN_EXP_MESSAGE"] = "Закінчився термін дії SFTP токена. Необхідно генерувати новий токен на сайті ebay.com в розділі \"Платформа інтеграції продавця\". Потім \"Отримати SFTP токен\" в налаштуваннях eBay інтернет-магазину";
 ?>

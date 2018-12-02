@@ -17,4 +17,5 @@ $MESS["MAIN_MAIL_CONFIRM_EMPTY_EMAIL"] = "Saisissez l'adresse e-mail";
 $MESS["MAIN_MAIL_CONFIRM_INVALID_EMAIL"] = "Adresse e-mail non valide";
 $MESS["MAIN_MAIL_CONFIRM_EMPTY_CODE"] = "Saisissez le code de vérification";
 $MESS["MAIN_MAIL_CONFIRM_INVALID_CODE"] = "Code de vérification incorrect";
+$MESS["MAIN_MAIL_CONFIRM_MESSAGE_SUBJECT"] = "Confirmer l'adresse e-mail";
 ?>

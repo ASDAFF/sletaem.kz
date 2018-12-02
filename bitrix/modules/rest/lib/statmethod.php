@@ -110,6 +110,8 @@ class StatMethodTable extends Main\Entity\DataManager
 
 		if(static::$methodCache === null)
 		{
+			static::$methodCache = array();
+
 			$cacheId = 'stat_method_cache';
 
 			$managedCache = Main\Application::getInstance()->getManagedCache();

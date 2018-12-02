@@ -15,7 +15,7 @@ $MESS["BT_MOD_CAT_DSC_SV_MESS_PERIOD_MONTH"] = "mes";
 $MESS["BT_MOD_CAT_DSC_SV_MESS_PERIOD_YEAR"] = "año";
 $MESS["BT_CAT_CAT_DSC_SV_TYPE_PERCENT"] = "Porcentaje";
 $MESS["BT_CAT_CAT_DSC_SV_TYPE_FIX"] = "Cantidad fija";
+$MESS["BX_CAT_DISCSAVE_APPLY_MODE_R"] = "desactivar descuento producto si un descuento lo supera o es progresivo";
 $MESS["BX_CAT_DISCSAVE_APPLY_MODE_A"] = "Agregar a un descuento del producto";
 $MESS["BX_CAT_DISCSAVE_APPLY_MODE_D"] = "No aplicar si el producto tiene descuento";
-$MESS["BX_CAT_DISCSAVE_APPLY_MODE_R"] = "desactivar descuento producto si un descuento lo supera o es progresivo";
 ?>

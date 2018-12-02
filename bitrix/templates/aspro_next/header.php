@@ -12,16 +12,15 @@ $htmlClass = ($_REQUEST && isset($_REQUEST['print']) ? 'print' : false);
 	$wspagenum = '';
 	if(isset($_REQUEST['PAGEN_1']) && !empty($_REQUEST['PAGEN_1']) && intval($_REQUEST['PAGEN_1']) > 1){
 		$wscanonical .= '?PAGEN_1='.$_REQUEST['PAGEN_1'];
-		// Если эта страница с пагинацией, то добавляем в Title и Description фразу "Страница 2", "Страница 3" и т.д. (кроме первой страницы)
-		// $wspagenum = ' → Страница '.$_REQUEST['PAGEN_1'];
-		// $wsdesc = $APPLICATION->GetProperty('description');
-		// if(stristr($wsdesc, ' '.$_REQUEST['PAGEN_1']) === FALSE) {
-		//      $APPLICATION->SetPageProperty('description', $wsdesc.$wspagenum);
-		// }
-	} else {
-	    // Добавляю только к страницам без пагинации, так как там всё перепутали и у пагинации уже указали каноникал всегда на первую страницу
-		$wsasset->addString('<link rel="canonical" href="' . $wscanonical . '">');
-    }
+		 //Если эта страница с пагинацией, то добавляем в Title и Description фразу "Страница 2", "Страница 3" и т.д. (кроме первой страницы)
+		 $wspagenum = ' → Страница '.$_REQUEST['PAGEN_1'];
+		 $wsdesc = $APPLICATION->GetProperty('description');
+		 if(stristr($wsdesc, ' '.$_REQUEST['PAGEN_1']) === FALSE) {
+		      $APPLICATION->SetPageProperty('description', $wsdesc.$wspagenum);
+		 }
+	}
+	//$wscanonicalmeta = '<link rel="canonical" href="' . $wscanonical . '">';
+	$wscanonicalmeta = '';
 	// END WebSEO.kz
  
 $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));
@@ -37,7 +36,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-M92N4VD');</script>
 <!-- End Google Tag Manager -->
-	<title><?$APPLICATION->ShowTitle()?></title>
+	<title><?=$APPLICATION->ShowTitle().$wspagenum?></title>
+	<?=$wscanonicalmeta?>
 	<?$APPLICATION->ShowMeta("viewport");?>
 	<?$APPLICATION->ShowMeta("HandheldFriendly");?>
 	<?$APPLICATION->ShowMeta("apple-mobile-web-app-capable", "yes");?>

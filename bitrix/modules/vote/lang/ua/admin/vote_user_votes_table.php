@@ -35,4 +35,8 @@ $MESS["VOTE_NOT_FOUND"] = "Опитування не знайдене";
 $MESS["VOTE_LIST"] = "Список опитувань";
 $MESS["MAIN_ADMIN_LIST_SELECTED"] = "Обрано:";
 $MESS["MAIN_ADMIN_LIST_CHECKED"] = "Позначено:";
+$MESS["VOTE_USER"] = "Користувач";
+$MESS["VOTE_BACK_TO_VOTE"] = "Перейти до опитування";
+$MESS["VOTE_NONAUTHORIZED"] = "Не авторизований";
+$MESS["VOTE_VIEW_RESULTS"] = "Результати";
 ?>

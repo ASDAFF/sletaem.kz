@@ -39,6 +39,12 @@ class Help
 		),
 		'LANDING_EDIT' => array(
 			'ru' => 's93291'
+		),
+		'DOMAIN_EDIT' => array(
+			'ru' => '6624333'
+		),
+		'GMAP_EDIT' => array(
+			'ru' => '8203739'
 		)
 	);
 

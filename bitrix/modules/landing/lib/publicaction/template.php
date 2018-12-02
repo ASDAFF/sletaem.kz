@@ -2,8 +2,8 @@
 namespace Bitrix\Landing\PublicAction;
 
 use \Bitrix\Landing\Template as TemplateCore;
-use \Bitrix\Landing\Site;
-use \Bitrix\Landing\Landing;
+use \Bitrix\Landing\Site as SiteCore;
+use \Bitrix\Landing\Landing as LandingCore;
 use \Bitrix\Landing\TemplateRef;
 use \Bitrix\Main\Localization\Loc;
 use \Bitrix\Landing\PublicActionResult;
@@ -47,12 +47,12 @@ class Template
 
 		if ($type == TemplateRef::ENTITY_TYPE_SITE)
 		{
-			$entityClass = Site::class;
+			$entityClass = SiteCore::class;
 			$method = $method . 'ForSite';
 		}
 		else if ($type == TemplateRef::ENTITY_TYPE_LANDING)
 		{
-			$entityClass = Landing::class;
+			$entityClass = LandingCore::class;
 			$method = $method . 'ForLanding';
 		}
 

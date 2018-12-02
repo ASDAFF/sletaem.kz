@@ -82,7 +82,7 @@ class Favicon extends \Bitrix\Landing\Hook\Page
 					BX_RESIZE_IMAGE_EXACT
 				);
 				$icons .= '<link rel="apple-touch-icon"' .
-						  '" href="' . $file['src'] . '" sizes="' . $size . '">';
+						  ' href="' . $file['src'] . '" sizes="' . $size . '">';
 			}
 			if ($icons)
 			{

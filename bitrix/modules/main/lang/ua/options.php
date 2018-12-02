@@ -1,6 +1,16 @@
 <?
+$MESS["MAIN_OPTIONS_IMAGE_EDITOR"] = "Редактор зображень";
+$MESS["MAIN_OPTION_IMAGE_EDITOR_PROXY_ENABLED"] = "Дозволити редагування зображень із зовнішніх сайтів:";
+$MESS["MAIN_OPTION_IMAGE_EDITOR_PROXY_ENABLED_NO"] = "Ні";
+$MESS["MAIN_OPTION_IMAGE_EDITOR_PROXY_ENABLED_YES_FOR_ALL"] = "Так, з будь-яких сайтів";
+$MESS["MAIN_OPTION_IMAGE_EDITOR_PROXY_ENABLED_YES_FROM_WHITE_LIST"] = "Так, тільки з дозволених";
+$MESS["MAIN_OPTIONS_IMAGE_EDITOR_PROXY_WHITE_LIST"] = "Список дозволених сайтів:";
+$MESS["MAIN_OPTIONS_IMAGE_EDITOR_PROXY_WHITE_LIST_ADD_HOST"] = "Додати сайт";
+$MESS["MAIN_OPTIONS_IMAGE_EDITOR_PROXY_WHITE_LIST_PLACEHOLDER"] = "Наприклад: cdn.bitrix24.site";
+$MESS["MAIN_OPT_PROFILE"] = "Профіль користувача";
+$MESS["MAIN_OPT_PROFILE_HYSTORY"] = "Зберігати історію зміни полів профілю користувача:";
 $MESS["MAIN_REGISTER"] = "Чи дозволяти користувачам реєструватися самостійно?";
-$MESS["MAIN_EMAIL"] = "E-mail адреса або список адрес через кому на який будуть дублюватися всі вихідні повідомлення:";
+$MESS["MAIN_EMAIL"] = "E-mail (або список через кому) на який будуть дублюватися всі вихідні повідомлення:";
 $MESS["FILL_TO_MAIL_M"] = "Дублювати e-mail адресу в заголовок:";
 $MESS["MAIN_PREFIX"] = "Ім'я префікса для назви cookies (без крапок і пробілів):";
 $MESS["MAIN_SAVE"] = "Зберегти";

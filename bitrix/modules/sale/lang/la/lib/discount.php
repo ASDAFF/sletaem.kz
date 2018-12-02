@@ -22,4 +22,5 @@ $MESS["BX_SALE_DISCOUNT_APPLY_MODE_FULL_DISABLE"] = "Desactivar todas las reglas
 $MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_BASKET"] = "Cambio total del carrito de compras";
 $MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_DELIVERY"] = "Costo de cambio de entrega";
 $MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_UNKNOWN"] = "Regla del carro de compras desconocido";
+$MESS["BX_SALE_DISCOUNT_ERR_PARSE_ERROR"] = "Hay un error en una de las reglas o acciones del carrito de compras.Utilizar el <a href=\"#LINK#\">página de configuración de e-Store</a>para volver a indexar las reglas del carrito de compras.";
 ?>

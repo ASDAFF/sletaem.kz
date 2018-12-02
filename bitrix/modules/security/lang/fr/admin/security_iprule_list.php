@@ -1,4 +1,5 @@
 <?
+$MESS["SEC_IP_LIST_FIND"] = "Rechercher";
 $MESS["SEC_IP_LIST_ID"] = "ID";
 $MESS["SEC_IP_LIST_IP"] = "IP";
 $MESS["SEC_IP_LIST_INCL_IP"] = "Adresses IP";
@@ -12,7 +13,6 @@ $MESS["SEC_IP_LIST_PAGER"] = "Notes";
 $MESS["SEC_IP_LIST_EXCL_PATH"] = "Masques d'exclusions";
 $MESS["SEC_IP_LIST_INCL_PATH"] = "Masque de chemins d'accès";
 $MESS["SEC_IP_LIST_NAME"] = "Titre";
-$MESS["SEC_IP_LIST_FIND"] = "Recherche";
 $MESS["SEC_IP_LIST_ACTIVE_FROM"] = "Début de l'activité";
 $MESS["SEC_IP_LIST_ACTIVE_TO"] = "Fin de l'activité";
 $MESS["SEC_IP_LIST_UPDATE_ERROR"] = "Erreur de modification de l'enregistrement de la liste noire.";

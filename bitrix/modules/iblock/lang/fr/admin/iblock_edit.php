@@ -1,4 +1,5 @@
 <?
+$MESS["IB_E_FIELD_ACTIVE_FROM_EMPTY"] = "n'est pas indiqué";
 $MESS["IB_E_PROPERTY_TITLE"] = "#IBLOCK_TYPE#: #IBLOCK_NAME#: Paramètres de propriété";
 $MESS["IB_E_NEW_TITLE"] = "#IBLOCK_TYPE#: Blocs info: Ajout";
 $MESS["IB_E_EDIT_TITLE"] = "#IBLOCK_TYPE#: blocs d'info: Édition";
@@ -122,7 +123,6 @@ $MESS["IB_E_OF_IBLOCK_EMPTY"] = "non choisi";
 $MESS["IB_E_PR_IBLOCK_EMPTY"] = "non choisi";
 $MESS["IB_E_OF_ERR_NEW_IBLOCK_TYPE_ABSENT"] = "ID du nouveau type de blocs d'informations non renseigné.";
 $MESS["IB_E_OF_ERR_OFFERS_IS_ABSENT"] = "Bloc d'information d'offres commerciales non renseigné";
-$MESS["IB_E_FIELD_ACTIVE_FROM_EMPTY"] = "le sexe n'est pas indiqué";
 $MESS["IB_E_OF_ERR_SKU_IBLOCKS_IS_ABSENT"] = "Bloc d'information pour création du rattachement non renseigné.";
 $MESS["IB_E_OF_ERR_IBLOCK_TYPE_ABSENT"] = "L'ID du type des blocs d'information n'est pas spécifié.";
 $MESS["IB_E_RIGHTS_IBLOCK_ACCESS_DENIED"] = "Il n'y a pas assez de droits pour éEditer le bloc d'information #ID#";
@@ -142,7 +142,7 @@ $MESS["IB_E_SEO_CLEAR_VALUES"] = "Vider le cache";
 $MESS["IB_E_PROPERTY_ERROR"] = "Erreur du changement de propriétés";
 $MESS["IB_E_OF_ERR_VAT_ID"] = "Erreur de sauvegarde des paramètres du catalogue commercial: la valeur de TVA n'est pas indiquée.";
 $MESS["IB_E_OF_ERR_USED_SKU"] = "Erreur de sauvegarde des paramètres du catalogue commercial: il n'est pas précisé si le bloc d'information a les offres commerciales ou pas.";
-$MESS["IB_E_OF_ERR_SUBSCRIPTION"] = "Chec de sauvegarde des réglages d'un catalogue commercial: il n'est pas indiqué si le bloc d'information est utilisé pour la vente de contenu.";
+$MESS["IB_E_OF_ERR_SUBSCRIPTION"] = "Échec de sauvegarde des réglages d'un catalogue commercial: il n'est pas indiqué si le bloc d'information est utilisé pour la vente de contenu.";
 $MESS["IB_E_OF_ERR_YANDEX_EXPORT"] = "Erreur de sauvegarde de paramètres du catalogue de vente: ne pas spécifié, si le bloc d'information est exporté dans Yandex.Marchandises.";
 $MESS["IB_E_OF_ERR_IS_CATALOG"] = "Erreur de sauvegarde de paramètres du catalogue commercial: non précisé, si le bloc d'information sert d'un catalogue ou pas.";
 $MESS["IB_E_TAB7_T"] = "RSS paramètres d'exportation:";

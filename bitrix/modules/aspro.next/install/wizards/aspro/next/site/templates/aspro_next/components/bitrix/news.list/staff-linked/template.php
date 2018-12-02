@@ -18,11 +18,11 @@
 				// use detail link?
 				$bDetailLink = $arParams['SHOW_DETAIL_LINK'] != 'N' && (!strlen($arItem['DETAIL_TEXT']) ? ($arParams['HIDE_LINK_WHEN_NO_DETAIL'] !== 'Y' && $arParams['HIDE_LINK_WHEN_NO_DETAIL'] != 1) : true);
 				// show preview picture?
-				$bImage = strlen($arItem['FIELDS']['PREVIEW_PICTURE']['SRC']);
-				$imageSrc = ($bImage ? $arItem['FIELDS']['PREVIEW_PICTURE']['SRC'] : false);
-				$imageDetailSrc = ($bImage ? $arItem['FIELDS']['DETAIL_PICTURE']['SRC'] : false);
+				$bImage = isset($arItem['FIELDS']['PREVIEW_PICTURE']) && strlen($arItem['PREVIEW_PICTURE']['SRC']);
+				$imageSrc = ($bImage ? $arItem['PREVIEW_PICTURE']['SRC'] : false);
+				$imageDetailSrc = ($bImage ? $arItem['DETAIL_PICTURE']['SRC'] : false);
 				?>
-				
+
 				<div class="col-md-12">
 					<div class="item <?=($bImage ? '' : ' wti')?> clearfix" id="<?=$this->GetEditAreaId($arItem['ID'])?>">
 						<?if($bImage):?>
@@ -55,13 +55,13 @@
 									<?endif;?>
 								</div>
 							<?endif;?>
-							
+
 							<?// element post?>
 							<?if(strlen($arItem['DISPLAY_PROPERTIES']['POST']['VALUE'])):?>
 								<div class="post"><?=$arItem['DISPLAY_PROPERTIES']['POST']['VALUE']?></div>
 								<?unset($arItem['DISPLAY_PROPERTIES']['POST']);?>
 							<?endif;?>
-							
+
 							<?// element preview text?>
 							<?if(strlen($arItem['FIELDS']['PREVIEW_TEXT'])):?>
 								<div class="previewtext">
@@ -72,7 +72,7 @@
 									<?endif;?>
 								</div>
 							<?endif;?>
-							
+
 							<?// element display properties?>
 							<?if($arItem['DISPLAY_PROPERTIES']):?>
 								<hr/>
@@ -103,7 +103,7 @@
 									<?endforeach;?>
 								</div>
 							<?endif;?>
-							
+
 						</div>
 					</div>
 					<?/*if($i && $i != ($count-1)):?>

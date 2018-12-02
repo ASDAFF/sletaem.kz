@@ -1,4 +1,6 @@
 <?
+$MESS["USERTYPE_F_FIND"] = "Rechercher";
+$MESS["USERTYPE_IS_SEARCHABLE"] = "Recherche";
 $MESS["MAIN_ALL"] = "(partout)";
 $MESS["USERTYPE_XML_ID"] = "XML_ID";
 $MESS["USERTYPE_BACK_URL_BUTTON"] = "Précédent";
@@ -8,11 +10,9 @@ $MESS["USERTYPE_ADD_TITLE"] = "Ajouter un champ d'utilisateur";
 $MESS["MAIN_EDIT"] = "Date de modification";
 $MESS["USERTYPE_MULTIPLE"] = "Pl.";
 $MESS["USERTYPE_FIELD_NAME"] = "Nom de champ";
-$MESS["USERTYPE_F_FIND"] = "Recherche";
 $MESS["USER_TYPE_FILTER_N"] = "ne pas afficher";
 $MESS["USERTYPE_ENTITY_ID"] = "Bloc Highload";
 $MESS["USERTYPE_MANDATORY"] = "Oblig.";
-$MESS["USERTYPE_IS_SEARCHABLE"] = "Recherche";
 $MESS["USERTYPE_TITLE"] = "Champs d'utilisateur";
 $MESS["USERTYPE_NAV"] = "Propriétés";
 $MESS["USERTYPE_SORT"] = "Classification";

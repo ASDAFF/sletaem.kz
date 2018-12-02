@@ -20,4 +20,5 @@ $MESS["VOTE_VOTES"] = "Усього голосів:";
 $MESS["VOTE_ENLARGE"] = "Збільшити";
 $MESS["VOTE_START_DATE"] = "Дата початку:";
 $MESS["VOTE_END_DATE"] = "Дата закінчення:";
+$MESS["VOTE_RESULTS_LIST"] = "Результати опитування";
 ?>

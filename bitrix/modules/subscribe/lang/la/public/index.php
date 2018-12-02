@@ -1,3 +1,3 @@
 <?
-$MESS ['SUBSCRIBE_INSTALL_PUBLIC_TITLE'] = "Suscripción";
+$MESS["SUBSCRIBE_INSTALL_PUBLIC_TITLE"] = "Suscripción";
 ?>

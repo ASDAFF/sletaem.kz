@@ -60,7 +60,11 @@ if ((!empty($save) || !empty($restore) || !empty($request->getPost('create'))) &
             "rss_file_name",
             $request->getPost('rss_file_name')
         );
-        
+        Option::set(
+            ADMIN_MODULE_NAME,
+            "site_address",
+            $request->getPost('site_address')
+        );
         Option::set(
             ADMIN_MODULE_NAME,
             "channel_name",
@@ -70,16 +74,6 @@ if ((!empty($save) || !empty($restore) || !empty($request->getPost('create'))) &
             ADMIN_MODULE_NAME,
             "channel_description",
             $request->getPost('channel_description')
-        );
-        Option::set(
-            ADMIN_MODULE_NAME,
-            "counter_type",
-            $request->getPost('counter_type')
-        );
-        Option::set(
-            ADMIN_MODULE_NAME,
-            "counter_number",
-            $request->getPost('counter_number')
         );
         
         CAdminMessage::showMessage(array(
@@ -230,6 +224,15 @@ $tabControl->begin();
             <input type="text" id="rss_file_name" name="rss_file_name" value="<?=Option::get(ADMIN_MODULE_NAME, "rss_file_name");?>" size="50">
         </td>
     </tr>
+	
+	<tr>
+        <td width="40%" class="adm-detail-content-cell-l">
+            <label for="site_address"><b><?=Loc::getMessage("HARDKOD_TURBOYANDEX_SITE_URL") ?>: </b></label>
+        </td>
+        <td width="60%">
+            <input type="text" id="site_address" name="site_address" value="<?=(Option::get(ADMIN_MODULE_NAME, "site_address") ? Option::get(ADMIN_MODULE_NAME, "site_address") : (stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . "/");?>" size="50">
+        </td>
+    </tr>
     
     <tr>
         <td width="40%"><label for="channel_name"><b><?=Loc::getMessage("HARDKOD_TURBOYANDEX_CHANNEL_NAME") ?>: </b></label></td>
@@ -242,28 +245,6 @@ $tabControl->begin();
         <td width="40%"><label for="channel_description"><b><?=Loc::getMessage("HARDKOD_TURBOYANDEX_CHANNEL_DESCRIPTION") ?>: </b></label></td>
         <td width="60%">
             <input type="text" id="channel_description" name="channel_description" value="<?=Option::get(ADMIN_MODULE_NAME, "channel_description");?>" size="50">
-        </td>
-    </tr>
-    
-    <tr>
-        <td width="40%"><label for="counter_type"><b><?=Loc::getMessage("HARDKOD_TURBOYANDEX_COUNTER_TYPE") ?>: </b></label></td>
-        <td width="60%">
-            <select id="counter_type" name="counter_type">
-                <option value="">Выберите тип счетчика</option>
-                <option value="Yandex">Yandex</option>
-                <option value="LiveInternet">LiveInternet</option>
-                <option value="Google">Google</option>
-                <option value="MailRu">MailRu</option>
-                <option value="Rambler">Rambler</option>
-                <option value="Mediascope">Mediascope</option>
-            </select>
-        </td>
-    </tr>
-    
-    <tr>
-        <td width="40%"><label for="counter_number"><b><?=Loc::getMessage("HARDKOD_TURBOYANDEX_COUNTER_NUMBER") ?>: </b></label></td>
-        <td width="60%">
-            <input type="text" id="counter_number" name="counter_number" value="<?=Option::get(ADMIN_MODULE_NAME, "counter_number");?>" size="50">
         </td>
     </tr>
  

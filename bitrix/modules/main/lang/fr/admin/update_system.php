@@ -1,4 +1,8 @@
 <?
+$MESS["SUP_SALE_1500_HINT"] = "Pour poursuivre l'installation des mises à jour, vous devez effectuer une <a href=\"#ADDR#\">conversion du module e-store</a>.";
+$MESS["SUP_DEVSRV_MESS"] = "Une installation de développement n'est pas prévue comme ressource publiquement disponible.";
+$MESS["SUP_NO_MS_ORACLE"] = "À compter du 1er janvier 2017, nous ne fournissons qu'une prise en charge limitée des produits basés sur Oracle Database et MS SQL Server. Aucune mise à jour ne sera publiée pour ces plateformes. Si vous avez des questions, vous pouvez consulter notre assistance technique.";
+$MESS["SUP_PHP_L560"] = "À compter sur 1er janvier 2018, nous ne prendrons plus en charge les versions PHP antérieures à la 5.6. Vous utilisez actuellement PHP version #VERS#. Veuillez mettre à jour votre version de PHP ou contacter l'assistance de votre hébergeur. Si vous ne le faites pas, votre installation de Bitrix24 pourrait ne pas fonctionner correctement.";
 $MESS["SUP_SUBV_HINT"] = "La 'Version bêta' est la version testée au sein de l'entreprise conceptrice avant la sortie officielle du produit. Elle contient les dernières mises à jours du produit. La version bêta est relativement stable, mais dans certains cas, peut ne pas fonctionner correctement.";
 $MESS["SUP_CURRENT_NUMBER_OF_USERS"] = "; compte d'utilisateur actuel: <a href='/bitrix/admin/user_admin.php?lang=fr&find_intranet_users=Y&set_filter=Y'>#NUM#</a>";
 $MESS["SUP_CHECK_LIC"] = "<a href='http://www.bitrixsoft.com/support/key_info.php?license_key=#LICENSE_KEY#' target='_blank'>Vérifier la clé</a>";
@@ -187,8 +191,4 @@ $MESS["SUP_SUBA_UI_EXIST"] = "Je suis inscrit sur le site et je voudrai pouvoir 
 $MESS["SUP_SUBT_AGREE"] = "J'accepte l'accord de licence";
 $MESS["SUP_CANT_EACCELERATOR"] = "Comme la version actuelle, eAccelerator est plus supporté. S'il vous plaît contactez votre administrateur ou Helpdesk pour plus d'informations.";
 $MESS["SUP_CANT_REPARE"] = "Erreur d'initialisation du système de mise à jour. S'il vous plaît contacter le helpdesk.";
-$MESS["SUP_SALE_1500_HINT"] = "Pour poursuivre l'installation des mises à jour, vous devez effectuer une <a href=\"#ADDR#\">conversion du module e-store</a>.";
-$MESS["SUP_DEVSRV_MESS"] = "Une installation de développement n'est pas prévue comme ressource publiquement disponible.";
-$MESS["SUP_NO_MS_ORACLE"] = "À compter du 1er janvier 2017, nous ne fournissons qu'une prise en charge limitée des produits basés sur Oracle Database et MS SQL Server. Aucune mise à jour ne sera publiée pour ces plateformes. Si vous avez des questions, vous pouvez consulter notre assistance technique.";
-$MESS["SUP_PHP_L560"] = "À compter sur 1er janvier 2018, nous ne prendrons plus en charge les versions PHP antérieures à la 5.6. Vous utilisez actuellement PHP version #VERS#. Veuillez mettre à jour votre version de PHP ou contacter l'assistance de votre hébergeur. Si vous ne le faites pas, votre installation de Bitrix24 pourrait ne pas fonctionner correctement.";
 ?>

@@ -1,4 +1,6 @@
 <?
+$MESS["CUR_OPTIONS_BTN_SAVE_TITLE"] = "Enregistrer les modifications";
+$MESS["CUR_OPTIONS_BTN_RESET_TITLE"] = "Annuler toutes les modifications non enregistrées";
 $MESS["CURRENCY_BASE_RATE_AGENT_ACTIVE"] = "Actif(ve)";
 $MESS["CURRENCY_AGENTS_ACTIVE_YES"] = "oui";
 $MESS["CUR_PROCEDURES_BTN_RECALC"] = "Conversion";
@@ -27,6 +29,4 @@ $MESS["CUR_OPTIONS_BTN_HINT_RESTORE_DEFAULT"] = "Les valeurs par défaut";
 $MESS["CURRENCY_AGENTS_ACTIVE_NO"] = "aucun";
 $MESS["CURRENCY_AGENTS_NEXT_EXEC"] = "Prochaine course";
 $MESS["CO_TAB_RIGHTS_TITLE"] = "Module autorisations d'accès";
-$MESS["CUR_OPTIONS_BTN_SAVE_TITLE"] = "Enregistrer les modifications";
-$MESS["CUR_OPTIONS_BTN_RESET_TITLE"] = "Annuler toutes les modifications non enregistrées";
 ?>

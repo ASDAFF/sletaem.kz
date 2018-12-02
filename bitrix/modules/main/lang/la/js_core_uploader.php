@@ -10,9 +10,9 @@ $MESS["FILE_SIZE_Tb"] = "Tb";
 $MESS["UPLOADER_UPLOADING_ERROR"] = "Error al cargar.";
 $MESS["UPLOADER_UPLOADING_ERROR1"] = "Respuesta incorrecta del servidor.";
 $MESS["UPLOADER_UPLOADING_ERROR2"] = "No puede cargar el archivo porque hay demasiados archivos a cargar en el formulario especificado.";
-$MESS["UPLOADER_UPLOADING_ERROR3"] = "No se puede combinar el archivo en el servidor.";
-$MESS["UPLOADER_UPLOADING_ERROR4"] = "El tamaño del archivo excede la cuota.";
 $MESS["UPLOADER_UPLOADING_ERROR5"] = "El archivo no se puede cargar porque no hay respuesta del servidor.";
+$MESS["UPLOADER_UPLOADING_ERROR3"] = "No se puede combinar el archivo en el servidor.";
 $MESS["UPLOADER_UPLOADING_ONBEFOREUNLOAD"] = "Los archivos aun están siendo cargados. ¿Usted quiere dejar esta página?";
+$MESS["UPLOADER_UPLOADING_ERROR4"] = "El tamaño del archivo excede la cuota.";
 $MESS["UPLOADER_UPLOADING_ERROR6"] = "Espacio insuficiente en el disco del servidor.";
 ?>

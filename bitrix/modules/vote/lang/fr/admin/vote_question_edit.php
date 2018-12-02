@@ -1,4 +1,5 @@
 <?
+$MESS["VOTE_QUESTIONS"] = "Questions";
 $MESS["VOTE_ACT"] = "Actif(ve)";
 $MESS["VOTE_ACTIVE"] = "Actif(ve):";
 $MESS["VOTE_ANSWER_LIST"] = "Variantes de réponses";
@@ -38,5 +39,4 @@ $MESS["VOTE_CREATE_NEW_RECORD"] = "Créer nouvelle question";
 $MESS["VOTE_QUESTIONS_LIST"] = "Liste de questions";
 $MESS["VOTE_QUESTION_TEXT"] = "Texte Question";
 $MESS["VOTE_TEMPLATE"] = "Modèle d'affichage des résultats (par défaut):";
-$MESS["VOTE_QUESTIONS"] = "Questions";
 ?>

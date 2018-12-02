@@ -1,11 +1,14 @@
  <section class="landing-block js-animation zoomIn text-center g-pt-20 g-pb-20">
         <div class="container">
 
-            <div class="js-carousel g-mb-20"
+            <div class="js-carousel"
                  data-autoplay="true"
 				 data-pause-hover="true"
                  data-infinite="true"
                  data-slides-show="6"
+				 data-arrows-classes="u-arrow-v1 g-absolute-centered--y g-width-45 g-height-45 g-font-size-30 g-color-gray-light-v1"
+				 data-arrow-left-classes="fa fa-angle-left g-left-minus-20"
+				 data-arrow-right-classes="fa fa-angle-right g-right-minus-20"
 				 data-responsive='[{
 					 "breakpoint": 1200,
 					 "settings": {

@@ -47,7 +47,7 @@ $MESS["top_panel_search_def"] = "пошук ...";
 $MESS["top_panel_pin"] = "Прикріплення панелі";
 $MESS["top_panel_pin_on"] = "Прикріпити панель";
 $MESS["top_panel_pin_off"] = "Відкріпити панель";
-$MESS["admin_panel_notif_block_title"] = "Перегляд повідомлень";
+$MESS["admin_panel_notif_block_title"] = "Перегляд сповіщень";
 $MESS["top_panel_help_loader"] = "Завантаження...";
 $MESS["top_panel_help_title"] = "Підтримка";
 ?>

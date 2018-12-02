@@ -10,7 +10,7 @@ $MESS["SMOB_P_SELLING"] = "Продажі товарів";
 $MESS["SMOB_C_SELLING"] = "Продажі по клієнтам";
 $MESS["SMOB_PRICE_LIST"] = "Прайс лист";
 $MESS["SMOB_PRIVATE_OFFICE"] = "Особистий кабінет";
-$MESS["SMOB_PUSH_SETTINGS"] = "Налаштування пуш повідомлень";
+$MESS["SMOB_PUSH_SETTINGS"] = "Налаштування пуш сповіщень";
 $MESS["SMOB_ORDER"] = "Замовлення";
 $MESS["SMOB_HISTORY"] = "Історія";
 $MESS["SMOB_TRANSACT"] = "Транзакції";
@@ -92,4 +92,5 @@ $MESS["SMOB_FILTER_DEDUCTED_N"] = "Чи не відвантажено";
 $MESS["SMOB_FILTER_MARKED"] = "Проблема з замовленням";
 $MESS["SMOB_FILTER_MARKED_Y"] = "З проблемою";
 $MESS["SMOB_FILTER_MARKED_N"] = "Без проблеми";
+$MESS["SMOB_PUSH_MES_ORDER_CHECK_ERROR"] = "Помилка при друку чека № #CHECK_ID# для замовлення № # ACCOUNT_NUMBER #";
 ?>

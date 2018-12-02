@@ -17,11 +17,11 @@
 					// use detail link?
 					$bDetailLink = $arParams['SHOW_DETAIL_LINK'] != 'N' && (!strlen($arItem['DETAIL_TEXT']) ? ($arParams['HIDE_LINK_WHEN_NO_DETAIL'] !== 'Y' && $arParams['HIDE_LINK_WHEN_NO_DETAIL'] != 1) : true);
 					// show preview picture?
-					$bImage = strlen($arItem['FIELDS']['PREVIEW_PICTURE']['SRC']);
-					$imageSrc = ($bImage ? $arItem['FIELDS']['PREVIEW_PICTURE']['SRC'] : false);
-					$imageDetailSrc = ($bImage ? $arItem['FIELDS']['DETAIL_PICTURE']['SRC'] : false);
+					$bImage = isset($arItem['FIELDS']['PREVIEW_PICTURE']) && strlen($arItem['PREVIEW_PICTURE']['SRC']);
+					$imageSrc = ($bImage ? $arItem['PREVIEW_PICTURE']['SRC'] : false);
+					$imageDetailSrc = ($bImage ? $arItem['DETAIL_PICTURE']['SRC'] : false);
 					?>
-					
+
 					<div class="col-md-6 nopadding">
 						<div class="item shadow <?=(isset($arParams['IMG_PADDING']) && $arParams['IMG_PADDING'] == 'Y' ? 'padding-img' : '');?> <?=($bImage ? '' : ' wti')?> clearfix" id="<?=$this->GetEditAreaId($arItem['ID'])?>">
 							<?if($bImage):?>
@@ -45,8 +45,8 @@
 											<?if($bDetailLink):?></a><?endif;?>
 										</div>
 									</div>
-								<?endif;?>						
-								
+								<?endif;?>
+
 								<?// element preview text?>
 								<?if(strlen($arItem['FIELDS']['PREVIEW_TEXT'])):?>
 									<div class="previewtext">
@@ -56,7 +56,7 @@
 											<?=$arItem['FIELDS']['PREVIEW_TEXT']?>
 										<?endif;?>
 									</div>
-								<?endif;?>			
+								<?endif;?>
 							</div>
 						</div>
 					</div>

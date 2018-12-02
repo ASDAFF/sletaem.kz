@@ -11,7 +11,7 @@ $MESS["SUBSCRIBE_CONFIRM_SUBJECT"] = "#SITE_NAME#: Підтвердження п
 $MESS["SUBSCRIBE_CONFIRM_MESSAGE"] = "Інформаційне повідомлення сайту #SITE_NAME#
 ------------------------------------------
 
-Доброго дня!
+Вітаємо!
 
 Ви отримали це повідомлення, оскільки ваша адреса була підписана
 на список розсилки сервера #SERVER_NAME#.
@@ -43,5 +43,5 @@ http://#SERVER_NAME##SUBSCR_SECTION#subscr_edit.php?ID=#ID#&CONFIRM_CODE=#CONFIR
 http://#SERVER_NAME##SUBSCR_SECTION#subscr_edit.php?ID=#ID#&CONFIRM_CODE=#CONFIRM_CODE#&action=unsubscribe
 ---------------------------------------------------------------------
 
-Повідомлення сгенероване автоматично.";
+Повідомлення згенероване автоматично.";
 ?>

@@ -1,6 +1,5 @@
 <?
 $MESS["VOTE_FOR_NAME"] = "Nuevo voto";
-$MESS["VOTE_FOR_SUBJECT"] = "#SITE_NAME#: [V] #VOTE_TITLE#";
 $MESS["VOTE_FOR_DESC"] = "#ID# - Id del resultado del voto
 #TIME# - Hora del voto
 #VOTE_TITLE# - Nombre de la encuesta
@@ -17,6 +16,7 @@ $MESS["VOTE_FOR_DESC"] = "#ID# - Id del resultado del voto
 #IP# - dirección IP
 #VOTE_STATISTIC# - Resumen de estadísticas para este tipo de encuesta ( - Pregunta - Respuesta)
 #URL# - URL de la encuesta";
+$MESS["VOTE_FOR_SUBJECT"] = "#SITE_NAME#: [V] #VOTE_TITLE#";
 $MESS["VOTE_FOR_MESSAGE"] = "#USER_NAME# votó en la encuesta \"#VOTE_TITLE#\":
 #VOTE_STATISTIC#
 

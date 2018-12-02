@@ -1,10 +1,10 @@
 <?
-$MESS["TRANS_TITLE"] = "Recherche et substitution";
+$MESS["TR_SEARCH_SUBMIT_BUTTON"] = "Rechercher";
 $MESS["TRANS_SEARCH"] = "Recherche";
+$MESS["TRANS_TITLE"] = "Recherche et substitution";
 $MESS["TRANS_SEARCH_TITLE"] = "Recherche de messages";
 $MESS["TRANS_REPLACE"] = "Remplacer";
 $MESS["TRANS_REPLACE_TITLE"] = "Remplacer le texte dans les messages";
-$MESS["TR_SEARCH_SUBMIT_BUTTON"] = "Recherche";
 $MESS["TR_REPLACE_SUBMIT_BUTTON"] = "Remplacer";
 $MESS["TR_CANCEL_SUBMIT_BUTTON"] = "Annuler";
 $MESS["TR_SEARCH_PHRASE"] = "Mot ou phrase";

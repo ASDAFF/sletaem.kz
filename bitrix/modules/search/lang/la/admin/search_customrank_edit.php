@@ -1,5 +1,4 @@
 <?
-$MESS["customrank_edit_rule"] = "Editando regla #";
 $MESS["customrank_edit_param1"] = "Parámetro 1:";
 $MESS["customrank_edit_param2"] = "Parámetro 2:";
 $MESS["customrank_edit_param3"] = "Parámetro 3:";
@@ -23,6 +22,7 @@ $MESS["customrank_edit_param3_iblock"] = "Parámetro 3 (elemento del block de in
 $MESS["customrank_edit_param1_forum"] = "Parámetro 1 (foro)";
 $MESS["customrank_edit_param2_forum"] = "Parámetro 2 (tema del foro):";
 $MESS["customrank_edit_param3_forum"] = "Parámetro 3 (mensaje del foro):";
+$MESS["customrank_edit_rule"] = "Editando regla #";
 $MESS["customrank_edit_rule_title"] = "Parámetros del registro de las reglas";
 $MESS["customrank_edit_files"] = "Archivos estáticos";
 ?>

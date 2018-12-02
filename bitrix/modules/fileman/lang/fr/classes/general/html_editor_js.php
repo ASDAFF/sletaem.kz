@@ -1,4 +1,7 @@
 <?
+$MESS["ButtonSearch"] = "Recherche et substitution";
+$MESS["BXEdCompSearchPlaceHolder"] = "Recherche de composants";
+$MESS["BXEdSnipSearchPlaceHolder"] = "Recherche de snippets...";
 $MESS["UrlTitle"] = "Lien au commentaire";
 $MESS["SrcTitle"] = "Image";
 $MESS["DialogSave"] = "Sauvegarder";
@@ -23,7 +26,6 @@ $MESS["AddLITitle"] = "Ajouter un élément de la liste (Enter)";
 $MESS["DelListItem"] = "Eliminer ce point de la liste";
 $MESS["ComponentsTitle"] = "Composants";
 $MESS["RefreshTaskbar"] = "Recalculer";
-$MESS["ButtonSearch"] = "Recherche et substitution";
 $MESS["ButtonViewMode"] = "Affichage d'éléments";
 $MESS["StyleSelectorName"] = "Style";
 $MESS["StyleSelectorTitle"] = "Style et mise en forme";
@@ -243,8 +245,6 @@ $MESS["BXEdDropCatConfirm"] = "La catégorie avec tout son contenu sera supprim�
 $MESS["BXEdSnipEdit"] = "dition du bout de code";
 $MESS["BXEdSnipRemove"] = "Supprimer le snippet";
 $MESS["BXEdSnipRemoveConfirm"] = "tes-vous sûr de vouloir supprimer ce snippet?";
-$MESS["BXEdCompSearchPlaceHolder"] = "Recherche de composants";
-$MESS["BXEdSnipSearchPlaceHolder"] = "Recherche de snippets...";
 $MESS["BXEdSnipNoSnippets"] = "Pas de snippets";
 $MESS["BXEdInsertVideo"] = "Intégrer la vidéo";
 $MESS["BXEdVideoSource"] = "Source vidéo";

@@ -1,4 +1,5 @@
 <?
+$MESS["BT_MOD_SALE_COND_IBLOCK_CONTROLGROUP_LABEL"] = "Champs et propriétés du produit dans le bloc d'information";
 $MESS["BT_MOD_CATALOG_COND_CMP_IBLOCK_CREATED_BY_LABEL"] = "Auteur";
 $MESS["BT_MOD_CATALOG_COND_CMP_CATALOG_VAT_INCLUDED_VALUE_YES"] = "oui";
 $MESS["BT_MOD_CATALOG_COND_CMP_IBLOCK_TIMESTAMP_X_LABEL"] = "Date de modification";
@@ -52,5 +53,4 @@ $MESS["BT_MOD_CATALOG_COND_CMP_IBLOCK_DATE_ACTIVE_TO_LABEL"] = "Actif jusqu'à";
 $MESS["BT_MOD_CATALOG_COND_CMP_IBLOCK_PREVIEW_TEXT_LABEL"] = "Texte de l'Aperçu";
 $MESS["BT_MOD_CATALOG_COND_CMP_IBLOCK_SORT_PREFIX"] = "Champ de tri";
 $MESS["BT_MOD_CATALOG_COND_CMP_IBLOCK_CODE_LABEL"] = "Code Symbolique";
-$MESS["BT_MOD_SALE_COND_IBLOCK_CONTROLGROUP_LABEL"] = "Champs et propriétés du produit dans le bloc d'information";
 ?>

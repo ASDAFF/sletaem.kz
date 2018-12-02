@@ -2,7 +2,7 @@
 $MESS["INFO_REQ"] = "Vous vous êtes enregistré avec succès.";
 $MESS["SPCR1_NO_SHOP"] = "Module de la Boutique en ligne non installé";
 $MESS["SPCR1_ERR_REG"] = "Erreur d'autorisation de l'utilisateur enregistré";
-$MESS["SPCR1_ON_LOGIN"] = "Chec d'autorisation de l'utilisateur enregistré: entrez votre login";
+$MESS["SPCR1_ON_LOGIN"] = "Échec d'autorisation de l'utilisateur enregistré: entrez votre login";
 $MESS["SPCR1_ERR_REGISTER"] = "Erreur d'enregistrement d'un nouvel utilisateur";
 $MESS["SPCR1_NO_EMAIL"] = "Erreur d'enregistrement d'un nouvel utilisateur: introduisez votre adresse e-mail";
 $MESS["SPCR1_NO_NAME"] = "Erreur d'enregistrement d'un nouvel utilisateur: entrez votre nom";

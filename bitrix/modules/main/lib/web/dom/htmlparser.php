@@ -15,12 +15,14 @@ class HtmlParser extends Parser
 
 	protected static $objectCounter = 0;
 	protected $currentObjectNumber;
+	protected $storedItemCounter;
 	protected $storedPHP = array();
 
 	public function __construct()
 	{
 		static::$objectCounter++;
 		$this->currentObjectNumber = static::$objectCounter;
+		$this->storedItemCounter = 0;
 
 		$this->setConfig(new HtmlParserConfig);
 	}
@@ -55,7 +57,7 @@ class HtmlParser extends Parser
 				}
 				else
 				{
-					$source = HtmlFilter::encode($node->getNodeValue());
+					$source = HtmlFilter::encode($node->getNodeValue(), ENT_QUOTES);
 				}
 
 				break;
@@ -460,7 +462,7 @@ class HtmlParser extends Parser
 		else
 		{
 			// Text
-			$cleaned = html_entity_decode($tag, ENT_COMPAT, (defined("BX_UTF") ? "UTF-8" : "ISO-8859-1"));
+			$cleaned = html_entity_decode($tag, ENT_QUOTES, (defined("BX_UTF") ? "UTF-8" : "ISO-8859-1"));
 			$node = $document->createTextNode($cleaned);
 		}
 
@@ -497,7 +499,8 @@ class HtmlParser extends Parser
 			$prefix = 'BX_DOM_DOCUMENT_PHP_SLICE_PLACEHOLDER_' . $this->currentObjectNumber . '_';
 			foreach($matches as $key => $value)
 			{
-				$this->storedPHP['<!--' . $prefix . (string) $key . '-->'] = $value[0];
+				$this->storedItemCounter++;
+				$this->storedPHP['<!--' . $prefix . $this->storedItemCounter . '-->'] = $value[0];
 			}
 
 			$replaceFrom = array_values($this->storedPHP);

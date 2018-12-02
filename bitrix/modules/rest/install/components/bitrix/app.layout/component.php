@@ -173,6 +173,10 @@ if(
 			$arResult['APP_NAME'] = $arApp['APP_NAME'];
 		}
 	}
+	elseif(isset($arParams['LAZYLOAD']) && strlen($arResult['APP_NAME']) <= 0)
+	{
+		$arResult['APP_NAME'] = $arApp['APP_NAME'];
+	}
 
 	if (
 		(
@@ -298,7 +302,7 @@ if(
 
 		$arResult['APP_SID'] = md5(uniqid(rand(), true));
 
-		$arResult['IS_ADMIN'] = \CRestUtil::isAdmin();
+		$arResult['IS_ADMIN'] = \CRestUtil::isAdmin() || \CRestUtil::canInstallApplication($arApp);
 		$arResult['REST_PATH'] = \Bitrix\Main\Config\Option::get("rest", "server_path", "/rest");
 
 		if(!is_array($arResult['AUTH']) || $arResult['AUTH']['error'])
@@ -359,6 +363,8 @@ if(
 						\Bitrix\Rest\AppTable::setSkipRemoteUpdate(false);
 
 						\Bitrix\Rest\AppTable::install($arParams['ID']);
+
+						\Bitrix\Rest\AppLogTable::log($arParams['ID'], \Bitrix\Rest\AppLogTable::ACTION_TYPE_INSTALL);
 
 						echo '{"result":"'.($updateResult->isSuccess()  ? 'true' : 'false').'"}';
 					}

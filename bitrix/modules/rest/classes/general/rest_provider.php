@@ -49,8 +49,6 @@ class CRestProvider
 
 			$ownMethods = array(
 				\CRestUtil::GLOBAL_SCOPE => array(
-					'app.info' => array(__CLASS__, 'appInfo'),
-
 					'app.option.get' => array(__CLASS__, 'appOptionGet'),
 					'app.option.set' => array(__CLASS__, 'appOptionSet'),
 					'user.option.get' => array(__CLASS__, 'userOptionGet'),
@@ -113,6 +111,11 @@ class CRestProvider
 				),
 			);
 
+			if(!\Bitrix\Main\ModuleManager::isModuleInstalled('oauth'))
+			{
+				$ownMethods[\CRestUtil::GLOBAL_SCOPE]['app.info'] = array(__CLASS__, 'appInfo');
+			}
+
 			$arDescription = array();
 
 			foreach(GetModuleEvents("rest", "OnRestServiceBuildDescription", true) as $arEvent)
@@ -140,7 +143,7 @@ class CRestProvider
 
 			array_change_key_case(self::$arMethodsList, CASE_LOWER);
 
-			foreach (self::$arMethodsList as $scope => $arScopeMethods)
+			foreach(self::$arMethodsList as $scope => $arScopeMethods)
 			{
 				self::$arMethodsList[$scope] = array_change_key_case(self::$arMethodsList[$scope], CASE_LOWER);
 				if(
@@ -307,7 +310,7 @@ class CRestProvider
 
 		if($arQuery['FULL'] == true)
 		{
-			$arScope = \CRestUtil::getScopeList(self::getDescription());
+			$arScope = \CRestUtil::getScopeList($server->getServiceDescription());
 		}
 		else
 		{
@@ -319,7 +322,8 @@ class CRestProvider
 
 	public static function methodsList($arQuery, $n, \CRestServer $server)
 	{
-		$arMethods = self::getDescription();
+		$arMethods = $server->getServiceDescription();
+
 		$arScope = array(\CRestUtil::GLOBAL_SCOPE);
 		$arResult = array();
 
@@ -363,9 +367,6 @@ class CRestProvider
 
 		return $arResult;
 	}
-
-
-
 
 	public static function appInfo($params, $n, \CRestServer $server)
 	{
@@ -452,6 +453,7 @@ class CRestProvider
 	 *
 	 * @throws AccessException
 	 * @throws ArgumentNullException
+	 * @throws \Bitrix\Main\ArgumentOutOfRangeException
 	 */
 	public static function appOptionGet($params, $n, \CRestServer $server)
 	{
@@ -499,6 +501,7 @@ class CRestProvider
 	 *
 	 * @throws AccessException
 	 * @throws ArgumentNullException
+	 * @throws \Bitrix\Main\ArgumentOutOfRangeException
 	 */
 	public static function appOptionSet($params, $n, \CRestServer $server)
 	{

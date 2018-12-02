@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_DH_RUSSIANPOST_MESSAGE"] = "Ce gestionnaire de service de livraison est dépassé et n'est plus pris en charge. Veuillez utiliser le #A1#nouveau gestionnaire#A2#.";
 $MESS["SALE_DH_RUSSIANPOST_DESCRIPTION_INNER2"] = "<br /><b>Faites attention</b>, pour activer le gestionnaire, le système doit contenir le paramètre de commande avec l'option établie <b>Utiliser comme code postal</b>.";
 $MESS["SALE_DH_RUSSIANPOST_ERROR_RESPONSE"] = "Le calcul du prix de la livraison a échoué: réponse incorrecte du serveur";
 $MESS["SALE_DH_RUSSIANPOST_CONFIG_TITLE"] = "Paramètres";
@@ -18,5 +19,4 @@ $MESS["SALE_DH_RUSSIANPOST_CONFIG_CATEGORY"] = "Type mail";
 $MESS["SALE_DH_RUSSIANPOST_CONFIG_CATEGORY_26"] = "Paquet postal recommandé";
 $MESS["SALE_DH_RUSSIANPOST_CONFIG_CATEGORY_36"] = "Parcelle enregistrée";
 $MESS["SALE_DH_RUSSIANPOST_CONFIG_CATEGORY_16"] = "Lettre recommandée";
-$MESS["SALE_DH_RUSSIANPOST_MESSAGE"] = "Ce gestionnaire de service de livraison est dépassé et n'est plus pris en charge. Veuillez utiliser le #A1#nouveau gestionnaire#A2#.";
 ?>

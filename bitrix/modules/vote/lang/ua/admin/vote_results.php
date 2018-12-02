@@ -7,4 +7,5 @@ $MESS["VOTE_QUESTIONS_ADD"] = "Додати питання";
 $MESS["VOTE_PREVIEW"] = "Форма опитування";
 $MESS["VOTE_NOT_FOUND"] = "Невірний ID опитування";
 $MESS["VOTE_SAVE"] = "Зберегти";
+$MESS["VOTE_BACK_TO_VOTE"] = "Перейти до опитування";
 ?>

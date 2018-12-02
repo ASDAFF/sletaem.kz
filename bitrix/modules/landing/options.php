@@ -1,4 +1,6 @@
 <?php
+$module_id = 'landing';
+
 use \Bitrix\Landing\Manager;
 use \Bitrix\Main\Localization\Loc;
 use Bitrix\Seo\Engine\Bitrix;
@@ -11,11 +13,10 @@ if (!\Bitrix\Main\Loader::includeModule('landing'))
 $context = \Bitrix\Main\Application::getInstance()->getContext();
 $request = $context->getRequest();
 
-$moduleId = 'landing';
 $mid = $request->get('mid');
 $backUrl = $request->get('back_url_settings');
 $docRoot = Manager::getDocRoot();
-$postRight = $APPLICATION->GetGroupRight('main');
+$postRight = $APPLICATION->GetGroupRight($module_id);
 
 if ($postRight >= 'R'):
 
@@ -28,29 +29,45 @@ if ($postRight >= 'R'):
 		array('text', 32)
 	);
 
+	$allOptions[] = array(
+		'deleted_lifetime_days',
+		Loc::getMessage('LANDING_OPT_DELETED_LIFETIME_DAYS') . ':',
+		array('text', 4)
+	);
+
 	// paths for sites
-	$res = \Bitrix\Main\SiteTable::getList(array(
-		'select' => array(
-			'*'
-		),
-		'filter' => array(
-			'ACTIVE' => 'Y'
-		),
-		'order' => array(
-			'SORT' => 'ASC'
-		)
-	));
-	while ($row = $res->fetch())
+	if (!Manager::isB24())
 	{
-		$row['NAME']  = \htmlspecialcharsbx($row['NAME']);
-		$allOptions[] = array(
-			'pub_path_' . $row['LID'],
-			Loc::getMessage('LANDING_OPT_PUB_PATH') .
-			' (' . $row['NAME'] . '[' . $row['LID'] . ']' . ')' . ':',
-			array('text', 32),
-			\Bitrix\Landing\Manager::PUBLICATION_PATH
-		);
+		/*$allOptions[] = array(
+			'show_admin_panel',
+			Loc::getMessage('LANDING_OPT_SHOW_PANEL_BUTTON') . ':',
+			array('checkbox')
+		);*/
+		
+		$res = \Bitrix\Main\SiteTable::getList(array(
+			'select' => array(
+				'*'
+			),
+			'filter' => array(
+				'ACTIVE' => 'Y'
+			),
+			'order' => array(
+				'SORT' => 'ASC'
+			)
+		));
+		while ($row = $res->fetch())
+		{
+			$row['NAME']  = \htmlspecialcharsbx($row['NAME']);
+			$allOptions[] = array(
+				'pub_path_' . $row['LID'],
+				Loc::getMessage('LANDING_OPT_PUB_PATH') .
+				' (' . $row['NAME'] . '[' . $row['LID'] . ']' . ')' . ':',
+				array('text', 32),
+				\Bitrix\Landing\Manager::PUBLICATION_PATH
+			);
+		}
 	}
+
 
 	$tabControl = new \CAdmintabControl('tabControl', array(
 		array('DIV' => 'edit1', 'TAB' => Loc::getMessage('MAIN_TAB_SET'), 'ICON' => ''),
@@ -58,58 +75,51 @@ if ($postRight >= 'R'):
 	));
 
 	if (
-		strlen($Update.$Apply.$RestoreDefaults) > 0 &&
+		strlen($Update.$Apply) > 0 &&
 		($postRight=='W' || $postRight=='X') &&
 		\check_bitrix_sessid()
 	)
 	{
-		if (strlen($RestoreDefaults)>0)
+		foreach ($allOptions as $arOption)
 		{
-			\COption::RemoveOption($moduleId);
-		}
-		else
-		{
-			foreach ($allOptions as $arOption)
+			$name = $arOption[0];
+			if ($arOption[2][0] == 'text-list')
 			{
-				$name = $arOption[0];
-				if ($arOption[2][0] == 'text-list')
+				$val = '';
+				for ($j = 0; $j < count($$name); $j++)
 				{
-					$val = '';
-					for ($j = 0; $j < count($$name); $j++)
+					if (strlen(trim(${$name}[$j])) > 0)
 					{
-						if (strlen(trim(${$name}[$j])) > 0)
-						{
-							$val .= ($val <> '' ? ',':'') . trim(${$name}[$j]);
-						}
+						$val .= ($val <> '' ? ',':'') . trim(${$name}[$j]);
 					}
 				}
-				elseif ($arOption[2][0] == 'doubletext')
-				{
-					$val = ${$name.'_1'} . 'x' . ${$name.'_2'};
-				}
-				elseif ($arOption[2][0] == 'selectbox')
-				{
-					$val = '';
-					for ($j=0; $j<count($$name); $j++)
-					{
-						if (strlen(trim(${$name}[$j])) > 0)
-						{
-							$val .= ($val <> '' ? ',':'') . trim(${$name}[$j]);
-						}
-					}
-				}
-				else
-				{
-					$val = $$name;
-				}
-
-				if ($arOption[2][0] == 'checkbox' && $val<>'Y')
-				{
-					$val = 'N';
-				}
-
-				\COption::SetOptionString($moduleId, $name, $val);
 			}
+			elseif ($arOption[2][0] == 'doubletext')
+			{
+				$val = ${$name.'_1'} . 'x' . ${$name.'_2'};
+			}
+			elseif ($arOption[2][0] == 'selectbox')
+			{
+				$val = '';
+				for ($j=0; $j<count($$name); $j++)
+				{
+					if (strlen(trim(${$name}[$j])) > 0)
+					{
+						$val .= ($val <> '' ? ',':'') . trim(${$name}[$j]);
+					}
+				}
+			}
+			else
+			{
+				$val = $$name;
+			}
+
+			if ($arOption[2][0] == 'checkbox' && $val<>'Y')
+			{
+				$val = 'N';
+			}
+
+			\COption::SetOptionString($module_id, $name, $val);
 		}
 
 		$Update = $Update . $Apply;
@@ -139,7 +149,7 @@ if ($postRight >= 'R'):
 	foreach($allOptions as $Option):
 		$type = $Option[2];
 		$val = \COption::getOptionString(
-			$moduleId,
+			$module_id,
 			$Option[0],
 			isset($Option[3]) ? $Option[3] : null
 		);
@@ -200,7 +210,6 @@ if ($postRight >= 'R'):
 		<input <?if ($postRight < 'W') echo 'disabled="disabled"' ?> type="button" name="Cancel" value="<?= Loc::getMessage('MAIN_OPT_CANCEL')?>" title="<?= Loc::getMessage('MAIN_OPT_CANCEL_TITLE')?>" onclick="window.location='<?echo \htmlspecialcharsbx(CUtil::addslashes($backUrl))?>'" />
 		<input type="hidden" name="back_url_settings" value="<?=\htmlspecialcharsbx($backUrl)?>" />
 	<?endif?>
-	<input <?if ($postRight < 'W') echo 'disabled="disabled"' ?> type="submit" name="RestoreDefaults" title="<?= Loc::getMessage("MAIN_HINT_RESTORE_DEFAULTS")?>" onclick="confirm('<?echo AddSlashes(Loc::getMessage('MAIN_HINT_RESTORE_DEFAULTS_WARNING'))?>')" value="<?echo Loc::getMessage('MAIN_RESTORE_DEFAULTS')?>" />
 	<?=bitrix_sessid_post();?>
 	<?$tabControl->End();?>
 	</form>

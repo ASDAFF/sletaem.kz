@@ -9,9 +9,10 @@ $MESS["FORM_INCORRECT_FILE_TYPE"] = "Tipo de archivo incorrecto para el campo \"
 $MESS["FORM_EMPTY_REQUIRED_FIELDS"] = "Los siguientes campos requeridos se han dejarado en blanco:";
 $MESS["FORM_INCORRECT_FORM_ID"] = "ID del formulario incorrecto.";
 $MESS["FORM_PUBLIC_ICON_EDIT"] = "Editar parámetros del formulario Web";
-$MESS["FORM_DATA_SAVED"] = "Las modificaciones fueron guardadas.";
 $MESS["FORM_PUBLIC_ICON_EDIT_TPL"] = "Editar plantilla del formulario";
+$MESS["FORM_DATA_SAVED"] = "Las modificaciones fueron guardadas.";
 $MESS["FORM_VIEW_FILE"] = "Ver archivo";
+$MESS["FORM_DELETE_FILE"] = "borrar";
 $MESS["FORM_DOWNLOAD_FILE"] = "Descargar archivo #FILE_NAME#";
 $MESS["FORM_DOWNLOAD"] = "Descargar";
 $MESS["FORM_RECORD_NOT_FOUND"] = "Registro no encontrado";
@@ -21,5 +22,4 @@ $MESS["FORM_NOTE_ADDOK"] = "Gracias.
 
 Su aplicación de formulario #RESULT_ID# fue recibida.";
 $MESS["FORM_NOTE_EDITOK"] = "Todos los cambios guardados";
-$MESS["FORM_DELETE_FILE"] = "borrar";
 ?>

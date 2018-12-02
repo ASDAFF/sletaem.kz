@@ -1,4 +1,15 @@
 <?
+$MESS["SPS_AUTO_CHANGE_1C"] = "Activer le change automatiquement du paiement lors d'une importation depuis 1C";
+$MESS["SPS_CAN_PRINT_CHECK"] = "Autoriser l'impression de reçus";
+$MESS["SPS_IS_CASH"] = "Type de paiement";
+$MESS["SPS_IS_CASH_TYPE_CASH"] = "Espèces";
+$MESS["SPS_IS_CASH_TYPE_NO_CASH"] = "Sans espèce";
+$MESS["SPS_IS_CASH_TYPE_ACQUIRING"] = "Transaction par carte";
+$MESS["SALE_PSE_RETURN"] = "Recettes";
+$MESS["SALE_PS_RETURN_SETTINGS_YANDEX"] = "Vous pouvez configurer les recettes en utilisant ce <a href='/bitrix/admin/sale_ps_handler_refund.php?lang=en' target='_blank'>lien</a>";
+$MESS["SALE_PSE_YANDEX_INVOICE_SETTINGS_TITLE"] = "Paramètres de sécurité";
+$MESS["SALE_PSE_YANDEX_INVOICE_SETTINGS"] = "Vous devez <a href='/bitrix/admin/sale_yandexinvoice_settings.php?lang=en&pay_system_id=#ID#' target='_blank'>configurer</a> la facturation Yandex avant de pouvoir l'utiliser.";
+$MESS["SALE_PSE_YANDEX_INVOICE_SETTINGS_OK"] = "Le gestionnaire a été configuré. Vous pouvez <a href='/bitrix/admin/sale_yandexinvoice_settings.php?lang=en&pay_system_id=#ID#' target='_blank'>éditer les paramètres du gestionnaire</a> quand vous voulez.";
 $MESS["SPS_ACTION_ID"] = "ID du gestionnaire du système de paiement";
 $MESS["SPS_USER_ADDRESS"] = "Adresse";
 $MESS["SPS_USER_COM_ADDRESS"] = "Adresse de l'entreprise";
@@ -151,15 +162,4 @@ $MESS["SALE_PSE_ERROR_SET_BIZVAL_MAP"] = "Erreur lors de l'enregistrement des si
 $MESS["SALE_PSE_ERROR_RSRT_CURRENCY_SAVE"] = "Erreur lors de l'enregistrement des restrictions de devise";
 $MESS["SALE_PSE_ERROR_NO_ACTION_FILE"] = "Aucun processeur de système de paiement sélectionné";
 $MESS["SALE_PS_TARIFF"] = "Tarifs";
-$MESS["SPS_AUTO_CHANGE_1C"] = "Activer le change automatiquement du paiement lors d'une importation depuis 1C";
-$MESS["SPS_CAN_PRINT_CHECK"] = "Autoriser l'impression de reçus";
-$MESS["SPS_IS_CASH"] = "Type de paiement";
-$MESS["SPS_IS_CASH_TYPE_CASH"] = "Espèces";
-$MESS["SPS_IS_CASH_TYPE_NO_CASH"] = "Sans espèce";
-$MESS["SPS_IS_CASH_TYPE_ACQUIRING"] = "Transaction par carte";
-$MESS["SALE_PSE_RETURN"] = "Recettes";
-$MESS["SALE_PS_RETURN_SETTINGS_YANDEX"] = "Vous pouvez configurer les recettes en utilisant ce <a href='/bitrix/admin/sale_ps_handler_refund.php?lang=en' target='_blank'>lien</a>";
-$MESS["SALE_PSE_YANDEX_INVOICE_SETTINGS_TITLE"] = "Paramètres de sécurité";
-$MESS["SALE_PSE_YANDEX_INVOICE_SETTINGS"] = "Vous devez <a href='/bitrix/admin/sale_yandexinvoice_settings.php?lang=en&pay_system_id=#ID#' target='_blank'>configurer</a> la facturation Yandex avant de pouvoir l'utiliser.";
-$MESS["SALE_PSE_YANDEX_INVOICE_SETTINGS_OK"] = "Le gestionnaire a été configuré. Vous pouvez <a href='/bitrix/admin/sale_yandexinvoice_settings.php?lang=en&pay_system_id=#ID#' target='_blank'>éditer les paramètres du gestionnaire</a> quand vous voulez.";
 ?>

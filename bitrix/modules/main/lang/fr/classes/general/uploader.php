@@ -1,4 +1,5 @@
 <?
+$MESS["BXIU_FILTERHINTTEXT"] = "Recherche";
 $MESS["BXIU_ORESCLABELTEXT"] = "(ou Esc)";
 $MESS["BXIU_FILESNOTADDED"] = "Le(s) fichier(s) [name] n'ont pas été ajouté(s) en raison de limites établies.";
 $MESS["BXFIU_itemTooltip"] = "{0}\\n{1}, \\nDate: {2}";
@@ -36,7 +37,7 @@ $MESS["BXFIU_uploadButtonText"] = "Chargement";
 $MESS["BXFIU_sendingText"] = "Chargement";
 $MESS["BXIU_PROGRESSBARTEXT"] = "Chargement ([count]%)";
 $MESS["BXIU_UPLOADCOMPLETED"] = "Le chargement est terminé.";
-$MESS["BXIU_UPLOADFAILED"] = "Chec du chargement (connexion suspendue).";
+$MESS["BXIU_UPLOADFAILED"] = "Échec du chargement (connexion suspendue).";
 $MESS["BXIU_UPLOADCANCELLED"] = "Chargement interrompu.";
 $MESS["BXIU_IMAGECROPPEDICONTOOLTIP"] = "Aperçu de l'image:";
 $MESS["BXFIU_orText"] = "ou";
@@ -86,7 +87,6 @@ $MESS["BXFIU_preparingText"] = "Préparation pour le chargement";
 $MESS["BXIU_PREPARINGTEXT"] = "Préparation de fichiers pour téléchargement...";
 $MESS["BXFIU_filesPreparedText"] = "Préparé: {0}";
 $MESS["BXIU_WAITTEXT"] = "Attendez...";
-$MESS["BXIU_FILTERHINTTEXT"] = "Recherche";
 $MESS["BXFIU_showDetailsButtonText"] = "Afficher";
 $MESS["BXFIU_previewNotAvailable"] = "Aperçu non disponible";
 $MESS["P_BXUPL_FLASH_TYPE_1"] = "Lors du téléchargement de fichiers une erreur s'est produite. Peut-être, vous essayez de télécharger des fichiers malformés.";

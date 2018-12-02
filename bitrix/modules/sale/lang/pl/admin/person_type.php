@@ -1,0 +1,35 @@
+<?
+$MESS["SPT_ALL"] = "(Wszystko)";
+$MESS["LANG_ALL"] = "Wszystkie strony";
+$MESS["SPTAN_UPDATE_ALT"] = "Edytuj typ płatnika";
+$MESS["SPTAN_ERROR_UPDATE"] = "Błąd modyfkowania rekordu";
+$MESS["ERROR_UPDATE_REC"] = "Błąd aktualizacji rekordu";
+$MESS["SPTAN_ERROR_DELETE"] = "Błąd usuwania rekordu";
+$MESS["ERROR_ADD_REC"] = "Błąd dodawania rekordu";
+$MESS["PERS_TYPE_DEL_CONF"] = "Usunięcie typu płatnika spowoduje usunięcie wszystkich jego własciwości i ustawień. Jeżeli ten typ płatnika zawiera zamówienia, nie zostanie usunięty.";
+$MESS["SALE_PROPS"] = "Właściwości";
+$MESS["PERS_PROPS"] = "Właściwości";
+$MESS["SPTAN_VIEW_PROPS"] = "Przejdź do listy właściwości";
+$MESS["SALE_F_FILTER"] = "Filtr";
+$MESS["LANG_FILTER_BTN"] = "Ustaw filtr";
+$MESS["SALE_F_DEL"] = "Usuń filtr";
+$MESS["PERS_TYPE_ID"] = "ID";
+$MESS["SPTAN_ADD_NEW_ALT"] = "Kliknij, aby dodać nowy typ płatnika";
+$MESS["PERSON_TYPE_TITLE"] = "Typ płatnika";
+$MESS["PERS_TYPE_NAV"] = "Typy płatnika";
+$MESS["SPTAN_DELETE_ALT1"] = "Usuń typ płatnika";
+$MESS["PERS_TYPE_DEL"] = "Usuń";
+$MESS["PERS_TYPE_NAME"] = "Nazwa";
+$MESS["SPTAN_ADD_NEW"] = "Nowy typ płatnika";
+$MESS["LANG_FILTER_NAME"] = "Strona";
+$MESS["PERS_TYPE_LID"] = "Strona";
+$MESS["PERS_TYPE_SORT"] = "Sort.";
+$MESS["PERS_TYPE_UPD"] = "Zapisz";
+$MESS["PERS_TYPE_RESET"] = "Wyczyść";
+$MESS["SPT_UNSET"] = "Wyczyść";
+$MESS["PERS_ACTIVE"] = "Aktywne";
+$MESS["SALE_YES"] = "Tak";
+$MESS["SALE_NO"] = "Nie";
+$MESS["SALE_FIELD_ACTIVE"] = "Aktywne";
+$MESS["SALE_ALL"] = "Wszystkie";
+?>

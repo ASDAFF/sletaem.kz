@@ -1,4 +1,5 @@
 <?
+$MESS["admin_lib_menu_landing"] = "Sitios";
 $MESS["admin_lib_hide_menu"] = "Ocultar menú";
 $MESS["admin_lib_show_menu"] = "Mostrar menú";
 $MESS["admin_lib_less_buttons"] = "Use botones pequeños en el menú";
@@ -10,17 +11,17 @@ $MESS["admin_lib_menu_services"] = "Servicios";
 $MESS["admin_lib_menu_store"] = "e-Store";
 $MESS["admin_lib_menu_stat"] = "Análisis WEB";
 $MESS["admin_lib_menu_settings"] = "Configuraciones";
-$MESS["admin_lib_sort_title"] = "Ordenar:";
+$MESS["admin_lib_sort_title"] = "Clasificar por:";
 $MESS["admin_lib_sort_down"] = "(en orden descendiente)";
 $MESS["admin_lib_sort_up"] = "(en orden ascendente)";
 $MESS["admin_lib_edit_save"] = "Guardar";
 $MESS["admin_lib_edit_save_title"] = "Guardar y regresar a la lista";
 $MESS["admin_lib_edit_apply"] = "Aplicar";
-$MESS["admin_lib_edit_apply_title"] = "Guardar y permanecer acá";
+$MESS["admin_lib_edit_apply_title"] = "Guardar y permanecer aquí";
 $MESS["admin_lib_edit_cancel"] = "Cancelar";
 $MESS["admin_lib_edit_cancel_title"] = "No guardar y regresar a la lista";
-$MESS["admin_lib_edit_save_and_add"] = "Guardar y añadir";
-$MESS["admin_lib_edit_save_and_add_title"] = "Guardar y añadir";
+$MESS["admin_lib_edit_save_and_add"] = "Guardar y agregar";
+$MESS["admin_lib_edit_save_and_add_title"] = "Guardar y agregar";
 $MESS["admin_lib_excel"] = "Exportar datos a Excel";
 $MESS["admin_lib_error"] = "Error";
 $MESS["admin_lib_success"] = "Mensaje";

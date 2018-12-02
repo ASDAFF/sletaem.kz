@@ -1,4 +1,5 @@
 <?
+$MESS["JS_CORE_VIEWER_ACTIONPANEL_MORE"] = "Ще";
 $MESS["JS_CORE_VIEWER_DOWNLOAD"] = "Завантажити";
 $MESS["JS_CORE_VIEWER_EDIT"] = "Редагувати";
 $MESS["JS_CORE_VIEWER_DESCR_AUTHOR"] = "Автор";

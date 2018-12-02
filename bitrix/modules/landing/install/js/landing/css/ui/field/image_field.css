@@ -169,6 +169,10 @@
 	line-height: 0;
 }
 
+.landing-ui-field-image-preview-icon span {
+	position: static!important;
+	transform: none!important;
+}
 
 .landing-ui-field-image-alt {
 	max-width: 314px;

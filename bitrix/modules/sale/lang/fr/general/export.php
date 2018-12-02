@@ -1,4 +1,13 @@
 <?
+$MESS["SALE_EXPORT_PROPERTY_VALUE_BASKET"] = "ShoppingCartProperty";
+$MESS["SALE_EXPORT_BASKET_NUMBER"] = "BasketItemNumber";
+$MESS["SALE_EXPORT_TRACKING_NUMBER"] = "Numéro de suivi";
+$MESS["SALE_EXPORT_REASON_MARKED_BASKET_PROPERTY"] = "Erreur d'export de la commande. Les résultats d'export du panier contient des doublons de numéros d'articles. Code d'erreur - ";
+$MESS["SALE_EXPORT_CONTAINER"] = "Conteneur";
+$MESS["SALE_EXPORT_PROP_VALUES"] = "PropertyValues";
+$MESS["SALE_EXPORT_PROP_VALUE"] = "PropertyValues";
+$MESS["SALE_EXPORT_CASHBOX_CHECKS"] = "ReceiptInfo";
+$MESS["SALE_EXPORT_CASHBOX_CHECK"] = "ReceiptInfo";
 $MESS["SALE_EXPORT_ADDRESS"] = "Adresse";
 $MESS["SALE_EXPORT_DELIVERY_ADDRESS"] = "Adresse de la livraison";
 $MESS["SALE_EXPORT_BANK"] = "Banque";
@@ -156,13 +165,4 @@ $MESS["SALE_EXPORT_REASON_MARKED"] = "Erreur de finalisation";
 $MESS["SALE_EXPORT_ITEM_PAYMENT_N"] = "Paiement sans espèces";
 $MESS["SALE_EXPORT_ITEM_PAYMENT_Y"] = "Paiement en espèces";
 $MESS["SALE_EXPORT_ITEM_PAYMENT_A"] = "Transaction par carte";
-$MESS["SALE_EXPORT_PROPERTY_VALUE_BASKET"] = "ShoppingCartProperty";
-$MESS["SALE_EXPORT_BASKET_NUMBER"] = "BasketItemNumber";
-$MESS["SALE_EXPORT_TRACKING_NUMBER"] = "Numéro de suivi";
-$MESS["SALE_EXPORT_REASON_MARKED_BASKET_PROPERTY"] = "Erreur d'export de la commande. Les résultats d'export du panier contient des doublons de numéros d'articles. Code d'erreur - ";
-$MESS["SALE_EXPORT_CONTAINER"] = "Conteneur";
-$MESS["SALE_EXPORT_PROP_VALUES"] = "PropertyValues";
-$MESS["SALE_EXPORT_PROP_VALUE"] = "PropertyValues";
-$MESS["SALE_EXPORT_CASHBOX_CHECKS"] = "ReceiptInfo";
-$MESS["SALE_EXPORT_CASHBOX_CHECK"] = "ReceiptInfo";
 ?>

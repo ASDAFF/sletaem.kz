@@ -1,0 +1,4 @@
+<?
+$MESS["SALE_ORDEREDIT_NAME_NULL"] = "Brak";
+$MESS["SALE_ORDEREDIT_CLOSE"] = "Zamknij";
+?>

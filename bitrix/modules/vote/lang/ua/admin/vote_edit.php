@@ -59,4 +59,6 @@ $MESS["VOTE_NOTIFY_EMAIL"] = "Так, за допомогою e-mail листа"
 $MESS["VOTE_NOTIFY_N"] = "Ні, не сповіщати";
 $MESS["VOTE_URL"] = "Шлях:";
 $MESS["VOTE_AUTHOR"] = "Автор:";
+$MESS["VOTE_EXPORT"] = "Експорт";
+$MESS["VOTE_EXPORT_XLS"] = "Експортувати дані про голосування в excel";
 ?>

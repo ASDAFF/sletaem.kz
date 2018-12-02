@@ -1,0 +1,7 @@
+<?
+$MESS["TYPE_PRESET_TEMPLATE_USER"] = "Moje szablony";
+$MESS["SENDER_PRESET_TEMPLATE_SELECT"] = "wybierz szablon";
+$MESS["SENDER_PRESET_TEMPLATE_LIST_TMPL"] = "Szablony";
+$MESS["SENDER_PRESET_TEMPLATE_NO_TMPL"] = "brak szablonów";
+$MESS["PRESET_MAILBLOCK_unsub_TEXT_UNSUB_LINK"] = "Link";
+?>

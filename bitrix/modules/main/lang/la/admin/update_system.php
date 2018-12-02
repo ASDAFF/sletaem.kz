@@ -1,4 +1,6 @@
 <?
+$MESS["SUP_MYSQL_LM1010"] = "A partir del 30 de junio de 2019, solo se proporcionará asistencia limitada para nuestros productos que se ejecutan en las versiones MySql MariaDB inferiores a 10.0.5. Si actualmente está utilizando MySql MariaDB #VERS#. Actualice su instalación de MySql o póngase en contacto con su proveedor de servicios de hosting para obtener ayuda.";
+$MESS["SUP_MYSQL_L560"] = "A partir del 30 de junio de 2019, solo se proporcionará asistencia limitada para nuestros productos que se ejecutan en versiones de MySql inferiores a la 5.6. Se recomienda MySql 5.7 o superior. Actualmente está utilizando MySql #VERS#. Actualice su instalación de MySql o póngase en contacto con su proveedor de servicios de hosting para obtener ayuda.";
 $MESS["SUP_TITLE_BASE"] = "SiteUpdate";
 $MESS["SUP_CHECK_UPDATES"] = "Buscar actualizaciones";
 $MESS["SUP_SETTINGS"] = "Modificar configuraciones";
@@ -192,4 +194,5 @@ $MESS["SUP_DEVSRV_MESS"] = "Una instalación de desarrollo no está pensada como
 $MESS["SUP_NO_MS_ORACLE"] = "A partir del 1 de enero de 2017 proporcionamos sólo soporte limitado para los productos basados en Oracle Database y MS SQL Server. No habrá actualizaciones para estas plataformas. Si tiene alguna pregunta, póngase en contacto con nuestro servicio de helpdesk.";
 $MESS["SUP_PHP_L560"] = "A partir del 1 de enero de 2018 ya no admitiremos versiones de PHP anteriores a 5.6. Actualmente estás usando PHP versión #VERS#. Actualice su versión de PHP o póngase en contacto con el servicio de asistencia de su proveedor de alojamiento. Si no lo hace, es posible que su instalación de Bitrix24 no funcione correctamente.";
 $MESS["SUP_PHP_L560F"] = "Está utilizando la versión #VERS#, pero el sistema requiere la versión 5.6.0 o superior. Actualice su instalación PHP o póngase en contacto con el soporte técnico.";
+$MESS["SUP_PHP_L710"] = "A partir del 30 de junio de 2019, solo se proporcionará asistencia limitada para nuestros productos que se ejecutan en versiones de PHP inferiores a 7.1. Actualmente estás usando PHP #VERS#. Actualice su instalación de PHP o póngase en contacto con su proveedor de servicios de hosting para obtener ayuda.";
 ?>

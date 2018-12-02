@@ -20,4 +20,5 @@ $MESS["SALE_OK_BLOCK_TITLE_FINANCEINFO"] = "Фінансова інформац�
 $MESS["SALE_OK_ORDER_CREATE_ERROR"] = "Помилка створення замовлення";
 $MESS["SALE_OK_ORDER_CREATE_ERROR_NO_PRODUCT"] = "Товар \"##NAME##\" не доступний";
 $MESS["ARCHIVE_ERROR_PRODUCT_NOT_FOUND"] = "Товар №#ID# - #NAME# не знайдено в каталозі";
+$MESS["SALE_OK_ORDER_CREATE_ERROR_BASKET_ITEM_NOT_CREATED"] = "Позиція замовлення \"##NAME##\" не створена";
 ?>

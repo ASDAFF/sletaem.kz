@@ -1,4 +1,5 @@
 <?
+$MESS["sender_connector_recipient_name1"] = "Отримувачі розсилок";
 $MESS["sender_connector_recipient_all"] = "Будь-яке";
 $MESS["sender_connector_recipient_y"] = "Так";
 $MESS["sender_connector_recipient_n"] = "Ні";

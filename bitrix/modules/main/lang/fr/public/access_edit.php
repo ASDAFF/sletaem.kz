@@ -1,4 +1,5 @@
 <?
+$MESS["EDIT_ACCESS_OWN_CHANGE_RESTRICT"] = "Vous ne pouvez modifier les permissions de tous vos groupes d'utilisateurs (#GROUPS#). Sinon vous allez restreindre vos propres permissions d'accès. Le niveau de permission d'au moins un groupe doit rester inchangé.";
 $MESS["EDIT_ACCESS_PERMISSION_INFO"] = "L' <b>autorisation d'accès</b> est un ensemble de règles qui définissent les niveaux d'accès pour un groupe d'utilisateurs (par exemple &quot;read&quot;  afficher le contenu d'une page ou une section). Les autorisations d'accès peuvent hériter ou être hérité: si un article ou une page ont pas spécifié explicitement l'autorisation d'accès, les règles d'une section parent ont lieu.";
 $MESS["EDIT_ACCESS_ADD_PERMISSION"] = "Ajouter le droit d'accès";
 $MESS["FOLDER_EDIT_ACCESS_DENIED"] = "L'accès à la modification de section est interdite.";
@@ -19,5 +20,4 @@ $MESS["EDIT_ACCESS_TO_FILE"] = "Les autorisations de fichier";
 $MESS["EDIT_ACCESS_PERMISSION"] = "Autorisation";
 $MESS["EDIT_ACCESS_CURRENT_PERMISSION"] = "Autorisation en cours";
 $MESS["ACCESS_EDIT_FILE_NOT_FOUND"] = "Fichier ne existe pas.";
-$MESS["EDIT_ACCESS_OWN_CHANGE_RESTRICT"] = "Vous ne pouvez modifier les permissions de tous vos groupes d'utilisateurs (#GROUPS#). Sinon vous allez restreindre vos propres permissions d'accès. Le niveau de permission d'au moins un groupe doit rester inchangé.";
 ?>

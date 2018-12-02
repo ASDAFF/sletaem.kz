@@ -1,4 +1,17 @@
 <?
+$MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_ALL_EXT"] = "toutes les conditions";
+$MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_ANY_EXT"] = "toute condition";
+$MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_TRUE"] = "est/sont vraie(s)";
+$MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_FALSE"] = "est/sont fausse(s)";
+$MESS["BT_SALE_ACT_GROUP_LOGIC_NOT_AND"] = "PAS ET";
+$MESS["BT_SALE_ACT_GROUP_LOGIC_NOT_OR"] = "PAS OU";
+$MESS["BT_SALE_ACT_GROUP_BASKET_DESCR_EXT"] = "aux produits pour lesquels";
+$MESS["BT_SALE_ACT_MAX_DISCOUNT_GROUP_BASKET_DESCR"] = ", mais non supérieur à";
+$MESS["BT_SALE_ACT_MAX_DISCOUNT_ON_GROUP_BASKET_ERROR_CONDITION"] = "Impossible de définir la restriction de réduction maximum pour le montant total de la commande.";
+$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_LABEL"] = "Réductions appliquées";
+$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_PREFIX"] = "Réductions appliquées";
+$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_Y"] = "oui";
+$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_N"] = "non";
 $MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_CUR_EACH"] = "#CUR# pour chaque produit";
 $MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_CUR_ALL"] = "#CUR# du montant total";
 $MESS["BT_SALE_ACT_DELIVERY_SELECT_PERCENT"] = "%";
@@ -58,17 +71,4 @@ $MESS["BT_SALE_ACT_GIFT_SELECT_TYPE_SELECT_ONE"] = "n'importe de";
 $MESS["BT_SALE_ACT_GIFT_SELECT_TYPE_SELECT_ALL"] = "tous";
 $MESS["BT_SALE_ACT_GIFT_SELECT_TYPE_SELECT_DEF"] = "...";
 $MESS["BT_SALE_GIFT_DISCOUNT_DESCR"] = "Cadeau";
-$MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_ALL_EXT"] = "toutes les conditions";
-$MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_ANY_EXT"] = "toute condition";
-$MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_TRUE"] = "est/sont vraie(s)";
-$MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_FALSE"] = "est/sont fausse(s)";
-$MESS["BT_SALE_ACT_GROUP_LOGIC_NOT_AND"] = "PAS ET";
-$MESS["BT_SALE_ACT_GROUP_LOGIC_NOT_OR"] = "PAS OU";
-$MESS["BT_SALE_ACT_GROUP_BASKET_DESCR_EXT"] = "aux produits pour lesquels";
-$MESS["BT_SALE_ACT_MAX_DISCOUNT_GROUP_BASKET_DESCR"] = ", mais non supérieur à";
-$MESS["BT_SALE_ACT_MAX_DISCOUNT_ON_GROUP_BASKET_ERROR_CONDITION"] = "Impossible de définir la restriction de réduction maximum pour le montant total de la commande.";
-$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_LABEL"] = "Réductions appliquées";
-$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_PREFIX"] = "Réductions appliquées";
-$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_Y"] = "oui";
-$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_N"] = "non";
 ?>

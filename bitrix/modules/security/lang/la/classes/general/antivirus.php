@@ -1,3 +1,3 @@
 <?
-$MESS ['SECURITY_VIRUS'] = "Virus detectado";
+$MESS["SECURITY_VIRUS"] = "Virus detectado";
 ?>

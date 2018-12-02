@@ -28,12 +28,12 @@ class aspro_next extends CModule {
 
 		$this->MODULE_VERSION = $arModuleVersion["VERSION"];
 		$this->MODULE_VERSION_DATE = $arModuleVersion["VERSION_DATE"];
-		$this->MODULE_NAME = GetMessage("ASPRO_NEXT_SCOM_INSTALL_NAME"); 
+		$this->MODULE_NAME = GetMessage("ASPRO_NEXT_SCOM_INSTALL_NAME");
 		$this->MODULE_DESCRIPTION = GetMessage("ASPRO_NEXT_SCOM_INSTALL_DESCRIPTION");
 		$this->PARTNER_NAME = GetMessage("ASPRO_NEXT_SPER_PARTNER");
 		$this->PARTNER_URI = GetMessage("ASPRO_NEXT_PARTNER_URI");
 	}
-	
+
 	function checkValid(){
 		return true;
 	}
@@ -45,17 +45,17 @@ class aspro_next extends CModule {
 			RegisterModuleDependences("main", "OnBeforeProlog", $this->MODULE_ID, self::moduleClassEvents, "correctInstall");
 		}
 
-		RegisterModule($this->MODULE_ID); 
+		RegisterModule($this->MODULE_ID);
 		// RegisterModuleDependences("main", "OnBeforeProlog", $this->MODULE_ID, self::moduleClassEvents, "ShowPanel");
-		
+
 		return true;
 	}
 
 	function UnInstallDB($arParams = array()){
 		global $DB, $DBType, $APPLICATION;
-		
+
 		UnRegisterModule($this->MODULE_ID);
-		
+
 		return true;
 	}
 
@@ -78,6 +78,7 @@ class aspro_next extends CModule {
 		RegisterModuleDependences("iblock", "OnIBlockPropertyBuildList", $this->MODULE_ID, self::moduleClassEvents, "OnIBlockPropertyBuildListStoresHandler");
 		RegisterModuleDependences("iblock", "OnIBlockPropertyBuildList", $this->MODULE_ID, self::moduleClassEvents, "OnIBlockPropertyBuildListPricesHandler");
 		RegisterModuleDependences("iblock", "OnIBlockPropertyBuildList", $this->MODULE_ID, self::moduleClassEvents, "OnIBlockPropertyBuildListLocationsHandler");
+		RegisterModuleDependences("iblock", "OnIBlockPropertyBuildList", $this->MODULE_ID, self::moduleClassEvents, "OnIBlockPropertyBuildCustomFilterHandler");
 		RegisterModuleDependences("main", "OnAfterUserUpdate", $this->MODULE_ID, self::moduleClassCache, "ClearTagByUser");
 
 		RegisterModuleDependences("main", "OnPageStart", $this->MODULE_ID, self::moduleClassEvents, "OnPageStartHandler");
@@ -92,6 +93,7 @@ class aspro_next extends CModule {
 		RegisterModuleDependences("sale", "OnSaleComponentOrderOneStepComplete", $this->MODULE_ID, self::moduleClassEvents, "OnSaleComponentOrderOneStepComplete");
 		RegisterModuleDependences("iblock", "OnAfterIBlockElementUpdate", $this->MODULE_ID, self::moduleClassEvents, "DoIBlockAfterSave");
 		RegisterModuleDependences("iblock", "OnAfterIBlockElementAdd", $this->MODULE_ID, self::moduleClassEvents, "DoIBlockAfterSave");
+		RegisterModuleDependences("iblock", "OnAfterIBlockElementDelete", $this->MODULE_ID, self::moduleClassCache, "DoIBlockElementAfterDelete");
 		RegisterModuleDependences("catalog", "OnPriceAdd", $this->MODULE_ID, self::moduleClassEvents, "DoIBlockAfterSave");
 		RegisterModuleDependences("catalog", "OnPriceUpdate", $this->MODULE_ID, self::moduleClassEvents, "DoIBlockAfterSave");
 		RegisterModuleDependences("catalog", "OnProductUpdate", $this->MODULE_ID, self::moduleClassEvents, "setStockProduct");
@@ -118,7 +120,7 @@ class aspro_next extends CModule {
 			$eventManager = \Bitrix\Main\EventManager::getInstance();
 			$eventManager->registerEventHandler('sale', 'OnSaleOrderSaved', $this->MODULE_ID, self::moduleClassEvents, 'BeforeSendEvent', 10);
 		}
-		
+
 		return true;
 	}
 
@@ -136,6 +138,7 @@ class aspro_next extends CModule {
 		UnRegisterModuleDependences("iblock", "OnIBlockPropertyBuildList", $this->MODULE_ID, self::moduleClassEvents, "OnIBlockPropertyBuildListStoresHandler");
 		UnRegisterModuleDependences("iblock", "OnIBlockPropertyBuildList", $this->MODULE_ID, self::moduleClassEvents, "OnIBlockPropertyBuildListPricesHandler");
 		UnRegisterModuleDependences("iblock", "OnIBlockPropertyBuildList", $this->MODULE_ID, self::moduleClassEvents, "OnIBlockPropertyBuildListLocationsHandler");
+		UnRegisterModuleDependences("iblock", "OnIBlockPropertyBuildList", $this->MODULE_ID, self::moduleClassEvents, "OnIBlockPropertyBuildCustomFilterHandler");
 		UnRegisterModuleDependences("main", "OnAfterUserUpdate", $this->MODULE_ID, self::moduleClassCache, "ClearTagByUser");
 
 		UnRegisterModuleDependences("iblock", "OnAfterIBlockPropertyUpdate", $this->MODULE_ID, self::moduleClassCache, "ClearTagByProperty");
@@ -155,6 +158,7 @@ class aspro_next extends CModule {
 		UnRegisterModuleDependences("sale", "OnSaleComponentOrderProperties", $this->MODULE_ID, self::moduleClassEvents, "OnSaleComponentOrderProperties");
 		UnRegisterModuleDependences("iblock", "OnAfterIBlockElementUpdate", $this->MODULE_ID, self::moduleClassEvents, "DoIBlockAfterSave");
 		UnRegisterModuleDependences("iblock", "OnAfterIBlockElementAdd", $this->MODULE_ID, self::moduleClassEvents, "DoIBlockAfterSave");
+		UnRegisterModuleDependences("iblock", "OnAfterIBlockElementDelete", $this->MODULE_ID, self::moduleClassCache, "DoIBlockElementAfterDelete");
 		UnRegisterModuleDependences("catalog", "OnPriceAdd", $this->MODULE_ID, self::moduleClassEvents, "DoIBlockAfterSave");
 		UnRegisterModuleDependences("catalog", "OnPriceUpdate", $this->MODULE_ID, self::moduleClassEvents, "DoIBlockAfterSave");
 		UnRegisterModuleDependences("catalog", "OnProductUpdate", $this->MODULE_ID, self::moduleClassEvents, "setStockProduct");
@@ -180,10 +184,10 @@ class aspro_next extends CModule {
 			$eventManager = \Bitrix\Main\EventManager::getInstance();
 			$eventManager->unregisterEventHandler('sale', 'OnSaleOrderSaved', $this->MODULE_ID, self::moduleClassEvents, 'BeforeSendEvent', 10);
 		}
-		
+
 		return true;
 	}
-	
+
 	function removeDirectory($dir){
 		if($objs = glob($dir."/*")){
 			foreach($objs as $obj){

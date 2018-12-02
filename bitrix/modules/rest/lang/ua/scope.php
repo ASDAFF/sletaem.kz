@@ -1,8 +1,9 @@
 <?
+$MESS["REST_SCOPE_USERCONSENT"] = "Згоди";
 $MESS["REST_SCOPE_BIZPROC"] = "Бізнес-процеси";
 $MESS["REST_SCOPE_CRM"] = "CRM";
 $MESS["REST_SCOPE_ENTITY"] = "Сховище даних";
-$MESS["REST_SCOPE_IM"] = "Повідомлення";
+$MESS["REST_SCOPE_IM"] = "Чат та сповіщення";
 $MESS["REST_SCOPE_TASK"] = "Завдання";
 $MESS["REST_SCOPE_USER"] = "Користувачі";
 $MESS["REST_SCOPE_DEPARTMENT"] = "Структура компанії";

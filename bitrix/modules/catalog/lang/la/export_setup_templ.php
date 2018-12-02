@@ -138,4 +138,5 @@ $MESS["CAT_YANDEX_DISABLE_REFERERS"] = "No agregue referente a los enlaces de pr
 $MESS["CAT_MAX_EXECUTION_TIME"] = "Tiempo de ejecución del paso:";
 $MESS["CAT_MAX_EXECUTION_TIME_NOTE"] = "0 - exportar todos los elementos a la vez y valor positivo - tiempo de ejecución del paso, segundos";
 $MESS["CAT_YANDEX_CHECK_PERMISSIONS"] = "Compruebe los permisos de acceso para el grupo \"2\" (todos los usuarios):";
+$MESS["CATI_NO_RIGHTS_FILE"] = "No tiene acceso para escribir el archivo #ARCHIVO#";
 ?>

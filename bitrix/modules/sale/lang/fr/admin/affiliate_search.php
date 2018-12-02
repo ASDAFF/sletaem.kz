@@ -1,4 +1,5 @@
 <?
+$MESS["SAS1_SEARCH"] = "Recherche affiliés";
 $MESS["SAS1_ALL"] = "(partout)";
 $MESS["SAS1_ACTIVE"] = "Actif(ve)";
 $MESS["SAS1_ACTIVE1"] = "Actif(ve):";
@@ -22,5 +23,4 @@ $MESS["SAS1_LAST_CALC1"] = "Dernière calculée:";
 $MESS["SAS1_PENDING_SUM"] = "Montant attente";
 $MESS["SAS1_GOTO_USER"] = "Modifier les paramètres de l'utilisateur";
 $MESS["SAS1_PLAN1"] = "Régime:";
-$MESS["SAS1_SEARCH"] = "Recherche affiliés";
 ?>

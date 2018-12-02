@@ -13,9 +13,9 @@ $MESS["SL_IMPORT_ZIP_STATS"] = "Postal codes:<ul>
 <li>Postal codes imported: #NUMZIP#</li>
 <li>for cities: #NUMCITIES#</li>
 </ul>";
+$MESS["SL_IMPORT_ERROR_NO_ZIP_FILE"] = "No se ha encontrado el archivo de códigos postales.";
 $MESS["SL_IMPORT_ALL_DONE"] = "Listo.";
 $MESS["SL_LOADER_FILE_LOADED"] = "Archivo cargado";
 $MESS["SL_LOADER_FILE_ERROR"] = "No se puede cargar el archivo.";
 $MESS["SL_MODULE_SALE_NOT_INSTALLED"] = "El módulo  e-Store no está instalado.";
-$MESS["SL_IMPORT_ERROR_NO_ZIP_FILE"] = "No se ha encontrado el archivo de códigos postales.";
 ?>

@@ -1,4 +1,5 @@
 <?
+$MESS["debug_info_search"] = "Recherche";
 $MESS["debug_info_raw_code"] = "Code PHP";
 $MESS["debug_info_cache_auto"] = "auto";
 $MESS["debug_info_comps_cache"] = "Mise en cache automatique des composants:";
@@ -16,7 +17,6 @@ $MESS["debug_info_cache_table_func"] = "Méthode de la mise en cache";
 $MESS["debug_info_cache_off"] = "non";
 $MESS["debug_info_cache_table_size"] = "Rempli";
 $MESS["debug_info_cache_size"] = "Volume de la cash:";
-$MESS["debug_info_search"] = "Recherche";
 $MESS["debug_info_prolog"] = "Prologue";
 $MESS["debug_info_cache_file_path"] = "Chemin vers le fichier";
 $MESS["debug_info_work_area"] = "Espace de travail";

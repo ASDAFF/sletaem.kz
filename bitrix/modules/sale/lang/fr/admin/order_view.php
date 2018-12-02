@@ -1,4 +1,9 @@
 <?
+$MESS["SALE_OVIEW_TO_ARCHIVE"] = "Archiver la commande";
+$MESS["SALE_OVIEW_TO_ARCHIVE_TITLE"] = "Déplacer la commande dans les archives";
+$MESS["SALE_CONFIRM_ARCHIVE_MESSAGE"] = "Voulez-vous vraiment archiver cette commande ? Cette action est irréversible.";
+$MESS["SALE_OVIEW_TO_ACTION"] = "Actions";
+$MESS["SALE_OVIEW_TO_ACTION_TITLE"] = "Sélectionner l'action dans la liste";
 $MESS["SALE_OVIEW_TITLE"] = "ID de la commande (#ID#), # #NUM#, créée le #DATE#";
 $MESS["SALE_OVIEW_TO_LIST"] = "Commandes";
 $MESS["SALE_OVIEW_TO_LIST_TITLE"] = "Aller à la liste de la commande";
@@ -23,9 +28,4 @@ $MESS["SALE_OVIEW_TAB_ANALYSIS"] = "Analyse de la commande";
 $MESS["SALE_OVIEW_ORDER_COPY"] = "Copier la commande";
 $MESS["SALE_OVIEW_ORDER_COPY_TITLE"] = "Copier la commande";
 $MESS["SALE_OVIEW_UNLOCK"] = "Débloquer la commande";
-$MESS["SALE_OVIEW_TO_ARCHIVE"] = "Archiver la commande";
-$MESS["SALE_OVIEW_TO_ARCHIVE_TITLE"] = "Déplacer la commande dans les archives";
-$MESS["SALE_CONFIRM_ARCHIVE_MESSAGE"] = "Voulez-vous vraiment archiver cette commande ? Cette action est irréversible.";
-$MESS["SALE_OVIEW_TO_ACTION"] = "Actions";
-$MESS["SALE_OVIEW_TO_ACTION_TITLE"] = "Sélectionner l'action dans la liste";
 ?>

@@ -1,3 +1,3 @@
 <?
-$MESS ['SEARCH_SAVE_STAT_TABLES'] = "Guardar estadísticas";
+$MESS["SEARCH_SAVE_STAT_TABLES"] = "Guardar estadísticas";
 ?>

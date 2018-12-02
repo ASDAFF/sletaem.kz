@@ -1,7 +1,7 @@
 <?
+$MESS["SEC_OPTIONS_IPCHECK"] = "Configuración de IP prohibida";
 $MESS["SEC_OPTIONS_IPCHECK_ALLOW_SELF_BLOCK"] = "Permitir autobloqueo por IP (Se mostrará mensaje de alerta)";
 $MESS["SEC_OPTIONS_IPCHECK_DISABLE_FILE"] = "Bandera de deshabilitación de ruta al archivo de direcciones IP bloqueadas";
-$MESS["SEC_OPTIONS_IPCHECK"] = "Configuración de IP prohibida";
 $MESS["SEC_OPTIONS_EVENTS"] = "Parámetros de registro";
 $MESS["SEC_OPTIONS_EVENT_DB_ACTIVE"] = "Registro de eventos";
 $MESS["SEC_OPTIONS_EVENT_SYSLOG_ACTIVE"] = "Guardar registro de eventos en el sistema";

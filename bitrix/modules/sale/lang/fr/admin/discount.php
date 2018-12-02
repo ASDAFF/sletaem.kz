@@ -1,4 +1,16 @@
 <?
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_TITLE_CATALOG_ID"] = "depuis le catalogue";
+$MESS["SDSN_LAST_LEVEL_DISCOUNT_NEW"] = "Désactiver les niveaux de priorité";
+$MESS["SDSN_SHOW_IN_CATALOG"] = "Afficher dans le catalogue commercial";
+$MESS["BX_SALE_DISCOUNT_LIST_FILTER_DATE"] = "Actif";
+$MESS["BX_SALE_DISCOUNT_LIST_FILTER_NAME"] = "Nom";
+$MESS["BX_SALE_DISCOUNT_LIST_FILTER_PRIORITY"] = "Priorité d'application";
+$MESS["BX_SALE_DISCOUNT_LIST_FILTER_LAST_DISCOUNT"] = "Arrêter l'application des prochaines règles";
+$MESS["BX_SALE_DISCOUNT_LIST_FILTER_LAST_LEVEL_DISCOUNT"] = "Désactiver les niveaux de priorité";
+$MESS["BX_SALE_DISCOUNT_LIST_FILTER_XML_ID"] = "ID externe";
+$MESS["BX_SALE_DISCOUNT_LIST_FILTER_USE_COUPONS"] = "Utiliser des coupons";
+$MESS["BX_SALE_DISCOUNT_LIST_MESS_RANGE_FROM"] = "de";
+$MESS["BX_SALE_DISCOUNT_LIST_MESS_RANGE_TO"] = "via";
 $MESS["DS_ALL"] = "(partout)";
 $MESS["PERS_TYPE_ID"] = "ID";
 $MESS["PERS_TYPE_ACTIVE"] = "Actif(ve)";
@@ -34,16 +46,4 @@ $MESS["BT_SALE_DISCOUNT_LIST_MESS_DEACTIVATE_DISCOUNT_SHORT"] = "Désactiver";
 $MESS["DSC_NO"] = "aucun";
 $MESS["SDSN_PRESET_ID"] = "Préréglage";
 $MESS["BX_SALE_ADM_DSC_HEADER_TITLE_PRESET_ID"] = "Configuration d'une règle aidée d'un préréglage";
-$MESS["BT_SALE_DISCOUNT_LIST_MESS_TITLE_CATALOG_ID"] = "depuis le catalogue";
-$MESS["SDSN_LAST_LEVEL_DISCOUNT_NEW"] = "Désactiver les niveaux de priorité";
-$MESS["SDSN_SHOW_IN_CATALOG"] = "Afficher dans le catalogue commercial";
-$MESS["BX_SALE_DISCOUNT_LIST_FILTER_DATE"] = "Actif";
-$MESS["BX_SALE_DISCOUNT_LIST_FILTER_NAME"] = "Nom";
-$MESS["BX_SALE_DISCOUNT_LIST_FILTER_PRIORITY"] = "Priorité d'application";
-$MESS["BX_SALE_DISCOUNT_LIST_FILTER_LAST_DISCOUNT"] = "Arrêter l'application des prochaines règles";
-$MESS["BX_SALE_DISCOUNT_LIST_FILTER_LAST_LEVEL_DISCOUNT"] = "Désactiver les niveaux de priorité";
-$MESS["BX_SALE_DISCOUNT_LIST_FILTER_XML_ID"] = "ID externe";
-$MESS["BX_SALE_DISCOUNT_LIST_FILTER_USE_COUPONS"] = "Utiliser des coupons";
-$MESS["BX_SALE_DISCOUNT_LIST_MESS_RANGE_FROM"] = "de";
-$MESS["BX_SALE_DISCOUNT_LIST_MESS_RANGE_TO"] = "via";
 ?>

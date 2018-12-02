@@ -25,5 +25,5 @@ $MESS["IBL_NEWS_CAL_S_3"] = "Mie";
 $MESS["IBL_NEWS_CAL_S_4"] = "Jue";
 $MESS["IBL_NEWS_CAL_S_5"] = "Vie";
 $MESS["IBL_NEWS_CAL_S_6"] = "Sáb";
-$MESS["IBLOCK_MODULE_NOT_INSTALLED"] = "Módulo del Block de Información no está instalado";
+$MESS["IBLOCK_MODULE_NOT_INSTALLED"] = "Módulo de Block de Información no está instalado";
 ?>

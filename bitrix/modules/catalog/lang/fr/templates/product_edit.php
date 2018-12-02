@@ -1,4 +1,10 @@
 <?
+$MESS["C2IT_SUBSCRIBE_TAB"] = "Abonnements";
+$MESS["C2IT_SUBSCRIBE_TAB_TITLE"] = "Information d'abonnement";
+$MESS["C2IT_NUMBER_SUBSCRIPTIONS"] = "Nombre d'abonnements :";
+$MESS["C2IT_NUMBER_ACTIVE_SUBSCRIPTIONS"] = "Abonnements actifs :";
+$MESS["C2IT_LIST_SUBSCRIPTIONS"] = "Abonnements disponibles :";
+$MESS["C2IT_LIST_SUBSCRIPTIONS_TEXT"] = "afficher";
 $MESS["C2IT_EDIT"] = "(modifier)";
 $MESS["C2IT_STORE_NUMBER"] = "N#";
 $MESS["C2IT_STORE_ADDR"] = "Adresse";
@@ -117,10 +123,4 @@ $MESS["C2IT_PRICES_EXT"] = "Prix ??(ext.)";
 $MESS["C2IT_VKL"] = "Incl.";
 $MESS["C2IT_STORE_ID"] = "ID de l'entrepôt";
 $MESS["C2IT_CAN_BUY_NULL_EXT"] = "Permet d'acheter sans produit disponible, y compris des valeurs négatives ";
-$MESS["C2IT_SUBSCRIBE_TAB"] = "Abonnements";
-$MESS["C2IT_SUBSCRIBE_TAB_TITLE"] = "Information d'abonnement";
-$MESS["C2IT_NUMBER_SUBSCRIPTIONS"] = "Nombre d'abonnements :";
-$MESS["C2IT_NUMBER_ACTIVE_SUBSCRIPTIONS"] = "Abonnements actifs :";
-$MESS["C2IT_LIST_SUBSCRIPTIONS"] = "Abonnements disponibles :";
-$MESS["C2IT_LIST_SUBSCRIPTIONS_TEXT"] = "afficher";
 ?>

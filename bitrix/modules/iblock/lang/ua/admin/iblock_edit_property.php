@@ -1,4 +1,5 @@
 <?
+$MESS["BT_ADM_IEP_SECTION_TITLE_PROPERTY_FEATURES"] = "Параметри властивості";
 $MESS["BT_ADM_IEP_PROPERTY_NEW"] = "Додавання властивості";
 $MESS["BT_ADM_IEP_PROPERTY_EDIT"] = "Редагування властивості: \"#NAME#\"";
 $MESS["BT_ADM_IEP_PROPERTY_ID_IS_ABSENT"] = "Не вказано ID властивості";

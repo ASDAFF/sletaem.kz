@@ -1,4 +1,6 @@
 <?
+$MESS["SALE_COMPANY_ERROR_DELETE_LINK"] = "La société est associée au paiement ou à la livraison";
+$MESS["SALE_COMPANY_SORT"] = "Trier";
 $MESS["SALE_COMPANY_SECTION_TITLE"] = "Entreprises";
 $MESS["SALE_COMPANY_NAME"] = "Nom";
 $MESS["SALE_COMPANY_LOCATION_ID"] = "Localisation";
@@ -19,6 +21,4 @@ $MESS["SALE_COMPANY_ERROR_DELETE"] = "Erreur lors de la suppression de l'enregis
 $MESS["SALE_COMPANY_ERROR_NO_NAME"] = "Le nom de l'entreprise est manquant.";
 $MESS["SALE_COMPANY_ERROR_NO_LOCATION_ID"] = "L'adresse de l'entreprise est manquante";
 $MESS["SALE_COMPANY_LOCATION"] = "Localisations.";
-$MESS["SALE_COMPANY_ERROR_DELETE_LINK"] = "La société est associée au paiement ou à la livraison";
-$MESS["SALE_COMPANY_SORT"] = "Trier";
 ?>

@@ -23,7 +23,7 @@ $MESS["FM_WRONG_DATE_FROM"] = "Por favor, introduzca correcta fecha \"desde\" pa
 $MESS["FM_WRONG_DATE_TO"] = "Por favor, introduzca correcta fecha \"hasta\" para la fecha de creación";
 $MESS["FM_WRONG_PERIOD"] = "Período se especificó incorrectamente";
 $MESS["FM_WRONG_USER_ID"] = "ID del usuario errados";
+$MESS["FSUBSC_NO_SPERMS"] = "Permisos insuficientes para editar la suscripción.";
 $MESS["FM_ACT_DEL_CONFIRM"] = "¿Estás seguro que desea eliminar la suscripción?";
 $MESS["FM_SPACE"] = "Ningún ha sido seleccionado";
-$MESS["FSUBSC_NO_SPERMS"] = "Permisos insuficientes para editar la suscripción.";
 ?>

@@ -7,26 +7,30 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 use \Bitrix\Main\ModuleManager;
 
 // get settings data
-if ($params = \Bitrix\Landing\Node\Component::getIblockParams())
-{
-	$iblockId = $params['id'];
-	$defaultElementCode = $params['default_product'];
-}
 $settings = \Bitrix\Landing\Hook\Page\Settings::getDataForSite(
 	isset($landing) ? $landing->getSiteId() : null
 );
-if ($settings['IBLOCK_ID'])
-{
-	$iblockId = $settings['IBLOCK_ID'];
-}
 
 // calc variables
 $variables = \Bitrix\Landing\Landing::getVariables();
 $sectionCode = isset($variables['sef'][0]) ? $variables['sef'][0] : '';
 $elementCode = isset($variables['sef'][1]) ? $variables['sef'][1] : '';
+
+// set default view (for edit mode)
 if (!$sectionCode && !$elementCode)
 {
-	$elementCode = $defaultElementCode;
+	$res = \Bitrix\Iblock\ElementTable::getList(array(
+		'select' => array(
+			'CODE'
+		),
+		'filter' => array(
+			'IBLOCK_ID' => $settings['IBLOCK_ID']
+		)
+	));
+	if ($row = $res->fetch())
+	{
+		$elementCode = $row['CODE'];
+	}
 }
 
 // actions for edit mode
@@ -41,9 +45,45 @@ else
 {
 	$siteId = SITE_ID;
 }
+
+// check for show cart and compare
+$showCart = false;
+$settings['SHOW_PERSONAL_LINK'] = 'N';
+if (
+	!$editMode &&
+	isset($landing) &&
+	ModuleManager::isModuleInstalled('sale')
+)
+{
+	$syspages = \Bitrix\Landing\Syspage::get($landing->getSiteId(), true);
+	if (
+		isset($syspages['compare']) &&
+		$settings['DISPLAY_COMPARE'] != 'N'
+	)
+	{
+		$settings['DISPLAY_COMPARE'] = 'Y';
+	}
+	else
+	{
+		$settings['DISPLAY_COMPARE'] = 'N';
+	}
+	if (isset($syspages['cart']))
+	{
+		$showCart = true;
+	}
+	if (isset($syspages['personal']))
+	{
+		$settings['SHOW_PERSONAL_LINK'] = 'Y';
+	}
+}
+else
+{
+	$settings['DISPLAY_COMPARE'] = 'N';
+}
 ?>
-<?if (!$editMode  && ModuleManager::isModuleInstalled('sale')):?>
-	<?/*$APPLICATION->IncludeComponent(
+
+<?if ($showCart):?>
+	<?$APPLICATION->IncludeComponent(
 		"bitrix:sale.basket.basket.line",
 		".default",
 		array(
@@ -54,12 +94,12 @@ else
 			"SHOW_TOTAL_PRICE" => "Y",
 			"SHOW_PRODUCTS" => "N",
 			"POSITION_FIXED" => "Y",
-			"SHOW_AUTHOR" => "N",
+			"SHOW_AUTHOR" => $settings['SHOW_PERSONAL_LINK'],
 			"PATH_TO_REGISTER" => "/auth/",
 			"PATH_TO_PROFILE" => "#system_personal",
 			"COMPONENT_TEMPLATE" => ".default",
 			"PATH_TO_ORDER" => "#system_order",
-			"SHOW_EMPTY_VALUES" => "Y",
+			"SHOW_EMPTY_VALUES" => "N",
 			"PATH_TO_AUTHORIZE" => "/auth/",
 			"POSITION_HORIZONTAL" => "left",
 			"POSITION_VERTICAL" => "bottom",
@@ -67,12 +107,14 @@ else
 		),
 		false
 	);?>
+<?endif;?>
+
+<?if ($settings['DISPLAY_COMPARE'] == 'Y'):?>
 	<?$APPLICATION->IncludeComponent(
 		"bitrix:catalog.compare.list",
 		"",
 		array(
-			"IBLOCK_TYPE" => "",
-			"IBLOCK_ID" => $iblockId,
+			"IBLOCK_ID" => $settings['IBLOCK_ID'],
 			"NAME" => "CATALOG_COMPARE_LIST",
 			"DETAIL_URL" => "#system_catalogitem/#ELEMENT_CODE#/",
 			"COMPARE_URL" => "#system_compare",
@@ -82,8 +124,9 @@ else
 			'POSITION' => 'top left'
 		),
 		false
-	);*/?>
+	);?>
 <?endif;?>
+
 <section class="landing-block g-pt-20 g-pb-20">
 	<div class="container">
 		<div class="tab-content g-pt-20">
@@ -93,7 +136,7 @@ else
 					"bootstrap_v4",
 					array(
 						"IBLOCK_TYPE" => "",
-						"IBLOCK_ID" => $iblockId,
+						"IBLOCK_ID" => $settings['IBLOCK_ID'],
 						"ELEMENT_ID" => "",
 						"ELEMENT_CODE" => $elementCode,
 						"SECTION_ID" => "",
@@ -155,11 +198,11 @@ else
 						"DETAIL_URL" => "#system_catalog#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
 						"SECTION_ID_VARIABLE" => "SECTION_CODE",
 						"CACHE_TYPE" => "A",
-						"CACHE_TIME" => "3600",
+						"CACHE_TIME" => "3600000",
 						"CACHE_GROUPS" => "N",
-						"META_KEYWORDS" => "KEYWORDS",
-						"META_DESCRIPTION" => "META_DESCRIPTION",
-						"BROWSER_TITLE" => "TITLE",
+						"META_KEYWORDS" => "-",
+						"META_DESCRIPTION" => "-",
+						"BROWSER_TITLE" => "-",
 						"SET_TITLE" => $setTitle,
 						"SET_STATUS_404" => $setStatus404,
 						"ADD_SECTIONS_CHAIN" => "Y",
@@ -201,6 +244,9 @@ else
 						"CHECK_SECTION_ID_VARIABLE" => "N",
 						"SHOW_BASIS_PRICE" => "N",
 						"ADD_TO_BASKET_ACTION" => array(
+							0 => "BUY",
+						),
+						"ADD_TO_BASKET_ACTION_PRIMARY" => array(
 							0 => "BUY",
 						),
 						"COMPONENT_TEMPLATE" => ".default",
@@ -252,9 +298,6 @@ else
 						"MESS_PROPERTIES_TAB" => "",
 						"MESS_COMMENTS_TAB" => "",
 						"STRICT_SECTION_CHECK" => "N",
-						"ADD_TO_BASKET_ACTION_PRIMARY" => array(
-							0 => "ADD",
-						),
 						"COMPATIBLE_MODE" => "N",
 						"IMAGE_RESOLUTION" => "1by1",
 						"MESS_PRICE_RANGES_TITLE" => "",
@@ -280,7 +323,8 @@ else
 						"USE_ENHANCED_ECOMMERCE" => $settings['USE_ENHANCED_ECOMMERCE'],
 						"DATA_LAYER_NAME" => $settings['DATA_LAYER_NAME'],
 						"BRAND_PROPERTY" => $settings['BRAND_PROPERTY'],
-						"CUSTOM_SITE_ID" => $siteId
+						"CUSTOM_SITE_ID" => $siteId,
+						"SECTIONS_CHAIN_START_FROM" => 1
 					),
 					false
 				);?>

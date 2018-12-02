@@ -1,4 +1,7 @@
 <?
+$MESS["BX_CURRENCY_RATE_BASE_CURRENCY"] = "Devise de base";
+$MESS["BX_CURRENCY_RATE_BASE_BASE_CURRENCY_FIELD_ABSENT"] = "non précisé";
+$MESS["ERROR_BASE_CURRENCY_RATE"] = "La devise de base est manquante";
 $MESS["curr_rates_all"] = "(partout)";
 $MESS["curr_rates_curr1"] = "Devises";
 $MESS["curr_rates_list"] = "Devises";
@@ -43,7 +46,4 @@ $MESS["ERROR_EMPTY_ANSWER"] = "Le serveur renvoie une réponse vide.";
 $MESS["CURRENCY_EDIT_TITLE"] = "Modifier le taux de change";
 $MESS["CURRENCY_NEW_TITLE"] = "Nouveau taux de change";
 $MESS["BX_CURRENCY_RATE_EDIT_MESS_AMOUNT"] = "Le module Devise utilise les <b>cotations directes</b> des devises contre la devise de base. Fournissez le prix d'une unité de devise (1, ou 10, 100, 1000 si nécessaire selon la valeur nominale de la devise) dans la devise de base. Il ne doit pas y avoir d'enregistrement de la devise de base dans la liste des taux des devises.";
-$MESS["BX_CURRENCY_RATE_BASE_CURRENCY"] = "Devise de base";
-$MESS["BX_CURRENCY_RATE_BASE_BASE_CURRENCY_FIELD_ABSENT"] = "non précisé";
-$MESS["ERROR_BASE_CURRENCY_RATE"] = "La devise de base est manquante";
 ?>

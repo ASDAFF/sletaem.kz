@@ -16,4 +16,8 @@ $MESS["SALE_ORDEREDIT_LOCKED"] = "Замовлення тимчасово заб
 $MESS["SALE_ORDEREDIT_PRODUCT_IS_NOT_AVAILABLE"] = "Товар \"#NAME_ID# недоступний";
 $MESS["SALE_ORDEREDIT_MESSAGE"] = "Повідомлення";
 $MESS["SALE_ORDEREDIT_ERROR_CHANGE_USER_WITH_PAID_PAYMENTS"] = "Не можна змінити покупця. У замовлення є оплачені оплати";
+$MESS["SALE_ORDEREDIT_PRODUCT_QUANTITY_IS_EMPTY"] = "Недостатня кількість товару \"#NAME#\"";
+$MESS["SALE_ORDEREDIT_CONFIRM"] = "Підтвердження";
+$MESS["SALE_ORDEREDIT_CONFIRM_CONTINUE"] = "Продовжити";
+$MESS["SALE_ORDEREDIT_CONFIRM_ABORT"] = "Перервати";
 ?>

@@ -1,11 +1,11 @@
 <?
+$MESS["FLTR_SEARCH"] = "Recherche";
 $MESS["FLTR_USE_IT"] = "Actif(ve)";
 $MESS["FLTR_NEW"] = "Ajouter";
 $MESS["FLTR_REPLACEMENT"] = "Remplacer";
 $MESS["FLTR_NOT_SAVE"] = "Les changements n'ont pas été sauvegardés.";
 $MESS["FLTR_NOT_ACTION"] = "La réaction active n'a pas été sélectionnée.";
 $MESS["FLTR_DESCRIPTION"] = "Description";
-$MESS["FLTR_SEARCH"] = "Recherche";
 $MESS["FLTR_SEARCH_0"] = "Mot (sans recours au dictionnaire de translittération)";
 $MESS["FLTR_LIST"] = "Liste";
 $MESS["FLTR_SEARCH_WHAT"] = "Type de création du modèle";

@@ -1,3 +1,3 @@
 <?
-$MESS ['SALE_ICON_TITLE'] = "e-Store";
+$MESS["SALE_ICON_TITLE"] = "e-Store";
 ?>

@@ -1,6 +1,6 @@
 <?
+$MESS["CRM_ENTITY_SEL_SEARCH"] = "Recherche";
 $MESS["CRM_ENTITY_SEL_BTN"] = "Sélectionner";
-$MESS["CRM_ENTITY_SEL_SEARCH"] = "Rechercher";
 $MESS["CRM_SEL_SEARCH_NO_RESULT"] = "Aucune entrée n'a été trouvée.";
 $MESS["CRM_ENTITY_SEL_LAST"] = "Dernier";
 $MESS["CRM_CONTACT_SELECTOR_TITLE"] = "Sélectionner les contacts";

@@ -1,4 +1,8 @@
 <?
+$MESS["CAT_PRODUCT_SUBSCRIBE_TITLE"] = "Abonnements au produit";
+$MESS["CAT_PRODUCT_SUBSCRIBE_LABLE_ENABLE"] = "Activer l'abonnement aux produits";
+$MESS["CAT_PRODUCT_SUBSCRIBE_LABLE_REPEATED_NOTIFY"] = "Envoyer un autre message quand un produit est de nouveau épuisé";
+$MESS["CAT_ENABLE_SHOW_CATALOG_TAB_WITH_OFFERS"] = "C'est une option d'héritage. Cochez-la pour désactiver le calcul automatique de l'UGS en fonction du stock du produit. À la place, le statut en stock du produit sera calculé en fonction des données du produit.";
 $MESS["CAT_AGENT_WAIT_START"] = "L'agent sera bientôt lancé.";
 $MESS["COP_TAB2_AGENT_TITLE"] = "Agent d'exportation en Yandex.Products";
 $MESS["COP_TAB2_AGENT"] = "Agent Yandex. Marchandises";
@@ -159,8 +163,4 @@ $MESS["CAT_PRODUCT_DEFAULT_VAT_INCLUDED"] = "Inclure les taxes dans les prix des
 $MESS["CAT_PRODUCT_SETTINGS_STATUS_YES"] = "Oui";
 $MESS["CAT_PRODUCT_SETTINGS_STATUS_NO"] = "Non";
 $MESS["CAT_PRODUCT_SETTINGS_CHANGE"] = "Modifier";
-$MESS["CAT_PRODUCT_SUBSCRIBE_TITLE"] = "Abonnements au produit";
-$MESS["CAT_PRODUCT_SUBSCRIBE_LABLE_ENABLE"] = "Activer l'abonnement aux produits";
-$MESS["CAT_PRODUCT_SUBSCRIBE_LABLE_REPEATED_NOTIFY"] = "Envoyer un autre message quand un produit est de nouveau épuisé";
-$MESS["CAT_ENABLE_SHOW_CATALOG_TAB_WITH_OFFERS"] = "C'est une option d'héritage. Cochez-la pour désactiver le calcul automatique de l'UGS en fonction du stock du produit. À la place, le statut en stock du produit sera calculé en fonction des données du produit.";
 ?>

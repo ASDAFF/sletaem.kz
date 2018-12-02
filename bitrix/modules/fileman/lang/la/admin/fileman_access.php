@@ -1,5 +1,11 @@
 <?
 $MESS["FILEMAN_ACCESS_TITLE"] = "Derechos de Acceso";
+$MESS["FM_FOLDER_ACCESS_DENIED"] = "Denegar";
+$MESS["FM_FOLDER_ACCESS_READ"] = "Leer";
+$MESS["FM_FOLDER_ACCESS_WRITE"] = "Escribir";
+$MESS["FM_FOLDER_ACCESS_FULL"] = "Acceso total";
+$MESS["FM_FOLDER_ACCESS_WORKFLOW"] = "Workflow";
+$MESS["FILEMAN_FOLDER_ACCESS_INHERIT"] = "Heredado";
 $MESS["FILEMAN_ACCESS_TO_DENIED"] = "No hay suficientes derechos para cambiar los derechos de acceso a";
 $MESS["FILEMAN_ACCESS_CHANGE_TO"] = "Cambiar los derechos de acceso a";
 $MESS["FILEMAN_ACCESS_FOLDERS_FILES"] = "archivos/carpetas:";
@@ -20,11 +26,5 @@ $MESS["FILEMAN_ACCESS_FILE"] = "Archivo";
 $MESS["FILEMAN_CMENU_CAT"] = "Carpeta";
 $MESS["FILEMAN_TAB"] = "Permisos de acceso";
 $MESS["FILEMAN_TAB_ALT"] = "Herramientas del permiso de acceso";
-$MESS["FM_FOLDER_ACCESS_DENIED"] = "Denegar";
-$MESS["FM_FOLDER_ACCESS_READ"] = "Leer";
-$MESS["FM_FOLDER_ACCESS_WRITE"] = "Escribir";
-$MESS["FM_FOLDER_ACCESS_FULL"] = "Acceso total";
-$MESS["FM_FOLDER_ACCESS_WORKFLOW"] = "Workflow";
-$MESS["FILEMAN_FOLDER_ACCESS_INHERIT"] = "Heredado";
 $MESS["FILEMAN_FILE_OR_FOLDER"] = "Archivo/Carpeta";
 ?>

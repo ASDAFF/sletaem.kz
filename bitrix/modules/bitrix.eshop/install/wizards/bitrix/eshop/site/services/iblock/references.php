@@ -162,7 +162,7 @@ if (!$dbHblock->Fetch())
 
 $dbHblock = HL\HighloadBlockTable::getList(
 	array(
-		"filter" => array("NAME" => "BrandReference", "TABLE_NAME" => "eshop_color_reference")
+		"filter" => array("NAME" => "BrandReference", "TABLE_NAME" => "eshop_brand_reference")
 	)
 );
 if (!$dbHblock->Fetch())

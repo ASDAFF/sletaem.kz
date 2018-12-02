@@ -1,4 +1,5 @@
 <?
+$MESS["PERFMON_CACHE_FIND"] = "Rechercher";
 $MESS["PERFMON_CACHE_ID"] = "ID";
 $MESS["PERFMON_CACHE_HIT_ID"] = "Hit";
 $MESS["PERFMON_CACHE_NN"] = "#";
@@ -12,7 +13,6 @@ $MESS["PERFMON_CACHE_FILE_NAME"] = "Fichier";
 $MESS["PERFMON_CACHE_CACHE_PATH"] = "Chemin vers le fichier";
 $MESS["PERFMON_CACHE_TITLE"] = "Analyseur de performances: mise en cache";
 $MESS["PERFMON_CACHE_COMPONENT_ID"] = "Exemplaire du composant";
-$MESS["PERFMON_CACHE_FIND"] = "Recherche";
 $MESS["PERFMON_CACHE_OP_MODE_R"] = "Lecture";
 $MESS["PERFMON_CACHE_OP_MODE_W"] = "Écrire";
 $MESS["PERFMON_CACHE_OP_MODE_C"] = "Annuler";

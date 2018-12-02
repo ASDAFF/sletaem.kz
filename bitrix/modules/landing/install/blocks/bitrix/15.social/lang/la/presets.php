@@ -1,0 +1,4 @@
+<?
+$MESS["LANDING_BLOCK__SOCIAL_VK"] = "VK";
+$MESS["LANDING_BLOCK__SOCIAL_OK"] = "Odnoklassniki";
+?>

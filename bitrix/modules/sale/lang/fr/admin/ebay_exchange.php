@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_EBAY_SETTINGS_SAVING_SITE_ERROR"] = "L'échange de données est actuellement impossible. Veuillez #A1#configurer#A2# le site \"#S#\" pour activer l'échange de données.";
 $MESS["SALE_MODULE_NOT_INSTALLED"] = "Le module e-Store n'est pas installé.";
 $MESS["SALE_ACCESS_DENIED"] = "Accès refusé";
 $MESS["SALE_EBAY_TITLE"] = "Échange de données";
@@ -36,5 +37,4 @@ $MESS["SALE_EBAY_WARNING"] = "Attention !";
 $MESS["SALE_EBAY_EXCHANGE_OK"] = "Échange de données réussi";
 $MESS["SALE_EBAY_EXCHANGE_ERROR"] = "Erreur lors de l'échange de données";
 $MESS["SALE_EBAY_SETTINGS_SAVED"] = "Les paramètres ont bien été enregistrés.";
-$MESS["SALE_EBAY_SETTINGS_SAVING_SITE_ERROR"] = "L'échange de données est actuellement impossible. Veuillez #A1#configurer#A2# le site \"#S#\" pour activer l'échange de données.";
 ?>

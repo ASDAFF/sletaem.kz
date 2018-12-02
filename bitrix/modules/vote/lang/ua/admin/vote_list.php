@@ -64,4 +64,5 @@ $MESS["MAIN_ADMIN_MENU_EDIT"] = "Змінити";
 $MESS["MAIN_ADMIN_MENU_DELETE"] = "Видалити";
 $MESS["MAIN_ADMIN_LIST_SELECTED"] = "Обрано:";
 $MESS["MAIN_ADMIN_LIST_CHECKED"] = "Позначено:";
+$MESS["VOTE_RESULTS_DIAGRAM"] = "Діаграма результатів";
 ?>

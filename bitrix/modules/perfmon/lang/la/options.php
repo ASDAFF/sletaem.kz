@@ -26,8 +26,8 @@ $MESS["PERFMON_OPT_INTERVAL_24_HOURS"] = "24 horas";
 $MESS["PERFMON_OPT_INTERVAL_7_DAYS"] = "semana";
 $MESS["PERFMON_OPT_CLEAR_DATA"] = "Borrar estadísticas de monitore existentes (al guardar este formulario)";
 $MESS["PERFMON_OPTIONS_CACHE_LOG"] = "Registro de operaciones de caché";
-$MESS["PERFMON_OPTIONS_LARGE_CACHE_SIZE_KB"] = "(KB)";
-$MESS["PERFMON_OPTIONS_LARGE_CACHE_NOTE"] = "Esto no va a registrar estadísticas de las páginas que no utilizan archivos de caché de gran tamaño. Advertencias PHP no se registrarán.";
 $MESS["PERFMON_OPTIONS_LARGE_CACHE_LOG"] = "Registrar sólo operaciones sobre archivos de caché grandes";
 $MESS["PERFMON_OPTIONS_LARGE_CACHE_SIZE"] = "El archivo de caché es grande si supera";
+$MESS["PERFMON_OPTIONS_LARGE_CACHE_SIZE_KB"] = "(KB)";
+$MESS["PERFMON_OPTIONS_LARGE_CACHE_NOTE"] = "Esto no va a registrar estadísticas de las páginas que no utilizan archivos de caché de gran tamaño. Advertencias PHP no se registrarán.";
 ?>

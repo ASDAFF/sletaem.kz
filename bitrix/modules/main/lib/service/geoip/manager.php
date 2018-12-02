@@ -442,7 +442,7 @@ final class Manager
 
 				foreach($customClasses as $class => $file)
 				{
-					if(!File::isFileExists($file))
+					if(!File::isFileExists(\Bitrix\Main\Application::getDocumentRoot().'/'.$file))
 					{
 						continue;
 					}

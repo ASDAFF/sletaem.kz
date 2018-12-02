@@ -1,4 +1,6 @@
 <?
+$MESS["BT_ADM_IEP_PROPERTY_NEW"] = "Nueva propiedad";
+$MESS["BT_ADM_IEP_PROPERTY_EDIT"] = "Editar la propiedad:\"#NAME#\"";
 $MESS["BT_ADM_IEP_PROPERTY_ID_IS_ABSENT"] = "El ID de la propiedad no se ha especificado.";
 $MESS["BT_ADM_IEP_IBLOCK_ID_IS_INVALID"] = "El ID del Block de Información no es válido.";
 $MESS["BT_ADM_IEP_IBLOCK_NOT_EXISTS"] = "El Block de Información ##ID# no existe.";
@@ -14,6 +16,7 @@ $MESS["BT_ADM_IEP_PROP_MULTIPLE"] = "Múltiple:";
 $MESS["BT_ADM_IEP_PROP_IS_REQUIRED"] = "Requerido:";
 $MESS["BT_ADM_IEP_PROP_SEARCHABLE"] = "Los valores de la propiedad serán usados en la búsqueda:";
 $MESS["BT_ADM_IEP_PROP_FILTRABLE"] = "Usar la propiedad para el filtro de elementos en las páginas de listado:";
+$MESS["BT_ADM_IEP_PROP_SECTION_PROPERTY"] = "Mostrar en la página de edición de elementos:";
 $MESS["BT_ADM_IEP_PROP_WITH_DESC"] = "Mostrar el campo descripción del valor:";
 $MESS["BT_ADM_IEP_PROP_MULTIPLE_CNT"] = "Número de campos de entrada para entradas múltiples:";
 $MESS["BT_ADM_IEP_PROP_APPEARANCE"] = "Apariencia:";
@@ -40,9 +43,6 @@ $MESS["BT_ADM_IEP_PROP_SIZE"] = "Tamaño del campo de entrada (Filas y Columnas)
 $MESS["BT_ADM_IEP_PROP_DEFAULT"] = "Valores predeterminados:";
 $MESS["BT_ADM_IEP_PROP_USER_TYPE_SETTINGS"] = "Configuraciones Adicionales";
 $MESS["BT_ADM_IEP_PROP_HINT_DET"] = "Texto de información del signo \"?\":";
-$MESS["BT_ADM_IEP_PROPERTY_NEW"] = "Nueva propiedad";
-$MESS["BT_ADM_IEP_PROPERTY_EDIT"] = "Editar la propiedad:\"#NAME#\"";
-$MESS["BT_ADM_IEP_PROP_SECTION_PROPERTY"] = "Mostrar en la página de edición de elementos:";
 $MESS["BT_ADM_IEP_LIST"] = "Propiedades";
 $MESS["BT_ADM_IEP_DELETE"] = "Eliminar";
 $MESS["BT_ADM_IEP_CONFIRM_DEL_MESSAGE"] = "Esto eliminará todos los valores de la propiedad. ¿Desea continuar?";

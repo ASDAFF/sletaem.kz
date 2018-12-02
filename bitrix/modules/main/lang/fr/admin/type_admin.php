@@ -1,10 +1,10 @@
 <?
+$MESS["F_SEARCH"] = "Rechercher";
 $MESS["ACTIVE"] = "Actif(ve)";
 $MESS["F_SEARCH_TITLE"] = "Veuillez saisir la phrase à rechercher";
 $MESS["F_ID"] = "Identificateur";
 $MESS["MAIN_ADMIN_MENU_EDIT"] = "Editer";
 $MESS["EVENT_NAME"] = "Dénomination";
-$MESS["F_SEARCH"] = "Recherche";
 $MESS["EVENT_DESCRIPTION"] = "Description";
 $MESS["DELETE_LANG"] = "Annuler";
 $MESS["SORT"] = "Classification";

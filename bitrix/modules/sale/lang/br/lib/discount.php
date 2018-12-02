@@ -1,4 +1,7 @@
 <?
+$MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_BASKET"] = "Alteração total do carrinho de compras";
+$MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_DELIVERY"] = "Alteração do custo de entrega";
+$MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_UNKNOWN"] = "Regra desconhecida de carrinho de compras";
 $MESS["BX_SALE_DISCOUNT_ERR_BASKET_EMPTY"] = "Não há itens no carrinho";
 $MESS["BX_SALE_DISCOUNT_ERR_BASKET_BUNDLE_EMPTY"] = "Um ou mais itens agrupados estão faltando";
 $MESS["BX_SALE_DISCOUNT_ERR_TOO_MANY_SHIPMENT"] = "O pedido tem vários envios";

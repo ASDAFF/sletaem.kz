@@ -1,4 +1,6 @@
 <?
+$MESS["MAIN_USER_EDIT_HISTORY"] = "Історія";
+$MESS["MAIN_USER_EDIT_HISTORY_TITLE"] = "Історія зміни профілю користувача";
 $MESS["MAIN_USERED_AUTH_INT"] = "(внутрішня перевірка)";
 $MESS["USER_DONT_KNOW"] = "(невідомо)";
 $MESS["EMAIL"] = "E-mail:";
@@ -65,7 +67,7 @@ $MESS["MAIN_USER_TAB2_TITLE"] = "Приналежність до груп";
 $MESS["LAST_NAME"] = "Прізвище:";
 $MESS["MAIN_USER_TAB1_TITLE"] = "Реєстраційна інформація";
 $MESS["MAIN_USER_TAB4"] = "Робота";
-$MESS["MAIN_DEFAULT_SITE"] = "Сайт за умовчанням для повідомлень:";
+$MESS["MAIN_DEFAULT_SITE"] = "Сайт за умовчанням для сповіщень:";
 $MESS["RESET"] = "Скинути";
 $MESS["RECORD_LIST"] = "Список користувачів";
 $MESS["INFO_FOR_USER"] = "Сповістити користувача:";
@@ -106,7 +108,7 @@ $MESS["USER_EDIT_DATE_REGISTER"] = "Дата реєстрації:";
 $MESS["MAIN_USER_EDIT_EXT"] = "Зовнішній код:";
 $MESS["USER_EDIT_TITLE"] = "Звернення:";
 $MESS["user_edit_lang_not_set"] = "(не встановлено)";
-$MESS["user_edit_lang"] = "Мова для повідомлень:";
+$MESS["user_edit_lang"] = "Мова для сповіщень:";
 $MESS["MAIN_ADMIN_AUTH"] = "Авторизуватись";
 $MESS["MAIN_ADMIN_AUTH_TITLE"] = "Авторизуватися під цим користувачем";
 ?>

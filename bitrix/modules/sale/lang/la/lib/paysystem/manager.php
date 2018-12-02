@@ -18,7 +18,6 @@ $MESS["SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_BILLDE"] = "Preferencias de factur
 $MESS["SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_BILLEN"] = "Preferencias de factura (Inglés)";
 $MESS["SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_BILLUA"] = "Preferencias de factura (Ucranea)";
 $MESS["SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_BILLLA"] = "Preferencias de factura (Español)";
-$MESS["SALE_PS_MANAGER_GROUP_GENERAL_SETTINGS"] = "Pago más preferencias del sistema";
 $MESS["SALE_PS_MANAGER_GROUP_PAYMENT"] = "Pagos";
 $MESS["SALE_PS_MANAGER_INNER_NAME"] = "Cuenta interna";
 $MESS["SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_ALFABANK"] = "Parámetros de conexión Alfa Bank";
@@ -26,6 +25,7 @@ $MESS["SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_AUTHORIZE"] = "Parámetros de cone
 $MESS["SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_YANDEX_INVOICE"] = "Parámetros de conexión Yandex.Money";
 $MESS["SALE_PS_MANAGER_GROUP_HEADER_SETTINGS"] = "Parámetros de cabecera del documento";
 $MESS["SALE_PS_MANAGER_GROUP_FOOTER_SETTINGS"] = "Parámetros de pie de página del documento";
+$MESS["SALE_PS_MANAGER_GROUP_GENERAL_SETTINGS"] = "Pago más preferencias del sistema";
 $MESS["SALE_PS_MANAGER_GROUP_VISUAL"] = "Estilos";
 $MESS["SALE_PS_MANAGER_GROUP_COLUMN"] = "Columnas";
 ?>

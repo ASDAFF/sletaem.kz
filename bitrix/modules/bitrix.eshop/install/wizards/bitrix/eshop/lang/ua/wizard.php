@@ -131,4 +131,7 @@ $MESS["WIZ_DELIVERY_UA"] = "Нова пошта";
 $MESS["WIZ_DELIVERY_KZ"] = "Казпочта";
 $MESS["WSL_STEP2_GFILE_UA"] = "Україна";
 $MESS["WSL_STEP2_GFILE_KZ"] = "Казахстан";
+$MESS["WIZ_COMPANY_LOGO_RETINA"] = "Логотип для ретина пристроїв (рекомендований розмір 430 X 100)";
+$MESS["WIZ_COMPANY_LOGO_MOBILE"] = "Логотип для мобільних пристроїв - світлий (рекомендований розмір 225 X 40)";
+$MESS["WIZ_COMPANY_LOGO_MOBILE_RETINA"] = "Логотип для мобільних пристроїв з ретина - світлий (рекомендований розмір 450 X 80)";
 ?>

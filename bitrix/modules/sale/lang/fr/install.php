@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_UPDATER_16036_MIGRATE_NOTIFY"] = "Les réductions du catalogue commercial <a href=\"#LINK#\">peuvent être converties</a> en réductions de l'e-Store.";
 $MESS["SALE_INSTALL_BACK"] = "Revenir à la commande des modules";
 $MESS["SALE_UNINSTALL_WARNING"] = "Attention ! Le module sera supprimé du système.";
 $MESS["SALE_UNINSTALL_SAVEDATA"] = "Vous pouvez stocker des données dans les tables de la base de données, si vous installez le drapeau &quot;Sauvegarder les tables&quot;";
@@ -33,5 +34,4 @@ $MESS["SALE_INSTALL_DESCRIPTION"] = "Fournit la fonctionnalité e-Store de vendr
 $MESS["SALE_INSTALL_PUBLIC"] = "Installation dossier public";
 $MESS["SALE_VARIANT1_DESCR"] = "Recommandé. Son universel.";
 $MESS["SALE_INSTALL_TITLE"] = "e-Store installation du module";
-$MESS["SALE_UPDATER_16036_MIGRATE_NOTIFY"] = "Les réductions du catalogue commercial <a href=\"#LINK#\">peuvent être converties</a> en réductions de l'e-Store.";
 ?>

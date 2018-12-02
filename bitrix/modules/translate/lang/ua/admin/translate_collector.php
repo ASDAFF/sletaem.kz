@@ -31,4 +31,7 @@ $MESS["TR_SELECT_LANGUAGE"] = "Оберіть мову для збирання";
 $MESS["TR_UPLOAD_FILE"] = "Оберіть файл (tar.gz)";
 $MESS["TR_ERROR_ARCHIVE"] = "Помилка архіву";
 $MESS["TR_PACK_FILES"] = "Упакувати файли (tar.gz)";
+$MESS["TR_ERROR_LANGUAGE_ID"] = "Не знайдено обрану мову";
+$MESS["TR_ERROR_LANGUAGE_CHARSET_NON_UTF"] = "Кодування обраної мови відрізняється від utf-8. Вимкніть конвертацію в національне кодування.";
+$MESS["TR_ERROR_TARFILE_EXTENTION"] = "Невірний тип файлу";
 ?>

@@ -1,4 +1,10 @@
 <?
+$MESS["COMP_GROUP_USER_CONSENT"] = "Consentimento do Usuário";
+$MESS["COMP_PROP_USER_CONSENT_USE"] = "Solicitar Consentimento";
+$MESS["COMP_PROP_USER_CONSENT_ID"] = "Consentimento";
+$MESS["COMP_PROP_USER_CONSENT_ID_DEF"] = "(não definido)";
+$MESS["COMP_PROP_USER_CONSENT_IS_CHECKED"] = "A caixa de seleção está marcada por padrão";
+$MESS["COMP_PROP_USER_CONSENT_IS_LOADED"] = "Mostrar o texto de Consentimento automaticamente";
 $MESS["VRT_COMP_CAT_CONTENT"] = "Conteúdo";
 $MESS["VRT_COMP_CAT_SERVICE"] = "Serviços";
 $MESS["VRT_COMP_CAT_COMMUNICATION"] = "Comunicação";
@@ -74,10 +80,4 @@ $MESS["COMP_PROP_COMPOSITE_FRAME_TYPE_STATIC"] = "Estático";
 $MESS["COMP_PROP_COMPOSITE_FRAME_TYPE_DYNAMIC_WITH_STUB"] = "Conteúdo dinâmico com stub";
 $MESS["COMP_PROP_COMPOSITE_FRAME_TYPE_DYNAMIC_WITHOUT_STUB"] = "Conteúdo dinâmico sem stub";
 $MESS["COMP_PROP_COMPOSITE_FRAME_TYPE_DYNAMIC_WITH_STUB_LOADING"] = "Conteúdo dinâmico com carregador";
-$MESS["COMP_GROUP_USER_CONSENT"] = "Consentimento do Usuário";
-$MESS["COMP_PROP_USER_CONSENT_USE"] = "Solicitar Consentimento";
-$MESS["COMP_PROP_USER_CONSENT_ID"] = "Consentimento";
-$MESS["COMP_PROP_USER_CONSENT_ID_DEF"] = "(não definido)";
-$MESS["COMP_PROP_USER_CONSENT_IS_CHECKED"] = "A caixa de seleção está marcada por padrão";
-$MESS["COMP_PROP_USER_CONSENT_IS_LOADED"] = "Mostrar o texto de Consentimento automaticamente";
 ?>

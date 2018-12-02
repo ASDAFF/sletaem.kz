@@ -1,4 +1,8 @@
 <?
+$MESS["SEARCH_OPTIONS_TAB_SEARCH"] = "Recherche";
+$MESS["SEARCH_OPTIONS_FULL_TEXT_ENGINE_MYSQL"] = "Recherche de texte intégral MySql";
+$MESS["SEARCH_OPTIONS_MYSQL_ERROR"] = "Erreur lors de l'activation de la recherche de texte intégral :";
+$MESS["SEARCH_OPTIONS_MYSQL_NOTE"] = "Si vous recevez une erreur 1214 lors de la tentative d'activation de la recherche de texte intégral, vous devez installer la version 5.6.4 ou une version ultérieure de MySQL.";
 $MESS["SEARCH_OPTIONS_FULL_TEXT_ENGINE_BITRIX"] = "Bitrix";
 $MESS["SEARCH_OPTIONS_FULL_TEXT_ENGINE_SPHINX"] = "Sphinx";
 $MESS["SEARCH_OPTIONS_REINSTALL_MODULE"] = "L'activation de cette configuration nécessite la réinstallation du module sans conserver les tableaux suivie par une réindexation complète.";
@@ -19,7 +23,6 @@ $MESS["SEARCH_OPTIONS_TAB_TITLE_STEMMING"] = "Réglage de paramètres de morphol
 $MESS["SEARCH_OPTIONS_TAB_TITLE_SEARCH"] = "Réglages des paramètres de recherche";
 $MESS["SEARCH_OPTIONS_AGENT_STEMMING"] = "Remettre l'exécution de l'analyse morphologique (à un agent):";
 $MESS["SEARCH_OPTIONS_SPHINX_ERROR"] = "Erreur de connexion au serveur Sphinx:";
-$MESS["SEARCH_OPTIONS_TAB_SEARCH"] = "Recherche";
 $MESS["SEARCH_OPTIONS_FULL_TEXT_ENGINE"] = "Utilisez l'ID de groupe sur la variable si l'article élément est manquant:";
 $MESS["SEARCH_OPTIONS_USE_WORD_DISTANCE"] = "Lors du classement des résultats prendre en compte la distance entre les mots:";
 $MESS["SEARCH_OPTIONS_USE_SOCIAL_RATING"] = "Tenir compte de la cote lors du classement des résultats:";
@@ -33,7 +36,4 @@ $MESS["SEARCH_OPTIONS_SITEMAP"] = "Créer Google Sitemap";
 $MESS["SEARCH_OPTIONS_MASK_INC"] = "Inclure les types de fichiers:";
 $MESS["SEARCH_OPTIONS_MASK_EXC"] = "Exclure les fichiers et les dossiers:";
 $MESS["SEARCH_OPTIONS_REINDEX"] = "Re-indice site maintenant";
-$MESS["SEARCH_OPTIONS_FULL_TEXT_ENGINE_MYSQL"] = "Recherche de texte intégral MySql";
-$MESS["SEARCH_OPTIONS_MYSQL_ERROR"] = "Erreur lors de l'activation de la recherche de texte intégral :";
-$MESS["SEARCH_OPTIONS_MYSQL_NOTE"] = "Si vous recevez une erreur 1214 lors de la tentative d'activation de la recherche de texte intégral, vous devez installer la version 5.6.4 ou une version ultérieure de MySQL.";
 ?>

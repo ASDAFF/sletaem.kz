@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_CASHBOX_TITLE"] = "Каси";
 $MESS["SALE_ORDERS"] = "Замовлення";
 $MESS["SALE_ORDERS_DESCR"] = "Список замовлень";
 $MESS["SALE_DELIVERY"] = "Служби доставки";
@@ -198,4 +199,7 @@ $MESS["SALE_PAY_SYS_RETURN_DESCR"] = "Налаштування повернен�
 $MESS["SALE_MENU_MARKETPLACE_READY_SHOPS"] = "Встановити готовий магазин з Маркетплейс";
 $MESS["SALE_MENU_MARKETING_MARKETPLACE_ADD"] = "Встановити з Маркетплейс";
 $MESS["SALE_MENU_TRADING_PLATFORMS_MARKETPLACE_ADD"] = "Встановити з Маркетплейс";
+$MESS["SALE_MENU_DELIVERY_REQUESTS"] = "Транспортні заявки";
+$MESS["MAIN_MENU_1C_INTEGRATION_LOG"] = "Журнал обміну";
+$MESS["MAIN_MENU_1C_INTEGRATION_LOG_TITLE"] = "Журнал документів, що беруть участь в обміні";
 ?>

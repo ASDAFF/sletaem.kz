@@ -146,6 +146,12 @@ abstract class CAllMain
 	public function GetCurPageParam($strParam="", $arParamKill=array(), $get_index_page=null)
 	{
 		$sUrlPath = $this->GetCurPage($get_index_page);
+
+		if (Bitrix\Main\Grid\Context::isInternalRequest())
+		{
+			$arParamKill = array_merge($arParamKill, array("internal", "grid_id", "grid_action", "bxajaxid", "sessid"));
+		}
+
 		$strNavQueryString = DeleteParam($arParamKill);
 		if($strNavQueryString <> "" && $strParam <> "")
 			$strNavQueryString = "&".$strNavQueryString;
@@ -842,7 +848,7 @@ abstract class CAllMain
 		$this->ShowMeta("robots", false, $bXhtmlStyle);
 		$this->ShowMeta("keywords", false, $bXhtmlStyle);
 		$this->ShowMeta("description", false, $bXhtmlStyle);
-		$this->ShowLink("canonical", null, $bXhtmlStyle);
+		//$this->ShowLink("canonical", null, $bXhtmlStyle);
 		$this->ShowCSS(true, $bXhtmlStyle);
 		$this->ShowHeadStrings();
 		$this->ShowHeadScripts();
@@ -3481,9 +3487,11 @@ abstract class CAllMain
 		}
 	}
 
-	public static function FinalActions()
+	public static function FinalActions($response = "")
 	{
 		global $DB;
+
+		\Bitrix\Main\Context::getCurrent()->getResponse()->flush($response);
 
 		self::EpilogActions();
 

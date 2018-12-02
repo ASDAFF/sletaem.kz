@@ -1,4 +1,5 @@
 <?
+$MESS["MAIN_KANBAN_ERROR_CLOSE"] = "Закрити";
 $MESS["MAIN_KANBAN_NO_DATA"] = "Поки даних на цій сторінці немає";
 $MESS["MAIN_KANBAN_REMOVE_COLUMN_CONFIRM_TITLE"] = "Підтвердження видалення";
 $MESS["MAIN_KANBAN_REMOVE_COLUMN_CONFIRM_DESC"] = "Ви дійсно хочете видалити колонку?";

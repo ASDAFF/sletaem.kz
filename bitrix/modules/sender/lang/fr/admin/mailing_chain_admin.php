@@ -1,4 +1,7 @@
 <?
+$MESS["sender_mailing_chain_adm_field_title"] = "Nom";
+$MESS["sender_mailing_chain_adm_action_copy"] = "Copier";
+$MESS["sender_mailing_chain_adm_action_stats"] = "Statistiques";
 $MESS["sender_mailing_chain_adm_action_edit"] = "Modifier";
 $MESS["sender_mailing_chain_adm_test_send_success"] = "Message envoyé avec succès: ";
 $MESS["sender_mailing_chain_adm_test_send_empty"] = "Message n'a pas pu être envoyé aux destinataires.";
@@ -42,7 +45,4 @@ $MESS["MAILING_ADM_SENDING_STOP"] = "L'envoi de la lettre d'information par e-ma
 $MESS["sender_mailing_chain_adm_action_pause"] = "Pause";
 $MESS["sender_mailing_chain_adm_action_stop"] = "Arrêter";
 $MESS["sender_mailing_chain_adm_action_stat"] = "envoyée";
-$MESS["sender_mailing_chain_adm_field_title"] = "Nom";
-$MESS["sender_mailing_chain_adm_action_copy"] = "Copier";
-$MESS["sender_mailing_chain_adm_action_stats"] = "Statistiques";
 ?>

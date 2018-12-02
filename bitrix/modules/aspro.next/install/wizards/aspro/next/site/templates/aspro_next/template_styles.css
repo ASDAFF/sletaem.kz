@@ -2115,7 +2115,8 @@ body .flexslider li, body .flex-direction-nav li{padding:0px;}
 
 /*Start page teasers block*/
 .tizers_block *{line-height:18px;}
-.tizers_block{font-size:0px;margin:0px 0px 30px;text-align:center;padding:0px 0px 9px;border-bottom:1px solid #f2f2f2;}
+.tizers_block{font-size:0px;margin:30px 0px 30px;text-align:center;padding:0px 0px 9px;border-bottom:1px solid #f2f2f2;}
+.landing_detail .tizers_block{margin-top:0;}
 .front.wide_page .tizers_block{margin-bottom:0px;border-bottom:none;padding-bottom: 0px;}
 .tizers_block .row > div{display:inline-block;vertical-align:middle;float:none;}
 .tizers_block .item{color:#000000;margin:0px 0px 34px;white-space:nowrap;}
@@ -5950,7 +5951,7 @@ position:absolute;top:-4px;left:0px;border-radius:100%;}
 #basket-root .basket-item-block-price .basket-item-price-old, #basket-root .basket-checkout-block-total-price-inner .basket-coupon-block-total-price-old{position:static;-webkit-box-ordinal-group:2;-ms-flex-order:2;order:2;text-align: left;}
 #basket-root .basket-item-block-price .basket-item-price-old > span, #basket-root .basket-checkout-block-total-price-inner .basket-coupon-block-total-price-old{font-size:13px;color:#777;text-decoration:line-through;}
 #basket-root .basket-item-block-price .basket-item-price-old-text:after, #basket-root .basket-checkout-block-total-price-inner .basket-coupon-block-total-price-old:after{display:none;}
-#basket-root .basket-item-block-price .basket-item-price-title, 
+#basket-root .basket-item-block-price .basket-item-price-title,
 #basket-root .basket-item-block-price .basket-item-price-difference, #basket-root .basket-checkout-block-total-price-inner .basket-coupon-block-total-price-difference{-webkit-box-ordinal-group:3;-ms-flex-order:3;order:3;}
 #basket-root .basket-item-block-price .basket-item-price-title{text-align:left;padding-top: 7px;}
 

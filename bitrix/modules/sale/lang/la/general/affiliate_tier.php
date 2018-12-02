@@ -1,3 +1,3 @@
 <?
-$MESS ['SCGAT1_NO_SITE'] = "El sitio no se especifica";
+$MESS["SCGAT1_NO_SITE"] = "El sitio no se especifica";
 ?>

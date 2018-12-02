@@ -347,8 +347,6 @@ class Client
 
 		$tag[] = $placement;
 
-		$tag = ['test'];
-
 		return $tag;
 	}
 

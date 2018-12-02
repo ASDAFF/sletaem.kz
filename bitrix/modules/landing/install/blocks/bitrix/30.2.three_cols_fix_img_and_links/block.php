@@ -1,6 +1,6 @@
 <section class="landing-block">
 
-        <div id="blog-section" class="container g-pt-30 g-pb-20">
+        <div class="container g-pt-30 g-pb-20">
             <div class="row">
 
                 <div class="landing-block-card js-animation fadeIn col-sm-6 col-md-4 g-mb-20">

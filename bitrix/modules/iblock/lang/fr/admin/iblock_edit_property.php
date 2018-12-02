@@ -1,4 +1,5 @@
 <?
+$MESS["BT_ADM_IEP_ERR_CODE_ALREADY_EXIST"] = "Un propriété de ce bloc d'information possède déjà le code symbolique #CODE#";
 $MESS["BT_ADM_IEP_PROP_FILE_TYPES_ANY"] = "(n'importe lesquel(el)s)";
 $MESS["BT_ADM_IEP_PROP_LIST_DEFAULT_NO"] = "(pas de valeur par défaut)";
 $MESS["BT_ADM_IEP_PROP_LIST_ID"] = "ID";
@@ -68,5 +69,4 @@ $MESS["IBLOCK_PROP_E"] = "Rattachement aux éléments";
 $MESS["BT_ADM_IEP_PROP_DISPLAY_TYPE"] = "Vue de filtre intelligent";
 $MESS["BT_ADM_IEP_PROP_DISPLAY_EXPANDED"] = "Afficher élargi";
 $MESS["BT_ADM_IEP_PROP_FILTER_HINT"] = "Montrer indice dans le filtre intelligent";
-$MESS["BT_ADM_IEP_ERR_CODE_ALREADY_EXIST"] = "Un propriété de ce bloc d'information possède déjà le code symbolique #CODE#";
 ?>

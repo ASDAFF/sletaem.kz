@@ -1,4 +1,7 @@
 <?
+$MESS["F_NO_UID"] = "El ID del usuario no está especificado";
+$MESS["F_NO_DUSER"] = "Usuario ##UID# no fue encontrado";
+$MESS["F_OK_MESSAGE_SEND"] = "Mensaje fue enviado exitosamente";
 $MESS["F_EDIT_THIS_PROFILE"] = "Modificar perfil de este usuario";
 $MESS["F_EDIT_YOUR_PROFILE"] = "Modificar su perfil";
 $MESS["F_ALREADY_VOTED1"] = "Usted ya le dio #POINTS# votar #END#  a esta persona";
@@ -13,9 +16,6 @@ $MESS["F_TO_CHANGE2"] = "este";
 $MESS["F_TO_CHANGE3"] = "su";
 $MESS["F_TO_CHANGE4"] = "oprima perfil";
 $MESS["F_NO_MODULE"] = "Módulo del foro no está instalado";
-$MESS["F_NO_UID"] = "El ID del usuario no está especificado";
-$MESS["F_NO_DUSER"] = "Usuario ##UID# no fue encontrado";
-$MESS["F_OK_MESSAGE_SEND"] = "Mensaje fue enviado exitosamente";
 $MESS["F_ENDING_OV"] = "s";
 $MESS["F_ENDING_A"] = "s";
 ?>

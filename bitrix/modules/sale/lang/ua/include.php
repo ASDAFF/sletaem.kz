@@ -57,4 +57,5 @@ $MESS["SI_MARKED"] = "Проблема з замовленням";
 $MESS["SI_MARKED_ORD"] = "Проблема з замовленням";
 $MESS["SALE_TYPE_FILE"] = "Файл";
 $MESS["SALE_PAYSYSTEM_CONVERT_ERROR"] = "Увага, щось пішло не так: платіжні системи не перейшли на нову версію. Для конвертації натисніть <a href='/bitrix/admin/sale_pay_system_convert.php?lang=#LANG#'>сюди</a>";
+$MESS["SI_AFFILIATE"] = "Афіліат";
 ?>

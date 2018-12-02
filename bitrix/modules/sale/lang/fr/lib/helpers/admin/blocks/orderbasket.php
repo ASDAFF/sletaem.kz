@@ -1,4 +1,7 @@
 <?
+$MESS["SALE_ORDER_BASKET_ADD_COUPON_ERROR"] = "Erreur lors de l'ajout du coupon";
+$MESS["SALE_ORDER_BASKET_NO_NAME"] = "Sans titre";
+$MESS["SALE_ORDER_DEPRECATED_DISCOUNT_VALUE"] = "Réduction totale de la commande";
 $MESS["SALE_ORDER_BASKET_COMPOSITION"] = "Contenus de la commande";
 $MESS["SALE_ORDER_BASKET_PRODUCT_ADD"] = "Ajouter produit";
 $MESS["SALE_ORDER_BASKET_PRODUCT_NEW"] = "Nouveau produit";
@@ -74,7 +77,4 @@ $MESS["SALE_ORDER_BASKET_COUPON_DELETE"] = "Supprimer coupon";
 $MESS["SALE_ORDER_BASKET_POSITION_EXISTS"] = "Le produit \"#NAME#\" est déjà dans la commande. Cliquez sur OK pour augmenter la quantité.";
 $MESS["SALE_ORDER_BASKET_ACTUALIZE_DATA"] = "Recalculer";
 $MESS["SALE_ORDER_BASKET_COUPONS_NOTE"] = "Les coupons de réduction pour les marchandises liées aux types de prix ne peuvent être utilisés.";
-$MESS["SALE_ORDER_BASKET_ADD_COUPON_ERROR"] = "Erreur lors de l'ajout du coupon";
-$MESS["SALE_ORDER_BASKET_NO_NAME"] = "Sans titre";
-$MESS["SALE_ORDER_DEPRECATED_DISCOUNT_VALUE"] = "Réduction totale de la commande";
 ?>

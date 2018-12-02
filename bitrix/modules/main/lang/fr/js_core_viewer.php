@@ -1,4 +1,14 @@
 <?
+$MESS["JS_CORE_VIEWER_OPEN_PDF_PREVIEW"] = "Voir le fichier PDF";
+$MESS["JS_CORE_VIEWER_AJAX_ACCESS_DENIED"] = "Autorisation insuffisante pour afficher le fichier. Veuillez actualiser la page.";
+$MESS["JS_CORE_VIEWER_AJAX_CONNECTION_FAILED"] = "Erreur lors de l'ouverture du fichier. Veuillez réessayer plus tard.";
+$MESS["JS_CORE_VIEWER_AJAX_OPEN_NEW_TAB"] = "Ouvrir dans une nouvelle fenêtre";
+$MESS["JS_CORE_VIEWER_AJAX_PRINT"] = "Imprimer";
+$MESS["JS_CORE_VIEWER_TRANSFORMATION_IN_PROCESS"] = "Le document a été enregistré et est maintenant en cours préparation pour l'affichage.";
+$MESS["JS_CORE_VIEWER_IFRAME_ERROR_TITLE"] = "Impossible d’ouvrir le document";
+$MESS["JS_CORE_VIEWER_DOWNLOAD_B24_DESKTOP_FULL"] = "Télécharger l’Application";
+$MESS["JS_CORE_VIEWER_DOWNLOAD_DOCUMENT"] = "Télécharger le Document";
+$MESS["JS_CORE_VIEWER_IFRAME_ERROR_COULD_NOT_VIEW"] = "Impossible de visualiser le document.";
 $MESS["JS_CORE_VIEWER_DOWNLOAD"] = "Télécharger";
 $MESS["JS_CORE_VIEWER_EDIT"] = "Editer";
 $MESS["JS_CORE_VIEWER_DESCR_AUTHOR"] = "Auteur";
@@ -55,14 +65,4 @@ $MESS["JS_CORE_VIEWER_SHOW_FILE_DIALOG_OAUTH_NOTICE"] = "Veuillez vous connecter
 $MESS["JS_CORE_VIEWER_SERVICE_OFFICE365"] = "Office 365";
 $MESS["JS_CORE_VIEWER_DOCUMENT_IS_LOCKED_BY"] = "Ce document est fermé à l'édition";
 $MESS["JS_CORE_VIEWER_SERVICE_MYOFFICE"] = "MyOffice";
-$MESS["JS_CORE_VIEWER_OPEN_PDF_PREVIEW"] = "Voir le fichier PDF";
-$MESS["JS_CORE_VIEWER_AJAX_ACCESS_DENIED"] = "Autorisation insuffisante pour afficher le fichier. Veuillez actualiser la page.";
-$MESS["JS_CORE_VIEWER_AJAX_CONNECTION_FAILED"] = "Erreur lors de l'ouverture du fichier. Veuillez réessayer plus tard.";
-$MESS["JS_CORE_VIEWER_AJAX_OPEN_NEW_TAB"] = "Ouvrir dans une nouvelle fenêtre";
-$MESS["JS_CORE_VIEWER_AJAX_PRINT"] = "Imprimer";
-$MESS["JS_CORE_VIEWER_TRANSFORMATION_IN_PROCESS"] = "Le document a été enregistré et est maintenant en cours préparation pour l'affichage.";
-$MESS["JS_CORE_VIEWER_IFRAME_ERROR_TITLE"] = "Impossible d’ouvrir le document";
-$MESS["JS_CORE_VIEWER_DOWNLOAD_B24_DESKTOP_FULL"] = "Télécharger l’Application";
-$MESS["JS_CORE_VIEWER_DOWNLOAD_DOCUMENT"] = "Télécharger le Document";
-$MESS["JS_CORE_VIEWER_IFRAME_ERROR_COULD_NOT_VIEW"] = "Impossible de visualiser le document.";
 ?>

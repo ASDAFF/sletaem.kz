@@ -1,4 +1,7 @@
 <?
+$MESS["IBLOCK_FIELD_HINT_XML_ID"] = "Requis pour les éléments existants ; peut être laissé vide lors de la création d'un nouvel élément. Dans ce cas, l'ID externe sera réglé sur l'ID de l'élément.";
+$MESS["IBLOCK_FIELD_CREATED"] = "Date de création";
+$MESS["IBLOCK_FIELD_LAST_UPDATED"] = "Date de modification";
 $MESS["IBEL_E_TAB14"] = "SEO";
 $MESS["IBEL_E_TAB_PREV"] = "Affichage";
 $MESS["IBEL_E_TAB_BIZPROC"] = "De processus business";
@@ -100,7 +103,4 @@ $MESS["IBLOCK_FIELD_CODE"] = "Code mnémonique";
 $MESS["IBEL_E_MAIN_IBLOCK_SECTION_ID"] = "Section principale";
 $MESS["IBLOCK_EL_EDIT_IN_PANEL"] = "Panneau de configuration";
 $MESS["IBLOCK_LINKED_ELEMENT_TITLE"] = "Ouvrir le panneau de configuration";
-$MESS["IBLOCK_FIELD_HINT_XML_ID"] = "Requis pour les éléments existants ; peut être laissé vide lors de la création d'un nouvel élément. Dans ce cas, l'ID externe sera réglé sur l'ID de l'élément.";
-$MESS["IBLOCK_FIELD_CREATED"] = "Date de création";
-$MESS["IBLOCK_FIELD_LAST_UPDATED"] = "Date de modification";
 ?>

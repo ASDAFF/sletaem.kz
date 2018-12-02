@@ -40,14 +40,14 @@ $MESS["SCE_SAVE"] = "Guardar";
 $MESS["SCE_ADD"] = "Agregar";
 $MESS["SCE_APPLY"] = "Aplicar";
 $MESS["SCE_CANCEL"] = "Cancelar";
+$MESS["SCE_NO_VALID_PASSWORD"] = "Ingrese la contraseña que será usada para encriptar los números de su tarjeta de crédito en la página global de configuraciones.";
 $MESS["SCEN_2FLIST"] = "Lista de tarjetas de crédito";
 $MESS["SCEN_2FLIST_TITLE"] = "Ver Lista de trajetas";
 $MESS["SCEN_NEW_CCARD"] = "Agregar una nueva tarjeta de crédito";
 $MESS["SCEN_NEW_CCARD_TITLE"] = "Agregar una nueva tarjeta";
 $MESS["SCEN_DELETE_CCARD"] = "Eliminar tarjeta de crédito";
+$MESS["SCEN_DELETE_CCARD_CONFIRM"] = "¿Está seguro que desea elimnar esta tarjeta de crédito?";
 $MESS["SCEN_TAB_CCARD"] = "Tarjeta de crédito";
 $MESS["SCEN_TAB_CCARD_DESCR"] = "Parámetros de tarjeta de crédito";
 $MESS["SCE_ATTENTION"] = "Atención!";
-$MESS["SCE_NO_VALID_PASSWORD"] = "Ingrese la contraseña que será usada para encriptar los números de su tarjeta de crédito en la página global de configuraciones.";
-$MESS["SCEN_DELETE_CCARD_CONFIRM"] = "¿Está seguro que desea elimnar esta tarjeta de crédito?";
 ?>

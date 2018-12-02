@@ -7,6 +7,7 @@ $MESS["WSL_STEP2_GFILE_USSR"] = "Rusia y CIS (pueblos y ciudades)";
 $MESS["WSL_STEP2_GFILE_USA"] = "USA (ciudades)";
 $MESS["WSL_STEP2_GFILE_CNTR"] = "Mundo (ciudades)";
 $MESS["WSL_STEP2_GFILE_NONE"] = "ninguno";
+$MESS["WSL_STEP2_GFILE_FILE"] = "subir el archivo";
 $MESS["WSL_STEP2_GFILE_ZIP"] = "Base del código ZIP";
 $MESS["WSL_STEP2_GFILE_ERROR"] = "La fuente del archivo no está especificada";
 $MESS["WSL_STEP2_GSYNC_TITLE"] = "Sincronización:";
@@ -28,6 +29,5 @@ $MESS["WSL_FINALSTEP_CONTENT"] = "Felicidades! La ubicación del importador del 
 $MESS["WSL_CANCELSTEP_TITLE"] = "El asistente ha sido interrumpido";
 $MESS["WSL_CANCELSTEP_BUTTONTITLE"] = "Cerrar";
 $MESS["WSL_CANCELSTEP_CONTENT"] = "El asistente ha sido interrumpido. Ninguna data ha sido importada.";
-$MESS["WSL_STEP2_GFILE_FILE"] = "subir el archivo";
 $MESS["NO_LOC_FILE"] = "La ubicación del archivo no se ha subido";
 ?>

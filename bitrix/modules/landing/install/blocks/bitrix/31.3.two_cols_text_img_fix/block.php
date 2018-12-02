@@ -30,7 +30,7 @@
 
 			<div class="col-md-6">
 				<img class="landing-block-node-img js-animation slideInRight img-fluid"
-					 src="https://cdn.bitrix24.site/bitrix/images/landing/business/540x356/img1.jpg" alt="Image description">
+					 src="https://cdn.bitrix24.site/bitrix/images/landing/business/540x356/img1.jpg">
 			</div>
 		</div>
 	</div>

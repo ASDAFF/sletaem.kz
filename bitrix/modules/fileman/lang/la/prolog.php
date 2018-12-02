@@ -1,3 +1,3 @@
 <?
-$MESS ['FILEMAN_ICON_ALT'] = "Explorador del sitio";
+$MESS["FILEMAN_ICON_ALT"] = "Explorador del sitio";
 ?>

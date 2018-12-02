@@ -1,4 +1,11 @@
 <?
+$MESS["USER_STATUS_ONLINE"] = "En ligne";
+$MESS["USER_STATUS_OFFLINE"] = "Hors ligne";
+$MESS["USER_LAST_SEEN_TOMORROW"] = "demain à #TIME#";
+$MESS["USER_LAST_SEEN_NOW"] = "à l'instant";
+$MESS["USER_LAST_SEEN_TODAY"] = "aujourd'hui à #TIME#";
+$MESS["USER_LAST_SEEN_YESTERDAY"] = "hier à #TIME#";
+$MESS["USER_LAST_SEEN_MORE_YEAR"] = "il y a plus d’un an";
 $MESS["STATUS_ACTIVE"] = "actif";
 $MESS["STATUS_BLOCKED"] = "bloqué";
 $MESS["LOGIN_BLOCK"] = "Votre connexion est bloqué";
@@ -60,11 +67,4 @@ $MESS["MAIN_SEND_PASS_CONFIRM"] = "Vous n'êtes pas encore confirmé votre inscr
 $MESS["USER_LOGIN_OTP_ERROR"] = "Un temps passe sont desactivees.";
 $MESS["USER_LOGIN_OTP_INCORRECT"] = "Un mot de passe-temps est incorrect.";
 $MESS["main_user_captcha_error"] = "Code CAPTCHA incorrect.";
-$MESS["USER_STATUS_ONLINE"] = "En ligne";
-$MESS["USER_STATUS_OFFLINE"] = "Hors ligne";
-$MESS["USER_LAST_SEEN_TOMORROW"] = "demain à #TIME#";
-$MESS["USER_LAST_SEEN_NOW"] = "à l'instant";
-$MESS["USER_LAST_SEEN_TODAY"] = "aujourd'hui à #TIME#";
-$MESS["USER_LAST_SEEN_YESTERDAY"] = "hier à #TIME#";
-$MESS["USER_LAST_SEEN_MORE_YEAR"] = "il y a plus d’un an";
 ?>

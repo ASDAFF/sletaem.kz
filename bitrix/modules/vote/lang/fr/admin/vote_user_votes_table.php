@@ -1,4 +1,8 @@
 <?
+$MESS["VOTE_VISITOR"] = "Visiteur";
+$MESS["VOTE_BACK_TO_VOTE"] = "Retour au sondage";
+$MESS["VOTE_NONAUTHORIZED"] = "Non connecté";
+$MESS["VOTE_VIEW_RESULTS"] = "Résultats";
 $MESS["VOTE_FL_USER_ID"] = "Identifiant du visiteur";
 $MESS["VOTE_F_USER"] = "ID du visiteur:";
 $MESS["VOTE_FL_SESS_ID"] = "ID de la session";
@@ -24,7 +28,7 @@ $MESS["VOTE_NOT_FOUND"] = "La consultation n'a pas été trouvée.";
 $MESS["MAIN_ADMIN_LIST_CHECKED"] = "Coché:";
 $MESS["SAVE_ERROR"] = "Erreur de sauvegarde.";
 $MESS["VOTE_SAVE_ERROR"] = "Sauver utilisateur erreur";
-$MESS["DELETE_ERROR"] = "Chec de suppression.";
+$MESS["DELETE_ERROR"] = "Échec de suppression.";
 $MESS["VOTE_USER_LIST_TITLE"] = "Afficher la liste des visiteurs";
 $MESS["VOTE_SESSIONU_LIST_TITLE"] = "Afficher la liste des sessions";
 $MESS["VOTE_USER"] = "visiteur";
@@ -35,8 +39,4 @@ $MESS["VOTE_SESSION"] = "Session";
 $MESS["VOTE_LIST"] = "Enquêtes";
 $MESS["VOTE_DELETE"] = "supprimer";
 $MESS["VOTE_DELETE_U"] = "Supprimer";
-$MESS["VOTE_VISITOR"] = "Visiteur";
-$MESS["VOTE_BACK_TO_VOTE"] = "Retour au sondage";
-$MESS["VOTE_NONAUTHORIZED"] = "Non connecté";
-$MESS["VOTE_VIEW_RESULTS"] = "Résultats";
 ?>

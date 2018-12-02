@@ -53,4 +53,13 @@ $MESS["SALE_ORDER_SHIPMENT_TRACKING_S_EMPTY"] = "Необхідно вказат
 $MESS["SALE_ORDER_SHIPMENT_BLOCK_DELIVERY_ADDITIONAL"] = "Додаткова інформація служби доставки";
 $MESS["SALE_ORDER_SHIPMENT_TRACKING_URL"] = "Докладніше про статус відправлення";
 $MESS["SALE_ORDER_SHIPMENT_HIDDEN"] = "[Приховано]";
+$MESS["SALE_ORDER_SHIPMENT_DEL_REQ_INFO"] = "Інформація по транспортній заявці";
+$MESS["SALE_ORDER_SHIPMENT_DEL_REQ"] = "Заявка";
+$MESS["SALE_ORDER_SHIPMENT_DEL_REQ_NAME"] = "Транспортна заявка \"#REQUEST_ID#\" від \"#REQUEST_DATE#\"";
+$MESS["SALE_ORDER_SHIPMENT_DEL_REQ_ERROR"] = "Помилки додавання в транспортну заявку";
+$MESS["SALE_ORDER_SHIPMENT_CHECK_LINK_TITLE"] = "Список чеків";
+$MESS["SALE_ORDER_SHIPMENT_CHECK_ADD"] = "Додати чек";
+$MESS["SALE_ORDER_SHIPMENT_CHECK_ADD_WINDOW_TITLE"] = "Додавання нового чека";
+$MESS["SALE_ORDER_SHIPMENT_CHECK_LINK"] = "Чек №#CHECK_ID#";
+$MESS["SALE_ORDER_SHIPMENT_CHECK_CHECK_STATUS"] = "оновити";
 ?>

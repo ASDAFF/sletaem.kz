@@ -1675,6 +1675,30 @@ a.adm-nav-page:hover,
 	position:relative;
 }
 
+.adm-list-table-cell-cnt-wrap{
+	display: block;
+	width: 100%;
+	position: relative;
+	max-height: 32px;
+	overflow: hidden;
+}
+
+.adm-list-table-cell-cnt-wrap:hover{
+	overflow: visible;
+	z-index: 10;
+}
+
+.adm-list-table-cell-cnt-wrap-inner{
+	position: relative;
+}
+
+.adm-list-table-cell-cnt-wrap:hover .adm-list-table-cell-cnt-wrap-inner{
+	background-color: #e0e9ec;
+	margin-left: -16px;
+	padding: 0 0 10px 16px;
+	box-shadow:  0 3px 2px 0 rgba(0,0,0,0.18);
+}
+
 .adm-list-table-cell-sort, .adm-list-table-cell-sort-down, .adm-list-table-cell-sort-up {cursor:pointer;}
 
 .adm-list-table-header .adm-list-table-cell-sort-up,

@@ -1,4 +1,6 @@
 <?
+$MESS["SENDER_PRESET_TEMPLATE_DEFAULT_PHONE"] = "1 800 000-00-00";
+$MESS["SENDER_PRESET_TEMPLATE_DEFAULT_COMPANY"] = "*Nombre de la compañía*";
 $MESS["SENDER_PRESET_TEMPLATE_HOT_INC_PROFITS_DESC"] = "Aumenta el monto promedio de LTV y el número de negociaciones.";
 $MESS["SENDER_PRESET_MAIL_HOT_INC_PROFITS_SUBJECT"] = "¡Lo echamos de menos y tenemos un regalo de bienvenida esperándolo!";
 $MESS["SENDER_PRESET_MAIL_HOT_INC_PROFITS_TEXT_HEAD"] = "Estimado #NAME#!";
@@ -151,8 +153,6 @@ $MESS["SENDER_PRESET_MAIL_INVITE2EVENT_TEXT_HEAD"] = "Hola, #NAME#!";
 $MESS["SENDER_PRESET_MAIL_INVITE2EVENT_TEXT_BODY"] = "Nos complace anunciar que *la fecha* celebraremos un evento importante: *nombre del evento*. Disfrutarás de un buffet, un concurso con premios y otras diversiones. Entrada gratis. Lo estaremos esperando en *dirección*. Sinceramente tuyo, ...";
 $MESS["SENDER_PRESET_SMS_INVITE2EVENT_TEXT"] = "%COMPANY%'s evento en * fecha *! Detalles: *sitio web*";
 $MESS["SENDER_PRESET_IM_INVITE2EVENT_TEXT"] = "¡Queridos amigos! Celebraremos *el cumpleaños de la compañía / abriendo una nueva tienda / etc * el *día *en* dirección*. ¡Todos están invitados! Espere concursos, premios, buffet, clases magistrales gratuitas, etc. Atentamente, ...";
-$MESS["SENDER_PRESET_TEMPLATE_DEFAULT_PHONE"] = "1 800 000-00-00";
-$MESS["SENDER_PRESET_TEMPLATE_DEFAULT_COMPANY"] = "*Nombre de la compañía*";
 $MESS["SENDER_PRESET_TEMPLATE_HOT_INC_PROFITS_NAME"] = "Aumente el ROI de su base de clientes";
 $MESS["SENDER_PRESET_TEMPLATE_WAKEUP_NAME"] = "Empujar a un cliente inactivo";
 $MESS["SENDER_PRESET_TEMPLATE_WAKEUP_DESC"] = "¿Encontraste un cliente que obviamente se ha olvidado de ti? Envíeles algo especial para recordarle a su compañía.";

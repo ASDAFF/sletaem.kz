@@ -1,4 +1,5 @@
 <?
+$MESS["SSAN_COLOR"] = "Couleur du statut";
 $MESS["SALE_ACTIONS"] = "Actions";
 $MESS["SALE_ADD_STATUS"] = "Ajouter";
 $MESS["SALE_EDIT"] = "Date de modification";
@@ -33,5 +34,4 @@ $MESS["SSAN_NOTIFY_N"] = "Non";
 $MESS["SSAN_TYPE"] = "Type de statut";
 $MESS["SSEN_TYPE_O"] = "Commander";
 $MESS["SSEN_TYPE_D"] = "Livraison";
-$MESS["SSAN_COLOR"] = "Couleur du statut";
 ?>

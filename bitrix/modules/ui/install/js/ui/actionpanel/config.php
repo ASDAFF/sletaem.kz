@@ -9,5 +9,7 @@ return array(
 	"js" => array(
 		"/bitrix/js/ui/actionpanel/panel.js",
 		"/bitrix/js/ui/actionpanel/item.js"
-	)
+	),
+	"bundle_js" => "ui_actionpanel",
+	"bundle_css" => "ui_actionpanel"
 );

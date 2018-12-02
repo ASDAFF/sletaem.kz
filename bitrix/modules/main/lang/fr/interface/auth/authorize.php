@@ -1,4 +1,6 @@
 <?
+$MESS["AUTH_CHANGE_FORM"] = "formulaire de changement de mot de passe";
+$MESS["AUTH_MESS_1"] = "Quand vous recevez la chaîne de vérification, veuillez vous rendre à ";
 $MESS["AUTH_GO_AUTH_FORM"] = "Formulaire pour demande de mot de passe";
 $MESS["AUTH_AUTHORIZE"] = "S'identifier";
 $MESS["AUTH_CAPTCHA_PROMT"] = "Veuillez saisir un mot sur l'image";
@@ -10,6 +12,4 @@ $MESS["admin_authorize_error"] = "Erreur d'autorisation";
 $MESS["AUTH_PASSWORD"] = "Mot de passe";
 $MESS["AUTH_PLEASE_AUTH"] = "Merci de vous identifier";
 $MESS["AUTH_GO"] = "Aller à";
-$MESS["AUTH_CHANGE_FORM"] = "formulaire de changement de mot de passe";
-$MESS["AUTH_MESS_1"] = "Quand vous recevez la chaîne de vérification, veuillez vous rendre à ";
 ?>

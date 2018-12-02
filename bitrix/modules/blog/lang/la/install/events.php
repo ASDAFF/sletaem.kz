@@ -31,10 +31,6 @@ url del Mensaje:
 
 Mensaje generado automáticamente.";
 $MESS["NEW_BLOG_COMMENT_NAME"] = "Nuevo comentario en el blog";
-$MESS["NEW_BLOG_COMMENT_SUBJECT"] = "#SITE_NAME#: [B] #MESSAGE_TITLE# : #COMMENT_TITLE#";
-$MESS["NEW_BLOG_COMMENT2COMMENT_SUBJECT"] = "#SITE_NAME#: [B] #MESSAGE_TITLE# : #COMMENT_TITLE#";
-$MESS["NEW_BLOG_COMMENT_WITHOUT_TITLE_SUBJECT"] = "#SITE_NAME#: [B] #MESSAGE_TITLE#";
-$MESS["NEW_BLOG_COMMENT2COMMENT_WITHOUT_TITLE_SUBJECT"] = "#SITE_NAME#: [B] #MESSAGE_TITLE#";
 $MESS["NEW_BLOG_COMMENT_DESC"] = "#BLOG_ID# - ID del Blog
 #BLOG_NAME# - Título del Blog
 #BLOG_URL# - url del Blog
@@ -46,6 +42,7 @@ $MESS["NEW_BLOG_COMMENT_DESC"] = "#BLOG_ID# - ID del Blog
 #AUTHOR# - Autor del comentario
 #EMAIL_FROM# - email del remitente
 #EMAIL_TO# - Email del receptor";
+$MESS["NEW_BLOG_COMMENT_SUBJECT"] = "#SITE_NAME#: [B] #MESSAGE_TITLE# : #COMMENT_TITLE#";
 $MESS["NEW_BLOG_COMMENT_MESSAGE"] = "Mensaje informativo desde el sitio #SITE_NAME#
 ------------------------------------------
 
@@ -76,6 +73,7 @@ $MESS["NEW_BLOG_COMMENT2COMMENT_DESC"] = "#BLOG_ID# - ID del Blog
 #AUTHOR# - Autor del comentario
 #EMAIL_FROM# - email del remitente
 #EMAIL_TO# - Email del receptor";
+$MESS["NEW_BLOG_COMMENT2COMMENT_SUBJECT"] = "#SITE_NAME#: [B] #MESSAGE_TITLE# : #COMMENT_TITLE#";
 $MESS["NEW_BLOG_COMMENT2COMMENT_MESSAGE"] = "Mensaje informativo desde el sitio #SITE_NAME#
 ------------------------------------------
 
@@ -106,6 +104,7 @@ $MESS["NEW_BLOG_COMMENT_WITHOUT_TITLE_DESC"] = "#BLOG_ID# - ID del Blog
 #AUTHOR# - Autor del comentario
 #EMAIL_FROM# - email del remitente
 #EMAIL_TO# - Email del receptor";
+$MESS["NEW_BLOG_COMMENT_WITHOUT_TITLE_SUBJECT"] = "#SITE_NAME#: [B] #MESSAGE_TITLE#";
 $MESS["NEW_BLOG_COMMENT_WITHOUT_TITLE_MESSAGE"] = "Mensaje informativo desde el sitio #SITE_NAME#
 ------------------------------------------
 
@@ -136,6 +135,7 @@ $MESS["NEW_BLOG_COMMENT2COMMENT_WITHOUT_TITLE_DESC"] = "#BLOG_ID# - ID del Blog
 #AUTHOR# - Autor del comentario
 #EMAIL_FROM# - email del remitente
 #EMAIL_TO# - Email del receptor";
+$MESS["NEW_BLOG_COMMENT2COMMENT_WITHOUT_TITLE_SUBJECT"] = "#SITE_NAME#: [B] #MESSAGE_TITLE#";
 $MESS["NEW_BLOG_COMMENT2COMMENT_WITHOUT_TITLE_MESSAGE"] = "Mensaje informativo desde el sitio #SITE_NAME#
 ------------------------------------------
 
@@ -155,20 +155,20 @@ Dirección del URL:
 
 Mensaje generado automáticamente.";
 $MESS["BLOG_YOUR_BLOG_TO_USER_NAME"] = "Su blog ha sido agregado a amigos";
-$MESS["BLOG_YOU_TO_BLOG_NAME"] = "Usted ha sido agregado al blog de amigos";
-$MESS["BLOG_BLOG_TO_YOU_NAME"] = "Un blog ha sido agregado para sus amigos";
-$MESS["BLOG_BLOG_TO_YOU_SUBJECT"] = "#SITE_NAME#: [B] El blog \"#BLOG_NAME#\" ha sido agregado para sus amigos.";
-$MESS["BLOG_USER_TO_YOUR_BLOG_NAME"] = "Un amigo ha sido agregado a su blog";
-$MESS["BLOG_USER_TO_YOUR_BLOG_SUBJECT"] = "#SITE_NAME#: [B] Un amigo #USER# ha sido agregado a su blog \"#BLOG_NAME#\".";
 $MESS["BLOG_YOUR_BLOG_TO_USER_DESC"] = "#BLOG_ID# - ID del Blog \\r\\n#BLOG_NAME# - nombre del Blog\\r\\n#BLOG_URL# - nombre del Blog, sólo letras latinas\\r\\n#BLOG_ADR# - dirección del Blog\\r\\n#USER_ID# -  ID del usuario\\r\\n#USER# - Usuario\\r\\n#USER_URL# - URL del Usuario \\r\\n#EMAIL_FROM# - E-mail del remitente\\r\\n#EMAIL_TO# - E-mail del destinatario";
 $MESS["BLOG_YOUR_BLOG_TO_USER_SUBJECT"] = "#SITE_NAME#: [B] Your blog \"#BLOG_NAME#\" se ha agregado como una amistad del #USUARIOR#'";
 $MESS["BLOG_YOUR_BLOG_TO_USER_MESSAGE"] = "Mensaje de #SITE_NAME#\\r\\n------------------------------------------\\r\\n\\r\\nYour blog \"#BLOG_NAME#\" ha sido agregado como un amigo del #USUARIO#.\\r\\n\\r\\n Perfil del Usuario: #USUARIO_URL#\\r\\n\\r\\nSu blog URL: #BLOG_ADR#\\r\\n\\r\\nEste mensaje ha sido generado automáticamente.\\r\\n";
+$MESS["BLOG_YOU_TO_BLOG_NAME"] = "Usted ha sido agregado al blog de amigos";
 $MESS["BLOG_YOU_TO_BLOG_DESC"] = "#BLOG_ID# - ID del Blog \\r\\n#BLOG_NAME# - nombre del Blog\\r\\n#BLOG_URL# - nombre del Blog, sólo letras latinas\\r\\n#BLOG_ADR# - dirección del Blog\\r\\n#USER_ID# -  ID del usuario\\r\\n#USER# - Usuario\\r\\n#USER_URL# - URL del Usuario \\r\\n#EMAIL_FROM# - E-mail del remitente\\r\\n#EMAIL_TO# - E-mail del destinatario";
 $MESS["BLOG_YOU_TO_BLOG_SUBJECT"] = "#SITE_NAME#: [B] Usted ha sido añadido a \"#BLOG_NAME#\" como un amigo.";
 $MESS["BLOG_YOU_TO_BLOG_MESSAGE"] = "Mensaje de #SITE_NAME#\\r\\n------------------------------------------\\r\\n\\r\\nYour blog \"#BLOG_NAME#\" ha sido agregado como un amigo del #USUARIO#.\\r\\n\\r\\n Perfil del Usuario: #USUARIO_URL#\\r\\n\\r\\nSu blog URL: #BLOG_ADR#\\r\\n\\r\\nEste mensaje ha sido generado automáticamente.\\r\\n";
+$MESS["BLOG_BLOG_TO_YOU_NAME"] = "Un blog ha sido agregado para sus amigos";
 $MESS["BLOG_BLOG_TO_YOU_DESC"] = "#BLOG_ID# - ID del Blog \\r\\n#BLOG_NAME# - nombre del Blog\\r\\n#BLOG_URL# - nombre del Blog, sólo letras latinas\\r\\n#BLOG_ADR# - dirección del Blog\\r\\n#USER_ID# -  ID del usuario\\r\\n#USER# - Usuario\\r\\n#USER_URL# - URL del Usuario \\r\\n#EMAIL_FROM# - E-mail del remitente\\r\\n#EMAIL_TO# - E-mail del destinatario";
+$MESS["BLOG_BLOG_TO_YOU_SUBJECT"] = "#SITE_NAME#: [B] El blog \"#BLOG_NAME#\" ha sido agregado para sus amigos.";
 $MESS["BLOG_BLOG_TO_YOU_MESSAGE"] = "Mensaje de #SITE_NAME#\\r\\n------------------------------------------\\r\\n\\r\\nYour blog \"#BLOG_NAME#\" ha sido agregado como un amigo del #USUARIO#.\\r\\n\\r\\n Perfil del Usuario: #USUARIO_URL#\\r\\n\\r\\nSu blog URL: #BLOG_ADR#\\r\\n\\r\\nEste mensaje ha sido generado automáticamente.\\r\\n";
+$MESS["BLOG_USER_TO_YOUR_BLOG_NAME"] = "Un amigo ha sido agregado a su blog";
 $MESS["BLOG_USER_TO_YOUR_BLOG_DESC"] = "#BLOG_ID# - ID del Blog \\r\\n#BLOG_NAME# - nombre del Blog\\r\\n#BLOG_URL# - nombre del Blog, sólo letras latinas\\r\\n#BLOG_ADR# - dirección del Blog\\r\\n#USER_ID# -  ID del usuario\\r\\n#USER# - Usuario\\r\\n#USER_URL# - URL del Usuario \\r\\n#EMAIL_FROM# - E-mail del remitente\\r\\n#EMAIL_TO# - E-mail del destinatario";
+$MESS["BLOG_USER_TO_YOUR_BLOG_SUBJECT"] = "#SITE_NAME#: [B] Un amigo #USER# ha sido agregado a su blog \"#BLOG_NAME#\".";
 $MESS["BLOG_USER_TO_YOUR_BLOG_MESSAGE"] = "Mensaje de #SITE_NAME#\\r\\n------------------------------------------\\r\\n\\r\\nYour blog \"#BLOG_NAME#\" ha sido agregado como un amigo del #USUARIO#.\\r\\n\\r\\n Perfil del Usuario: #USUARIO_URL#\\r\\n\\r\\nSu blog URL: #BLOG_ADR#\\r\\n\\r\\nEste mensaje ha sido generado automáticamente.\\r\\n";
 $MESS["BLOG_SONET_NEW_POST_NAME"] = "Agregar nuevo mensaje";
 $MESS["BLOG_SONET_NEW_POST_DESC"] = "#EMAIL_TO# - E-mail del destinatario

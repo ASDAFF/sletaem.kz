@@ -1,4 +1,5 @@
 <?
+$MESS["BX_CAT_IBLOCK_CATALOG_FIELD_IBLOCK_ID"] = "ID :";
 $MESS["BX_CAT_IBLOCK_CATALOG_MESS_NOT_SELECT"] = "pas sélectionné";
 $MESS["BX_CATALOG_SETTINGS_ACCESS_DENIED"] = "Accès refusé";
 $MESS["BX_CAT_IBLOCK_CATALOG_IBLOCK_BAD_SESSION"] = "Votre session a expiré. Veuillez fermer la boîte de dialogue et vous reconnecter au système.";
@@ -24,5 +25,4 @@ $MESS["BX_CAT_IBLOCK_CATALOG_FIELD_YANDEX_EXPORT"] = "Exporter vers Yandex.Produ
 $MESS["BX_CAT_IBLOCK_CATALOG_FIELD_VAT_ID"] = "Taux d'imposition du catalogue";
 $MESS["BX_CAT_IBLOCK_CATALOG_BTN_SAVE"] = "Enregistrer";
 $MESS["BX_CAT_IBLOCK_CATALOG_BTN_CANCEL"] = "Annuler";
-$MESS["BX_CAT_IBLOCK_CATALOG_FIELD_IBLOCK_ID"] = "ID :";
 ?>

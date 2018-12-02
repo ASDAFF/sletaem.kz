@@ -1,5 +1,5 @@
 <?
-$MESS["MAIN_AI_NEW_NOTIF"] = "Нові повідомлення";
+$MESS["MAIN_AI_NEW_NOTIF"] = "Нові сповіщення";
 $MESS["MAIN_AI_ALL_NOTIF"] = "Показати всі";
 $MESS["top_panel_ai_updates"] = "Поновлення";
 $MESS["top_panel_ai_upd_stp"] = "Налаштувати оновлення";

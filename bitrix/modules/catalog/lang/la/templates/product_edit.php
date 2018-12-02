@@ -106,8 +106,8 @@ $MESS["C2IT_BASE_HEIGHT"] = "Alto";
 $MESS["C2IT_MEASURE"] = "Unidad de medida";
 $MESS["C2IT_MEASURES"] = "Unidades de medidas";
 $MESS["C2IT_MEASURE_RATIO"] = "Relación de la unidad";
-$MESS["C2IT_MEASURE_NO_MEASURE"] = "En este momento, no hay unidades que figuran en el sistema <br> Para crear unidades, vaya a la página.:";
 $MESS["C2IT_MEASUREMENTS_EXT"] = "Peso y dimensión";
+$MESS["C2IT_MEASURE_NO_MEASURE"] = "En este momento, no hay unidades que figuran en el sistema <br> Para crear unidades, vaya a la página.:";
 $MESS["SET_NOTICE_AVAILAVLE"] = "Las opciones \"Activar acciones de seguimiento\", \"fuera de stock disponibles para la venta\" y \"Permitir cantidad de producto negativo\" son basados automáticamente en los valores actuales de los productos incluidos y no se puede modificar.<br> 
 Si el inventario activa el seguimiento de un producto, y este producto no puede ser puesto en espera (no disponible para la compra si se encuentra fuera de stock), el paquete de producto forma parte del seguimiento de stock habilitado.";
 $MESS["SET_NOTICE_QUANTITY"] = "La cantidad disponible de un paquete se deriva del estado actual de stock del prodcuto que tenga activado el seguimiento de stock y no este disponibles para la compra si está fuera de stock. Si no hay productos en el paquete que coincida con estos criterios, la cantidad disponible se deriva de todos los productos incluidos.";

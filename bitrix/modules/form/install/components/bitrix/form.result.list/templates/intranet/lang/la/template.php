@@ -1,4 +1,5 @@
 <?
+$MESS["FORM_RESULT_TITLE"] = "Orden #";
 $MESS["FORM_WRONG_DATE_CREATE_FROM"] = "Por favor, introduzca la fecha correcta \"desde\" ( campo \"Creado\")";
 $MESS["FORM_WRONG_DATE_CREATE_TO"] = "Por favor, introduzca la fecha correcta \"hasta\"( campo \"Creado\")";
 $MESS["FORM_FROM_TILL_DATE_CREATE"] = "la fecha \"hasta\" debe ser mayor o igual a la fecha \"desde\" ( campo \"Creado\")";
@@ -58,5 +59,4 @@ $MESS["FORM_MODULE_NOT_INSTALLED"] = "módulo del Formulario web no está instal
 $MESS["FORM_VIEW_FILE"] = "Ver archivo";
 $MESS["FORM_DOWNLOAD_FILE"] = "Descargar archivo #FILE_NAME#";
 $MESS["FORM_DOWNLOAD"] = "Descargar";
-$MESS["FORM_RESULT_TITLE"] = "Orden #";
 ?>

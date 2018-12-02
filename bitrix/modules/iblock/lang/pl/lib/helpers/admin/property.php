@@ -1,0 +1,4 @@
+<?
+$MESS["PROPERTY_TYPE_LIST"] = "Lista";
+$MESS["PROPERTY_TYPE_FILE"] = "Plik";
+?>

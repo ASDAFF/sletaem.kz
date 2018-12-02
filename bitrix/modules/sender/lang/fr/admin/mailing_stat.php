@@ -11,7 +11,6 @@ $MESS["SENDER_MAILING_STATS_POSTING"] = "Message";
 $MESS["SENDER_MAILING_STATS_READ"] = "Vues";
 $MESS["SENDER_MAILING_STATS_CLICKED"] = "Clics";
 $MESS["SENDER_MAILING_STATS_MAILING_AVG"] = "Moyenne";
-$MESS["SENDER_MAILING_STATS_MAILING_SENT_BY_AUTHOR"] = "Envoyée le %date% par %name%";
 $MESS["SENDER_MAILING_STATS_COUNTER_SEND_ALL"] = "Total des messages envoyés";
 $MESS["SENDER_MAILING_STATS_COUNTER_READ"] = "Vues";
 $MESS["SENDER_MAILING_STATS_COUNTER_CLICK"] = "Clics";
@@ -23,4 +22,5 @@ $MESS["SENDER_MAILING_STATS_POSTINGS_ALL"] = "tous les messages";
 $MESS["SENDER_MAILING_STATS_READ_BY_TIME_CHART_BALLOON"] = "%cnt% e-mails lus à %time%";
 $MESS["SENDER_MAILING_STATS_NO_DATA"] = "Aucune donnée.";
 $MESS["SENDER_MAILING_STATS_NO_POSTINGS"] = "Aucune donnée. Le message de lettre d'information n'a jamais été envoyé ou l'envoi en cours n'a pas été terminé.";
+$MESS["SENDER_MAILING_STATS_MAILING_SENT_BY_AUTHOR"] = "Envoyée le %date% par %name%";
 ?>

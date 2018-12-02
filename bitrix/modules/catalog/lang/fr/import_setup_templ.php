@@ -1,4 +1,5 @@
 <?
+$MESS["CATI_CODE_TRANSLIT_FOR_UPDATE"] = "Appliquer la translittération aux articles existants";
 $MESS["CICML_STEP_TITLE"] = "tape #CUR# du #ALL#";
 $MESS["CICML_NEXT_STEP_F"] = "Lancer l'importation";
 $MESS["CICML_SAVE"] = "Sauvegarder";
@@ -201,5 +202,4 @@ $MESS["CICML_INVALID_VERSION"] = "La version du format XML n'est pas valide";
 $MESS["CICML_NO_YANDEX"] = "Ce script est incapable de l'importation de fichiers Yandex.Market.";
 $MESS["CATI_ERR_PRODUCT_UPDATE_UNKNOWN"] = "Erreur inconnue lors de la mise-à-jour des paramètres du produit.";
 $MESS["CATI_ERR_PRODUCT_UPDATE"] = "Erreur lors de la mise-à-jour des paramètres du produit : ";
-$MESS["CATI_CODE_TRANSLIT_FOR_UPDATE"] = "Appliquer la translittération aux articles existants";
 ?>

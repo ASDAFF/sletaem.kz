@@ -16,6 +16,6 @@ $MESS["SU_EF_date_add"] = "Modificado em:";
 $MESS["SU_EF_URI"] = "URL:";
 $MESS["SU_EF_SHORT_URI"] = "Short URL:";
 $MESS["SU_EF_STATUS"] = "Código de status HTTP:";
-$MESS["SU_EF_LAST_USED"] = "ltima utilização em:";
+$MESS["SU_EF_LAST_USED"] = "Última utilização em:";
 $MESS["SU_EF_NUMBER_USED"] = "Contagem de uso:";
 ?>

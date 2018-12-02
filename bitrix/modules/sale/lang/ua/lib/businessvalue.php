@@ -1,4 +1,8 @@
 <?
+$MESS["BIZVAL_CODE_ORDER_USER_DESCRIPTION"] = "Коментар користувача";
+$MESS["BIZVAL_CODE_ORDER_ORDER_TOPIC"] = "Тема";
+$MESS["BIZVAL_CODE_ORDER_DATE_BILL"] = "Дата створення(без часу)";
+$MESS["BIZVAL_CODE_ORDER_DATE_BILL_DATE"] = "Дата створення(без часу)";
 $MESS["BIZVAL_PROVIDER_VALUE"] = "Значення";
 $MESS["BIZVAL_PROVIDER_USER"] = "Користувач";
 $MESS["BIZVAL_PROVIDER_ORDER"] = "Замовлення";
@@ -149,4 +153,11 @@ $MESS["BIZVAL_CODE_BANK_HOUSE"] = "Будинок банку";
 $MESS["BIZVAL_CODE_BANK_BIK"] = "БІК банку";
 $MESS["BIZVAL_CODE_EGRPO"] = "ЄДРПО";
 $MESS["BIZVAL_CODE_OKVED"] = "КВЕД";
+$MESS["BIZVAL_CODE_KPP"] = "КПП";
+$MESS["BIZVAL_CODE_OKDP"] = "КВЕД";
+$MESS["BIZVAL_CODE_OKOPF"] = "КОПФГ";
+$MESS["BIZVAL_CODE_OKFC"] = "КФВ";
+$MESS["BIZVAL_CODE_OKPO"] = "ЄДРПОУ";
+$MESS["BIZVAL_CODE_OUNT"] = "ОЮНТ";
+$MESS["BIZVAL_CODE_NOTES"] = "Додаткові замітки";
 ?>

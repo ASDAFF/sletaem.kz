@@ -1,7 +1,14 @@
 <?
 $MESS["PM_TITLE"] = "#SUBJECT# (читання)";
 $MESS["F_ERR_SESS_FINISH"] = "Ваша сесія закінчилася. Повторіть дію.";
-$MESS["SYSTEM_POST_MESSAGE"] = "Ваше повідомлення";
+$MESS["SYSTEM_POST_MESSAGE"] = "Ваше повідомлення 
+ Тема: #SUBJECT#
+ Дата: #MESSAGE_DATE#
+ Посилання: http://#SERVER_NAME##MESSAGE_LINK#
+
+Було прочитане користувачем #USER_NAME#
+http://#SERVER_NAME##USER_LINK#
+";
 $MESS["PM_FOLDER_ID_0"] = "Вхідні";
 $MESS["PM_FOLDER_ID_1"] = "Вхідні";
 $MESS["PM_AUTH"] = "Для перегляду цієї сторінки ви повинні бути авторизовані.";
@@ -16,8 +23,8 @@ $MESS["PM_FOLDER_ID_3"] = "Відправлені";
 $MESS["PM_TITLE_NAV"] = "Персональні повідомлення";
 $MESS["SYSTEM_POST_SUBJ"] = "Підтвердження прочитання";
 $MESS["PM_NOTIFICATION_SEND"] = "Підтвердження успішно відправлено";
-$MESS["PM_ERR_DELETE"] = "Повідомлення #MID# не видалено.";
-$MESS["PM_OK_MOVE"] = "Повідомлення #MID# успішно переміщено (скопійовано).";
-$MESS["PM_OK_DELETE"] = "Повідомлення #MID# успішно видалено.";
+$MESS["PM_ERR_DELETE"] = "Повідомлення #MID# не видалене.";
+$MESS["PM_OK_MOVE"] = "Повідомлення #MID# успішно переміщене (скопійоване).";
+$MESS["PM_OK_DELETE"] = "Повідомлення #MID# успішно видалене.";
 $MESS["F_NO_PM"] = "Персональні повідомлення відключені.";
 ?>

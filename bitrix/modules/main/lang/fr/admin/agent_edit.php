@@ -1,4 +1,7 @@
 <?
+$MESS["MAIN_AGENT_PERIODICAL1"] = "Exécuter un agent :";
+$MESS["MAIN_AGENT_PERIODICAL_INTERVAL"] = "à intervalles régulières";
+$MESS["MAIN_AGENT_PERIODICAL_TIME"] = "à une heure spécifiée";
 $MESS["MAIN_AGENT_USER_ID"] = "ID de l'utilisateur:";
 $MESS["MAIN_AGENT_DEL_EXEC"] = "L'agent a été supprimé après une exécution réussie ou suite à une erreur!";
 $MESS["MAIN_AGENT_ACTIVE"] = "Actif(ve)";
@@ -24,7 +27,4 @@ $MESS["MAIN_AGENT_PERIOD"] = "Périodique";
 $MESS["MAIN_AGENT_RECORD_LIST"] = "Liste des agents";
 $MESS["MAIN_AGENT_DEL_RECORD_TITLE"] = "Supprimer l'agent";
 $MESS["MAIN_AGENT_NAME"] = "Fonction Agent:";
-$MESS["MAIN_AGENT_PERIODICAL1"] = "Exécuter un agent :";
-$MESS["MAIN_AGENT_PERIODICAL_INTERVAL"] = "à intervalles régulières";
-$MESS["MAIN_AGENT_PERIODICAL_TIME"] = "à une heure spécifiée";
 ?>

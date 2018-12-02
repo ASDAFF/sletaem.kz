@@ -1,4 +1,5 @@
 <?
+$MESS["CC_BCIH_REFERENCE_ERROR"] = "Erreur lors de la création du dictionnaire. #MESSAGE#";
 $MESS["CC_BCIH_XML_FIELD_TYPE_BOOL"] = "Booléen";
 $MESS["CC_BCIH_ERROR_SESSION_ID_CHANGE"] = "Le changement de l'ID des sessions est activé. Dans le fichier de connexion de l'élément d'échange, avant de connecter le prologue, définissez la constante BX_SESSION_ID_CHANGE: define ('BX_SESSION_ID_CHANGE', faux);";
 $MESS["CC_BCIH_XML_FIELD_TYPE_DATE"] = "Date";
@@ -44,5 +45,4 @@ $MESS["CC_BCIH_DELETE"] = "supprimer";
 $MESS["CC_BCIH_XML_FIELD_TYPE_FLOAT"] = "Chiffre";
 $MESS["CC_BCIH_XML_REFERENCE_ITEM"] = "Elément du Guide";
 $MESS["CC_BCIH_XML_REFERENCE_ITEMS"] = "léments du répertoire";
-$MESS["CC_BCIH_REFERENCE_ERROR"] = "Erreur lors de la création du dictionnaire. #MESSAGE#";
 ?>

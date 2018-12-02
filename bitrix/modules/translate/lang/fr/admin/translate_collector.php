@@ -1,4 +1,7 @@
 <?
+$MESS["TR_ERROR_LANGUAGE_ID"] = "La langue sélectionnée est introuvable";
+$MESS["TR_ERROR_LANGUAGE_CHARSET_NON_UTF"] = "Le codage de la langue sélectionnée n'est pas UTF-8. Veuillez désactiver la conversion de codage de caractère national.";
+$MESS["TR_ERROR_TARFILE_EXTENTION"] = "Type de fichier non valide";
 $MESS["TR_SELECT_LANGUAGE_DESCRIPTION"] = "(si la langue est absente dans la liste, tout d'abord <a href='lang_edit.php?lang=fr'>ajoutez</a> la)";
 $MESS["TR_COLLECT_DATE"] = "Veuillez saisir la date d'assemblage (YYYYMMDD)";
 $MESS["TR_CONVERT_ENCODING"] = "Veuillez choisir l'encodage";
@@ -31,7 +34,4 @@ $MESS["TR_CONVERT_UTF8"] = "Convertir au format UTF-8";
 $MESS["TR_CONVERT_NATIONAL"] = "Convertir au Codage National";
 $MESS["TR_COLLECT_LANGUAGE"] = "Former une localisation";
 $MESS["TR_PACK_FILES"] = "Emballer les fichiers (tar.gz)";
-$MESS["TR_ERROR_LANGUAGE_ID"] = "La langue sélectionnée est introuvable";
-$MESS["TR_ERROR_LANGUAGE_CHARSET_NON_UTF"] = "Le codage de la langue sélectionnée n'est pas UTF-8. Veuillez désactiver la conversion de codage de caractère national.";
-$MESS["TR_ERROR_TARFILE_EXTENTION"] = "Type de fichier non valide";
 ?>

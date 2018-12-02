@@ -1,4 +1,6 @@
 <?
+$MESS["BX_CURRENCY_ERR_CURR_BASE_AMOUNT_CNT_BAD"] = "Valor nominal incorreto especificado para a moeda base ";
+$MESS["BX_CURRENCY_ERR_CURR_BASE_AMOUNT_BAD"] = "Taxa de câmbio padrão incorreta especificada para a moeda base ";
 $MESS["BT_MOD_CURR_ERR_CURR_CUR_ID_BAD"] = "ID da moeda inválido.";
 $MESS["BT_MOD_CURR_ERR_CURR_CUR_ID_ABSENT"] = "O ID da moeda não está especificada.";
 $MESS["BT_MOD_CURR_ERR_CURR_AMOUNT_CNT_ABSENT"] = "O valor de face da moeda não é especificada.";

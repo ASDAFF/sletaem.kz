@@ -1,8 +1,8 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Каталог");
 $APPLICATION->IncludeComponent(
-	"bitrix:catalog", 
-	"main", 
+	"bitrix:catalog",
+	"main",
 	array(
 		"IBLOCK_TYPE" => "#IBLOCK_NEXT_CATALOG_TYPE#",
 		"IBLOCK_ID" => "#IBLOCK_CATALOG_ID#",
@@ -491,6 +491,8 @@ $APPLICATION->IncludeComponent(
 		"SHOW_CHEAPER_FORM" => "Y",
 		"LANDING_TITLE" => "Популярные категории",
 		"LANDING_SECTION_COUNT" => "7",
+		"LANDING_SEARCH_TITLE" => "Похожие запросы",
+		"LANDING_SEARCH_COUNT" => "7",
 		"SECTIONS_TYPE_VIEW" => "sections_1",
 		"SECTION_ELEMENTS_TYPE_VIEW" => "list_elements_1",
 		"ELEMENT_TYPE_VIEW" => "FROM_MODULE",

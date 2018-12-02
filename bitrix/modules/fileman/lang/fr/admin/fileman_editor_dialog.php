@@ -1,4 +1,11 @@
 <?
+$MESS["FILEMAN_ED_TBL_WPR"] = "%";
+$MESS["FILEMAN_DIALOG_EXIT_ACHTUNG"] = "<b>Attention !</b> Le document édité a été modifié. Vous devez l'enregistrer pour conserver les modifications.";
+$MESS["FILEMAN_DIALOG_EDIT_BUT"] = "Poursuivre l'édition";
+$MESS["FILEMAN_ED_DIC_ISNT_INSTALED"] = "Le dictionnaire n'est pas installé";
+$MESS["FILEMAN_DIALOG_EXIT_BUT"] = "Ne pas enregistrer et quitter";
+$MESS["FILEMAN_ED_TBL_WPX"] = "pixels";
+$MESS["FILEMAN_DIALOG_SAVE_BUT"] = "Enregistrer et quitter";
 $MESS["FILEMAN_ED_NOANCHORS"] = "- pas d'ancres -";
 $MESS["FILEMAN_ED_HTML_CODE"] = "Code HTML";
 $MESS["FILEMAN_ED_SWF_HTML_CODE"] = "Code HTML de l'animation";
@@ -130,11 +137,4 @@ $MESS["FILEMAN_ED_REMOVE_FONTS"] = "Retirer polices définitions";
 $MESS["FILEMAN_ED_REMOVE_INDENTS"] = "Retirer tirets";
 $MESS["FILEMAN_ED_IMG_W"] = "Largeur:";
 $MESS["FILEMAN_ED_TBL_W"] = "Largeur:";
-$MESS["FILEMAN_ED_TBL_WPR"] = "%";
-$MESS["FILEMAN_DIALOG_EXIT_ACHTUNG"] = "<b>Attention !</b> Le document édité a été modifié. Vous devez l'enregistrer pour conserver les modifications.";
-$MESS["FILEMAN_DIALOG_EDIT_BUT"] = "Poursuivre l'édition";
-$MESS["FILEMAN_ED_DIC_ISNT_INSTALED"] = "Le dictionnaire n'est pas installé";
-$MESS["FILEMAN_DIALOG_EXIT_BUT"] = "Ne pas enregistrer et quitter";
-$MESS["FILEMAN_ED_TBL_WPX"] = "pixels";
-$MESS["FILEMAN_DIALOG_SAVE_BUT"] = "Enregistrer et quitter";
 ?>

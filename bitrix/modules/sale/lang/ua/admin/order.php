@@ -244,4 +244,14 @@ $MESS["SALE_F_COMPANY_ID"] = "Офіс";
 $MESS["SALE_F_RESPONSIBLE_ID"] = "Відповідальний";
 $MESS["SOAN_MARKETPLACE_ADD_NEW"] = "Встановити з Маркетплейс";
 $MESS["SOAN_MARKETPLACE_ADD_NEW_TITLE"] = "Встановити з Маркетплейс";
+$MESS["SALE_SEND_DELIVERY_REQUEST"] = "Надіслати транспортні заявки";
+$MESS["SALE_F_DELIVERY_DOC_DATE"] = "Дата документа відвантаження";
+$MESS["SOA_DELIVERY_DOC_DATE"] = "Дата документа відвантаження";
+$MESS["SALE_O_CONTEXT_B_DELIVERY_REQUESTS"] = "Транспортні заявки";
+$MESS["SALE_O_CONTEXT_B_DELIVERY_REQUESTS_TITLE"] = "Відправити транспортні заявки для замовлень зі списку";
+$MESS["SALE_O_CONTEXT_B_DELIVERY_REQUESTS_SL"] = "Додана можливість відправляти транспортні заявки в Пошту Росії та отримувати друковані форми";
+$MESS["SALE_O_CONTEXT_B_DELIVERY_REQUESTS_SELECTED"] = "Відправити виділені";
+$MESS["SALE_O_CONTEXT_B_DELIVERY_REQUESTS_ALL"] = "Відправити всі показані на сторінці";
+$MESS["SALE_O_CONTEXT_B_DELIVERY_REQUESTS_SELECTION_NEEDED"] = "Необхідно виділити хоча б одне замовлення";
+$MESS["SALE_O_SHIPMENT_ID_TITLE"] = "Відвантаження № &quot;#SHIPMENT_ID#&quot;";
 ?>

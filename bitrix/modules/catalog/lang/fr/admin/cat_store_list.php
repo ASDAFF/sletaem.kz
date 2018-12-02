@@ -1,4 +1,6 @@
 <?
+$MESS["STORE_CODE"] = "Code symbolique";
+$MESS["STORE_XML_ID"] = "ID externe";
 $MESS["GPS_S"] = "Longitude GPS";
 $MESS["GPS_N"] = "Latitude GPS";
 $MESS["ADDRESS"] = "Adresse";
@@ -24,6 +26,4 @@ $MESS["CSTORE_SORT"] = "Trier";
 $MESS["CAT_STORE_INDEX_TITLE"] = "Liste URL de la page (à partir de paramètres de blocage de l'information par défaut)";
 $MESS["PHONE"] = "Numéro de téléphone";
 $MESS["DELETE_STORE_ALT"] = "Supprimer";
-$MESS["STORE_CODE"] = "Code symbolique";
-$MESS["STORE_XML_ID"] = "ID externe";
 ?>

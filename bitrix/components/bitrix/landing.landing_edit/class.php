@@ -229,6 +229,25 @@ class LandingEditComponent extends LandingBaseFormComponent
 											))
 										: array();
 
+			// if current page in folder
+			$this->arResult['FOLDER'] = array();
+			if ($this->arResult['LANDING']['FOLDER_ID']['CURRENT'])
+			{
+				$folderId = $this->arResult['LANDING']['FOLDER_ID']['CURRENT'];
+				$res = Landing::getList(array(
+					'select' => array(
+						'*'
+					),
+					'filter' => array(
+						'ID' => $folderId
+					)
+				));
+				if ($row = $res->fetch())
+				{
+					$this->arResult['FOLDER'] = $row;
+				}
+			}
+
 			if (!$this->arResult['LANDING'])
 			{
 				$this->id = 0;

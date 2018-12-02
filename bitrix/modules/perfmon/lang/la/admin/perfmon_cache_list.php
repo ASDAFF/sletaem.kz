@@ -1,5 +1,6 @@
 <?
 $MESS["PERFMON_CACHE_ID"] = "ID";
+$MESS["PERFMON_CACHE_HIT_ID"] = "Hit";
 $MESS["PERFMON_CACHE_NN"] = "No.";
 $MESS["PERFMON_CACHE_COMPONENT_NAME"] = "Componente";
 $MESS["PERFMON_CACHE_MODULE_NAME"] = "Módulo";
@@ -32,5 +33,4 @@ $MESS["PERFMON_CACHE_HIT_RATIO"] = "Tasa de aciertos";
 $MESS["PERFMON_CACHE_MANAGED"] = "administrar";
 $MESS["PERFMON_CACHE_UNMANAGED"] = "No administrado";
 $MESS["PERFMON_CACHE_PAGE"] = "caché";
-$MESS["PERFMON_CACHE_HIT_ID"] = "Hit";
 ?>

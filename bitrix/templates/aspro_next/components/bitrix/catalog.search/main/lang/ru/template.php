@@ -4,4 +4,5 @@
 
 	$MESS["FILTER_SECTON"] = "Найдено в разделах";
 	$MESS["FILTER_ALL_SECTON"] = "Все разделы";
+	$MESS["REPLACE_SUBSTR"] = "Подменить";
 ?>

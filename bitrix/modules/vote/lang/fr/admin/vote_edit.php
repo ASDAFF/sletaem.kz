@@ -1,4 +1,6 @@
 <?
+$MESS["VOTE_EXPORT"] = "Exporter";
+$MESS["VOTE_EXPORT_XLS"] = "Exporter les données du sondage vers Microsoft Excel";
 $MESS["VOTE_AUTHOR"] = "Auteur:";
 $MESS["VOTE_ACTIVE"] = "actif";
 $MESS["VOTE_ACTIVE_TITLE"] = "Activité:";
@@ -60,6 +62,4 @@ $MESS["VOTE_DELETE_RECORD"] = "Supprimer ce sondage";
 $MESS["VOTE_UNIQUE_PARAMS"] = "Unicité visiteur";
 $MESS["VOTE_RESULT_TEMPLATE"] = "Modèle pour afficher les résultats du sondage:";
 $MESS["VOTE_TEMPLATE"] = "Sondage modèle de formulaire:";
-$MESS["VOTE_EXPORT"] = "Exporter";
-$MESS["VOTE_EXPORT_XLS"] = "Exporter les données du sondage vers Microsoft Excel";
 ?>

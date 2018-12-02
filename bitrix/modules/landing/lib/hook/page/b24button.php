@@ -80,7 +80,10 @@ class B24button extends \Bitrix\Landing\Hook\Page
 					foreach ($res['result'] as $button)
 					{
 						$key = self::getScriptUrl($button['SCRIPT']);
-						$items[$key] = \htmlspecialcharsbx($button['NAME']);
+						if ($key)
+						{
+							$items[$key] = \htmlspecialcharsbx($button['NAME']);
+						}
 					}
 				}
 			}

@@ -1,4 +1,7 @@
 <?
+$MESS["SALE_LOGOTIP"] = "Logo";
+$MESS["SPSAN_MARKETPLACE_ADD_NEW"] = "Installer depuis Marketplace";
+$MESS["SPSAN_MARKETPLACE_ADD_NEW_ALT"] = "Cliquez pour installer depuis Marketplace";
 $MESS["SALE_ACTIVE"] = "Actif(ve)";
 $MESS["SALE_F_ACTIVE"] = "Actif(ve)";
 $MESS["SALE_F_CURRENCY"] = "Devises";
@@ -35,7 +38,4 @@ $MESS["SPSAN_ADD_NEW_ALT"] = "Cliquez sur pour ajouter un nouveau système de pa
 $MESS["SPSAN_ERROR_UPDATE"] = "Erreur modification de l'enregistrement";
 $MESS["SALE_DELETE_ERROR"] = "Erreur de suppression du système de paiement. Certaines commandes a probablement été placés en utilisant ce système de paiement.<br>";
 $MESS["SALE_ALLOW_EDIT_PAYMENT"] = "Activer le recalcule automatique du paiement";
-$MESS["SALE_LOGOTIP"] = "Logo";
-$MESS["SPSAN_MARKETPLACE_ADD_NEW"] = "Installer depuis Marketplace";
-$MESS["SPSAN_MARKETPLACE_ADD_NEW_ALT"] = "Cliquez pour installer depuis Marketplace";
 ?>

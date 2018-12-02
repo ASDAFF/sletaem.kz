@@ -1,8 +1,8 @@
 <?
+$MESS["IBLOCK_BAD_ACTIVE_FROM"] = "Format incorrect de la date de début de l'activité.";
 $MESS["IBLOCK_BAD_EXTERNAL_CODE"] = "Code source de DB externe est non spécifié";
 $MESS["IBLOCK_BAD_ELEMENT_NAME"] = "Le nom n'a pas été renseigné.";
 $MESS["IBLOCK_BAD_ACTIVE_TO"] = "Format incorrect de la date de fin d'activité.";
-$MESS["IBLOCK_BAD_ACTIVE_FROM"] = "Format incorrect de la date du début de l'activité.";
 $MESS["IBLOCK_BAD_FIELD"] = "Le champ obligatoire '#FIELD_NAME#' n'est pas rempli.";
 $MESS["IBLOCK_BAD_PROPERTY"] = "La propriété obligatoire '#PROPERTY#' n'est pas remplie.";
 $MESS["IBLOCK_ERR_DETAIL_PICTURE"] = "Erreur de sauvegarde de l'image détaillée.";

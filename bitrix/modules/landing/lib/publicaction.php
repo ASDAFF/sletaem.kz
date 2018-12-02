@@ -3,6 +3,7 @@ namespace Bitrix\Landing;
 
 use \Bitrix\Rest\AppTable;
 use \Bitrix\Main\Localization\Loc;
+use \Bitrix\Main\ModuleManager;
 
 Loc::loadMessages(__FILE__);
 
@@ -23,6 +24,12 @@ class PublicAction
 	 * @var array
 	 */
 	protected static $restApp = null;
+
+	/**
+	 * Raw data from waf.
+	 * @var mixed
+	 */
+	protected static $rawData = null;
 
 	/**
 	 * Get full namespace for public classes.
@@ -114,8 +121,19 @@ class PublicAction
 		}
 		// siteman
 		else if (
-			!Manager::isB24() &&
+			!ModuleManager::isModuleInstalled('bitrix24') &&
 			Manager::getApplication()->getGroupRight('landing') < 'W'
+		)
+		{
+			$error->addError(
+				'ACCESS_DENIED',
+				Loc::getMessage('LANDING_ACCESS_DENIED2')
+			);
+		}
+		else if (
+			\Bitrix\Main\Loader::includeModule('bitrix24') &&
+			Manager::getOption('temp_permission_admin_only') &&
+			!\CBitrix24::isPortalAdmin(Manager::getUserId())
 		)
 		{
 			$error->addError(
@@ -189,6 +207,15 @@ class PublicAction
 	}
 
 	/**
+	 * Get raw data of curring processing.
+	 * @return mixed
+	 */
+	public static function getRawData()
+	{
+		return self::$rawData;
+	}
+
+	/**
 	 * Listen commands from ajax.
 	 * @return array|null
 	 * @throws \ReflectionException
@@ -198,6 +225,7 @@ class PublicAction
 		$context = \Bitrix\Main\Application::getInstance()->getContext();
 		$request = $context->getRequest();
 		$files = $request->getFileList();
+		$postlist = $context->getRequest()->getPostList();
 
 		// multiple commands
 		if (
@@ -206,6 +234,11 @@ class PublicAction
 		)
 		{
 			$result = array();
+			// additional site id detect
+			if ($request->offsetExists('site_id'))
+			{
+				$siteId = $request->get('site_id');
+			}
 			foreach ($request->get('batch') as $key => $batchItem)
 			{
 				if (
@@ -214,12 +247,21 @@ class PublicAction
 				)
 				{
 					$batchItem['data'] = (array)$batchItem['data'];
+					if (isset($siteId))
+					{
+						$batchItem['data']['siteId'] = $siteId;
+					}
 					if ($files)
 					{
 						foreach ($files as $code => $file)
 						{
 							$batchItem['data'][$code] = $file;
 						}
+					}
+					$rawData = $postlist->getRaw('batch');
+					if (isset($rawData[$key]['data']))
+					{
+						self::$rawData = $rawData[$key]['data'];
 					}
 					$result[$key] = self::actionProcessing(
 						$batchItem['action'],
@@ -238,12 +280,22 @@ class PublicAction
 		)
 		{
 			$data = $request->get('data');
+			// additional site id detect
+			if ($request->offsetExists('site_id'))
+			{
+				$data['siteId'] = $request->get('site_id');
+			}
 			if ($files)
 			{
 				foreach ($files as $code => $file)
 				{
 					$data[$code] = $file;
 				}
+			}
+			$rawData = $postlist->getRaw('data');
+			if (isset($rawData['data']))
+			{
+				self::$rawData = $rawData['data'];
 			}
 			return self::actionProcessing(
 				$request->get('action'),
@@ -270,7 +322,7 @@ class PublicAction
 
 			$classes = array(
 				self::REST_SCOPE_DEFAULT => array(
-					'site', 'landing', 'block', 'repo', 'template', 'demos'
+					'block', 'site', 'landing', 'repo', 'template', 'demos'
 				),
 				self::REST_SCOPE_CLOUD => array(
 					'cloud'
@@ -298,18 +350,6 @@ class PublicAction
 							);
 						}
 					}
-				}
-			}
-
-			// placements
-			$restMethods[self::REST_SCOPE_DEFAULT][\CRestUtil::PLACEMENTS] = array();
-			$restMethods[self::REST_SCOPE_DEFAULT][\CRestUtil::PLACEMENTS]['LANDING_SETTINGS'] = array();
-			$restMethods[self::REST_SCOPE_DEFAULT][\CRestUtil::PLACEMENTS]['LANDING_BLOCK_*'] = array();
-			foreach (Block::getRepository() as $item)
-			{
-				foreach ($item['items'] as $key => $block)
-				{
-					$restMethods[self::REST_SCOPE_DEFAULT][\CRestUtil::PLACEMENTS]['LANDING_BLOCK_' . $key] = array();
 				}
 			}
 		}
@@ -380,6 +420,7 @@ class PublicAction
 			if (($app = AppTable::getByClientId($app['APP_ID'])))
 			{
 				Repo::deleteByAppCode($app['CODE']);
+				Placement::deleteByAppId($app['ID']);
 				Demos::deleteByAppCode($app['CODE']);
 			}
 		}

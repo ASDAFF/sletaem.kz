@@ -24,6 +24,7 @@ $MESS["IBLOCK_ADM_EXP_DELIM_OTR"] = "otro";
 $MESS["IBLOCK_ADM_EXP_FIRST_LINE_NAMES"] = "Primera fila es una cabecera (contiene nombres de campo)";
 $MESS["IBLOCK_ADM_EXP_FIELDS_MAPPING"] = "Por favor asigne los campos del archivo a los campos de la base de datos";
 $MESS["IBLOCK_ADM_EXP_IS_FIELD_NEEDED"] = "Exportación";
+$MESS["IBLOCK_ADM_EXP_FIELD_NAME"] = "Nombre del campo";
 $MESS["IBLOCK_ADM_EXP_FIELD_SORT"] = "Clasificación de Orden";
 $MESS["IBLOCK_ADM_EXP_PROPERTY"] = "Propiedad &quot;#PROPERTY_NAME#&quot;";
 $MESS["IBLOCK_ADM_EXP_GROUP_LEVEL"] = "Grupo de nivel (#LEVEL_NUM#)";
@@ -37,5 +38,4 @@ $MESS["IBLOCK_ADM_EXP_BACK_BUTTON"] = "Atrás";
 $MESS["IBLOCK_ADM_EXP_FINISH_BUTTON"] = "Inicio";
 $MESS["IBLOCK_ADM_EXP_NEXT_BUTTON"] = "Siguiente";
 $MESS["IBLOCK_ADM_EXP_RESTART_BUTTON"] = "Regresar al primer paso";
-$MESS["IBLOCK_ADM_EXP_FIELD_NAME"] = "Nombre del campo";
 ?>

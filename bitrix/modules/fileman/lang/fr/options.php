@@ -1,4 +1,6 @@
 <?
+$MESS["FILEMAN_OPTION_GOOGLE_MAP_API_KEY"] = "Clé API JavaScript pour Google Maps";
+$MESS["FILEMAN_OPTION_GOOGLE_MAP_API_KEY_NOTE"] = "Comment obtenir la clé : #A#";
 $MESS["FILEMAN_SEARCH_NO_LIMITS"] = "Illimité";
 $MESS["FILEMAN_OPTION_TOP_MENU_NAME"] = "Menu supérieur";
 $MESS["MAIN_TAB_VISUAL_EDITOR"] = "diteur visuel";
@@ -127,6 +129,4 @@ $MESS["FILEMAN_OPTION_WORD_AFFIXES_FILE"] = "Fichier d'affixes:";
 $MESS["FILEMAN_OPTION_ADD_ERROR_PROPS"] = "Maximum de taille de paramètre dépassé: \"Types de Propriété\".";
 $MESS["FILEMAN_OPTION_ADD_ERROR_MENU"] = "Maximum de taille de paramètre dépassé: \"Types de Menu\".";
 $MESS["FILEMAN_REPLACE_NEW_LINES_WITH_BR"] = "Le remplacement automatique des retours à la ligne avec des &lt;br&gt; lors de la commutation en mode d'édition (Text/HTML/éditeur Visuel)";
-$MESS["FILEMAN_OPTION_GOOGLE_MAP_API_KEY"] = "Clé API JavaScript pour Google Maps";
-$MESS["FILEMAN_OPTION_GOOGLE_MAP_API_KEY_NOTE"] = "Comment obtenir la clé : #A#";
 ?>

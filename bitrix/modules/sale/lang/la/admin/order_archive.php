@@ -71,6 +71,7 @@ $MESS["SO_EXPORT_ALT_W"] = "El formulario de resultados de exportación se abrir
 $MESS["SO_EXPORT_TO"] = "Exportar to&nbsp;&nbsp;";
 $MESS["SO_EXPORT_ACTION"] = "Exportar ordenes";
 $MESS["SO_FIELDS"] = "Campos de lista de la orden";
+$MESS["SO_FIELDS_ALT"] = "Utilice Ctrl y/o Mayúsculas para seleccionar varios elementos";
 $MESS["SO_FIELDS_PROMT"] = "Seleccionar campos";
 $MESS["SO_NO_ORDER"] = "Orden ##ID# no encontrada";
 $MESS["SO_SHT"] = "pcs.";
@@ -196,5 +197,4 @@ $MESS["SALE_F_NONE"] = "noy hay origen";
 $MESS["SALE_SUCCESS_RECOVERED"] = "Registro ##ID# para el ID de la orden ##ORDER_ID# ha sido restaurado.";
 $MESS["SOAN_ARCHIVE_LINK"] = "Archivar órdenes";
 $MESS["SOAN_ARCHIVE_LINK_TITLE"] = "Asistente para archivar ordenes";
-$MESS["SO_FIELDS_ALT"] = "Utilice Ctrl y/o Mayúsculas para seleccionar varios elementos";
 ?>

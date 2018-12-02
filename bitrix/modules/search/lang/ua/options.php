@@ -36,4 +36,5 @@ $MESS["SEARCH_OPTIONS_SPHINX_ERROR"] = "Помилка підключення д
 $MESS["SEARCH_OPTIONS_FULL_TEXT_ENGINE_MYSQL"] = "Повнотекстовий пошук MySql";
 $MESS["SEARCH_OPTIONS_MYSQL_ERROR"] = "Помилка включення повнотекстового пошуку:";
 $MESS["SEARCH_OPTIONS_MYSQL_NOTE"] = "Якщо при включенні індексу ви побачите помилку з кодом 1214, то потрібно оновити  MySql до версії >=5.6.4.";
+$MESS["SEARCH_OPTIONS_MAX_BODY_SIZE"] = "Максимальний об'єм тексту документа для підсвічування результату (0 - не обмежувати)";
 ?>

@@ -77,4 +77,5 @@ $MESS["SALE_ORDER_BASKET_ADD_COUPON_ERROR"] = "Помилка додавання
 $MESS["SALE_ORDER_BASKET_COUPONS_NOTE"] = "Для використання купонів, що діють на конкретний тип цін, необхідно ввести купон і перерахувати замовлення";
 $MESS["SALE_ORDER_BASKET_NO_NAME"] = "Без назви";
 $MESS["SALE_ORDER_DEPRECATED_DISCOUNT_VALUE"] = "Знижка на загальну суму замовлення";
+$MESS["SALE_ORDER_BASKET_PRODUCT_UNACTIVE"] = "Товар не активний";
 ?>

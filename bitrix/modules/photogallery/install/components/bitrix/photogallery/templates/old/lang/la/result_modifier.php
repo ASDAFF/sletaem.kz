@@ -1,3 +1,3 @@
 <?
-$MESS ['P_LOADING'] = "Cargando...";
+$MESS["P_LOADING"] = "Cargando...";
 ?>

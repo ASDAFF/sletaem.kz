@@ -24,4 +24,6 @@ $MESS["CATALOG_ERR_PRODUCT_MEASURE_RATIO_NOT_FOUND"] = "No se encontró la unida
 $MESS["CATALOG_ERR_PRODUCT_BAD_TYPE"] = "Tipo de producto incorrecto.";
 $MESS["CATALOG_ERR_NO_PRODUCT_SET"] = "No se encontró el contenido del paquete.";
 $MESS["CATALOG_ERR_NO_PRODUCT_SET_ITEM"] = "No se encontraron productos incluidos.";
+$MESS["BX_CATALOG_PRODUCT_BASKET_ERR_NO_PRODUCT"] = "El producto no fue encontrado.";
+$MESS["BX_CATALOG_PRODUCT_BASKET_ERR_EMPTY_QUANTITY"] = "La cantidad del producto que se agregará al carrito no está especificada.";
 ?>

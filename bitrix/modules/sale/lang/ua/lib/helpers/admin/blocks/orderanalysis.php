@@ -19,4 +19,5 @@ $MESS["SALE_OANALYSIS_SHIPMENT_ALLOWED"] = "Відвантаження дозв�
 $MESS["SALE_OANALYSIS_CREATED_AT"] = "Дата створення";
 $MESS["SALE_OANALYSIS_RESPONSIBLE"] = "Відповідальний";
 $MESS["SALE_OANALYSIS_HIDDEN"] = "[Приховано]";
+$MESS["SALE_OANALYSIS_DELIVERY_REQUEST"] = "Транспортна заявка №#REQUEST_ID#";
 ?>

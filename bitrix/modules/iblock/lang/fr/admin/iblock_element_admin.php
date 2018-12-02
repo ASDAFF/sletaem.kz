@@ -1,4 +1,16 @@
 <?
+$MESS["IBEL_CATALOG_EXTRA_DESCRIPTION"] = "Surtaxer #VALUE# jusqu'à atteindre le prix de base";
+$MESS["IBLOCK_CHANGE_PRICE"] = "mise à jour des prix";
+$MESS["IBLOCK_CHANGING_PRICE"] = "Mise à jour des prix";
+$MESS["IBLIST_CHPRICE_ERROR_WRONG_INPUT_VALUE"] = "Erreur lors de la mise à jour : valeur incorrecte fournie.";
+$MESS["IBLIST_CHPRICE_ERROR_WRONG_CURRENCY"] = "Erreur lors de la mise à jour : devise non spécifiée.";
+$MESS["IBLIST_CHPRICE_ERROR_WRONG_VALUE_SIMPLE_ELEMENTS"] = "Erreur lors de la mise à jour : la nouvelle valeur du produit [##ID#] \"#NAME#\" est inférieure ou égale à zéro.";
+$MESS["IBLIST_CHPRICE_ERROR_PRICE_WITH_EXTRA_SIMPLE_ELEMENTS"] = "Erreur lors de la mise à jour de [##ID#] \"#NAME#\" : impossible de modifier le prix défini comme surtaxe jusqu'au prix de base.";
+$MESS["IBLIST_CHPRICE_ERROR_BASE_FROM_EXTRA_SIMPLE_ELEMENTS"] = "Erreur lors de la mise à jour de [##ID#] \"#NAME#\" : impossible de calculer le prix de base en utiliser la surtaxe et le prix spécifié.";
+$MESS["IBLIST_CHPRICE_ERROR_WRONG_VALUE_SKU_ELEMENTS"] = "Erreur lors de la mise à jour : la nouvelle valeur de l'UGS [##ID#] \"#NAME#\" est inférieure ou égale à zéro.";
+$MESS["IBLIST_CHPRICE_ERROR_PRICE_WITH_EXTRA_SKU_ELEMENTS"] = "Erreur lors de la mise à jour de l'UGS [##ID#] \"#NAME#\" : impossible de modifier le prix défini comme surtaxe jusqu'au prix de base.";
+$MESS["IBLIST_CHPRICE_ERROR_BASE_FROM_EXTRA_SKU_ELEMENTS"] = "Erreur lors de la mise à jour de l'UGS [##ID#] \"#NAME#\" : impossible de calculer le prix de base en utiliser la surtaxe et le prix spécifié.";
+$MESS["IBEL_CATALOG_AVAILABLE_TITLE_EXT"] = "Disponibilité du produit (différent de disponible à l'achat)";
 $MESS["IBLOCK_ELEMENT_EDIT_NOT_SET"] = "(non installé)";
 $MESS["IBLOCK_FILTER_FROMTO_ID"] = "ID (initial et final):";
 $MESS["IBEL_A_F_ID"] = "Identifiant de l'élément";
@@ -119,16 +131,4 @@ $MESS["IBEL_CATALOG_QUANTITY_RESERVED"] = "Réservé";
 $MESS["IBEL_CATALOG_WIDTH"] = "Largeur";
 $MESS["IBEL_CATALOG_LENGTH"] = "Longueur";
 $MESS["IBEL_CATALOG_HEIGHT"] = "Hauteur";
-$MESS["IBEL_CATALOG_EXTRA_DESCRIPTION"] = "Surtaxer #VALUE# jusqu'à atteindre le prix de base";
-$MESS["IBLOCK_CHANGE_PRICE"] = "mise à jour des prix";
-$MESS["IBLOCK_CHANGING_PRICE"] = "Mise à jour des prix";
-$MESS["IBLIST_CHPRICE_ERROR_WRONG_INPUT_VALUE"] = "Erreur lors de la mise à jour : valeur incorrecte fournie.";
-$MESS["IBLIST_CHPRICE_ERROR_WRONG_CURRENCY"] = "Erreur lors de la mise à jour : devise non spécifiée.";
-$MESS["IBLIST_CHPRICE_ERROR_WRONG_VALUE_SIMPLE_ELEMENTS"] = "Erreur lors de la mise à jour : la nouvelle valeur du produit [##ID#] \"#NAME#\" est inférieure ou égale à zéro.";
-$MESS["IBLIST_CHPRICE_ERROR_PRICE_WITH_EXTRA_SIMPLE_ELEMENTS"] = "Erreur lors de la mise à jour de [##ID#] \"#NAME#\" : impossible de modifier le prix défini comme surtaxe jusqu'au prix de base.";
-$MESS["IBLIST_CHPRICE_ERROR_BASE_FROM_EXTRA_SIMPLE_ELEMENTS"] = "Erreur lors de la mise à jour de [##ID#] \"#NAME#\" : impossible de calculer le prix de base en utiliser la surtaxe et le prix spécifié.";
-$MESS["IBLIST_CHPRICE_ERROR_WRONG_VALUE_SKU_ELEMENTS"] = "Erreur lors de la mise à jour : la nouvelle valeur de l'UGS [##ID#] \"#NAME#\" est inférieure ou égale à zéro.";
-$MESS["IBLIST_CHPRICE_ERROR_PRICE_WITH_EXTRA_SKU_ELEMENTS"] = "Erreur lors de la mise à jour de l'UGS [##ID#] \"#NAME#\" : impossible de modifier le prix défini comme surtaxe jusqu'au prix de base.";
-$MESS["IBLIST_CHPRICE_ERROR_BASE_FROM_EXTRA_SKU_ELEMENTS"] = "Erreur lors de la mise à jour de l'UGS [##ID#] \"#NAME#\" : impossible de calculer le prix de base en utiliser la surtaxe et le prix spécifié.";
-$MESS["IBEL_CATALOG_AVAILABLE_TITLE_EXT"] = "Disponibilité du produit (différent de disponible à l'achat)";
 ?>

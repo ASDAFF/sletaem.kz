@@ -1,4 +1,7 @@
 <?
+$MESS["F_PS_MODE_DOCUMENT"] = "Шаблон документа";
+$MESS["F_PS_MODE_DOCUMENT_ADD"] = "Додати шаблон";
+$MESS["SALE_PSE_ERROR_IMAGE_ERROR"] = "Помилка при завантаженні #SETTING_NAME#. Спробуйте, наприклад, завантажити в іншому форматі.<br>";
 $MESS["SALE_EDIT_RECORD"] = "Зміна платіжної системи # #ID#";
 $MESS["SALE_NEW_RECORD"] = "Нова платіжна система";
 $MESS["SALE_RECORDS_LIST"] = "До списку платіжних систем";

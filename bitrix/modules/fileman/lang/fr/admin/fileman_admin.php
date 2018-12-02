@@ -1,4 +1,6 @@
 <?
+$MESS["FILEMAN_SEARCH"] = "Recherche";
+$MESS["FILEMAN_SEARCH_TITLE"] = "Recherche et substitution dans les fichiers et les dossiers (Ctrl + F)";
 $MESS["FILEMAN_ADMIN_NEW_FOLDER"] = "Créer un nouveau dossier";
 $MESS["FILEMAN_ADMIN_NEW_FILE"] = "Création d'un nouveau fichier";
 $MESS["FILEMAN_ADMIN_FILE_UPLOAD"] = "Charger à partir du fichier";
@@ -72,9 +74,7 @@ $MESS["FILEMAN_FILE"] = "Fichier";
 $MESS["FILEMAN_REAL_FILE_NAME"] = "Nom du fichier (dossier)";
 $MESS["FILEMAN_DOWNLOAD"] = "Télécharger";
 $MESS["FILEMAN_PAGES"] = "Affiché";
-$MESS["FILEMAN_SEARCH"] = "Recherche";
 $MESS["FILEMAN_NEW_SEARCH"] = "Nouvelle recherche";
-$MESS["FILEMAN_SEARCH_TITLE"] = "Recherche et substitution dans les fichiers et les dossiers (Ctrl + F)";
 $MESS["FILEMAN_SEARCH_RES"] = "Résultats de recherche";
 $MESS["FILEMAN_REPLACE_RES"] = "Les résultats du remplacement";
 $MESS["FILEMAN_GO_BACK"] = "Retour au dossier";

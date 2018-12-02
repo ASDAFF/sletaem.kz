@@ -1,4 +1,5 @@
 <?
+$MESS["REST_SCOPE_USERCONSENT"] = "Agreements";
 $MESS["REST_SCOPE_LISTS"] = "Lists";
 $MESS["REST_SCOPE_BIZPROC"] = "Business Processes";
 $MESS["REST_SCOPE_CRM"] = "CRM";

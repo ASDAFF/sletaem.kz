@@ -1,4 +1,8 @@
 <?
+$MESS["F_SEARCH"] = "Rechercher:";
+$MESS["main_mess_admin_lang"] = "Langue";
+$MESS["main_mess_admin_lang1"] = "Langue";
+$MESS["main_mess_admin_lang2"] = "Langue :";
 $MESS["F_FILTER_ALL"] = "(partout)";
 $MESS["ALL"] = "(partout)";
 $MESS["MAIN_ALL"] = "(partout)";
@@ -23,7 +27,6 @@ $MESS["F_ID"] = "ID";
 $MESS["CHANGE"] = "Date de modification";
 $MESS["MAIN_ADMIN_MENU_EDIT"] = "Editer";
 $MESS["MAIN_F_TO"] = "A qui:";
-$MESS["F_SEARCH"] = "Recherche:";
 $MESS["NO"] = "non";
 $MESS["MAIN_NO"] = "non";
 $MESS["F_FROM"] = "Expéditeur";
@@ -63,7 +66,4 @@ $MESS["F_CONTENT"] = "Template contenu";
 $MESS["F_TYPE"] = "Email type d'événement";
 $MESS["MAIN_F_EVENT_TYPE"] = "Type de l'événement:";
 $MESS["MAIN_F_BODY_TYPE"] = "Le type de l'organisme:";
-$MESS["main_mess_admin_lang"] = "Langue";
-$MESS["main_mess_admin_lang1"] = "Langue";
-$MESS["main_mess_admin_lang2"] = "Langue :";
 ?>

@@ -1,4 +1,5 @@
 <?
+$MESS["SOD_HIST_IMPORTANT_TYPES"] = "Afficher les actions importantes";
 $MESS["SOD_HIST_NULL"] = "Aucune mise-à-jour à cette commande.";
 $MESS["SOD_HIST_H_DATE"] = "Date de modification";
 $MESS["SOD_HIST_H_USER"] = "Utilisateur";
@@ -52,5 +53,4 @@ $MESS["SOD_HIST_ENTITY_ID"] = "ID de l'entité";
 $MESS["SOD_HIST_ENTITY_SHIPMENT"] = "Expédition";
 $MESS["SOD_HIST_ENTITY_PAYMENT"] = "Paiement";
 $MESS["SOD_HIST_ALL"] = "(Tous)";
-$MESS["SOD_HIST_IMPORTANT_TYPES"] = "Afficher les actions importantes";
 ?>

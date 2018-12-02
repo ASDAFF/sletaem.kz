@@ -14,6 +14,6 @@ $MESS["PM_TITLE_NEW"] = "Нове повідомлення";
 $MESS["PM_FOLDER_ID_3"] = "Відправлені";
 $MESS["PM_TITLE_NAV"] = "Персональні повідомлення";
 $MESS["PM_USER_NOT_FOUND"] = "Користувач з ім'ям &laquo;##&raquo; не знайдений.";
-$MESS["F_MESSAGE_NOT_FOUND"] = "Повідомлення не знайдено.";
+$MESS["F_MESSAGE_NOT_FOUND"] = "Повідомлення не знайдене.";
 $MESS["F_NO_PM"] = "Персональні повідомлення відключені.";
 ?>

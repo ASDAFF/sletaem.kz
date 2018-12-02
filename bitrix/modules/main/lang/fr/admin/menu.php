@@ -1,4 +1,13 @@
 <?
+$MESS["MAIN_MENU_HTTPS"] = "Configuration HTTPS";
+$MESS["MAIN_MENU_HTTPS_ALT"] = "Configuration HTTPS du site";
+$MESS["MAIN_MENU_GEOIP_HANDLERS"] = "Géolocalisation";
+$MESS["MAIN_MENU_USER_CONSENT"] = "Consentements";
+$MESS["MAIN_MENU_COMPOSITE_SETTINGS"] = "Paramètres";
+$MESS["MAIN_MENU_COMPOSITE_PAGES"] = "Pages";
+$MESS["MAIN_MENU_COMPOSITE_PAGES_ALT"] = "Pages composites";
+$MESS["MAIN_MENU_COMPOSITE_LOG"] = "Journal de débogage";
+$MESS["MAIN_MENU_COMPOSITE_LOG_ALT"] = "Afficher les messages de débogage";
 $MESS["MAIN_MENU_CAPTCHA"] = "CAPTCHA";
 $MESS["MAIN_MENU_UPDATES_MARKET"] = "Marketplace";
 $MESS["MAIN_MENU_UPDATES_MARKET_ALT"] = "Marketplace";
@@ -128,13 +137,4 @@ $MESS["MAIN_MENU_LANG"] = "Langues de l'interface";
 $MESS["MAIN_MENU_EVENT_THEMES_TITLE"] = "Thème visuel:";
 $MESS["MAIN_MENU_SMILE_GALLERY_LIST"] = "Galeries et packs";
 $MESS["MAIN_MENU_SMILE_GALLERY_LIST_ALT"] = "Gérer les galeries et packs d'émoticônes";
-$MESS["MAIN_MENU_HTTPS"] = "Configuration HTTPS";
-$MESS["MAIN_MENU_HTTPS_ALT"] = "Configuration HTTPS du site";
-$MESS["MAIN_MENU_GEOIP_HANDLERS"] = "Géolocalisation";
-$MESS["MAIN_MENU_USER_CONSENT"] = "Consentements";
-$MESS["MAIN_MENU_COMPOSITE_SETTINGS"] = "Paramètres";
-$MESS["MAIN_MENU_COMPOSITE_PAGES"] = "Pages";
-$MESS["MAIN_MENU_COMPOSITE_PAGES_ALT"] = "Pages composites";
-$MESS["MAIN_MENU_COMPOSITE_LOG"] = "Journal de débogage";
-$MESS["MAIN_MENU_COMPOSITE_LOG_ALT"] = "Afficher les messages de débogage";
 ?>

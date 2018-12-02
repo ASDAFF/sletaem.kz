@@ -1,4 +1,12 @@
 <?
+$MESS["MAIN_AGENT_LIST_DATE_CHECK"] = "Vérifier la date";
+$MESS["MAIN_AGENT_LIST_RUNNING"] = "En cours d'exécution";
+$MESS["MAIN_AGENT_LIST_PERIODICAL"] = "Mode d'exécution";
+$MESS["MAIN_AGENT_LIST_PERIODICAL_TIME"] = "Heure exacte";
+$MESS["MAIN_AGENT_LIST_PERIODICAL_INTERVAL"] = "Intervalles régulières";
+$MESS["MAIN_AGENT_FLT_PERIODICAL1"] = "Mode d'exécution :";
+$MESS["MAIN_AGENT_FLT_PERIODICAL_INTERVAL"] = "Intervalles régulières";
+$MESS["MAIN_AGENT_FLT_PERIODICAL_TIME"] = "Heure exacte";
 $MESS["MAIN_ALL"] = "(partout)";
 $MESS["MAIN_AGENT_ID"] = "ID";
 $MESS["MAIN_AGENT_FLT_USER_ID"] = "Identifiant de l'utilisateur";
@@ -37,12 +45,4 @@ $MESS["MAIN_AGENT_FLT_IS_PERIOD"] = "Périodique";
 $MESS["MAIN_AGENT_PAGE_TITLE"] = "Liste des agents";
 $MESS["MAIN_AGENT_LIST_PAGE"] = "Liste des agents:";
 $MESS["MAIN_AGENT_NAME"] = "Fonction Agent";
-$MESS["MAIN_AGENT_LIST_DATE_CHECK"] = "Vérifier la date";
-$MESS["MAIN_AGENT_LIST_RUNNING"] = "En cours d'exécution";
-$MESS["MAIN_AGENT_LIST_PERIODICAL"] = "Mode d'exécution";
-$MESS["MAIN_AGENT_LIST_PERIODICAL_TIME"] = "Heure exacte";
-$MESS["MAIN_AGENT_LIST_PERIODICAL_INTERVAL"] = "Intervalles régulières";
-$MESS["MAIN_AGENT_FLT_PERIODICAL1"] = "Mode d'exécution :";
-$MESS["MAIN_AGENT_FLT_PERIODICAL_INTERVAL"] = "Intervalles régulières";
-$MESS["MAIN_AGENT_FLT_PERIODICAL_TIME"] = "Heure exacte";
 ?>

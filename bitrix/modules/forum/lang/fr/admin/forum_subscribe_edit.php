@@ -1,9 +1,9 @@
 <?
+$MESS["FM_FLT_SEARCH"] = "Rechercher";
 $MESS["FM_HEAD_ID"] = "ID";
 $MESS["FM_WRONG_DATE_FROM"] = "Veuillez saisir dans le filtre ' Date de création' exacte 'du'";
 $MESS["FM_WRONG_DATE_TO"] = "Veuillez saisir dans le filtre une 'Date de création' exacte 'jusqu'au'";
 $MESS["FM_FLT_SEARCH_TITLE"] = "Veuillez saisir la phrase à rechercher";
-$MESS["FM_FLT_SEARCH"] = "Recherche";
 $MESS["FSUBSC_NO_SPERMS"] = "Vous ne disposez pas des droits nécessaires pour modifier l'abonnement.";
 $MESS["FM_HEAD_LAST_SEND"] = "Dernier message";
 $MESS["FM_LIST_USER"] = "Liste des utilisateurs";

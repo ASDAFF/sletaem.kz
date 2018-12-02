@@ -1,4 +1,7 @@
 <?
+$MESS["TR_SEARCH"] = "Recherche";
+$MESS["TR_SEARCH_TITLE"] = "Recherche";
+$MESS["TR_UPDATE_LANG_FILES"] = "mettre à jour les messages existants";
 $MESS["TRANS_BACK"] = "Précédent";
 $MESS["TRANS_TOTAL"] = "Total";
 $MESS["TRANS_TOTAL_MESSAGES"] = "Total des billets";
@@ -11,8 +14,6 @@ $MESS["TR_FOLDER_TITLE"] = "Cliquez pour passer dans le dossier";
 $MESS["TR_NEW_SEARCH"] = "Nouvelle recherche";
 $MESS["TRANS_GO"] = "Aller";
 $MESS["TR_PATH_GO"] = "Accéder au Dossier";
-$MESS["TR_SEARCH"] = "Recherche";
-$MESS["TR_SEARCH_TITLE"] = "Recherche";
 $MESS["TR_CHECK_FILES_TITLE"] = "Recherche des lignes superflues dans la fin du fichier";
 $MESS["TR_FILE_SHOW"] = "Afficher le code PHP";
 $MESS["TR_CHECK_FILES_TEXT"] = "Vérification des fichiers";
@@ -38,5 +39,4 @@ $MESS["TR_CSV_UPLOAD_OK"] = "Le fichier a été importé avec succès.";
 $MESS["TR_DOWNLOAD_CSV_TITLE"] = "Exporter des messages vers un fichier CSV";
 $MESS["TRANS_FILE_NAME"] = "Nom de fichier/dossier";
 $MESS["CONFRIM_REWRITE_LANG_FILES"] = "Attention! Les chaînes existantes qui ne sont pas trouvés dans le fichier importé sera supprimé. Êtes-vous sûr que vous voulez remplacer le contenu des fichiers de localisation complètement?";
-$MESS["TR_UPDATE_LANG_FILES"] = "mettre à jour les messages existants";
 ?>

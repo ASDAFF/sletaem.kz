@@ -1,5 +1,4 @@
 <?
-$MESS["MAIN_KANBAN_NO_DATA"] = "Não há dados atualmente nesta página.";
 $MESS["MAIN_KANBAN_REMOVE_COLUMN_CONFIRM_TITLE"] = "Confirmar Exclusão";
 $MESS["MAIN_KANBAN_REMOVE_COLUMN_CONFIRM_DESC"] = "Tem certeza de que deseja excluir a coluna?";
 $MESS["MAIN_KANBAN_REMOVE_BUTTON"] = "Excluir";
@@ -10,4 +9,5 @@ $MESS["MAIN_KANBAN_ERROR"] = "Erro";
 $MESS["MAIN_KANBAN_RELOAD"] = "Recarregar página";
 $MESS["MAIN_KANBAN_ERROR_OK"] = "OK";
 $MESS["MAIN_KANBAN_DROPZONE_CANCEL"] = "Cancelar";
+$MESS["MAIN_KANBAN_NO_DATA"] = "Não há dados atualmente nesta página.";
 ?>

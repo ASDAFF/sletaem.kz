@@ -131,6 +131,9 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/lib/loader.php");
 	)
 );
 
+// old class names compatibility
+require_once $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/compatibility.php";
+
 function getmicrotime()
 {
 	list($usec, $sec) = explode(" ", microtime());

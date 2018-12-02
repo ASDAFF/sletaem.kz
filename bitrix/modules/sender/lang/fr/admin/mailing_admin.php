@@ -1,4 +1,5 @@
 <?
+$MESS["rub_f_chain_name"] = "Objet du message";
 $MESS["rub_edit"] = "Modifier";
 $MESS["rub_title"] = "Des bulletins d'information";
 $MESS["rub_del_err"] = "Impossible de supprimer newsletter.";
@@ -36,5 +37,4 @@ $MESS["rub_f_is_public"] = "Disponible sous forme d'abonnement";
 $MESS["rub_sort"] = "Tri";
 $MESS["rub_is_public"] = "Abonnement";
 $MESS["sender_mailing_trig_adm_detbut_chain"] = "Messages";
-$MESS["rub_f_chain_name"] = "Objet du message";
 ?>

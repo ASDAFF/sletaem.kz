@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_SDL_UPPER_LEVELL"] = "Без групи";
 $MESS["SALE_SDL_ERROR_DELETE"] = "Помилка видалення служби доставки. Можливо до цієї службі прив'язані замовлення.<br>";
 $MESS["SALE_SDL_ERROR_UPDATE"] = "Помилка оновлення служби доставки.";
 $MESS["SALE_SDL_PRLIST"] = "Служби доставки";
@@ -41,4 +42,6 @@ $MESS["SALE_SDL_SITES"] = "Сайти";
 $MESS["SALE_SDL_FILTER_SITE"] = "Сайт";
 $MESS["SALE_SDL_MARKETPLACE_ADD_NEW"] = "Встановити з Маркетплейс";
 $MESS["SALE_SDL_MARKETPLACE_ADD_NEW_ALT"] = "Натисніть для встановлення з Маркетплейс";
+$MESS["SALE_SDL_VAT_ID"] = "Ставка ПДВ";
+$MESS["SALE_SDL_NO_VAT"] = "Без ПДВ";
 ?>

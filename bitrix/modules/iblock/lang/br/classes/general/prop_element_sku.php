@@ -1,4 +1,5 @@
 <?
+$MESS["BT_UT_SKU_DESCRIPTION"] = "Link para itens de produtos (SKU)";
 $MESS["BT_UT_SKU_DESCR"] = "SKU";
 $MESS["BT_UT_SKU_SETTING_TITLE"] = "Configurações SKU";
 $MESS["BT_UT_SKU_SETTING_IBLOCK_MESS"] = "Usar texto de botão especificado \"Adicionar\" nos parâmetros do bloco de informação";
@@ -13,5 +14,4 @@ $MESS["BT_UT_SKU_SETTING_BAN_SYMBOLS"] = "Substituir caracteres não permitidos"
 $MESS["BT_UT_SKU_SETTING_REP_SYMBOL"] = "Mostrar caracteres não permitidos como";
 $MESS["BT_UT_SKU_MESS_NEW_ELEMENT"] = "Adicionar SKU";
 $MESS["BT_UT_SKU_MESS_NEW_ELEMENT_DESCR"] = "Adicionar um novo SKU e selecione-o";
-$MESS["BT_UT_SKU_DESCRIPTION"] = "Link para itens de produtos (SKU)";
 ?>

@@ -1,4 +1,7 @@
 <?
+$MESS["SALE_EBAY_W_USER_INFO_ERROR"] = "Impossible de récupérer les données d'utilisateur d'eBay.";
+$MESS["SALE_EBAY_W_PAYMENT_METHOD_ERROR"] = "Seul PayPal peut être utilisé pour les paiements eBay. Actuellement, \"#PAYMENT_METHOD#\" est sélectionné.";
+$MESS["SALE_EBAY_W_SITE_ERROR"] = "L'utilisateur doit être lié à l'ID du site eBay en tant que \"Russie\". L'utilisateur est actuellement lié au site \"#SITE#\".";
 $MESS["SALE_EBAY_W_TITLE"] = "Assistant de connexion à eBay";
 $MESS["SALE_EBAY_W_ERROR"] = "Erreur";
 $MESS["SALE_EBAY_W_SALE_NOT_INSTALLED"] = "Le module e-Store n'est pas installé.";
@@ -91,7 +94,4 @@ $MESS["SALE_EBAY_W_STEP_DEFAULT_POLICY_DESCR"] = "Sélectionnez les politiques d
 $MESS["SALE_EBAY_W_STEP_DEFAULT_POLICY_P"] = "Politiques de paiement";
 $MESS["SALE_EBAY_W_STEP_DEFAULT_POLICY_S"] = "Politiques de livraison";
 $MESS["SALE_EBAY_W_STEP_DEFAULT_POLICY_R"] = "Politiques de renvoi";
-$MESS["SALE_EBAY_W_USER_INFO_ERROR"] = "Impossible de récupérer les données d'utilisateur d'eBay.";
-$MESS["SALE_EBAY_W_PAYMENT_METHOD_ERROR"] = "Seul PayPal peut être utilisé pour les paiements eBay. Actuellement, \"#PAYMENT_METHOD#\" est sélectionné.";
-$MESS["SALE_EBAY_W_SITE_ERROR"] = "L'utilisateur doit être lié à l'ID du site eBay en tant que \"Russie\". L'utilisateur est actuellement lié au site \"#SITE#\".";
 ?>

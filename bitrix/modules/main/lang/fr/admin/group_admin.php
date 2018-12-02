@@ -1,4 +1,5 @@
 <?
+$MESS["MAIN_FLT_SEARCH"] = "Rechercher";
 $MESS["ALL"] = "(partout)";
 $MESS["MAIN_ALL"] = "(partout)";
 $MESS["MAIN_F_ID"] = "ID:";
@@ -22,7 +23,6 @@ $MESS["MAIN_ADMIN_MENU_EDIT"] = "Editer";
 $MESS["CHANGE_GROUP"] = "Modifiez les paramètres du groupe";
 $MESS["F_NAME"] = "Dénomination:";
 $MESS["NAME"] = "Dénomination";
-$MESS["MAIN_FLT_SEARCH"] = "Recherche";
 $MESS["NO"] = "non";
 $MESS["MAIN_NO"] = "non";
 $MESS["MAIN_F_DESCRIPTION"] = "Description";

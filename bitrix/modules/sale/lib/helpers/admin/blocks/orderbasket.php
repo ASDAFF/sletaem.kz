@@ -389,8 +389,7 @@ class OrderBasket
 			"SALE_ORDER_BASKET_PROD_MENU_EDIT", "SALE_ORDER_BASKET_PROD_MENU_DELETE", "SALE_ORDER_BASKET_BASE_CATALOG_PRICE",
 			"SALE_ORDER_BASKET_PROD_EDIT_ITEM_SAVE", "SALE_ORDER_BASKET_KG", "SALE_ORDER_BASKET_COUPON",
 			"SALE_ORDER_BASKET_COUPON_STATUS", "SALE_ORDER_BASKET_COUPON_APPLY", "SALE_ORDER_BASKET_COUPON_DELETE",
-			"SALE_ORDER_BASKET_POSITION_EXISTS", "SALE_ORDER_BASKET_ADD_COUPON_ERROR", "SALE_ORDER_BASKET_NO_NAME",
-			"SALE_ORDER_BASKET_PRODUCT_UNACTIVE"
+			"SALE_ORDER_BASKET_POSITION_EXISTS", "SALE_ORDER_BASKET_ADD_COUPON_ERROR", "SALE_ORDER_BASKET_NO_NAME"
 		);
 		$result = '<script type="text/javascript">';
 
@@ -561,13 +560,18 @@ class OrderBasket
 		return $result;
 	}
 
+	public function getOffersSkuParams(array $productsParams, array $visibleColumns = array())
+	{
+		return static::getOffersSkuParamsMode($productsParams, $visibleColumns, $this->mode);
+	}
+
 	/**
 	 * @param array $productsParams
 	 * @param array $visibleColumns
 	 * @return array
 	 * @throws Main\LoaderException
 	 */
-	public function getOffersSkuParams(array $productsParams, array $visibleColumns = array())
+	public static function getOffersSkuParamsMode(array $productsParams, array $visibleColumns = array(), $mode = 0)
 	{
 		if(!empty($productsParams["ITEMS"]) && is_array($productsParams["ITEMS"]))
 		{
@@ -590,7 +594,7 @@ class OrderBasket
 
 				$productIds[] = $params['PRODUCT_ID'];
 
-				if ($this->mode == self::VIEW_MODE)
+				if ($mode == self::VIEW_MODE)
 				{
 					if ((int)$params['OFFER_ID'] > 0)
 					{
@@ -760,7 +764,7 @@ class OrderBasket
 					}
 				}
 
-				if($this->mode == self::EDIT_MODE && $params['PRODUCT_ID'] != $params['OFFER_ID'])
+				if($mode == self::EDIT_MODE && $params['PRODUCT_ID'] != $params['OFFER_ID'])
 				{
 					if(is_array(self::$iblockPropsParams[$params["OFFERS_IBLOCK_ID"]]))
 						$skuOrder = array_keys(self::$iblockPropsParams[$params["OFFERS_IBLOCK_ID"]]);
@@ -778,7 +782,7 @@ class OrderBasket
 
 			unset($params, $iblockPropsUsed);
 
-			if($this->mode == self::EDIT_MODE && !empty($possibleSkuParams))
+			if($mode == self::EDIT_MODE && !empty($possibleSkuParams))
 			{
 				$possibleSkuProps = Sale\Helpers\Admin\SkuProps::getPossibleSkuPropsValues($possibleSkuParams);
 
@@ -1201,16 +1205,18 @@ class OrderBasket
 
 	protected function getPropsList($iblockId, $skuPropertyId = 0)
 	{
-		$arResult = array();
+		if (self::$catalogIncluded === null)
+			self::$catalogIncluded = Main\Loader::includeModule('catalog');
+		if (!self::$catalogIncluded)
+			return [];
+
+		$propertyIds = Catalog\Product\PropertyCatalogFeature::getOfferTreePropertyCodes($iblockId);
+		if ($propertyIds === null)
+			return [];
+		$arResult = [];
 		$filter = array(
+			'@ID' => $propertyIds,
 			'=IBLOCK_ID' => $iblockId,
-			'=ACTIVE' => 'Y',
-			'@PROPERTY_TYPE' => array(
-				Iblock\PropertyTable::TYPE_STRING,
-				Iblock\PropertyTable::TYPE_LIST,
-				Iblock\PropertyTable::TYPE_ELEMENT
-			),
-			'=MULTIPLE' => 'N'
 		);
 		if ($skuPropertyId > 0)
 			$filter['!=ID'] = $skuPropertyId;
@@ -1225,8 +1231,6 @@ class OrderBasket
 		while ($row = $iterator->fetch())
 		{
 			$row['USER_TYPE'] = (string)$row['USER_TYPE'];
-			if ($row['PROPERTY_TYPE'] == Iblock\PropertyTable::TYPE_STRING && $row['USER_TYPE'] != 'directory')
-				continue;
 			$row['~NAME'] = $row['NAME'];
 			$row['NAME'] = htmlspecialcharsEx($row['NAME']);
 			$row['PROPERTY_USER_TYPE'] = ($row['USER_TYPE'] != '' ? \CIBlockProperty::getUserType($row['USER_TYPE']) : array());
@@ -1446,26 +1450,7 @@ class OrderBasket
 
 	public static function getCatalogMeasures()
 	{
-		static $result = null;
-
-		if(!is_array($result))
-		{
-			$result = array();
-
-			if (self::$catalogIncluded === null)
-				self::$catalogIncluded = Main\Loader::includeModule('catalog');
-			if (self::$catalogIncluded)
-			{
-				$dbList = \CCatalogMeasure::getList();
-				while($arList = $dbList->Fetch())
-					$result[$arList["CODE"]] = ($arList["SYMBOL_RUS"] != '' ? $arList["SYMBOL_RUS"] : $arList["SYMBOL_INTL"]);
-			}
-
-			if (empty($result))
-				$result[796] = GetMessage("SALE_ORDER_BASKET_SHTUKA");
-		}
-
-		return $result;
+		return \Bitrix\Sale\Helpers\Order\Builder\BasketBuilder::getCatalogMeasures();
 	}
 
 	public static function getDefaultMeasures()
@@ -2056,8 +2041,6 @@ class OrderBasket
 						if (!empty($providerData[$basketCode]))
 						{
 							\Bitrix\Sale\Helpers\Admin\OrderEdit::setProviderTrustData($item, $this->order, $providerData[$basketCode]);
-
-							$params["PRODUCT_ACTIVE"] = $providerData[$basketCode]['ACTIVE'];
 							$params["PROVIDER_DATA"] = serialize($providerData[$basketCode]);
 						}
 					}
@@ -2068,7 +2051,6 @@ class OrderBasket
 
 					if(is_array($providerData) && !empty($providerData))
 					{
-						$params["PRODUCT_ACTIVE"] = $providerData[$basketCode]['ACTIVE'];
 						$params["PROVIDER_DATA"] = serialize($providerData);
 					}
 				}

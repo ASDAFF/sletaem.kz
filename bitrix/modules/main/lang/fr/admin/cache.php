@@ -60,7 +60,7 @@ $MESS["main_cache_files_delete_errors"] = "Erreur de suppression: #value#";
 $MESS["cache_admin_note2"] = "Après la suppression des fichiers de cache les données affichées seront mises à jour jusqu'à l'état actuel.
 Les nouveaux fichiers de cache seront créés au fur et à mesure que les pages avec les régions mises en cache sont consultées.";
 $MESS["main_cache_files_continue"] = "Continuer";
-$MESS["MAIN_OPTION_HTML_CACHE_STAT_MISSES"] = "Echecs de mise en cache";
+$MESS["MAIN_OPTION_HTML_CACHE_STAT_MISSES"] = "Échecs de mise en cache";
 $MESS["main_cache_files_scanned_size"] = "Taille des fichiers traités: #value#";
 $MESS["main_cache_files_deleted_size"] = "Taille de fichiers supprimés: #value#";
 $MESS["MAIN_OPTION_HTML_CACHE_STAT"] = "Statistique";

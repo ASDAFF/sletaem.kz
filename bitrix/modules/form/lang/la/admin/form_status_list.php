@@ -4,6 +4,7 @@ $MESS["FORM_NOT_FOUND"] = "Formulario Web no encontrado";
 $MESS["FORM_ERROR"] = "Error! ";
 $MESS["FORM_PAGE_TITLE"] = "Lista de estatus para los rsultados del formulario # #ID#";
 $MESS["FORM_FORM_EDIT"] = "Parámetros del formulario # #ID#";
+$MESS["FORM_EDIT_ALT"] = "Cambiar parámetros de estatus";
 $MESS["FORM_FORM_NAME"] = "Formulario:";
 $MESS["FORM_F_ACTIVE"] = "Activo:";
 $MESS["FORM_F_TITLE"] = "Título:";
@@ -25,5 +26,4 @@ $MESS["FORM_FL_RESULTS"] = "Contar resultados";
 $MESS["FORM_FORM_EDIT_TITLE"] = "Modificar parámetros del formulario";
 $MESS["FORM_STATUS_DELETE"] = "Borrar";
 $MESS["FORM_STATUS_DELETE_ALT"] = "Borrar estado";
-$MESS["FORM_EDIT_ALT"] = "Cambiar parámetros de estatus";
 ?>

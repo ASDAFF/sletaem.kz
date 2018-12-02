@@ -1,4 +1,6 @@
 <?
+$MESS["user_edit_lang_not_set"] = "(non défini)";
+$MESS["user_edit_lang"] = "Langue des notifications :";
 $MESS["ACCOUNT_INSERT"] = "L'administrateur vous a bien inscrit sur le site";
 $MESS["ACCOUNT_UPDATE"] = "L'administrateur du site a modifié vos données d'inscription.";
 $MESS["EDIT_USER_TITLE"] = "Utilisateur # #ID#";
@@ -105,6 +107,4 @@ $MESS["main_profile_decode_err"] = "Erreur du décodage du mot de passe (#ERRCOD
 $MESS["USER_EDIT_DATE_REGISTER"] = "Date d'inscription:";
 $MESS["MAIN_USER_EDIT_EXT"] = "Code externe:";
 $MESS["USER_EDIT_TITLE"] = "Formule d'appel:";
-$MESS["user_edit_lang_not_set"] = "(non défini)";
-$MESS["user_edit_lang"] = "Langue des notifications :";
 ?>

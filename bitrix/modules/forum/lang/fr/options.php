@@ -1,4 +1,7 @@
 <?
+$MESS["F_SEARCH_HEADER"] = "Recherche";
+$MESS["FORUM_USER_EDIT_OWN_POST_Y"] = "tous les messages propres";
+$MESS["FORUM_USER_EDIT_OWN_POST_N"] = "dernier message du fil";
 $MESS["del"] = "Supprimer";
 $MESS["FR_ADMINISTRATOR"] = "Administrateur";
 $MESS["FORUM_GG_SHOW_VOTE"] = "Activer le système de points";
@@ -15,7 +18,6 @@ $MESS["FO_USEPMVERSION"] = "Ne pas utiliser les messages personnels";
 $MESS["DICTIONARY_NONE"] = "N'a pas été installé";
 $MESS["F_PARSER_LINK_TARGET"] = "Ouvrir les liens dans une nouvelle fenêtre (target = '_blank')";
 $MESS["MAIN_RESTORE_DEFAULTS"] = "par défaut";
-$MESS["F_SEARCH_HEADER"] = "Recherche";
 $MESS["FORUM_USER_SHOW_NAME"] = "Afficher le nom de l'utilisateur (par défaut pours les nouveaux utilisateurs)";
 $MESS["FR_USER"] = "Utilisateur";
 $MESS["FORUM_USER_EDIT_OWN_POST"] = "Autoriser la modification de vos messages:";
@@ -49,6 +51,4 @@ $MESS["TOPICS_PER_PAGE"] = "Sujets par page";
 $MESS["FR_ADMIN"] = "Administrateur";
 $MESS["FORUM_OPTIONS_SMILE_GALLERY_ID"] = "Galerie du forum";
 $MESS["FORUM_OPTIONS_SMILE_SET_ID"] = "Émoticônes du forum";
-$MESS["FORUM_USER_EDIT_OWN_POST_Y"] = "tous les messages propres";
-$MESS["FORUM_USER_EDIT_OWN_POST_N"] = "dernier message du fil";
 ?>

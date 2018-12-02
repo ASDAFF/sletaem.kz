@@ -238,4 +238,5 @@ $MESS["SALE_BASKET_PUBLIC_BEHAVIOR_TITLE"] = "Preferencias del carrito de compra
 $MESS["SALE_BLOCK_CHECK_TITLE"] = "Preferencias de impresión de recibos";
 $MESS["SALE_USE_ADVANCE_CHECK_BY_DEFAULT"] = "Imprimir recibo anticipado al recibir el pago";
 $MESS["SALE_BASKET_REFRESH_GAP"] = "Actualizar carrito de compras después (seg.)";
+$MESS["SALE_ORDER_HISTORY_ACTION_LOG_LEVEL"] = "Habilite el registro detallado de ordenes:";
 ?>

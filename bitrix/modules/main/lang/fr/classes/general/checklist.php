@@ -1,4 +1,20 @@
 <?
+$MESS["CL_WENV"] = "Environnement internet";
+$MESS["CL_QWE0010"] = "Votre version de Bitrix Virtual Appliance est à jour";
+$MESS["CL_QWE0020"] = "Vérifier le portail intranet";
+$MESS["CL_QWE0030"] = "Vérification complète du système";
+$MESS["CL_QSEC0090"] = "Exécuter une analyse de sécurité";
+$MESS["CL_QWE0010_DESC"] = "Votre version de Bitrix Virtual Appliance est à jour.";
+$MESS["CL_QWE0020_DESC"] = "Aucun problème n'a été détecté dans l'espace <a href=\"/bitrix/admin/site_checker.php?lang=#LANG#\" target=\"_blank\">Vérification système</a> de l'onglet \"Opérabilité intranet\".";
+$MESS["CL_QWE0030_DESC"] = "Aucun problème n'a été détecté dans l'espace <a href=\"/bitrix/admin/site_checker.php?lang=#LANG#\" target=\"_blank\">Vérification système</a> des onglets \"Vérification de la configuration\", \"Vérification des accès (complète)\".";
+$MESS["CL_QSEC0090_DESC"] = "Aucun problème n'a été détecté dans l'espace \"Paramètres > Protection proactive > <a href=\"/bitrix/admin/security_scanner.php\" target=\"_blank\">Analyse de sécurité</a>\". Les résultats de l'analyse de sécurité ne sont pas périmés.";
+$MESS["CL_VMBITRIX_ACTUAL"] = "Votre version de Bitrix Virtual Appliance est à jour.";
+$MESS["CL_VMBITRIX_NOT_ACTUAL"] = "Votre version de Bitrix Virtual Appliance doit être mise à jour.";
+$MESS["CL_SITECHECKER_OK"] = "Aucun problème n'a été détecté dans l'espace <a href=\"/bitrix/admin/site_checker.php?lang=#LANG#\" target=\"_blank\">Vérification système</a>.";
+$MESS["CL_SITECHECKER_NOT_OK"] = "Des problèmes ont été détectés dans l'espace <a href=\"/bitrix/admin/site_checker.php?lang=#LANG#\" target=\"_blank\">Vérification système</a>.";
+$MESS["CL_SECURITYSCANNER_OK"] = "Aucun problème critique n'a été détecté.";
+$MESS["CL_SECURITYSCANNER_NOT_OK"] = "Des problèmes ont été détectés dans l'espace <a href=\"/bitrix/admin/security_scanner.php?lang=#LANG#\" target=\"_blank\">Analyse de sécurité</a>.";
+$MESS["CL_SECURITYSCANNER_OLD"] = "L'<a href=\"/bitrix/admin/security_scanner.php?lang=#LANG#\" target=\"_blank\">Analyse de sécurité</a> a été exécutée il y a plus de 30 jours.";
 $MESS["CL_DBDEBUG_TURN_ON"] = "\$DBDebug est vrai";
 $MESS["CL_QP0090_DESC"] = "La mise en cache HTML activé pour les petits projets, projets rarement modifiés dans le 'Paramètres / Paramètres du produit / Mise en cache automatique / cache HTML'.";
 $MESS["CL_QP0020"] = "PHP est configuré de manière optimale";
@@ -129,7 +145,7 @@ $MESS["CL_QD0120"] = "Réglages du projet - ils sont définis dans la documentat
 $MESS["CL_QH0020"] = "Les paramètres d'hébergeur web sont optimisés pour Bitrix et le projet";
 $MESS["CL_QC0150"] = "Insertions de code php ne sont pas utilisées";
 $MESS["NOT_FOUND_TEMPLATE"] = "Aucun modèle de site n'a été trouvé.";
-$MESS["CL_MODULE_VERSION_ERROR"] = "Chec de réception de la version du module #module_id#";
+$MESS["CL_MODULE_VERSION_ERROR"] = "Échec de réception de la version du module #module_id#";
 $MESS["EMPTY_NAME"] = "Nom de entreprise ou nom de l'éditeur inconnus.";
 $MESS["CL_NO_ERRORS"] = "Aucun défaut identifié. Le mot de passe de la base de données est sécurisé.";
 $MESS["CL_QS0030_DESC"] = "Le fonctionnement des interfaces 'Hermitage' est assuré avec les composants dans la partie publique pour éditer le contenu: ajouter/modifier des objets 'au dessus du site', modifier les paramètres des composants.";
@@ -203,20 +219,4 @@ $MESS["CL_QC0100_DESC"] = "Le modèle du composant est trop simple et contient d
 $MESS["CL_QC0100"] = "Les modèles des composants forment la mise en page";
 $MESS["CL_QJ0020"] = "Le noyau du projet n'a pas été modifié";
 $MESS["CL_QJ0020_DESC"] = "Le noyau du projet n'a pas été modifié. La plateforme peut être mise à jour à tout moment via le système de mise à jour sans léser la disponibilité du projet";
-$MESS["CL_WENV"] = "Environnement internet";
-$MESS["CL_QWE0010"] = "Votre version de Bitrix Virtual Appliance est à jour";
-$MESS["CL_QWE0020"] = "Vérifier le portail intranet";
-$MESS["CL_QWE0030"] = "Vérification complète du système";
-$MESS["CL_QSEC0090"] = "Exécuter une analyse de sécurité";
-$MESS["CL_QWE0010_DESC"] = "Votre version de Bitrix Virtual Appliance est à jour.";
-$MESS["CL_QWE0020_DESC"] = "Aucun problème n'a été détecté dans l'espace <a href=\"/bitrix/admin/site_checker.php?lang=#LANG#\" target=\"_blank\">Vérification système</a> de l'onglet \"Opérabilité intranet\".";
-$MESS["CL_QWE0030_DESC"] = "Aucun problème n'a été détecté dans l'espace <a href=\"/bitrix/admin/site_checker.php?lang=#LANG#\" target=\"_blank\">Vérification système</a> des onglets \"Vérification de la configuration\", \"Vérification des accès (complète)\".";
-$MESS["CL_QSEC0090_DESC"] = "Aucun problème n'a été détecté dans l'espace \"Paramètres > Protection proactive > <a href=\"/bitrix/admin/security_scanner.php\" target=\"_blank\">Analyse de sécurité</a>\". Les résultats de l'analyse de sécurité ne sont pas périmés.";
-$MESS["CL_VMBITRIX_ACTUAL"] = "Votre version de Bitrix Virtual Appliance est à jour.";
-$MESS["CL_VMBITRIX_NOT_ACTUAL"] = "Votre version de Bitrix Virtual Appliance doit être mise à jour.";
-$MESS["CL_SITECHECKER_OK"] = "Aucun problème n'a été détecté dans l'espace <a href=\"/bitrix/admin/site_checker.php?lang=#LANG#\" target=\"_blank\">Vérification système</a>.";
-$MESS["CL_SITECHECKER_NOT_OK"] = "Des problèmes ont été détectés dans l'espace <a href=\"/bitrix/admin/site_checker.php?lang=#LANG#\" target=\"_blank\">Vérification système</a>.";
-$MESS["CL_SECURITYSCANNER_OK"] = "Aucun problème critique n'a été détecté.";
-$MESS["CL_SECURITYSCANNER_NOT_OK"] = "Des problèmes ont été détectés dans l'espace <a href=\"/bitrix/admin/security_scanner.php?lang=#LANG#\" target=\"_blank\">Analyse de sécurité</a>.";
-$MESS["CL_SECURITYSCANNER_OLD"] = "L'<a href=\"/bitrix/admin/security_scanner.php?lang=#LANG#\" target=\"_blank\">Analyse de sécurité</a> a été exécutée il y a plus de 30 jours.";
 ?>

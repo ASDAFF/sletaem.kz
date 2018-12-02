@@ -23,6 +23,7 @@ $MESS["SALE_ACTIVE"] = "Activo";
 $MESS["SALE_ACTION"] = "Acciones";
 $MESS["SALE_EDIT"] = "Modificar";
 $MESS["SALE_DELETE"] = "Eliminar";
+$MESS["SALE_CONFIRM_DEL_MESSAGE"] = "¿Está seguro que desea eliminar el servicio de entrega? Si este servicio contiene órdenes, el servicio no será eliminado.";
 $MESS["SALE_PRLIST"] = "Servicios de entrega";
 $MESS["SALE_F_LOCATION"] = "Ubicación";
 $MESS["SALE_YES"] = "Si";
@@ -38,7 +39,6 @@ $MESS["SDAN_ERROR_DELETE"] = "Error eliminando el servicio de entrega";
 $MESS["SDAN_ERROR_UPDATE"] = "Error al modificar el servicio de entrega";
 $MESS["SDAN_ADD_NEW"] = "Nuevo servicio de entrega";
 $MESS["SDAN_ADD_NEW_ALT"] = "Click para agregar un nuevo servicio de entrega";
-$MESS["SALE_CONFIRM_DEL_MESSAGE"] = "¿Está seguro que desea eliminar el servicio de entrega? Si este servicio contiene órdenes, el servicio no será eliminado.";
 $MESS["SDAN_HANDLERS"] = "Envío automático";
 $MESS["SDAN_HANDLERS_ALT"] = "Editar servicio de envío automático";
 ?>

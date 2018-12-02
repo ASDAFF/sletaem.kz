@@ -1,4 +1,5 @@
 <?
+$MESS["IBD_FIELD_DATE_ACTIVE_FROM"] = "Date de début de l'activation de l'élément";
 $MESS["IBD_FIELD_ID"] = "Identifiant de l'élément";
 $MESS["IBD_FIELD_TIMESTAMP_X"] = "Date de modification d'élément";
 $MESS["IBD_FIELD_MODYFIED"] = "Modifié par";
@@ -6,7 +7,6 @@ $MESS["IBD_FIELD_MODIFIED_BY_USER_PRINTABLE"] = "Dité par";
 $MESS["IBD_FIELD_DATE_CREATE"] = "Date de création d'un nouvel élément";
 $MESS["IBD_FIELD_IBLOCK_ID"] = "ID du bloc d'information";
 $MESS["IBD_FIELD_ACTIVE"] = "Activité d'un élément";
-$MESS["IBD_FIELD_DATE_ACTIVE_FROM"] = "Date du début de l'activation de l'élément";
 $MESS["IBD_FIELD_DATE_ACTIVE_TO"] = "Date de la désactivation de l' élément";
 $MESS["IBD_FIELD_SORT"] = "lément Top sections";
 $MESS["IBD_FIELD_NAME"] = "Nom d'élément";

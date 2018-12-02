@@ -1,4 +1,5 @@
 <?
+$MESS["BT_UT_SKU_DESCRIPTION"] = "Lien vers les éléments de produits (SKU)";
 $MESS["BT_UT_SKU_SETTING_COMMENT_MAX_WIDTH"] = "px";
 $MESS["BT_UT_SKU_SETTING_COMMENT_MIN_HEIGHT"] = "px";
 $MESS["BT_UT_SKU_SETTING_COMMENT_MAX_HEIGHT"] = "px";
@@ -13,5 +14,4 @@ $MESS["BT_UT_SKU_SETTING_MAX_WIDTH"] = "Largeur maximale du champ de saisie en p
 $MESS["BT_UT_SKU_SETTING_MIN_HEIGHT"] = "La hauteur minimale de la zone de saisie en pixels, si la propriété est pluriel";
 $MESS["BT_UT_SKU_SETTING_TITLE"] = "Réglages UGS";
 $MESS["BT_UT_SKU_SETTING_REP_SYMBOL"] = "Le symbole qui remplacera les caractères interdits lors de l'affichage";
-$MESS["BT_UT_SKU_DESCRIPTION"] = "Lien vers les éléments de produits (SKU)";
 ?>

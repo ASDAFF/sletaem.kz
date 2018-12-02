@@ -124,7 +124,7 @@ http://#SERVER_NAME##PATH2FORUM#
 $MESS["F_FORUM_NAME"] = "Назва форума";
 $MESS["F_NEW_MESSAGE_ON_FORUM"] = "Нове повідомлення на форумі";
 $MESS["FORUM_NEW_MESSAGE_MAIL_NAME"] = "Нове повідомлення на форумі у режимі спілкування по e-mail";
-$MESS["F_MAIL_RECIPIENT"] = "Отримувач повідомлення!";
+$MESS["F_MAIL_RECIPIENT"] = "Отримувач повідомлення";
 $MESS["F_PRIV"] = "Приватний лист відвідувачеві форуму";
 $MESS["F_PRIVATE"] = "Приватне повідомлення";
 $MESS["F_PRIVATE_MESSAGE_LINK"] = "Посилання на повідомлення";

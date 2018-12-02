@@ -39,11 +39,11 @@ $MESS["MOBILEAPP_EMPTY_VALUE"] = "No seleccionado";
 $MESS["MOBILEAPP_CONNECT_TO_APP"] = "Conectar";
 $MESS["MOBILEAPP_CONNECT_BUTTON_CLOSE"] = "Cerrar";
 $MESS["MOBILEAPP_CONNECT_TO_APP_TITLE"] = "Conectarse a la aplicación";
-$MESS["MOBILEAPP_CREATE_APP_TEMPLATE_OPTIONS_TITLE"] = "Parámetros del área pública";
-$MESS["MOBILEAPP_CREATE_APP_PUBLIC_OPTIONS_TITLE"] = "Parámetros del área pública";
-$MESS["MOBILEAPP_CREATE_APP_PUBLIC_TEMPLATE_API"] = "Aplicación demo";
 $MESS["MOBILEAPP_CONNECT_INSTRUCTION"] = "Para conectar, obtener, desarrollar aplicaciones BitrixMobile en <a href='https://play.google.com/store/apps/details?id=com.bitrix.market.developers&hl=en' target='_blank'>Google Play</a> or <a href='https://itunes.apple.com/en/app/bitrixmobile/id623842918?mt=8' target='_blank'>AppStore</a>.</br> Ejecutar la aplicación y especifique la siguiente dirección::";
 $MESS["MOBILEAPP_CONNECT_INSTRUCTION_QR"] = "o escanear el código QR:";
+$MESS["MOBILEAPP_CREATE_APP_TEMPLATE_OPTIONS_TITLE"] = "Parámetros del área pública";
+$MESS["MOBILEAPP_CREATE_APP_PUBLIC_OPTIONS_TITLE"] = "Parámetros del área pública";
 $MESS["MOBILEAPP_CREATE_APP_PUBLIC_TEMPLATE_SIMPLE"] = "Aplicación simple";
+$MESS["MOBILEAPP_CREATE_APP_PUBLIC_TEMPLATE_API"] = "Aplicación demo";
 $MESS["MOBILEAPP_CREATE_OFFLINE"] = "Agregar plantilla de aplicación fuera de línea y parámetros";
 ?>

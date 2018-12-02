@@ -1,6 +1,6 @@
 <?
 $MESS["forum_AVATAR"] = "Аватар:";
-$MESS["forum_SUBSC_GET_MY_MESSAGE"] = "включати свої повідомлення у розсилку:";
+$MESS["forum_SUBSC_GET_MY_MESSAGE"] = "Включати свої повідомлення у розсилку:";
 $MESS["forum_INTERESTS"] = "Інтереси:";
 $MESS["forum_HIDE_FROM_ONLINE"] = "Не показувати в списку «Зараз на форумі»:";
 $MESS["forum_SIGNATURE"] = "Підпис:";

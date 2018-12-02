@@ -1,6 +1,8 @@
 <?
+$MESS["SPSG_ACT_PROP"] = "Propiedades del controlador";
 $MESS["SPSG_TYPE"] = "Tipo";
 $MESS["SPSG_OTHER"] = "Otro valor";
+$MESS["SOG_PARAM"] = "Nombre del parámetro";
 $MESS["SPSG_FROM_USER"] = "Parámetro del usuario";
 $MESS["SPSG_FROM_ORDER"] = "Parámetro del pedido";
 $MESS["SPSG_FROM_PROPS"] = "Propiedad del pedido";
@@ -52,14 +54,12 @@ $MESS["SOG_F_INDEX"] = "Código postal";
 $MESS["SOG_F_COUNTRY"] = "País";
 $MESS["SOG_F_REGION"] = "Región";
 $MESS["SOG_F_STATE"] = "Estado";
+$MESS["SOG_F_TOWN"] = "Pueblo";
 $MESS["SOG_F_CITY"] = "Ciudad";
 $MESS["SOG_F_STREET"] = "Calle";
+$MESS["SOG_F_BUILDING"] = "Edificar";
 $MESS["SOG_F_HOUSE"] = "#";
 $MESS["SOG_F_FLAT"] = "Apt.";
-$MESS["SPSG_ACT_PROP"] = "Propiedades del controlador";
-$MESS["SOG_F_TOWN"] = "Pueblo";
-$MESS["SOG_F_BUILDING"] = "Edificar";
-$MESS["SOG_PARAM"] = "Nombre del parámetro";
 $MESS["SO_ADIT_1C_PARAMS"] = "Parámetros adicionales (pasó a 1C como propiedades de orden)";
 $MESS["SPSG_ADD"] = "mas";
 ?>

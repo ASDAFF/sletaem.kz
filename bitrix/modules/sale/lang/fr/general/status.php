@@ -1,4 +1,5 @@
 <?
+$MESS["SKGS_ORDER_PUBLIC_LINK"] = "lien d'affichage de la commande pour les utilisateurs non autorisés (nécessite une configuration dans les paramètres du module e-Store)";
 $MESS["SKGS_ORDER_ID"] = "ID de l'ordre";
 $MESS["SKGS_ORDER_DATE"] = "date de l'ordre";
 $MESS["SKGS_ORDER_STATUS"] = "statut de la commande";
@@ -45,5 +46,4 @@ $MESS["SKGS_ORDER_ALLOW_PAY_STATUS_MAIL_BODY3"] = "Suivez ce lien pour payer : #
 $MESS["SKGS_ORDER_ALLOW_PAY_STATUS_MAIL_BODY4"] = "Pour voir les détails de la commande, veuillez suivre sur ce lien : #SERVER_NAME#/personal/orders/#ORDER_ID#
 
 Merci !";
-$MESS["SKGS_ORDER_PUBLIC_LINK"] = "lien d'affichage de la commande pour les utilisateurs non autorisés (nécessite une configuration dans les paramètres du module e-Store)";
 ?>

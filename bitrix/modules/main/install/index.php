@@ -392,6 +392,8 @@ class main extends CModule
 
 		RegisterModuleDependences("main", "OnAdminInformerInsertItems", "main", "CMpNotifications", "OnAdminInformerInsertItemsHandlerMP");
 
+		RegisterModuleDependences("rest", "OnRestServiceBuildDescription", "main", '\Bitrix\Main\Rest\Handlers', "onRestServiceBuildDescription");
+
 		COption::SetOptionString("main", "PARAM_MAX_SITES", "2");
 		COption::SetOptionString("main", "PARAM_MAX_USERS", "0");
 		COption::SetOptionString("main", "distributive6", "Y");
@@ -417,6 +419,8 @@ class main extends CModule
 		if (!file_exists($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/bitrix24'))
 			CAgent::AddAgent("CSiteCheckerTest::CommonTest();", "main", "N", 86400, "", "Y", ConvertTimeStamp(strtotime(date('Y-m-d 03:00:00', time() + 86400)), 'FULL'));
 		CAgent::AddAgent('\\Bitrix\\Main\\Analytics\\CounterDataTable::submitData();', "main", "N", 60);
+		CAgent::AddAgent('CUserCounter::DeleteOld();', "main", "N", 60*60*24);
+		CAgent::AddAgent('\\Bitrix\\Main\\UI\\Viewer\\FilePreviewTable::deleteOldAgent();', 'main');
 
 		$eventManager = \Bitrix\Main\EventManager::getInstance();
 

@@ -1,4 +1,6 @@
 <?
+$MESS["MAIN_MENU_PROFILE_HISTORY"] = "Історія профілів";
+$MESS["MAIN_MENU_PROFILE_HISTORY_TITLE"] = "Журнал змін профілів користувачів";
 $MESS["MAIN_MENU_PHP"] = "Командний PHP-рядок";
 $MESS["MAIN_MENU_PHP_ALT"] = "Виконання довільних команд PHP на сервері";
 $MESS["MAIN_MENU_MANAG"] = "Користувачі";

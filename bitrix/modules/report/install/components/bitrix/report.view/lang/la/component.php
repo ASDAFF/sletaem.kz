@@ -20,4 +20,6 @@ $MESS["REPORT_CHART_TYPE_PIE"] = "Gráfico circular";
 $MESS["REPORT_UNKNOWN_FIELD_DEFINITION"] = "El informe utiliza un campo que no existe. Lo más probable es que sea un campo personalizado que se ha eliminado. Por favor, comprobar y guardar la configuración del informe.";
 $MESS["REPORT_HELPER_NOT_DEFINED"] = "No se ha definido la clase de ayuda.";
 $MESS["REPORT_COLUMNS_HAS_CYCLIC_DEPENDENCY"] = "No se puede crear el informe porque hay referencias circulares en una o más columnas. Asegúrese de que las columnas que incluyen \"% del valor de campo\" no formen referencias circulares.";
+$MESS["REPORT_STEXPORT_TITLE"] = "Reporte de exportacion";
+$MESS["REPORT_STEXPORT_SUMMARY"] = "Esto creará un archivo de informe. Exportar una cantidad considerable de datos puede llevar algo de tiempo.";
 ?>

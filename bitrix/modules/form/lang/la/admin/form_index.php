@@ -1,3 +1,3 @@
 <?
-$MESS ['form_index_title'] = "Administaración de FORMULARIOS WEB";
+$MESS["form_index_title"] = "Administaración de FORMULARIOS WEB";
 ?>

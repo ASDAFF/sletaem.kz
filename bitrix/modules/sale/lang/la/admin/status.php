@@ -23,6 +23,8 @@ $MESS["SALE_ACTIONS"] = "Acciones";
 $MESS["SALE_EDIT_DESCR"] = "Modificar la configuración del estado";
 $MESS["SALE_EDIT"] = "Modificar";
 $MESS["SALE_DELETE_DESCR"] = "Eliminar estado";
+$MESS["SALE_NOTES1"] = "<b>N</b> es el estado de la orden inicial aplicado sobre la creación. No se puede eliminar este estado.";
+$MESS["SALE_NOTES2"] = "<b>F</b> es el estado de la orden final aplicado al termino de la orden. No se puede eliminar este estado.";
 $MESS["SSAN_ADD_NEW"] = "Nuevo estado";
 $MESS["SSAN_ADD_NEW_ALT"] = "Haz clic aquí para agregar un nuevo estado";
 $MESS["SSAN_NOTIFY"] = "Notificaciones";
@@ -31,7 +33,5 @@ $MESS["SSAN_NOTIFY_N"] = "No";
 $MESS["SSAN_TYPE"] = "Tipo de estado";
 $MESS["SSEN_TYPE_O"] = "Orden";
 $MESS["SSEN_TYPE_D"] = "Envío";
-$MESS["SALE_NOTES1"] = "<b>N</b> es el estado de la orden inicial aplicado sobre la creación. No se puede eliminar este estado.";
-$MESS["SALE_NOTES2"] = "<b>F</b> es el estado de la orden final aplicado al termino de la orden. No se puede eliminar este estado.";
 $MESS["SSAN_COLOR"] = "Color del estado";
 ?>

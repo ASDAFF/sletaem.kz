@@ -8,5 +8,5 @@ $MESS["BX_IBLOCK_REDIRECT_ENTITY_ERR_EMPTY_ELEMENT_ID"] = "Не заданий I
 $MESS["BX_IBLOCK_REDIRECT_ENTITY_ERR_EMPTY_ENTITY"] = "Не задана сутність";
 $MESS["BX_IBLOCK_REDIRECT_ENTITY_ERR_IBLOCK_NOT_FOUND"] = "Інфоблок не знайдено";
 $MESS["BX_IBLOCK_REDIRECT_ENTITY_ERR_ELEMENT_NOT_FOUND"] = "Елемент не знайдено";
-$MESS["BX_IBLOCK_REDIRECT_ENTITY_NOTE"] = "При пошуку враховуються права доступу до сутності. Якщо прав недостатньо, буде виведено повідомлення про те, що сутність не знайдено.";
+$MESS["BX_IBLOCK_REDIRECT_ENTITY_NOTE"] = "При пошуку враховуються права доступу до сутності. Якщо прав недостатньо, буде виведене повідомлення про те, що сутність не знайдена.";
 ?>

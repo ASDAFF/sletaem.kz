@@ -1,9 +1,9 @@
 <?
 $MESS["P_ERROR_100"] = "Su sesión ha expirado. Por favor intente de nuevo.";
-$MESS["P_ERROR_101"] = "Block de información no fue encontrado.";
-$MESS["P_ERROR_102"] = "Sección del block de información no fue encontrada.";
-$MESS["P_ERROR_103"] = "Elemento del block de información no fue encontrada.";
-$MESS["P_ERROR_111"] = "Acceso al block de información está denegada.";
+$MESS["P_ERROR_101"] = "El Block de información no fue encontrado.";
+$MESS["P_ERROR_102"] = "La sección del block de información no fue encontrada.";
+$MESS["P_ERROR_103"] = "El elemento del block de información no fue encontrada.";
+$MESS["P_ERROR_111"] = "Los acceso al block de información están denegados.";
 $MESS["P_MONTH_1"] = "Enero";
 $MESS["P_MONTH_2"] = "Febrero";
 $MESS["P_MONTH_3"] = "Marzo";

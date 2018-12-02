@@ -6,4 +6,5 @@ $MESS["SOA_TEMPL_ORDER_PS_ERROR"] = "El método de pago seleccionado ha fallado.
 $MESS["SBB_TITLE"] = "Mi carrito de compras";
 $MESS["SALE_MODULE_NOT_INSTALL"] = "El módulo e-Store no está instalado.";
 $MESS["SBB_PRODUCT_QUANTITY_CHANGED"] = "La cantidad del producto fue cambiada";
+$MESS["SBB_BASKET_ITEM_WRONG_AVAILABLE_QUANTITY"] = "Lo sentimos, la cantidad de producto que ha seleccionado no está disponible en estos momentos.<br>Utilice el valor correcto anterior.";
 ?>

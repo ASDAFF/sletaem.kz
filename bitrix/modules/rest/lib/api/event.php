@@ -449,7 +449,7 @@ class Event extends \IRestService
 			throw new LicenseException('extended offline events handling');
 		}
 
-		$filter = isset($query['filter']) ? $query['filter'] : null;
+		$filter = isset($query['filter']) ? $query['filter'] : array();
 		$order = isset($query['order']) ? $query['order'] : array('TIMESTAMP_X' => 'ASC');
 		$limit = isset($query['limit']) ? intval($query['limit']) : static::LIST_LIMIT;
 
@@ -460,26 +460,9 @@ class Event extends \IRestService
 
 		$returnProcessId = !$clearEvents;
 
-		if($filter !== null)
-		{
-			if(!is_array($query['filter']))
-			{
-				throw new ArgumentException('Parameter value must be an array', 'FILTER');
-			}
-		}
-		else
-		{
-			$filter = array();
-		}
-
 		if($limit <= 0)
 		{
 			throw new ArgumentException('Value must be positive integer', 'LIMIT');
-		}
-
-		if(!is_array($order))
-		{
-			throw new ArgumentException('Value must be an array', 'ORDER');
 		}
 
 		$queryFilter = static::sanitizeFilter($filter);
@@ -669,28 +652,11 @@ class Event extends \IRestService
 
 		$query = array_change_key_case($query, CASE_LOWER);
 
-		$filter = isset($query['filter']) ? $query['filter'] : null;
+		$filter = isset($query['filter']) ? $query['filter'] : array();
 		$order = isset($query['order']) ? $query['order'] : array('ID' => 'ASC');
 
 		$authData = $server->getAuthData();
 		$connectorId = isset($authData['auth_connector']) ? $authData['auth_connector'] : '';
-
-		if($filter !== null)
-		{
-			if(!is_array($query['filter']))
-			{
-				throw new ArgumentException('Parameter value must be an array', 'FILTER');
-			}
-		}
-		else
-		{
-			$filter = array();
-		}
-
-		if(!is_array($order))
-		{
-			throw new ArgumentException('Value must be an array', 'ORDER');
-		}
 
 		$queryFilter = static::sanitizeFilter($filter, array('ID', 'TIMESTAMP_X', 'EVENT_NAME', 'MESSAGE_ID', 'PROCESS_ID', 'ERROR'));
 
@@ -735,10 +701,19 @@ class Event extends \IRestService
 		));
 	}
 
-	protected static function sanitizeFilter(array $filter, $allowedFields = array('ID', 'TIMESTAMP_X', 'EVENT_NAME', 'MESSAGE_ID'))
+	protected static function sanitizeFilter($filter, array $availableFields = null, $valueCallback = null, array $availableOperations = null)
 	{
-		return static::sanitizeFilterInternal(
-			function($field, $value, $operation)
+		static $defaultFields = array('ID', 'TIMESTAMP_X', 'EVENT_NAME', 'MESSAGE_ID');
+
+		if($availableFields === null)
+		{
+			$availableFields = $defaultFields;
+		}
+
+		return parent::sanitizeFilter(
+			$filter,
+			$availableFields,
+			function($field, $value)
 			{
 				switch($field)
 				{
@@ -748,18 +723,21 @@ class Event extends \IRestService
 
 					break;
 				}
-
 				return $value;
-
-			},
-			$filter,
-			$allowedFields
+			}
 		);
 	}
 
-	protected static function sanitizeOrder(array $order, $allowedFields = array('ID', 'TIMESTAMP_X', 'EVENT_NAME', 'MESSAGE_ID'))
+	protected static function sanitizeOrder($order, array $availableFields = null)
 	{
-		return static::sanitizeOrderInternal($order, $allowedFields);
+		static $defaultFields = array('ID', 'TIMESTAMP_X', 'EVENT_NAME', 'MESSAGE_ID');
+
+		if($availableFields === null)
+		{
+			$availableFields = $defaultFields;
+		}
+
+		return parent::sanitizeOrder($order, $availableFields);
 	}
 
 	protected static function isExtendedModeEnabled()

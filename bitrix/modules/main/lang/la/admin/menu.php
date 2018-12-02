@@ -1,4 +1,6 @@
 <?
+$MESS["MAIN_MENU_PROFILE_HISTORY"] = "Historial de perfil";
+$MESS["MAIN_MENU_PROFILE_HISTORY_TITLE"] = "Registro de actualización del perfil de usuario";
 $MESS["MAIN_MENU_PHP"] = "Script PHP";
 $MESS["MAIN_MENU_PHP_ALT"] = "Ejecuta comandos arbitrarios de PHP en el servidor";
 $MESS["MAIN_MENU_MANAG"] = "Administrar usuarios";

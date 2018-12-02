@@ -1,16 +1,18 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
+<?php
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 {
 	die();
-} ?>
-
-<?php
-	if (\Bitrix\Main\Loader::includeModule('landing'))
-	{
-		\Bitrix\Landing\Manager::setTheme();
-	}
+}
 ?>
 
-<? $APPLICATION->ShowProperty('FooterJS'); ?>
+<?php
+if (\Bitrix\Main\Loader::includeModule('landing'))
+{
+	\Bitrix\Landing\Manager::setTheme();
+}
+?>
+
+<?$APPLICATION->ShowProperty('FooterJS');?>
 
 
 <script>
@@ -20,5 +22,6 @@
 	});
 </script>
 </main>
+<?$APPLICATION->ShowProperty('BeforeBodyClose');?>
 </body>
 </html>

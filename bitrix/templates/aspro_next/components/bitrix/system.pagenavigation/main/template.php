@@ -68,7 +68,7 @@
 					$url = ($page ? '?'.$strNavQueryString.'PAGEN_'.$arResult["NavNum"].'='.$page : $strNavQueryStringFull);?>
 					<?$APPLICATION->AddHeadString('<link rel="prev" href="'.$arResult["sUrlPath"].$url.'"  />', true);?>
 					<li class="flex-nav-prev "><a href="<?=$arResult["sUrlPath"]?><?=$url?>" class="flex-prev"></a></li>
-					<?$APPLICATION->AddHeadString('<link rel="canonical" href="'.$arResult["sUrlPath"].'"  />', true);?>
+					<? // $APPLICATION->AddHeadString('<link rel="canonical" href="'.$arResult["sUrlPath"].'"  />', true);?>
 				<?endif;?>
 				<?if(!$bNextDisabled):?>
 					<?$APPLICATION->AddHeadString('<link rel="next" href="'.$arResult["sUrlPath"].'?'.$strNavQueryString.'PAGEN_'.$arResult["NavNum"].'='.($arResult["NavPageNomer"]+1).'"  />', true);?>

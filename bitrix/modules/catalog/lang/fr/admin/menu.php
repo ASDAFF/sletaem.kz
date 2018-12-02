@@ -1,4 +1,9 @@
 <?
+$MESS["PRICES_SECTION"] = "Prix";
+$MESS["PRICES_SECTION_TITLE"] = "Types de prix ; arrondi ; surtaxes";
+$MESS["PRICE_ROUND"] = "Arrondi";
+$MESS["PRICE_ROUND_TITLE"] = "Arrondi du prix";
+$MESS["SUBSCRIPTION_PRODUCT"] = "Abonnements au produit";
 $MESS["CURRENCY"] = "Devises";
 $MESS["CURRENCY_ALT"] = "Devises";
 $MESS["CM_STORE_DOCS"] = "Documents";
@@ -43,9 +48,4 @@ $MESS["UNLOAD_DATA_ALT"] = "Exportation des données dasn le fichier CSV";
 $MESS["CAM_EXPORT_DESCR"] = "Exporter des données avec 'exportation'";
 $MESS["CURRENCY_RATES"] = "Les taux de change";
 $MESS["CURRENCY_RATES_ALT"] = "Les taux de change";
-$MESS["PRICES_SECTION"] = "Prix";
-$MESS["PRICES_SECTION_TITLE"] = "Types de prix ; arrondi ; surtaxes";
-$MESS["PRICE_ROUND"] = "Arrondi";
-$MESS["PRICE_ROUND_TITLE"] = "Arrondi du prix";
-$MESS["SUBSCRIPTION_PRODUCT"] = "Abonnements au produit";
 ?>

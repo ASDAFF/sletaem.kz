@@ -34,7 +34,7 @@
 						<div id="<?=$this->GetEditAreaId($arSection['ID'])?>" class="tab-pane <?=(!$si++ || !$arSection['ID'] ? 'active' : '')?>">
 
 							<?if($arParams['SHOW_SECTION_PREVIEW_DESCRIPTION'] == 'Y'):?>
-								
+
 								<?if($arParams['SHOW_SECTION_NAME'] != 'N'):?>
 									<?// section name?>
 									<?if(strlen($arSection['NAME'])):?>
@@ -65,9 +65,9 @@
 									// use detail link?
 									$bDetailLink = $arParams['SHOW_DETAIL_LINK'] != 'N' && (!strlen($arItem['DETAIL_TEXT']) ? ($arParams['HIDE_LINK_WHEN_NO_DETAIL'] !== 'Y' && $arParams['HIDE_LINK_WHEN_NO_DETAIL'] != 1) : true);
 									// preview picture
-									$bImage = strlen($arItem['FIELDS']['PREVIEW_PICTURE']['SRC']);
-									$imageSrc = ($bImage ? $arItem['FIELDS']['PREVIEW_PICTURE']['SRC'] : SITE_TEMPLATE_PATH.'/images/noimage.png');
-									$imageDetailSrc = ($bImage ? $arItem['FIELDS']['DETAIL_PICTURE']['SRC'] : false);
+									$bImage = isset($arItem['FIELDS']['PREVIEW_PICTURE']) && strlen($arItem['PREVIEW_PICTURE']['SRC']);
+									$imageSrc = ($bImage ? $arItem['PREVIEW_PICTURE']['SRC'] : SITE_TEMPLATE_PATH.'/images/noimage.png');
+									$imageDetailSrc = ($bImage ? $arItem['DETAIL_PICTURE']['SRC'] : false);
 									// show active date period
 									$bActiveDate = strlen($arItem['DISPLAY_PROPERTIES']['PERIOD']['VALUE']) || ($arItem['DISPLAY_ACTIVE_FROM'] && in_array('DATE_ACTIVE_FROM', $arParams['FIELD_CODE']));
 									?>
@@ -174,13 +174,13 @@
 											<div class="image <?=($bImage ? ' w-picture' : ' wo-picture wpi')?>">
 												<?if($bDetailLink):?>
 													<a href="<?=$arItem['DETAIL_PAGE_URL']?>">
-												<?elseif($arItem['FIELDS']['DETAIL_PICTURE']):?>
+												<?elseif(isset($arItem['FIELDS']['DETAIL_PICTURE'])):?>
 													<a href="<?=$imageDetailSrc?>" alt="<?=($bImage ? $arItem['PREVIEW_PICTURE']['ALT'] : $arItem['NAME'])?>" title="<?=($bImage ? $arItem['PREVIEW_PICTURE']['TITLE'] : $arItem['NAME'])?>" class="img-inside fancy">
 												<?endif;?>
-													<img src="<?=$imageSrc?>" alt="<?=($bImage ? $arItem['FIELDS']['PREVIEW_PICTURE']['ALT'] : $arItem['NAME'])?>" title="<?=($bImage ? $arItem['FIELDS']['PREVIEW_PICTURE']['TITLE'] : $arItem['NAME'])?>" class="img-responsive" />
+													<img src="<?=$imageSrc?>" alt="<?=($bImage ? $arItem['PREVIEW_PICTURE']['ALT'] : $arItem['NAME'])?>" title="<?=($bImage ? $arItem['PREVIEW_PICTURE']['TITLE'] : $arItem['NAME'])?>" class="img-responsive" />
 												<?if($bDetailLink):?>
 													</a>
-												<?elseif($arItem['FIELDS']['DETAIL_PICTURE']):?>
+												<?elseif(isset($arItem['FIELDS']['DETAIL_PICTURE'])):?>
 													<span class="zoom"></span></a>
 												<?endif;?>
 											</div>

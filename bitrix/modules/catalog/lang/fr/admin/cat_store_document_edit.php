@@ -1,4 +1,5 @@
 <?
+$MESS["CAT_DOC_BARCODE_FIND"] = "Rechercher";
 $MESS["CAT_DOC_CURRENCY"] = "Devises";
 $MESS["CAT_DOC_POPUP_TITLE"] = "Saisir les codes-barres";
 $MESS["CAT_DOC_BARCODES_ENTER"] = "Saisir les codes-barres";
@@ -22,7 +23,6 @@ $MESS["CAT_DOC_PRODUCT_AMOUNT"] = "Quantité";
 $MESS["CAT_DOC_COMMENT"] = "Commentaire";
 $MESS["CAT_DOC_COPY"] = "Copie";
 $MESS["CAT_DOC_PRODUCT_NAME"] = "Dénomination";
-$MESS["CAT_DOC_BARCODE_FIND"] = "Recherche";
 $MESS["CAT_DOC_FIND_ITEMS"] = "Trouvez dans le catalogue";
 $MESS["CAT_DOC_BARCODE_FIND_LINK"] = "recherche par code à barres";
 $MESS["CAT_DOC_EXECUTION_N"] = "non effectué";

@@ -148,4 +148,10 @@ $MESS["STOREAS_TASK_support_developer"] = "У разі виникнення пр
 $MESS["STOREAS_DOCURL_support_developer"] = "//dev.1c-bitrix.ru/help-assist/tekhpodderzhka_razrabotchikom/";
 $MESS["STOREAS_TASK_support_bitrix"] = " У разі виникнення проблем з роботою сайту зверніться до служби технічної підтримки компанії \"1С-Бітрікс\"";
 $MESS["STOREAS_DOCURL_support_bitrix"] = "//dev.1c-bitrix.ru/help-assist/tekhpodderzhka_bitriks/";
+$MESS["STOREAS_TASK_sale_delivery_service_list"] = "Налаштуйте служби доставки. Переконайтеся, що служби створені для різних варіантів параметрів замовлення та умов доставки.";
+$MESS["STOREAS_DOCURL_sale_delivery_service_list"] = "//dev.1c-bitrix.ru/help-assist/sluzhby_dostavki/";
+$MESS["STOREAS_TASK_sale_personalization"] = "Додайте компонент персоналізації на сторінках вашого магазину. Ефективність роботи сервісу відстежуйте на сторінці списку замовлень.";
+$MESS["STOREAS_DOCURL_sale_personalization"] = "//dev.1c-bitrix.ru/help-assist/personalizatsiya/";
+$MESS["STOREAS_TASK_composite_dev"] = "Зверніться до партнерів компанії \"Бітрікс\" для перекладу сайту на композитний режим роботи і прискорення його відображення відвідувачам.";
+$MESS["STOREAS_TASK_composite_auto"] = "Увімкніть режим композиту";
 ?>

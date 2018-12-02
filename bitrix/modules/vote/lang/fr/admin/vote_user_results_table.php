@@ -1,4 +1,7 @@
 <?
+$MESS["VOTE_ACTUALITY"] = "Pertinence :";
+$MESS["VOTE_ANSWERS"] = "Réponses :";
+$MESS["VOTE_VOTE1"] = "Sondage";
 $MESS["VOTE_F_IP"] = "Adresse IP:";
 $MESS["VOTE_VALID"] = "Valide:";
 $MESS["VOTE_VOTES"] = "Total de votes:";
@@ -21,7 +24,4 @@ $MESS["VOTE_SESSION"] = "Session:";
 $MESS["VOTE_RESULTS_LIST"] = "Liste des votes";
 $MESS["VOTE_USER_LIST"] = "Liste des visiteurs";
 $MESS["VOTE_ENLARGE"] = "Faire agrandir";
-$MESS["VOTE_ACTUALITY"] = "Pertinence :";
-$MESS["VOTE_ANSWERS"] = "Réponses :";
-$MESS["VOTE_VOTE1"] = "Sondage";
 ?>

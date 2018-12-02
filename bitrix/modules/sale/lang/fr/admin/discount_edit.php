@@ -1,4 +1,7 @@
 <?
+$MESS["BT_SALE_DISCOUNT_EDIT_FIELDS_LAST_LEVEL_DISCOUNT"] = "Ne pas appliquer de réductions au-delà du niveau de priorité actuel";
+$MESS["BT_SALE_DISCOUNT_EDIT_FIELDS_SORT_2"] = "Trier l'index à l'intérieur du niveau de priorité";
+$MESS["BT_SALE_DISCOUNT_SECTION_PRIORITY"] = "Paramètres de priorité";
 $MESS["BT_SALE_DISCOUNT_EDIT_FIELDS_PRIORITY_DESCR"] = "(que plus  élevée la priorité soit, plus tôt il(elle) s'appliquera)";
 $MESS["BT_SALE_DISCOUNT_EDIT_FIELDS_SORT_DESCR"] = "(plus l'indice est bas,  plus tôt il sera appliqué)";
 $MESS["SDEN_ACTIVE"] = "Actif(ve)";
@@ -48,7 +51,4 @@ $MESS["BX_SALE_DISCOUNT_EDIT_FIELDS_COUPON_ADD"] = "Créer coupons lors de l'enr
 $MESS["BX_SALE_DISCOUNT_EDIT_FIELDS_COUPON_TYPE"] = "Type de coupon:";
 $MESS["BX_SALE_DISCOUNT_EDIT_FIELDS_COUPON_COUNT"] = "Nombre de coupons:";
 $MESS["BX_SALE_DISCOUNT_EDIT_ERR_MODULE_CATALOG_IS_ABSENT"] = "Échec du chargement du module Catalogue commercial. Impossible d'accéder aux API des actions et conditions de règle du panier.";
-$MESS["BT_SALE_DISCOUNT_EDIT_FIELDS_LAST_LEVEL_DISCOUNT"] = "Ne pas appliquer de réductions au-delà du niveau de priorité actuel";
-$MESS["BT_SALE_DISCOUNT_EDIT_FIELDS_SORT_2"] = "Trier l'index à l'intérieur du niveau de priorité";
-$MESS["BT_SALE_DISCOUNT_SECTION_PRIORITY"] = "Paramètres de priorité";
 ?>

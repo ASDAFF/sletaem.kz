@@ -1,4 +1,5 @@
 <?
+$MESS["VOTE_VISITOR"] = "Visiteur";
 $MESS["VOTE_ALL"] = "(partout)";
 $MESS["VOTE_FL_USER_ID"] = "Identifiant du visiteur";
 $MESS["VOTE_F_USER"] = "ID du visiteur:";
@@ -27,7 +28,7 @@ $MESS["VOTE_F_VOTE"] = "Interrogation:";
 $MESS["MAIN_ADMIN_LIST_CHECKED"] = "Coché:";
 $MESS["SAVE_ERROR"] = "Erreur de sauvegarde.";
 $MESS["VOTE_SAVE_ERROR"] = "Sauver utilisateur erreur";
-$MESS["DELETE_ERROR"] = "Chec de suppression.";
+$MESS["DELETE_ERROR"] = "Échec de suppression.";
 $MESS["VOTE_USER_LIST_TITLE"] = "Afficher la liste des visiteurs";
 $MESS["VOTE_SESSIONU_LIST_TITLE"] = "Afficher la liste des sessions";
 $MESS["VOTE_USER"] = "visiteur";
@@ -37,5 +38,4 @@ $MESS["VOTE_DEVALIDATE"] = "faire invalide";
 $MESS["VOTE_SESSION"] = "Session";
 $MESS["VOTE_DELETE"] = "supprimer";
 $MESS["VOTE_DELETE_U"] = "Supprimer";
-$MESS["VOTE_VISITOR"] = "Visiteur";
 ?>

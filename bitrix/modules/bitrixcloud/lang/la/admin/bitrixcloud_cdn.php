@@ -1,8 +1,13 @@
 <?
+$MESS["MODULE_INCLUDE_ERROR"] = "Error de acceso al módulo Bitrix Cloud.";
+$MESS["MODULE_INTRANET_ERROR"] = "Website Accelerator no se puede utilizar si se instala el módulo Intranet.";
 $MESS["BCL_TITLE"] = "Acelerador Web CDN";
+$MESS["BCL_MAIN_TAB1"] = "Acelerador";
 $MESS["BCL_MAIN_TAB_TITLE"] = "CDN estado y parámetros ";
 $MESS["BCL_SITES_TAB"] = "Sitios Web";
 $MESS["BCL_SITES_TAB_TITLE"] = "Parámetros de aceleración de Web";
+$MESS["BCL_FOLDERS_TAB"] = "Artículos acelerados";
+$MESS["BCL_FOLDERS_TAB_TITLE"] = "Seleccione los elementos para la aceleración.";
 $MESS["BCL_TURN_ON"] = "Activar la aceleración";
 $MESS["BCL_CDN_USAGE"] = "Uso de la CDN: #TRAFFIC# of #ALLOWED#.";
 $MESS["BCL_ADMIN_PANEL"] = "Panel de control";
@@ -13,11 +18,6 @@ $MESS["BCL_SITES_ERROR"] = "Acelerador Web debe estar habilitada para al menos u
 $MESS["BCL_DOMAIN_ERROR"] = "Es necesaria la URL del sitio web.";
 $MESS["BCL_EXTENDED_TAB"] = "Extendido";
 $MESS["BCL_EXTENDED_TAB_TITLE"] = "Configuración extendida";
-$MESS["MODULE_INCLUDE_ERROR"] = "Error de acceso al módulo Bitrix Cloud.";
-$MESS["MODULE_INTRANET_ERROR"] = "Website Accelerator no se puede utilizar si se instala el módulo Intranet.";
-$MESS["BCL_MAIN_TAB1"] = "Acelerador";
-$MESS["BCL_FOLDERS_TAB"] = "Artículos acelerados";
-$MESS["BCL_FOLDERS_TAB_TITLE"] = "Seleccione los elementos para la aceleración.";
 $MESS["BCL_KERNEL"] = "Plantilla de sitio Web (recomendado)";
 $MESS["BCL_KERNEL_NOTE"] = "Mejora la velocidad del sitio web. No afecta a SEO.";
 $MESS["BCL_UPLOAD"] = "Contenido del sitio web";

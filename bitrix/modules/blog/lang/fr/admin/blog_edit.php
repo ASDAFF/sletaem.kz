@@ -1,4 +1,12 @@
 <?
+$MESS["BLBE_EDITOR_SETTINGS"] = "Paramètres de l'éditeur de texte";
+$MESS["BLBE_EDITOR_USE_FONT"] = "Permettre aux utilisateurs de choisir les styles de police";
+$MESS["BLBE_EDITOR_USE_LINK"] = "Permettre aux utilisateurs d'ajouter des hyperliens";
+$MESS["BLBE_EDITOR_USE_FORMAT"] = "Activer les options de formatage avancé";
+$MESS["BLBE_EDITOR_USE_FORMAT_HINT"] = "Tableaux, alignement du texte, etc.";
+$MESS["BLBE_EDITOR_USE_IMAGE"] = "Permettre aux utilisateurs d'insérer des images";
+$MESS["BLBE_EDITOR_USE_VIDEO"] = "Permettre aux utilisateurs d'ajouter des vidéos";
+$MESS["BLBE_EDITOR_USE_VIDEO_HINT"] = "Une option correspondante a été activée dans les paramètres du module Blog";
 $MESS["BLBE_SAVE_ERROR"] = "Sauver erreur paramètres du blog";
 $MESS["BLBE_UPDATING"] = "Paramètres des blogues";
 $MESS["BLBE_ADDING"] = "Nouveau Blog";
@@ -31,12 +39,4 @@ $MESS["BLBE_SEARCH_INDEX"] = "L'indexage du blog par le module de Recherche";
 $MESS["BLBE_SEARCH_INDEX_HINT"] = "Lors d'activation d'indexage du blog, n'oubliez pas d'indexer à nouveau le module.";
 $MESS["BLBE_SOCNET_GROUP_ID"] = "Groupe propriétaire du blog";
 $MESS["BLBE_USE_SOCNET"] = "Le blog est utilisé en tant que partie d'un réseau social";
-$MESS["BLBE_EDITOR_SETTINGS"] = "Paramètres de l'éditeur de texte";
-$MESS["BLBE_EDITOR_USE_FONT"] = "Permettre aux utilisateurs de choisir les styles de police";
-$MESS["BLBE_EDITOR_USE_LINK"] = "Permettre aux utilisateurs d'ajouter des hyperliens";
-$MESS["BLBE_EDITOR_USE_FORMAT"] = "Activer les options de formatage avancé";
-$MESS["BLBE_EDITOR_USE_FORMAT_HINT"] = "Tableaux, alignement du texte, etc.";
-$MESS["BLBE_EDITOR_USE_IMAGE"] = "Permettre aux utilisateurs d'insérer des images";
-$MESS["BLBE_EDITOR_USE_VIDEO"] = "Permettre aux utilisateurs d'ajouter des vidéos";
-$MESS["BLBE_EDITOR_USE_VIDEO_HINT"] = "Une option correspondante a été activée dans les paramètres du module Blog";
 ?>

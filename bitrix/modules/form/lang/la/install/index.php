@@ -6,6 +6,7 @@ $MESS["FORM_UNINSTALL_TITLE"] = "Desinstalación del módulo Formularios Web";
 $MESS["FORM_SELECT_INITITAL"] = "Por favor, seleccione la carpeta de archivos de demostración:";
 $MESS["FORM_NO"] = "no";
 $MESS["FORM_ATTENTION"] = "¡Advertencia! El módulo será desinstalado.";
+$MESS["FORM_YOU_CAN_SAVE_TABLES"] = "Para guardar los datos almacenados en las tablas de la base de datos, haga check en &quot;Guardar tablas&quot;";
 $MESS["FORM_SAVE_TABLES"] = "Guardar tablas";
 $MESS["FORM_DELETE"] = "Desinstalar";
 $MESS["FORM_DELETE_COMLETE"] = "Desinstalación completada.";
@@ -25,5 +26,4 @@ $MESS["FORM_LINK"] = "Enlace";
 $MESS["COPY_PUBLIC_FILES"] = "Copie los archivos públicos";
 $MESS["COPY_FOLDER"] = "Carpeta en la que se copiarán los archivos (en relación a la carpeta root del sitio):";
 $MESS["INSTALL_PUBLIC_REW"] = "Sobrescribir archivos existentes";
-$MESS["FORM_YOU_CAN_SAVE_TABLES"] = "Para guardar los datos almacenados en las tablas de la base de datos, haga check en &quot;Guardar tablas&quot;";
 ?>

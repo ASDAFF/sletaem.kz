@@ -1,21 +1,20 @@
 .landing-ui-button-editor-action {
 	background: #ffffff;
 	line-height: 42px;
-	padding-left: 14px;
-	padding-right: 14px;
 	border: none;
 	user-select: none;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 0 14px;
 	border-radius: 0;
 }
 
+.landing-ui-button-editor-action .landing-ui-button-text {
+	transition: color 200ms ease;
+}
 
 .landing-ui-button-editor-action .landing-ui-align {
 	position: relative;
 	top: -9px;
 }
-
 
 .landing-ui-button-editor-action[data-id="createLink"] .fa-link {
 	position: relative;

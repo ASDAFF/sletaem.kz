@@ -34,7 +34,6 @@ Si usted opta por no renovar su suscripción, su sitio web seguirá siendo total
 pero usted no será capaz de acceder a los servicios antes mencionados.<br /><br/>
 Después del vencimiento de su suscripción, puede seguir utilizando la versión de software que tenia
 en el momento de la expiración.";
-$MESS["BUY_SUP_BUY_SELF"] = "Renovar la suscripción sin asistencia";
 $MESS["BUY_SUP_BUY_2_CP"] = "\"<Ul>
    <li style=\"\"padding-bottom: 10px;\"\">Instalar la última actualización de la plataforma Bitrix.
               Lanzamos nuevas versiones, dos veces al año, añadiendo nuevas e interesantes características
@@ -53,6 +52,7 @@ pero usted no será capaz de acceder a los servicios antes mencionados.<br /><br
 Después de que expire su suscripción, puede seguir utilizando la versión de software que tiene
 en el momento del vencimiento de la licencia comercial completa.<br /><br />
 Si tiene alguna pregunta, por favor contacte con nosotros en <a href=\"mailto:sales@bitrix24.com\">sales@bitrix24.com</a>.<br /><br />";
+$MESS["BUY_SUP_BUY_SELF"] = "Renovar la suscripción sin asistencia";
 $MESS["BUY_SUP_BUY_3"] = "\"<b> Más beneficios si se compra a través de un socio de Bitrix:</b><br/>
 <ul>
  <li style=\"\"padding-bottom: 10px;\"\">actualizaciones de soporte de instalación;</li>

@@ -1,4 +1,5 @@
 <?
+$MESS["IBLOCK_CML2_WRONG_FILE_ERROR"] = "Este archivo no es un archivo XML CommerceML 2.0.";
 $MESS["IBLOCK_CML2_TABLE_CREATE_ERROR"] = "Un error ocurrió tratanto de crear una tabla temporal importada.";
 $MESS["IBLOCK_CML2_FILE_ERROR"] = "Error de archivo abierto.";
 $MESS["IBLOCK_CML2_INDEX_ERROR"] = "Un error ocurrió tratando de crear el index.";
@@ -42,9 +43,8 @@ $MESS["IBLOCK_CML2_STOP_IMPORT"] = "Detener";
 $MESS["IBLOCK_CML2_INTERVAL"] = "Duración del paso, sec. (0 - exportar en un paso)";
 $MESS["IBLOCK_CML2_LID"] = "Sitios en los cuales la información del block podría ser obligatoria (si esto podría ser creado)";
 $MESS["IBLOCK_CML2_LID_ERROR"] = "Ningún sitio fue seleccionado.";
+$MESS["IBLOCK_CML2_IMAGE_RESIZE"] = "Usar configuración de blocks información para el Procesamiento de Imágenes";
 $MESS["IBLOCK_CML2_ELEMENTS_LIST"] = "Saltar al elemento de la lista.";
 $MESS["IBLOCK_CML2_ACCESS_DENIED"] = "Acceso denegado.";
-$MESS["IBLOCK_CML2_IMAGE_RESIZE"] = "Usar configuración de blocks información para el Procesamiento de Imágenes";
-$MESS["IBLOCK_CML2_WRONG_FILE_ERROR"] = "Este archivo no es un archivo XML CommerceML 2.0.";
 $MESS["IBLOCK_CML2_FILE_PROGRESS2"] = "Leer archivo de importación para tablas temporales";
 ?>

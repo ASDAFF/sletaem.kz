@@ -1,6 +1,7 @@
 <?
 $MESS["FILEMAN_FILEEDIT_FILE_EXISTS"] = "Carpeta con nombre especificado ya existe!";
 $MESS["FILEMAN_FILEEDIT_FOLDER_EXISTS"] = "Carpeta con nombre especificado ya existe!";
+$MESS["FILEMAN_FILEEDIT_FILENAME_EMPTY"] = "Nombre del archivo no está especificado";
 $MESS["FILEMAN_FILEEDIT_AS_MENU"] = "Editar como menú";
 $MESS["FILEMAN_FILEEDIT_AS_HTML"] = "Editar como HTML";
 $MESS["FILEMAN_FILEEDIT_RENAME"] = "Renombre";
@@ -43,7 +44,6 @@ $MESS["FILEMAN_HTMLED_WARNING"] = "Documento fue modificado. Todos los cambios s
 $MESS["FILEMAN_HTMLED_MANAGE_TB"] = "Administración y ajustes";
 $MESS["FILEMAN_SESSION_EXPIRED"] = "Su sesión ha expirado. Por favor guarde su documento otra vez.";
 $MESS["FILEMAN_TAGS"] = "Etiquetas (ingrese palabras ó frases separada por comas)";
-$MESS["FILEMAN_FILEEDIT_FILENAME_EMPTY"] = "Nombre del archivo no está especificado";
 $MESS["FILEMAN_FILE_DELETE"] = "Borrar archivo";
 $MESS["FILEMAN_FILE_DELETE_CONFIRM"] = "¿Usted desea realmente borrar este archivo?";
 $MESS["FILEMAN_FILE_EDIT"] = "Editar";

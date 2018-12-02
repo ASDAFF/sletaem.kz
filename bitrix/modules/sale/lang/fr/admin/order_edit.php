@@ -1,4 +1,7 @@
 <?
+$MESS["SOE_ORDER_UPDATE_ERROR"] = "Erreur de mise à jour de la commande";
+$MESS["SOE_TO_ACTION"] = "Actions";
+$MESS["SOE_TO_ACTION_TITLE"] = "Sélectionner l'action dans la liste";
 $MESS["SOE_COMMENT_NOTE"] = "(Invisible pour l'acheteur)";
 $MESS["SOE_ORDER_ID_PREF"] = "#";
 $MESS["SOE_DELIVERY_HANDLER_TAB"] = "Services de livraison automatisés";
@@ -263,7 +266,4 @@ $MESS["SALE_BLOCK_TITLE_BASKET"] = "Commander";
 $MESS["SALE_BLOCK_TITLE_ADDITIONAL"] = "Informations supplémentaires";
 $MESS["SOE_ORDER_LOCKED2"] = "La commande a été mise temporairement en attente par le client #ID# (#DATE#)";
 $MESS["SOE_TO_UNLOCK"] = "Débloquer la commande";
-$MESS["SOE_ORDER_UPDATE_ERROR"] = "Erreur de mise à jour de la commande";
-$MESS["SOE_TO_ACTION"] = "Actions";
-$MESS["SOE_TO_ACTION_TITLE"] = "Sélectionner l'action dans la liste";
 ?>

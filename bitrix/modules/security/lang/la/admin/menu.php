@@ -9,6 +9,8 @@ $MESS["SEC_MENU_ANTIVIRUS_ITEM"] = "Antivirus WEB";
 $MESS["SEC_MENU_ANTIVIRUS_TITLE"] = "Administración y configuración del antivirus";
 $MESS["SEC_MENU_FILTER_LOG_ITEM"] = "Registro de intrusión";
 $MESS["SEC_MENU_FILTER_LOG_TITLE"] = "Ver registro de intrusión";
+$MESS["SEC_MENU_OTP_NEW_ITEM"] = "Autenticación de dos pasos";
+$MESS["SEC_MENU_OTP_NEW_ITEM_TITLE"] = "Habilitar y configurar la autenticación en dos pasos";
 $MESS["SEC_MENU_ADMINIP_ITEM"] = "Protección del Panel de Control";
 $MESS["SEC_MENU_ADMINIP_TITLE"] = "Filtrar acceso al Panel de Control por dirección de IP";
 $MESS["SEC_MENU_IP_ITEM"] = "Lista de Detenidos";
@@ -29,6 +31,4 @@ $MESS["SEC_MENU_SCANNER_ITEM"] = "Escaner de Seguridad";
 $MESS["SEC_MENU_SCANNER_TITLE"] = "Ejecutar escaner de Seguridad";
 $MESS["SEC_MENU_HOSTS_ITEM"] = "Servidor/dominios";
 $MESS["SEC_MENU_HOSTS_TITLE"] = "Preferencias de restricción del servidor";
-$MESS["SEC_MENU_OTP_NEW_ITEM"] = "Autenticación de dos pasos";
-$MESS["SEC_MENU_OTP_NEW_ITEM_TITLE"] = "Habilitar y configurar la autenticación en dos pasos";
 ?>

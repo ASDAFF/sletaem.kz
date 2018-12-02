@@ -534,4 +534,5 @@ $MESS["SC_FIX_MBSTRING_CONFIRM"] = "¡Atención!
 Esto cambiará los archivos de configuración. Si la operación falla, su sitio será recuperable sólo desde el panel de control de alojamiento web.
 
 ¿Desea continuar?";
+$MESS["SC_ERR_NO_INDEX_ENABLED"] = "Índice de búsqueda de texto completo #INDEX# no está habilitado para la tabla #TABLE#";
 ?>

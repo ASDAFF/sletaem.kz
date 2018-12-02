@@ -1,4 +1,5 @@
 <?
+$MESS["DEVSERVER_ADMIN_MESSAGE"] = "Cette installation sert de plan de développement à Bitrix Site Manager. Il ne doit être utilisé comme site disponible publiquement.";
 $MESS["MAIN_PROLOG_ADMIN_LOGOUT"] = "Sortie";
 $MESS["MAIN_PROLOG_ADMIN_TITLE"] = "Section administrative";
 $MESS["TRIAL_ATTENTION"] = "Attention! Utiliser la technologie <a href='/bitrix/admin/sysupdate.php'>SiteUpdate</a> pour recevoir les dernières mises à jour.<br>";
@@ -71,5 +72,4 @@ $MESS["prolog_main_support_menu1"] = "dans:";
 $MESS["prolog_main_support_menu2"] = "pour une semaine";
 $MESS["prolog_main_support_menu3"] = "deux semaines";
 $MESS["prolog_main_support_menu4"] = "<span style='color:red;'>moins</span>";
-$MESS["DEVSERVER_ADMIN_MESSAGE"] = "Cette installation sert de plan de développement à Bitrix Site Manager. Il ne doit être utilisé comme site disponible publiquement.";
 ?>

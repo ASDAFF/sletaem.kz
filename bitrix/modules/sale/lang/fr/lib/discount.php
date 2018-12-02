@@ -1,4 +1,7 @@
 <?
+$MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_BASKET"] = "Modification totale du panier";
+$MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_DELIVERY"] = "Coût de la modification de la livraison";
+$MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_UNKNOWN"] = "Règle de panier inconnue";
 $MESS["BX_SALE_DISCOUNT_APPLY_MODE_ADD"] = "mettre à jour les réductions appliquées";
 $MESS["BX_SALE_DISCOUNT_APPLY_MODE_LAST"] = "ne pas appliquer si l'option \"Ne pas appliquer plus de réductions\" est activée";
 $MESS["BX_SALE_DISCOUNT_APPLY_MODE_DISABLE"] = "ne pas appliquer si d'autres réductions sont appliquées";
@@ -22,7 +25,4 @@ $MESS["BX_SALE_DISCOUNT_APPLY_MODE_LAST_EXT"] = "ne pas appliquer aux produits d
 $MESS["BX_SALE_DISCOUNT_APPLY_MODE_DISABLE_EXT"] = "ne pas appliquer aux produits ayant déjà une réduction";
 $MESS["BX_SALE_DISCOUNT_APPLY_MODE_FULL_LAST"] = "désactiver toutes les règles du panier d'achat s'il contient des produits dont la réduction a l'option activée \"Ne pas appliquer d'autres réductions\"";
 $MESS["BX_SALE_DISCOUNT_APPLY_MODE_FULL_DISABLE"] = "désactiver toutes les règles du panier d'achat s'il contient des produits ayant tout type de réduction appliqué";
-$MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_BASKET"] = "Modification totale du panier";
-$MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_DELIVERY"] = "Coût de la modification de la livraison";
-$MESS["BX_SALE_DISCOUNT_MESS_SIMPLE_DESCRIPTION_UNKNOWN"] = "Règle de panier inconnue";
 ?>

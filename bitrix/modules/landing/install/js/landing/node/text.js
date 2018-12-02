@@ -6,9 +6,9 @@
 
 	var escapeText = BX.Landing.Utils.escapeText;
 	var headerTagMatcher = BX.Landing.Utils.Matchers.headerTag;
-	var russianTextMatcher = BX.Landing.Utils.Matchers.russianText;
 	var changeTagName = BX.Landing.Utils.changeTagName;
 	var textToPlaceholders = BX.Landing.Utils.textToPlaceholders;
+
 
 	/**
 	 * Implements interface for works with text node of blocks
@@ -73,12 +73,6 @@
 		{
 			this.superClass.onChange.call(this, arguments);
 
-			if (this.containsRussianText())
-			{
-				var buttons = [this.getGlavredButton(), this.getDesignButton()];
-				BX.Landing.UI.Panel.EditorPanel.getInstance().show(this.node, null, buttons);
-			}
-
 			if (!preventAdjustPosition)
 			{
 				BX.Landing.UI.Panel.EditorPanel.getInstance().adjustPosition(this.node);
@@ -88,7 +82,7 @@
 			{
 				BX.Landing.History.getInstance().push(
 					new BX.Landing.History.Entry({
-						block: top.BX.Landing.Block.storage.getByChildNode(this.node).id,
+						block: this.getBlock().id,
 						selector: this.selector,
 						command: "editText",
 						undo: this.lastValue,
@@ -159,15 +153,31 @@
 		{
 			event.preventDefault();
 
+			var text;
+
 			// Prevents XSS and prevents insert potential dangerously code
 			if (event.clipboardData && event.clipboardData.getData)
 			{
-				document.execCommand("insertText", false, event.clipboardData.getData("text/plain"));
+				text = event.clipboardData.getData("text/plain");
+
+				if (!this.manifest.textOnly)
+				{
+					text = text.replace(new RegExp('\n', 'g'), '<br>');
+				}
+
+				document.execCommand("insertHTML", false, text);
 			}
 			else
 			{
 				// ie11
-				document.execCommand("paste", true, window.clipboardData.getData("text"));
+				text = window.clipboardData.getData("text");
+
+				if (!this.manifest.textOnly)
+				{
+					text = text.replace(new RegExp('\n', 'g'), '<br>');
+				}
+
+				document.execCommand("paste", true, text);
 			}
 
 			this.onChange();
@@ -201,15 +211,19 @@
 				this.enableEdit();
 				BX.Landing.UI.Tool.ColorPicker.hideAll();
 				BX.Landing.UI.Button.FontAction.hideAll();
+			}
 
-				if (event.target.nodeName === "A" || event.target.parentElement.nodeName === "A")
+			requestAnimationFrame(function() {
+				if (event.target.nodeName === "A" ||
+					event.target.parentElement.nodeName === "A")
 				{
 					var range = document.createRange();
 					range.selectNode(event.target);
 					window.getSelection().removeAllRanges();
 					window.getSelection().addRange(range);
 				}
-			}
+			});
+
 		},
 
 
@@ -230,7 +244,8 @@
 			event.preventDefault();
 			this.fromNode = false;
 
-			if (event.target.nodeName === "A" || event.target.parentElement.nodeName === "A")
+			if (event.target.nodeName === "A" ||
+				event.target.parentElement.nodeName === "A")
 			{
 				var range = document.createRange();
 				range.selectNode(event.target);
@@ -251,17 +266,6 @@
 
 
 		/**
-		 * Checks that Glavred should be enabled
-		 * @return {boolean}
-		 */
-		containsRussianText: function()
-		{
-			return false;
-			// return russianTextMatcher.test(this.node.innerText);
-		},
-
-
-		/**
 		 * Enables edit mode
 		 */
 		enableEdit: function()
@@ -276,11 +280,6 @@
 				BX.Landing.Block.Node.Text.currentNode = this;
 
 				var buttons = [];
-
-				if (this.containsRussianText())
-				{
-					buttons.push(this.getGlavredButton());
-				}
 
 				buttons.push(this.getDesignButton());
 
@@ -325,56 +324,12 @@
 
 
 		/**
-		 * Gets Glavred button for editor
-		 * @return {BX.Landing.UI.Button.Design}
-		 */
-		getGlavredButton: function()
-		{
-			if (!this.glavredButton)
-			{
-				this.glavredButton = new BX.Landing.UI.Button.EditorAction("glavred", {
-					html: "<span class=\"fa fa-check\"></span> " + BX.message("LANDING_TITLE_OF_EDITOR_ACTION_GLAVRED"),
-					attrs: {title: BX.message("LANDING_TITLE_OF_EDITOR_ACTION_GLAVRED_TITLE")},
-					onClick: this.onGlavredButtonClick.bind(this)
-				});
-			}
-
-			return this.glavredButton;
-		},
-
-
-		onGlavredButtonClick: function()
-		{
-			var buttonHTML = this.glavredButton.layout.innerHTML;
-			var buttonRect = this.glavredButton.layout.getBoundingClientRect();
-			var loader = new BX.Landing.UI.Card.Loader();
-			this.glavredButton.layout.style.width = buttonRect.width + "px";
-			this.glavredButton.layout.style.overflow = "hidden";
-			this.glavredButton.layout.innerHTML = "";
-			this.glavredButton.layout.appendChild(loader.layout);
-			loader.layout.classList.add("landing-ui-loader-small");
-			loader.show();
-
-			BX.Landing.Client.Glavred.getInstance().proofread(this.node).then(function() {
-				this.glavredButton.layout.classList.add("landing-ui-active");
-				this.glavredButton.layout.innerHTML = buttonHTML;
-			}.bind(this));
-		},
-
-
-		/**
 		 * Disables edit mode
 		 */
 		disableEdit: function()
 		{
 			if (this.isEditable())
 			{
-				if (this.containsRussianText() && this.glavredButton)
-				{
-					this.glavredButton.layout.classList.remove("landing-ui-active");
-					BX.Landing.Client.Glavred.getInstance().removeMarkup(this.node);
-				}
-
 				this.node.contentEditable = false;
 
 				if (this.lastValue !== this.getValue())
@@ -403,6 +358,7 @@
 					selector: this.selector,
 					title: this.manifest.name,
 					content: this.node.innerHTML,
+					textOnly: this.manifest.textOnly,
 					bind: this.node
 				});
 
@@ -414,6 +370,7 @@
 			else
 			{
 				this.field.setValue(this.node.innerHTML);
+				this.field.content = this.node.innerHTML;
 			}
 
 			return this.field;
@@ -441,7 +398,7 @@
 		 */
 		getValue: function()
 		{
-			return textToPlaceholders(BX.util.htmlspecialcharsback(this.node.innerHTML));
+			return textToPlaceholders(this.node.innerHTML);
 		},
 
 
@@ -455,8 +412,8 @@
 		},
 
 		/**
-		 * Gets Glavred button for editor
-		 * @return {BX.Landing.UI.Button.Design}
+		 * Gets change tag button
+		 * @return {BX.Landing.UI.Button.ChangeTag}
 		 */
 		getChangeTagButton: function()
 		{

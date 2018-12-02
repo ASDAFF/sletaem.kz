@@ -30,6 +30,7 @@ $MESS["SOPS_PRICE1"] = "para 1 artículo si ordena #CNT# pza.";
 $MESS["SOPS_COUPON"] = "Cupones del cliente ";
 $MESS["SOPS_APPLY"] = "Aplicar";
 $MESS["SPS_XML_ID"] = "ID  externo";
+$MESS["SPS_CODE"] = "Código simbólico";
 $MESS["SPS_CAN_BUY_NOT"] = "Lamentablemente, este producto está fuera de stock.";
 $MESS["SOPS_QUANTITY"] = "Cantidad";
 $MESS["SOPS_BALANCE"] = "Saldo";
@@ -41,7 +42,6 @@ $MESS["SPS_SKU_HIDE"] = "Ocultar";
 $MESS["SPS_PRODUCT_ACTIVE"] = "Si";
 $MESS["SPS_PRODUCT_NO_ACTIVE"] = "No";
 $MESS["SPS_PRODUCT_SELECTED"] = "Seleccionar";
-$MESS["SPS_CODE"] = "Código simbólico";
 $MESS["SPS_A_PROP_NOT_SET"] = "(Sin Clasificar)";
 $MESS["SPS_VALUE_ANY"] = "cualquiera";
 ?>

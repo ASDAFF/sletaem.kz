@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_HPS_QIWI_ERROR_CODE_0"] = "Exitoso";
 $MESS["SALE_HPS_QIWI_ERROR_CODE_5"] = "Datos de solicitud inválidos";
 $MESS["SALE_HPS_QIWI_ERROR_CODE_13"] = "El servidor está ocupado. Por favor, inténtelo de nuevo más tarde.";
 $MESS["SALE_HPS_QIWI_ERROR_CODE_78"] = "Operación incorrecta";
@@ -8,6 +9,7 @@ $MESS["SALE_HPS_QIWI_ERROR_CODE_210"] = "No se ha encontrado la factura";
 $MESS["SALE_HPS_QIWI_ERROR_CODE_215"] = "Una factura con este bill_id ya existe";
 $MESS["SALE_HPS_QIWI_ERROR_CODE_241"] = "Importe demasiado pequeña";
 $MESS["SALE_HPS_QIWI_ERROR_CODE_242"] = "Importe demasiado grande";
+$MESS["SALE_HPS_QIWI_ERROR_CODE_298"] = "No existe una carpeta con este ID";
 $MESS["SALE_HPS_QIWI_ERROR_CODE_300"] = "Error de procesamiento";
 $MESS["SALE_HPS_QIWI_ERROR_CODE_303"] = "El número de teléfono es incorrecto.";
 $MESS["SALE_HPS_QIWI_ERROR_CODE_316"] = "Intento de autenticación de un proveedor deshabilitado";
@@ -21,6 +23,4 @@ $MESS["SALE_HPS_QIWI_STATUS_MESSAGE_PAID"] = "Factura ha sido pagada.";
 $MESS["SALE_HPS_QIWI_STATUS_MESSAGE_REJECTED"] = "Factura ha sido rechazada.";
 $MESS["SALE_HPS_QIWI_STATUS_MESSAGE_UNPAID"] = "Error en el pago. Orden no fue pagada.";
 $MESS["SALE_HPS_QIWI_STATUS_MESSAGE_EXPIRED"] = "Factura vencida. Orden no fue pagada.";
-$MESS["SALE_HPS_QIWI_ERROR_CODE_0"] = "Exitoso";
-$MESS["SALE_HPS_QIWI_ERROR_CODE_298"] = "No existe una carpeta con este ID";
 ?>

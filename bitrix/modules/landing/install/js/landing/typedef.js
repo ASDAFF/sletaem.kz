@@ -7,6 +7,7 @@
  * @property {number} siteId
  * @property {number} lid
  * @property {?object} requiredUserAction
+ * @property {string|number} anchor
  */
 
 /**
@@ -17,6 +18,8 @@
  * @property {?object.<string, nodeManifest>} [nodes]
  * @property {?object.<string, cardManifest>} [cards]
  * @property {?object.<string, string>} [groups]
+ * @property {string} [formDescription]
+ * @property {string} [attrsFormDescription]
  */
 
 /**
@@ -28,6 +31,8 @@
  * @property {boolean} allowInlineEdit - Allows inline edit
  * @property {boolean} [skipDom]
  * @property {string} [group]
+ * @property {object} [extend]
+ * @property {string[]} [extend.attrs]
  * @property {imageDimensions} dimensions
  */
 
@@ -43,6 +48,7 @@
  * @property {string} [label] - Card label in edit form
  * @property {object} [presets]
  * @property {array} [presets.disallow]
+ * @property {string} [formDescription]
  * @property {array|string}
  */
 
@@ -55,6 +61,7 @@
  * @property {boolean} allowInlineEdit - Allows inline edit
  * @property {function} [onChange] - Function that will be called if contents change
  * @property {function} [onDesignShow] - Function that will be called if need open design panel
+ * @property {function} [onChangeOptions]
  * @property {object} [uploadParams]
  */
 

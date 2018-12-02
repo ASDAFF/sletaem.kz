@@ -1,4 +1,5 @@
 <?
+$MESS["SUP_SUBT_AGREE_PRIVACY"] = "J'ai lu et accepté la<a href=\"http://marketplace.1c-bitrix.ru/about/privacy.php\" target=\"_blank\">Politique de confidentialité</a>";
 $MESS["SUP_SUBV_HINT"] = "La 'Version bêta' est la version testée au sein de l'entreprise conceptrice avant la sortie officielle du produit. Elle contient les dernières mises à jours du produit. La version bêta est relativement stable, mais dans certains cas, peut ne pas fonctionner correctement.";
 $MESS["SUP_SU_RECOMEND_MOD"] = "<b>#NUM#</b> pour les solutions";
 $MESS["SUP_SU_OPTION_HELP"] = "<b>#NUM#</b> pour le système d'assistance";
@@ -172,5 +173,4 @@ $MESS["SUP_SUBA_FE_LNAME"] = "Nom de l'utilisateur";
 $MESS["SUP_CANT_CONTRUPDATE"] = "Pour mettre à jour votre site, s'il vous plaît utiliser le système de mise à jour sur le contrôleur.";
 $MESS["SUP_SUBA_UI_EXIST"] = "Je suis inscrit sur le site et je voudrai pouvoir accèder au support technique et télécharger la version complète";
 $MESS["SUP_SUBT_AGREE"] = "J'accepte l'accord de licence";
-$MESS["SUP_SUBT_AGREE_PRIVACY"] = "J'ai lu et accepté la<a href=\"http://marketplace.1c-bitrix.ru/about/privacy.php\" target=\"_blank\">Politique de confidentialité</a>";
 ?>

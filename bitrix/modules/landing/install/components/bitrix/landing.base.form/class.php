@@ -44,9 +44,10 @@ class LandingBaseFormComponent extends LandingBaseComponent
 	/**
 	 * Get some var from request.
 	 * @param string $var Code of var.
+	 * @param bool $strict Strict check of var.
 	 * @return mixed
 	 */
-	protected function request($var)
+	protected function request($var, $strict = false)
 	{
 		static $request = null;
 
@@ -58,6 +59,15 @@ class LandingBaseFormComponent extends LandingBaseComponent
 			{
 				$request = $request[$this->postCode];
 			}
+		}
+
+		if ($strict)
+		{
+			if (array_key_exists($var, $request))
+			{
+				return $request[$var];
+			}
+			return false;
 		}
 
 		return isset($request[$var]) ? $request[$var] : '';

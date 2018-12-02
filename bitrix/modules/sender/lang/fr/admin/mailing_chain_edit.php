@@ -1,4 +1,12 @@
 <?
+$MESS["sender_chain_edit_action_copy"] = "Copier";
+$MESS["sender_chain_edit_action_copy_title"] = "Copier le message de la lettre d'information";
+$MESS["sender_chain_edit_field_title"] = "Intitulé du message de la lettre d'information";
+$MESS["sender_chain_edit_field_title_desc"] = "Cet intitulé n'est visible que par vous.";
+$MESS["sender_chain_edit_copied"] = "Le message de la lettre d'information a été copié. Affichage maintenant de la copie.";
+$MESS["sender_chain_edit_recommended_sent_time"] = "Temps d'envoi recommandé : %send_time% en tenant compte des %delivery_time% heures nécessaires pour envoyer et livrer les messages.";
+$MESS["sender_chain_edit_recommended_sent_time_hint"] = "Temps calculé en utilisant les statistiques de diffusion et d'affichage des messages précédents.";
+$MESS["sender_chain_edit_status_deactivated"] = "La lettre d'information est inactive. Activez-la pour envoyer des messages de lettre d'information.";
 $MESS["rubric_tue"] = "Mar";
 $MESS["sender_chain_edit_field_send_type_MANUAL_desc"] = "Enregistrer le message à afficher sur le bouton \"Envoyer\". Cliquez dessus pour lancer l'envoi.";
 $MESS["SENDER_SHOW_TEMPLATE_LIST"] = "Afficher les modèles? Cela permettra de supprimer le message en cours de texte.";
@@ -78,12 +86,4 @@ $MESS["sender_chain_edit_btn_stop"] = "Arrêter";
 $MESS["sender_chain_edit_btn_stop_desc"] = "Annuler l'envoi. Cette action ne peut être annulée.";
 $MESS["sender_chain_edit_btn_send_err"] = "Envoyer de nouveaux aux adresses erronées";
 $MESS["sender_chain_edit_btn_send_err_desc"] = "Envoyer une lettre d'information par e-mail aux destinataires qui n'ont rien reçu à la première tentative.";
-$MESS["sender_chain_edit_action_copy"] = "Copier";
-$MESS["sender_chain_edit_action_copy_title"] = "Copier le message de la lettre d'information";
-$MESS["sender_chain_edit_field_title"] = "Intitulé du message de la lettre d'information";
-$MESS["sender_chain_edit_field_title_desc"] = "Cet intitulé n'est visible que par vous.";
-$MESS["sender_chain_edit_copied"] = "Le message de la lettre d'information a été copié. Affichage maintenant de la copie.";
-$MESS["sender_chain_edit_recommended_sent_time"] = "Temps d'envoi recommandé : %send_time% en tenant compte des %delivery_time% heures nécessaires pour envoyer et livrer les messages.";
-$MESS["sender_chain_edit_recommended_sent_time_hint"] = "Temps calculé en utilisant les statistiques de diffusion et d'affichage des messages précédents.";
-$MESS["sender_chain_edit_status_deactivated"] = "La lettre d'information est inactive. Activez-la pour envoyer des messages de lettre d'information.";
 ?>

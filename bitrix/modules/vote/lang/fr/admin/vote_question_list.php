@@ -1,4 +1,6 @@
 <?
+$MESS["VOTE_BACK_TO_VOTE"] = "Retour au sondage";
+$MESS["VOTE_IMAGE_ID"] = "Image du sondage";
 $MESS["VOTE_ALL"] = "(partout)";
 $MESS["VOTE_ACTIVE"] = "Actif(ve)";
 $MESS["VOTE_F_ACTIVE"] = "Actif(ve):";
@@ -17,7 +19,7 @@ $MESS["VOTE_F_REQUIRED"] = "Oblig.";
 $MESS["VOTE_REQUIRED"] = "Oblig.";
 $MESS["VOTE_FLT_REQUIRED"] = "Question obligatoire";
 $MESS["SAVE_ERROR"] = "Erreur de sauvegarde.";
-$MESS["DELETE_ERROR"] = "Chec de suppression.";
+$MESS["DELETE_ERROR"] = "Échec de suppression.";
 $MESS["VOTE_CREATE"] = "Ajouter";
 $MESS["VOTE_C_SORT"] = "Classification";
 $MESS["VOTE_VOTE_LIST"] = "Liste des sondages";
@@ -30,6 +32,4 @@ $MESS["VOTE_F_DIAGRAM"] = "Inclus dans le tableau:";
 $MESS["VOTE_F_QUESTION"] = "Question:";
 $MESS["VOTE_SAVE_ERROR"] = "Erreur d'écriture dans la base de données";
 $MESS["VOTE_PAGE_TITLE"] = "Liste de questions";
-$MESS["VOTE_BACK_TO_VOTE"] = "Retour au sondage";
-$MESS["VOTE_IMAGE_ID"] = "Image du sondage";
 ?>

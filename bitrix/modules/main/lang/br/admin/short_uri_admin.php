@@ -12,7 +12,7 @@ $MESS["SU_FLD_MODIFIED"] = "Modificado em";
 $MESS["SU_FLD_URI"] = "URL";
 $MESS["SU_FLD_SHORT_URI"] = "URL curta";
 $MESS["SU_FLD_STATUS"] = "Status HTTP";
-$MESS["SU_FLD_LAST_USED"] = "ltima utilização em";
+$MESS["SU_FLD_LAST_USED"] = "Última utilização em";
 $MESS["SU_FLD_NUMBER_USED"] = "Contagem de uso";
 $MESS["SU_AF_upd"] = "Editar";
 $MESS["SU_AF_del_conf"] = "Essa ação não pode ser desfeita. Excluir a URL?";
@@ -22,6 +22,6 @@ $MESS["SU_AF_title"] = "Short URL do";
 $MESS["SU_AF_F_URI"] = "URL";
 $MESS["SU_AF_F_SHORT_URI"] = "URL curta";
 $MESS["SU_AF_F_MODIFIED"] = "Modificado em";
-$MESS["SU_AF_F_LAST_USED"] = "ltima utilização em";
+$MESS["SU_AF_F_LAST_USED"] = "Última utilização em";
 $MESS["MAIN_ADD"] = "Adicionar";
 ?>

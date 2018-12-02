@@ -713,13 +713,13 @@ function convertTimeToMilitary ($strTime, $fromFormat = 'H:MI T', $toFormat = 'H
  * @param string|array $format
  * @param int|bool|\Bitrix\Main\Type\DateTime $timestamp
  * @param int|bool|\Bitrix\Main\Type\DateTime $now
- * 
+ *
  * @return string
  */
 function FormatDate($format = "", $timestamp = false, $now = false)
 {
 	global $DB;
-	
+
 	if ($timestamp === false)
 	{
 		$timestamp = time();
@@ -732,7 +732,7 @@ function FormatDate($format = "", $timestamp = false, $now = false)
 	{
 		$timestamp = intval($timestamp);
 	}
-	
+
 	if ($now === false)
 	{
 		$now = time();
@@ -745,7 +745,7 @@ function FormatDate($format = "", $timestamp = false, $now = false)
 	{
 		$now = intval($now);
 	}
-	
+
 	switch($format)
 	{
 		case "SHORT":
@@ -935,9 +935,16 @@ function FormatDate($format = "", $timestamp = false, $now = false)
 		$format = substr($format, 1);
 	}
 
-	$arFormatParts = preg_split("/(sago|iago|isago|Hago|dago|mago|Yago|sdiff|idiff|Hdiff|ddiff|mdiff|Ydiff|sshort|ishort|Hshort|dshort|mhort|Yshort|yesterday|today|tomorrow|tommorow|X|x|F|f|Q|M|l|D)/", $format, 0, PREG_SPLIT_DELIM_CAPTURE);
+	$arFormatParts = preg_split("/(?<!\\\\)(
+		sago|iago|isago|Hago|dago|mago|Yago|
+		sdiff|idiff|Hdiff|ddiff|mdiff|Ydiff|
+		sshort|ishort|Hshort|dshort|mhort|Yshort|
+		yesterday|today|tomorrow|tommorow|
+		X|x|j|F|f|Y|Q|M|l|D
+	)/x", $format, 0, PREG_SPLIT_DELIM_CAPTURE);
 
 	$result = "";
+	$currentLanguage = \Bitrix\Main\Localization\Loc::getCurrentLang();
 	foreach($arFormatParts as $format_part)
 	{
 		switch($format_part)
@@ -1141,34 +1148,58 @@ function FormatDate($format = "", $timestamp = false, $now = false)
 			));
 			break;
 		case "F":
-			if(LANGUAGE_ID == "en")
+			if($currentLanguage == "en")
 				$result .= date($format_part, $timestamp);
 			else
 				$result .= GetMessage("MONTH_".date("n", $timestamp)."_S");
 			break;
 		case "f":
-			if(LANGUAGE_ID == "en")
+			if($currentLanguage == "en")
 				$result .= date("F", $timestamp);
 			else
 				$result .= GetMessage("MONTH_".date("n", $timestamp));
 			break;
 		case "M":
-			if(LANGUAGE_ID == "en")
+			if($currentLanguage == "en")
 				$result .= date($format_part, $timestamp);
 			else
 				$result .= GetMessage("MON_".date("n", $timestamp));
 			break;
 		case "l":
-			if(LANGUAGE_ID == "en")
+			if($currentLanguage == "en")
 				$result .= date($format_part, $timestamp);
 			else
 				$result .= GetMessage("DAY_OF_WEEK_".date("w", $timestamp));
 			break;
 		case "D":
-			if(LANGUAGE_ID == "en")
+			if($currentLanguage == "en")
 				$result .= date($format_part, $timestamp);
 			else
 				$result .= GetMessage("DOW_".date("w", $timestamp));
+			break;
+		case "j":
+			$dayOfMonth = date("j", $timestamp);
+			$dayPattern = GetMessage("DOM_PATTERN");
+			if ($dayPattern)
+			{
+				$result .= str_replace("#DAY#", $dayOfMonth, $dayPattern);
+			}
+			else
+			{
+				$result .= $dayOfMonth;
+			}
+			break;
+		case "Y":
+			$year = date("Y", $timestamp);
+			$yearPattern = GetMessage("YEAR_PATTERN");
+			if ($yearPattern)
+			{
+				$result .= str_replace("#YEAR#", $year, $yearPattern);
+			}
+			else
+			{
+				$result .= $year;
+			}
 			break;
 		case "x":
 			$ampm = IsAmPmMode(true);
@@ -1340,6 +1371,14 @@ function FormatDateEx($strDate, $format=false, $new_format=false)
 				case "D":
 					$match=GetMessage("DOW_".date("w", $ux_time));
 					break;
+				case "j":
+					$match = date(substr($new_format, $i ,1), $ux_time);
+					$dayPattern = GetMessage("DOM_PATTERN");
+					if ($dayPattern)
+					{
+						$match = str_replace("#DAY#", $match, $dayPattern);
+					}
+					break;
 				default:
 					$match = date(substr($new_format, $i ,1), $ux_time);
 					break;
@@ -1386,6 +1425,11 @@ function FormatDateEx($strDate, $format=false, $new_format=false)
 					break;
 				case "j":
 					$match = intval($arParsedDate["DD"]);
+					$dayPattern = GetMessage("DOM_PATTERN");
+					if ($dayPattern)
+					{
+						$match = str_replace("#DAY#", $match, $dayPattern);
+					}
 					break;
 				case "Y":
 					$match = str_pad($arParsedDate["YY"], 4, "0", STR_PAD_LEFT);
@@ -3612,7 +3656,7 @@ function LocalRedirect($url, $skip_security_check=false, $status="302 Found")
 	{
 		foreach(GetModuleEvents("main", "OnBeforeLocalRedirect", true) as $arEvent)
 		{
-			ExecuteModuleEventEx($arEvent, array(&$url, $skip_security_check, $bExternal));
+			ExecuteModuleEventEx($arEvent, array(&$url, $skip_security_check, &$bExternal));
 		}
 	}
 
@@ -3644,6 +3688,8 @@ function LocalRedirect($url, $skip_security_check=false, $status="302 Found")
 
 	$_SESSION["BX_REDIRECT_TIME"] = time();
 
+	\Bitrix\Main\Context::getCurrent()->getResponse()->flush();
+
 	CMain::ForkActions();
 	exit;
 }
@@ -3659,6 +3705,8 @@ function FindUserID($tag_name, $tag_value, $user_name="", $form_name = "form1", 
 	/** @global CMain $APPLICATION */
 	global $APPLICATION;
 
+	$selfFolderUrl = (defined("SELF_FOLDER_URL") ? SELF_FOLDER_URL : "/bitrix/admin/");
+	$search_page = str_replace("/bitrix/admin/", $selfFolderUrl, $search_page);
 	$tag_name_x = preg_replace("/([^a-z0-9]|\\[|\\])/is", "x", $tag_name);
 	if($APPLICATION->GetGroupRight("main") >= "R")
 	{
@@ -3687,7 +3735,7 @@ function Ch".$tag_name_x."()
 			if (tv".$tag_name_x."!='')
 			{
 				DV_".$tag_name_x.".innerHTML = '<i>".GetMessage("MAIN_WAIT")."</i>';
-				BX(\"hiddenframe".$tag_name."\").src='/bitrix/admin/get_user.php?ID=' + tv".$tag_name_x."+'&strName=".$tag_name."&lang=".LANG.(defined("ADMIN_SECTION") && ADMIN_SECTION===true?"&admin_section=Y":"")."';
+				BX(\"hiddenframe".$tag_name."\").src='get_user.php?ID=' + tv".$tag_name_x."+'&strName=".$tag_name."&lang=".LANG.(defined("ADMIN_SECTION") && ADMIN_SECTION===true?"&admin_section=Y":"")."';
 			}
 			else
 			{
@@ -4290,6 +4338,7 @@ class CJSCore
 	const USE_PUBLIC = 'public';
 
 	private static $arRegisteredExt = array();
+	private static $arAutoloadQueue = array();
 	private static $arCurrentlyLoadedExt = array();
 
 	private static $bInited = false;
@@ -4299,7 +4348,7 @@ class CJSCore
 	ex: CJSCore::RegisterExt('timeman', array(
 		'js' => '/bitrix/js/timeman/core_timeman.js',
 		'css' => '/bitrix/js/timeman/css/core_timeman.css',
-		'lang' => '/bitrix/modules/timeman/lang/#LANG#/js_core_timeman.php',
+		'lang' => '/bitrix/modules/timeman/js_core_timeman.php',
 		'rel' => array(needed extensions for automatic inclusion),
 		'use' => CJSCore::USE_ADMIN|CJSCore::USE_PUBLIC
 	));
@@ -4323,13 +4372,21 @@ class CJSCore
 			}
 		}
 
+		if (isset($arPaths['lang']))
+		{
+			$arPaths['lang'] = str_replace("/lang/".LANGUAGE_ID."/", "/", $arPaths['lang']);
+		}
+
 		self::$arRegisteredExt[$name] = $arPaths;
+
+		if ($arPaths['autoload'])
+		{
+			self::$arAutoloadQueue[$name] = $arPaths;
+		}
 	}
 
 	public static function Init($arExt = array(), $bReturn = false)
 	{
-		global $USER;
-
 		if (!self::$bInited)
 		{
 			self::_RegisterStandardExt();
@@ -4367,11 +4424,19 @@ class CJSCore
 		$ret = '';
 		if ($bNeedCore && !self::$arCurrentlyLoadedExt['core'])
 		{
-			$ret .= self::_loadCSS('/bitrix/js/main/core/css/core.css', $bReturn);
-			$ret .= self::_loadJS('/bitrix/js/main/core/core.js', $bReturn);
-			$ret .= self::_loadLang(BX_ROOT.'/modules/main/lang/'.LANGUAGE_ID.'/js_core.php', $bReturn);
+			$config = self::GetCoreConfig();
+
+			$ret .= self::_loadCSS($config['css'], $bReturn);
+			$ret .= self::_loadJS($config['js'], $bReturn);
+			$ret .= self::_loadLang($config['lang'], $bReturn);
 
 			self::$arCurrentlyLoadedExt['core'] = true;
+		}
+
+		foreach (self::$arAutoloadQueue as $extCode => $extParams)
+		{
+			$ret .= self::_loadExt($extCode, $bReturn);
+			unset(self::$arAutoloadQueue[$extCode]);
 		}
 
 		for ($i = 0, $len = count($arExt); $i < $len; $i++)
@@ -4379,7 +4444,7 @@ class CJSCore
 			$ret .= self::_loadExt($arExt[$i], $bReturn);
 		}
 
-		if (defined('BX_PUBLIC_MODE') && BX_PUBLIC_MODE == 1)
+		if (!defined('PUBLIC_MODE') && defined('BX_PUBLIC_MODE') && BX_PUBLIC_MODE == 1)
 			echo $ret;
 
 		return $bReturn ? $ret : true;
@@ -4392,6 +4457,16 @@ class CJSCore
 	public static function IsCoreLoaded()
 	{
 		return isset(self::$arCurrentlyLoadedExt["core"]);
+	}
+
+	/**
+	 * Returns true if JS extension was loaded.
+	 * @param string $code Code of JS extension.
+	 * @return bool
+	 */
+	public static function isExtensionLoaded($code)
+	{
+		return isset(self::$arCurrentlyLoadedExt[$code]);
 	}
 
 	public static function GetCoreMessagesScript($compositeMode = false)
@@ -4601,6 +4676,15 @@ JS;
 		return $scriptsList;
 	}
 
+	public static function GetCoreConfig()
+	{
+		return Array(
+			'css' => '/bitrix/js/main/core/css/core.css',
+			'js' => '/bitrix/js/main/core/core.js',
+			'lang' => BX_ROOT.'/modules/main/js_core.php',
+		);
+	}
+
 	private static function _loadExt($ext, $bReturn)
 	{
 		$ret = '';
@@ -4733,6 +4817,21 @@ JS;
 		return self::$arRegisteredExt[$ext];
 	}
 
+	public static function getAutoloadExtInfo()
+	{
+		$result = Array();
+
+		foreach(self::$arRegisteredExt as $ext => $info)
+		{
+			if ($info['autoload'])
+			{
+				$result[$ext] = $info;
+			}
+		}
+
+		return $result;
+	}
+
 	private static function _RegisterStandardExt()
 	{
 		require_once($_SERVER['DOCUMENT_ROOT'].BX_ROOT.'/modules/main/jscore.php');
@@ -4771,8 +4870,7 @@ JS;
 
 		if ($lang)
 		{
-			$lang_filename = $_SERVER['DOCUMENT_ROOT'].str_replace("/lang/".LANGUAGE_ID."/", "/", $lang);
-			$mess_lang = \Bitrix\Main\Localization\Loc::loadLanguageFile($lang_filename);
+			$mess_lang = \Bitrix\Main\Localization\Loc::loadLanguageFile($_SERVER['DOCUMENT_ROOT'].$lang);
 
 			if (!empty($mess_lang))
 			{
@@ -4844,6 +4942,8 @@ JS;
 
 class CUtil
 {
+	protected static $alreadyDecodedRequest = false;
+
 	public static function addslashes($s)
 	{
 		static $aSearch = array("\\", "\"", "'");
@@ -5269,8 +5369,12 @@ class CUtil
 
 	public static function JSPostUnescape()
 	{
-		CUtil::decodeURIComponent($_POST);
-		CUtil::decodeURIComponent($_REQUEST);
+	    if(!static::$alreadyDecodedRequest)
+	    {
+		    static::$alreadyDecodedRequest = true;
+		    CUtil::decodeURIComponent($_POST);
+		    CUtil::decodeURIComponent($_REQUEST);
+	    }
 	}
 
 	public static function decodeURIComponent(&$item)
@@ -6091,7 +6195,7 @@ class CHTTP
 						$res = trim($matches[1]);
 						$res = base64_decode($res);
 						$res = CUtil::ConvertToLangCharset($res);
-						list($user, $pass) = explode(':', $res);
+						list($user, $pass) = explode(':', $res, 2);
 						if(strpos($user, $_SERVER['HTTP_HOST']."\\") === 0)
 							$user = str_replace($_SERVER['HTTP_HOST']."\\", "", $user);
 						elseif(strpos($user, $_SERVER['SERVER_NAME']."\\") === 0)

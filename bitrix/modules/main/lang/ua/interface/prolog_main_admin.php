@@ -1,4 +1,6 @@
 <?
+$MESS["prolog_main_timelimit11"] = "<span class=\"required\">Увага!</span> Термін дії поточної ліцензії закінчується #DAYS_AGO_TXT#. В термін до #FINISH_DATE# необхідно придбати продовження ліцензії на наступний рік, щоб уникнути блокування продукту. Зв'яжіться з <a href=\"mailto:info@bitrix24.ua\">відділом по роботі з ключовими клієнтами компанії Бітрікс24</a>. ";
+$MESS["prolog_main_timelimit12"] = "<span class=\"required\">Увага!</span> Термін дії поточної ліцензії закінчився #FINISH_DATE#. Через #DAYS_AGO# днів робота проекту буде зупинена, доступ до продукту заблокований. Терміново зв'яжіться з <a href=\"mailto:info@bitrix24.ua\">відділом по роботі з ключовими клієнтами компанії Бітрікс24</a> для придбання ліцензії на наступний рік. ";
 $MESS["prolog_main_today"] = "<b>сьогодні</b>";
 $MESS["MAIN_PROLOG_ADMIN_TITLE"] = "Адміністративний розділ";
 $MESS["TRIAL_ATTENTION_TEXT5_1c_bitrix"] = "Ви можете купити повнофункціональну версію продукту за адресою <a href=\"http://www.1c-bitrix.ru/buy/?r1=bsm7trial&amp;r2=expiried\">www.1c-bitrix.ru/buy/</a>";

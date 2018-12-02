@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_ORDER_HIDDEN"] = "[Masquée]";
 $MESS["SALE_ORDER_ID"] = "ID de la commande";
 $MESS["SALE_ACCOUNT_NUMBER"] = "Commande #";
 $MESS["SALE_ORDER_PAID"] = "Paiement de la commande";
@@ -47,5 +48,4 @@ $MESS["SALE_PAYMENT_F_USER_EMAIL"] = "Adresse e-mail du client";
 $MESS["SALE_PAYMENT_F_USER_ID"] = "ID du client";
 $MESS["SALE_PAYMENT_F_USER_LOGIN"] = "Identifiant du client";
 $MESS["SALE_ORDER_USER_NAME"] = "Client";
-$MESS["SALE_ORDER_HIDDEN"] = "[Masquée]";
 ?>

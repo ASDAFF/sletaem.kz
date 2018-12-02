@@ -1,9 +1,10 @@
 <?
-$MESS["SUBSCRIBE_CONFIRM_SUBJECT"] = "#SITE_NAME#: Confirmar suscripción";
+$MESS["SUBSCRIBE_CONFIRM_NAME"] = "Confirmar suscripción";
 $MESS["SUBSCRIBE_CONFIRM_DESC"] = "#EMAIL# - URL de la suscripción
 #DATE# - fecha en que se agregó o actualizó la dirección
 #CONFIRM_URL# - confirmación de la URL
 #MAILING_LIST# - subscripciones";
+$MESS["SUBSCRIBE_CONFIRM_SUBJECT"] = "#SITE_NAME#: Confirmar suscripción";
 $MESS["SUBSCRIBE_CONFIRM_MESSAGE"] = "
 Este mensaje fue enviado desde #SITE_NAME#.
 ------------------------------------------
@@ -28,5 +29,4 @@ http://#SERVER_NAME##CONFIRM_URL#
 
 
 Este mensaje fue enviado por un robot.";
-$MESS["SUBSCRIBE_CONFIRM_NAME"] = "Confirmar suscripción";
 ?>

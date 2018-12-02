@@ -1,6 +1,6 @@
 <?
 $MESS["SECURITY_SITE_CHECKER_FilePermissionsTest_NAME"] = "Verificação de acessibilidade de arquivo";
-$MESS["SECURITY_SITE_CHECKER_FILE_PERM_ADDITIONAL"] = "Ultimos #COUNT# arquivos/pastas:";
+$MESS["SECURITY_SITE_CHECKER_FILE_PERM_ADDITIONAL"] = "Últimos #COUNT# arquivos/pastas:";
 $MESS["SECURITY_SITE_CHECKER_FILE_PERM_TITLE"] = "Há, pelo menos #COUNT#, mapas, arquivos ou diretórios com permissão completa de gravação para todos.";
 $MESS["SECURITY_SITE_CHECKER_FILE_PERM_DETAIL"] = "A permissão de gravação de todos irá comprometer completamenteseu projeto, porque seu código poderá ser alterado por terceiros.";
 $MESS["SECURITY_SITE_CHECKER_FILE_PERM_RECOMMENDATION"] = "Remover permissões redundantes.";

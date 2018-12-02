@@ -70,7 +70,7 @@
 			this.template = parameters.template || '';
 			this.signedParamsString = parameters.signedParamsString || '';
 			this.siteId = parameters.siteId || '';
-			this.ajaxUrl = parameters.ajaxUrl || '';
+			this.ajaxUrl = this.params.AJAX_PATH || '';
 			this.templateFolder = parameters.templateFolder || '';
 
 			this.useDynamicScroll = this.params.USE_DYNAMIC_SCROLL === 'Y';
@@ -383,11 +383,6 @@
 			if (this.result.EVENT_ONCHANGE_ON_START === 'Y')
 			{
 				BX.onCustomEvent('OnBasketChange');
-			}
-
-			if (this.result.GIFTS_RELOAD)
-			{
-				// ToDo call some event for gifts reload
 			}
 		},
 

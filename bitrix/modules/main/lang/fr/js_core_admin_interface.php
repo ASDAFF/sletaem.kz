@@ -1,4 +1,6 @@
 <?
+$MESS["JSADM_CALEND_PREV_WEEK"] = "Précédent";
+$MESS["JSADM_CALEND_PREV"] = "Précédent";
 $MESS["JSADM_FLT_NO_NAME"] = "Sans nom";
 $MESS["JSADM_LIST_SELECTEDALL"] = "tous";
 $MESS["JSADM_FLT_DEL_CONFIRM"] = "tes-vous sûr de vouloir supprimer le filtre ?";
@@ -8,12 +10,10 @@ $MESS["JSADM_FILE_M"] = "Ajouter les fichiers";
 $MESS["JSADM_FLT_NEW_NAME"] = "Nouveau filtre";
 $MESS["JSADM_PIN_OFF"] = "Détacher le panneau";
 $MESS["JSADM_FAV_ADD_ERR"] = "Erreur d'ajout aux favoris.";
-$MESS["JSADM_FLT_SAVE_ERROR"] = "Chec de la sauvegarde du filtre.";
+$MESS["JSADM_FLT_SAVE_ERROR"] = "Échec de la sauvegarde du filtre.";
 $MESS["JSADM_FAV_DEL_ERR"] = "Erreur de suppression depuis les Favoris.";
 $MESS["JSADM_FLT_DEL_ERROR"] = "Erreur lors de la de suppression du filtre.";
 $MESS["JSADM_FLT_SHOW_ALL"] = "Afficher tous les filtres";
-$MESS["JSADM_CALEND_PREV_WEEK"] = "Comparer avec la version précédente";
-$MESS["JSADM_CALEND_PREV"] = "Comparer avec la version précédente";
 $MESS["JSADM_PIN_ON"] = "Attacher le panneau";
 $MESS["JSADM_TABS_EXPAND"] = "Ouvrir tous les onglets sur une page";
 $MESS["JSADM_FLT_UNFOLD"] = "Afficher le filtre";

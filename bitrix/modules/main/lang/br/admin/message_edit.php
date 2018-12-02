@@ -2,7 +2,7 @@
 $MESS["EDIT_MESSAGE_TITLE"] = "Editar # #ID# do modelo de e-mail";
 $MESS["NEW_MESSAGE_TITLE"] = "Novo modelo de e-mail";
 $MESS["RECORD_LIST"] = "Modelos de e-mail";
-$MESS["LAST_UPDATE"] = "ltima atualização:";
+$MESS["LAST_UPDATE"] = "Última atualização:";
 $MESS["ACTIVE"] = "Ativo:";
 $MESS["LID"] = "Site:";
 $MESS["EVENT_NAME"] = "Tipo de Evento";

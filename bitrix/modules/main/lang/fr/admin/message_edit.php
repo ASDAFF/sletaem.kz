@@ -1,10 +1,13 @@
 <?
+$MESS["MSG_PRIORITY_1"] = "Augmenté";
+$MESS["main_mess_edit_lang"] = "Langue :";
+$MESS["main_mess_edit_lang_not_set"] = "(non défini)";
+$MESS["main_mess_edit_fields"] = "Champs de message";
 $MESS["MSG_BODY_TYPE_HTML"] = "HTML";
 $MESS["ACTIVE"] = "Actif(ve):";
 $MESS["MSG_PRIORITY"] = "Importance:";
 $MESS["MAIN_INSERT"] = "Insérer";
 $MESS["MAIN_DELETE_RECORD_CONF"] = "Tes-vous sûr de vouloir supprimer ce modèle de courrier?";
-$MESS["MSG_PRIORITY_1"] = "Augmenté";
 $MESS["MAIN_NEW_RECORD"] = "Ajouter";
 $MESS["MAIN_NEW_RECORD_TITLE"] = "Ajouter un nouveau modèle";
 $MESS["ADD"] = "Ajouter";
@@ -54,7 +57,4 @@ $MESS["MSG_BODY_TYPE"] = "Le type de l'organisme:";
 $MESS["MAIN_DELETE_RECORD_TITLE"] = "Supprimer le modèle actuel";
 $MESS["MSG_BCC"] = "Cci:";
 $MESS["MSG_SITE_TEMPLATE_ID"] = "Thème visuel:";
-$MESS["main_mess_edit_lang"] = "Langue :";
-$MESS["main_mess_edit_lang_not_set"] = "(non défini)";
-$MESS["main_mess_edit_fields"] = "Champs de message";
 ?>

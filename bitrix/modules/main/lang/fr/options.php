@@ -1,4 +1,14 @@
 <?
+$MESS["MAIN_OPTIONS_UPDATE_DEVSRV"] = "Développement uniquement :";
+$MESS["MAIN_OPTIONS_USE_CAPTCHA"] = "Utiliser le CAPTCHA pour la récupération de mot de passe :";
+$MESS["MAIN_OPTIONS_IMAGES"] = "Images de profil d'utilisateur";
+$MESS["MAIN_OPTIONS_IMAGES_WIDTH"] = "Largeur max (px) :";
+$MESS["MAIN_OPTIONS_IMAGES_HEIGHT"] = "Hauteur max (px) :";
+$MESS["MAIN_OPTIONS_IMAGES_SIZE"] = "Taille de fichier max, octets :";
+$MESS["MAIN_REGISTER_AGREEMENT_TITLE"] = "Gérer les accord. <a href=\"#AGGREMENT_CREATE_URL#\" target=\"_blank\">Créer un nouvel Accord</a>";
+$MESS["MAIN_REGISTER_AGREEMENT_DEFAUTL_VALUE"] = "(Sélectionnez un Accord)";
+$MESS["MAIN_OPTIONS_PHONE_NUMBER_FORMAT"] = "Format des numéros de téléphone";
+$MESS["MAIN_OPTIONS_PHONE_NUMBER_DEFAULT_COUNTRY"] = "Pays par défaut :";
 $MESS["MAIN_REGISTER"] = "Activer l'auto-inscription pour les utilisateurs";
 $MESS["MAIN_EMAIL"] = "Envoyez des copies de tous les e-mails sortants:";
 $MESS["FILL_TO_MAIL_M"] = "Adresse email de la légende";
@@ -207,15 +217,5 @@ $MESS["MAIN_OPTIONS_URL_PREVIEW"] = "Liens multimédias riches";
 $MESS["MAIN_OPTION_URL_PREVIEW_ENABLE"] = "Activer les liens multimédias riches :";
 $MESS["MAIN_OPTION_URL_PREVIEW_SAVE_IMAGES"] = "Conserver les images en local :";
 $MESS["main_sett_public_panel_hide"] = "Ne jamais afficher la barre d'outil pour les utilisateurs :";
-$MESS["MAIN_OPTIONS_UPDATE_DEVSRV"] = "Développement uniquement :";
-$MESS["MAIN_OPTIONS_USE_CAPTCHA"] = "Utiliser le CAPTCHA pour la récupération de mot de passe :";
-$MESS["MAIN_OPTIONS_IMAGES"] = "Images de profil d'utilisateur";
-$MESS["MAIN_OPTIONS_IMAGES_WIDTH"] = "Largeur max (px) :";
-$MESS["MAIN_OPTIONS_IMAGES_HEIGHT"] = "Hauteur max (px) :";
-$MESS["MAIN_OPTIONS_IMAGES_SIZE"] = "Taille de fichier max, octets :";
-$MESS["MAIN_REGISTER_AGREEMENT_TITLE"] = "Gérer les accord. <a href=\"#AGGREMENT_CREATE_URL#\" target=\"_blank\">Créer un nouvel Accord</a>";
-$MESS["MAIN_REGISTER_AGREEMENT_DEFAUTL_VALUE"] = "(Sélectionnez un Accord)";
-$MESS["MAIN_OPTIONS_PHONE_NUMBER_FORMAT"] = "Format des numéros de téléphone";
-$MESS["MAIN_OPTIONS_PHONE_NUMBER_DEFAULT_COUNTRY"] = "Pays par défaut :";
 $MESS["main_options_smile_set_id"] = "L'ensemble de smileys pour analyseur";
 ?>

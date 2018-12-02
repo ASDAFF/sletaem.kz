@@ -1,4 +1,10 @@
 <?
+$MESS["CES_NOTES11_EXT"] = "Ce fichier sert de shell pour les exécution de tâches basées sur cron : <br><b>#FILE#</b> (par rapport à la racine du site).";
+$MESS["CES_NOTES12_EXT"] = "Assurez-vous que le fichier contiennent les bons chemins d'accès à la racine du site et à la racine PHP (<b>\$_SERVER['DOCUMENT_ROOT']</b>) et l'ID du site (la constante <b>SITE_ID</b> doit être explicitement assignée avant d'inclure le prologue).";
+$MESS["CES_NOTES13_EXT"] = "Si <b>cron_frame.php</b> n'existe pas au chemin spécifié, vous devez le copier depuis le dossier <b>#FOLDER#</b> (par rapport à la racine du site).";
+$MESS["CES_AUTO_REFRESH"] = "Si la page n'est pas actualisée automatiquement, cliquez sur le lien";
+$MESS["CES_AUTO_REFRESH_STEP"] = "Étape suivante";
+$MESS["CES_STEP_TITLE"] = "Assistant";
 $MESS["CES_YES"] = "Oui";
 $MESS["CES_TIMESTAMP_X"] = "Date de modification";
 $MESS["CES_DATE_CREATE"] = "Créé le";
@@ -91,10 +97,4 @@ $MESS["CES_EXPORTER"] = "Exportateur";
 $MESS["CES_ERROR_NOT_AGENT"] = "Ce profil ne peut pas être utilisé pour les agents car il est utilisé par défaut et un fichier de paramètres est défini pour l'exportateur actuel.";
 $MESS["CES_ERROR_NOT_CRON"] = "Ce profil ne peut pas être utilisé avec cron, car il est utilisé par défaut et un fichier de paramètres est défini pour l'exportateur actuel.";
 $MESS["CES_ERROR_UNKNOWN"] = "erreur inconnue.";
-$MESS["CES_NOTES11_EXT"] = "Ce fichier sert de shell pour les exécution de tâches basées sur cron : <br><b>#FILE#</b> (par rapport à la racine du site).";
-$MESS["CES_NOTES12_EXT"] = "Assurez-vous que le fichier contiennent les bons chemins d'accès à la racine du site et à la racine PHP (<b>\$_SERVER['DOCUMENT_ROOT']</b>) et l'ID du site (la constante <b>SITE_ID</b> doit être explicitement assignée avant d'inclure le prologue).";
-$MESS["CES_NOTES13_EXT"] = "Si <b>cron_frame.php</b> n'existe pas au chemin spécifié, vous devez le copier depuis le dossier <b>#FOLDER#</b> (par rapport à la racine du site).";
-$MESS["CES_AUTO_REFRESH"] = "Si la page n'est pas actualisée automatiquement, cliquez sur le lien";
-$MESS["CES_AUTO_REFRESH_STEP"] = "Étape suivante";
-$MESS["CES_STEP_TITLE"] = "Assistant";
 ?>

@@ -1,4 +1,5 @@
 <?
+$MESS["CT_BSP_GO"] = "Rechercher";
 $MESS["CT_BSP_SYNONIM"] = "Synonymes";
 $MESS["CT_BSP_ALL"] = "(partout)";
 $MESS["CT_BSP_SINTAX"] = "<b>Syntaxe de la requête de recherche:</b><br /><br />Habituellement la requête représente tout simplement un ou plusieurs mots, par exemple: <br /><i>information de contact</i><br />Selon cette requête on trouvera les pages contenant les deux mots de la requête. <br /><br />Les opérateurs logiques permettent de construire des requête s plus complexes, telles que: <br /><i>information de contact ou téléphone</i><br />Selon cette requête on trouvera les pages contenant soit les mots &quot;de contact&quot; et &quot;informations&quot;, soit le mot &quot;téléphone&quot;.<br /><br /> <i>informations de contact pas téléphone</i><br /> Selon cette requête on trouvera les pages contenant les mots &quot;de contact&quot; et &quot;informations&quot;, mais il n'y a pas de mot &quot;téléphone&quot;.<br />Vous pouvez utiliser des parenthèses pour créer les demandes plus complexes.<br />";
@@ -14,7 +15,6 @@ $MESS["CT_BSP_CORRECT_AND_CONTINUE"] = "S'il vous plaît corriger l'expression d
 $MESS["CT_BSP_NOTHING_TO_FOUND"] = "Désolé, votre recherche n'a donné aucun résultat.";
 $MESS["CT_BSP_LOGIC"] = "Opérateurs logiques:";
 $MESS["CT_BSP_FOUND"] = "Retrouvé";
-$MESS["CT_BSP_GO"] = "Recherche";
 $MESS["CT_BSP_NOT"] = "ne";
 $MESS["CT_BSP_WHERE_LABEL"] = "Où";
 $MESS["CT_BSP_OPERATOR"] = "Opérateur";

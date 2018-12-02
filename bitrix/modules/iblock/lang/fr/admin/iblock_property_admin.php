@@ -1,4 +1,5 @@
 <?
+$MESS["IBP_ADM_SEARCHABLE"] = "Recherche";
 $MESS["IBP_ADM_TITLE"] = "#IBLOCK_NAME#: Propriétés";
 $MESS["IBLOCK_ALL"] = "(n'importe lesquel(el)s)";
 $MESS["IBP_ADM_ID"] = "ID";
@@ -14,9 +15,8 @@ $MESS["IBP_ADM_MULTIPLE"] = "Multiple";
 $MESS["IBP_ADM_NAME"] = "Dénomination";
 $MESS["IBP_ADM_IS_REQUIRED"] = "Oblig.";
 $MESS["IBP_ADM_SAVE_ERROR"] = "Erreur de sauvegarde de note ##ID#: #ERROR_TEXT#";
-$MESS["IBP_ADM_DELETE_ERROR"] = "Chec de suppression.";
+$MESS["IBP_ADM_DELETE_ERROR"] = "Échec de suppression.";
 $MESS["IBP_ADM_HINT"] = "Invite";
-$MESS["IBP_ADM_SEARCHABLE"] = "Recherche";
 $MESS["IBP_ADM_FILTRABLE"] = "Montrer dans le filtre";
 $MESS["IBP_ADM_PAGER"] = "Propriétés";
 $MESS["IBP_ADM_CODE"] = "Code symbolique";

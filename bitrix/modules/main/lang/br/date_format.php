@@ -1,4 +1,20 @@
 <?
+$MESS["FD_LAST_SEEN_TOMORROW"] = "amanhã, às #TIME#";
+$MESS["FD_LAST_SEEN_NOW"] = "agora mesmo";
+$MESS["FD_LAST_SEEN_TODAY"] = "hoje às #TIME#";
+$MESS["FD_LAST_SEEN_YESTERDAY"] = "ontem às #TIME#";
+$MESS["FD_LAST_SEEN_MORE_YEAR"] = "há mais de um ano";
+$MESS["FD_SECOND_SHORT"] = "#VALUE# s";
+$MESS["FD_MINUTE_SHORT"] = "#VALUE# m";
+$MESS["FD_HOUR_SHORT"] = "#VALUE# h";
+$MESS["FD_DAY_SHORT"] = "#VALUE# d";
+$MESS["FD_MONTH_SHORT"] = "#VALUE# mês";
+$MESS["FD_YEARS_SHORT_0"] = "#VALUE# a";
+$MESS["FD_YEARS_SHORT_1"] = "#VALUE# a";
+$MESS["FD_YEARS_SHORT_10_20"] = "#VALUE# a";
+$MESS["FD_YEARS_SHORT_MOD_1"] = "#VALUE# a";
+$MESS["FD_YEARS_SHORT_MOD_2_4"] = "#VALUE# a";
+$MESS["FD_YEARS_SHORT_MOD_OTHER"] = "#VALUE# a";
 $MESS["MONTH_1"] = "Janeiro";
 $MESS["MONTH_2"] = "Fevereiro";
 $MESS["MONTH_3"] = "Março";
@@ -134,9 +150,4 @@ $MESS["FD_YEARS_DIFF_MOD_OTHER"] = "#VALUE# anos";
 $MESS["CAL_BUTTON"] = "Selecionar";
 $MESS["CAL_TIME_SET"] = "Definir tempo";
 $MESS["CAL_TIME"] = "Tempo";
-$MESS["FD_LAST_SEEN_TOMORROW"] = "amanhã, às #TIME#";
-$MESS["FD_LAST_SEEN_NOW"] = "agora mesmo";
-$MESS["FD_LAST_SEEN_TODAY"] = "hoje às #TIME#";
-$MESS["FD_LAST_SEEN_YESTERDAY"] = "ontem às #TIME#";
-$MESS["FD_LAST_SEEN_MORE_YEAR"] = "há mais de um ano";
 ?>

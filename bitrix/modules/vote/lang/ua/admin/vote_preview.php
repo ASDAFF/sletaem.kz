@@ -8,4 +8,5 @@ $MESS["VOTE_QUESTIONS"] = "Питання";
 $MESS["VOTE_RESULTS"] = "Результати опитування";
 $MESS["VOTE_NOT_FOUND"] = "Невірний ID опитування";
 $MESS["VOTE_SAVE"] = "Зберегти";
+$MESS["VOTE_BACK_TO_VOTE"] = "Повернутись до опитування";
 ?>

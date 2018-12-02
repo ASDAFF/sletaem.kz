@@ -29,4 +29,7 @@ $MESS["DELETE_ERROR"] = "Помилка видалення";
 $MESS["VOTE_FLT_REQUIRED"] = "Обов'язкове питання";
 $MESS["VOTE_F_REQUIRED"] = "Обов'язкове";
 $MESS["VOTE_REQUIRED"] = "Обов'язкове";
+$MESS["VOTE_PAGE_TITLE"] = "Питання опитування ##ID#";
+$MESS["VOTE_BACK_TO_VOTE"] = "Перейти до опитування";
+$MESS["VOTE_IMAGE_ID"] = "Картинка опитування";
 ?>

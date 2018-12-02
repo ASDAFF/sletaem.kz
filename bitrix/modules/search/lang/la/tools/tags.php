@@ -1,3 +1,3 @@
 <?
-$MESS ['SEARCH_TAGS_SORTING_TIP'] = "Clasificar por nombre";
+$MESS["SEARCH_TAGS_SORTING_TIP"] = "Clasificar por nombre";
 ?>

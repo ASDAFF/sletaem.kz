@@ -402,6 +402,15 @@ if(($arID = $lAdmin->GroupAction()) && ($USER->CanDoOperation('edit_all_users') 
 				break;
 		}
 	}
+
+	if ($lAdmin->hasGroupErrors())
+	{
+		$adminSidePanelHelper->sendJsonErrorResponse($lAdmin->getGroupErrors());
+	}
+	else
+	{
+		$adminSidePanelHelper->sendSuccessResponse();
+	}
 }
 
 setHeaderColumn($lAdmin);
@@ -475,9 +484,13 @@ if (isset($arFilter["NAME"]))
 	{
 		foreach ($parsedNameWords as $nameWord)
 		{
-			$filterOr->where(Query::filter()
-				->whereLike($fieldId, new SqlExpression("'%".trim($nameWord)."%'"))
-			);
+			$nameWord = trim($nameWord);
+			if ($nameWord)
+			{
+				$filterOr->where(Query::filter()
+					->whereLike($fieldId, "%".$nameWord."%")
+				);
+			}
 		}
 	}
 	$userQuery->where($filterOr);
@@ -565,13 +578,13 @@ if (isset($arFilter["GROUPS_ID"]))
 if (!empty($arFilter["KEYWORDS"]))
 {
 	$listFields = array(
-		"PERSONAL_PROFESSION", "PERSONAL_WWW", "PERSONAL_ICQ", "PERSONAL_GENDER", "PERSONAL_PHOTO",
+		"PERSONAL_PROFESSION", "PERSONAL_WWW", "PERSONAL_ICQ", "PERSONAL_GENDER",
 		"PERSONAL_PHONE", "PERSONAL_FAX", "PERSONAL_MOBILE", "PERSONAL_PAGER", "PERSONAL_STREET", "PERSONAL_MAILBOX",
 		"PERSONAL_CITY", "PERSONAL_STATE", "PERSONAL_ZIP", "PERSONAL_COUNTRY", "PERSONAL_NOTES", "WORK_COMPANY",
 		"WORK_DEPARTMENT", "WORK_POSITION", "WORK_WWW", "WORK_PHONE", "WORK_FAX", "WORK_PAGER", "WORK_STREET",
 		"WORK_MAILBOX", "WORK_CITY", "WORK_STATE", "WORK_ZIP", "WORK_COUNTRY", "WORK_PROFILE", "WORK_NOTES",
 		"ADMIN_NOTES", "XML_ID", "LAST_NAME", "SECOND_NAME", "EXTERNAL_AUTH_ID", "CONFIRM_CODE",
-		"TIME_ZONE_OFFSET", "PASSWORD", "LID", "LANGUAGE_ID", "TITLE"
+		"PASSWORD", "LID", "LANGUAGE_ID", "TITLE"
 	);
 	$keyWords = $arFilter["KEYWORDS"];
 	$filterQueryObject = new CFilterQuery("and", "yes", "N", array(), "N", "Y", "N");
@@ -585,10 +598,13 @@ if (!empty($arFilter["KEYWORDS"]))
 		foreach ($parsedKeyWords as $keyWord)
 		{
 			$keyWord = trim($keyWord);
-			$filterOr->where(Query::filter()
-				->whereNotNull($fieldId)
-				->whereLike($fieldId, new SqlExpression("'".$keyWord."'"))
-			);
+			if ($keyWord)
+			{
+				$filterOr->where(Query::filter()
+					->whereNotNull($fieldId)
+					->whereLike($fieldId, "%".$keyWord."%")
+				);
+			}
 		}
 	}
 	$userQuery->where($filterOr);
@@ -613,10 +629,10 @@ $lAdmin->setNavigation($nav, GetMessage("MAIN_USER_ADMIN_PAGES"), false);
 while ($userData = $result->fetch())
 {
 	$userId = $userData["ID"];
-	$row =& $lAdmin->addRow($userId, $userData);
+	$userEditUrl = "user_edit.php?lang=".LANGUAGE_ID."&ID=".$userId;
+	$row =& $lAdmin->addRow($userId, $userData, $userEditUrl);
 	$USER_FIELD_MANAGER->addUserFields($entity_id, $userData, $row);
-	$row->addViewField("ID", "<a href='user_edit.php?lang=".LANGUAGE_ID."&ID=".$userId.
-		"' title='".GetMessage("MAIN_EDIT_TITLE")."'>".$userId."</a>");
+	$row->addViewField("ID", "<a href='".$userEditUrl."' title='".GetMessage("MAIN_EDIT_TITLE")."'>".$userId."</a>");
 	$own_edit = ($USER->canDoOperation('edit_own_profile') && ($USER->getParam("USER_ID") == $userId));
 	$edit = ($USER->canDoOperation('edit_subordinate_users') || $USER->canDoOperation('edit_all_users'));
 	$can_edit = (IntVal($userId) > 1 && ($own_edit || $edit));

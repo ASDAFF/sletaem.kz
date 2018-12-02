@@ -16,6 +16,7 @@ $MESS["CONTRACTOR_INN"] = "ID del contribuyente";
 $MESS["CONTRACTOR_PHONE"] = "Teléfono";
 $MESS["CONTRACTOR_EMAIL"] = "Correo electrónico";
 $MESS["CONTRACTOR_TYPE"] = "Tipo de proveedor";
+$MESS["CONTRACTOR_KPP"] = " ";
 $MESS["CONTRACTOR_INDIVIDUAL"] = "Persona particular";
 $MESS["CONTRACTOR_JURIDICAL"] = "Persona Jurídica";
 $MESS["CONTRACTOR_NAME"] = "Primer nombre";
@@ -23,5 +24,4 @@ $MESS["CONTRACTOR_LAST_NAME"] = "Apelldio";
 $MESS["CONTRACTOR_SECOND_NAME"] = "Segundo nombre";
 $MESS["CONTRACTOR_TITLE_JURIDICAL"] = "Persona de contacto";
 $MESS["CONTRACTOR_ADDRESS_JURIDICAL"] = "Domicilio legal";
-$MESS["CONTRACTOR_KPP"] = " ";
 ?>

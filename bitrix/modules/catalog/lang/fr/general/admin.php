@@ -1,4 +1,8 @@
 <?
+$MESS["CAT_MENU_ROOT_MULTI"] = "Catalogues de produits";
+$MESS["CAT_MENU_CATALOG_MARKETPLACE_ADD"] = "Installer depuis Marketplace";
+$MESS["SALE_MENU_MARKETPLACE_MARKETING_ADD"] = "Installer depuis Marketplace";
+$MESS["SALE_MENU_MARKETPLACE_SETTINGS_ADD"] = "Installer depuis Marketplace";
 $MESS["CM_STORE_DOCS"] = "Documents";
 $MESS["MEASURE"] = "Liste des unités de mesure";
 $MESS["SETUP_LOAD_DATA"] = "Importation de données";
@@ -34,8 +38,4 @@ $MESS["PRICES_SECTION_TITLE"] = "Types de prix ; arrondi ; suppléments";
 $MESS["PRICE_ROUND"] = "Arrondi";
 $MESS["PRICE_ROUND_TITLE"] = "Arrondissement du prix";
 $MESS["CM_SUBSCRIPTION_PRODUCT"] = "Abonnements au produit";
-$MESS["CAT_MENU_ROOT_MULTI"] = "Catalogues de produits";
-$MESS["CAT_MENU_CATALOG_MARKETPLACE_ADD"] = "Installer depuis Marketplace";
-$MESS["SALE_MENU_MARKETPLACE_MARKETING_ADD"] = "Installer depuis Marketplace";
-$MESS["SALE_MENU_MARKETPLACE_SETTINGS_ADD"] = "Installer depuis Marketplace";
 ?>

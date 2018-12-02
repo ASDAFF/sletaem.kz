@@ -39,6 +39,8 @@ class Settings extends \Bitrix\Landing\Hook\Page
 		'PRICE_VAT_INCLUDE' => 'Y',
 		'SHOW_OLD_PRICE' => 'Y',
 		'SHOW_DISCOUNT_PERCENT' => 'Y',
+		'USE_PRICE_COUNT' => 'N',
+		'SHOW_PRICE_COUNT' => 1,
 		'USE_ENHANCED_ECOMMERCE' => 'Y',
 		'DATA_LAYER_NAME' => 'dataLayer',
 		'BRAND_PROPERTY' => 'BRAND_REF'
@@ -61,7 +63,7 @@ class Settings extends \Bitrix\Landing\Hook\Page
 		{
 			$codes = array(
 				'' => array(
-					'IBLOCK_ID'//, 'SECTION_ID'
+					'IBLOCK_ID', 'SECTION_ID'
 				),
 				'VIEW' => array(
 					'HIDE_NOT_AVAILABLE', 'HIDE_NOT_AVAILABLE_OFFERS', 'PRODUCT_SUBSCRIPTION',
@@ -80,7 +82,7 @@ class Settings extends \Bitrix\Landing\Hook\Page
 		{
 			$codes = array(
 				'' => array(
-					'IBLOCK_ID'//, 'SECTION_ID'
+					'IBLOCK_ID', 'SECTION_ID'
 				)
 			);
 		}
@@ -220,17 +222,48 @@ class Settings extends \Bitrix\Landing\Hook\Page
 			);
 			if (Loader::includeModule('catalog'))
 			{
-				$res = \CCatalog::getList();
+				$res = \CCatalog::getList(
+					[],
+					[
+						'LID' => defined('SMN_SITE_ID')
+							? SMN_SITE_ID
+							: SITE_ID
+					]
+				);
+				// get all offers
+				$offersIblock = array();
+				$resOffers = \Bitrix\Catalog\CatalogIblockTable::getList(array(
+					'select' => array(
+						'IBLOCK_ID'
+					),
+					'filter' => array(
+						'!=PRODUCT_IBLOCK_ID' => 0
+					)
+				));
+				while ($row = $resOffers->fetch())
+				{
+					$offersIblock[$row['IBLOCK_ID']] = true;
+				}
 			}
 			elseif (Loader::includeModule('iblock'))
 			{
-				$res = \CIblock::getList();
+				$res = \CIblock::getList(
+					[],
+					[
+						'SITE_ID' => defined('SMN_SITE_ID')
+								? SMN_SITE_ID
+								: SITE_ID
+					]
+				);
 			}
 			if (isset($res))
 			{
 				while ($row = $res->fetch())
 				{
-					$catalogs[$row['ID']] = '[' . $row['ID'] . '] ' . $row['NAME'];
+					if (!isset($offersIblock[$row['ID']]))
+					{
+						$catalogs[$row['ID']] = '[' . $row['ID'] . '] ' . $row['NAME'];
+					}
 				}
 			}
 			$fields['IBLOCK_ID'] = self::getFieldByType(
@@ -318,9 +351,18 @@ class Settings extends \Bitrix\Landing\Hook\Page
 		}
 
 		// additional
-		$settings[$id]['IBLOCK_ID'] = isset($hooks['SETTINGS']['IBLOCK_ID'])
-								? $hooks['SETTINGS']['IBLOCK_ID']
-								: 0;
+		if (!\Bitrix\Landing\Manager::isB24())
+		{
+			$settings[$id]['IBLOCK_ID'] = isset($hooks['SETTINGS']['IBLOCK_ID'])
+				? $hooks['SETTINGS']['IBLOCK_ID']
+				: 0;
+		}
+		else
+		{
+			$settings[$id]['IBLOCK_ID'] = \Bitrix\Main\Config\Option::get(
+				'crm', 'default_product_catalog_id'
+			);
+		}
 
 		return $settings[$id];
 	}

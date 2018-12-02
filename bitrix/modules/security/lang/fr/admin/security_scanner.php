@@ -1,4 +1,5 @@
 <?
+$MESS["SEC_SCANNER_CRITICAL_HIGHT"] = "Augmenté";
 $MESS["SEC_SCANNER_TESTING_FAILURE_CODE"] = "(code de l'erreur: #CODE#)";
 $MESS["SEC_SCANNER_CRITICAL_PROBLEMS_COUNT"] = "dont critiques:";
 $MESS["SEC_SCANNER_CRITICAL_ERROR"] = "Important!";
@@ -8,7 +9,6 @@ $MESS["SEC_SCANNER_CRITICAL_FIRST_START"] = "Vous ne l'avez pas Balayez votre sy
 $MESS["SEC_SCANNER_FAST_LOCAL_TESTS"] = "Effectuer une analyse interne 'rapide'";
 $MESS["SEC_SCANNER_SLOW_LOCAL_TESTS"] = "Effectuer une analyse interne 'complexe'";
 $MESS["SEC_SCANNER_REMOTE_TESTS"] = "Effectuer le scan extérieur";
-$MESS["SEC_SCANNER_CRITICAL_HIGHT"] = "Augmenté";
 $MESS["SEC_SCANNER_ADDITIONAL_INFO_TITLE"] = "Détails";
 $MESS["SEC_SCANNER_START_BUTTON"] = "Commencer";
 $MESS["SEC_SCANNER_INIT"] = "Initialisation...";

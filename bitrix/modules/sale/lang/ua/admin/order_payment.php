@@ -48,4 +48,6 @@ $MESS["SALE_ORDER_DATE_PAY_BEFORE"] = "Сплатити до";
 $MESS["SALE_ORDER_DATE_BILL"] = "Дата створення";
 $MESS["SALE_ORDER_PS_STATUS_MESSAGE"] = "Повідомлення ПС";
 $MESS["SALE_ORDER_HIDDEN"] = "[Приховано]";
+$MESS["SALE_ORDER_PAYMENT_PAID"] = "Оплатити";
+$MESS["SALE_ORDER_PAYMENT_PAID_N"] = "Відмінити оплату";
 ?>

@@ -1,6 +1,6 @@
 <?
-$MESS["BLOG_MODULE_NOT_INSTALL"] = "El módulo de Blog no está instalado.";
-$MESS["BLOG_BLOG_BLOG_TITLE"] = "Mensage de blog";
+$MESS["BLOG_MODULE_NOT_INSTALL"] = "El módulo Blog no está instalado.";
+$MESS["BLOG_BLOG_BLOG_TITLE"] = "Mensage del blog";
 $MESS["BLOG_BLOG_BLOG_REQUEST_ALREADY"] = "Tu requerimiento está bajo consideración del autor del blog ";
 $MESS["BLOG_BLOG_BLOG_REQUEST_ADDED"] = "Tu requerimiento ha sido aceptado por el autor del blog ";
 $MESS["BLOG_BLOG_BLOG_REQUEST_ERROR"] = "Error al editar su solicitud";

@@ -1,4 +1,7 @@
 <?
+$MESS["expire_mess_timelicense1"] = "<font class=\"tablebodytext\"><font color=\"#FF0000\">Your current license has expired. This website will stop
+functioning completely in two weeks. Please contact <a href=\"mailto:sales@bitrix24.com\">Bitrix24
+Sales Department</a> immeadiately to renew your license.</font></font>";
 $MESS["TOOLS_DN"] = "days";
 $MESS["TOOLS_DAYS"] = "days";
 $MESS["TOOLS_CALENDAR"] = "Calendar";
@@ -120,7 +123,7 @@ $MESS["COUNTRY_82"] = "Cuba";
 $MESS["COUNTRY_83"] = "Kuwait";
 $MESS["COUNTRY_84"] = "Liberia";
 $MESS["COUNTRY_85"] = "Liechtenstein";
-$MESS["COUNTRY_86"] = "Luxemburg";
+$MESS["COUNTRY_86"] = "Luxembourg";
 $MESS["COUNTRY_87"] = "Mauritania";
 $MESS["COUNTRY_88"] = "Madagascar";
 $MESS["COUNTRY_89"] = "Macedonia";

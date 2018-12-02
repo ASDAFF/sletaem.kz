@@ -1,4 +1,10 @@
 <?
+$MESS["BUYER_ROW_COUNT_FULL_PAID_ORDER"] = "Commandes payées intégralement";
+$MESS["BUYER_ROW_COUNT_PART_PAID_ORDER"] = "Commandes payées partiellement";
+$MESS["BUYER_ROW_SUM_PAID"] = "Montant total reçu";
+$MESS["BUYER_F_PAID_ALL"] = "Montant reçu";
+$MESS["BUYER_F_QUANTITY_FULL"] = "Commandes payées intégralement";
+$MESS["BUYER_F_QUANTITY_PART"] = "Commandes payées partiellement";
 $MESS["BUYER_ROW_MAIL"] = "Courrier électronique";
 $MESS["BUYER_F_MAIL"] = "Courrier électronique";
 $MESS["BUYER_F_ID"] = "Code de l'acheteur";
@@ -52,10 +58,4 @@ $MESS["BUYER_ROW_STREET"] = "Adresse réelle";
 $MESS["BUYER_ROW_LAST"] = "Nom";
 $MESS["BUYER_F_LAST"] = "Nom";
 $MESS["BUYER_F_FIO"] = "Accès à la lecture et écriture sans restrictions";
-$MESS["BUYER_ROW_COUNT_FULL_PAID_ORDER"] = "Commandes payées intégralement";
-$MESS["BUYER_ROW_COUNT_PART_PAID_ORDER"] = "Commandes payées partiellement";
-$MESS["BUYER_ROW_SUM_PAID"] = "Montant total reçu";
-$MESS["BUYER_F_PAID_ALL"] = "Montant reçu";
-$MESS["BUYER_F_QUANTITY_FULL"] = "Commandes payées intégralement";
-$MESS["BUYER_F_QUANTITY_PART"] = "Commandes payées partiellement";
 ?>

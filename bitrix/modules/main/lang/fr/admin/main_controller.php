@@ -1,4 +1,5 @@
 <?
+$MESS["MAIN_ADM_CONTROLLER_ERR1"] = "Les privilèges d'administrateur sont requis pour ajouter un site au contrôleur ";
 $MESS["MAIN_ADM_CONTROLLER_BACK_URL"] = "Précédent";
 $MESS["MAIN_ADM_CONTROLLER_ERR8"] = "Pour ajouter, les privilèges administratifs sur le site connecté sont nécessaires";
 $MESS["MAIN_ADM_CONTROLLER_ERR3"] = "Adresse URL du contrôleur non renseignée";
@@ -8,5 +9,4 @@ $MESS["MAIN_ADM_CONTROLLER_ERR4"] = "Le coupon à usage unique pour l'enregistre
 $MESS["MAIN_ADM_CONTROLLER_ERR2"] = "Le coupon d'enregistrement à usage unique est expiré";
 $MESS["MAIN_ADM_CONTROLLER_ERR6"] = "Inconnu fonctionnement:";
 $MESS["MAIN_ADM_CONTROLLER_ERR7"] = "Erreur d'exécution:";
-$MESS["MAIN_ADM_CONTROLLER_ERR1"] = "Les privilèges d'administrateur sont requis pour ajouter un site au contrôleur ";
 ?>

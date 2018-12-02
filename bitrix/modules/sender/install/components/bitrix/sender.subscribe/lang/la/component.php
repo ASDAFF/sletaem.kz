@@ -1,4 +1,5 @@
 <?
+$MESS["SENDER_SUBSCR_MODULE_NOT_INSTALLED1"] = "El módulo Marketing24 no está disponible actualmente.";
 $MESS["SENDER_SUBSCR_MODULE_NOT_INSTALLED"] = "El módulo E-mail Marketing no está disponible actualmente.";
 $MESS["SENDER_SUBSCR_TITLE"] = "Suscripciones";
 $MESS["SENDER_SUBSCR_ERR_EMAIL"] = "Dirección de e-mail especificada es incorrecta.";

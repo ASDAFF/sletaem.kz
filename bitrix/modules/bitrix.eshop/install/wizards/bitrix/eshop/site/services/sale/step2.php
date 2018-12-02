@@ -198,29 +198,6 @@ if($bRus)
 			);
 		}
 
-		if(!empty($delivery["ruspost"]))
-		{
-			$deliveryItems["ruspost"] = array(
-				"NAME" => GetMessage('SALE_WIZARD_MAIL'),
-				"DESCRIPTION" => GetMessage('SALE_WIZARD_MAIL_DESC'),
-				"CLASS_NAME" => '\Sale\Handlers\Delivery\AdditionalHandler',
-				"CURRENCY" => $defCurrency,
-				"SORT" => 200,
-				"LOGOTIP" => "/bitrix/modules/sale/ru/delivery/rus_post_logo.png",
-				"ACTIVE" => $delivery["ruspost"] == "Y" ? "Y" : "N",
-				"CONFIG" => array(
-					"MAIN" => array(
-						"SERVICE_TYPE_NAME" => GetMessage('SALE_WIZARD_MAIL'),
-						"LENGTH_DEFAULT" => "200",
-						"WIDTH_DEFAULT" => "300",
-						"HEIGHT_DEFAULT" => "200",
-						"WEIGHT_DEFAULT" => "500",
-						"SERVICE_TYPE" => "RUSPOST"
-					)
-				)
-			);
-		}
-
 		//new russian post
 		if(!empty($delivery["rus_post"]))
 		{
@@ -235,26 +212,6 @@ if($bRus)
 				"CONFIG" => array(
 					"MAIN" => array(
 						"SID" => "rus_post",
-						"MARGIN_VALUE" => 0,
-						"MARGIN_TYPE" => "%"
-					)
-				)
-			);
-		}
-
-		if(!empty($delivery["rus_post_first"]))
-		{
-			$deliveryItems["rus_post_first"] = array(
-				"NAME" => GetMessage("SALE_WIZARD_MAIL_FIRST"),
-				"DESCRIPTION" => GetMessage("SALE_WIZARD_MAIL_FIRST_DESC"),
-				"CLASS_NAME" => '\Bitrix\Sale\Delivery\Services\Automatic',
-				"CURRENCY" => $defCurrency,
-				"SORT" => 500,
-				"LOGOTIP" => "/bitrix/modules/sale/ru/delivery/rus_post_first_logo.png",
-				"ACTIVE" => $delivery["rus_post_first"] == "Y" ? "Y" : "N",
-				"CONFIG" => array(
-					"MAIN" => array(
-						"SID" => "rus_post_first",
 						"MARGIN_VALUE" => 0,
 						"MARGIN_TYPE" => "%"
 					)

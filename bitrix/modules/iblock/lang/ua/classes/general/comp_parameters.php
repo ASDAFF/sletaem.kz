@@ -60,7 +60,7 @@ $MESS["T_IBLOCK_DESC_BASE_LINK"] = "Url для побудови посилань
 $MESS["T_IBLOCK_DESC_PARAMS_NAME"] = "Ім'я масиву зі змінними для побудови посилань";
 $MESS["IB_COMPLIB_PARAMETER_GROUP_404_SETTINGS"] = "Налаштування 404 помилки";
 $MESS["IB_COMPLIB_PARAMETER_SET_STATUS_404"] = "Встановлювати статус 404";
-$MESS["IB_COMPLIB_PARAMETER_MESSAGE_404"] = "Повідомлення для показу (за замовчуванням компонента)";
+$MESS["IB_COMPLIB_PARAMETER_MESSAGE_404"] = "Повідомлення для показу (за замовчуванням з компонента)";
 $MESS["IB_COMPLIB_PARAMETER_SHOW_404"] = "Показ спеціальної сторінки";
 $MESS["IB_COMPLIB_PARAMETER_FILE_404"] = "Сторінка для показу (за замовчуванням /404.php)";
 ?>

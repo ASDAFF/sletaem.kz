@@ -8,11 +8,17 @@ if (is_array($arResult["SOCSERV"]) && !empty($arResult["SOCSERV"]))
 {
 ?>
 <div class="bx-socialfooter">
-	<ul class="row">
+	<div class="bx-socialfooter-flex">
 		<?foreach($arResult["SOCSERV"] as $socserv):?>
-		<li class="col-xs-2"><a class="<?=htmlspecialcharsbx($socserv["CLASS"])?> bx-socialfooter-icon" target="_blank" href="<?=htmlspecialcharsbx($socserv["LINK"])?>"></a></li>
+		<a
+			class="bx-socialfooter-item <?=htmlspecialcharsbx($socserv["CLASS"])?>"
+			target="_blank"
+			href="<?=htmlspecialcharsbx($socserv["LINK"])?>"
+		>
+			<span class="bx-socialfooter-icon"></span>
+		</a>
 		<?endforeach?>
-	</ul>
+	</div>
 </div>
 <?
 }

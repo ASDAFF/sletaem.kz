@@ -1,4 +1,12 @@
 <?
+$MESS["SPTEN_ERROR_SAVING_PROPS_GRP"] = "Помилка збереження групи властивостей";
+$MESS["SPTEN_ERROR_PERSON_TYPE_EXISTS"] = "Тип платника з даним кодом вже існує";
+$MESS["SPTEN_CODE"] = "Код";
+$MESS["SPTEN_DOMAIN_P_TYPE"] = "Відповідність з фіз. та юр. Особою";
+$MESS["SPTEN_DOMAIN_P_TYPE_NONE"] = "Не встановлено";
+$MESS["SPTEN_DOMAIN_P_TYPE_I"] = "Фізична особа";
+$MESS["SPTEN_DOMAIN_P_TYPE_E"] = "Юридична особа";
+$MESS["PROPS_GROUP_DEFAULT_NAME"] = "Властивості замовлення";
 $MESS["SPTEN_NO_PERMS2ADD"] = "У вас недостатньо прав для додавання нового типу платника";
 $MESS["SPTEN_NO_PERSON_TYPE"] = "Тип платника ##ID# не знайдений";
 $MESS["SPTEN_ERROR_SAVING_PERSON_TYPE"] = "Помилка збереження типу платника";

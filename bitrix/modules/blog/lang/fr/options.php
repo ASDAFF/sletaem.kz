@@ -1,4 +1,7 @@
 <?
+$MESS["MAIN_RESTORE_DEFAULTS"] = "Paramètres par défaut";
+$MESS["BLOG_OPTIONS_SMILE_GALLERY_ID"] = "Galerie des émoticônes du blog";
+$MESS["BLOG_OPTIONS_SMILE_SET_ID"] = "Émoticônes du blog";
 $MESS["BLOG_SEND_BLOG_PING_ADDRESS"] = "Les adresses pour le ping (chaque adresse sur une nouvelle ligne)";
 $MESS["BLOG_SOCNET_GROUP_OK"] = "Les blogs du groupe '#GROUP_NAME#' sélectionnés comme blogs du réseau social.";
 $MESS["BLO_USE_SONNET_BUTTON"] = "Ensemble";
@@ -45,7 +48,4 @@ $MESS["BLO_ALLOW_ALIAS"] = "Autoriser surnoms";
 $MESS["BLO_SITE_PATH_SITE_BLOG"] = "Modèle de chemin de Blog";
 $MESS["BLO_SITE_PATH_SITE_USER"] = "Blog utilisateur modèle profil du trajet";
 $MESS["BLO_SITE_PATH_SITE_POST"] = "Modèle post-chemin de Blog";
-$MESS["MAIN_RESTORE_DEFAULTS"] = "Paramètres par défaut";
-$MESS["BLOG_OPTIONS_SMILE_GALLERY_ID"] = "Galerie des émoticônes du blog";
-$MESS["BLOG_OPTIONS_SMILE_SET_ID"] = "Émoticônes du blog";
 ?>

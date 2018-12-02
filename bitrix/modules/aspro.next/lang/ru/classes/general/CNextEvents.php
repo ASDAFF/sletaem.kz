@@ -2,6 +2,10 @@
 $MESS["STORES_LINK_PROP_TITLE"] = "Привязка к складам";
 $MESS["PRICES_LINK_PROP_TITLE"] = "Привязка к ценам";
 $MESS["LOCATIONS_LINK_PROP_TITLE"] = "Привязка к местоположениям";
+$MESS["CUSTOM_FILTER_PROP_TITLE"] = "Фильтр к элементам инфоблока";
+$MESS["CUSTOM_FILTER_PROP_NAME"] = "Фильтр элементов";
+$MESS["CUSTOM_FILTER_PROP_INVALID"] = "Условие задано неверно";
+$MESS["CUSTOM_FILTER_PROP_IBLOCK_ID_NAME"] = "Информационный блок";
 $MESS["EMAIL_IS_ALREADY_EXISTS"] = "#EMAIL# уже используется";
 $MESS["BT_MOD_CATALOG_PROD_ERR_ELEMENT_ID_NOT_FOUND"] = "Элемент с ИД #ID# не найден";
 $MESS["BT_MOD_CATALOG_PROD_ERR_NO_BASE_CURRENCY"] = "Не задана базовая валюта для каталога";

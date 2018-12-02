@@ -16,6 +16,10 @@ $MESS["location_admin_import_tab"] = "Importar";
 $MESS["location_admin_import_tab_old"] = "Importar desde el archivo";
 $MESS["LOCA_LOADING_WIZARD"] = "Ejecutar el asistente para importación de ubicaciones";
 $MESS["LOCA_SAVE"] = "Cargar";
+$MESS["LOCA_HINT"] = "Usted puede descargar archivos de ubicación del sitio de Bitrix:<ul style=\"font-size: 100%\">
+	<li><a href=\"http://www.1c-bitrix.ru/download/files/locations/loc_cntr.csv\">World countries</a></li>
+	<li><a href=\"http://www.1c-bitrix.ru/download/files/locations/loc_usa.csv\">USA</a></li>
+</ul>";
 $MESS["LOCA_LOCATIONS_STATS"] = "Estadísticas de ubicación";
 $MESS["LOCA_LOCATIONS_COUNTRY_STATS"] = "paises";
 $MESS["LOCA_LOCATIONS_CITY_STATS"] = "ciudades";
@@ -27,8 +31,4 @@ $MESS["LOCATION_CLEAR_DESC"] = "Quitar todas las ubicaciones";
 $MESS["LOCATION_CLEAR_BTN"] = "Borrar";
 $MESS["LOCATION_CLEAR_OK"] = "Se han eliminado las ubicaciones.";
 $MESS["LOCATION_CLEAR_CONFIRM"] = "¿Seguro que quiere eliminar todos las ubicaciones?";
-$MESS["LOCA_HINT"] = "Usted puede descargar archivos de ubicación del sitio de Bitrix:<ul style=\"font-size: 100%\">
-	<li><a href=\"http://www.1c-bitrix.ru/download/files/locations/loc_cntr.csv\">World countries</a></li>
-	<li><a href=\"http://www.1c-bitrix.ru/download/files/locations/loc_usa.csv\">USA</a></li>
-</ul>";
 ?>

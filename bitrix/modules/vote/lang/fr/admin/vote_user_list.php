@@ -1,4 +1,5 @@
 <?
+$MESS["VOTE_VISITOR"] = "Visiteur";
 $MESS["VOTE_ALL"] = "(partout)";
 $MESS["VOTE_NOT_AUTHORIZED"] = "(non autorisé)";
 $MESS["VOTE_FL_ID"] = "Identifiant de l'utilisateur";
@@ -10,7 +11,7 @@ $MESS["VOTE_EXACT_MATCH"] = "Rechercher une corrélation complète pendant le fi
 $MESS["VOTE_FL_VOTE"] = "A l'interrogation";
 $MESS["VOTE_F_VOTE"] = "Interrogation:";
 $MESS["MAIN_ADMIN_LIST_CHECKED"] = "Coché:";
-$MESS["DELETE_ERROR"] = "Chec de suppression.";
+$MESS["DELETE_ERROR"] = "Échec de suppression.";
 $MESS["VOTE_TILL"] = "jusqu'à";
 $MESS["VOTE_PAGES"] = "Visiteurs";
 $MESS["VOTE_USER"] = "visiteur";
@@ -37,5 +38,4 @@ $MESS["VOTE_DATE_END"] = "Dernier";
 $MESS["VOTE_USER_VOTES"] = "Liste des sondages que le visiteur a pris part à";
 $MESS["VOTE_CONFIRM_DEL"] = "Supprimer le visiteur?";
 $MESS["VOTE_F_COUNTER"] = "Nombre de votes:";
-$MESS["VOTE_VISITOR"] = "Visiteur";
 ?>

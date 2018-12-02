@@ -1,4 +1,6 @@
 <?
+$MESS["BUYER_SUB_ACTION_EDIT_PROFILE"] = "Редагувати покупця";
+$MESS["BUYER_ADD_USER"] = "Додати покупця";
 $MESS["BUYER_TITLE"] = "Покупці";
 $MESS["BUYER_PRLIST"] = "Покупці";
 $MESS["BUYER_PROFILE"] = "Профайл користувача";

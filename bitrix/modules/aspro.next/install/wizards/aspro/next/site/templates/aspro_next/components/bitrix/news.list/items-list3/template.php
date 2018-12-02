@@ -48,11 +48,11 @@
 						// use detail link?
 						$bDetailLink = $arParams['SHOW_DETAIL_LINK'] != 'N' && (!strlen($arItem['DETAIL_TEXT']) ? ($arParams['HIDE_LINK_WHEN_NO_DETAIL'] !== 'Y' && $arParams['HIDE_LINK_WHEN_NO_DETAIL'] != 1) : true);
 						// show preview picture?
-						$bImage = strlen($arItem['FIELDS']['PREVIEW_PICTURE']['SRC']);
-						$imageSrc = ($bImage ? $arItem['FIELDS']['PREVIEW_PICTURE']['SRC'] : false);
-						$imageDetailSrc = ($bImage ? $arItem['FIELDS']['DETAIL_PICTURE']['SRC'] : false);
+						$bImage = isset($arItem['FIELDS']['PREVIEW_PICTURE']) && strlen($arItem['PREVIEW_PICTURE']['SRC']);
+						$imageSrc = ($bImage ? $arItem['PREVIEW_PICTURE']['SRC'] : false);
+						$imageDetailSrc = ($bImage ? $arItem['DETAIL_PICTURE']['SRC'] : false);
 						?>
-						
+
 						<div class="shadow col-md-<?=floor(12 / $line_element_count)?> col-sm-<?=floor(12 / round($line_element_count / 2))?>">
 							<div class="item clearfix" id="<?=$this->GetEditAreaId($arItem['ID'])?>">
 								<div class="image">

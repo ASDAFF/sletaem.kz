@@ -20,6 +20,7 @@ $APPLICATION->IncludeComponent(
 	array(
 		"PATH_TO_LIST" => $arResult["PATH_TO_ORDERS"],
 		"PATH_TO_DETAIL" => $arResult["PATH_TO_ORDER_DETAIL"],
+		"AUTH_FORM_IN_TEMPLATE" => 'Y',
 		"SET_TITLE" =>$arParams["SET_TITLE"],
 		"ID" => $arResult["VARIABLES"]["ID"],
 	),

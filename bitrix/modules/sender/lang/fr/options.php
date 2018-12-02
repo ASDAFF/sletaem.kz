@@ -1,4 +1,5 @@
 <?
+$MESS["opt_mail_headers"] = "En-têtes des messages (ex. : \"List-Post: NO\"):";
 $MESS["MAIN_RESTORE_DEFAULTS"] = "Par défaut";
 $MESS["opt_def_from"] = "Adresse d'expéditeur par défaut:";
 $MESS["opt_method_agent"] = "Agent";
@@ -16,5 +17,4 @@ $MESS["opt_auto_agent_interval"] = "Délai entre l'envoi ultérieur d'emplois (s
 $MESS["opt_sub_link"] = "Personnalisé la page d'abonnement:";
 $MESS["opt_link_protocol"] = "Journal des URL des messages :";
 $MESS["opt_max_per_cron"] = "Nombre d'e-mails à envoyer en même temps avec cron :";
-$MESS["opt_mail_headers"] = "En-têtes des messages (ex. : \"List-Post: NO\"):";
 ?>

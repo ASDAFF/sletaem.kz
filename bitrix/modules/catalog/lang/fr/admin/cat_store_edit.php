@@ -1,4 +1,6 @@
 <?
+$MESS["STORE_CODE"] = "Code symbolique";
+$MESS["STORE_XML_ID"] = "ID externe";
 $MESS["STORE_GPS_S"] = "Longitude GPS";
 $MESS["STORE_GPS_N"] = "Latitude GPS";
 $MESS["STORE_ADDRESS"] = "Adresse";
@@ -26,6 +28,4 @@ $MESS["STORE_DELETE"] = "Supprimer";
 $MESS["CAT_FEATURE_NOT_ALLOW"] = "Cette fonctionnalité n'est pas inclue dans Votre version du produit.";
 $MESS["STORE_E_USER_FIELDS_ADD_HREF"] = "Ajouter un champ d'utilisateur";
 $MESS["STORE_SAVE_ERROR"] = "Erreur entrepôt d'économie";
-$MESS["STORE_CODE"] = "Code symbolique";
-$MESS["STORE_XML_ID"] = "ID externe";
 ?>

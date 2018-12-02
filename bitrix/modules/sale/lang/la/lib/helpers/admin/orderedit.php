@@ -17,4 +17,7 @@ $MESS["SALE_ORDEREDIT_PRODUCT_IS_NOT_AVAILABLE"] = "Producto \"#NAME_ID#\" no es
 $MESS["SALE_ORDEREDIT_MESSAGE"] = "Mensaje";
 $MESS["SALE_ORDEREDIT_ERROR_CHANGE_USER_WITH_PAID_PAYMENTS"] = "No se puede cambiar de cliente porque la orden fue pagada total o parcialmente.";
 $MESS["SALE_ORDEREDIT_PRODUCT_QUANTITY_IS_EMPTY"] = "Stock insuficiente de \"#NAME#\"";
+$MESS["SALE_ORDEREDIT_CONFIRM"] = "Confirmar";
+$MESS["SALE_ORDEREDIT_CONFIRM_CONTINUE"] = "Continuar";
+$MESS["SALE_ORDEREDIT_CONFIRM_ABORT"] = "Anular";
 ?>

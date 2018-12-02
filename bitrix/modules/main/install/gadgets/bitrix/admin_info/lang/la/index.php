@@ -9,6 +9,6 @@ $MESS["GD_INFO_product_name_bitrix"] = "Bitrix Site Manager";
 $MESS["GD_INFO_product_name_bitrix_portal"] = "Bitrix24";
 $MESS["GD_INFO_LASTUPDATE"] = "Última actualización: #VALUE#";
 $MESS["GD_INFO_PERFMON"] = "Puntaje actual del funcionamiento : #VALUE#";
-$MESS["GD_INFO_USERS"] = "Número de Usuario: #VALUE#";
 $MESS["GD_INFO_PERFMON_NO_RESULT"] = "no se ha probado";
+$MESS["GD_INFO_USERS"] = "Número de Usuario: #VALUE#";
 ?>

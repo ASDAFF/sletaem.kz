@@ -46,14 +46,7 @@ if (CModule::IncludeModule("catalog"))
 			$newStoreId = CCatalogStore::Add($arStoreFields);
 			if($newStoreId)
 			{
-				$IBLOCK_OFFERS_ID = 0;
-				if (isset($_SESSION["WIZARD_OFFERS_IBLOCK_ID"]))
-				{
-					$IBLOCK_OFFERS_ID = (int)$_SESSION["WIZARD_OFFERS_IBLOCK_ID"];
-					unset($_SESSION["WIZARD_OFFERS_IBLOCK_ID"]);
-				}
-				if ($IBLOCK_OFFERS_ID > 0)
-					CCatalogDocs::synchronizeStockQuantity($newStoreId, $IBLOCK_OFFERS_ID);
+				$_SESSION['NEW_STORE_ID'] = $newStoreId;
 			}
 		}
 	}

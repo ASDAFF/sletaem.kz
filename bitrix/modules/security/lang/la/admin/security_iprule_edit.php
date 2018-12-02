@@ -13,6 +13,7 @@ $MESS["SEC_IP_EDIT_MENU_DELETE_TITLE"] = "Eliminar regla";
 $MESS["SEC_IP_EDIT_MENU_DELETE_CONF"] = "¿Está seguro de que desea eliminar la regla?";
 $MESS["SEC_IP_EDIT_ID"] = "ID";
 $MESS["SEC_IP_EDIT_ACTIVE"] = "Activar";
+$MESS["SEC_IP_EDIT_ADMIN_SECTION"] = "Para páginas del Panel de Control";
 $MESS["SEC_IP_EDIT_SITE_ID"] = "Para p{aginas de panel de Control ";
 $MESS["SEC_IP_EDIT_SORT"] = "Ordenar";
 $MESS["SEC_IP_EDIT_NAME"] = "Título";
@@ -25,7 +26,6 @@ $MESS["SEC_IP_EDIT_INCL_MASKS"] = "Bloquear el acceso a las rutas (máscara)";
 $MESS["SEC_IP_EDIT_INCL_MASKS_SAMPLE"] = "Ejemplos: /* or /bitrix/admin/*";
 $MESS["SEC_IP_EDIT_EXCL_MASKS"] = "Excepto las rutas (máscara)";
 $MESS["SEC_IP_EDIT_ROW_ADD"] = "Agregar";
-$MESS["SEC_IP_EDIT_ADMIN_SECTION"] = "Para páginas del Panel de Control";
 $MESS["SEC_IP_EDIT_SAVE_ERROR_EMPTY_INCL_IPS"] = "Se requieren las direcciones de IP para bloquear.";
 $MESS["SEC_IP_EDIT_SAVE_ERROR_EMPTY_INCL_MASKS"] = "Se requieren los comodines de direcciones para ser bloqueados.";
 ?>

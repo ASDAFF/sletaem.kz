@@ -43,6 +43,8 @@ $MESS["SOD_HIST_SUM_PAID"] = "Ya fue pagado";
 $MESS["SOD_HIST_PAY_VOUCHER_NUM"] = "Pago #";
 $MESS["SOD_HIST_PAY_VOUCHER_DATE"] = "Fecha de la factura";
 $MESS["SOD_HIST_AFFILIATE_ID"] = "ID del afiliado";
+$MESS["SOD_HIST_DELIVERY_DOC_NUM"] = "Vía de pago #";
+$MESS["SOD_HIST_DELIVERY_DOC_DATE"] = "Fecha de vía de pago";
 $MESS["SOD_HIST_H_MORE"] = "Otros cambios";
 $MESS["SOD_HIST_LIST"] = "Historial";
 $MESS["SOD_HIST_ENTITY"] = "Entidad";
@@ -50,7 +52,5 @@ $MESS["SOD_HIST_ENTITY_ID"] = "ID de la entidad";
 $MESS["SOD_HIST_ENTITY_SHIPMENT"] = "Enviado";
 $MESS["SOD_HIST_ENTITY_PAYMENT"] = "Pago";
 $MESS["SOD_HIST_ALL"] = "(Todo)";
-$MESS["SOD_HIST_DELIVERY_DOC_NUM"] = "Vía de pago #";
-$MESS["SOD_HIST_DELIVERY_DOC_DATE"] = "Fecha de vía de pago";
 $MESS["SOD_HIST_IMPORTANT_TYPES"] = "Mostrar acciones importantes";
 ?>

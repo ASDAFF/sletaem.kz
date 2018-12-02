@@ -1,4 +1,7 @@
 <?
+$MESS["FD_INCORRECT_NAME"] = "Um nome de arquivo pode conter apenas letras, dígitos, espaços e os seguintes caracteres:!\$()[]} -.;=@^_~";
+$MESS["FD_FOLDER_NOT_FOUND"] = "A pasta \"#PATH#\" não foi encontrada";
+$MESS["FD_ELEMENT_NOT_FOUND"] = "O arquivo ou pasta \"#PATH#\" não foi encontrado";
 $MESS["BX_FD_ERROR"] = "Erro de diálogo de arquivo";
 $MESS["BX_FD_ACCESS_DENIED"] = "Acesso negado";
 $MESS["BX_FD_SESS_EXPIRED"] = "A sessão do usuário expirou";
@@ -59,7 +62,6 @@ $MESS["FD_BYTE"] = "B";
 $MESS["FD_NEWFOLDER_EXISTS"] = "Já existe um arquivo com este nome";
 $MESS["FD_NEWFILE_EXISTS"] = "Já existe um arquivo com este nome, ou o nome é inválido.";
 $MESS["FD_EMPTY_NAME"] = "Erro! Nome de arquivo não especificado";
-$MESS["FD_INCORRECT_NAME"] = "Um nome de arquivo pode conter apenas letras, dígitos, espaços e os seguintes caracteres:!\$ () [] } -.; = @ ^ _ ~";
 $MESS["FD_NEW_FOLDER"] = "Nova pasta:";
 $MESS["FD_RENAME"] = "Renomear";
 $MESS["FD_DELETE"] = "Excluir";
@@ -69,8 +71,6 @@ $MESS["FD_CONFIRM_DEL_DIR"] = "Tem certeza de que deseja apagar a pasta?";
 $MESS["FD_CONFIRM_DEL_FILE"] = "Tem certeza de que deseja excluir o arquivo?";
 $MESS["FD_LOADING"] = "Carregando";
 $MESS["FD_REFRESH"] = "Refrescar";
-$MESS["FD_FOLDER_NOT_FOUND"] = "A pasta \"#PATH#\" não foi encontrada";
-$MESS["FD_ELEMENT_NOT_FOUND"] = "O arquivo ou pasta \"#PATH#\" não foi encontrado";
 $MESS["FD_NEWFOLDER_ENTER_NAME"] = "O nome da pasta está vazio";
 $MESS["FD_ELEMENT_ENTER_NAME"] = "O nome do arquivo ou pasta está vazia";
 $MESS["FD_ELEMENT_EXISTS"] = "Um arquivo ou pasta com este nome já existe";

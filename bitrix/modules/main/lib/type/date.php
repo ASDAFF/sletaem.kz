@@ -94,7 +94,7 @@ class Date
 	 *
 	 * @param string $interval Time interval to add.
 	 *
-	 * @return Date
+	 * @return $this
 	 */
 	public function add($interval)
 	{
@@ -105,6 +105,21 @@ class Date
 		}
 
 		$this->value->add($i);
+
+		return $this;
+	}
+
+	/**
+	 * Sets the current date of the DateTime object to a different date.
+	 * @param int $year
+	 * @param int $month
+	 * @param int $day
+	 * 
+	 * @return $this
+	 */
+	public function setDate($year, $month, $day)
+	{
+		$this->value->setDate($year, $month, $day);
 
 		return $this;
 	}
@@ -332,7 +347,7 @@ class Date
 	 * Examples: "end of next week", "tomorrow morning", "friday 25.10"
 	 *
 	 * @param string $text
-	 * @return \Bitrix\Main\Text\DateConverterResult[]
+	 * @return \Bitrix\Main\Type\DateTime|null
 	 */
 	public static function createFromText($text)
 	{

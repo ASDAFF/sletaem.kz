@@ -2,8 +2,8 @@
 $MESS["MAIN_RATING_RULE_LIST"] = "Regras de Processamento";
 $MESS["RATING_RULE_NAME"] = "Nome";
 $MESS["RATING_RULE_CREATED"] = "Criado em";
-$MESS["RATING_RULE_LAST_MODIFIED"] = "ltima modificação";
-$MESS["RATING_RULE_LAST_APPLIED"] = "ltima aplicação";
+$MESS["RATING_RULE_LAST_MODIFIED"] = "Última modificação";
+$MESS["RATING_RULE_LAST_APPLIED"] = "Última aplicação";
 $MESS["RATING_RULE_ACTIVE"] = "Ativo";
 $MESS["RATING_RULE_STATUS"] = "Status";
 $MESS["RATING_RULE_ENTITY_TYPE_ID"] = "Vínculando";

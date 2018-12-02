@@ -61,4 +61,6 @@ $MESS["SCALE_PANEL_JS_BX_ENV_NEED_UPDATE2"] = "Необхідно оновити
 $MESS["SCALE_PANEL_JS_PROVIDER_CHOOSE"] = "Вибір провайдера VPS";
 $MESS["SCALE_PANEL_JS_PROVIDER_ORDER_SUCCESS"] = "Успішно відправлений запит №##ORDER_ID##до провайдера##PROVIDER_ID##";
 $MESS["SCALE_PANEL_JS_PROVIDER_ORDER_SUCCESS_TITLE"] = "Відправлення запиту";
+$MESS["SCALE_PANEL_BVM_TOO_OLD_DOC"] = "<a href=\"https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=37&LESSON_ID=8825&LESSON_PATH=3908.8809.8817.8825\">Документація по оновленню віртуальної машини</a>";
+$MESS["SCALE_PANEL_JS_LOAD_FILE"] = "Завантажити";
 ?>

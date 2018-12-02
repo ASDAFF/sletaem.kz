@@ -1,4 +1,6 @@
 <?
+$MESS["C2IT_ERROR_PRODUCT_SAVE_UNKNOWN_ERROR"] = "Erreur inconnue lors de l'enregistrement des données du produit. Veuillez contacter l'administrateur de votre site.";
+$MESS["C2IT_ERROR_PRODUCT_SAVE_ERROR"] = "Erreur lors de l'enregistrement des données du produit : #ERROR#";
 $MESS["C2IT_INTERNAL_ERROR"] = "Erreur intérieure";
 $MESS["C2IT_ERROR_SAVE_MULTIBARCODE"] = "Ce produit a plusieurs exemplaires avec des codes à barres uniques.";
 $MESS["C2IT_ERROR_USE_MULTIBARCODE"] = "Ce produit est en stock sans code à barres unique. Avant d'activer la fonctionnalité 'code à barre unique', il faut retirer ce produit de tous les dépôts.";
@@ -20,6 +22,4 @@ $MESS["ERROR_ADDING_PRICE"] = "Erreur lors de l'ajout le prix";
 $MESS["C2IT_ERROR_PRPARAMS"] = "Erreur prix de mise à jour avec l'ID #ID#";
 $MESS["ERROR_UPDATING_PRICE"] = "Erreur lors de la mise à jour le prix";
 $MESS["C2IT_ERROR_SAVEPRICE"] = "Erreur prix d'économie #PRICE#";
-$MESS["C2IT_ERROR_PRODUCT_SAVE_UNKNOWN_ERROR"] = "Erreur inconnue lors de l'enregistrement des données du produit. Veuillez contacter l'administrateur de votre site.";
-$MESS["C2IT_ERROR_PRODUCT_SAVE_ERROR"] = "Erreur lors de l'enregistrement des données du produit : #ERROR#";
 ?>

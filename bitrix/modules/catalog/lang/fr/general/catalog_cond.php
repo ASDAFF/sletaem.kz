@@ -1,4 +1,6 @@
 <?
+$MESS["BT_MOD_COND_ERR_CHECK_DATA_ENUM_VALUE_ABSENT_MULTI"] = "Les valeurs de la propriété sélectionnée n'existent pas.";
+$MESS["BT_MOD_COND_ERR_CHECK_DATA_ENUM_VALUE_ABSENT"] = "La valeur de la propriété sélectionnée n'existe pas.";
 $MESS["BT_CLOBAL_COND_GROUP_SELECT_DEF"] = "...";
 $MESS["BT_MOD_CATALOG_COND_CMP_IBLOCK_CREATED_BY_LABEL"] = "Auteur";
 $MESS["BT_MOD_CATALOG_COND_CMP_IBLOCK_ACTIVE_LABEL"] = "Actif(ve)";
@@ -123,6 +125,4 @@ $MESS["BT_MOD_CATALOG_COND_CMP_CATALOG_PRICE_TYPE_LABEL"] = "Type du paiement";
 $MESS["BT_MOD_CATALOG_COND_CMP_IBLOCK_ELEMENT_ID_LABEL"] = "Article";
 $MESS["BT_MOD_CATALOG_COND_CMP_CATALOG_QUANTITY_TRACE_LABEL"] = "Diminuer la quantité lors de la commande";
 $MESS["BT_CLOBAL_COND_GROUP_LOGIC_AND"] = "ET";
-$MESS["BT_MOD_COND_ERR_CHECK_DATA_ENUM_VALUE_ABSENT_MULTI"] = "Les valeurs de la propriété sélectionnée n'existent pas.";
-$MESS["BT_MOD_COND_ERR_CHECK_DATA_ENUM_VALUE_ABSENT"] = "La valeur de la propriété sélectionnée n'existe pas.";
 ?>

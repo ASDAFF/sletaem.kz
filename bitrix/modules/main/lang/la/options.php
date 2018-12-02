@@ -1,4 +1,6 @@
 <?
+$MESS["MAIN_OPT_PROFILE"] = "Perfil del usuario";
+$MESS["MAIN_OPT_PROFILE_HYSTORY"] = "Mantener el historial de las actualizaciones del campo del perfil de usuario:";
 $MESS["MAIN_REGISTER"] = "¿Permitir que los usuarios se autoregistren?";
 $MESS["MAIN_EMAIL"] = "Envíe copias de todos los e-mails salientes a:";
 $MESS["FILL_TO_MAIL_M"] = "Dirección de e-mail en el título";
@@ -220,4 +222,6 @@ $MESS["MAIN_REGISTER_AGREEMENT_TITLE"] = "Administrar Acuerdos. <a href=\"#AGGRE
 $MESS["MAIN_REGISTER_AGREEMENT_DEFAUTL_VALUE"] = "(Seleccionar Acuerdo)";
 $MESS["MAIN_OPTIONS_PHONE_NUMBER_FORMAT"] = "Formato de número de teléfono";
 $MESS["MAIN_OPTIONS_PHONE_NUMBER_DEFAULT_COUNTRY"] = "País predeterminado:";
+$MESS["MAIN_OPTION_MAIL_GEN_TEXT_VERSION"] = "Crear una versión de texto de mensajes HTML:";
+$MESS["MAIN_OPTION_MAIL_LINK_PROTOCOL"] = "Protocolo para URLs en los mensajes (los enlaces relativos se antepondrán con el dominio del sitio y el protocolo):";
 ?>

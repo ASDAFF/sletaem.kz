@@ -1,4 +1,5 @@
 <?
+$MESS["Table"] = "Tableau";
 $MESS["LinkTarget_def"] = "- ne pas indiquer -";
 $MESS["VideoAutoplay"] = "Commencer automatiquement à lire";
 $MESS["LinkHref"] = "Adresse de référence";
@@ -88,5 +89,4 @@ $MESS["FontList"] = "Choix du type de caractères";
 $MESS["ListItems"] = "Eléments de la liste";
 $MESS["LinkTarget_self"] = "cette fenêtre";
 $MESS["Anchor"] = "Ancre";
-$MESS["Table"] = "Tableau";
 ?>

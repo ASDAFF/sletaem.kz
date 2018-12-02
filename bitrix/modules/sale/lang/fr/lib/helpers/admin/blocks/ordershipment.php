@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_ORDER_SHIPMENT_TRACKING_URL"] = "Détails de suivi du colis";
 $MESS["SALE_ORDER_SHIPMENT_TITLE"] = "Expédition";
 $MESS["SALE_ORDER_PAYMENT_NO_DELIVERY_SERVICE"] = "(Sélectionnez le service de livraison)";
 $MESS["SALE_ORDER_SHIPMENT_ALLOW_DELIVERY_YES"] = "Expédition approuvée";
@@ -53,5 +54,4 @@ $MESS["SALE_ORDER_SHIPMENT_TRACKING_DESCRIPTION"] = "Description du statut";
 $MESS["SALE_ORDER_SHIPMENT_TRACKING_S_EMPTY"] = "Le numéro de suivi est requis";
 $MESS["SALE_ORDER_SHIPMENT_BLOCK_DELIVERY_ADDITIONAL"] = "Informations sur le service de livraison";
 $MESS["SALE_ORDER_SHIPMENT_BLOCK_EDIT_SHIPMENT_TITLE"] = "Expédition ##ID# du #DATE_INSERT#";
-$MESS["SALE_ORDER_SHIPMENT_TRACKING_URL"] = "Détails de suivi du colis";
 ?>

@@ -70,4 +70,7 @@ $MESS["SALE_DSE_FORM_ALLOW_EDIT_SHIPMENT"] = "Автоматичне зміна 
 $MESS["SALE_DSE_REQUIRED_FIELD"] = "Необхідно заповнити поле:";
 $MESS["SALE_DSE_2DS_EDIT"] = "Повернутися в службу доставки";
 $MESS["SALE_DSE_BUSINESS_VALUES"] = "Бізнес смисли";
+$MESS["SALE_DSE_FORM_VAT_ID"] = "Ставка ПДВ";
+$MESS["SALE_DSE_FORM_NO_VAT"] = "Без ПДВ";
+$MESS["SALE_DSE_DELIVERY_SERVICE_CREATE_ERROR"] = "Не вдалося створити об'єкт служби доставки!";
 ?>

@@ -1,4 +1,7 @@
 <?
+$MESS["BUYER_EDIT"] = "Редагувати покупця";
+$MESS["BUYER_INFO_EDIT"] = "Редагувати дані покупця";
+$MESS["BUYER_NO_VALUES"] = "не задані";
 $MESS["BUYER_CUSTOM_FIELD"] = "Налаштувати";
 $MESS["BUYER_CUSTOM_FIELD_TITLE"] = "Налаштувати поля форми";
 $MESS["BUYER_NEW_ORDER"] = "Створити замовлення";

@@ -1,4 +1,15 @@
 <?
+$MESS["mnu_sender_sect1"] = "Маркетинг 24";
+$MESS["mnu_sender_sect_title1"] = "Маркетинг 24";
+$MESS["mnu_sender_segments"] = "Сегменти";
+$MESS["mnu_sender_blacklist"] = "Чорний список";
+$MESS["mnu_sender_blacklist_alt"] = "Виключені адреси для розсилок всіх кампаній";
+$MESS["mnu_sender_letters"] = "Розсилки";
+$MESS["mnu_sender_letters_alt"] = "Керування розсилками";
+$MESS["mnu_sender_campaigns"] = "Кампанії";
+$MESS["mnu_sender_campaigns_alt"] = "Керування кампаніями";
+$MESS["mnu_sender_ads"] = "Реклама";
+$MESS["mnu_sender_ads_alt"] = "Керування рекламою";
 $MESS["mnu_sender_report"] = "Статистика";
 $MESS["mnu_sender_report_alt"] = "Статистика";
 $MESS["mnu_sender_group"] = "Групи адрес";

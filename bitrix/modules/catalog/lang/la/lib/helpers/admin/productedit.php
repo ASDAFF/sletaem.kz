@@ -5,6 +5,8 @@ $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_ERR_CATALOG_ABSENT"] = "El Block de informa
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_ERR_ZERO_RANGE"] = "Se encontró el rango de cantidad de cero. Esto puede ser el resultado del uso inadecuado del API";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_ERR_INVERT_RANGE"] = "Límite izquierdo del rango de cantidad es más del límite derecho: #LEFT# - #RIGHT#";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_ERR_LEFT_BORDER_EXIST"] = "Límite izquierdo del rango de cantidad #LEFT# - #RIGHT# toca otro límite de rangos";
+$MESS["BX_CATALOG_HELPER_PRODUCTEDIT_ERR_RIGHT_BORDER_EXIST"] = "Límite derecho del rango de cantidad #LEFT# - #RIGHT# tocar otro límite de rangos";
+$MESS["BX_CATALOG_HELPER_PRODUCTEDIT_ERR_RANGE_OVERLAP"] = "El rango de cantidad #LEFT# - #RIGHT# se cruza con otro rango";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_PRICE_MODE_CONTROL_TITLE"] = "Método de precio:";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_PRICE_MODE_SIMPLE"] = "simple";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_PRICE_MODE_RANGE"] = "cantidad basada";
@@ -36,6 +38,7 @@ $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_FIELD_TITLE_PURCHASING_PRICE"] = "Precio de
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_FIELD_TITLE_VAT_ID"] = "Tasa de impuesto:";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_FIELD_TITLE_VAT_INCLUDED"] = "Impuesto incluido:";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_FIELD_TITLE_QUANTITY_TRACE"] = "Habilitar el control de existencias:";
+$MESS["BX_CATALOG_HELPER_PRODUCTEDIT_FIELD_TITLE_CAN_BUY_ZERO"] = "Hacer los elementos fuera de stock disponible para su compra (también permita que la cantidad de producto sea negativa):";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_FIELD_TITLE_SUBSCRIBE"] = "Permitir suscripción para productos fuera de stock:";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_FIELD_TITLE_WEIGHT"] = "Peso (gramos):";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_FIELD_TITLE_LENGTH"] = "Longitud (mm):";
@@ -56,18 +59,15 @@ $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_FIELD_VALUE_IS_EMPTY"] = "no seleccionado";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_MESS_STATUS_DEFAULT"] = "por defecto (#STATUS#)";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_MESS_STATUS_YES"] = "si";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_MESS_STATUS_NO"] = "no";
+$MESS["BX_CATALOG_HELPER_PRODUCTEDIT_MESS_QUANTITY_TRACE_SET"] = "Habilitar el \"Seguimiento de Stock\" y \"Hacer los elementos fuera de stock disponible para su compra (también permite que la cantidad de producto sea negativa)\" los parámetros se ajustan automáticamente en función a los parámetros de los productos de un paquete; que no se pueden cambiar manualmente.
+<br>
+Si el seguimiento de stock está habilitado al menos un producto en un paquete, y este producto no se puede comprar si está fuera de stock, el paquete utilizará el seguimiento de stock.";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_MESS_ACTIVE_STORES_EMPTY"] = "Actualmente no hay almacenes en el sistema.";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_MESS_CREATE_STORE"] = "Para crear un nuevo almacén, diríjase por favor a <a href=\"#LINK#\">la página de almacenes</a>.";
+$MESS["BX_CATALOG_HELPER_PRODUCTEDIT_MESS_STORES_AMOUNT_INFO"] = "El control de almacén está desactivado. El número de stock en el almacén es sólo para fines informativos; no se utiliza para calcular el stock de productos.";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_MESS_BASE_PRICE_TYPE"] = "(base)";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_STORES_FIELD_ID"] = "ID del almacén";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_STORES_FIELD_NAME"] = "Nombre";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_STORES_FIELD_ADDRESS"] = "Dirección";
 $MESS["BX_CATALOG_HELPER_PRODUCTEDIT_STORES_FIELD_AMOUNT"] = "Cantidad en el almacén";
-$MESS["BX_CATALOG_HELPER_PRODUCTEDIT_ERR_RIGHT_BORDER_EXIST"] = "Límite derecho del rango de cantidad #LEFT# - #RIGHT# tocar otro límite de rangos";
-$MESS["BX_CATALOG_HELPER_PRODUCTEDIT_ERR_RANGE_OVERLAP"] = "El rango de cantidad #LEFT# - #RIGHT# se cruza con otro rango";
-$MESS["BX_CATALOG_HELPER_PRODUCTEDIT_FIELD_TITLE_CAN_BUY_ZERO"] = "Hacer los elementos fuera de stock disponible para su compra (también permita que la cantidad de producto sea negativa):";
-$MESS["BX_CATALOG_HELPER_PRODUCTEDIT_MESS_QUANTITY_TRACE_SET"] = "Habilitar el \"Seguimiento de Stock\" y \"Hacer los elementos fuera de stock disponible para su compra (también permite que la cantidad de producto sea negativa)\" los parámetros se ajustan automáticamente en función a los parámetros de los productos de un paquete; que no se pueden cambiar manualmente.
-<br>
-Si el seguimiento de stock está habilitado al menos un producto en un paquete, y este producto no se puede comprar si está fuera de stock, el paquete utilizará el seguimiento de stock.";
-$MESS["BX_CATALOG_HELPER_PRODUCTEDIT_MESS_STORES_AMOUNT_INFO"] = "El control de almacén está desactivado. El número de stock en el almacén es sólo para fines informativos; no se utiliza para calcular el stock de productos.";
 ?>

@@ -1,8 +1,8 @@
-<section class="landing-block g-pt-115 g-pt-80 g-pb-80">
+<section class="landing-block g-pt-80 g-pb-80">
         <div class="container">
             <div class="row">
 
-                <div class="landing-block-node-carousel-container js-animation fadeInLeft col-lg-8">
+                <div class="landing-block-node-carousel-container js-animation fadeInLeft col-lg-8 order-2 order-md-1">
                     <div class="landing-block-node-carousel js-carousel g-line-height-0"
                          data-infinite="true"
                          data-speed="5000"
@@ -120,7 +120,7 @@
                     </div>
                 </div>
 
-				<div class="landing-block-node-text-container js-animation fadeInRight col-lg-4 g-mb-40 g-mb-0--lg">
+				<div class="landing-block-node-text-container js-animation fadeInRight col-lg-4 g-mb-40 g-mb-0--lg order-1 order-md-2">
 					<div class="landing-block-node-header text-uppercase u-heading-v2-4--bottom g-brd-primary g-mb-40">
 						<h4 class="landing-block-node-subtitle h6 g-font-weight-800 g-font-size-12 g-letter-spacing-1 g-color-primary g-mb-20">Our projects</h4>
 						<h2 class="landing-block-node-title h1 u-heading-v2__title g-line-height-1_3 g-font-weight-600 g-font-size-40 g-mb-minus-10">We are the

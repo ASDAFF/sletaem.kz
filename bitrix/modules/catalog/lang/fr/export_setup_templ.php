@@ -1,4 +1,8 @@
 <?
+$MESS["CAT_YANDEX_DISABLE_REFERERS"] = "Ne pas ajouter de référent aux liens des produits :";
+$MESS["CAT_MAX_EXECUTION_TIME"] = "Temps de l'étape d'exécution :";
+$MESS["CAT_MAX_EXECUTION_TIME_NOTE"] = "0 - exporter tous les articles en même temps<br>valeur positive - temps d'exécution de l'étape, secondes";
+$MESS["CAT_YANDEX_CHECK_PERMISSIONS"] = "Vérifier les permissions d'accès du groupe \"2\" (tous les utilisateurs) :";
 $MESS["CET_ERROR_NO_NAME"] = "Entrez le nom du profil d'exportation.";
 $MESS["CET_STEP1"] = "tape";
 $MESS["CET_STEP2"] = "de";
@@ -27,7 +31,7 @@ $MESS["CATI_NO_IBLOCK"] = "Bloc Information de version inconnue.";
 $MESS["CATI_NO_FORMAT"] = "Indiquez le format du fichier de données et ses propriétés.";
 $MESS["CATI_NO_DELIMITER"] = "Spécifiez le caractère séparateur de champ.";
 $MESS["CATI_NO_SAVE_FILE"] = "Déterminez le fichier pour sauvegarder le résultat.";
-$MESS["CATI_CANNOT_CREATE_FILE"] = "Chec de la création du fichier des données.";
+$MESS["CATI_CANNOT_CREATE_FILE"] = "Échec de la création du fichier des données.";
 $MESS["CATI_NO_FIELDS"] = "Champs d'exportation non renseignés";
 $MESS["CATI_SCHEME_EXISTS"] = "Le schéma du même nom existe déjà.";
 $MESS["CATI_PAGE_TITLE"] = "Catalogue exportation: étape";
@@ -134,8 +138,4 @@ $MESS["CAT_ADM_CSV_EXP_CML2_LINK_IS_XML"] = "Exporter ID externe (XML_ID) aux bi
 $MESS["CAT_YANDEX_XML_CURRENCY"] = "Convertir le prix du produit en devise :";
 $MESS["CAT_YANDEX_USE_HTTPS"] = "Utiliser HTTPS lors d'un export :";
 $MESS["CAT_YANDEX_FILTER_AVAILABLE"] = "Exporter uniquement les produits en stock :";
-$MESS["CAT_YANDEX_DISABLE_REFERERS"] = "Ne pas ajouter de référent aux liens des produits :";
-$MESS["CAT_MAX_EXECUTION_TIME"] = "Temps de l'étape d'exécution :";
-$MESS["CAT_MAX_EXECUTION_TIME_NOTE"] = "0 - exporter tous les articles en même temps<br>valeur positive - temps d'exécution de l'étape, secondes";
-$MESS["CAT_YANDEX_CHECK_PERMISSIONS"] = "Vérifier les permissions d'accès du groupe \"2\" (tous les utilisateurs) :";
 ?>

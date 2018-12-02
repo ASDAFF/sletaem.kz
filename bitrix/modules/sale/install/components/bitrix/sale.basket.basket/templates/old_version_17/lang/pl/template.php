@@ -1,0 +1,34 @@
+<?
+$MESS["SALE_ORDER"] = "Sprawdź";
+$MESS["SALE_OR"] = "lub";
+$MESS["SALE_NAME"] = "Nazwa";
+$MESS["SALE_PROPS"] = "Właściwości";
+$MESS["SALE_PRICE"] = "Cena";
+$MESS["SALE_TYPE"] = "Rodzaj ceny";
+$MESS["SALE_QUANTITY"] = "Ilość";
+$MESS["SALE_SUM"] = "Razem";
+$MESS["SALE_DELETE"] = "Usuń";
+$MESS["SALE_DELAY"] = "Wstrzymaj";
+$MESS["SALE_ADD_TO_BASKET"] = "Dodaj do koszyka";
+$MESS["SALE_WEIGHT"] = "Waga";
+$MESS["SALE_TOTAL_WEIGHT"] = "Waga całkowita:";
+$MESS["SALE_WEIGHT_G"] = "g";
+$MESS["SALE_DELAYED_TITLE"] = "Wstrzymaj";
+$MESS["SALE_UNAVAIL_TITLE"] = "Obecnie niedostępne";
+$MESS["STB_COUPON_PROMT"] = "Jeżeli posiadasz specjalny kupon ze zniżką, proszę wprowadź jego kod tutaj:";
+$MESS["SALE_VAT"] = "Podatek:";
+$MESS["SALE_VAT_EXCLUDED"] = "Cena całkowita:";
+$MESS["SALE_VAT_INCLUDED"] = "Wliczony podatek:";
+$MESS["SALE_TOTAL"] = "Suma:";
+$MESS["SALE_CONTENT_DISCOUNT"] = "Upust";
+$MESS["SALE_DISCOUNT"] = "Upust";
+$MESS["SALE_NOTIFY_TITLE"] = "Zamówione u dostawców";
+$MESS["SALE_REFRESH_NOTIFY_DESCR"] = "Kliknij ten przycisk, aby usunąć produkty.";
+$MESS["SALE_ITEMS"] = "Koszyk:";
+$MESS["SALE_BASKET_ITEMS"] = "Dostępny";
+$MESS["SALE_BASKET_ITEMS_DELAYED"] = "Zapisane na później";
+$MESS["SALE_BASKET_ITEMS_SUBSCRIBED"] = "Wkrótce w sprzedaży";
+$MESS["SALE_BASKET_ITEMS_NOT_AVAILABLE"] = "niedostępne";
+$MESS["SALE_NO_ITEMS"] = "Brak pozycji w twoim koszyku.";
+$MESS["SALE_REFRESH"] = "Odśwież";
+?>

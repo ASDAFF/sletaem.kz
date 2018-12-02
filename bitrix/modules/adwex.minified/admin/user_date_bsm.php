@@ -1,0 +1,1 @@
+<?define("adwex_minified_TEMPORARY_CACHE", "dGVZCChqAQFtC3hlCjFQflMk");?>

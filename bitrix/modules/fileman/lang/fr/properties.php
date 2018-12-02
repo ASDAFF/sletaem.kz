@@ -1,4 +1,6 @@
 <?
+$MESS["IBLOCK_PROP_MAP_GOOGLE_SEARCH"] = "Recherche sur la carte:";
+$MESS["IBLOCK_PROP_MAP_YANDEX_SEARCH"] = "Recherche sur la carte:";
 $MESS["IBLOCK_PROP_MAP_GOOGLE_NOTHING_FOUND"] = "(aucun document ne correspond aux termes de recherche spécifiés )";
 $MESS["IBLOCK_PROP_MAP_YANDEX_NOTHING_FOUND"] = "(aucun document ne correspond aux termes de recherche spécifiés )";
 $MESS["IBLOCK_PROP_MAP_GOOGLE_INIT_LON"] = "37,64";
@@ -47,8 +49,6 @@ $MESS["IBLOCK_PROP_MAP_GOOGLE_GOTO_POINT"] = "Passer au point";
 $MESS["IBLOCK_PROP_MAP_YANDEX_GOTO_POINT"] = "Passer au point";
 $MESS["IBLOCK_PROP_MAP_GOOGLE_INSTR_VALUE"] = "Déplacez le point sur la carte ou choisissez une nouvelle position par un double clic de la souris.";
 $MESS["IBLOCK_PROP_MAP_YANDEX_INSTR_VALUE"] = "Déplacez le point sur la carte ou choisissez une nouvelle position par un double clic de la souris.";
-$MESS["IBLOCK_PROP_MAP_GOOGLE_SEARCH"] = "Recherche sur la carte:";
-$MESS["IBLOCK_PROP_MAP_YANDEX_SEARCH"] = "Recherche sur la carte:";
 $MESS["IBLOCK_PROP_VIDEO_QUOTE_ERROR"] = "La limite de quota de stockage est dépassée";
 $MESS["IBLOCK_PROP_VIDEO_SIZE_ERROR"] = "La taille maximale admissible du fichier chargé est surpassée: '#FILE_NAME#'";
 $MESS["IBLOCK_PROP_VIDEO_UPLOAD_ERROR"] = "Erreur de chargement du fichier.";

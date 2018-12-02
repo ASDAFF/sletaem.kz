@@ -1,4 +1,10 @@
 <?
+$MESS["COMP_GROUP_USER_CONSENT"] = "Consentement de l’utilisateur";
+$MESS["COMP_PROP_USER_CONSENT_USE"] = "Demander le consentement";
+$MESS["COMP_PROP_USER_CONSENT_ID"] = "Consentement";
+$MESS["COMP_PROP_USER_CONSENT_ID_DEF"] = "(non défini)";
+$MESS["COMP_PROP_USER_CONSENT_IS_CHECKED"] = "La case est cochée par défaut";
+$MESS["COMP_PROP_USER_CONSENT_IS_LOADED"] = "Afficher le texte de consentement automatiquement";
 $MESS["COMP_PARAM_CACHE_MANAGED_OFF"] = "<span style = 'color: red'>désactivé</span>";
 $MESS["COMP_PARAM_CACHE_AUTO_OFF"] = "<span style = 'color: red'>désactivé</span>";
 $MESS["COMP_PROP_CACHE_TYPE_AUTO"] = "Auto";
@@ -74,10 +80,4 @@ $MESS["COMP_PROP_COMPOSITE_FRAME_TYPE_STATIC"] = "Statique";
 $MESS["COMP_PROP_COMPOSITE_FRAME_TYPE_DYNAMIC_WITH_STUB"] = "Contenu dynamique avec stub";
 $MESS["COMP_PROP_COMPOSITE_FRAME_TYPE_DYNAMIC_WITHOUT_STUB"] = "Contenu dynamique sans stub";
 $MESS["COMP_PROP_COMPOSITE_FRAME_TYPE_DYNAMIC_WITH_STUB_LOADING"] = "Contenu dynamique avec chargeur";
-$MESS["COMP_GROUP_USER_CONSENT"] = "Consentement de l’utilisateur";
-$MESS["COMP_PROP_USER_CONSENT_USE"] = "Demander le consentement";
-$MESS["COMP_PROP_USER_CONSENT_ID"] = "Consentement";
-$MESS["COMP_PROP_USER_CONSENT_ID_DEF"] = "(non défini)";
-$MESS["COMP_PROP_USER_CONSENT_IS_CHECKED"] = "La case est cochée par défaut";
-$MESS["COMP_PROP_USER_CONSENT_IS_LOADED"] = "Afficher le texte de consentement automatiquement";
 ?>

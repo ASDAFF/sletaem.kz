@@ -1,4 +1,5 @@
 <?
+$MESS["sender_connector_recipient_name1"] = "Destinatarios del boletín";
 $MESS["sender_connector_recipient_all"] = "Alguno";
 $MESS["sender_connector_recipient_y"] = "Si";
 $MESS["sender_connector_recipient_n"] = "No";

@@ -1,4 +1,5 @@
 <?
+$MESS["MAIN_FLT_SEARCH"] = "Rechercher:";
 $MESS["TITLE"] = "Utilisateurs";
 $MESS["SAVE_ERROR"] = "Erreur de sauver utilisateur # ";
 $MESS["DELETE_ERROR"] = "Erreur de suppression utilisateur. Un utilisateur est éventuellement relié à d'autres objets.";
@@ -63,7 +64,6 @@ $MESS["MAIN_FLT_FIO"] = "Nom, prénom";
 $MESS["MAIN_FLT_PROFILE_FIELDS"] = "Profil champs";
 $MESS["MAIN_FLT_USER_GROUP"] = "Groupe d'utilisateurs";
 $MESS["MAIN_FLT_SEARCH_TITLE"] = "Veuillez saisir la phrase à rechercher";
-$MESS["MAIN_FLT_SEARCH"] = "Recherche:";
 $MESS["MAIN_EDIT_ERROR"] = "Erreur de modification de l'enregistrement:";
 $MESS["MAIN_ADMIN_MENU_VIEW"] = "Affichage";
 $MESS["F_FIND_INTRANET_USERS"] = "Utilisateurs autorisés";
@@ -83,8 +83,8 @@ $MESS["MAIN_ADMIN_MENU_DELETE"] = "Supprimer";
 $MESS["MAIN_ADMIN_LIST_ACTIVATE"] = "activer";
 $MESS["MAIN_ADMIN_LIST_DEACTIVATE"] = "Désactiver";
 $MESS["USER_ADMIN_TITLE"] = "Salutation";
-$MESS["MAIN_USER_ADMIN_FIELD_ID"] = "ID";
 $MESS["USER_DONT_KNOW"] = "(inconnu(e))";
 $MESS["USER_MALE"] = "Homme";
 $MESS["USER_FEMALE"] = "Femme";
+$MESS["MAIN_USER_ADMIN_FIELD_ID"] = "ID";
 ?>

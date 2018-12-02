@@ -1,4 +1,6 @@
 <?
+$MESS["SALE_SDL_MARKETPLACE_ADD_NEW"] = "Installer depuis Marketplace";
+$MESS["SALE_SDL_MARKETPLACE_ADD_NEW_ALT"] = "Cliquez pour installer depuis Marketplace";
 $MESS["SALE_SDL_ERROR_DELETE"] = "Erreur lors de la suppression du service de livraison ; il est possible que des commandes l'utilisent.<br>";
 $MESS["SALE_SDL_ERROR_UPDATE"] = "Erreur lors de la mise à jour du service de livraison.";
 $MESS["SALE_SDL_PRLIST"] = "Services de livraison";
@@ -39,6 +41,4 @@ $MESS["SALE_DSE_CHOOSE_GROUP_SAVE"] = "Copier";
 $MESS["SALE_SDL_ALLOW_EDIT_SHIPMENT"] = "Autoriser les expéditions partielles éditables";
 $MESS["SALE_SDL_SITES"] = "Sites";
 $MESS["SALE_SDL_FILTER_SITE"] = "Site";
-$MESS["SALE_SDL_MARKETPLACE_ADD_NEW"] = "Installer depuis Marketplace";
-$MESS["SALE_SDL_MARKETPLACE_ADD_NEW_ALT"] = "Cliquez pour installer depuis Marketplace";
 ?>

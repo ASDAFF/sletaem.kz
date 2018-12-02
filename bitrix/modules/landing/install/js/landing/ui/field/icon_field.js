@@ -3,6 +3,8 @@
 
 	BX.namespace("BX.Landing.UI.Field");
 
+	var clone = BX.Landing.Utils.clone;
+
 
 	/**
 	 * Implements interface for works with Icon field
@@ -46,12 +48,21 @@
 
 		getValue: function()
 		{
+			var classList = this.classList;
+
+			if (this.selector)
+			{
+				var selectorClassname = this.selector.split("@")[0].replace(".", "");
+				classList = clone(this.classList).concat([selectorClassname]);
+			}
+
 			return {
 				type: "icon",
 				src: "",
 				id: -1,
 				alt: "",
-				classList: this.classList
+				classList: classList,
+				url: Object.assign({}, this.url.getValue(), {enabled: this.urlCheckbox.checked})
 			};
 		},
 
@@ -62,7 +73,8 @@
 				src: "",
 				id: -1,
 				alt: "",
-				classList: []
+				classList: [],
+				url: ''
 			})
 		}
 	};

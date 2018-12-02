@@ -82,6 +82,7 @@ $MESS["UP_TYPE_SUBJECT_DESC"] = "#USER_NAME# - nombre de usuario
 #NAME# - nombre del producto
 #PAGE_URL# - página de información del producto";
 $MESS["UP_SUBJECT"] = "#SITE_NAME#: Producto está nuevamente en stock";
+$MESS["SALE_SUBSCRIBE_PRODUCT_SUBJECT"] = "#SITE_NAME#: Producto vuelva a estar disponible";
 $MESS["UP_MESSAGE"] = "Mensaje para #SITE_NAME#
 ------------------------------------------
 
@@ -95,7 +96,6 @@ Usted está recibiendo este mensaje porque ha pedido que le informemos cuando es
 Atentamente,
 
 #SITE_NAME# Servicio al Cliente";
-$MESS["SALE_SUBSCRIBE_PRODUCT_SUBJECT"] = "#SITE_NAME#: Producto vuelva a estar disponible";
 $MESS["SMAIL_FOOTER_BR"] = "Saludos cordiales,<br />personal de apoyo.";
 $MESS["SMAIL_FOOTER_SHOP"] = "Tienda web";
 $MESS["SALE_NEW_ORDER_HTML_TITLE"] = "Usted ha hecho un pedido con #SITE_NAME#";
@@ -156,6 +156,34 @@ Este mensaje es de generación automática, por favor no respona.
 Gracias por comprar con nosotros.!
 ";
 $MESS["SKGS_STATUS_MAIL_HTML_TITLE"] = "Orden actualizado el #SITE_NAME#";
+$MESS["SALE_CHECK_PRINT_TYPE_NAME"] = "Notificación de impresión de recibos";
+$MESS["SALE_CHECK_PRINT_TYPE_DESC"] = "#ORDER_ID# - ID de la orde
+#ORDER_DATE# - fecha de la orden
+#ORDER_USER# - cliente
+#ORDER_ACCOUNT_NUMBER_ENCODE# - Id de la orden para uso en enlaces
+#CHECK_LINK# - link del recibo";
+$MESS["SALE_CHECK_PRINT_SUBJECT"] = "Link del recibo";
+$MESS["SALE_CHECK_PRINT_HTML_TITLE"] = "Su pago por la ordende #SITE_NAME#";
+$MESS["SALE_CHECK_PRINT_HTML_SUB_TITLE"] = "Negociación #ORDER_USER#,";
+$MESS["SALE_CHECK_PRINT_HTML_TEXT"] = "Su pago se ha procesado y se ha creado un recibo respectivo. Para ver el recibo, utilice el enlace:
+
+#CHECK_LINK#
+
+Para obtener más detalles sobre su orden ##ORDER_ID# or #ORDER_DATE# por favor, siga este enlace: http://#SERVER_NAME#/personal/order/detail/#ORDER_ACCOUNT_NUMBER_ENCODE#/
+";
+$MESS["SALE_CHECK_PRINT_ERROR_TYPE_NAME"] = "Notificación de error de impresión del recibo";
+$MESS["SALE_CHECK_PRINT_ERROR_TYPE_DESC"] = "#ORDER_ACCOUNT_NUMBER# - id de la orden
+#ORDER_DATE# - fecha de la orden
+#ORDER_ID# - id de la orden
+#CHECK_ID# - id del recibo";
+$MESS["SALE_CHECK_PRINT_ERROR_SUBJECT"] = "Error al imprimir recibo";
+$MESS["SALE_CHECK_PRINT_ERROR_HTML_TITLE"] = "Error al imprimir recibo";
+$MESS["SALE_CHECK_PRINT_ERROR_HTML_SUB_TITLE"] = "¡Bienvenido!";
+$MESS["SALE_CHECK_PRINT_ERROR_HTML_TEXT"] = "No se puede imprimir el recibo ##CHECK_ID# para ordenar ##ORDER_ACCOUNT_NUMBER# fechado #ORDER_DATE#.
+
+Haga clic aquí para solucionar el problema:
+http://#SERVER_NAME#/bitrix/admin/sale_order_view.php?ID=#ORDER_ID#
+";
 $MESS["SALE_ORDER_TRACKING_NUMBER_TYPE_NAME"] = "Notificación de cambio en el número de seguimiento";
 $MESS["SALE_ORDER_TRACKING_NUMBER_TYPE_DESC"] = "#ORDER_ID# - número ID de la orden
 #ORDER_DATE# - fecha de la orden
@@ -183,24 +211,18 @@ Para mayor detalle acerca de la orden, mire: http://#SERVER_NAME#/personal/order
 
 E-mail: #SALE_EMAIL#
 ";
-$MESS["SALE_CHECK_PRINT_TYPE_NAME"] = "Notificación de impresión de recibos";
-$MESS["SALE_CHECK_PRINT_TYPE_DESC"] = "#ORDER_ID# - ID de la orde
-#ORDER_DATE# - fecha de la orden
-#ORDER_USER# - cliente
-#ORDER_ACCOUNT_NUMBER_ENCODE# - Id de la orden para uso en enlaces
-#CHECK_LINK# - link del recibo";
-$MESS["SALE_CHECK_PRINT_SUBJECT"] = "Link del recibo";
-$MESS["SALE_CHECK_PRINT_HTML_TITLE"] = "Su pago por la ordende #SITE_NAME#";
-$MESS["SALE_CHECK_PRINT_HTML_SUB_TITLE"] = "Negociación #ORDER_USER#,";
-$MESS["SALE_CHECK_PRINT_HTML_TEXT"] = "Su pago se ha procesado y se ha creado un recibo respectivo. Para ver el recibo, utilice el enlace:
-
-#CHECK_LINK#
-
-Para obtener más detalles sobre su orden ##ORDER_ID# or #ORDER_DATE# por favor, siga este enlace: http://#SERVER_NAME#/personal/order/detail/#ORDER_ACCOUNT_NUMBER_ENCODE#/
-";
 $MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_SUBJECT"] = "Estado de su envío desde #SITE_NAME# ha actualizado";
 $MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_HTML_TITLE"] = "Información de seguimiento de su envío desde #SITE_NAME# ha sido actualizado";
 $MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_HTML_SUB_TITLE"] = "Estimado #ORDER_USER#,";
+$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_HTML_TEXT"] = "El estado de su envío para el pedido ## ORDER_NO # de # ORDER_DATE # se ha actualizado a
+
+\"# STATUS_NAME #\" (# STATUS_DESCRIPTION #).
+
+Número de seguimiento: # TRACKING_NUMBER #.
+
+Enviado con: # DELIVERY_NAME #.
+
+# DELIVERY_TRACKING_URL ## ORDER_DETAIL_URL #";
 $MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_TYPE_NAME"] = "Actualización del estado del paquete";
 $MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_TYPE_DESC"] = "#SHIPMENT_NO# - ID del envio
 #SHIPMENT_DATE# - enviado el
@@ -216,13 +238,4 @@ $MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_TYPE_DESC"] = "#SHIPMENT_NO# - ID del 
 #DELIVERY_TRACKING_URL# - sitio web del servicio de entrega para más detalles de seguimiento
 #ORDER_ACCOUNT_NUMBER_ENCODE# - ID de la orden (para enlaces)
 #ORDER_DETAIL_URL# - URL de detalles de la orden";
-$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_HTML_TEXT"] = "El estado de su envío para el pedido ## ORDER_NO # de # ORDER_DATE # se ha actualizado a
-
-\"# STATUS_NAME #\" (# STATUS_DESCRIPTION #).
-
-Número de seguimiento: # TRACKING_NUMBER #.
-
-Enviado con: # DELIVERY_NAME #.
-
-# DELIVERY_TRACKING_URL ## ORDER_DETAIL_URL #";
 ?>

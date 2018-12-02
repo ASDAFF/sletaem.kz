@@ -48,4 +48,13 @@ $MESS["SALE_SHIPMENT_F_USER_LOGIN"] = "Логін покупця";
 $MESS["SALE_SHIPMENT_F_USER_ID"] = "Код покупця";
 $MESS["SALE_ORDER_USER_NAME"] = "Покупець";
 $MESS["SALE_ORDER_DELIVERY_RESPONSIBLE_ID"] = "Відповідальний";
+$MESS["SALE_ORDER_DELIVERY_REQ_DELIVERY_ERROR"] = "Помилка додавання в транспортну заявку";
+$MESS["SALE_ORDER_DELIVERY_REQ_ID"] = "Ідентифікатор транспортної заявки";
+$MESS["SALE_ORDER_DELIVERY_REQ_IS_SENT"] = "Чи відправлена транспортна заявка";
+$MESS["SALE_ORDER_DELIVERY_REQ_IS_SENT_Y"] = "Відправлена";
+$MESS["SALE_ORDER_DELIVERY_REQ_IS_SENT_N"] = "Не відправлена";
+$MESS["SALE_ORDER_DELIVERY_ACTION_DEDUCT"] = "Відвантажити";
+$MESS["SALE_ORDER_DELIVERY_ACTION_DEDUCT_N"] = "Не відвантажувати";
+$MESS["SALE_ORDER_DELIVERY_ACTION_ALLOW_DLV"] = "Дозволити доставку";
+$MESS["SALE_ORDER_DELIVERY_ACTION_ALLOW_DLV_N"] = "Заборонити доставку";
 ?>

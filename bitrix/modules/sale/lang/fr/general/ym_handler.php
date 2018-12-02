@@ -1,4 +1,7 @@
 <?
+$MESS["SALE_YMH_LOG_TYPE_ORDER_CREATE_ERROR"] = "Erreur lors de la création d'une commande.";
+$MESS["SALE_YMARKET_ORDER_PRICE_CHANGED"] = "Attention ! Le total de la commande a été modifié pendant que le client passait sa commande.";
+$MESS["SALE_YMH_MARK_BUYER_WAITING"] = "En attente d'informations sur un client";
 $MESS["SALE_YMH_ADDRESS_CITY"] = "Ville";
 $MESS["SALE_YMH_ADDRESS_HOUSE"] = "Maison";
 $MESS["SALE_YMH_ADDRESS_ENTRYPHONE"] = "Interphone";
@@ -14,7 +17,7 @@ $MESS["SALE_YMH_ADDRESS_SUBWAY"] = "Métro";
 $MESS["SALE_YMH_ERROR_CATALOG_NOT_INSTALLED"] = "Le module 'Catalogue commercial' n'est pas installé";
 $MESS["SALE_YMH_CITY_MOSCOW"] = "Moscou";
 $MESS["SALE_YMH_LOCATION_NOT_FOUND"] = "Emplacement introuvable";
-$MESS["SALE_YMH_SUBSTATUS_USER_UNREACHABLE"] = "Chec d'établissement d'une connexion avec l'acheteur";
+$MESS["SALE_YMH_SUBSTATUS_USER_UNREACHABLE"] = "Échec d'établissement d'une connexion avec l'acheteur";
 $MESS["SALE_YMH_ERROR_UNAUTH"] = "Demande non autorisée";
 $MESS["SALE_YMH_ERROR_BAD_STRUCTURE"] = "La structure d'information dans la requête est incorrecte";
 $MESS["SALE_YMH_ERROR_UNKNOWN_REQ_OBJ"] = "Object de demande inconnu";
@@ -50,7 +53,4 @@ $MESS["SALE_YMH_ADDRESS_PHONE"] = "Téléphone";
 $MESS["SALE_YMH_ADDRESS_STREET"] = "Rue";
 $MESS["SALE_YMH_SHT"] = "Unités";
 $MESS["SALE_YMH_ADDRESS_FLOOR"] = "Etage";
-$MESS["SALE_YMH_LOG_TYPE_ORDER_CREATE_ERROR"] = "Erreur lors de la création d'une commande.";
-$MESS["SALE_YMARKET_ORDER_PRICE_CHANGED"] = "Attention ! Le total de la commande a été modifié pendant que le client passait sa commande.";
-$MESS["SALE_YMH_MARK_BUYER_WAITING"] = "En attente d'informations sur un client";
 ?>

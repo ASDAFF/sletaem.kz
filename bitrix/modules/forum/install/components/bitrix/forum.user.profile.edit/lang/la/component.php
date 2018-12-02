@@ -1,5 +1,6 @@
 <?
 $MESS["F_TITLE"] = "Editar perfil";
+$MESS["F_TITLE_TITLE"] = "Editar perfil";
 $MESS["FP_SEX_MALE"] = "Masculino";
 $MESS["FP_SEX_FEMALE"] = "Femenino";
 $MESS["FP_NO_AUTHORIZE"] = "Usted no está autorizado";
@@ -9,6 +10,5 @@ $MESS["FP_ERR_PROF"] = "Error modificando perfil";
 $MESS["F_NO_MODULE"] = "Módulo del Foro no está instalado";
 $MESS["F_ERR_SESSION_TIME_IS_UP"] = "Su sesión ha expirado. Por favor reenvíe su mensaje.";
 $MESS["F_USER_NOT_FOUND"] = "El usuario no fue encontrado.";
-$MESS["F_TITLE_TITLE"] = "Editar perfil";
 $MESS["F_ACCESS_DENIED"] = "Acceso denegado.";
 ?>

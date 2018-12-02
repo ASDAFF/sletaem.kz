@@ -1,3 +1,3 @@
 <?
-$MESS ['SEARCH_INSTALL_PUBLIC_TITLE'] = "Buscar";
+$MESS["SEARCH_INSTALL_PUBLIC_TITLE"] = "Buscar";
 ?>

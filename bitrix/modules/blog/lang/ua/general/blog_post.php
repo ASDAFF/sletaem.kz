@@ -1,9 +1,9 @@
 <?
-$MESS["BLG_GP_EMPTY_TITLE"] = "Не зазначено заголовок повідомлення";
-$MESS["BLG_GP_EMPTY_DETAIL_TEXT"] = "Не зазначено текст повідомлення";
-$MESS["BLG_GP_EMPTY_BLOG_ID"] = "Не зазначено блог повідомлення";
+$MESS["BLG_GP_EMPTY_TITLE"] = "Не зазначений заголовок повідомлення";
+$MESS["BLG_GP_EMPTY_DETAIL_TEXT"] = "Не зазначений текст повідомлення";
+$MESS["BLG_GP_EMPTY_BLOG_ID"] = "Не зазначений блог повідомлення";
 $MESS["BLG_GP_ERROR_NO_BLOG"] = "Блог з кодом &quot;#ID#&quot; не знайдений";
-$MESS["BLG_GP_EMPTY_AUTHOR_ID"] = "Не вказано автора повідомлення";
+$MESS["BLG_GP_EMPTY_AUTHOR_ID"] = "Не зазначений автор повідомлення";
 $MESS["BLG_GP_ERROR_NO_AUTHOR"] = "Код автора повідомлення зазначений невірно";
 $MESS["BLG_GP_ERROR_DATE_CREATE"] = "Дата створення повідомлення вказана невірно";
 $MESS["BLG_GP_ERROR_DATE_PUBLISH"] = "Дата публікації повідомлення вказана невірно";

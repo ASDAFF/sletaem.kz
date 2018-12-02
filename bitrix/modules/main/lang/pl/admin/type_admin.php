@@ -1,0 +1,30 @@
+<?
+$MESS["TITLE"] = "Typy wydarzeń e-mail";
+$MESS["SAVE_ERROR"] = "Błąd modyfikacji typu wydarzenia #";
+$MESS["DELETE_ERROR"] = "Błąd usuwania typu wydarzenia";
+$MESS["F_FILTER"] = "Filtr";
+$MESS["ACTIVE"] = "Aktywne";
+$MESS["LANG"] = "Język";
+$MESS["EVENT_TYPE"] = "Rodzaj";
+$MESS["EVENT_NAME"] = "Nazwa";
+$MESS["EVENT_DESCRIPTION"] = "Opis";
+$MESS["EVENT_TEMPLATES"] = "Szablony";
+$MESS["SORT"] = "Sortowanie";
+$MESS["ADD_TYPE"] = "Dodaj typ";
+$MESS["ADD_TYPE_TITLE"] = "Dodaj typ wydarzenia e-mail";
+$MESS["DELETE_LANG"] = "Wyczyść";
+$MESS["CONFIRM_DEL_MESSAGE"] = "Na pewno chcesz wyczyścić parametry językowe dla tego typu wydarzenia e-mail?";
+$MESS["CONFIRM_DEL_ALL_MESSAGE"] = "Czy napewno chcesz usunąć aktualny typ inkludowanych szablonów?";
+$MESS["F_ID"] = "Identyfikator";
+$MESS["F_SEARCH"] = "Szukaj";
+$MESS["F_SEARCH_TITLE"] = "Podaj string wyszukiwania dla";
+$MESS["F_EVENT_NAME"] = "Typ wydarzenai e-mail";
+$MESS["F_NAME"] = "Nazwa typu";
+$MESS["F_DESCRIPTION"] = "Opis typu";
+$MESS["F_TYPE"] = "Typ wydarzenai e-mail";
+$MESS["F_TMPL"] = "Szablon";
+$MESS["PAGES"] = "Typy wydarzenia";
+$MESS["type_admin_edit_title"] = "Edytuj wydarzenia e-mail";
+$MESS["MAIN_ADMIN_MENU_EDIT"] = "Edytuj";
+$MESS["MAIN_ADMIN_MENU_DELETE"] = "Usuń";
+?>

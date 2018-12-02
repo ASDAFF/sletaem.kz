@@ -80,6 +80,7 @@ $MESS["TAX_FCODE"] = "Código mnemónico";
 $MESS["STEN_2FLIST"] = "Lista de impuestos";
 $MESS["STEN_NEW_TAX"] = "Agregar un nuevo impuesto";
 $MESS["STEN_DELETE_TAX"] = "Eliminar impuesto";
+$MESS["STEN_DELETE_TAX_CONFIRM"] = "¿Está seguro  que desea eliminar este impuesto? Todas las tasas de impuestos relacionadas también serán eliminadas.";
 $MESS["STEN_TAB_TAX"] = "Impuesto";
 $MESS["STEN_TAB_TAX_DESCR"] = "Parámetros de impuesto";
 $MESS["STREN_2FLIST"] = "Lista de tasas de impuestos";
@@ -95,5 +96,4 @@ $MESS["STAN_ADD_NEW"] = "Nuevo impuesto";
 $MESS["STAN_ADD_NEW_ALT"] = "Click para agregar un nuevo impuesto";
 $MESS["STRAN_ADD_NEW"] = "Nueva tasa de impuestos";
 $MESS["STRAN_ADD_NEW_ALT"] = "Click para agregar una nueva tasa de impuestos";
-$MESS["STEN_DELETE_TAX_CONFIRM"] = "¿Está seguro  que desea eliminar este impuesto? Todas las tasas de impuestos relacionadas también serán eliminadas.";
 ?>

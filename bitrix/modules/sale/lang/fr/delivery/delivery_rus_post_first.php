@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_DH_RPF_DEPRECATED_MESSAGE"] = "Ce gestionnaire de service de livraison est dépassé et n'est plus pris en charge. Veuillez utiliser le #A1#nouveau gestionnaire#A2#.";
 $MESS["SALE_DH_RPF_WRP_DESCR"] = "Les expéditions de première classe sont des envois express de 25 à 30% plus rapides que ceux proposés traditionnellement par la poste.";
 $MESS["SALE_DH_RPF_WRP_TITLE"] = "Paquet-poste";
 $MESS["SALE_DH_RPF_WRP_LESS_100"] = "Paquet-poste du poids moins de 100 gr.";
@@ -18,5 +19,4 @@ $MESS["SALE_DH_RPF_TARIFS"] = "Tarifs";
 $MESS["SALE_DH_RPF_WRP_LESS_100_DECLARED_VALUE"] = "Petits colis jusqu'à 100g, valeur déclarée.";
 $MESS["SALE_DH_RPF_SET_DEFAULT_TARIF_SET"] = "définis";
 $MESS["SALE_DH_RPF_SET_DEFAULT_TARIF"] = "Tarifs par défaut";
-$MESS["SALE_DH_RPF_DEPRECATED_MESSAGE"] = "Ce gestionnaire de service de livraison est dépassé et n'est plus pris en charge. Veuillez utiliser le #A1#nouveau gestionnaire#A2#.";
 ?>

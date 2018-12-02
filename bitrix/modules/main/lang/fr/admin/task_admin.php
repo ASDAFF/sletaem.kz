@@ -1,4 +1,5 @@
 <?
+$MESS["MAIN_FLT_SEARCH"] = "Rechercher";
 $MESS["ALL"] = "(partout)";
 $MESS["TASK_FILTER_ANY"] = "(partout)";
 $MESS["MAIN_F_ID"] = "ID";
@@ -21,7 +22,6 @@ $MESS["TASK_FILTER_MODULE_ID"] = "Module";
 $MESS["F_NAME"] = "Dénomination";
 $MESS["NAME"] = "Dénomination";
 $MESS["TASK_FILTER_NAME"] = "Dénomination";
-$MESS["MAIN_FLT_SEARCH"] = "Recherche";
 $MESS["NO"] = "non";
 $MESS["MAIN_F_DESCRIPTION"] = "Description";
 $MESS["MAIN_DESCRIPTION"] = "Description";

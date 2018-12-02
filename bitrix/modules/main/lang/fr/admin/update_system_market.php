@@ -1,4 +1,8 @@
 <?
+$MESS["USM_SEARCH"] = "Recherche";
+$MESS["USM_SORT_SORT"] = "évaluation";
+$MESS["USM_NOTIF_INST"] = "#USER# demande que vous installiez l'application <b><a href=\"/bitrix/admin/update_system_market.php?lang=#LANG#&module=#MODULE_CODE#\">#MODULE_NAME#</a></b> à partir du Marché.";
+$MESS["USM_NOTIF_INST_OK"] = "La demande d'installation d'application a bien été envoyée à l'Administrateur.";
 $MESS["USMP_CAT_0"] = "[n'importe quel(le)]";
 $MESS["USMP_TYPE_0"] = "[n'importe quel]";
 $MESS["USM_ACTIONS"] = "Action";
@@ -39,7 +43,6 @@ $MESS["USM_SHOW_NOT_FREE"] = "La facture est réglée";
 $MESS["USM_PAID"] = "La facture est réglée";
 $MESS["USM_SUPPORT"] = "Assistance";
 $MESS["USM_DETAIL"] = "Détails";
-$MESS["USM_SEARCH"] = "Recherche";
 $MESS["USMP_VIEW"] = "Affichage";
 $MESS["USM_DEVELOPER"] = "Développeur";
 $MESS["USM_RATING"] = "Classement";
@@ -53,7 +56,4 @@ $MESS["USM_INSTALL"] = "Installation";
 $MESS["USM_INSTALL_MODULE"] = "Installation";
 $MESS["USM_INSTALLED"] = "Désuet";
 $MESS["USM_SORT_PRICE"] = "prix";
-$MESS["USM_SORT_SORT"] = "évaluation";
-$MESS["USM_NOTIF_INST"] = "#USER# demande que vous installiez l'application <b><a href=\"/bitrix/admin/update_system_market.php?lang=#LANG#&module=#MODULE_CODE#\">#MODULE_NAME#</a></b> à partir du Marché.";
-$MESS["USM_NOTIF_INST_OK"] = "La demande d'installation d'application a bien été envoyée à l'Administrateur.";
 ?>

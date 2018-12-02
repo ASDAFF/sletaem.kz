@@ -1,4 +1,5 @@
 <?
+$MESS["SRP_TPL_ELEMENT_DELETE_CONFIRM"] = "Esto eliminará toda la información realcionada con este registro!!! ¿Desea continuar?";
 $MESS["SRP_TPL_MESS_BTN_BUY"] = "Comprar";
 $MESS["SRP_TPL_MESS_BTN_ADD_TO_BASKET"] = "Agregar al carrito";
 $MESS["SRP_TPL_MESS_PRODUCT_NOT_AVAILABLE"] = "Fuera de stock";
@@ -18,5 +19,4 @@ $MESS["SRP_CATALOG_BTN_MESSAGE_SEND_PROPS"] = "Seleccionar";
 $MESS["SRP_NO_PRODUCTS"] = "Sin productos";
 $MESS["SRP_QUANTITY"] = "Cantidad";
 $MESS["SRP_HREF_TITLE"] = "Los clientes también compraron";
-$MESS["SRP_TPL_ELEMENT_DELETE_CONFIRM"] = "Esto eliminará toda la información realcionada con este registro!!! ¿Desea continuar?";
 ?>

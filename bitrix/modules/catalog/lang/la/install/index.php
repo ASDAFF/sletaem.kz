@@ -19,7 +19,6 @@ $MESS["CATALOG_INSTALL_PUBLIC_SETUP"] = "Instalación";
 $MESS["CATALOG_UNINS_CURRENCY"] = "Módulo Catálogo Comercial requiere módulo de moneda que se instalará.";
 $MESS["CATALOG_UNINS_IBLOCK"] = "El módulo \"Catálogo\" requiere la instalación del módulo de \"bloques de información\".";
 $MESS["CATALOG_INSTALL_DESCRIPTION2"] = "El módulo Catálogo Comercial para crear catálo de productos, precios, márgenes y descuentos; datos de exportación e importación.";
-$MESS["CATALOG_INSTALL_PROFILE_IRR2"] = "irr.ru";
 $MESS["CATALOG_PRODUCT_SUBSCRIBE_LIST_NAME"] = "Código de confirmación";
 $MESS["CATALOG_PRODUCT_SUBSCRIBE_LIST_DESC"] = "#TOKEN# - Confirmation code
 #TOKEN_URL# - Enlace de código de confirmación

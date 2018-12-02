@@ -5,6 +5,7 @@ $MESS["SALE_DH_NAV_TITLE"] = "Servicio de envío";
 $MESS["SALE_DH_TABLE_ACTIVE"] = "Activo";
 $MESS["SALE_DH_TABLE_ISCONFIG"] = "Instalado";
 $MESS["SALE_DH_TABLE_NAME"] = "Nombre";
+$MESS["SALE_DH_TABLE_PATH"] = "Gestor";
 $MESS["SALE_DH_EDIT_DESCR"] = "Editar";
 $MESS["SALE_DH_INSTALL_DESCR"] = "Instalar";
 $MESS["SALE_DH_DELETE_DESCR"] = "Quitar";
@@ -28,5 +29,4 @@ $MESS["SALE_DH_LOCATIONS_LOC_STATS"] = "total de ubicaciones";
 $MESS["SALE_DH_LOCATIONS_GROUP_STATS"] = "grupos de ubicaciones";
 $MESS["SALE_DH_LOCATIONS_LINK"] = "editar ubicaciones";
 $MESS["SALE_DH_LOCATIONS_IMPORT_LINK"] = "importar ubicaciones";
-$MESS["SALE_DH_TABLE_PATH"] = "Gestor";
 ?>

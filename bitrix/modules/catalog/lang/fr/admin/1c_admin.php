@@ -1,4 +1,5 @@
 <?
+$MESS["CAT_1C_SETTINGS_SAVE_DENIED"] = "Il vous faut la permission d'accès à \"Éditer le code PHP\" (edit_php) du module noyau (principal) pour éditer les paramètres de cet onglet.";
 $MESS["CAT_1C_GENERATE_PREVIEW"] = "Générer automatiquement l'image de l'annonce";
 $MESS["CAT_1C_DEACTIVATE"] = "Désactiver";
 $MESS["CAT_1C_USE_OFFERS_2"] = "adresses de souscription d'importation de fichier ou presse-papiers";
@@ -30,5 +31,4 @@ $MESS["CAT_1C_SECTION_ACTION_2"] = "Actions avec des groupes qui manquent dans l
 $MESS["CAT_1C_ELEMENT_ACTION_2"] = "Actions avec des groupes qui manquent dans le fichier d'importation";
 $MESS["CAT_1C_SITE_LIST"] = "Les sites auxquels lier les blocs d'information lors de création";
 $MESS["CAT_1C_DISABLE_CHANGE_PRICE_NAME"] = "Ne changez pas le nom du type de prix si une ID externe est utilisée (XML_ID)";
-$MESS["CAT_1C_SETTINGS_SAVE_DENIED"] = "Il vous faut la permission d'accès à \"Éditer le code PHP\" (edit_php) du module noyau (principal) pour éditer les paramètres de cet onglet.";
 ?>

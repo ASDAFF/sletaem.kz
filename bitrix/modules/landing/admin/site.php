@@ -129,9 +129,9 @@ else if (!$isAjax)
 // content area
 echo '<div class="landing-content-title-admin">';
 
-if (!$cmp)
+if (!$cmp && !$isFrame)
 {
-	if (ModuleManager::isModuleInstalled('sale'))
+	if (!Manager::isB24() && Manager::isStoreEnabled())
 	{
 		$buttons = array(
 			array(
@@ -153,10 +153,11 @@ if (!$cmp)
 		$buttons = array(
 			array(
 				'LINK' => str_replace('#landing_edit#', 0, $editPage) . '&type=PAGE',
-				'TITLE' => Loc::getMessage('LANDING_ADMIN_ACTION_ADD_PAGE')
+				'TITLE' => Loc::getMessage('LANDING_ADMIN_ACTION_ADD_ONE')
 			)
 		);
 	}
+	$folderId = $request->get($actionFolder);
 	$APPLICATION->IncludeComponent(
 		'bitrix:landing.filter',
 		'.default',
@@ -164,7 +165,8 @@ if (!$cmp)
 			'FILTER_TYPE' => 'LANDING',
 			'TYPE' => $type,
 			'SETTING_LINK' => $editSite,
-			'BUTTONS' => $buttons
+			'BUTTONS' => $buttons,
+			'FOLDER_SITE_ID' => !$folderId ? $siteId : 0
 		),
 		false
 	);

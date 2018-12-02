@@ -1,4 +1,5 @@
 <?
+$MESS["V_UNIQUE_USER_ID_NEW"] = "Interdire le droit de vote aux utilisateurs enregistrés après la date de début du sondage";
 $MESS["V_USER_TYPE_DESCRIPTION"] = "Sondage";
 $MESS["V_NEW_CHANNEL"] = "Nouveau groupe de sondage";
 $MESS["V_CHANNEL_ID_COLON"] = "Groupe de sondage:";
@@ -12,7 +13,6 @@ $MESS["V_UNIQUE_IP_ONLY"] = "sur base de l'IP";
 $MESS["V_UNIQUE_USER_ID_ONLY"] = "sur base de l'ID de l'utilisateur";
 $MESS["V_UNIQUE_IP_DELAY"] = "Refuser les votes répétés de la même IP pour:";
 $MESS["V_UNIQUE"] = "Refuser les votes répétés:";
-$MESS["V_UNIQUE_USER_ID_NEW"] = "Interdire le droit de vote aux utilisateurs enregistrés après la date du début du sondage";
 $MESS["V_SECONDS"] = "secondes";
 $MESS["V_MINUTES"] = "minutes";
 $MESS["V_HOURS"] = "heures";

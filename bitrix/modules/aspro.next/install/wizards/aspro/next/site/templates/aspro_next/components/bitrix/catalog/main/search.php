@@ -1,12 +1,9 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?$APPLICATION->SetTitle(GetMessage("CMP_TITLE"));?>
-
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.search",
 	"main",
 	Array(
-
 			"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 			"IBLOCK_ID" => $arParams["IBLOCK_ID"],
 			"SORT_BUTTONS" => $arParams["SORT_BUTTONS"],
@@ -102,6 +99,9 @@
 			"DISPLAY_ELEMENT_COUNT" => $arParams["DISPLAY_ELEMENT_COUNT"],
 			"AJAX_FILTER_CATALOG" => $arParams["AJAX_FILTER_CATALOG"],
 			"SHOW_DISCOUNT_PERCENT_NUMBER" => $arParams["SHOW_DISCOUNT_PERCENT_NUMBER"],
+			"S_ASK_QUESTION" => $arParams["S_ASK_QUESTION"],
+			"LANDING_TITLE" => $arParams["LANDING_SEARCH_TITLE"],
+			"LANDING_SECTION_COUNT" => $arParams["LANDING_SEARCH_COUNT"],
 	),
 	$component
 );

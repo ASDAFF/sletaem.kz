@@ -1,4 +1,5 @@
 <?
+$MESS["IBLOCK_PROPERTY_ENTITY_ID_FIELD"] = "ID de la propiedad";
 $MESS["IBLOCK_PROPERTY_ENTITY_TIMESTAMP_X_FIELD"] = "Modificado el";
 $MESS["IBLOCK_PROPERTY_ENTITY_IBLOCK_ID_FIELD"] = "ID del block de información";
 $MESS["IBLOCK_PROPERTY_ENTITY_NAME_FIELD"] = "Nombre";
@@ -24,5 +25,4 @@ $MESS["IBLOCK_PROPERTY_ENTITY_VERSION_FIELD"] = "Valor de la propiedad y modo de
 $MESS["IBLOCK_PROPERTY_ENTITY_USER_TYPE_FIELD"] = "Tipo personalizado";
 $MESS["IBLOCK_PROPERTY_ENTITY_USER_TYPE_SETTINGS_FIELD"] = "Parámetros de tipo personalizado";
 $MESS["IBLOCK_PROPERTY_ENTITY_HINT_FIELD"] = "Sugerir";
-$MESS["IBLOCK_PROPERTY_ENTITY_ID_FIELD"] = "ID de la propiedad";
 ?>

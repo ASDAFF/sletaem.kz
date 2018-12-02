@@ -1,4 +1,5 @@
 <?
+$MESS["VOTE_MENU_ADDITIONAL"] = "Plus";
 $MESS["VOTE_MENU_RESULT"] = "Votes";
 $MESS["VOTE_MENU_MAIN"] = "Enquêtes";
 $MESS["VOTE_MENU_USER"] = "Visiteurs";
@@ -11,5 +12,4 @@ $MESS["VOTE_MENU_USER_ALT"] = "Liste des visiteurs qui participent à des sondag
 $MESS["VOTE_MENU_CHANNEL_ALT"] = "Gérer canaux sondage";
 $MESS["VOTE_MENU_MAIN_TITLE"] = "Sondages et enquêtes de gestion";
 $MESS["VOTE_MENU_VOTE_ALT"] = "Gérer les sondages de visiteurs du site";
-$MESS["VOTE_MENU_ADDITIONAL"] = "Plus";
 ?>

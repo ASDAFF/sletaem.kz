@@ -1,4 +1,6 @@
 <?
+$MESS["LANDING_TABLE_FIELD_ANCHOR"] = "Якір";
+$MESS["LANDING_TABLE_FIELD_ACCESS"] = "Рівень доступу до блоку";
 $MESS["LANDING_TABLE_FIELD_LID"] = "Ідентифікатор лендінга";
 $MESS["LANDING_TABLE_FIELD_CODE"] = "Код";
 $MESS["LANDING_TABLE_FIELD_SORT"] = "Сортування";
@@ -11,5 +13,4 @@ $MESS["LANDING_TABLE_FIELD_DATE_MODIFY"] = "Дата зміни";
 $MESS["LANDING_TABLE_FIELD_CONTENT"] = "Вміст блоку";
 $MESS["LANDING_TABLE_FIELD_PARENT_ID"] = "Батьківський блок";
 $MESS["LANDING_TABLE_FIELD_DELETED"] = "Видалений чи ні";
-$MESS["LANDING_TABLE_FIELD_ACCESS"] = "Рівень доступу до блоку";
 ?>

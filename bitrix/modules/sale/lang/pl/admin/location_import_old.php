@@ -1,0 +1,30 @@
+<?
+$MESS["LOCA_FILE"] = "Plik";
+$MESS["NO_LOC_FILE"] = "Plik danych lokalizacji nie jest załadowany";
+$MESS["NO_MAIN_LANG"] = "Główny język z pliku lokalizacji nie jest ustawiony na stronie";
+$MESS["ERROR_LOC_FORMAT"] = "Zły format pliku lokalizacji: główny język nie jest ustawiony";
+$MESS["OMLOADED1"] = "Załadowany";
+$MESS["LOCA_LOCATIONS_LOC_STATS"] = "Suma lokalizacji";
+$MESS["location_admin_import_tab"] = "Importuj";
+$MESS["location_admin_import_tab_old"] = "Importuj z pliku";
+$MESS["LOCA_DO_LOAD"] = "Ładuj";
+$MESS["LOCA_SAVE"] = "Ładuj";
+$MESS["OMLOADED2"] = "kraje";
+$MESS["LOCA_LOCATIONS_COUNTRY_STATS"] = "kraje";
+$MESS["OMLOADED3"] = "miasta";
+$MESS["LOCA_LOCATIONS_CITY_STATS"] = "miasta";
+$MESS["OMLOADED4"] = "Utworzone lokalizacje";
+$MESS["location_admin_import"] = "Import Lokalizacji";
+$MESS["LOCA_DEL_OLD"] = "Wyczyść lokalizacje strony przed załadowaniem";
+$MESS["LOCA_LOADING_OLD"] = "Załaduj lokalizacje z pliku";
+$MESS["LOCA_LOCATIONS_GROUP_STATS"] = "Grupy lokalizacji";
+$MESS["LOCA_LOCATIONS_STATS"] = "Statystyki lokalizacji";
+$MESS["LOCA_LOADING"] = "Kreator importu lokalizacji";
+$MESS["LOCA_LOADING_WIZARD"] = "Uruchom kreatora importu lokalizacji";
+$MESS["LOCA_LOCATIONS_REGION_STATS"] = "Województwa";
+$MESS["LOCATION_CLEAR"] = "Wyczyść";
+$MESS["LOCATION_CLEAR_DESC"] = "Usuń wszystkie lokalizacje";
+$MESS["LOCATION_CLEAR_BTN"] = "Wyczyść";
+$MESS["LOCATION_CLEAR_OK"] = "Lokalizacje zostały usunięte.";
+$MESS["LOCATION_CLEAR_CONFIRM"] = "Na pewno chcesz usunąć wszystkie lokalizacje?";
+?>

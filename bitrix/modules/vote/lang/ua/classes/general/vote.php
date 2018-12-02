@@ -15,4 +15,7 @@ $MESS["VOTE_ACCESS_DENIED"] = "У вас немає прав на участь �
 $MESS["V_NOTIFY_MESSAGE"] = "Брав участь в опитуванні #VOTE_TITLE#.";
 $MESS["V_NOTIFY_MESSAGE_HREF"] = "Брав участь в опитуванні <a href=\"#VOTE_URL#\">#VOTE_TITLE#</a>.";
 $MESS["V_NOTIFY_MESSAGE_OUT_HREF"] = "Приймав участь в опитуванні \"#VOTE_TITLE#\" (#VOTE_URL#)";
+$MESS["V_NOTIFY_MESSAGE_F"] = "Приймала участь в опитуванні #VOTE_TITLE#.";
+$MESS["V_NOTIFY_MESSAGE_HREF_F"] = "Приймала участь в опитуванні <a href=\"#VOTE_URL#\">#VOTE_TITLE#</a>.";
+$MESS["V_NOTIFY_MESSAGE_OUT_HREF_F"] = "Приймала участь в опитуванні \"#VOTE_TITLE#\" (#VOTE_URL#)";
 ?>

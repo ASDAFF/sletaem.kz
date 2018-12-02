@@ -1,6 +1,5 @@
 <?
 $MESS["GROUP_TITLE"] = "Grupos del foro";
-$MESS["GROUP_DEL_CONF"] = "¿Está seguro que desea eliminar este grupo? Si hay algunos foros en el grupo, el grupo no se eliminará.";
 $MESS["GROUP_NAV"] = "Grupos";
 $MESS["GROUP_ID"] = "ID";
 $MESS["GROUP_SORT"] = "Ordenamiento";
@@ -10,6 +9,7 @@ $MESS["FORUM_EDIT_DESCR"] = "Modificar las configuraciones del grupo";
 $MESS["FORUM_DELETE_DESCR"] = "Borrar al grupo";
 $MESS["FGAN_ADD_NEW"] = "Nuevo foro del grupo";
 $MESS["FGAN_ADD_NEW_ALT"] = "Haz clic para añadir un nuevo grupo de foros";
+$MESS["GROUP_DEL_CONF"] = "¿Está seguro que desea eliminar este grupo? Si hay algunos foros en el grupo, el grupo no se eliminará.";
 $MESS["MAIN_ADMIN_LIST_SELECTED"] = "Seleccionado:";
 $MESS["MAIN_ADMIN_LIST_CHECKED"] = "Marcado:";
 $MESS["MAIN_ADMIN_LIST_DELETE"] = "eliminar";

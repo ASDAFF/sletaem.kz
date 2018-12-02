@@ -1,4 +1,8 @@
 <?
+$MESS["SALE_ORDER_SHIPMENT_BASKET_ERROR_QUANTITY"] = "#BASKET_ITEM# : quantité spécifiée incorrecte";
+$MESS["SALE_ORDER_SHIPMENT_BASKET_BARCODE_EMPTY"] = "Aucun code-barre lu";
+$MESS["SALE_ORDER_SHIPMENT_BASKET_WRONG_BASKET_ITEM"] = "Objet du panier incorrect";
+$MESS["SALE_ORDER_SHIPMENT_BASKET_BASKET_ITEM_NOT_FOUND"] = "L'article du panier d'achat ##BASKET_ITEM_ID# lié à la livraison est introuvable.";
 $MESS["SALE_ORDER_BASKET_COMPOSITION"] = "Liste d'expédition";
 $MESS["SALE_ORDER_BASKET_ROW_SETTINGS"] = "Personnaliser les colonnes";
 $MESS["SALE_ORDER_SHIPMENT_BASKET_ALL_PRODUCTS_DEL"] = "Voulez-vous vraiment supprimer tous les produits de cette expédition ?";
@@ -24,8 +28,4 @@ $MESS["SALE_ORDER_SHIPMENT_BASKET_BARCODE_ENTER"] = "Saisir les codes barre";
 $MESS["SALE_ORDER_SHIPMENT_BASKET_ERROR_ALREADY_SHIPPED"] = "Expédition terminée. Le panier ne peut être modifié.";
 $MESS["SALE_ORDER_SHIPMENT_BASKET_ERROR_NOT_FOUND"] = "Aucun produit associé à ce code barre n'a été trouvé.";
 $MESS["SALE_ORDER_SHIPMENT_BASKET_COMPOSITION"] = "Liste d'expédition";
-$MESS["SALE_ORDER_SHIPMENT_BASKET_ERROR_QUANTITY"] = "#BASKET_ITEM# : quantité spécifiée incorrecte";
-$MESS["SALE_ORDER_SHIPMENT_BASKET_BARCODE_EMPTY"] = "Aucun code-barre lu";
-$MESS["SALE_ORDER_SHIPMENT_BASKET_WRONG_BASKET_ITEM"] = "Objet du panier incorrect";
-$MESS["SALE_ORDER_SHIPMENT_BASKET_BASKET_ITEM_NOT_FOUND"] = "L'article du panier d'achat ##BASKET_ITEM_ID# lié à la livraison est introuvable.";
 ?>

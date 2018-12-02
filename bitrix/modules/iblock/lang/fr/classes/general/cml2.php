@@ -1,4 +1,7 @@
 <?
+$MESS["IBLOCK_XML2_QUANTITY_FROM"] = "QuantityFrom";
+$MESS["IBLOCK_XML2_QUANTITY_TO"] = "QuantityTo";
+$MESS["IBLOCK_XML2_STORE_PHONE"] = "Numéro de téléphone";
 $MESS["IBLOCK_XML2_STORE_ADDRESS"] = "Adresse";
 $MESS["IBLOCK_XML2_ANONS"] = "Annonce";
 $MESS["IBLOCK_XML2_BX_URL"] = "BitrixURL";
@@ -72,7 +75,7 @@ $MESS["IBLOCK_XML2_FILE_DESCRIPTION"] = "Description du fichier";
 $MESS["IBLOCK_XML2_RESTS"] = "Restes";
 $MESS["IBLOCK_XML2_REST"] = "Le reste final";
 $MESS["IBLOCK_XML2_TITLE"] = "DénominationOfficielle";
-$MESS["IBLOCK_XML2_BASE_UNIT_ADD_ERROR"] = "Chec de l'ajout d'une nouvelle unité de mesure (code de l'unité: #CODE#).";
+$MESS["IBLOCK_XML2_BASE_UNIT_ADD_ERROR"] = "Échec de l'ajout d'une nouvelle unité de mesure (code de l'unité: #CODE#).";
 $MESS["IBLOCK_XML2_UF_ERROR"] = "Erreur d'importation d'un paramètre personnalisé (xml_id: #XML_ID#): #ERROR_TEXT#";
 $MESS["IBLOCK_XML2_TYPE_ADD_ERROR"] = "Erreur de création du type des blocs d'information";
 $MESS["IBLOCK_XML2_OFFER_LIST"] = "Paquet d'offres";
@@ -180,7 +183,4 @@ $MESS["IBLOCK_XML2_SMART_FILTER_DISPLAY_TYPE"] = "Afficher le type";
 $MESS["IBLOCK_XML2_SMART_FILTER_DISPLAY_EXPANDED"] = "Afficher élargi";
 $MESS["IBLOCK_XML2_MODULE_CATALOG_IS_ABSENT"] = "Module de catalogue commercial est pas installé. Vous ne pouvez pas importer des citations et des prix.";
 $MESS["IBLOCK_XML2_BX_CANONICAL_URL"] = "BitrixURLCanonical";
-$MESS["IBLOCK_XML2_QUANTITY_FROM"] = "QuantityFrom";
-$MESS["IBLOCK_XML2_QUANTITY_TO"] = "QuantityTo";
-$MESS["IBLOCK_XML2_STORE_PHONE"] = "Numéro de téléphone";
 ?>

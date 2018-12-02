@@ -1,4 +1,51 @@
 <?
+$MESS["SALE_CHECK_PRINT_TYPE_NAME"] = "Notification d'impression de reçu";
+$MESS["SALE_CHECK_PRINT_TYPE_DESC"] = "#ORDER_ID# - ID de la commande
+#ORDER_DATE# - date de la commande
+#ORDER_USER# - client
+#ORDER_ACCOUNT_NUMBER_ENCODE# - ID de la commande à utiliser dans les liens
+#ORDER_PUBLIC_URL# - lien d'affichage de la commande pour les utilisateurs non autorisés (nécessite une configuration dans les paramètres du module e-Store)
+#CHECK_LINK# - lien du reçu";
+$MESS["SALE_CHECK_PRINT_SUBJECT"] = "Lien du reçu";
+$MESS["SALE_CHECK_PRINT_HTML_TITLE"] = "Votre paiement pour la commande passée sur #SITE_NAME#";
+$MESS["SALE_CHECK_PRINT_HTML_SUB_TITLE"] = "Cher/chère #ORDER_USER#,";
+$MESS["SALE_CHECK_PRINT_HTML_TEXT"] = "
+votre paiement a été traité et le reçu correspondant a été créé. Pour voir le reçu, utilisez ce lien :
+
+#CHECK_LINKL#
+
+Pour obtenir plus d'informations sur votre commande ##ORDER_ID# ou du #ORDER_DATE#, veuillez suivre le lien suivant :
+http://#SERVER_NAME#/personal/order/detail/#ORDER_ACCOUNT_NUMBER_ENCODE#/
+";
+$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_SUBJECT"] = "Le statut de votre livraison de #SITE_NAME# a été mis à jour";
+$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_HTML_TITLE"] = "Les informations du suivi de votre commande passée sur #SITE_NAME# ont été mis à jour";
+$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_HTML_SUB_TITLE"] = "Cher/chère #ORDER_USER#,";
+$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_HTML_TEXT"] = "Le statut de la livraison de votre commande ##ORDER_NO# du #ORDER_DATE# a été mis à jour :
+
+\"#STATUS_NAME#\" (#STATUS_DESCRIPTION#).
+
+Numéro de suivi : #TRACKING_NUMBER#.
+
+Expédié via : #DELIVERY_NAME#.
+
+#DELIVERY_TRACKING_URL##ORDER_DETAIL_URL#
+";
+$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_TYPE_NAME"] = "Mise à jour du statut du colis";
+$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_TYPE_DESC"] = "#SHIPMENT_NO# - ID de la livraison
+#SHIPMENT_DATE# - date d'expédition
+#ORDER_NO# - commande #
+#ORDER_DATE# - date de la commande
+#STATUS_NAME# - nom du statut
+#STATUS_DESCRIPTION# - description du statut
+#TRACKING_NUMBER# - numéro de suivi
+#EMAIL# - notifier l'adresse e-mail
+#BCC# - envoyer une copie à l'adresse
+#ORDER_USER# - client
+#DELIVERY_NAME# - nom du service de livraison
+#DELIVERY_TRACKING_URL# - site du service de livraison pour plus d'informations sur le suivi
+#ORDER_ACCOUNT_NUMBER_ENCODE# - ID de la commande (pour les liens)
+#ORDER_PUBLIC_URL# - lien d'affichage de la commande pour les utilisateurs non autorisés (nécessite une configuration dans les paramètres du module e-Store)
+#ORDER_DETAIL_URL# - URL des détails de la commande";
 $MESS["SALE_ORDER_CANCEL_HTML_TEXT"] = "#ORDER_CANCEL_DESCRIPTION#
 
 Pour plus d'informations sur la commande veuillez accéder au site http://#SERVER_NAME#/personal/order/#ORDER_ID#/";
@@ -251,51 +298,4 @@ Paiement récurrent a été annulée
 #SITE_NAME#
 ";
 $MESS["SALE_RECURRING_CANCEL_NAME"] = "Paiement récurrent annulée";
-$MESS["SALE_CHECK_PRINT_TYPE_NAME"] = "Notification d'impression de reçu";
-$MESS["SALE_CHECK_PRINT_TYPE_DESC"] = "#ORDER_ID# - ID de la commande
-#ORDER_DATE# - date de la commande
-#ORDER_USER# - client
-#ORDER_ACCOUNT_NUMBER_ENCODE# - ID de la commande à utiliser dans les liens
-#ORDER_PUBLIC_URL# - lien d'affichage de la commande pour les utilisateurs non autorisés (nécessite une configuration dans les paramètres du module e-Store)
-#CHECK_LINK# - lien du reçu";
-$MESS["SALE_CHECK_PRINT_SUBJECT"] = "Lien du reçu";
-$MESS["SALE_CHECK_PRINT_HTML_TITLE"] = "Votre paiement pour la commande passée sur #SITE_NAME#";
-$MESS["SALE_CHECK_PRINT_HTML_SUB_TITLE"] = "Cher/chère #ORDER_USER#,";
-$MESS["SALE_CHECK_PRINT_HTML_TEXT"] = "
-votre paiement a été traité et le reçu correspondant a été créé. Pour voir le reçu, utilisez ce lien :
-
-#CHECK_LINKL#
-
-Pour obtenir plus d'informations sur votre commande ##ORDER_ID# ou du #ORDER_DATE#, veuillez suivre le lien suivant :
-http://#SERVER_NAME#/personal/order/detail/#ORDER_ACCOUNT_NUMBER_ENCODE#/
-";
-$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_SUBJECT"] = "Le statut de votre livraison de #SITE_NAME# a été mis à jour";
-$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_HTML_TITLE"] = "Les informations du suivi de votre commande passée sur #SITE_NAME# ont été mis à jour";
-$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_HTML_SUB_TITLE"] = "Cher/chère #ORDER_USER#,";
-$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_HTML_TEXT"] = "Le statut de la livraison de votre commande ##ORDER_NO# du #ORDER_DATE# a été mis à jour :
-
-\"#STATUS_NAME#\" (#STATUS_DESCRIPTION#).
-
-Numéro de suivi : #TRACKING_NUMBER#.
-
-Expédié via : #DELIVERY_NAME#.
-
-#DELIVERY_TRACKING_URL##ORDER_DETAIL_URL#
-";
-$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_TYPE_NAME"] = "Mise à jour du statut du colis";
-$MESS["SALE_ORDER_SHIPMENT_STATUS_CHANGED_TYPE_DESC"] = "#SHIPMENT_NO# - ID de la livraison
-#SHIPMENT_DATE# - date d'expédition
-#ORDER_NO# - commande #
-#ORDER_DATE# - date de la commande
-#STATUS_NAME# - nom du statut
-#STATUS_DESCRIPTION# - description du statut
-#TRACKING_NUMBER# - numéro de suivi
-#EMAIL# - notifier l'adresse e-mail
-#BCC# - envoyer une copie à l'adresse
-#ORDER_USER# - client
-#DELIVERY_NAME# - nom du service de livraison
-#DELIVERY_TRACKING_URL# - site du service de livraison pour plus d'informations sur le suivi
-#ORDER_ACCOUNT_NUMBER_ENCODE# - ID de la commande (pour les liens)
-#ORDER_PUBLIC_URL# - lien d'affichage de la commande pour les utilisateurs non autorisés (nécessite une configuration dans les paramètres du module e-Store)
-#ORDER_DETAIL_URL# - URL des détails de la commande";
 ?>

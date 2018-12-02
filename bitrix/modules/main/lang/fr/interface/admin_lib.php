@@ -1,4 +1,7 @@
 <?
+$MESS["admin_lib_calend_previous_week"] = "Précédent";
+$MESS["admin_lib_calend_previous"] = "Précédent";
+$MESS["admin_lib_grid_page_sizes_all_title"] = "Tout";
 $MESS["admin_lib_sort_up"] = "(rangé par ordre croissant)";
 $MESS["admin_lib_sort_down"] = "(rangé par ordre décroissant)";
 $MESS["admin_lib_list_actions"] = "- actions -";
@@ -111,8 +114,6 @@ $MESS["admin_lib_filter_clear_rep_title"] = "Afficher tous les enregistrements";
 $MESS["admin_lib_filter_clear_butt_title"] = "Afficher tous les enregistrements";
 $MESS["admin_lib_panel_show"] = "Afficher le panneau";
 $MESS["admin_lib_sett_tab_fields"] = "Champs de la forme";
-$MESS["admin_lib_calend_previous_week"] = "Comparer avec la version précédente";
-$MESS["admin_lib_calend_previous"] = "Comparer avec la version précédente";
 $MESS["calend_prev_mon"] = "Mois précédent";
 $MESS["admin_lib_edit_apply"] = "Appliquer";
 $MESS["admin_lib_list_apply"] = "Appliquer";
@@ -222,5 +223,4 @@ $MESS["admin_lib_menu_content_title"] = "Gestion de Contenu du Site";
 $MESS["admin_lib_menu_marketing"] = "Marketing";
 $MESS["admin_lib_sso_auth"] = "Authentification";
 $MESS["admin_lib_sso_auth_title"] = "Pour afficher les sites disponibles, veuillez vous connecter à l’aide de votre compte Bitrix24 et autoriser l’accès à la liste des sites.";
-$MESS["admin_lib_grid_page_sizes_all_title"] = "Tout";
 ?>

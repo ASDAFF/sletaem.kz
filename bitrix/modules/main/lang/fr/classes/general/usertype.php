@@ -10,7 +10,7 @@ $MESS["USER_TYPE_FIELD_NAME_INVALID"] = "Le nom du champ contient des caractère
 $MESS["USER_TYPE_ADD_ERROR"] = "Erreur d'ajout de #FIELD_NAME# pour l'objet #ENTITY_ID#.";
 $MESS["USER_TYPE_UPDATE_ERROR"] = "Erreur de modification de #FIELD_NAME# pour l'objet #ENTITY_ID#.";
 $MESS["USER_TYPE_TABLE_CREATION_ERROR"] = "Erreur de création du tableau pour la sauvegarde des valeurs des propriétés de l'objet #ENTITY_ID#.";
-$MESS["USER_TYPE_DELETE_ERROR"] = "Chec de suppression #FIELD_NAME# pour l'objet #ENTITY_ID#.";
+$MESS["USER_TYPE_DELETE_ERROR"] = "Échec de suppression #FIELD_NAME# pour l'objet #ENTITY_ID#.";
 $MESS["USER_TYPE_XML_ID_UNIQ"] = "Un élément de la liste de valeur XML_ID=#XML_ID#  existe déjà.";
 $MESS["USER_TYPE_EDIT_TAB"] = "Champs d'utilisateur";
 $MESS["USER_TYPE_ENTITY_ID_TOO_LONG"] = "L'identifiant de l'entité est trop long (plus de 20 symboles).";

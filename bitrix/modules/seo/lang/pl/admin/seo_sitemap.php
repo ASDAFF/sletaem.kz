@@ -1,0 +1,8 @@
+<?
+$MESS["SITEMAP_NAME"] = "Nazwa";
+$MESS["SEO_ADD_SITEMAP"] = "Dodaj";
+$MESS["SITEMAP_EDIT"] = "Edytuj";
+$MESS["SITEMAP_DELETE"] = "Usuń";
+$MESS["SEO_SITEMAP_IBLOCK_SECTION_NAME"] = "Nazwa";
+$MESS["SEO_SITEMAP_IBLOCK_LIST"] = "Lista";
+?>

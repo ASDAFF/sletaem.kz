@@ -3,11 +3,14 @@ namespace Bitrix\Landing\PublicAction;
 
 use \Bitrix\Landing\Manager;
 use \Bitrix\Landing\File;
-use \Bitrix\Landing\Block;
-use \Bitrix\Landing\Hook;
+use \Bitrix\Landing\Block as BlockCore;
+use \Bitrix\Landing\TemplateRef;
 use \Bitrix\Landing\Landing as LandingCore;
 use \Bitrix\Landing\PublicActionResult;
 use \Bitrix\Landing\Internals\HookDataTable;
+use \Bitrix\Main\Localization\Loc;
+
+Loc::loadMessages(__FILE__);
 
 class Landing
 {
@@ -18,7 +21,7 @@ class Landing
 	 */
 	protected static function clearDisallowFields($fields)
 	{
-		$disallow = array('RULE');
+		$disallow = array('RULE', 'TPL_CODE', 'ACTIVE');
 
 		if (is_array($fields))
 		{
@@ -128,6 +131,28 @@ class Landing
 	}
 
 	/**
+	 * Cancel publication of landing.
+	 * @param int $lid Id of landing.
+	 * @return \Bitrix\Landing\PublicActionResult
+	 */
+	public static function unpublic($lid)
+	{
+		$result = new PublicActionResult();
+		$landing = LandingCore::createInstance($lid);
+
+		if ($landing->exist())
+		{
+			$result->setResult(
+				$landing->unpublic()
+			);
+		}
+
+		$result->setError($landing->getError());
+
+		return $result;
+	}
+
+	/**
 	 * Add new block to the landing.
 	 * @param int $lid Id of landing.
 	 * @param array $fields Data array of block.
@@ -150,7 +175,10 @@ class Landing
 			}
 			if (isset($fields['CONTENT']))
 			{
-				$data['CONTENT'] = Repo::sanitize($fields['CONTENT']);
+				$data['CONTENT'] = Manager::sanitize(
+					$fields['CONTENT'],
+					$bad
+				);
 			}
 			// sort
 			if (isset($fields['AFTER_ID']))
@@ -177,7 +205,7 @@ class Landing
 				$fields['RETURN_CONTENT'] == 'Y'
 			)
 			{
-				$return = Block::getBlockContent($newBlockId, true);
+				$return = BlockCore::getBlockContent($newBlockId, true);
 			}
 			else
 			{
@@ -376,7 +404,7 @@ class Landing
 			{
 				$result->setResult(array(
 					'result' => $res > 0,
-					'content' => Block::getBlockContent($res)
+					'content' => BlockCore::getBlockContent($res, true)
 				));
 			}
 			else
@@ -485,6 +513,19 @@ class Landing
 			$preview = false;
 		}
 
+		$params['select'] = ['*'];
+		$params['check_area'] = true;
+
+		if (isset($params['check_area']))
+		{
+			$checkArea = !!$params['check_area'];
+			unset($params['check_area']);
+		}
+		else
+		{
+			$checkArea = false;
+		}
+
 		$data = array();
 		$res = LandingCore::getList($params);
 		while ($row = $res->fetch())
@@ -494,9 +535,30 @@ class Landing
 				$landing = LandingCore::createInstance($row['ID']);
 				$row['PREVIEW'] = $landing->getPreview();
 			}
-			$data[] = $row;
+			if ($checkArea && isset($row['ID']))
+			{
+				$data[$row['ID']] = $row;
+			}
+			else
+			{
+				$checkArea = false;
+				$data[] = $row;
+			}
 		}
-		$result->setResult($data);
+
+		// landing is area?
+		if ($checkArea)
+		{
+			$areas = TemplateRef::landingIsArea(
+				array_keys($data)
+			);
+			foreach ($areas as $lid => $isA)
+			{
+				$data[$lid]['IS_AREA'] = $isA;
+			}
+		}
+
+		$result->setResult(array_values($data));
 
 		return $result;
 	}
@@ -512,6 +574,7 @@ class Landing
 		$error = new \Bitrix\Landing\Error;
 
 		$fields = self::clearDisallowFields($fields);
+		$fields['ACTIVE'] = 'N';
 
 		$res = LandingCore::add($fields);
 
@@ -592,6 +655,8 @@ class Landing
 		$result = new PublicActionResult();
 		$error = new \Bitrix\Landing\Error;
 
+		LandingCore::disableCheckDeleted();
+
 		$landingRow = LandingCore::getList(array(
 			'filter' => array(
 				'ID' => $lid
@@ -649,7 +714,51 @@ class Landing
 
 		$result->setError($landing->getError());
 
+		LandingCore::enableCheckDeleted();
+
 		return $result;
+	}
+
+	/**
+	 * Mark entity as deleted.
+	 * @param int $lid Entity id.
+	 * @param boolean $mark Mark.
+	 * @return \Bitrix\Landing\PublicActionResult
+	 */
+	public static function markDelete($lid, $mark = true)
+	{
+		$result = new PublicActionResult();
+		$error = new \Bitrix\Landing\Error;
+
+		if ($mark)
+		{
+			$res = LandingCore::markDelete($lid);
+		}
+		else
+		{
+			$res = LandingCore::markUnDelete($lid);
+		}
+		if ($res->isSuccess())
+		{
+			$result->setResult($res->getId());
+		}
+		else
+		{
+			$error->addFromResult($res);
+			$result->setError($error);
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Mark entity as undeleted.
+	 * @param int $lid Entity id.
+	 * @return \Bitrix\Landing\PublicActionResult
+	 */
+	public static function markUnDelete($lid)
+	{
+		return self::markDelete($lid, false);
 	}
 
 	/**
@@ -665,6 +774,7 @@ class Landing
 		static $internal = true;
 
 		$result = new PublicActionResult();
+		$error = new \Bitrix\Landing\Error;
 
 		$landing = LandingCore::createInstance($lid);
 
@@ -681,7 +791,11 @@ class Landing
 			}
 			else
 			{
-				$result->setResult(false);
+				$error->addError(
+					'FILE_ERROR',
+					Loc::getMessage('LANDING_FILE_ERROR')
+				);
+				$result->setError($error);
 			}
 		}
 
@@ -712,7 +826,7 @@ class Landing
 
 			$fields = array(
 				'ENTITY_ID' => $lid,
-				'ENTITY_TYPE' => Hook::ENTITY_TYPE_LANDING,
+				'ENTITY_TYPE' => \Bitrix\Landing\Hook::ENTITY_TYPE_LANDING,
 				'HOOK' => 'FONTS',
 				'CODE' => 'CODE'
 			);

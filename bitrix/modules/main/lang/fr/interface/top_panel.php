@@ -1,4 +1,5 @@
 <?
+$MESS["top_panel_search_def"] = "recherche...";
 $MESS["TOP_ADMIN_ENTER"] = "Section administrative";
 $MESS["admin_panel_admin"] = "Administration du système";
 $MESS["top_panel_logout"] = "Sortie";
@@ -17,7 +18,6 @@ $MESS["top_panel_module_settings"] = "Paramètres du module";
 $MESS["top_panel_pin_off"] = "Détacher le panneau";
 $MESS["adm_top_panel_adm"] = "Panneau de configuration";
 $MESS["adm_top_panel_edit_title"] = "Basculer vers le mode d'affichage du site";
-$MESS["top_panel_search_def"] = "recherche...";
 $MESS["top_panel_help"] = "Aide";
 $MESS["top_panel_pin_on"] = "Attacher le panneau";
 $MESS["top_panel_pin"] = "Attache d'un panneau";

@@ -1,5 +1,6 @@
 <?
 $MESS["TRANS_TITLE"] = "Traducir mensajes";
+$MESS["TRANS_TITLE_TITLE"] = "Traducción de mensajes por idiomas";
 $MESS["TRANS_FOLDERS_LIST"] = "Lista de carpetas";
 $MESS["TRANS_FILENAME"] = "Nombre del archivo:";
 $MESS["TRANS_NOT_TRANS"] = "Sin traducir:";
@@ -9,7 +10,6 @@ $MESS["TRANS_TOTAL"] = "Total de mensajes:";
 $MESS["TRANS_DELETE"] = "Eliminar:";
 $MESS["TRANS_SHOW_ONLY_ERROR"] = "Mostrar solamente los mensajes sin traducir ";
 $MESS["TRANS_SHOW_ALL"] = "Mostar todos los mensajes";
-$MESS["TRANS_TITLE_TITLE"] = "Traducción de mensajes por idiomas";
 $MESS["TRANS_SHOW_ALL_TITLE"] = "Click para mostrar todos los mensajes del idioma";
 $MESS["TRANS_SHOW_ONLY_ERROR_TITLE"] = "Click para mostrar sólo los mensajes no traducidos";
 $MESS["TRANS_LIST"] = "Lista";

@@ -44,4 +44,5 @@ $MESS["CATI_FG_CODE_EXT2"] = "Символьний код";
 $MESS["CATI_FG_PICTURE"] = "Зображення";
 $MESS["CATI_FG_DETAIL_PICTURE"] = "Детальна картинка";
 $MESS["BX_CAT_CSV_SETTINGS_PRODUCT_FIELD_NAME_MEASURE_ID"] = "ID одиниці виміру";
+$MESS["I_VAT_ID"] = "ID ставки ПДВ";
 ?>

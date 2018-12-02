@@ -1,4 +1,6 @@
 <?
+$MESS["SALE_ORDEREDIT_MESSAGE"] = "Message";
+$MESS["SALE_ORDEREDIT_ERROR_CHANGE_USER_WITH_PAID_PAYMENTS"] = "Impossible de changer un client parce que la commande a été payée intégralement ou en partie.";
 $MESS["SALE_ORDEREDIT_ORDER_PROBLEM"] = "Problème de commande";
 $MESS["SALE_ORDEREDIT_NAVIGATION"] = "Navigation rapide";
 $MESS["SALE_ORDEREDIT_NAME_NULL"] = "Aucune";
@@ -14,6 +16,4 @@ $MESS["SALE_ORDEREDIT_BASKET_ITEM_DEL_ERROR"] = "Erreur lors de la suppression d
 $MESS["SALE_ORDEREDIT_UNMARK_ERROR"] = "Erreur lors du démarquage de la commande comme problématique";
 $MESS["SALE_ORDEREDIT_LOCKED"] = "La commande a été temporairement verrouillée par le client #ID# (#DATE#)";
 $MESS["SALE_ORDEREDIT_PRODUCT_IS_NOT_AVAILABLE"] = "Le produit \"#NAME_ID#\" est indisponible";
-$MESS["SALE_ORDEREDIT_MESSAGE"] = "Message";
-$MESS["SALE_ORDEREDIT_ERROR_CHANGE_USER_WITH_PAID_PAYMENTS"] = "Impossible de changer un client parce que la commande a été payée intégralement ou en partie.";
 ?>

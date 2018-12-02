@@ -30,13 +30,13 @@ $MESS["PP_USER_CONDITION_AUTHORITY_INTERVAL_DESC"] = "Esta condición es usada c
 $MESS["PP_USER_CONDITION_AUTHORITY_INTERVAL_AUTO_DESC"] = "Esta condición es usada con el número de votaciones autorizadas del usuario.<br> La condición es verdadera cuando el voto normalizado está dentro del rango especificado.";
 $MESS["PP_USER_CONDITION_RATING_INTERVAL_DESC"] = "Esta condición es usada con las calificaciones del usuario.<br> La condición es verdadera cuando el valor de la calificación está dentro del rango especificado.";
 $MESS["PP_USER_CONDITION_VOTE_NAME"] = "Puntos por contenido de texto";
+$MESS["PP_USER_CONDITION_VOTE_TEXT"] = "Votos de un usuario se agrega a la autoridad creadora de texto, si las condiciones siguientes son verdaderas";
+$MESS["PP_USER_CONDITION_VOTE_LIMIT"] = "Use votos para el pasado";
 $MESS["PP_USER_CONDITION_VOTE_LIMIT_DESC"] = "días";
 $MESS["PP_USER_CONDITION_VOTE_RESULT"] = "Activar si un usuario ganó al menos (puntos)";
 $MESS["PP_USER_CONDITION_VOTE_SEPARATOR"] = "Valor de Puntos";
 $MESS["PP_USER_CONDITION_VOTE_FT"] = "Votar por el tema del foro";
-$MESS["PP_USER_CONDITION_VOTE_BC"] = "Votar por el comentario del blog";
-$MESS["PP_USER_CONDITION_VOTE_TEXT"] = "Votos de un usuario se agrega a la autoridad creadora de texto, si las condiciones siguientes son verdaderas";
-$MESS["PP_USER_CONDITION_VOTE_LIMIT"] = "Use votos para el pasado";
 $MESS["PP_USER_CONDITION_VOTE_FP"] = "Votar para el post del foro";
 $MESS["PP_USER_CONDITION_VOTE_BP"] = "Votar para el post del blog";
+$MESS["PP_USER_CONDITION_VOTE_BC"] = "Votar por el comentario del blog";
 ?>

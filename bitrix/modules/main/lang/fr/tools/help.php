@@ -1,4 +1,5 @@
 <?
+$MESS["HELP_SEARCH"] = "Recherche";
 $MESS["HELP_BACK"] = "Précédent";
 $MESS["HELP_KERNEL"] = "Module principal";
 $MESS["HELP_ACCESS_DENIED"] = "Accès interdit";
@@ -6,7 +7,6 @@ $MESS["HELP_HEADER"] = "Titre:";
 $MESS["HELP_CLOSE"] = "Fermer";
 $MESS["HELP_MOVE_UP"] = "Déplacer plus haut sur la liste";
 $MESS["HELP_MOVE_DOWN"] = "Déplacer vers le bas";
-$MESS["HELP_SEARCH"] = "Recherche";
 $MESS["HELP_TITLE"] = "Aide";
 $MESS["HELP_EDIT"] = "Editer";
 $MESS["HELP_RESET"] = "Annuler";

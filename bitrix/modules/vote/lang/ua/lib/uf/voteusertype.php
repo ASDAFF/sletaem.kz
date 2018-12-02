@@ -26,4 +26,8 @@ $MESS["VOTE_VOTES"] = "Голосів: ";
 $MESS["VOTE_EDIT_TITLE"] = "Змінити параметри опитування";
 $MESS["VOTE_ACTIVE_RED_LAMP"] = "Закінчився термін показу.";
 $MESS["VOTE_NOT_ACTIVE"] = "Опитування не активне.";
+$MESS["VOTE_IS_NOT_EXPECTED"] = "Опитування не співпадає зі збереженим.";
+$MESS["VOTE_IS_NOT_FOUND"] = "Опитування не знайдене.";
+$MESS["VOTE_EDIT_ACCESS_IS_DENIED"] = "Немає прав на зміну опитування.";
+$MESS["VOTE_READ_ACCESS_IS_DENIED"] = "Немає прав на читання опитування.";
 ?>

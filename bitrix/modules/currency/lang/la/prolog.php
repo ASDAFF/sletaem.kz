@@ -1,3 +1,3 @@
 <?
-$MESS ['CURRENCY_ICON_TITLE'] = "Monedas";
+$MESS["CURRENCY_ICON_TITLE"] = "Monedas";
 ?>

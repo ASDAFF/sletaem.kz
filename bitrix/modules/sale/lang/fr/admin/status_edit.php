@@ -1,4 +1,8 @@
 <?
+$MESS["SALE_STATUS_WRONG_TYPE"] = "Le statut \"#STATUS_ID#\" ne peut être défini sur le type \"#STATUS_TYPE#\".";
+$MESS["SALE_STATUS_TYPE_ORDER_EXISTS"] = "Le statut \"#STATUS_ID#\" ne peut être changé en type \"#STATUS_TYPE#\" parce qu'il contient des <a href=\"/bitrix/admin/sale_order.php?set_filter=Y&filter_status[]=#CURRENT_STATUS_ID#\" target=\"_blank\">commandes</a>.";
+$MESS["SALE_STATUS_TYPE_SHIPMENT_EXISTS"] = "Le statut \"#STATUS_ID#\" ne peut être changé en type \"#STATUS_TYPE#\" parce qu'il contient des <a href=\"/bitrix/admin/sale_order_shipment.php?&set_filter=Y&&filter_status[]=#CURRENT_STATUS_ID#\" target=\"_blank\">livraisons</a>.";
+$MESS["SSEN_COLOR"] = "Couleur du statut";
 $MESS["SSEN_ALL_PERM"] = "Toutes les opérations";
 $MESS["SSEN_USER_GROUP"] = "Groupe d'utilisateurs";
 $MESS["SALE_ADD"] = "Ajouter";
@@ -51,8 +55,4 @@ $MESS["SSEN_NOTIFY_LINK"] = "Modèle d'e-mail de statut";
 $MESS["SSEN_TASKS_LINK"] = "Permissions d'accès";
 $MESS["SSEN_GROUPS_LINK"] = "Groupes utilisateur";
 $MESS["SSEN_INVALID_TASK_ID_FOR"] = "Permissions d'accès incorrectes pour";
-$MESS["SALE_STATUS_WRONG_TYPE"] = "Le statut \"#STATUS_ID#\" ne peut être défini sur le type \"#STATUS_TYPE#\".";
-$MESS["SALE_STATUS_TYPE_ORDER_EXISTS"] = "Le statut \"#STATUS_ID#\" ne peut être changé en type \"#STATUS_TYPE#\" parce qu'il contient des <a href=\"/bitrix/admin/sale_order.php?set_filter=Y&filter_status[]=#CURRENT_STATUS_ID#\" target=\"_blank\">commandes</a>.";
-$MESS["SALE_STATUS_TYPE_SHIPMENT_EXISTS"] = "Le statut \"#STATUS_ID#\" ne peut être changé en type \"#STATUS_TYPE#\" parce qu'il contient des <a href=\"/bitrix/admin/sale_order_shipment.php?&set_filter=Y&&filter_status[]=#CURRENT_STATUS_ID#\" target=\"_blank\">livraisons</a>.";
-$MESS["SSEN_COLOR"] = "Couleur du statut";
 ?>

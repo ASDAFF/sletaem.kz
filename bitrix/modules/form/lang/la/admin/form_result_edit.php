@@ -1,7 +1,9 @@
 <?
 $MESS["FORM_RESULT_LIST"] = "Lista de resultados de formulario # #FORM_ID#";
 $MESS["FORM_RESULT_NOT_FOUND"] = "Resultado no encontrado";
+$MESS["FORM_NOT_FOUND"] = "No se encuentra el formulario web";
 $MESS["FORM_PAGE_TITLE"] = "editar resultado # #RESULT_ID#";
+$MESS["FORM_PAGE_TITLE_ADD"] = "Agregar resultado";
 $MESS["FORM_FORM_NAME"] = "Formulario:";
 $MESS["FORM_EDIT_RESULT_TEMPLATE"] = "Plantilla de edición de resultados:";
 $MESS["FORM_VIEW"] = "Ver resutlados";
@@ -18,7 +20,6 @@ $MESS["FORM_FORM_LIST"] = "Lista de formulario";
 $MESS["FORM_USER"] = "Usuario:";
 $MESS["FORM_NEW_RESULT"] = "Nuevo resutlado";
 $MESS["FORM_DELETE"] = "Eliminar resultado";
-$MESS["FORM_PAGE_TITLE_ADD"] = "Agregar resultado";
 $MESS["FORM_RESULT_EDIT_TAB_TITLE"] = "Editar";
 $MESS["FORM_RESULT_EDIT_TAB_DESCRIPTION"] = "Editar resultado de formulario web";
 $MESS["FORM_RESULT_EDIT_TAB_DESCRIPTION_ADD"] = "Agregar resultado de formulario web";
@@ -40,5 +41,4 @@ $MESS["FORM_RESULT_EDIT_HIDDEN"] = "(ocultos)";
 $MESS["FORM_VIEW_FILE"] = "Ver archivo";
 $MESS["FORM_DELETE_FILE"] = "borrar";
 $MESS["FORM_RESULT_EDIT_AUTHOR"] = "Creado por";
-$MESS["FORM_NOT_FOUND"] = "No se encuentra el formulario web";
 ?>

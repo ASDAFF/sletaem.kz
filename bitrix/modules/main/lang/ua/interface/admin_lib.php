@@ -1,4 +1,5 @@
 <?
+$MESS["admin_lib_menu_landing"] = "Сайти";
 $MESS["admin_lib_hide_menu"] = "Приховати меню";
 $MESS["admin_lib_show_menu"] = "Показати меню";
 $MESS["admin_lib_less_buttons"] = "Зменшити кнопки";

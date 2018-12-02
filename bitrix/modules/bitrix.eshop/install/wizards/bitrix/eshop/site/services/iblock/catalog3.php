@@ -119,8 +119,14 @@ if ($IBLOCK_CATALOG_ID)
 	}
 
 //demo discount
-	$dbDiscount = CCatalogDiscount::GetList(array(), Array("SITE_ID" => WIZARD_SITE_ID));
-	if(!($dbDiscount->Fetch()))
+	$iterator = \Bitrix\Catalog\DiscountTable::getList([
+		'select' => ['ID'],
+		'filter' => ['=SITE_ID' => WIZARD_SITE_ID],
+		'limit' => 1
+	]);
+	$row = $iterator->fetch();
+	unset($iterator);
+	if (empty($row))
 	{
 		if (CModule::IncludeModule("iblock"))
 		{
@@ -128,19 +134,21 @@ if ($IBLOCK_CATALOG_ID)
 			if ($arSect = $dbSect->Fetch())
 				$sofasSectId = $arSect["ID"];
 		}
-		$dbSite = CSite::GetByID(WIZARD_SITE_ID);
-		if($arSite = $dbSite -> Fetch())
-			$lang = $arSite["LANGUAGE_ID"];
-		$defCurrency = "EUR";
-		if($lang == "ru")
-			$defCurrency = "RUB";
-		elseif($lang == "en")
-			$defCurrency = "USD";
+
+		switch ($shopLocalization)
+		{
+			case "ua":
+				$defCurrency = "UAH";
+				break;
+			case "by":
+				$defCurrency = "BYR";
+				break;
+			default:
+				$defCurrency = "RUB";
+		}
 		$arF = Array (
 			"SITE_ID" => WIZARD_SITE_ID,
 			"ACTIVE" => "Y",
-			//"ACTIVE_FROM" => ConvertTimeStamp(mktime(0,0,0,12,15,2011), "FULL"),
-			//"ACTIVE_TO" => ConvertTimeStamp(mktime(0,0,0,03,15,2012), "FULL"),
 			"RENEWAL" => "N",
 			"NAME" => GetMessage("WIZ_DISCOUNT"),
 			"SORT" => 100,
@@ -156,6 +164,7 @@ if ($IBLOCK_CATALOG_ID)
 		);
 		CCatalogDiscount::Add($arF);
 	}
+	unset($row);
 
 	if(\Bitrix\Main\Loader::includeModule('sale'))
 	{
@@ -277,6 +286,10 @@ if ($IBLOCK_CATALOG_ID)
 	}
 
 //precet
+	$dbSite = CSite::GetByID(WIZARD_SITE_ID);
+	if($arSite = $dbSite -> Fetch())
+		$lang = $arSite["LANGUAGE_ID"];
+	
 	$dbProperty = CIBlockProperty::GetList(Array(), Array("IBLOCK_ID"=>$IBLOCK_CATALOG_ID, "CODE"=>"SALELEADER"));
 	$arFields = array();
 	while($arProperty = $dbProperty->GetNext())
@@ -320,6 +333,20 @@ if ($IBLOCK_CATALOG_ID)
 			if($arProperty = $dbProperty->GetNext())
 			{
 				CIBlockProperty::Delete($arProperty["ID"]);
+			}
+		}
+	}
+
+	//filter for index page
+	$dbProperty = CIBlockProperty::GetList(Array(), Array("IBLOCK_ID"=>$IBLOCK_CATALOG_ID, "CODE"=>"TREND"));
+	if($arProperty = $dbProperty->GetNext())
+	{
+		$dbProps = CIBlockProperty::GetPropertyEnum($arProperty["ID"], Array("SORT"=>"asc"));
+		while ($prop = $dbProps->Fetch())
+		{
+			if ($prop["XML_ID"] == "Y")
+			{
+				CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/_index.php", array("TREND_PROPERTY_VALUE_ID" => $prop["ID"]));
 			}
 		}
 	}

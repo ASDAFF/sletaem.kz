@@ -1,4 +1,5 @@
 <?
+$MESS["FM_FLT_SEARCH"] = "Rechercher";
 $MESS["FM_FLT_EMAIL"] = "E-mail";
 $MESS["FM_HEAD_EMAIL"] = "E-mail";
 $MESS["FM_HEAD_USER_ID"] = "ID";
@@ -11,7 +12,6 @@ $MESS["FM_HEAD_NAME"] = "Dénomination";
 $MESS["FM_HEAD_SUBSC"] = "Quantité de souscriptions";
 $MESS["FM_FLT_LOGIN"] = "Connexion";
 $MESS["FM_HEAD_LOGIN"] = "Connexion";
-$MESS["FM_FLT_SEARCH"] = "Recherche";
 $MESS["FM_NO"] = "Non";
 $MESS["FM_ACT_DELETE"] = "Supprimer";
 $MESS["FM_TITLE"] = "Gestion de l'abonnement";

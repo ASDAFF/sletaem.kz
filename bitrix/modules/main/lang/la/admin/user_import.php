@@ -53,6 +53,7 @@ $MESS["USER_IMPORT_SELECT_IBLOCK"] = "seleccionar block de información";
 $MESS["USER_IMPORT_ALLOW_LDAP_AUTH"] = "Permitir autorización LDAP";
 $MESS["USER_IMPORT_FINISHED"] = "Importación ha concluido";
 $MESS["USER_IMPORT_USERS_COUNT"] = "Usuarios importados";
+$MESS["USER_IMPORT_EMAIL_TEMPLATE1"] = "Plantilla de correo electrónico del sitio web";
 $MESS["USER_IMPORT_CSV_SAMPLE"] = "Muestra";
 $MESS["USER_IMPORT_NO"] = "(no hay campos disponibles)";
 $MESS["USER_IMPORT_ALL"] = "(todos)";
@@ -60,5 +61,4 @@ $MESS["USER_IMPORT_LDAP_IMP_DEF"] = "Campos importados:";
 $MESS["USER_IMPORT_LDAP_IMP_DEF_NOTE"] = "(a partir de la configuración del servidor) ";
 $MESS["USER_IMPORT_LDAP_IMP_ADD"] = "Campos adicionales de importación:";
 $MESS["USER_IMPORT_UTF"] = "¡Atención! Archivo de datos debe estar en la codificación UTF-8.";
-$MESS["USER_IMPORT_EMAIL_TEMPLATE1"] = "Plantilla de correo electrónico del sitio web";
 ?>

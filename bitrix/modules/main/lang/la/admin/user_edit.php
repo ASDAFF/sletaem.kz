@@ -1,4 +1,6 @@
 <?
+$MESS["MAIN_USER_EDIT_HISTORY"] = "Historial";
+$MESS["MAIN_USER_EDIT_HISTORY_TITLE"] = "Registro de actualización del perfil de usuario";
 $MESS["ACCOUNT_INSERT"] = "El administrador lo ha registrado en el sitio";
 $MESS["ACCOUNT_UPDATE"] = "El administrador a actualizado su información personal dentro del sitio.";
 $MESS["EDIT_USER_TITLE"] = "Usuario  # #ID#";
@@ -91,13 +93,13 @@ $MESS["RATING_VOTE_WEIGHT"] = "Peso de la Votación Para Tasas";
 $MESS["RATING_VOTE_WEIGHT_AUTHORITY"] = "Peso de la Votación por Autoridad";
 $MESS["RATING_VOTE_AUTHORITY_COUNT"] = "Máx. de Votaciones Autorizadas Diariamente";
 $MESS["RATING_VOTE_NORM_VOTE"] = "Número de Votaciones Normalizadas";
+$MESS["RATING_NOT_AVAILABLE"] = "Calificaciones necesitan ser activadas en \"Servicios > Ratings\" para ser visible.";
 $MESS["user_edit_time_zones"] = "Zonas Horario";
 $MESS["user_edit_time_zones_auto"] = "Zona Horario automática:";
 $MESS["user_edit_time_zones_auto_def"] = "(predeterminado)";
 $MESS["user_edit_time_zones_auto_yes"] = "Si, configuraciones del navegador del usuario";
 $MESS["user_edit_time_zones_auto_no"] = "No, seleccionar de la lista";
 $MESS["user_edit_time_zones_zones"] = "Zona Horario:";
-$MESS["RATING_NOT_AVAILABLE"] = "Calificaciones necesitan ser activadas en \"Servicios > Ratings\" para ser visible.";
 $MESS["AUTH_SECURE_NOTE"] = "La contraseña puede ser ecriptados antes de ser enviados. Esto prevendrá la contraseña de aparecer en un formulario abierto sobre la transmisión de los canales de la base de datos.";
 $MESS["AUTH_NONSECURE_NOTE"] = "La contraseña será enviada en un formulario abierto. Habilitar JavaScript en su navegador web para habilitar el encriptamiento de la contraseña.";
 $MESS["main_profile_sess_expired"] = "Su sesión ha expirado. Por favor intente de nuevo.";
@@ -107,4 +109,6 @@ $MESS["MAIN_USER_EDIT_EXT"] = "Código externo:";
 $MESS["USER_EDIT_TITLE"] = "Saludo:";
 $MESS["user_edit_lang_not_set"] = "(No establecido)";
 $MESS["user_edit_lang"] = "Idioma de notificación:";
+$MESS["MAIN_ADMIN_AUTH"] = "Autorizar";
+$MESS["MAIN_ADMIN_AUTH_TITLE"] = "Autorizar como este usuario";
 ?>

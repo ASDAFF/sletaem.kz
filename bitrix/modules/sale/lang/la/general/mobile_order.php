@@ -1,4 +1,5 @@
 <?
+$MESS["SMOB_PUSH_MES_ORDER_CHECK_ERROR"] = "Error al imprimir el recibo ##CHECK_ID# por orden ##ACCOUNT_NUMBER#";
 $MESS["SMOB_ORDERS_MANAGEMENT"] = "Gestionar órdenes";
 $MESS["SMOB_ORDERS_LIST"] = "Órdenes";
 $MESS["SMOB_WAITING_FOR_PAY"] = "Aún no pagado";
@@ -70,6 +71,7 @@ $MESS["SMOB_PUSH_MES_ORDER_COMPLETED"] = "Pedido ##ACCOUNT_NUMBER# of #DATE_INSE
 $MESS["SMOB_PUSH_MES_ORDER_DEDUCTED"] = "Pedido ##ACCOUNT_NUMBER# of #DATE_INSERT# ha sido enviado";
 $MESS["SMOB_PUSH_MES_ORDER_CANCELED"] = "Pedido ##ACCOUNT_NUMBER# of #DATE_INSERT# ha sido cancelado";
 $MESS["SMOB_PUSH_MES_ORDER_CREATED"] = "Pedido nuevo ##ACCOUNT_NUMBER# of #DATE_INSERT# for #PRICE# #CURRENCY#";
+$MESS["SMOB_PUSH_MES_ORDER_MARKED"] = "La orden ##ACCOUNT_NUMBER# del #DATE_INSERT# fue marcada por tener un problema";
 $MESS["SMOB_FILTER_ORDER_ID"] = "ID del pedido";
 $MESS["SMOB_FILTER_USER_ID"] = "ID del cliente";
 $MESS["SMOB_FILTER_DATE_ORDER_FROM"] = "Fecha de inicio";
@@ -91,5 +93,4 @@ $MESS["SMOB_FILTER_DEDUCTED_N"] = "No cumplido";
 $MESS["SMOB_FILTER_MARKED"] = "Estado del problema del pedido";
 $MESS["SMOB_FILTER_MARKED_Y"] = "Si";
 $MESS["SMOB_FILTER_MARKED_N"] = "No";
-$MESS["SMOB_PUSH_MES_ORDER_MARKED"] = "La orden ##ACCOUNT_NUMBER# del #DATE_INSERT# fue marcada por tener un problema";
 ?>

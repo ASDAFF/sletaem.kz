@@ -37,4 +37,5 @@ $MESS["VOTE_EXACT_MATCH"] = "Шукати точний збіг при філь�
 $MESS["DELETE_ERROR"] = "Помилка видалення";
 $MESS["MAIN_ADMIN_LIST_SELECTED"] = "Обрано:";
 $MESS["MAIN_ADMIN_LIST_CHECKED"] = "Позначено:";
+$MESS["VOTE_USER"] = "Користувач";
 ?>
