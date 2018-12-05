@@ -1,0 +1,4 @@
+<?
+$MESS["MPF_CANCEL"] = "Anuluj";
+$MESS["MOBILE_LOG_POST_FORM_DISK_TITLE"] = "Pliki";
+?>

@@ -1,0 +1,4 @@
+<?
+$MESS["SENDER_CONFIG_LIMITS_TITLE"] = "Limites";
+$MESS["SENDER_START_TITLE"] = "Início";
+?>
