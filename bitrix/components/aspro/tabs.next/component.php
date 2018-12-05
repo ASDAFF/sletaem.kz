@@ -97,12 +97,12 @@ if($bCatalogIndex)
 			$arItems = array();
 			$arFilterProp = array("PROPERTY_".$arParams["TABS_CODE"]."_VALUE" => array($prop));
 
-			$arItems = CNextCache::CIBLockElement_GetList(array('CACHE' => array("MULTI" => "N", "TAG" => CNextCache::GetIBlockCacheTag($arParams["IBLOCK_ID"]))), array_merge($arFilter, $arrFilter, $arFilterProp), false, array("nTopCount" => 1), array("ID"));
+			$arItems = CNextCache::CIBLockElement_GetList(array('CACHE' => array("MULTI" => "N", "TAG" => CNextCache::GetIBlockCacheTag($arParams["IBLOCK_ID"]))), array_merge($arFilter, $arrFilter, $arrFilter, $arFilterProp), false, array("nTopCount" => 1), array("ID"));
 			if($arItems)
 			{
 				$arTabs[$key] = array(
 					"TITLE" => $prop,
-					"FILTER" => array_merge($arFilterProp, $arFilter, $arFilterStores)
+					"FILTER" => array_merge($arFilterProp, $arFilter, $arrFilter, $arFilterStores)
 				);
 				$arResult["SHOW_SLIDER_PROP"] = true;
 			}

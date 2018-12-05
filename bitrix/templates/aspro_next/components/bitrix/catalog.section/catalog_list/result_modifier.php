@@ -42,6 +42,10 @@ if ('TYPE_1' == $arParams['TYPE_SKU'] && $arParams['DISPLAY_TYPE'] !='table' ){
 	$arParams['OFFER_TREE_PROPS'] = array();
 }
 
+/* hide compare link from module options */
+if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+	$arParams["DISPLAY_COMPARE"] = 'N';
+/**/
 
 if (!empty($arResult['ITEMS'])){
 	$arConvertParams = array();
@@ -297,6 +301,15 @@ if (!empty($arResult['ITEMS'])){
 					if ('' != $arParams['OFFER_ADD_PICT_PROP'] && isset($arOffer['DISPLAY_PROPERTIES'][$arParams['OFFER_ADD_PICT_PROP']]))
 						unset($arOffer['DISPLAY_PROPERTIES'][$arParams['OFFER_ADD_PICT_PROP']]);
 
+					if($arParams["USE_MAIN_ELEMENT_SECTION"] != "Y")
+					{
+						if($arOffer["DETAIL_PAGE_URL"])
+						{
+							$arTmpUrl = explode("?", $arOffer["DETAIL_PAGE_URL"]);
+							$arOffer["DETAIL_PAGE_URL"] = str_replace($arTmpUrl[0], $arItem["DETAIL_PAGE_URL"], $arOffer["DETAIL_PAGE_URL"]);
+						}
+					}
+
 					$arDouble[$arOffer['ID']] = true;
 					$arNewOffers[$keyOffer] = $arOffer;
 
@@ -440,6 +453,7 @@ if (!empty($arResult['ITEMS'])){
 						"SHOW_DISCOUNT_TIME_EACH_SKU" => $arParams["SHOW_DISCOUNT_TIME_EACH_SKU"],
 						'ARTICLE_SKU' => ($arParams['SHOW_ARTICLE_SKU'] == 'Y' ? (isset($arItem['PROPERTIES']['CML2_ARTICLE']['VALUE']) && $arItem['PROPERTIES']['CML2_ARTICLE']['VALUE'] ? '<span class="block_title" itemprop="name">'.$arItem['PROPERTIES']['CML2_ARTICLE']['NAME'].': '.'</span><span class="value" itemprop="value">'.$arItem['PROPERTIES']['CML2_ARTICLE']['VALUE'].'</span>' : '') : ''),
 						'PRICE_MATRIX' => $sPriceMatrix,
+						'PRICE_MATRIX_RAW' => $arOffer["PRICE_MATRIX"],
 						'BASIS_PRICE' => $arOffer['MIN_PRICE'],
 						'OWNER_PICT' => $arOffer['OWNER_PICT'],
 						'PREVIEW_PICTURE' => $arOffer['PREVIEW_PICTURE'],

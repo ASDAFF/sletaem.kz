@@ -7,10 +7,6 @@ if((isset($_POST['PRODUCT_ID']) && $_POST['PRODUCT_ID']) || (isset($_POST['ID'])
 	$arItem = $arSections = $arBasketItems = $arOrder = $arItemsIDs = array();
 	$arSite = CSite::GetByID(SITE_ID)->Fetch();
 
-	function conv($n){
-		return iconv(SITE_CHARSET, 'UTF-8', $n);
-	}
-
 	if(isset($_POST['PRODUCT_ID']) && $_POST['PRODUCT_ID']){
 		\Bitrix\Main\Loader::includeModule('catalog');
 		$arItem = CIBlockElement::GetList(array(), array('ID' => $PRODUCT_ID), false, false, array('ID', 'NAME', 'PROPERTY_BRAND', 'IBLOCK_SECTION_ID'))->Fetch();
@@ -47,7 +43,7 @@ if((isset($_POST['PRODUCT_ID']) && $_POST['PRODUCT_ID']) || (isset($_POST['ID'])
 		
 		$arItem['SHOP_NAME'] = $arSite['SITE_NAME'];
 		
-		$arItem = array_map('conv', $arItem);
+		$arItem = $GLOBALS["APPLICATION"]->ConvertCharsetArray($arItem, SITE_CHARSET, 'UTF-8');
 		echo json_encode($arItem);
 	}
 
@@ -76,8 +72,8 @@ if((isset($_POST['PRODUCT_ID']) && $_POST['PRODUCT_ID']) || (isset($_POST['ID'])
 
 		$arBasketItems['SHOP_NAME'] = $arSite['SITE_NAME'];
 
-		$arItem = array_map('conv', $arItem);
-		$arBasketItems= array_map('conv', $arBasketItems);
+		$arItem = $GLOBALS["APPLICATION"]->ConvertCharsetArray($arItem, SITE_CHARSET, 'UTF-8');
+		$arBasketItems= $GLOBALS["APPLICATION"]->ConvertCharsetArray($arBasketItems, SITE_CHARSET, 'UTF-8');
 		echo json_encode(array_merge($arItem, $arBasketItems));
 	}
 	elseif(isset($_POST['BASKET']) && $_POST['BASKET']){
@@ -109,14 +105,14 @@ if((isset($_POST['PRODUCT_ID']) && $_POST['PRODUCT_ID']) || (isset($_POST['ID'])
 					$arTmpItem['CATEGORY'] = implode(' / ', $arSections);
 				}
 
-				$arBasketItems['ITEMS'][$arTmpItem['ID']] = array_map('conv', array_merge($arBasketItems['ITEMS'][$arTmpItem['ID']], $arTmpItem));
+				$arBasketItems['ITEMS'][$arTmpItem['ID']] = $GLOBALS["APPLICATION"]->ConvertCharsetArray(array_merge($arBasketItems['ITEMS'][$arTmpItem['ID']], $arTmpItem), SITE_CHARSET, 'UTF-8');
 			}
 		}
 
 		$arBasketItems['SHOP_NAME'] = $arSite['SITE_NAME'];
 
 		$arBasketItemsItems = $arBasketItems['ITEMS'];
-		$arBasketItems = array_map('conv', $arBasketItems);
+		$arBasketItems = $GLOBALS["APPLICATION"]->ConvertCharsetArray($arBasketItems, SITE_CHARSET, 'UTF-8');
 		$arBasketItems['ITEMS'] = $arBasketItemsItems;
 		echo json_encode($arBasketItems);
 	}
@@ -157,13 +153,13 @@ if((isset($_POST['PRODUCT_ID']) && $_POST['PRODUCT_ID']) || (isset($_POST['ID'])
 					$arTmpItem['CATEGORY'] = implode(' / ', $arSections);
 				}
 
-				$arOrder['ITEMS'][$arTmpItem['ID']] = array_map('conv', array_merge($arOrder['ITEMS'][$arTmpItem['ID']], $arTmpItem));
+				$arOrder['ITEMS'][$arTmpItem['ID']] = $GLOBALS["APPLICATION"]->ConvertCharsetArray(array_merge($arOrder['ITEMS'][$arTmpItem['ID']], $arTmpItem), SITE_CHARSET, 'UTF-8');
 			}
 		}
 
 		$arOrder['SHOP_NAME'] = $arSite['SITE_NAME'];
 		$arOrderItems = $arOrder['ITEMS'];
-		$arOrder = array_map('conv', $arOrder);
+		$arOrder = $GLOBALS["APPLICATION"]->ConvertCharsetArray($arOrder, SITE_CHARSET, 'UTF-8');
 		$arOrder['ITEMS'] = $arOrderItems;
 		echo json_encode($arOrder);
 	}

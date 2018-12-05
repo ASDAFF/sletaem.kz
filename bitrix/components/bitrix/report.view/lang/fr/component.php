@@ -1,4 +1,7 @@
 <?
+$MESS["REPORT_STEXPORT_TITLE"] = "Exporter le rapport";
+$MESS["REPORT_STEXPORT_SUMMARY"] = "Cela va créer un fichier de rapport. Exporter une grande quantité de données prendra du temps.";
+$MESS["REPORT_COLUMNS_HAS_CYCLIC_DEPENDENCY"] = "Impossible de créer le rapport parce qu'une ou plusieurs colonnes comportent des références circulaires. Assurez-vous que les colonnes qui comprennent l'opération \"% de la valeur du champ\" ne forment pas de référence circulaire.";
 $MESS["REPORT_PRCNT_FROM_TITLE"] = "% du (de la)";
 $MESS["REPORT_CHART_TYPE_BAR"] = "Histogramme";
 $MESS["REPORT_CHART_TYPE_LINE"] = "Graphique";
@@ -19,5 +22,4 @@ $MESS["REPORT_SELECT_CALC_VAR_SUM"] = "Total";
 $MESS["REPORT_UNKNOWN_FIELD_DEFINITION"] = "Le rapport utilise un champ qui ne existe pas. Il est plus probable un champ personnalisé qui a été supprimé. S'il vous plaît vérifier et enregistrer la configuration du rapport.";
 $MESS["REPORT_FILE_NOT_FOUND"] = "Fichier introuvable";
 $MESS["REPORT_HELPER_NOT_DEFINED"] = "Aucune classe helper définie.";
-$MESS["REPORT_COLUMNS_HAS_CYCLIC_DEPENDENCY"] = "Impossible de créer le rapport parce qu'une ou plusieurs colonnes comportent des références circulaires. Assurez-vous que les colonnes qui comprennent l'opération \"% de la valeur du champ\" ne forment pas de référence circulaire.";
 ?>

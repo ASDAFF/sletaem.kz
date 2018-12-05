@@ -22,6 +22,14 @@ $arElement = CNextCache::CIblockElement_GetList(array("CACHE" => array("TAG" => 
 			'og:image' => (($arElement['PREVIEW_PICTURE'] || $arElement['DETAIL_PICTURE']) ? CFile::GetPath(($arElement['PREVIEW_PICTURE'] ? $arElement['PREVIEW_PICTURE'] : $arElement['DETAIL_PICTURE'])) : false),
 		)
 	);?>
+
+	<?
+	/* hide compare link from module options */
+	if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+		$arParams["DISPLAY_COMPARE"] = 'N';
+	/**/
+	?>
+
 	<?if($arParams["USE_SHARE"] == "Y" && $arElement):?>
 		<div class="line_block share top <?=($arParams['USE_RSS'] !== 'N' ? 'rss-block' : '');?>">
 			<?$APPLICATION->IncludeFile(SITE_DIR."include/share_buttons.php", Array(), Array("MODE" => "html", "NAME" => GetMessage('CT_BCE_CATALOG_SOC_BUTTON')));?>

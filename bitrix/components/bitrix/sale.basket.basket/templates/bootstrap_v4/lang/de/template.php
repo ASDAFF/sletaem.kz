@@ -1,4 +1,6 @@
 <?
+$MESS["SBB_EMPTY_BASKET_TITLE"] = "Ihr Warenkorb ist leer";
+$MESS["SBB_EMPTY_BASKET_HINT"] = "#A1#Klicken Sie hier#A2# um weiter einzukaufen";
 $MESS["SBB_FILTER_EMPTY_RESULT"] = "Leider konnten wir keine Produkte für Ihre Suche finden";
 $MESS["SBB_BASKET_ITEM_WARNING"] = "In Ihrem Warenkorb <a href=\"javascript:void(0)\" data-entity=\"basket-items-warning-count\"></a> mit einem Fehler.";
 $MESS["SBB_BASKET_FILTER"] = "Filter";

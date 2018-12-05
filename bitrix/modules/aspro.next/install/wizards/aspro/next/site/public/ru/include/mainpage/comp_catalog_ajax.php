@@ -18,7 +18,13 @@ if($bAjaxMode)
 	<?
 	if($bAjaxMode && (is_array($arGlobalFilter) && $arGlobalFilter))
 		$GLOBALS[$arComponentParams["FILTER_NAME"]] = $arGlobalFilter;
+
+	/* hide compare link from module options */
+	if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+		$arComponentParams["DISPLAY_COMPARE"] = 'N';
+	/**/
 	?>
+	
 	<?$APPLICATION->IncludeComponent(
 		"bitrix:catalog.section",
 		"catalog_block_front",

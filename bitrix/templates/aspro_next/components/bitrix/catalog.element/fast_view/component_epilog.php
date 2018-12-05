@@ -72,4 +72,6 @@
 			}
 		});
 	}
+
+	viewItemCounter('<?=$arResult["ID"];?>','<?=current($arParams["PRICE_CODE"]);?>');
 </script>

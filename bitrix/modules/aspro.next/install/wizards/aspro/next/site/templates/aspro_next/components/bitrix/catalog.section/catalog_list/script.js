@@ -1,3 +1,72 @@
+$(document).ready(function(){
+	SelectOfferProp = function(){
+		// return false;
+		var _this = $(this),
+			obParams = {},
+			obSelect = {},
+			objUrl = parseUrlQuery(),
+			add_url = '',
+			selectMode = (_this.hasClass('list_values_wrapper') ? true : false),
+			container = _this.closest('.bx_catalog_item_scu');
+
+		console.log(_this.closest('.item'))
+
+		/* request params */
+		obParams = {
+			'PARAMS': _this.closest('.js_wrapper_items').data('params'),
+			'ID': container.data('offer_id'),
+			'SITE_ID': container.data('site_id'),
+			'LINK_ID': container.data('id'),
+			'IBLOCK_ID': container.data('offer_iblockid'),
+			'PROPERTY_ID': container.data('propertyid'),
+			'DEPTH': _this.closest('.item_wrapper').index(),
+			'VALUE': (selectMode ? _this.find('option:selected').data('onevalue') : _this.data('onevalue')),
+			'PICTURE': _this.closest('.list_item_wrapp').find('.thumb img').attr('src'),
+			'ARTICLE_NAME': _this.closest('.list_item_wrapp').find('.article_block').data('name'),
+			'ARTICLE_VALUE': _this.closest('.list_item_wrapp').find('.article_block').data('value'),
+		}
+		/**/
+
+		if("clear_cache" in objUrl)
+		{
+			if(objUrl.clear_cache == "Y")
+				add_url += "?clear_cache=Y";
+		}
+
+		/* save selected values */
+		for (i = 0; i < obParams.DEPTH+1; i++)
+		{
+			strName = 'PROP_'+container.find('.item_wrapper:eq('+i+') > div').data('id');
+			if(container.find('.item_wrapper:eq('+i+') select').length)
+				obSelect[strName] = container.find('.item_wrapper:eq('+i+') select option:selected').data('onevalue');
+			else
+				obSelect[strName] = container.find('.item_wrapper:eq('+i+') li.item.active').data('onevalue');
+		}
+
+		obParams.SELECTED = JSON.stringify(obSelect);
+		/**/
+		
+		if(!selectMode)
+		{
+			_this.siblings().removeClass('active');
+			_this.addClass('active');
+		}
+
+		/* get sku */
+		$.ajax({
+			url: arNextOptions['SITE_DIR']+'ajax/js_item_detail.php'+add_url,
+			type: 'POST',
+			data: obParams,
+		}).success(function(html){
+			var ob = BX.processHTML(html);BX.ajax.processScripts(ob.SCRIPT);
+		})
+	}
+	$(document).on('click', '.bx_catalog_item_scu li.item', SelectOfferProp)
+	$(document).on('change', '.bx_catalog_item_scu select.list_values_wrapper', SelectOfferProp)
+})
+
+;
+
 (function (window) {
 if (!window.JCCatalogSectionOnlyElement)
 {
@@ -78,7 +147,8 @@ if (!window.JCCatalogSectionOnlyElement)
 			
 			$(this.obProduct).find('.with_matrix .sale_block .text .values_wrapper').html(getCurrentPrice(this.currentPrices[this.currentPriceSelected].DISCOUNT, this.currentPrices[this.currentPriceSelected].CURRENCY, this.currentPrices[this.currentPriceSelected].PRINT_DISCOUNT));
 			
-			$(this.obProduct).find('.with_matrix').show();
+			if('NOT_SHOW' in this.params && this.params.NOT_SHOW != 'Y')
+				$(this.obProduct).find('.with_matrix').show();
 
 			if(arNextOptions['THEME']['SHOW_TOTAL_SUMM'] == 'Y')
 			{

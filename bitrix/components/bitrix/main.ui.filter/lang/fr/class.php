@@ -1,4 +1,5 @@
 <?
+$MESS["MAIN_UI_FILTER__PLACEHOLDER_WITH_FILTER"] = "recherche";
 $MESS["MAIN_UI_FILTER__YES"] = "Oui";
 $MESS["MAIN_UI_FILTER__NO"] = "Non";
 $MESS["MAIN_UI_FILTER__NONE"] = "N’importe quelle date";
@@ -25,7 +26,6 @@ $MESS["MAIN_UI_FILTER__AND"] = "et";
 $MESS["MAIN_UI_FILTER__MORE"] = "plus";
 $MESS["MAIN_UI_FILTER__PLACEHOLDER"] = "Filtre";
 $MESS["MAIN_UI_FILTER__PLACEHOLDER_DEFAULT"] = "Filtre et recherche";
-$MESS["MAIN_UI_FILTER__PLACEHOLDER_WITH_FILTER"] = "recherche";
 $MESS["MAIN_UI_FILTER__NOT_SET"] = "Non spécifié";
 $MESS["MAIN_UI_FILTER__IS_SET_AS_DEFAULT_PRESET"] = "Filtre par défaut";
 $MESS["MAIN_UI_FILTER__SET_AS_DEFAULT_PRESET"] = "Définir comme filtre par défaut";

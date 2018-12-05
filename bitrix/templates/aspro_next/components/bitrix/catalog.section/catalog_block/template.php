@@ -96,10 +96,15 @@
 					$bLinkedItems = (isset($arParams["LINKED_ITEMS"]) && $arParams["LINKED_ITEMS"]);
 					if($bLinkedItems)
 						$arItem["FRONT_CATALOG"]="Y";
+					$elementName = ((isset($arItem['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE']) && $arItem['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE']) ? $arItem['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE'] : $arItem['NAME']);
+					
 
 					$item_id = $arItem["ID"];
 					$strMeasure = '';
-					$arAddToBasketData;
+					$arAddToBasketData = array();
+
+					$arCurrentSKU = array();
+
 					if(!$arItem["OFFERS"] || $arParams['TYPE_SKU'] !== 'TYPE_1'){
 						if($arParams["SHOW_MEASURE"] == "Y" && $arItem["CATALOG_MEASURE"]){
 							$arMeasure = CCatalogMeasure::getList(array(), array("ID" => $arItem["CATALOG_MEASURE"]), false, false, array())->GetNext();
@@ -109,9 +114,36 @@
 					}
 					elseif($arItem["OFFERS"]){
 						$strMeasure = $arItem["MIN_PRICE"]["CATALOG_MEASURE_NAME"];
+						if($arParams['TYPE_SKU'] == 'TYPE_1' && $arItem['OFFERS_PROP'])
+						{
+							$totalCount = CNext::GetTotalCount($arItem["OFFERS"][$arItem["OFFERS_SELECTED"]], $arParams);
+							$arQuantityData = CNext::GetQuantityArray($totalCount, $arItemIDs["ALL_ITEM_IDS"]);
+
+							$currentSKUIBlock = $arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["IBLOCK_ID"];
+							$currentSKUID = $arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["ID"];
+
+							$arItem["DETAIL_PAGE_URL"] = $arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["DETAIL_PAGE_URL"];
+							if($arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["PREVIEW_PICTURE"])
+								$arItem["PREVIEW_PICTURE"] = $arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["PREVIEW_PICTURE"];
+							if($arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["PREVIEW_PICTURE"])
+								$arItem["DETAIL_PICTURE"] = $arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["DETAIL_PICTURE"];
+
+							if($arParams["SET_SKU_TITLE"] == "Y")
+								$arItem["NAME"] = $elementName = $arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["NAME"];
+							$item_id = $currentSKUID;
+
+							// ARTICLE
+							if($arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["DISPLAY_PROPERTIES"]["ARTICLE"]["VALUE"])
+							{
+								$arItem["ARTICLE"]["NAME"] = $arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["DISPLAY_PROPERTIES"]["ARTICLE"]["NAME"];
+								$arItem["ARTICLE"]["VALUE"] = (is_array($arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["DISPLAY_PROPERTIES"]["ARTICLE"]["VALUE"]) ? reset($arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["DISPLAY_PROPERTIES"]["ARTICLE"]["VALUE"]) : $arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["DISPLAY_PROPERTIES"]["ARTICLE"]["VALUE"]);
+							}
+
+							$arCurrentSKU = $arItem["JS_OFFERS"][$arItem["OFFERS_SELECTED"]];
+							$strMeasure = $arCurrentSKU["MEASURE"];
+						}
 					}
 					
-					$elementName = ((isset($arItem['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE']) && $arItem['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE']) ? $arItem['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE'] : $arItem['NAME']);
 					?>
 					<div class="catalog_item main_item_wrapper item_wrap <?=(($_GET['q'])) ? 's' : ''?>" id="<?=$arItemIDs["strMainID"];?>">
 						<div>
@@ -134,9 +166,9 @@
 													<span title="<?=GetMessage('CATALOG_WISH_OUT')?>" class="wish_item in added" style="display: none;" data-item="<?=$arItem["ID"]?>" data-iblock="<?=$arItem["IBLOCK_ID"]?>"><i></i></span>
 												</div>
 											<?elseif($arItem["OFFERS"] && !empty($arItem['OFFERS_PROP'])):?>
-												<div class="wish_item_button" style="display: none;">
-													<span title="<?=GetMessage('CATALOG_WISH')?>" class="wish_item to <?=$arParams["TYPE_SKU"];?>" data-item="" data-iblock="<?=$arItem["IBLOCK_ID"]?>" data-offers="Y" data-props="<?=$arOfferProps?>"><i></i></span>
-													<span title="<?=GetMessage('CATALOG_WISH_OUT')?>" class="wish_item in added <?=$arParams["TYPE_SKU"];?>" style="display: none;" data-item="" data-iblock="<?=$arOffer["IBLOCK_ID"]?>"><i></i></span>
+												<div class="wish_item_button">
+													<span title="<?=GetMessage('CATALOG_WISH')?>" class="wish_item to <?=$arParams["TYPE_SKU"];?>" data-item="<?=$currentSKUID;?>" data-iblock="<?=$currentSKUIBlock?>" data-offers="Y" data-props="<?=$arOfferProps?>"><i></i></span>
+													<span title="<?=GetMessage('CATALOG_WISH_OUT')?>" class="wish_item in added <?=$arParams["TYPE_SKU"];?>" style="display: none;" data-item="<?=$currentSKUID;?>" data-iblock="<?=$currentSKUIBlock?>"><i></i></span>
 												</div>
 											<?endif;?>
 										<?endif;?>
@@ -148,8 +180,8 @@
 												</div>
 											<?elseif($arItem["OFFERS"]):?>
 												<div class="compare_item_button">
-													<span title="<?=GetMessage('CATALOG_COMPARE')?>" class="compare_item to <?=$arParams["TYPE_SKU"];?>" data-iblock="<?=$arParams["IBLOCK_ID"]?>" data-item="" ><i></i></span>
-													<span title="<?=GetMessage('CATALOG_COMPARE_OUT')?>" class="compare_item in added <?=$arParams["TYPE_SKU"];?>" style="display: none;" data-iblock="<?=$arParams["IBLOCK_ID"]?>" data-item=""><i></i></span>
+													<span title="<?=GetMessage('CATALOG_COMPARE')?>" class="compare_item to <?=$arParams["TYPE_SKU"];?>" data-item="<?=$currentSKUID;?>" data-iblock="<?=$arItem["IBLOCK_ID"]?>" ><i></i></span>
+													<span title="<?=GetMessage('CATALOG_COMPARE_OUT')?>" class="compare_item in added <?=$arParams["TYPE_SKU"];?>" style="display: none;" data-item="<?=$currentSKUID;?>" data-iblock="<?=$arItem["IBLOCK_ID"]?>"><i></i></span>
 												</div>
 											<?endif;?>
 										<?endif;?>
@@ -200,9 +232,9 @@
 								<?endif;?>
 								<div class="sa_block">
 									<?=$arQuantityData["HTML"];?>
-									<div class="article_block">
+									<div class="article_block" <?if(isset($arItem['ARTICLE']) && $arItem['ARTICLE']['VALUE']):?>data-name="<?=$arItem['ARTICLE']['NAME'];?>" data-value="<?=$arItem['ARTICLE']['VALUE'];?>"<?endif;?>>
 										<?if(isset($arItem['ARTICLE']) && $arItem['ARTICLE']['VALUE']){?>
-											<?=$arItem['ARTICLE']['NAME'];?>: <?=$arItem['ARTICLE']['VALUE'];?>
+											<div ><?=$arItem['ARTICLE']['NAME'];?>: <?=$arItem['ARTICLE']['VALUE'];?></div>
 										<?}?>
 									</div>
 								</div>
@@ -217,9 +249,12 @@
 												<div class="sale_block matrix" style="display:none;">
 													<div class="sale_wrapper">
 														<?if($arParams["SHOW_DISCOUNT_PERCENT_NUMBER"] != "Y"):?>
-															<span class="title"><?=GetMessage("CATALOG_ECONOMY");?></span>
-															<div class="text"><span class="values_wrapper"></span></div>
+															<div class="text">
+																<span class="title"><?=GetMessage("CATALOG_ECONOMY");?></span>
+																<span class="values_wrapper"></span>
+															</div>
 														<?else:?>
+															<div class="value">-<span></span>%</div>
 															<div class="text">
 																<span class="title"><?=GetMessage("CATALOG_ECONOMY");?></span>
 																<span class="values_wrapper"></span>
@@ -230,7 +265,32 @@
 												</div>
 											<?}?>
 										</div>
-										<?\Aspro\Functions\CAsproSku::showItemPrices($arParams, $arItem, $item_id, $min_price_id, $arItemIDs, ($arParams["SHOW_DISCOUNT_PERCENT_NUMBER"] == "Y" ? "N" : "Y"));?>
+										<div class="js_price_wrapper price">
+											<?if($arCurrentSKU):?>
+												<?
+												$item_id = $arCurrentSKU["ID"];
+												$arCurrentSKU['PRICE_MATRIX'] = $arCurrentSKU['PRICE_MATRIX_RAW'];
+												$arCurrentSKU['CATALOG_MEASURE_NAME'] = $arCurrentSKU['MEASURE'];
+												if(isset($arCurrentSKU['PRICE_MATRIX']) && $arCurrentSKU['PRICE_MATRIX']) // USE_PRICE_COUNT
+												{?>
+													<?if($arCurrentSKU['ITEM_PRICE_MODE'] == 'Q' && count($arCurrentSKU['PRICE_MATRIX']['ROWS']) > 1):?>
+														<?=CNext::showPriceRangeTop($arCurrentSKU, $arParams, GetMessage("CATALOG_ECONOMY"));?>
+													<?endif;?>
+													<?=CNext::showPriceMatrix($arCurrentSKU, $arParams, $strMeasure, $arAddToBasketData);?>
+													<?$arMatrixKey = array_keys($arCurrentSKU['PRICE_MATRIX']['MATRIX']);
+													$min_price_id=current($arMatrixKey);?>
+												<?
+												}
+												else
+												{
+													$arCountPricesCanAccess = 0;
+													$min_price_id=0;?>
+													<?\Aspro\Functions\CAsproItem::showItemPrices($arParams, $arCurrentSKU["PRICES"], $strMeasure, $min_price_id, ($arParams["SHOW_DISCOUNT_PERCENT_NUMBER"] == "Y" ? "N" : "Y"));?>
+												<?}?>
+											<?else:?>
+												<?\Aspro\Functions\CAsproSku::showItemPrices($arParams, $arItem, $item_id, $min_price_id, $arItemIDs, ($arParams["SHOW_DISCOUNT_PERCENT_NUMBER"] == "Y" ? "N" : "Y"));?>
+											<?endif;?>
+										</div>
 									<?}else{?>
 										<?
 										$item_id = $arItem["ID"];
@@ -271,7 +331,7 @@
 														<div class="title"><?=GetMessage("TITLE_QUANTITY_BLOCK");?></div>
 														<div class="values">
 															<span class="item">
-																<span class="value" <?=((count( $arItem["OFFERS"] ) > 0 && $arParams["TYPE_SKU"] == 'TYPE_1' && $arItem["OFFERS_PROP"]) ? 'style="opacity:0;"' : '')?>><?=$totalCount;?></span>
+																<span class="value"><?=$totalCount;?></span>
 																<span class="text"><?=GetMessage("TITLE_QUANTITY");?></span>
 															</span>
 														</div>
@@ -280,31 +340,16 @@
 											</div>
 										<?}?>
 									<?else:?>
-										<?if($arItem['JS_OFFERS'])
-										{
-											foreach($arItem['JS_OFFERS'] as $keyOffer => $arTmpOffer2)
-											{
-												$active_to = '';
-												$arDiscounts = CCatalogDiscount::GetDiscountByProduct( $arTmpOffer2['ID'], $arUserGroups, "N", array(), SITE_ID );
-												if($arDiscounts)
-												{
-													foreach($arDiscounts as $arDiscountOffer)
-													{
-														if($arDiscountOffer['ACTIVE_TO'])
-														{
-															$active_to = $arDiscountOffer['ACTIVE_TO'];
-															break;
-														}
-													}
-												}
-												$arItem['JS_OFFERS'][$keyOffer]['DISCOUNT_ACTIVE'] = $active_to;
-											}
-										}?>
-										<div class="view_sale_block" style="display:none;">
+										<?$arDiscounts = CCatalogDiscount::GetDiscountByProduct($item_id, $arUserGroups, "N", array(), SITE_ID);
+										$arDiscount=array();
+										if($arDiscounts)
+											$arDiscount=current($arDiscounts);
+										?>
+										<div class="view_sale_block <?=($arQuantityData["HTML"] ? '' : 'wq');?>" <?=($arDiscount["ACTIVE_TO"] ? '' : 'style="display:none;"');?> >
 											<div class="count_d_block">
-													<span class="active_to_<?=$arItem["ID"]?> hidden"><?=$arDiscount["ACTIVE_TO"];?></span>
-													<div class="title"><?=GetMessage("UNTIL_AKC");?></div>
-													<span class="countdown countdown_<?=$arItem["ID"]?> values"></span>
+												<span class="active_to hidden"><?=($arDiscount["ACTIVE_TO"] ? $arDiscount["ACTIVE_TO"] : "");?></span>
+												<div class="title"><?=GetMessage("UNTIL_AKC");?></div>
+												<span class="countdown values"><span class="item"></span><span class="item"></span><span class="item"></span><span class="item"></span></span>
 											</div>
 											<?if($arQuantityData["HTML"]):?>
 												<div class="quantity_block">
@@ -321,24 +366,20 @@
 									<?endif;?>
 								<?}?>
 							</div>
-							<div class="footer_button">
+							<div class="footer_button <?=($arItem["OFFERS"] && $arItem['OFFERS_PROP'] ? 'has_offer_prop' : '');?> inner_content js_offers__<?=$arItem['ID'];?>">
 								<div class="sku_props">
 									<?if($arItem["OFFERS"]){?>
 										<?if(!empty($arItem['OFFERS_PROP'])){?>
-											<div class="bx_catalog_item_scu wrapper_sku" id="<? echo $arItemIDs["ALL_ITEM_IDS"]['PROP_DIV']; ?>">
+											<div class="bx_catalog_item_scu wrapper_sku" id="<? echo $arItemIDs["ALL_ITEM_IDS"]['PROP_DIV']; ?>" data-site_id="<?=SITE_ID;?>" data-id="<?=$arItem["ID"];?>" data-offer_id="<?=$arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["ID"];?>" data-propertyid="<?=$arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["PROPERTIES"]["CML2_LINK"]["ID"];?>" data-offer_iblockid="<?=$arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["IBLOCK_ID"];?>">
 												<?$arSkuTemplate = array();?>
-												<?$arSkuTemplate=CNext::GetSKUPropsArray($arItem['OFFERS_PROPS_JS'], $arResult["SKU_IBLOCK_ID"], $arParams["DISPLAY_TYPE"], $arParams["OFFER_HIDE_NAME_PROPS"]);?>
+												<?$arSkuTemplate=CNext::GetSKUPropsArray($arItem['OFFERS_PROPS_JS'], $arResult["SKU_IBLOCK_ID"], $arParams["DISPLAY_TYPE"], $arParams["OFFER_HIDE_NAME_PROPS"], "N", $arItem);?>
 												<?foreach ($arSkuTemplate as $code => $strTemplate){
 													if (!isset($arItem['OFFERS_PROP'][$code]))
 														continue;
-													echo '<div>', str_replace('#ITEM#_prop_', $arItemIDs["ALL_ITEM_IDS"]['PROP'], $strTemplate), '</div>';
+													echo '<div class="item_wrapper">', str_replace('#ITEM#_prop_', $arItemIDs["ALL_ITEM_IDS"]['PROP'], $strTemplate), '</div>';
 												}?>
 											</div>
 											<?$arItemJSParams=CNext::GetSKUJSParams($arResult, $arParams, $arItem);?>
-
-											<script type="text/javascript">
-												var <? echo $arItemIDs["strObName"]; ?> = new JCCatalogSection(<? echo CUtil::PhpToJSObject($arItemJSParams, false, true); ?>);
-											</script>
 										<?}?>
 									<?}?>
 								</div>
@@ -385,9 +426,41 @@
 											<!--/noindex-->
 										</div>
 									<?}else{?>
-										<div class="offer_buy_block buys_wrapp woffers" style="display:none;">
-											<div class="counter_wrapp"></div>
+										<div class="offer_buy_block">
+											<?$arAddToBasketData = CNext::GetAddToBasketArray($arItem["OFFERS"][$arItem["OFFERS_SELECTED"]], $totalCount, $arParams["DEFAULT_COUNT"], $arParams["BASKET_URL"], false, $arItemIDs["ALL_ITEM_IDS"], 'small', $arParams);?>
+											<div class="counter_wrapp">
+												<?if(($arAddToBasketData["OPTIONS"]["USE_PRODUCT_QUANTITY_LIST"] && $arAddToBasketData["ACTION"] == "ADD") && $arAddToBasketData["CAN_BUY"]):?>
+													<div class="counter_block" data-item="<?=$arItem["OFFERS"][$arItem["OFFERS_SELECTED"]]["ID"];?>">
+														<span class="minus" id="<? echo $arItemIDs["ALL_ITEM_IDS"]['QUANTITY_DOWN']; ?>">-</span>
+														<input type="text" class="text" id="<? echo $arItemIDs["ALL_ITEM_IDS"]['QUANTITY']; ?>" name="<? echo $arParams["PRODUCT_QUANTITY_VARIABLE"]; ?>" value="<?=$arAddToBasketData["MIN_QUANTITY_BUY"]?>" />
+														<span class="plus" id="<? echo $arItemIDs["ALL_ITEM_IDS"]['QUANTITY_UP']; ?>" <?=($arAddToBasketData["MAX_QUANTITY_BUY"] ? "data-max='".$arAddToBasketData["MAX_QUANTITY_BUY"]."'" : "")?>>+</span>
+													</div>
+												<?endif;?>
+												<div id="<?=$arItemIDs["ALL_ITEM_IDS"]['BASKET_ACTIONS']; ?>" class="button_block <?=(($arAddToBasketData["ACTION"] == "ORDER"/*&& !$arItem["CAN_BUY"]*/)  || !$arAddToBasketData["CAN_BUY"] || !$arAddToBasketData["OPTIONS"]["USE_PRODUCT_QUANTITY_LIST"] || $arAddToBasketData["ACTION"] == "SUBSCRIBE" ? "wide" : "");?>">
+													<!--noindex-->
+														<?=$arAddToBasketData["HTML"]?>
+													<!--/noindex-->
+												</div>
+											</div>
 										</div>
+										<?
+										if(isset($arCurrentSKU['PRICE_MATRIX']) && $arCurrentSKU['PRICE_MATRIX']) // USE_PRICE_COUNT
+										{?>
+											<?if($arCurrentSKU['ITEM_PRICE_MODE'] == 'Q' && count($arCurrentSKU['PRICE_MATRIX']['ROWS']) > 1):?>
+												<?$arOnlyItemJSParams = array(
+													"ITEM_PRICES" => $arCurrentSKU["ITEM_PRICES"],
+													"ITEM_PRICE_MODE" => $arCurrentSKU["ITEM_PRICE_MODE"],
+													"ITEM_QUANTITY_RANGES" => $arCurrentSKU["ITEM_QUANTITY_RANGES"],
+													"MIN_QUANTITY_BUY" => $arAddToBasketData["MIN_QUANTITY_BUY"],
+													"SHOW_DISCOUNT_PERCENT_NUMBER" => $arParams["SHOW_DISCOUNT_PERCENT_NUMBER"],
+													"ID" => $arItemIDs["strMainID"],
+													"NOT_SHOW" => "Y",
+												)?>
+												<script type="text/javascript">
+													var <? echo $arItemIDs["strObName"]; ?>el = new JCCatalogSectionOnlyElement(<? echo CUtil::PhpToJSObject($arOnlyItemJSParams, false, true); ?>);
+												</script>
+											<?endif;?>
+										<?}?>
 									<?}?>
 								<?endif;?>
 							</div>

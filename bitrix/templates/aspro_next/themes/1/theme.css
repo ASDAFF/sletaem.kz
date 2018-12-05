@@ -832,7 +832,8 @@ body .fa.big-icon.grey {
 footer .info .email a:hover {
   color: #ffad00;
 }
-.logo.colored svg .icon-path {
+.logo.colored svg .icon-path,
+.svg.colored path {
   fill: #ffad00;
 }
 .product-item-detail-tabs-container-fixed .product-item-detail-tabs-list li a:before {

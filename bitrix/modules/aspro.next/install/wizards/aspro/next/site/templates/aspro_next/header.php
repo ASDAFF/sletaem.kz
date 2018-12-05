@@ -20,7 +20,7 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
 	<?if($bIncludedModule)
 		CNext::Start(SITE_ID);?>
 </head>
-<body class="<?=($bIncludedModule ? "fill_bg_".strtolower(CNext::GetFrontParametrValue("SHOW_BG_BLOCK")) : "");?>" id="main">
+<body class="site_<?=SITE_ID?> <?=($bIncludedModule ? "fill_bg_".strtolower(CNext::GetFrontParametrValue("SHOW_BG_BLOCK")) : "");?>" id="main">
 	<div id="panel"><?$APPLICATION->ShowPanel();?></div>
 	<?if(!$bIncludedModule):?>
 		<?$APPLICATION->SetTitle(GetMessage("ERROR_INCLUDE_MODULE_ASPRO_NEXT_TITLE"));?>

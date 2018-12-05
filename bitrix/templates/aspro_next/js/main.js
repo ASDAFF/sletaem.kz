@@ -2442,7 +2442,7 @@ if(navigator.userAgent.indexOf("Edge") != -1)
 /*filter start*/
 if(!funcDefined('checkVerticalMobileFilter')){
 	var checkVerticalMobileFilter = function checkVerticalMobileFilter(){
-		if($('.right_block1.catalog.vertical').length)
+		if($('.right_block1.catalog.vertical').length && !$('.left_block.filter_ajax').length)
 		{
 			if(typeof window['trackBarOptions'] !== 'undefined')
 			{
@@ -2759,6 +2759,9 @@ InitZoomPict = function(el) {
 			if($('.xzoom-lens').length)
 				block.data('xzoom').closezoom();
 		})*/
+		block.on('mouseleave', function(){
+			block.data('xzoom').movezoom(event);
+		})
 	}
 }
 
@@ -3141,6 +3144,7 @@ if(!funcDefined('setPriceItem')){
 			price_block = main_block.find('.cost.prices'),
 			use_percent = (typeof show_percent !== 'undefined' && show_percent == 'Y'),
 			percent_number = (typeof percent !== 'undefined' && percent),
+			sku_checked = (main_block.find('.has_offer_prop').length ? 'Y' : 'N'),
 			check = (typeof check_quantity !== 'undefined' && check_quantity);
 
 		if(main_block.find('.buy_block').length)
@@ -3163,8 +3167,8 @@ if(!funcDefined('setPriceItem')){
 				}
 				else
 				{
-					main_block.find('.total_summ span').text(BX.Currency.currencyFormat((value*quantity), currency, true));
-					if(main_block.find('.total_summ').is(':hidden'))
+					main_block.find('.total_summ span').html(BX.Currency.currencyFormat((value*quantity), currency, true));
+					if(main_block.find('.total_summ').is(':hidden') || sku_checked == 'Y')
 						main_block.find('.total_summ').slideDown(100);
 				}
 			}
@@ -4383,9 +4387,22 @@ $(document).ready(function(){
 				if(!eventdata.params.id.closest('.gifts').length) // no gift
 				{
 					var obProduct = eventdata.params.id.data('product');
+
+					if(eventdata.params.id.closest('.has_offer_prop').length) // type1 for offers in element list
+					{
+						if(typeof window['obSkuQuantys'] === 'undefined')
+							window["obSkuQuantys"] = {};
+
+						// if(typeof window['obOffers'] === 'undefined')
+							window["obSkuQuantys"][eventdata.params.id.closest('.offer_buy_block').find('.to-cart').data('item')] = eventdata.params.value;
+					}
+
 					if(typeof window[obProduct] == 'object')
 					{
-						window[obProduct].setPriceAction('Y');
+						if(obProduct == "obOffers")
+							setPriceAction('', '', 'Y');
+						else
+							window[obProduct].setPriceAction('Y');
 					}
 					else if(eventdata.params.id.length)
 					{
@@ -6211,9 +6228,10 @@ if(!funcDefined('basketActions')){
 			{
 				var hash = location.hash.substring(1);
 				if($('#basket_toolbar_button_'+hash).length)
-				{
 					$('#basket_toolbar_button_'+hash).trigger('click');
-				}
+
+				if($('.basket-items-list-header-filter a[data-filter="'+hash+'"]').length)
+					$('.basket-items-list-header-filter a[data-filter="'+hash+'"]')[0].click();
 			}
 
 			$('.bx_sort_container').append('<div class="top_control basket_sort"><span style="opacity:0;" class="delete_all btn btn-default white white-bg grey remove_all_basket">'+BX.message("BASKET_CLEAR_ALL_BUTTON")+'</span></div>');

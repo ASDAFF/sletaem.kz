@@ -14,7 +14,7 @@ if($arRegion)
 			$arParams['PRICE_CODE'] = array_keys($arRegion['LIST_PRICES']);
 	}
 }
-if(!in_array('ID', $arParams["COMPARE_OFFERS_FIELD_CODE"]))
+if(!in_array('ID', (array)$arParams["COMPARE_OFFERS_FIELD_CODE"]))
 	$arParams["COMPARE_OFFERS_FIELD_CODE"][] = 'ID';
 ?>
 <?$APPLICATION->IncludeComponent(

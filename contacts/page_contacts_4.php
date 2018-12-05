@@ -1,55 +1,39 @@
 <?$bUseFeedback = CNext::GetFrontParametrValue('CONTACTS_USE_FEEDBACK', SITE_ID) != 'N';?>
 <?$APPLICATION->ShowViewContent('yandex_map');?>
-<div class="contacts contacts-page-overmap  maxwidth-theme" itemscope itemtype="http://schema.org/Organization">
-	<div class="contacts-wrapper">
-		<div class="row">
-			<div class="<?=($bUseFeedback ? 'col-md-3' : 'col-md-4')?> print-6">
-				<table>
-					<tr>
-						<td class="icon"><i class="fa big-icon grey s45 fa-map-marker"></i></td>
-						<td><span class="dark_table">Центральный офис</span>
-							<br />
-							<span itemprop="address"><?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-address.php", Array(), Array("MODE" => "html", "NAME" => "Address"));?></span>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="<?=($bUseFeedback ? 'col-md-3' : 'col-md-4')?> print-6">
-				<table>
-					<tr>
-						<td class="icon"><i class="fa big-icon grey s45 fa-phone"></i></td>
-						<td> <span class="dark_table">Справочная служба</span>
-							<br />
-							<span itemprop="telephone"><?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-phone-one.php", Array(), Array("MODE" => "html", "NAME" => "Phone"));?></span>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="<?=($bUseFeedback ? 'col-md-3' : 'col-md-4')?> print-6">
-				<table>
-					<tr>
-						<td class="icon"><i class="fa big-icon grey s45 fa-envelope"></i></td>
-						<td> <span class="dark_table">E-mail</span>
-							<br />
-							<span itemprop="email"><?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-email.php", Array(), Array("MODE" => "html", "NAME" => "Email"));?></span>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<?if($bUseFeedback):?>
-				<div class="col-md-3 ask-question">
-					<button data-event="jqm" data-param-form_id="ASK" data-name="order_services" class="btn btn-default white wc"><i class="fa fa-question"></i> <span>Задать вопрос</span></button>
+<div itemscope itemtype="http://schema.org/Organization">
+	<div class="contacts contacts-page-overmap  maxwidth-theme">
+		<div class="contacts-wrapper">
+			<div class="row">
+				<div class="<?=($bUseFeedback ? 'col-md-3' : 'col-md-4')?>  print-6">
+					<?CNext::showContactAddr('Центральный офис', true, '', 'Addres_black.svg', 'grey');?>
 				</div>
-			<?endif;?>
+				<div class="<?=($bUseFeedback ? 'col-md-3' : 'col-md-4')?>  print-6">
+					<?CNext::showContactPhones('Справочная служба', true, '', 'Phone_black2.svg', 'grey');?>
+				</div>
+				<div class="<?=($bUseFeedback ? 'col-md-3' : 'col-md-4')?>  print-6">
+					<?CNext::showContactEmail('E-mail', true, '', 'Email.svg', 'grey');?>
+				</div>
+				<?if($bUseFeedback):?>
+					<div class="col-md-3 ask-question">
+						<button data-event="jqm" data-param-form_id="ASK" data-name="order_services" class="btn btn-default white btn-block"><span>Задать вопрос</span></button>
+					</div>
+				<?endif;?>
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="contacts maxwidth-theme">
-	<div class="row">
-		<div class="col-md-12" itemprop="description">
-			<?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-regions-title.php", Array(), Array("MODE" => "html", "NAME" => "Regions"));?>
+	<div class="contacts maxwidth-theme">
+		<div class="row">
+			<div class="col-md-12" itemprop="description">
+				<?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-regions-title.php", Array(), Array("MODE" => "html", "NAME" => "Regions"));?>
+			</div>
 		</div>
+	</div>
+
+	<?//hidden text for validate microdata?>
+	<div class="hidden">
+		<?global $arSite;?>
+		<span itemprop="name"><?=$arSite["NAME"];?></span>
 	</div>
 </div>
 
@@ -200,6 +184,7 @@
 		"SHOW_TABS" => "Y",
 		"SHOW_ASK_QUESTION_BLOCK" => "Y",
 		"SHOW_TOP_MAP" => "Y",
+		"STRICT_SECTION_CHECK" => "N",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

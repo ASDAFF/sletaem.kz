@@ -5,7 +5,12 @@ $normalCount = count($arResult["ITEMS"]["AnDelCanBuy"]);
 $delayCount = count($arResult["ITEMS"]["DelDelCanBuy"]);
 $subscribeCount = count($arResult["ITEMS"]["ProdSubscribe"]);
 $naCount = count($arResult["ITEMS"]["nAnCanBuy"]);
-$compareCount = count($_SESSION["CATALOG_COMPARE_LIST"][$catalogIblockID]["ITEMS"]);
+
+if(is_array($_SESSION["CATALOG_COMPARE_LIST"][$catalogIblockID]["ITEMS"]))
+	$compareCount = count($_SESSION["CATALOG_COMPARE_LIST"][$catalogIblockID]["ITEMS"]);
+else
+	$compareCount = 0;
+
 $arParamsExport=$arParams;
 unset($arParamsExport['INNER']);
 $paramsString = urlencode(serialize($arParamsExport));
@@ -52,18 +57,20 @@ $arCounters = CNext::updateBasketCounters(array('READY' => array('COUNT' => $nor
 				</div>
 			</div>
 		</div>
-		<div title="<?=$arCounters['COMPARE']['TITLE']?>" class="compare_count small">
-			<a href="<?=$arCounters['COMPARE']['HREF']?>"></a>
-			<div id="compare_fly" class="wraps_icon_block compare <?=(!$arCounters['COMPARE']['COUNT'] ? ' empty_block' : '')?>">
-				<div class="count<?=(!$arCounters['COMPARE']['COUNT'] ? ' empty_items' : '')?>">
-					<span>
-						<span class="items">
-							<span><?=$arCounters['COMPARE']['COUNT']?></span>
+		<?if(CNext::GetFrontParametrValue('CATALOG_COMPARE') != 'N'):?>
+			<div title="<?=$arCounters['COMPARE']['TITLE']?>" class="compare_count small">
+				<a href="<?=$arCounters['COMPARE']['HREF']?>"></a>
+				<div id="compare_fly" class="wraps_icon_block compare <?=(!$arCounters['COMPARE']['COUNT'] ? ' empty_block' : '')?>">
+					<div class="count<?=(!$arCounters['COMPARE']['COUNT'] ? ' empty_items' : '')?>">
+						<span>
+							<span class="items">
+								<span><?=$arCounters['COMPARE']['COUNT']?></span>
+							</span>
 						</span>
-					</span>
+					</div>
 				</div>
 			</div>
-		</div>
+		<?endif;?>
 	</div>
 	<script src="<?=(((COption::GetOptionString('main', 'use_minified_assets', 'N', $siteID) === 'Y') && file_exists($_SERVER['DOCUMENT_ROOT'].$templateFolder.'/script.min.js')) ? $templateFolder.'/script.min.js' : $templateFolder.'/script.js')?>" type="text/javascript"></script>
 	<?

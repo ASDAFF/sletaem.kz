@@ -4,10 +4,12 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 }
 
+use \Bitrix\Landing\Manager;
 use \Bitrix\Landing\Site;
 use \Bitrix\Landing\Landing;
 use \Bitrix\Landing\Syspage;
 use \Bitrix\Landing\Hook;
+use \Bitrix\Main\ModuleManager;
 
 \CBitrixComponent::includeComponentClass('bitrix:landing.base');
 
@@ -26,12 +28,72 @@ class LandingViewComponent extends LandingBaseComponent
 	protected $pagesCount;
 
 	/**
-	 * Publication landing.
+	 * Just redirect to the landing preview page.
 	 * @param int $id Landing id.
 	 * @return boolean
 	 */
-	protected function actionPublication($id)
+	protected function actionPreview($id)
 	{
+		\Bitrix\Landing\Landing::setPreviewMode(true);
+
+		$landing = Landing::createInstance($id);
+		if ($landing->exist())
+		{
+			\localRedirect(
+				$landing->getPublicUrl(false, true, true),
+				true
+			);
+		}
+
+		\Bitrix\Landing\Landing::setPreviewMode(false);
+
+		$this->setErrors(
+			$landing->getError()->getErrors()
+		);
+
+		return false;
+	}
+
+	/**
+	 * In some times we need show popup about site is now creating.
+	 * @param int $siteId Site id.
+	 * @return boolean
+	 */
+	protected function isNeedFirstPreparePopup($siteId)
+	{
+		if (!Manager::isB24())
+		{
+			return false;
+		}
+		$date = new \Bitrix\Main\Type\DateTime;
+		$res = Site::getList(array(
+			'filter' => array(
+				'ID' => $siteId,
+				'>DOMAIN.DATE_MODIFY' => $date->add('-15 seconds')
+			)
+		));
+		if ($row = $res->fetch())
+		{
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Publication landing.
+	 * @param int $id Landing id.
+	 * @param bool $disabledRedirect Disable redirect after publication.
+	 * @return boolean
+	 */
+	protected function actionPublication($id, $disabledRedirect = false)
+	{
+		static $publicIds = [];
+
+		if (isset($publicIds[$id]))
+		{
+			return $publicIds[$id];
+		}
+
 		$landing = Landing::createInstance($id);
 		$context = \Bitrix\Main\Application::getInstance()->getContext();
 		$request = $context->getRequest();
@@ -44,7 +106,8 @@ class LandingViewComponent extends LandingBaseComponent
 			$request->get('agreement') == 'Y'
 		)
 		{
-			return false;
+			$publicIds[$id] = false;
+			return $publicIds[$id];
 		}
 
 		if ($landing->exist())
@@ -68,6 +131,7 @@ class LandingViewComponent extends LandingBaseComponent
 			}
 			if ($landing->publication())
 			{
+				$publicIds[$id] = true;
 				// current landing is not area
 				$areas = $landing->getAreas();
 				if (!in_array($id, $areas))
@@ -75,13 +139,97 @@ class LandingViewComponent extends LandingBaseComponent
 					foreach ($areas as $aId)
 					{
 						$landingArea = Landing::createInstance($aId);
-						if ($landingArea->exist())
+						if (
+							$landingArea->exist() &&
+							$landingArea->publication()
+						)
 						{
-							$landingArea->publication();
+							$publicIds[$aId] = true;
 						}
 					}
 				}
-				\localRedirect($landing->getPublicUrl(false, true, true), true);
+				if ($disabledRedirect)
+				{
+					return $publicIds[$id];
+				}
+				if ($this->isNeedFirstPreparePopup($landing->getSiteId()))
+				{
+					$this->addError(
+						'SITE_IS_NOW_CREATING'
+					);
+					return false;
+				}
+				else
+				{
+					$url = $landing->getPublicUrl(false, true, true);
+					\localRedirect($this->getTimestampUrl($url), true);
+				}
+			}
+		}
+
+		$this->setErrors(
+			$landing->getError()->getErrors()
+		);
+
+		$publicIds[$id] = false;
+		return $publicIds[$id];
+	}
+
+	/**
+	 * Publication all landing in site of current landing.
+	 * @param int $id Landing id.
+	 * @return boolean
+	 */
+	protected function actionPublicationAll($id)
+	{
+		$landing = Landing::createInstance($id);
+
+		if ($landing->exist())
+		{
+			$pages = $this->getLandings(array(
+				'filter' => array(
+					'SITE_ID' => $landing->getSiteId()
+				)
+			));
+			foreach ($pages as $page)
+			{
+				if (!$this->actionPublication($page['ID'], true))
+				{
+					return false;
+				}
+			}
+			if ($this->isNeedFirstPreparePopup($landing->getSiteId()))
+			{
+				$this->addError(
+					'SITE_IS_NOW_CREATING'
+				);
+				return false;
+			}
+			$url = $landing->getPublicUrl(false, true, true);
+			\localRedirect($this->getTimestampUrl($url), true);
+		}
+
+		$this->setErrors(
+			$landing->getError()->getErrors()
+		);
+
+		return false;
+	}
+
+	/**
+	 * Cancel publication the landing.
+	 * @param int $id Landing id.
+	 * @return boolean
+	 */
+	protected function actionUnpublic($id)
+	{
+		$landing = Landing::createInstance($id);
+
+		if ($landing->exist())
+		{
+			if ($landing->unpublic())
+			{
+				return true;
 			}
 		}
 
@@ -165,13 +313,16 @@ class LandingViewComponent extends LandingBaseComponent
 	protected function onLandingView()
 	{
 		$type = strtolower($this->arParams['TYPE']);
+		$landing = $this->arResult['LANDING'];
 		$params = $this->arParams;
 		$eventManager = \Bitrix\Main\EventManager::getInstance();
 		$eventManager->addEventHandler('landing', 'onLandingView',
-			function(\Bitrix\Main\Event $event) use ($type, $params)
+			function(\Bitrix\Main\Event $event) use ($type, $params, $landing)
 			{
 				$result = new \Bitrix\Main\Entity\EventResult;
 				$options = $event->getParameter('options');
+				$meta = $landing->getMeta();
+				$options['version'] = Manager::getVersion();
 				$options['params'] = $params['PARAMS'];
 				$options['params']['type'] = $params['TYPE'];
 				$options['sites_count'] = $this->getSitesCount();
@@ -185,6 +336,22 @@ class LandingViewComponent extends LandingBaseComponent
 					'YACOUNTER' => array(),
 					'GACOUNTER' => array()
 				);
+				$options['lastModified'] = isset($meta['DATE_MODIFY'])
+											? $meta['DATE_MODIFY']->getTimestamp()
+											: null;
+				// product type
+				if (ModuleManager::isModuleInstalled('bitrix24'))
+				{
+					$options['productType'] = 'b24cloud';
+				}
+				else if (ModuleManager::isModuleInstalled('intranet'))
+				{
+					$options['productType'] = 'b24selfhosted';
+				}
+				else
+				{
+					$options['productType'] = 'smn';
+				}
 				// some hooks
 				$hookSite = Hook::getForSite($params['SITE_ID']);
 				$hookLanding = Hook::getForLanding($params['LANDING_ID']);
@@ -221,9 +388,10 @@ class LandingViewComponent extends LandingBaseComponent
 				}
 				// unset blocks not for this type
 				$b24 = \Bitrix\Landing\Manager::isB24();
+				$isStore = \Bitrix\Landing\Manager::isStoreEnabled();
 				foreach ($options['blocks'] as &$section)
 				{
-					foreach ($section['items'] as $code => $block)
+					foreach ($section['items'] as $code => &$block)
 					{
 						if (
 							!empty($block['type']) &&
@@ -233,7 +401,26 @@ class LandingViewComponent extends LandingBaseComponent
 						{
 							unset($section['items'][$code]);
 						}
+						if (
+							$block['type'] == 'store' &&
+							!$isStore
+						)
+						{
+							unset($section['items'][$code]);
+						}
+						if (
+							$block['version'] &&
+							version_compare($options['version'], $block['version']) < 0
+						)
+						{
+							$block['requires_updates'] = true;
+						}
+						else
+						{
+							$block['requires_updates'] = false;
+						}
 					}
+					unset($block);
 				}
 				unset($section);
 				// redefine options
@@ -325,6 +512,10 @@ class LandingViewComponent extends LandingBaseComponent
 			$landing = Landing::createInstance($this->arParams['LANDING_ID']);
 
 			$this->arResult['LANDING'] = $landing;
+			$this->arResult['~LANDING_FULL_URL'] = $landing->getPublicUrl(false, true, true);
+			$this->arResult['LANDING_FULL_URL'] = $this->getTimestampUrl(
+				$this->arResult['~LANDING_FULL_URL']
+			);
 
 			if ($landing->exist())
 			{
@@ -371,8 +562,33 @@ class LandingViewComponent extends LandingBaseComponent
 						$this->arResult['PLACEMENTS_SETTINGS'][] = $row;
 					}
 				}
+				// can publication page?
+				$canPublication = Manager::checkFeature(
+					Manager::FEATURE_PUBLICATION_PAGE,
+					array(
+						'filter' => array(
+							'!ID' => $landing->getId()
+						)
+					)
+				);
+				$this->arResult['CAN_PUBLICATION_PAGE'] = $canPublication;
+				if ($canPublication)
+				{
+					$canPublication = Manager::checkFeature(
+						Manager::FEATURE_PUBLICATION_SITE,
+						array(
+							'filter' => array(
+								'!ID' => $landing->getSiteId()
+							),
+							'type' => $this->arParams['TYPE']
+						)
+					);
+					$this->arResult['CAN_PUBLICATION_SITE'] = $canPublication;
+				}
+
 				$this->onLandingView();
 			}
+
 
 			// some errors?
 			$this->setErrors(

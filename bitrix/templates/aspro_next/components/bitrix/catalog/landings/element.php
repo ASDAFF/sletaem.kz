@@ -61,6 +61,13 @@ if($arRegion)
 		)
 	);?>
 
+	<?
+	/* hide compare link from module options */
+	if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+		$arParams["USE_COMPARE"] = 'N';
+	/**/
+	?>
+
 	<?if($arParams["USE_SHARE"] == "Y" && $arElement):?>
 		<?$this->SetViewTarget('product_share');?>
 		<div class="catalog_detail share top <?=($arParams['USE_RSS'] == 'Y' ? 'rss-block' : '');?>">

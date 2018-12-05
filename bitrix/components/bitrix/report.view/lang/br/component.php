@@ -1,4 +1,6 @@
 <?
+$MESS["REPORT_STEXPORT_TITLE"] = "Exportar Relatório";
+$MESS["REPORT_STEXPORT_SUMMARY"] = "Isto irá criar um arquivo de relatório. Exportar uma quantidade considerável de dados pode levar algum tempo.";
 $MESS["REPORT_SELECT_CALC_VAR_MIN"] = "Mínimo";
 $MESS["REPORT_SELECT_CALC_VAR_AVG"] = "Média";
 $MESS["REPORT_SELECT_CALC_VAR_MAX"] = "Máximo";

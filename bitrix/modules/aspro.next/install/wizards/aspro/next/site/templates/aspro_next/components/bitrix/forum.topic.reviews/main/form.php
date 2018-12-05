@@ -25,7 +25,7 @@ $iMessageCount = $arResult['NAV_RESULT']->NavRecordCount;
 }
 ?>
 
-<a name="review_anchor"></a>
+<a data-name="review_anchor"></a>
 <?
 if (!empty($arResult["ERROR_MESSAGE"])):
 	$arResult["ERROR_MESSAGE"] = preg_replace(array("/<br(.*?)><br(.*?)>/is", "/<br(.*?)>$/is"), array("<br />", ""), $arResult["ERROR_MESSAGE"]);
@@ -204,7 +204,7 @@ endif;
 						?>
 
 						<div class="reviews-upload-file" style="display:none;" id="upload_files_<?=$ii?>_<?=$arParams["form_index"]?>">
-							<input name="FILE_NEW_<?=$ii?>" type="file" value="" size="30" />
+							<input name="FILE_NEW_<?=$ii?>" type="file" size="30" />
 						</div>
 					<?
 					endfor;

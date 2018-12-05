@@ -4,6 +4,9 @@ function checkNavColor(slider){
 		slider.find('.flex-control-nav').addClass('flex-dark');
 	else
 		slider.find('.flex-control-nav').removeClass('flex-dark');
+
+	var eventdata = {slider: slider};
+	BX.onCustomEvent('onSlide', [eventdata]);
 }
 $(document).ready(function(){
 	if($('.top_slider_wrapp .flexslider').length){
@@ -37,4 +40,15 @@ $(document).ready(function(){
 
 		$(".top_slider_wrapp .flexslider").flexslider(config);
 	}
+
+	BX.addCustomEvent('onWindowResize', function(eventdata){
+		try{
+			ignoreResize.push(true);
+			CoverPlayerHtml()
+		}
+		catch(e){}
+		finally{
+			ignoreResize.pop();
+		}
+	})
 });

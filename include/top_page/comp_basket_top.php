@@ -32,18 +32,20 @@
 						</div>
 					</div>
 				</div>
-				<div title="<?=$arCounters['COMPARE']['TITLE']?>" class="compare_count small">
-					<a href="<?=(is_array($arCounters['COMPARE']['HREF']) ? $arCounters['COMPARE']['HREF']['VALUE'] : $arCounters['COMPARE']['HREF']);?>"></a>
-					<div id="compare_fly" class="wraps_icon_block compare <?=($arCounters['COMPARE']['COUNT'] ? '' : 'empty_block');?>">
-						<div class="count <?=($arCounters['COMPARE']['COUNT'] ? '' : 'empty_items');?>">
-							<span>
-								<span class="items">
-									<span><?=$arCounters['COMPARE']['COUNT'];?></span>
+				<?if(CNext::GetFrontParametrValue('CATALOG_COMPARE') != 'N'):?>
+					<div title="<?=$arCounters['COMPARE']['TITLE']?>" class="compare_count small">
+						<a href="<?=(is_array($arCounters['COMPARE']['HREF']) ? $arCounters['COMPARE']['HREF']['VALUE'] : $arCounters['COMPARE']['HREF']);?>"></a>
+						<div id="compare_fly" class="wraps_icon_block compare <?=($arCounters['COMPARE']['COUNT'] ? '' : 'empty_block');?>">
+							<div class="count <?=($arCounters['COMPARE']['COUNT'] ? '' : 'empty_items');?>">
+								<span>
+									<span class="items">
+										<span><?=$arCounters['COMPARE']['COUNT'];?></span>
+									</span>
 								</span>
-							</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				<?endif;?>
 			</div>
 			<div class="basket_sort">
 				<span class="basket_title"><?=GetMessage('T_BASKET')?></span>

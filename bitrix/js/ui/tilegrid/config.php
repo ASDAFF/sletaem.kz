@@ -10,5 +10,7 @@ return array(
 		"/bitrix/js/ui/tilegrid/grid.js",
 		"/bitrix/js/ui/tilegrid/item.js",
 		"/bitrix/js/ui/tilegrid/dragdrop.js"
-	)
+	),
+	"bundle_js" => "ui_tilegrid",
+	"bundle_css" => "ui_tilegrid"
 );

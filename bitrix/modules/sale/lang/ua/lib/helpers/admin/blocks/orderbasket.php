@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_ORDER_BASKET_PRODUCT_UNAVAILABLE"] = "Товар недоступний для покупки";
 $MESS["SALE_ORDER_BASKET_COMPOSITION"] = "Склад замовлення";
 $MESS["SALE_ORDER_BASKET_PRODUCT_ADD"] = "Додати товар";
 $MESS["SALE_ORDER_BASKET_PRODUCT_NEW"] = "Новий товар";
@@ -27,6 +28,7 @@ $MESS["SALE_ORDER_BASKET_PRICE_DISCOUNT"] = "Вартість товарів з 
 $MESS["SALE_ORDER_BASKET_PRICE_DELIVERY"] = "Вартість доставки";
 $MESS["SALE_ORDER_BASKET_PRICE_DELIVERY_DISCOUNT"] = "Вартість доставки з урахуванням знижок і націнок";
 $MESS["SALE_ORDER_BASKET_PAYMENT_DISCOUNT"] = "Знижка або націнка на спосіб оплати";
+$MESS["SALE_ORDER_DEPRECATED_DISCOUNT_VALUE"] = "Знижка на загальну суму замовлення";
 $MESS["SALE_ORDER_BASKET_TAX"] = "Податок";
 $MESS["SALE_ORDER_BASKET_WEIGHT"] = "Вага";
 $MESS["SALE_ORDER_BASKET_PAID"] = "Вже оплачено";
@@ -75,7 +77,5 @@ $MESS["SALE_ORDER_BASKET_POSITION_EXISTS"] = "Товар \"#NAME#\" в замо�
 $MESS["SALE_ORDER_BASKET_ACTUALIZE_DATA"] = "Перерахувати";
 $MESS["SALE_ORDER_BASKET_ADD_COUPON_ERROR"] = "Помилка додавання купона";
 $MESS["SALE_ORDER_BASKET_COUPONS_NOTE"] = "Для використання купонів, що діють на конкретний тип цін, необхідно ввести купон і перерахувати замовлення";
-$MESS["SALE_ORDER_BASKET_NO_NAME"] = "Без назви";
-$MESS["SALE_ORDER_DEPRECATED_DISCOUNT_VALUE"] = "Знижка на загальну суму замовлення";
 $MESS["SALE_ORDER_BASKET_PRODUCT_UNACTIVE"] = "Товар не активний";
 ?>

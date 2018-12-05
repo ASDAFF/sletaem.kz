@@ -166,18 +166,18 @@
 
 									<div class="accordion-type-1">
 										<div class="item<?=($bImage ? '' : ' wti')?>" id="<?=$this->GetEditAreaId($arItem['ID'])?>">
-											<div class="accordion-head accordion-close" data-toggle="collapse" data-parent="#accordion<?=$arSection['ID']?>" href="#accordion<?=$arItem['ID']?>_<?=$arSection['ID']?>">
+											<a class="accordion-head accordion-close" data-toggle="collapse" data-parent="#accordion<?=$arSection['ID']?>" href="#accordion<?=$arItem['ID']?>_<?=$arSection['ID']?>">
 												<span><?=$arItem['NAME']?><i class="fa fa-angle-down"></i></span>
 												<?if(in_array('PAY', $arParams['PROPERTY_CODE'])):?>
-													<div class="pay">
+													<span class="pay">
 														<?if($arItem['DISPLAY_PROPERTIES']['PAY']['VALUE']):?>
 															<?=GetMessage('PAY_ABOUT')?>&nbsp;<b><?=$arItem['DISPLAY_PROPERTIES']['PAY']['VALUE']?></b>
 														<?else:?>
 															<?=GetMessage('PAY_INTERVIEWS')?>
 														<?endif;?>
-													</div>
+													</span>
 												<?endif;?>
-											</div>
+											</a>
 											<div id="accordion<?=$arItem['ID']?>_<?=$arSection['ID']?>" class="panel-collapse collapse">
 												<div class="accordion-body">
 													<div class="row">

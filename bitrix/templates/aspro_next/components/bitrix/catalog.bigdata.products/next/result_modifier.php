@@ -29,6 +29,11 @@ if ('' != $arParams['TEMPLATE_THEME'])
 if ('' == $arParams['TEMPLATE_THEME'])
 	$arParams['TEMPLATE_THEME'] = 'blue';
 
+/* hide compare link from module options */
+if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+	$arParams["DISPLAY_COMPARE"] = 'N';
+/**/
+
 if (!empty($arResult['ITEMS']))
 {
 	$arConvertParams = array();

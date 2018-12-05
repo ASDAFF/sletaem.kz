@@ -1,13 +1,21 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Справочная информация");
-?>
-<div class="inside_page_content">
-	<div>Справочная информация на сайте помогает посетителю ресурса быстрее найти ответы на вопросы и дает подсказки о том, как быстрее и проще сделать те или иные вещи.</div>
-	<br />
-	<div>В разделе &quot;<a href="<?=SITE_DIR?>blog/" >Статьи</a>&quot; Вы найдете интересные материалы о способах обращения с техникой, оптимальных способах использования строительных материалов и многих других вещах, которые позволят Вам быстрее выбрать нужный товар и как можно легче его использовать.</div>
-	<br />
-	<div>Ответы на типовые вопросы посетителей мы собрали в разделе &quot;<a href="<?=SITE_DIR?>info/faq/" >Вопрос-ответ</a>&quot;. Если Вам что-то не понятно на сайте, предлагаем посетить этот раздел, чтобы разобраться со всеми сложностями в считанные минуты. Если же ответа найти не удалось, можно задать его нам на той же странице, и мы обязательно Вам ответим!</div>
-	<div>И, наконец, с информацией о партнерах и списком их предложений можно ознакомиться на странице &quot;<a href="<?=SITE_DIR?>info/brands/" >Партнеры</a>&quot;.</div>
-</div>
- <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+$APPLICATION->SetPageProperty("MENU_SHOW_ELEMENTS", "Y");
+$APPLICATION->SetPageProperty("keywords_inner", "Информация");
+$APPLICATION->SetPageProperty("title", "Информация");
+$APPLICATION->SetPageProperty("keywords", "Информация");
+$APPLICATION->SetPageProperty("description", "Информация");
+$APPLICATION->SetTitle("Информация");
+?><h3><img width="205" alt="sle-3.png" src="/upload/medialibrary/d91/d91465547171504f8d020953903732fe.png" height="34" title="sle-3.png" style="color: #555555;"><br>
+ </h3>
+<h3><br>
+</h3>
+<script id="bx24_form_inline" data-skip-moving="true">
+        (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+                (w[b].forms=w[b].forms||[]).push(arguments[0])};
+                if(w[b]['forms']) return;
+                var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://sletaem.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
+        b24form({"id":"4","lang":"ru","sec":"jfc3dg","type":"inline"});
+</script><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

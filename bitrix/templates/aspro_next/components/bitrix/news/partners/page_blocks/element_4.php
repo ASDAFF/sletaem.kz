@@ -228,7 +228,45 @@
 					<?$show = ($arParams["LINKED_ELEMENST_PAGE_COUNT"] ? $arParams["LINKED_ELEMENST_PAGE_COUNT"] : 20);?>
 					<?if(isset($GLOBALS[$arParams["FILTER_NAME"]]["FACET_OPTIONS"]))
 						unset($GLOBALS[$arParams["FILTER_NAME"]]["FACET_OPTIONS"]);?>
-					<div class="ajax_load <?=$display;?>">
+
+					<?$arTransferParams = array(
+						"SHOW_ABSENT" => $arParams["SHOW_ABSENT"],
+						"HIDE_NOT_AVAILABLE_OFFERS" => $arParams["HIDE_NOT_AVAILABLE_OFFERS"],
+						"PRICE_CODE" => $arParams["PRICE_CODE"],
+						"OFFER_TREE_PROPS" => $arParams["OFFER_TREE_PROPS"],
+						"CACHE_TIME" => $arParams["CACHE_TIME"],
+						"CONVERT_CURRENCY" => $arParams["CONVERT_CURRENCY"],
+						"CURRENCY_ID" => $arParams["CURRENCY_ID"],
+						"OFFERS_SORT_FIELD" => $arParams["OFFERS_SORT_FIELD"],
+						"OFFERS_SORT_ORDER" => $arParams["OFFERS_SORT_ORDER"],
+						"OFFERS_SORT_FIELD2" => $arParams["OFFERS_SORT_FIELD2"],
+						"OFFERS_SORT_ORDER2" => $arParams["OFFERS_SORT_ORDER2"],
+						"LIST_OFFERS_LIMIT" => $arParams["LIST_OFFERS_LIMIT"],
+						"LIST_OFFERS_PROPERTY_CODE" => $arParams["LIST_OFFERS_PROPERTY_CODE"],
+						"SHOW_DISCOUNT_TIME" => $arParams["SHOW_DISCOUNT_TIME"],
+						"SHOW_COUNTER_LIST" => $arParams["SHOW_COUNTER_LIST"],
+						"PRICE_VAT_INCLUDE" => $arParams["PRICE_VAT_INCLUDE"],
+						"USE_PRICE_COUNT" => $arParams["USE_PRICE_COUNT"],
+						"SHOW_MEASURE" => $arParams["SHOW_MEASURE"],
+						"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+						"SHOW_OLD_PRICE" => $arParams["SHOW_OLD_PRICE"],
+						"SHOW_DISCOUNT_PERCENT" => $arParams["SHOW_DISCOUNT_PERCENT"],
+						"SHOW_DISCOUNT_PERCENT_NUMBER" => $arParams["SHOW_DISCOUNT_PERCENT_NUMBER"],
+						"USE_REGION" => ($arRegion ? "Y" : "N"),
+						"STORES" => $arParams["STORES"],
+						"DEFAULT_COUNT" => $arParams["DEFAULT_COUNT"],
+						"BASKET_URL" => $arParams["BASKET_URL"],
+						"OFFERS_CART_PROPERTIES" => $arParams["OFFERS_CART_PROPERTIES"],
+						"PRODUCT_PROPERTIES" => $arParams["PRODUCT_PROPERTIES"],
+						"PARTIAL_PRODUCT_PROPERTIES" => $arParams["PARTIAL_PRODUCT_PROPERTIES"],
+						"ADD_PROPERTIES_TO_BASKET" => $arParams["ADD_PROPERTIES_TO_BASKET"],
+						"SHOW_DISCOUNT_TIME_EACH_SKU" => $arParams["SHOW_DISCOUNT_TIME_EACH_SKU"],
+						"SHOW_ARTICLE_SKU" => $arParams["SHOW_ARTICLE_SKU"],
+						"OFFER_ADD_PICT_PROP" => $arParams["OFFER_ADD_PICT_PROP"],
+						"PRODUCT_QUANTITY_VARIABLE" => $arParams["PRODUCT_QUANTITY_VARIABLE"],
+					);?>
+
+					<div class="ajax_load <?=$display;?> js_wrapper_items" data-params='<?=str_replace('\'', '"', CUtil::PhpToJSObject($arTransferParams, false))?>'>
 					<?if($isAjax=="Y" && $isAjaxFilter != "Y"):?>
 						<?$APPLICATION->RestartBuffer();?>
 					<?endif;?>
@@ -275,7 +313,7 @@
 
 								"SECTION_URL" => "",
 								"DETAIL_URL" => "",
-								"BASKET_URL" => $arParams["BASKET_URL"],
+								"BASKET_URL" => $arTheme["BASKET_PAGE_URL"]["VALUE"],
 								"ACTION_VARIABLE" => $arParams["ACTION_VARIABLE"],
 								"PRODUCT_ID_VARIABLE" => $arParams["PRODUCT_ID_VARIABLE"],
 								"PRODUCT_QUANTITY_VARIABLE" => "quantity",

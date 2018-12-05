@@ -342,7 +342,11 @@ BX.rest.Marketplace = (function(){
 
 			if(!!placementConfig && !!placementConfig.PLACEMENT)
 			{
-				url = BX.util.add_url_param(url, {placement: placementConfig.PLACEMENT});
+				url = BX.util.add_url_param(url, {placement: placementConfig.PLACEMENT, category: category});
+			}
+			else
+			{
+				url = BX.util.add_url_param(url, {category: category});
 			}
 
 			BX.SidePanel.Instance.open(
@@ -352,8 +356,7 @@ BX.rest.Marketplace = (function(){
 					allowChangeHistory: false,
 					requestMethod: 'post',
 					requestParams: {
-						sessid: BX.bitrix_sessid(),
-						category: category
+						sessid: BX.bitrix_sessid()
 					}
 				}
 			);
@@ -369,7 +372,7 @@ BX.rest.Marketplace = (function(){
 		{
 			BX.ready(function()
 			{
-				BX.SidePanel.Instance.bindAnchors({
+				BX.SidePanel.Instance.bindAnchors(top.BX.clone({
 					rules: [
 						{
 							condition: [
@@ -382,7 +385,7 @@ BX.rest.Marketplace = (function(){
 							}
 						}
 					]
-				});
+				}));
 			});
 		}
 	};

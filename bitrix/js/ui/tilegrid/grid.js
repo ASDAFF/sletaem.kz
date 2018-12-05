@@ -9,6 +9,9 @@ BX.TileGrid.Grid = function(options)
 	this.options = options;
 	this.id = options.id;
 	this.tileSize = options.tileSize;
+	this.itemHeight = options.itemHeight;
+	this.itemMinWidth = options.itemMinWidth;
+	this.checkBoxing = options.checkBoxing;
 	this.items = [];
 	this.renderTo = options.container;
 	this.multiSelectMode = null;
@@ -114,11 +117,10 @@ BX.TileGrid.Grid.prototype =
 		BX.bind(window, 'click', function(event)
 		{
 			if (this.checkParent(event.target))
-			{
 				return;
-			}
 
 			this.resetSelection();
+			this.resetSetMultiSelectMode();
 		}.bind(this));
 	},
 
@@ -146,7 +148,9 @@ BX.TileGrid.Grid.prototype =
 	appendItem: function(item)
 	{
 		this.addItem(item);
-		this.container.appendChild(this.items[this.items.length - 1].render());
+		var itemNode = this.items[this.items.length - 1].render();
+		BX.addClass(itemNode, 'ui-grid-tile-item-inserted');
+		this.container.appendChild(itemNode);
 		this.items[this.items.length - 1].afterRender();
 	},
 
@@ -359,6 +363,11 @@ BX.TileGrid.Grid.prototype =
 
 	calculateCountItemsPerRowM: function()
 	{
+		if(this.itemMinWidth)
+		{
+			return Math.round(this.getContainerWidth() / (this.itemMinWidth + this.itemMinWidth / 5));
+		}
+
 		switch (true)
 		{
 			case this.getContainerWidth() <= 720:
@@ -622,7 +631,7 @@ BX.TileGrid.Grid.prototype =
 			this.selectItem(this.items[this.selectNextItemNumber(this.currentItem)]);
 
 			nextToBeSelected = this.items[this.items.indexOf(this.currentItem) + 1];
-			if (nextToBeSelected && !this.isVisibleItem(nextToBeSelected))
+			if (nextToBeSelected && !nextToBeSelected.isVisibleItem())
 			{
 				scrollToSmooth(nextToBeSelected.getContainer().getBoundingClientRect().height);
 			}
@@ -641,7 +650,7 @@ BX.TileGrid.Grid.prototype =
 			this.selectItem(this.items[this.selectPreviousItemNumber(this.currentItem)]);
 
 			nextToBeSelected = this.items[this.items.indexOf(this.currentItem) - 1];
-			if (nextToBeSelected && !this.isVisibleItem(nextToBeSelected))
+			if (nextToBeSelected && !nextToBeSelected.isVisibleItem())
 			{
 				scrollToSmooth(-nextToBeSelected.getContainer().getBoundingClientRect().height);
 			}
@@ -668,7 +677,7 @@ BX.TileGrid.Grid.prototype =
 			this.selectItem(this.currentItem);
 
 			nextToBeSelected = this.items[this.items.indexOf(this.currentItem) - this.countItemsPerRow];
-			if (nextToBeSelected && !this.isVisibleItem(nextToBeSelected))
+			if (nextToBeSelected && !nextToBeSelected.isVisibleItem())
 			{
 				scrollToSmooth(-nextToBeSelected.getContainer().getBoundingClientRect().height);
 			}
@@ -695,29 +704,11 @@ BX.TileGrid.Grid.prototype =
 			this.selectItem(this.currentItem);
 
 			nextToBeSelected = this.items[this.items.indexOf(this.currentItem) + this.countItemsPerRow];
-			if (nextToBeSelected && !this.isVisibleItem(nextToBeSelected))
+			if (nextToBeSelected && !nextToBeSelected.isVisibleItem())
 			{
 				scrollToSmooth(nextToBeSelected.getContainer().getBoundingClientRect().height);
 			}
 		}
-	},
-
-	isVisibleItem: function(item)
-	{
-		if (!item)
-		{
-			return false;
-		}
-
-		var rect = item.getContainer().getBoundingClientRect();
-		var rectBody = document.body.getBoundingClientRect();
-
-		if (rect.top < 0 || rect.bottom < 0)
-		{
-			return false;
-		}
-
-		return rectBody.height > rect.top && rectBody.height >= rect.bottom;
 	},
 
 	selectNextItemNumber: function(currentItem)
@@ -1090,6 +1081,9 @@ BX.TileGrid.Grid.prototype =
 
 		BX.removeClass(item.layout.container, 'ui-grid-tile-item-selected');
 		item.selected = false;
+
+		if(this.isLastSelectedItem())
+			this.resetSetMultiSelectMode();
 
 		BX.onCustomEvent('BX.TileGrid.Grid:unSelectItem', [item, this]);
 	},

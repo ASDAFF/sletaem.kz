@@ -728,7 +728,7 @@ BX.Sale.Admin.OrderBasket.prototype.createProductCell = function(basketCode, pro
 		tdClass = "",
 		_this = this,
 		isSetItem = (BX.type.isNotEmptyString(product.IS_SET_ITEM) && product.IS_SET_ITEM === 'Y'),
-		isProductActive = (BX.type.isNotEmptyString(product.PRODUCT_ACTIVE) && product.PRODUCT_ACTIVE === 'Y');
+		isProductEnabled = (BX.type.isNotEmptyString(product.CAN_BUY) && product.CAN_BUY === 'Y');
 
 	switch(fieldId)
 	{
@@ -753,8 +753,8 @@ BX.Sale.Admin.OrderBasket.prototype.createProductCell = function(basketCode, pro
 				var bundleShow = BX.create('a',{
 					props:{
 						href:"javascript:void(0);",
-						className: "dashed-link show-set-link" + (!isProductActive ? ' product-unactive' : ''),
-						title: (!isProductActive ? BX.message('SALE_ORDER_BASKET_PRODUCT_UNACTIVE') : '')
+						className: "dashed-link show-set-link" + (!isProductEnabled ? ' product-unavailable' : ''),
+						title: (!isProductEnabled ? BX.message('SALE_ORDER_BASKET_PRODUCT_UNAVAILABLE') : '')
 					},
 					html: BX.message("SALE_ORDER_BASKET_EXPAND")
 				});
@@ -780,8 +780,8 @@ BX.Sale.Admin.OrderBasket.prototype.createProductCell = function(basketCode, pro
 						props:{
 							href:product.EDIT_PAGE_URL,
 							target:"_blank",
-							className: (!isProductActive ? 'product-unactive' : ''),
-							title: (!isProductActive ? BX.message('SALE_ORDER_BASKET_PRODUCT_UNACTIVE') : '')
+							className: (!isProductEnabled ? 'product-unavailable' : ''),
+							title: (!isProductEnabled ? BX.message('SALE_ORDER_BASKET_PRODUCT_UNAVAILABLE') : '')
 						},
 						html: BX.util.htmlspecialchars(fieldValue)
 					});

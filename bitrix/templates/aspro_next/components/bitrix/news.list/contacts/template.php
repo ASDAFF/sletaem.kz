@@ -1,7 +1,7 @@
 <?if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();?>
 <?$this->setFrameMode(true);?>
 <div class="item-views-wrapper <?=$templateName;?>">
-
+	
 	<?if($arResult['SECTIONS']):?>
 		<div class="maxwidth-theme">
 			<div class="row">
@@ -15,7 +15,7 @@
 								$this->AddEditAction($arSection['SECTION']['ID'], $arSectionButtons['edit']['edit_section']['ACTION_URL'], CIBlock::GetArrayByID($arSection['SECTION']['IBLOCK_ID'], 'SECTION_EDIT'));
 								$this->AddDeleteAction($arSection['SECTION']['ID'], $arSectionButtons['edit']['delete_section']['ACTION_URL'], CIBlock::GetArrayByID($arSection['SECTION']['IBLOCK_ID'], 'SECTION_DELETE'), array('CONFIRM' => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));?>
 								<tr id="<?=$this->GetEditAreaId($arSection['SECTION']['ID'])?>">
-									<td colspan="2"><h4><?=$arSection['SECTION']['NAME'];?></h4></td>
+									<td colspan="3"><h4><?=$arSection['SECTION']['NAME'];?></h4></td>
 									<td class="hidden-xs"></td>
 									<td class="hidden-xs hidden-sm"></td>
 								</tr>
@@ -28,7 +28,7 @@
 								// use detail link?
 								$bDetailLink = $arParams['SHOW_DETAIL_LINK'] != 'N' && (!strlen($arItem['DETAIL_TEXT']) ? ($arParams['HIDE_LINK_WHEN_NO_DETAIL'] !== 'Y' && $arParams['HIDE_LINK_WHEN_NO_DETAIL'] != 1) : true);
 								// preview picture
-								$bImage = isset($arItem['FIELDS']['PREVIEW_PICTURE']) && strlen($arItem['PREVIEW_PICTURE']['SRC']);
+								$bImage = (isset($arItem['FIELDS']['PREVIEW_PICTURE']) && strlen($arItem['PREVIEW_PICTURE']['SRC']));
 								$imageSrc = ($bImage ? $arItem['PREVIEW_PICTURE']['SRC'] : false);
 								$imageDetailSrc = ($bImage ? $arItem['DETAIL_PICTURE']['SRC'] : false);
 								$address = ($arItem['PROPERTIES']['ADDRESS']['VALUE'] ? ", ".$arItem['PROPERTIES']['ADDRESS']['VALUE'] : "");
@@ -42,21 +42,51 @@
 											</a>
 										</td>
 									<?endif;?>
-									<td class="hidden-xs" <?=(($arResult['ITEMS_HAS_IMG'] && !$imageSrc) ? 'colspan=2' : '');?>>
+									<td colspan="<?=($imageSrc ? 1 : 2);?>" class="hidden-xs" <?=(($arResult['ITEMS_HAS_IMG'] && !$imageSrc) ? 'colspan=2' : '');?>>
 										<div class="title">
 											<a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="dark_link"><?=$arItem['NAME'];?><?=$address;?></a>
 										</div>
 										<?if($arItem['PROPERTIES']['METRO']['VALUE']):?>
-											<?foreach($arItem['PROPERTIES']['METRO']['VALUE'] as $metro):?>
-												<div class="metro">
-													<i></i><?=$metro;?>
-												</div>
-											<?endforeach;?>
+											<div class="muted">
+												<?foreach($arItem['PROPERTIES']['METRO']['VALUE'] as $metro):?>
+													<div class="icons-text metro1">
+														<i class="fa"><?=CNext::showIconSvg("metro colored", SITE_TEMPLATE_PATH."/images/svg/Metro.svg");?></i>
+														<div class="text"><?=$metro;?></div>
+													</div>
+												<?endforeach;?>
+											</div>
 										<?endif;?>
 										<?if($arItem['PROPERTIES']['SCHEDULE']['VALUE']):?>
 											<div class="muted">
-												<span class="icon-text schedule grey s25"><i class="fa fa-clock-o"></i> <span class="text"><?=$arItem['PROPERTIES']['SCHEDULE']['~VALUE']['TEXT'];?></span></span>
+												<div class="icons-text schedule grey s25"><i class="fa"><?=CNext::showIconSvg("clock colored", SITE_TEMPLATE_PATH."/images/svg/WorkingHours.svg");?></i> <div class="text"><?=$arItem['PROPERTIES']['SCHEDULE']['~VALUE']['TEXT'];?></div></div>
 											</div>
+										<?endif;?>
+										<?if($arItem['PROPERTIES']['EMAIL']['VALUE']):?>
+											<div class="muted">
+												<div class="icons-text schedule grey s25"><i class="fa"><?=CNext::showIconSvg("email colored", SITE_TEMPLATE_PATH."/images/svg/Email.svg");?></i> <div class="text"><a href="mailto:<?=$arItem['PROPERTIES']['EMAIL']['VALUE'];?>"><?=$arItem['PROPERTIES']['EMAIL']['VALUE'];?></a></div>
+											</div>
+											</div>
+										<?endif;?>
+										<?if($arItem['DISPLAY_PROPERTIES']):?>
+											<?foreach($arItem["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
+												<?if($arProperty["DISPLAY_VALUE"]):?>
+													<div class="muted custom_prop <?=strtolower($pid);?>">
+														<div class="icons-text schedule grey s25">
+															<i class="fa"></i>
+															<span class="text_custom">
+																<span class="name"><?=$arProperty["NAME"]?>:&nbsp;</span>
+																<span class="value">
+																	<?if(is_array($arProperty["DISPLAY_VALUE"])):?>
+																		<?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
+																	<?else:?>
+																		<?=$arProperty["DISPLAY_VALUE"];?>
+																	<?endif?>
+																</span>
+															</span>
+														</div>
+													</div>
+												<?endif?>
+											<?endforeach;?>
 										<?endif;?>
 									</td>
 									<td class="phone hidden-xs">
@@ -67,16 +97,54 @@
 										<?endforeach;
 									}?>
 									</td>
-									<td class="visible-xs mobile-title-phone" colspan=3>
+									<td class="visible-xs mobile-title-phone">
 										<div class="row">
 											<div class="col-xs-8">
 												<div class="titles-block">
 													<div class="title"><a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="dark_link"><?=$arItem['NAME'];?><?=$address;?></a></div>
-													<?if($arItem['PROPERTIES']['SCHEDULE']['VALUE']):?>
+													<?if($arItem['PROPERTIES']['METRO']['VALUE']):?>
 														<div class="muted">
-															<span class="icon-text schedule grey s25"><i class="fa fa-clock-o"></i> <span class="text"><?=$arItem['PROPERTIES']['SCHEDULE']['~VALUE']['TEXT'];?></span></span>
+															<?foreach($arItem['PROPERTIES']['METRO']['VALUE'] as $metro):?>
+																<div class="icons-text metro1">
+																	<i class="fa"><?=CNext::showIconSvg("metro colored", SITE_TEMPLATE_PATH."/images/svg/Metro.svg");?></i>
+																	<div class="text"><?=$metro;?></div>
+																</div>
+															<?endforeach;?>
 														</div>
 													<?endif;?>
+													<?if($arItem['PROPERTIES']['SCHEDULE']['VALUE']):?>
+														<div class="muted">
+															<div class="icons-text schedule grey s25"><i class="fa"><?=CNext::showIconSvg("clock colored", SITE_TEMPLATE_PATH."/images/svg/WorkingHours.svg");?></i> <div class="text"><?=$arItem['PROPERTIES']['SCHEDULE']['~VALUE']['TEXT'];?></div></div>
+														</div>
+													<?endif;?>
+													<?if($arItem['PROPERTIES']['EMAIL']['VALUE']):?>
+														<div class="muted">
+															<div class="icons-text schedule grey s25"><i class="fa"><?=CNext::showIconSvg("email colored", SITE_TEMPLATE_PATH."/images/svg/Email.svg");?></i><div class="text"><a href="mailto:<?=$arItem['PROPERTIES']['EMAIL']['VALUE'];?>"><?=$arItem['PROPERTIES']['EMAIL']['VALUE'];?></a></div>
+															</div>
+														</div>
+													<?endif;?>
+													<?if($arItem['DISPLAY_PROPERTIES']):?>
+														<?foreach($arItem["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
+															<?if($arProperty["DISPLAY_VALUE"]):?>
+																<div class="muted custom_prop <?=strtolower($pid);?>">
+																	<div class="icons-text schedule grey s25">
+																		<i class="fa"></i>
+																		<span class="text_custom">
+																			<span class="name"><?=$arProperty["NAME"]?>:&nbsp;</span>
+																			<span class="value">
+																				<?if(is_array($arProperty["DISPLAY_VALUE"])):?>
+																					<?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
+																				<?else:?>
+																					<?=$arProperty["DISPLAY_VALUE"];?>
+																				<?endif?>
+																			</span>
+																		</span>
+																	</div>
+																</div>
+															<?endif?>
+														<?endforeach;?>
+													<?endif;?>
+													
 												</div>
 											</div>
 											<div class="col-xs-4">
@@ -98,7 +166,7 @@
 												<span class="icon-text grey s30">
 													<?if($arPays['UF_ICON_CLASS']):?><i class="fa <?=$arPays['UF_ICON_CLASS'];?>"></i>
 													<?elseif($arPays['UF_FILE']):?>
-														<i><img src="<?=CFile::GetPath($arPays['UF_FILE']);?>" width="17" /></i>
+														<i><img src="<?=CFile::GetPath($arPays['UF_FILE']);?>" width="17" alt="<?=$arPays['UF_NAME'];?>"/></i>
 													<?endif;?> <?=$arPays['UF_NAME'];?>
 												</span>
 											<?endforeach;

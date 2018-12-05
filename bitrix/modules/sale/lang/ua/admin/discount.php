@@ -18,7 +18,6 @@ $MESS["SDSN_MODIFIED_BY_NEW"] = "Ким змінено";
 $MESS["SDSN_TIMESTAMP_X"] = "Дата зміни";
 $MESS["SDSN_XML_ID"] = "Зовнішній код";
 $MESS["BT_SALE_DISCOUNT_LIST_MESS_TITLE"] = "Правила роботи з кошиком";
-$MESS["BT_SALE_DISCOUNT_LIST_MESS_NAV"] = "Правила";
 $MESS["BT_SALE_DISCOUNT_LIST_ERR_DELETE_DISCOUNT"] = "Помилка видалення правила";
 $MESS["BT_SALE_DISCOUNT_LIST_MESS_EDIT_DISCOUNT"] = "Змінити параметри правила";
 $MESS["BT_SALE_DISCOUNT_LIST_MESS_EDIT_DISCOUNT_SHORT"] = "Змінити";

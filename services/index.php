@@ -1,6 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Услуги");
+$APPLICATION->SetPageProperty("keywords_inner", "Купить тур онлайн из Казахстана – на Новый год, все включено, горящий");
+$APPLICATION->SetPageProperty("title", "Купить тур онлайн из Казахстана – на Новый год, все включено, горящий");
+$APPLICATION->SetPageProperty("keywords", "купить тур онлайн, купить тур казахстан, купить тур на новый год, купить тур все включено, купить дешевый тур на новый год, тура купить цена, купить горящий тур все включено.");
+$APPLICATION->SetPageProperty("description", "Купить тур онлайн с вылетом из разных городов Казахстана по низкой цене можно у нас. У нас есть дешевые туры на Новый год, все включено и горящие туры.");
+$APPLICATION->SetTitle("Купить тур онлайн из Казахстана – на Новый год, все включено, горящий");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"services", 

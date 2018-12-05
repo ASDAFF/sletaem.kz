@@ -204,6 +204,9 @@ if($isAjaxFilter == "Y")
 		<?endif;?>
 		<?ob_start()?>
 			<?include_once(__DIR__."/../filter.php")?>
+			<script>
+				$('#content > .wrapper_inner > .left_block').addClass('filter_ajax filter_visible');
+			</script>
 		<?$html=ob_get_clean();?>
 		<?$APPLICATION->AddViewContent('left_menu', $html);?>
 	<?}?>
@@ -213,7 +216,7 @@ if($isAjaxFilter == "Y")
 			<div class="filter_horizontal">
 				<?include_once(__DIR__."/../filter.php")?>
 			</div>
-		<?}else{?>
+		<?}/*else{?>
 			<div class="js_filter filter_horizontal">
 				<?if($isAjaxFilter == "Y"):?>
 					<?include(__DIR__."/../filter.php")?>
@@ -221,7 +224,7 @@ if($isAjaxFilter == "Y")
 					<div class="bx_filter bx_filter_vertical"></div>
 				<?endif;?>
 			</div>
-		<?}?>
+		<?}*/?>
 		<div class="inner_wrapper">
 <?endif;?>
 			<?if(!$arSeoItem):?>
@@ -269,7 +272,7 @@ if($isAjaxFilter == "Y")
 				$frame->begin();?>
 			<?}?>
 			<?include_once(__DIR__."/../sort.php");?>
-
+			
 			<?if($isAjax=="Y"){
 				$APPLICATION->RestartBuffer();
 			}?>
@@ -303,6 +306,7 @@ if($isAjaxFilter == "Y")
 						"LINE_ELEMENT_COUNT" => $arParams["LINE_ELEMENT_COUNT"],
 						"DISPLAY_TYPE" => $display,
 						"TYPE_SKU" => ($typeSKU ? $typeSKU : $arTheme["TYPE_SKU"]["VALUE"]),
+						"SET_SKU_TITLE" => ((($typeSKU == "TYPE_1" || $arTheme["TYPE_SKU"]["VALUE"] == "TYPE_1") && $arTheme["CHANGE_TITLE_ITEM"]["VALUE"] == "Y") ? "Y" : ""),
 						"PROPERTY_CODE" => $arParams["LIST_PROPERTY_CODE"],
 						"SHOW_ARTICLE_SKU" => $arParams["SHOW_ARTICLE_SKU"],
 						"SHOW_MEASURE_WITH_RATIO" => $arParams["SHOW_MEASURE_WITH_RATIO"],

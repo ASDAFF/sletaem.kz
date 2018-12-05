@@ -31,6 +31,11 @@ if ('' != $arParams['TEMPLATE_THEME'])
 if ('' == $arParams['TEMPLATE_THEME'])
 	$arParams['TEMPLATE_THEME'] = 'blue';
 
+/* hide compare link from module options */
+if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+	$arParams["DISPLAY_COMPARE"] = 'N';
+/**/
+
 if (!empty($arResult['ITEMS']))
 {
 	$arConvertParams = array();
@@ -289,6 +294,16 @@ if (!empty($arResult['ITEMS']))
 				}
 				if ('' != $arParams['OFFER_ADD_PICT_PROP'] && isset($arOffer['DISPLAY_PROPERTIES'][$arParams['OFFER_ADD_PICT_PROP']]))
 					unset($arOffer['DISPLAY_PROPERTIES'][$arParams['OFFER_ADD_PICT_PROP']]);
+
+				if($arParams["USE_MAIN_ELEMENT_SECTION"] != "Y")
+				{
+					if($arOffer["DETAIL_PAGE_URL"])
+					{
+						$arTmpUrl = explode("?", $arOffer["DETAIL_PAGE_URL"]);
+						$arOffer["DETAIL_PAGE_URL"] = str_replace($arTmpUrl[0], $arItem["DETAIL_PAGE_URL"], $arOffer["DETAIL_PAGE_URL"]);
+					}
+				}
+				
 				$arNewOffers[$keyOffer] = $arOffer;
 			}
 			$arItem['OFFERS'] = $arNewOffers;

@@ -18,9 +18,9 @@ $htmlClass = ($_REQUEST && isset($_REQUEST['print']) ? 'print' : false);
 		 if(stristr($wsdesc, ' '.$_REQUEST['PAGEN_1']) === FALSE) {
 		      $APPLICATION->SetPageProperty('description', $wsdesc.$wspagenum);
 		 }
+		$wscanonicalmeta = '';
 	}
-	//$wscanonicalmeta = '<link rel="canonical" href="' . $wscanonical . '">';
-	$wscanonicalmeta = '';
+	$wscanonicalmeta = '<link rel="canonical" href="' . $wscanonical . '">';
 	// END WebSEO.kz
  
 $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));
@@ -48,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<?if($bIncludedModule)
 		CNext::Start(SITE_ID);?>
 </head>
-<body class="<?=($bIncludedModule ? "fill_bg_".strtolower(CNext::GetFrontParametrValue("SHOW_BG_BLOCK")) : "");?>" id="main">
+<body class="site_<?=SITE_ID?> <?=($bIncludedModule ? "fill_bg_".strtolower(CNext::GetFrontParametrValue("SHOW_BG_BLOCK")) : "");?>" id="main">
 	<div id="panel"><?$APPLICATION->ShowPanel();?></div>
 	<?if(!$bIncludedModule):?>
 		<?$APPLICATION->SetTitle(GetMessage("ERROR_INCLUDE_MODULE_ASPRO_NEXT_TITLE"));?>

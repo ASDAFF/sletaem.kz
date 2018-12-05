@@ -1,14 +1,14 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("keywords", "Партнеры");
-$APPLICATION->SetPageProperty("description", "Партнеры");
+$APPLICATION->SetPageProperty("keywords", "Туроператоры Казахстана");
+$APPLICATION->SetPageProperty("description", "Туроператоры Казахстана");
 $APPLICATION->SetTitle("Партнеры");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"partners", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "Y",
-		"IBLOCK_CATALOG_ID" => 17,
+		"IBLOCK_CATALOG_ID" => "17",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
@@ -43,9 +43,9 @@ $APPLICATION->SetTitle("Партнеры");
 			0 => "",
 			1 => "SITE",
 			2 => "PHONE",
-			5 => "DOCUMENTS",
-			6 => "PHOTOS",
-			7 => "",
+			3 => "DOCUMENTS",
+			4 => "PHOTOS",
+			5 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -64,10 +64,9 @@ $APPLICATION->SetTitle("Партнеры");
 			3 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "SITE",
-			2 => "PHONE",
-			3 => "",
+			0 => "SITE",
+			1 => "PHONE",
+			2 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
@@ -110,10 +109,12 @@ $APPLICATION->SetTitle("Партнеры");
 		"PRICE_CODE" => array(
 			0 => "BASE",
 			1 => "OPT",
+			2 => "",
 		),
 		"STORES" => array(
-			0 => "1",
-			1 => "",
+			0 => "",
+			1 => "1",
+			2 => "",
 		),
 		"T_GOODS" => "",
 		"T_GALLERY" => "Галерея",
@@ -121,6 +122,63 @@ $APPLICATION->SetTitle("Партнеры");
 		"GALLERY_PRODUCTS_PROPERTY" => "PHOTOS",
 		"SECTION_ELEMENTS_TYPE_VIEW" => "FROM_MODULE",
 		"ELEMENT_TYPE_VIEW" => "FROM_MODULE",
+		"T_GOODS_SECTION" => "",
+		"LIST_VIEW" => "slider",
+		"LINKED_ELEMENST_PAGE_COUNT" => "20",
+		"SHOW_MEASURE" => "N",
+		"DEFAULT_LIST_TEMPLATE" => "block",
+		"SHOW_UNABLE_SKU_PROPS" => "Y",
+		"SHOW_ARTICLE_SKU" => "N",
+		"SHOW_MEASURE_WITH_RATIO" => "N",
+		"SHOW_DISCOUNT_PERCENT" => "N",
+		"SHOW_DISCOUNT_PERCENT_NUMBER" => "N",
+		"ALT_TITLE_GET" => "NORMAL",
+		"SHOW_DISCOUNT_TIME" => "Y",
+		"SHOW_DISCOUNT_TIME_EACH_SKU" => "N",
+		"SHOW_RATING" => "Y",
+		"DISPLAY_COMPARE" => "Y",
+		"DISPLAY_WISH_BUTTONS" => "Y",
+		"SHOW_OLD_PRICE" => "N",
+		"ADD_PROPERTIES_TO_BASKET" => "Y",
+		"PRODUCT_PROPS_VARIABLE" => "prop",
+		"PARTIAL_PRODUCT_PROPERTIES" => "N",
+		"PRODUCT_PROPERTIES" => array(
+		),
+		"LIST_PROPERTY_CATALOG_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"SORT_BUTTONS" => array(
+			0 => "POPULARITY",
+			1 => "NAME",
+			2 => "PRICE",
+		),
+		"IBLOCK_CATALOG_TYPE" => "-",
+		"SALE_STIKER" => "-",
+		"STIKERS_PROP" => "-",
+		"OFFER_ADD_PICT_PROP" => "-",
+		"OFFER_TREE_PROPS" => array(
+		),
+		"OFFER_HIDE_NAME_PROPS" => "N",
+		"LIST_OFFERS_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"LIST_OFFERS_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"LIST_OFFERS_LIMIT" => "5",
+		"OFFERS_CART_PROPERTIES" => array(
+		),
+		"OFFERS_SORT_FIELD" => "sort",
+		"OFFERS_SORT_ORDER" => "asc",
+		"OFFERS_SORT_FIELD2" => "id",
+		"OFFERS_SORT_ORDER2" => "desc",
+		"DEPTH_LEVEL_BRAND" => "2",
+		"USE_PRICE_COUNT" => "N",
+		"CONVERT_CURRENCY" => "N",
+		"HIDE_NOT_AVAILABLE" => "N",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

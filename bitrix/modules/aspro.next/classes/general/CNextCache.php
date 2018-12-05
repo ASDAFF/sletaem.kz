@@ -567,6 +567,13 @@ if(!class_exists("CNextCache")){
 								if($existItem[$key] != $val){
 									$existItem[$key] = array($existItem[$key], $val);
 								}
+								else{
+									if(isset($item[$key.'_ID'])){
+										if($item[$key.'_ID'] != $existItem[$key.'_ID']){
+											$existItem[$key] = array($existItem[$key], $val);
+										}
+									}
+								}
 							}
 						}
 						else{
@@ -686,6 +693,7 @@ if(!class_exists("CNextCache")){
 					}
 				}
 				$CACHE_MANAGER->ClearByTag(CNextCache::GetIBlockCacheTag($arFields["IBLOCK_ID"]));
+				$CACHE_MANAGER->ClearByTag("elements_by_offer");
 			}
 		}
 

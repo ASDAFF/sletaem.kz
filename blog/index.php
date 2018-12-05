@@ -141,7 +141,7 @@ $APPLICATION->SetTitle("Интересные предложения");
 		"USE_PERMISSIONS" => "N",
 		"USE_RATING" => "N",
 		"USE_REVIEW" => "N",
-		"USE_RSS" => "Y",
+		"USE_RSS" => "N",
 		"USE_SEARCH" => "Y",
 		"USE_SHARE" => "Y",
 		"VK_TITLE" => "Вконтакте",
@@ -161,8 +161,6 @@ $APPLICATION->SetTitle("Интересные предложения");
 			"section" => "#SECTION_CODE#/",
 			"detail" => "#SECTION_CODE#/#ELEMENT_CODE#/",
 			"search" => "search/",
-			"rss" => "rss/",
-			"rss_section" => "#SECTION_ID#/rss/",
 		)
 	),
 	false

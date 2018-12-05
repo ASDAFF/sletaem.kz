@@ -91,22 +91,22 @@ if(!class_exists('CAsproNextCRM'))
 
 			if($with_curl)
 			{
-				$ch = curl_init();
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				$ch = \curl_init();
+				\curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 				// curl_setopt($ch,CURLOPT_USERAGENT,'amoCRM-API-client/1.0');
-				curl_setopt($ch, CURLOPT_URL, $url.$method);
+				\curl_setopt($ch, CURLOPT_URL, $url.$method);
 				if (!empty($arPostFields)){
-					curl_setopt($ch, CURLOPT_POST, true);
-					curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arPostFields));
+					\curl_setopt($ch, CURLOPT_POST, true);
+					\curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arPostFields));
 				}
-				curl_setopt($ch, CURLOPT_HEADER, false);
-				curl_setopt($ch, CURLOPT_COOKIEFILE, dirname(__FILE__).'/cookie.txt'); #PHP>5.3.6 dirname(__FILE__) -> __DIR__
-				curl_setopt($ch, CURLOPT_COOKIEJAR, dirname(__FILE__).'/cookie.txt'); #PHP>5.3.6 dirname(__FILE__) -> __DIR__
+				\curl_setopt($ch, CURLOPT_HEADER, false);
+				\curl_setopt($ch, CURLOPT_COOKIEFILE, dirname(__FILE__).'/cookie.txt'); #PHP>5.3.6 dirname(__FILE__) -> __DIR__
+				\curl_setopt($ch, CURLOPT_COOKIEJAR, dirname(__FILE__).'/cookie.txt'); #PHP>5.3.6 dirname(__FILE__) -> __DIR__
 				
-				curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,0);
-				curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
+				\curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,0);
+				\curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
 				
-				$result_text = curl_exec ($ch);
+				$result_text = \curl_exec ($ch);
 			}
 			else
 			{

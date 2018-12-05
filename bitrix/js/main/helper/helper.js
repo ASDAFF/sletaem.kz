@@ -163,7 +163,12 @@ BX.Helper =
 
 	close: function()
 	{
-		BX.SidePanel.Instance.close();
+		var slider = this.getSlider();
+		if (slider)
+		{
+			slider.close();
+		}
+
 		if (this.isAdmin === 'N')
 		{
 			if (this.openBtn)
@@ -172,7 +177,6 @@ BX.Helper =
 			}
 			this.getFrame().classList.remove("helper-panel-iframe-show");
 		}
-
 	},
 
 	getContent: function()

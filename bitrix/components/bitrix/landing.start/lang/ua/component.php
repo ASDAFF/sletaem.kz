@@ -1,4 +1,6 @@
 <?
+$MESS["LANDING_CMP_MODULE_NOT_INSTALLED_CRM"] = "Ндалося підготувати дані CRM.";
+$MESS["LANDING_CMP_ACCESS_DENIED2"] = "Недостатньо прав";
 $MESS["LANDING_CMP_TITLE"] = "Сайти";
 $MESS["LANDING_CMP_MODULE_NOT_INSTALLED"] = "Сервіс лендінгів в даний момент недоступний.";
 $MESS["LANDING_CMP_ACCESS_DENIED"] = "Сервіс лендінгів в даний момент доступний тільки адміністраторам порталу.";

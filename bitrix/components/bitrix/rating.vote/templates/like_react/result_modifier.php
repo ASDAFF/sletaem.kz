@@ -16,4 +16,11 @@ $arResult['COMMENT'] = (
 		? $arParams["COMMENT"]
 		: 'N'
 );
+
+$arParams['MOBILE'] = (
+	!empty($arParams["MOBILE"])
+		? $arParams["MOBILE"]
+		: 'N'
+);
+
 ?>

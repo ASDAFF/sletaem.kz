@@ -38,6 +38,10 @@ if ('TYPE_2' == $arParams['TYPE_SKU'] && $arParams['DISPLAY_TYPE'] !='table' ){
 	$arParams['OFFER_TREE_PROPS'] = array();
 }
 
+/* hide compare link from module options */
+if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+	$arParams["DISPLAY_COMPARE"] = 'N';
+/**/
 
 if (!empty($arResult['ITEMS'])){
 	$arConvertParams = array();

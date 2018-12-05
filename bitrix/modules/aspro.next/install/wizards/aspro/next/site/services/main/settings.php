@@ -103,6 +103,7 @@ Option::set("aspro.next", "MAX_AMOUNT", 10, WIZARD_SITE_ID);
 Option::set("aspro.next", "MIN_AMOUNT", 2, WIZARD_SITE_ID);
 Option::set("aspro.next", "USE_REGIONALITY", "N", WIZARD_SITE_ID);
 Option::set("aspro.next", "REGIONALITY_TYPE", "ONE_DOMAIN", WIZARD_SITE_ID);
+Option::set("aspro.next", "SHOW_REGION_CONTACT", "Y", WIZARD_SITE_ID);
 Option::set("aspro.next", "PRINT_BUTTON", "N", WIZARD_SITE_ID);
 Option::set("aspro.next", "SHOW_BASKET_ON_PAGES", "N", WIZARD_SITE_ID);
 Option::set("aspro.next", "VIEWED_TEMPLATE", "HORIZONTAL", WIZARD_SITE_ID);

@@ -116,6 +116,9 @@ class aspro_next extends CModule {
 		RegisterModuleDependences('form', 'onBeforeResultAdd', $this->MODULE_ID, self::moduleClassEvents, 'onBeforeResultAddHandler');
 		RegisterModuleDependences('subscribe', 'OnBeforeSubscriptionAdd', $this->MODULE_ID, self::moduleClassEvents, 'OnBeforeSubscriptionAddHandler');
 
+		RegisterModuleDependences("main", "OnBeforeChangeFile", $this->MODULE_ID, self::moduleClassEvents, 'OnBeforeChangeFileHandler');
+		RegisterModuleDependences("main", "OnChangeFile", $this->MODULE_ID, self::moduleClassEvents, 'OnChangeFileHandler', 999);
+
 		if(class_exists('\Bitrix\Main\EventManager')){
 			$eventManager = \Bitrix\Main\EventManager::getInstance();
 			$eventManager->registerEventHandler('sale', 'OnSaleOrderSaved', $this->MODULE_ID, self::moduleClassEvents, 'BeforeSendEvent', 10);
@@ -179,6 +182,9 @@ class aspro_next extends CModule {
 
 		UnRegisterModuleDependences('form', 'onBeforeResultAdd', $this->MODULE_ID, self::moduleClassEvents, 'onBeforeResultAddHandler');
 		UnRegisterModuleDependences('subscribe', 'OnBeforeSubscriptionAdd', $this->MODULE_ID, self::moduleClassEvents, 'OnBeforeSubscriptionAddHandler');
+
+		UnRegisterModuleDependences("main", "OnBeforeChangeFile", $this->MODULE_ID, self::moduleClassEvents, 'OnBeforeChangeFileHandler');
+		UnRegisterModuleDependences("main", "OnChangeFile", $this->MODULE_ID, self::moduleClassEvents, 'OnChangeFileHandler');
 
 		if(class_exists('\Bitrix\Main\EventManager')){
 			$eventManager = \Bitrix\Main\EventManager::getInstance();

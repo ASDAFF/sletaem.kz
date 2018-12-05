@@ -93,6 +93,7 @@ class CBitrixCatalogSmartFilter extends CBitrixComponent
 	public function executeComponent()
 	{
 		$this->IBLOCK_ID = $this->arParams["IBLOCK_ID"];
+		$this->IBLOCK_IDS = ($this->arParams["IBLOCK_IDS"] ? $this->arParams["IBLOCK_IDS"] : array());
 		$this->SECTION_ID = $this->arParams["SECTION_ID"];
 		$this->SECTION_IDS = $this->arParams["SECTION_IDS"];
 		$this->ELEMENT_IDS = $this->arParams["ELEMENT_IDS"];
@@ -132,7 +133,7 @@ class CBitrixCatalogSmartFilter extends CBitrixComponent
 			}
 		}
 
-		$this->facetAspro = new FacetAspro($this->IBLOCK_ID);
+		$this->facetAspro = new FacetAspro($this->IBLOCK_ID, $this->IBLOCK_IDS);
 		$this->facetAspro->setSectionId($this->SECTION_IDS); // filter by sections
 		$this->facetAspro->setElementId($this->ELEMENT_IDS); // filter by elements
 
@@ -282,10 +283,10 @@ class CBitrixCatalogSmartFilter extends CBitrixComponent
 	public function processProperties(array &$resultItem, array $elements, array $dictionaryID, array $directoryPredict = [])
 	{
 		$lookupDictionary = [];
-		/*if (!empty($dictionaryID))
+		if (!empty($dictionaryID) && method_exists($this->facetAspro->getDictionary(), 'getStringByIds'))
 		{
 			$lookupDictionary = $this->facetAspro->getDictionary()->getStringByIds($dictionaryID);
-		}*/
+		}
 
 		if (!empty($directoryPredict))
 		{

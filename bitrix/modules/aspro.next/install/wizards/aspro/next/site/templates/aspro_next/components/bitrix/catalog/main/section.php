@@ -176,12 +176,58 @@ if($arRegion)
 		}
 		$GLOBALS[$arParams["FILTER_NAME"]][] = $arTmpFilter;
 	}
+	$arParams["USE_REGION"] = "Y";
 }
+
+/* hide compare link from module options */
+if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+	$arParams["USE_COMPARE"] = 'N';
+/**/
 ?>
-<?if(!in_array("DETAIL_PAGE_URL", $arParams["LIST_OFFERS_FIELD_CODE"]))
+<?if(!in_array("DETAIL_PAGE_URL", (array)$arParams["LIST_OFFERS_FIELD_CODE"]))
 	$arParams["LIST_OFFERS_FIELD_CODE"][] = "DETAIL_PAGE_URL";?>
+
+<?$arTransferParams = array(
+	"SHOW_ABSENT" => $arParams["SHOW_ABSENT"],
+	"HIDE_NOT_AVAILABLE_OFFERS" => $arParams["HIDE_NOT_AVAILABLE_OFFERS"],
+	"PRICE_CODE" => $arParams["PRICE_CODE"],
+	"OFFER_TREE_PROPS" => $arParams["OFFER_TREE_PROPS"],
+	"CACHE_TIME" => $arParams["CACHE_TIME"],
+	"CONVERT_CURRENCY" => $arParams["CONVERT_CURRENCY"],
+	"CURRENCY_ID" => $arParams["CURRENCY_ID"],
+	"OFFERS_SORT_FIELD" => $arParams["OFFERS_SORT_FIELD"],
+	"OFFERS_SORT_ORDER" => $arParams["OFFERS_SORT_ORDER"],
+	"OFFERS_SORT_FIELD2" => $arParams["OFFERS_SORT_FIELD2"],
+	"OFFERS_SORT_ORDER2" => $arParams["OFFERS_SORT_ORDER2"],
+	"LIST_OFFERS_LIMIT" => $arParams["LIST_OFFERS_LIMIT"],
+	"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+	"LIST_OFFERS_PROPERTY_CODE" => $arParams["LIST_OFFERS_PROPERTY_CODE"],
+	"SHOW_DISCOUNT_TIME" => $arParams["SHOW_DISCOUNT_TIME"],
+	"SHOW_COUNTER_LIST" => $arParams["SHOW_COUNTER_LIST"],
+	"PRICE_VAT_INCLUDE" => $arParams["PRICE_VAT_INCLUDE"],
+	"USE_PRICE_COUNT" => $arParams["USE_PRICE_COUNT"],
+	"SHOW_MEASURE" => $arParams["SHOW_MEASURE"],
+	"SHOW_OLD_PRICE" => $arParams["SHOW_OLD_PRICE"],
+	"SHOW_DISCOUNT_PERCENT" => $arParams["SHOW_DISCOUNT_PERCENT"],
+	"SHOW_DISCOUNT_PERCENT_NUMBER" => $arParams["SHOW_DISCOUNT_PERCENT_NUMBER"],
+	"USE_REGION" => $arParams["USE_REGION"],
+	"STORES" => $arParams["STORES"],
+	"DEFAULT_COUNT" => $arParams["DEFAULT_COUNT"],
+	"BASKET_URL" => $arParams["BASKET_URL"],
+	"OFFERS_CART_PROPERTIES" => $arParams["OFFERS_CART_PROPERTIES"],
+	"PRODUCT_PROPERTIES" => $arParams["PRODUCT_PROPERTIES"],
+	"PARTIAL_PRODUCT_PROPERTIES" => $arParams["PARTIAL_PRODUCT_PROPERTIES"],
+	"ADD_PROPERTIES_TO_BASKET" => $arParams["ADD_PROPERTIES_TO_BASKET"],
+	"SHOW_DISCOUNT_TIME_EACH_SKU" => $arParams["SHOW_DISCOUNT_TIME_EACH_SKU"],
+	"SHOW_ARTICLE_SKU" => $arParams["SHOW_ARTICLE_SKU"],
+	"OFFER_ADD_PICT_PROP" => $arParams["OFFER_ADD_PICT_PROP"],
+	"PRODUCT_QUANTITY_VARIABLE" => $arParams["PRODUCT_QUANTITY_VARIABLE"],
+);?>
+
 <?// section elements?>
-<?@include_once('page_blocks/'.$arParams["SECTION_ELEMENTS_TYPE_VIEW"].'.php');?>
+<div class="js_wrapper_items" data-params='<?=str_replace('\'', '"', CUtil::PhpToJSObject($arTransferParams, false))?>'>
+	<?@include_once('page_blocks/'.$arParams["SECTION_ELEMENTS_TYPE_VIEW"].'.php');?>
+</div>
 
 <?CNext::checkBreadcrumbsChain($arParams, $arSection);?>
 <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery.history.js');?>

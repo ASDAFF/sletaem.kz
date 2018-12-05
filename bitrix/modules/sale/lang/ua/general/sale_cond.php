@@ -1,4 +1,6 @@
 <?
+$MESS["BT_SALE_COND_BASKET_DISCOUNT_APPLIED_LABEL"] = "Були застосовані правила кошика";
+$MESS["BT_SALE_COND_BASKET_DISCOUNT_APPLIED_PREFIX"] = "Були застосовані правила кошика";
 $MESS["BT_MOD_SALE_COND_CMP_ORDER_CONTROLGROUP_LABEL"] = "Параметри замовлення";
 $MESS["BT_MOD_SALE_COND_CMP_SALE_PERSON_TYPE_LABEL"] = "Тип платника";
 $MESS["BT_MOD_SALE_COND_CMP_SALE_PERSON_TYPE_PREFIX"] = "поле Тип платника";
@@ -105,4 +107,6 @@ $MESS["BT_SALE_COND_BASKET_PROPERTY_ENTITY_TYPE_SELECT_DEF"] = "…";
 $MESS["BT_SALE_COND_BASKET_PROPERTY_PREFIX"] = "властивість товару в кошику";
 $MESS["BT_SALE_COND_BASKET_POSITION_WEIGHT_LABEL"] = "Вага позиції";
 $MESS["BT_SALE_COND_BASKET_POSITION_WEIGHT_PREFIX"] = "Вага позиції (вага одиниці товару * кількість) в кошику";
+$MESS["BT_SALE_COND_BASKET_DISCOUNT_APPLIED_YES"] = "так";
+$MESS["BT_SALE_COND_BASKET_DISCOUNT_APPLIED_NO"] = "ні";
 ?>

@@ -4,6 +4,8 @@
 use \Bitrix\Main\Localization\Loc;
 Loc::loadMessages(__FILE__);
 
+global $arRegion;
+
 $arItemFilter = CNext::GetIBlockAllElementsFilter($arParams);
 $arItemSelect = array('ID', 'NAME', 'IBLOCK_ID', 'IBLOCK_SECTION_ID', 'PROPERTY_MAP');
 $arItems = CNextCache::CIblockElement_GetList(array("CACHE" => array("TAG" => CNextCache::GetIBlockCacheTag($arParams["IBLOCK_ID"]))), $arItemFilter, false, false, $arItemSelect);
@@ -14,7 +16,7 @@ if($arItems)
 ?>
 <?if($arParams['SHOW_TOP_MAP'] != 'Y'):?>
 	<div class="contacts-page-top">
-		<div class="contacts maxwidth-theme">
+		<div class="contacts maxwidth-theme" itemscope itemtype="http://schema.org/Organization">
 			<div class="row">
 				<?$bHasSections = (isset($arAllSections['ALL_SECTIONS']) && $arAllSections['ALL_SECTIONS']);?>
 				<?$bHasChildSections = (isset($arAllSections['CHILD_SECTIONS']) && $arAllSections['CHILD_SECTIONS']);?>
@@ -45,27 +47,24 @@ if($arItems)
 				<div class="col-md-<?=($bHasSections ? 6 : 12);?>">
 					<div class="row">
 						<div class="col-md-6 print-6">
-							<table>
-								<tr>
-									<td class="icon"><i class="fa big-icon grey s45 fa-phone"></i></td>
-									<td> <span class="dark_table"><?=Loc::getMessage('SPRAVKA');?></span>
-										<br />
-										<span itemprop="telephone"><?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-phone-one.php", Array(), Array("MODE" => "html", "NAME" => "Phone"));?></span>
-									</td>
-								</tr>
-							</table>
+							<?CNext::showContactPhones('', true, '', 'Phone_black2.svg', 'grey');?>
 						</div>
 						<div class="col-md-6 print-6">
-							<table>
-								<tr>
-									<td class="icon"><i class="fa big-icon grey s45 fa-envelope"></i></td>
-									<td> <span class="dark_table">E-mail</span>
-										<br />
-										<span itemprop="email"><?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-email.php", Array(), Array("MODE" => "html", "NAME" => "Email"));?></span>
-									</td>
-								</tr>
-							</table>
+							<?CNext::showContactEmail('E-mail', true, '', 'Email.svg', 'grey');?>
 						</div>
+					</div>
+
+					<?//hidden text for validate microdata?>
+					<div class="hidden">
+						<?if($arRegion):?>
+							<?if($arRegion["PROPERTY_ADDRESS_VALUE"]["TEXT"]):?>
+								<span itemprop="address"><?=$arRegion["PROPERTY_ADDRESS_VALUE"]["TEXT"];?></span>
+							<?endif;?>
+						<?else:?>
+							<span itemprop="address"><?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-address.php", Array(), Array("MODE" => "html", "NAME" => "Address"));?></span>
+						<?endif;?>
+						<?global $arSite;?>
+						<span itemprop="name"><?=$arSite["NAME"];?></span>
 					</div>
 				</div>
 			</div>

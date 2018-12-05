@@ -60,6 +60,56 @@ if(!class_exists("CAsproNext"))
 			file_put_contents($path_date.$path.'.log', date('d-m-Y H-i-s', time()+\CTimeZone::GetOffset())."\n".print_r($arMess, true)."\n", LOCK_EX | FILE_APPEND);
 		}
 
+		public static function getPricesID($arPricesID = array(), $bUsePriceCode = false){
+			$arPriceIDs = array();
+			if($arPricesID)
+			{
+				global $USER;
+				$arUserGroups = $USER->GetUserGroupArray();
+
+				 if (!is_array($arUserGroups) && (int)$arUserGroups.'|' == (string)$arUserGroups.'|')
+					$arUserGroups = array((int)$arUserGroups);
+
+				if (!is_array($arUserGroups))
+					$arUserGroups = array();
+
+				if (!in_array(2, $arUserGroups))
+					$arUserGroups[] = 2;
+				\Bitrix\Main\Type\Collection::normalizeArrayValuesByInt($arUserGroups);
+
+				$cacheKey = 'U'.implode('_', $arUserGroups).implode('_', $arPricesID);
+				if (!isset($priceTypeCache[$cacheKey]))
+				{
+					if($bUsePriceCode)
+					{
+						$dbPriceType = \CCatalogGroup::GetList(
+							array("SORT" => "ASC"),
+							array("NAME" => $arPricesID)
+							);
+						while($arPriceType = $dbPriceType->Fetch())
+						{
+							$arPricesID[] = $arPriceType["ID"];
+						}
+					}
+					$priceTypeCache[$cacheKey] = array();
+					$priceIterator = \Bitrix\Catalog\GroupAccessTable::getList(array(
+						'select' => array('CATALOG_GROUP_ID'),
+						'filter' => array('@GROUP_ID' => $arUserGroups, 'CATALOG_GROUP_ID' => $arPricesID, 'ACCESS' => array(\Bitrix\Catalog\GroupAccessTable::ACCESS_BUY, \Bitrix\Catalog\GroupAccessTable::ACCESS_VIEW)),
+						'order' => array('CATALOG_GROUP_ID' => 'ASC')
+					));
+					while ($priceType = $priceIterator->fetch())
+					{
+						$priceTypeId = (int)$priceType['CATALOG_GROUP_ID'];
+						$priceTypeCache[$cacheKey][$priceTypeId] = $priceTypeId;
+						unset($priceTypeId);
+					}
+					unset($priceType, $priceIterator);
+				}
+				$arPriceIDs = $priceTypeCache[$cacheKey];
+			}
+			return $arPriceIDs;
+		}
+
 		protected static function _getAllFormFieldsHTML($WEB_FORM_ID, $RESULT_ID, $arAnswers)
 		{
 			global $APPLICATION;

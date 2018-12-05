@@ -16,6 +16,6 @@ $MESS["F_TO_CHANGE4"] = "Профіль форума";
 $MESS["F_EDIT_YOUR_PROFILE"] = "Редагування вашого профілю";
 $MESS["F_EDIT_THIS_PROFILE"] = "Редагування профілю користувача";
 $MESS["F_TO_CHANGE3"] = "свій";
-$MESS["F_OK_MESSAGE_SEND"] = "Повідомлення успішно відправлено.";
+$MESS["F_OK_MESSAGE_SEND"] = "Повідомлення успішно відправлене.";
 $MESS["F_TO_CHANGE2"] = "цей";
 ?>

@@ -32,6 +32,8 @@ if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
 } else return false;
 }
 
+var timerMove = false;
+
 (function ($) {
   //Compatibility between old and new versions of jQuery
   $.fn.xon = $.fn.on || $.fn.bind;
@@ -290,6 +292,11 @@ if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
       if (typeof source != "undefined") source.remove();
       if (typeof preview != "undefined") preview.remove();
       if (typeof caption_container != "undefined") caption_container.remove();
+    
+    if($('.xzoom-source').length)
+      $('.xzoom-source').remove()
+    if($('.xzoom-preview').length)
+      $('.xzoom-preview').remove()
     }
 
     function prepare_zoom(x, y) {
@@ -425,7 +432,10 @@ if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
       
       var timestamp = '';
       if (aie) timestamp = '?r='+(new Date()).getTime();
-      img.src = mObj.attr('xoriginal')+timestamp;
+      if(mObj.attr('xoriginal'))
+    img.src = mObj.attr('xoriginal')+timestamp;
+    else
+      img.src = mObj.attr('data-xoriginal')+timestamp;
 
       imgObj = $(img);
       imgObj.css('position', 'absolute');
@@ -676,11 +686,11 @@ if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
       }
 
       current.eventleave = function(element) {
-        element.xon('mouseleave', current.closezoom);
+      element.xon('mouseleave', current.closezoom);
       }
 
       current.eventmove = function(element) {
-        element.xon('mousemove', current.movezoom);
+      element.xon('mousemove', current.movezoom);
       }
       
       current.eventscroll = function(element) {
@@ -812,9 +822,16 @@ if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
         var _xorig = link.attr('href');
         var _prev;
 
-        if (Obj.attr('xpreview')) {
+        if(Obj.attr('xpreview'))
+    {
           _prev = Obj.attr('xpreview');
-        } else {
+        }
+    else if(Obj.attr('data-xpreview'))
+    {
+          _prev = Obj.attr('data-xpreview');
+        }
+    else
+    {
           _prev = Obj.attr('src');
         }
 
@@ -822,6 +839,7 @@ if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
         if (Obj.attr('title')) mObj.attr('title',Obj.attr('title'));
 
         //imgObj.attr('src',_xorig);
+        mObj.attr('data-xoriginal',_xorig);
         mObj.attr('xoriginal',_xorig);
         mObj.attr('src', _prev);
         //Prevent submit on click

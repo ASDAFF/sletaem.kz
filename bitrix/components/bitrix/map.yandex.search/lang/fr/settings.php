@@ -1,4 +1,5 @@
 <?
+$MESS["MYMV_SET_ADDRESS_SEARCH"] = "Recherche sur la carte";
 $MESS["MYMV_SET_NONAME"] = "--- Sans nom ---";
 $MESS["MYMS_PARAM_INIT_MAP_NOTHING_FOUND"] = "(introuvable)";
 $MESS["MYMV_SET_START_POS_VIEW"] = "Affichage";
@@ -9,7 +10,6 @@ $MESS["MYMV_SET_START_POS_LON"] = "Gamme";
 $MESS["MYMV_SET_POINTS_ADD_FINISH"] = "Prêt";
 $MESS["MYMV_SET_START_POS_FIX"] = "Corriger";
 $MESS["MYMV_SET_START_POS_SCALE"] = "chelle";
-$MESS["MYMV_SET_ADDRESS_SEARCH"] = "Recherche sur la carte";
 $MESS["MYMS_PARAM_INIT_MAP_TYPE_PUBLIC"] = "carte populaire";
 $MESS["MYMS_PARAM_INIT_MAP_TYPE_PUBLIC_HYBRID"] = "hybride populaire";
 $MESS["MYMV_SET_POPUP_TITLE"] = "Paramètres de la carte";

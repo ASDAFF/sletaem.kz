@@ -1,4 +1,5 @@
 <?
+$MESS["CRM_FF_SEARCH"] = "Recherche";
 $MESS["CRM_FF_OK"] = "Choisir";
 $MESS["CRM_FF_CHOISE"] = "Choisir";
 $MESS["CRM_FF_CLOSE"] = "Fermer";
@@ -8,7 +9,6 @@ $MESS["CRM_FF_COMPANY"] = "Entreprise";
 $MESS["CRM_FF_CONTACT"] = "Contacts";
 $MESS["CRM_FF_LEAD"] = "Conversion";
 $MESS["CRM_FF_CANCEL"] = "Annuler";
-$MESS["CRM_FF_SEARCH"] = "Recherche";
 $MESS["CRM_FF_LAST"] = "Derniers";
 $MESS["CRM_FF_DEAL"] = "Affaires";
 $MESS["CRM_FF_QUOTE"] = "Devis";

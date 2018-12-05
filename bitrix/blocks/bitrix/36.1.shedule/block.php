@@ -1,6 +1,6 @@
 <section class="landing-block g-pt-40 g-pb-40">
 	<div class="container">
-		<div class="tab-pane fade active show" id="day-1" role="tabpanel" aria-expanded="true">
+		<div class="tab-pane fade active show" role="tabpanel" aria-expanded="true">
 			<div class="u-timeline-v3-wrap">
 				<div class="landing-block-node-card js-animation fadeInUp u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#">
 					<div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">

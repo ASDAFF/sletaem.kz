@@ -64,6 +64,12 @@
 <?$list_view = ($arParams['LIST_VIEW'] ? $arParams['LIST_VIEW'] : 'slider');?>
 <?// goods links?>
 <?if(in_array('LINK_GOODS', $arParams['DETAIL_PROPERTY_CODE']) && $arElement['PROPERTY_LINK_GOODS_VALUE']):?>
+	<?global $isHideLeftBlock;?>
+	<?if(in_array('FORM_QUESTION', $arParams['DETAIL_PROPERTY_CODE']) && $arElement['PROPERTY_FORM_QUESTION_VALUE'] && $isHideLeftBlock):?>
+		<div class="row">
+			<div class="col-md-9">
+	<?endif;?>
+
 	<div class="wraps goods-block with-padding block ajax_load catalog">
 		<?$bAjax = ((isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == "xmlhttprequest")  && (isset($_GET["ajax_get"]) && $_GET["ajax_get"] == "Y"));?>
 		<?if($bAjax):?>
@@ -118,4 +124,8 @@
 			<?die();?>
 		<?endif;?>
 	</div>
+
+	<?if(in_array('FORM_QUESTION', $arParams['DETAIL_PROPERTY_CODE']) && $arElement['PROPERTY_FORM_QUESTION_VALUE'] && $isHideLeftBlock):?>
+		</div></div>
+	<?endif;?>
 <?endif;?>

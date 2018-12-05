@@ -15,38 +15,24 @@ $bUseFeedback = CNext::GetFrontParametrValue('CONTACTS_USE_FEEDBACK', SITE_ID) !
 			<br />
 			<table>
 				<tbody>
-					<tr class="print-6">
-						<td align="left" valign="top"><i class="fa big-icon fa-map-marker"></i></td><td align="left" valign="top"><span class="dark_table">Адрес</span>
-							<br />
-							<span itemprop="address"><?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-address.php", Array(), Array("MODE" => "html", "NAME" => "Address"));?></span>
-						</td>
-					</tr>
-					<tr class="print-6">
-						<td align="left" valign="top"><i class="fa big-icon  fa-phone"></i></td><td align="left" valign="top"> <span class="dark_table">Телефон</span>
-							<br />
-							<span itemprop="telephone"><?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-phone.php", Array(), Array("MODE" => "html", "NAME" => "Phone"));?></span>
-						</td>
-					</tr>
-					<tr class="print-6">
-						<td align="left" valign="top"><i class="fa big-icon  fa-envelope"></i></td><td align="left" valign="top"> <span class="dark_table">E-mail</span>
-							<br />
-							<span itemprop="email"><?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-email.php", Array(), Array("MODE" => "html", "NAME" => "Email"));?></span>
-						</td>
-					</tr>
-					<tr class="print-6">
-						<td align="left" valign="top"><i class="fa big-icon  fa-clock-o"></i></td><td align="left" valign="top"> <span class="dark_table">Режим работы</span>
-							<br />
-							<?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-schedule.php", Array(), Array("MODE" => "html", "NAME" => "Schedule"));?>
-						</td>
-					</tr>
+					<?CNext::showContactAddr('Адрес', false);?>
+					<?CNext::showContactPhones('Телефон', false);?>
+					<?CNext::showContactEmail('E-mail', false);?>
+					<?CNext::showContactSchedule('Режим работы', false);?>
 				</tbody>
 			</table>
 		</div>
 		<?if($bUseMap):?>
 			<div class="col-md-8">
-				<?$APPLICATION->IncludeFile(SITE_DIR."include/contacts-site-map.php", Array(), Array("MODE" => "html", "TEMPLATE" => "include_area.php", "NAME" => "Карта"));?>
+				<?$APPLICATION->IncludeFile("/include/contacts-site-map.php", Array(), Array("MODE" => "html", "TEMPLATE" => "include_area.php", "NAME" => "Карта"));?>
 			</div>
 		<?endif;?>
+	</div>
+
+	<?//hidden text for validate microdata?>
+	<div class="hidden">
+		<?global $arSite;?>
+		<span itemprop="name"><?=$arSite["NAME"];?></span>
 	</div>
 </div>
 <?if($bUseFeedback):?>

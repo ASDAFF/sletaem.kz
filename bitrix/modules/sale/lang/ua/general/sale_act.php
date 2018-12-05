@@ -1,4 +1,5 @@
 <?
+$MESS["BT_SALE_ACT_GROUP_BASKET_SELECT_TYPE_CLOSEOUT"] = "фіксовану ціну";
 $MESS["BT_SALE_ACT_GROUP_GLOBAL_PREFIX"] = "Виконати дії:";
 $MESS["BT_SALE_ACT_DELIVERY_LABEL"] = "Змінити вартість доставки";
 $MESS["BT_SALE_ACT_DELIVERY_DEF_TEXT"] = "Вартість доставки";
@@ -64,8 +65,4 @@ $MESS["BT_SALE_GIFT_DISCOUNT_DESCR"] = "Подарунок";
 $MESS["BT_SALE_ACT_GROUP_BASKET_DESCR_EXT"] = "до товарів, для яких";
 $MESS["BT_SALE_ACT_MAX_DISCOUNT_GROUP_BASKET_DESCR"] = ", але не більш";
 $MESS["BT_SALE_ACT_MAX_DISCOUNT_ON_GROUP_BASKET_ERROR_CONDITION"] = "Неможливо встановити обмеження на розмір максимальної знижки на загальну суму товарів";
-$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_LABEL"] = "Були застосовані знижки";
-$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_PREFIX"] = "Були застосовані знижки";
-$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_Y"] = "так";
-$MESS["BT_MOD_SALE_ACT_BASKET_APPLIED_DISCOUNT_N"] = "ні";
 ?>

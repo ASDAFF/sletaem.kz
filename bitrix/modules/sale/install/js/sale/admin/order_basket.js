@@ -727,7 +727,8 @@ BX.Sale.Admin.OrderBasket.prototype.createProductCell = function(basketCode, pro
 		fieldValue = product[fieldId],
 		tdClass = "",
 		_this = this,
-		isSetItem = (BX.type.isNotEmptyString(product.IS_SET_ITEM) && product.IS_SET_ITEM === 'Y');
+		isSetItem = (BX.type.isNotEmptyString(product.IS_SET_ITEM) && product.IS_SET_ITEM === 'Y'),
+		isProductEnabled = (BX.type.isNotEmptyString(product.CAN_BUY) && product.CAN_BUY === 'Y');
 
 	switch(fieldId)
 	{
@@ -752,7 +753,8 @@ BX.Sale.Admin.OrderBasket.prototype.createProductCell = function(basketCode, pro
 				var bundleShow = BX.create('a',{
 					props:{
 						href:"javascript:void(0);",
-						className: "dashed-link show-set-link"
+						className: "dashed-link show-set-link" + (!isProductEnabled ? ' product-unavailable' : ''),
+						title: (!isProductEnabled ? BX.message('SALE_ORDER_BASKET_PRODUCT_UNAVAILABLE') : '')
 					},
 					html: BX.message("SALE_ORDER_BASKET_EXPAND")
 				});
@@ -777,7 +779,9 @@ BX.Sale.Admin.OrderBasket.prototype.createProductCell = function(basketCode, pro
 				node = BX.create('a',{
 						props:{
 							href:product.EDIT_PAGE_URL,
-							target:"_blank"
+							target:"_blank",
+							className: (!isProductEnabled ? 'product-unavailable' : ''),
+							title: (!isProductEnabled ? BX.message('SALE_ORDER_BASKET_PRODUCT_UNAVAILABLE') : '')
 						},
 						html: BX.util.htmlspecialchars(fieldValue)
 					});

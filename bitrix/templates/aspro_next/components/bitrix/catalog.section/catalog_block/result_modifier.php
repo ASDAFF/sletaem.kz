@@ -41,7 +41,10 @@ if ('TYPE_1' == $arParams['TYPE_SKU'] && $arParams['DISPLAY_TYPE'] !='table' ){
 	$arParams['OFFER_TREE_PROPS'] = array();
 }
 
-
+/* hide compare link from module options */
+if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+	$arParams["DISPLAY_COMPARE"] = 'N';
+/**/
 
 if (!empty($arResult['ITEMS'])){
 	$arConvertParams = array();
@@ -107,6 +110,7 @@ if (!empty($arResult['ITEMS'])){
 			$strBaseCurrency = CCurrency::GetBaseCurrency();
 
 		$arSKU = CCatalogSKU::GetInfoByProductIBlock($arParams['IBLOCK_ID']);
+
 		$boolSKU = !empty($arSKU) && is_array($arSKU);
 		if ($boolSKU && !empty($arParams['OFFER_TREE_PROPS']) && 'TYPE_1' == $arParams['TYPE_SKU'] && $arParams['DISPLAY_TYPE'] !='table')
 		{
@@ -123,14 +127,12 @@ if (!empty($arResult['ITEMS'])){
 			CIBlockPriceTools::getTreePropertyValues($arSKUPropList, $arNeedValues);
 			$arSKUPropIDs = array_keys($arSKUPropList);
 
-
 			if (empty($arSKUPropIDs))
 				$arParams['TYPE_SKU'] = 'N';
 			else
 				$arSKUPropKeys = array_fill_keys($arSKUPropIDs, false);
 		}
 	}
-
 	$arNewItemsList = array();
 	foreach ($arResult['ITEMS'] as $key => $arItem)
 	{
@@ -298,6 +300,15 @@ if (!empty($arResult['ITEMS'])){
 					if ('' != $arParams['OFFER_ADD_PICT_PROP'] && isset($arOffer['DISPLAY_PROPERTIES'][$arParams['OFFER_ADD_PICT_PROP']]))
 						unset($arOffer['DISPLAY_PROPERTIES'][$arParams['OFFER_ADD_PICT_PROP']]);
 
+					if($arParams["USE_MAIN_ELEMENT_SECTION"] != "Y")
+					{
+						if($arOffer["DETAIL_PAGE_URL"])
+						{
+							$arTmpUrl = explode("?", $arOffer["DETAIL_PAGE_URL"]);
+							$arOffer["DETAIL_PAGE_URL"] = str_replace($arTmpUrl[0], $arItem["DETAIL_PAGE_URL"], $arOffer["DETAIL_PAGE_URL"]);
+						}
+					}
+
 					$arDouble[$arOffer['ID']] = true;
 					$arNewOffers[$keyOffer] = $arOffer;
 
@@ -442,6 +453,7 @@ if (!empty($arResult['ITEMS'])){
 						'SHOW_ARTICLE_SKU' => $arParams['SHOW_ARTICLE_SKU'],
 						'ARTICLE_SKU' => ($arParams['SHOW_ARTICLE_SKU'] == 'Y' ? (isset($arItem['PROPERTIES']['CML2_ARTICLE']['VALUE']) && $arItem['PROPERTIES']['CML2_ARTICLE']['VALUE'] ? $arItem['PROPERTIES']['CML2_ARTICLE']['NAME'].': '.$arItem['PROPERTIES']['CML2_ARTICLE']['VALUE'] : '') : ''),
 						'PRICE_MATRIX' => $sPriceMatrix,
+						'PRICE_MATRIX_RAW' => $arOffer["PRICE_MATRIX"],
 						'BASIS_PRICE' => $arOffer['MIN_PRICE'],
 						'OWNER_PICT' => $arOffer['OWNER_PICT'],
 						'PREVIEW_PICTURE' => $arOffer['PREVIEW_PICTURE'],
@@ -670,4 +682,5 @@ if (!empty($arResult['ITEMS'])){
 	}
 
 }
+// print_r($arResult);
 ?>

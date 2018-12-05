@@ -713,11 +713,20 @@ class CNextEvents{
 
 									if($arSite){
 										$siteDir = $arSite['DIR'];
+										
 										// catalog iblock id
-										$condIblockId = CNextCache::$arIBlocks[$siteId]['aspro_next_catalog']['aspro_next_catalog'][0];
 										if(defined('URLREWRITE_SEARCH_LANDING_CONDITION_CATALOG_IBLOCK_ID_'.$siteId)){
 											$condIblockId = constant('URLREWRITE_SEARCH_LANDING_CONDITION_CATALOG_IBLOCK_ID_'.$siteId);
 										}
+										if(!$condIblockId){
+											$condIblockId = \Bitrix\Main\Config\Option::get(
+												self::moduleID,
+												'CATALOG_IBLOCK_ID',
+												CNextCache::$arIBlocks[$siteId]['aspro_next_catalog']['aspro_next_catalog'][0],
+												$siteId
+											);
+										}
+										
 										if(isset(CNextCache::$arIBlocksInfo[$condIblockId])){
 											$pathFile = str_replace(array('#SITE_DIR#', 'index.php'), array($siteDir, ''), CNextCache::$arIBlocksInfo[$condIblockId]['LIST_PAGE_URL']).'index.php';
 											\Bitrix\Main\UrlRewriter::add(
@@ -1132,6 +1141,63 @@ class CNextEvents{
 		}
 	}
 
+	public static function OnBeforeChangeFileHandler($path, $site){
+		if(
+			defined('ADMIN_SECTION')
+			 && $_SERVER['REQUEST_METHOD'] === 'POST'
+			 && isset($_REQUEST['component_name'])
+			 && $_REQUEST['component_name'] === 'bitrix:catalog'
+			 && isset($_REQUEST['src_site'])
+			 && ($siteId = $_REQUEST['src_site'])
+		){
+			$_SESSION['saved'] = array(
+				$siteId => array()
+			);
+
+			// search and remove urlrewrite item
+			$searchRule = '&ls=';
+			if($arUrlRewrites = \Bitrix\Main\UrlRewriter::getList($siteId, array('ID' => 'bitrix:catalog'))){
+				foreach($arUrlRewrites as $arUrlRewrite){
+					if($arUrlRewrite['RULE'] && strpos($arUrlRewrite['RULE'], $searchRule) !== false){
+						$_SESSION['saved'][$siteId][] = array(
+							'CONDITION' => $arUrlRewrite['CONDITION'],
+							'ID' => $arUrlRewrite['ID'],
+							'PATH' => $arUrlRewrite['PATH'],
+							'RULE' => $arUrlRewrite['RULE'],
+						);
+
+						\Bitrix\Main\UrlRewriter::delete($siteId, array('CONDITION' => $arUrlRewrite['CONDITION']));
+					}
+				}
+			}
+		}
+
+		return true;
+	}
+
+	public static function OnChangeFileHandler($path, $site){
+		if(
+			defined('ADMIN_SECTION')
+			 && $_SERVER['REQUEST_METHOD'] === 'POST'
+			 && isset($_REQUEST['component_name'])
+			 && $_REQUEST['component_name'] === 'bitrix:catalog'
+			 && isset($_REQUEST['src_site'])
+			 && ($siteId = $_REQUEST['src_site'])
+			 && isset($_SESSION['saved'])
+			 && $_SESSION['saved']
+		){
+			foreach($_SESSION['saved'] as $siteId => $arUrlRewrites){
+				foreach($arUrlRewrites as $arUrlRewrite){
+					\Bitrix\Main\UrlRewriter::add($siteId, $arUrlRewrite);
+				}
+			}
+
+			unset($_SESSION['saved']);
+		}
+
+		return true;
+	}
+
 	static function OnEndBufferContentHandler(&$content)
 	{
 		if(!defined('ADMIN_SECTION') && !defined('WIZARD_SITE_ID'))
@@ -1162,6 +1228,10 @@ class CNextEvents{
 
 			//replace text/javascript for html5 validation w3c
 			$content = str_replace(' type="text/javascript"', '', $content);
+			$content = str_replace(' type=\'text/javascript\'', '', $content);
+			$content = str_replace(' type="text/css"', '', $content);
+			$content = str_replace(' type=\'text/css\'', '', $content);
+			$content = str_replace(' charset="utf-8"', '', $content);
 
 			if($SECTION_BNR_CONTENT)
 			{

@@ -72,6 +72,7 @@ class CMainUiFilter extends CBitrixComponent
 		$this->arResult["COMMON_PRESETS_ID"] = $this->arParams["COMMON_PRESETS_ID"];
 		$this->arResult["IS_AUTHORIZED"] = $this->prepareIsAuthorized();
 		$this->arResult["LAZY_LOAD"] = $this->arParams["LAZY_LOAD"];
+		$this->arResult["VALUE_REQUIRED"] = $this->arParams["VALUE_REQUIRED"];
 	}
 
 
@@ -207,11 +208,14 @@ class CMainUiFilter extends CBitrixComponent
 
 
 
-	protected static function prepareSelectValue(Array $items = array(), $value = "")
+	protected static function prepareSelectValue(Array $items = array(), $value = "", $strictMode = false)
 	{
 		foreach ($items as $key => $item)
 		{
-			if ($item["VALUE"] == $value)
+			if (
+				(!$strictMode && $item["VALUE"] == $value) ||
+				($strictMode && $item["VALUE"] === $value)
+			)
 			{
 				return $item;
 			}
@@ -322,6 +326,45 @@ class CMainUiFilter extends CBitrixComponent
 		return array_key_exists($field["NAME"], $presetFields) ? $presetFields[$field["NAME"]] : "";
 	}
 
+	protected static function prepareDestSelectorValue(Array $field, Array $presetFields = array())
+	{
+		$fieldName = $field["NAME"];
+		$fieldNameLabel = $fieldName."_label";
+		$fieldNameLabelAlias = $fieldName."_name";
+		$fieldNameValue = $fieldName."_value";
+		$result = array(
+			"_label" => "",
+			"_value" => ""
+		);
+
+		if (array_key_exists($fieldName, $presetFields))
+		{
+			$result["_value"] = $presetFields[$fieldName];
+		}
+
+		if (empty($result["_value"]) && array_key_exists($fieldNameValue, $presetFields))
+		{
+			$result["_value"] = $presetFields[$fieldNameValue];
+		}
+
+		if (array_key_exists($fieldNameLabel, $presetFields))
+		{
+			$result["_label"] = $presetFields[$fieldNameLabel];
+		}
+
+		if (empty($result["_label"]) && array_key_exists($fieldNameLabelAlias, $presetFields))
+		{
+			$result["_label"] = $presetFields[$fieldNameLabelAlias];
+		}
+
+		if (!empty($result["_value"]) && empty($result["_label"]))
+		{
+			$result["_label"] = "#".$result["_value"];
+		}
+
+		return $result;
+	}
+
 	protected static function compatibleDateselValue($value = "")
 	{
 		$dateMap = array(
@@ -368,14 +411,17 @@ class CMainUiFilter extends CBitrixComponent
 							$value = $values[0];
 						}
 
-						$field["VALUE"] = self::prepareSelectValue($field["ITEMS"], $value);
+						$field["VALUE"] = self::prepareSelectValue($field["ITEMS"], $value, $field["STRICT"]);
 						break;
 					}
 
 					case Type::MULTI_SELECT :
 					{
-						$value = is_array($value) ? $value : array();
-						$field["VALUE"] = self::prepareMultiselectValue($field["ITEMS"], $value);
+						if ($value !== "")
+						{
+							$value = is_array($value) ? $value : [$value];
+							$field["VALUE"] = self::prepareMultiselectValue($field["ITEMS"], $value);
+						}
 						break;
 					}
 
@@ -391,7 +437,8 @@ class CMainUiFilter extends CBitrixComponent
 						{
 							$field["YEARS_SWITCHER"]["VALUE"] = self::prepareSelectValue(
 								$field["YEARS_SWITCHER"]["ITEMS"],
-								$presetFields[$field["NAME"]."_allow_year"]
+								$presetFields[$field["NAME"]."_allow_year"],
+								$field["STRICT"]
 							);
 						}
 
@@ -447,11 +494,18 @@ class CMainUiFilter extends CBitrixComponent
 						break;
 					}
 
+					case Type::DEST_SELECTOR :
+					{
+						$field["VALUES"] = self::prepareDestSelectorValue($field, $presetFields);
+						break;
+					}
+
 					case Type::STRING :
 					{
 						$field["VALUE"] = $value;
 						break;
 					}
+
 				}
 
 				$result[] = $field;
@@ -701,7 +755,7 @@ class CMainUiFilter extends CBitrixComponent
 			{
 				if ($presetId !== "default_filter")
 				{
-					$rows = array_keys($presetFields["fields"]);
+					$rows = is_array($presetFields["fields"]) ? array_keys($presetFields["fields"]) : array();
 					$preset["ID"] = $presetId;
 					$preset["TITLE"] = $presetFields["name"];
 					$preset["SORT"] = $sort;
@@ -795,7 +849,10 @@ class CMainUiFilter extends CBitrixComponent
 			{
 				foreach ($sourceFields as $sourceFieldKey => $sourceField)
 				{
-					$this->arResult["FIELDS"][] = FieldAdapter::adapt($sourceField);
+					$this->arResult["FIELDS"][] = array_merge(
+						FieldAdapter::adapt($sourceField),
+						array("STRICT" => $sourceField["strict"] === true)
+					);
 				}
 			}
 		}
@@ -960,6 +1017,21 @@ class CMainUiFilter extends CBitrixComponent
 		{
 			$this->arParams["CONFIG"] = array();
 		}
+
+		if ($this->arParams["VALUE_REQUIRED"] === true)
+		{
+			$allowValueRequiredParam = false;
+
+			foreach ($this->arParams["FILTER"] as $key => $field)
+			{
+				if (!$allowValueRequiredParam && $field["required"] === true)
+				{
+					$allowValueRequiredParam = true;
+				}
+			}
+
+			$this->arParams["VALUE_REQUIRED"] = $allowValueRequiredParam;
+		}
 	}
 
 	protected function getTheme()
@@ -1037,7 +1109,7 @@ class CMainUiFilter extends CBitrixComponent
 	{
 		if ($this->checkRequiredParams())
 		{
- 			$this->initParams();
+			$this->initParams();
 			$this->prepareDefaultPresets();
 			$this->saveOptions();
 			$this->prepareParams();

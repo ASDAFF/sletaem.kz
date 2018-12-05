@@ -7,29 +7,62 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
 use \Bitrix\Main\ModuleManager;
 
 // get settings data
-$params = \Bitrix\Landing\Node\Component::getIblockParams();
 $settings = \Bitrix\Landing\Hook\Page\Settings::getDataForSite(
 	isset($landing) ? $landing->getSiteId() : null
 );
-$iblockId = isset($settings['IBLOCK_ID'])
-			? $settings['IBLOCK_ID']
-			: (isset($params['id']) ? $params['id'] : 0);
 
 // calc variables
-/*$variables = \Bitrix\Landing\Landing::getVariables();
-$sectionCode = isset($variables['sef'][0]) ? $variables['sef'][0] : '';
 $sectionId = 0;
-if (\Bitrix\Main\Loader::includeModule('iblock'))
+$sectionCode = '';
+$variables = \Bitrix\Landing\Landing::getVariables();
+if (isset($variables['sef'][0]))
 {
-	$sectionId = \CIBlockFindTools::GetSectionIDByCodePath(
-		$iblockId, $sectionCode
-	);
-}*/
+	$sectionCode = $variables['sef'][0];
+	if (\Bitrix\Main\Loader::includeModule('iblock'))
+	{
+		$sectionId = \CIBlockFindTools::GetSectionIDByCodePath(
+			$settings['IBLOCK_ID'], $sectionCode
+		);
+	}
+}
+
+// check section id restricted
+if ($settings['SECTION_ID'])
+{
+	if ($sectionId)
+	{
+		$allowed = false;
+		$res = \CIBlockSection::getNavChain(
+			$settings['IBLOCK_ID'],
+			$sectionId,
+			array(
+				'ID'
+			)
+		);
+		while ($row = $res->fetch())
+		{
+			if ($row['ID'] == $settings['SECTION_ID'])
+			{
+				$allowed = true;
+				break;
+			}
+		}
+		if (!$allowed)
+		{
+			$sectionId = -1;
+			$sectionCode = -1;
+		}
+	}
+	else
+	{
+		$sectionId = $settings['SECTION_ID'];
+	}
+}
 
 // actions for edit mode
 $editMode = \Bitrix\Landing\Landing::getEditMode();
 $setStatus404 = $editMode ? 'N' : 'Y';
-$setTitle = $editMode ? 'N' : 'Y';
+$setTitle = $editMode || ($sectionId == $settings['SECTION_ID']) ? 'N' : 'Y';
 if ($editMode && isset($landing))
 {
 	$siteId = $landing->getSmnSiteId();
@@ -37,6 +70,59 @@ if ($editMode && isset($landing))
 else
 {
 	$siteId = SITE_ID;
+}
+
+if (defined('LANDING_TMP_CATALOG_SHOWED'))
+{
+	$first = false;
+}
+else
+{
+	$first = true;
+	define('LANDING_TMP_CATALOG_SHOWED', true);
+}
+
+// check for show cart and compare
+$showCart = false;
+$settings['SHOW_PERSONAL_LINK'] = 'N';
+$settings['ADD_TO_BASKET_ACTION'] = 'BUY';
+$settings['SECTION_URL'] = '#system_catalog#SECTION_CODE_PATH#/';
+$settings['DETAIL_URL'] = '#system_catalogitem/#ELEMENT_CODE#/';
+if (
+	!$editMode &&
+	isset($landing) &&
+	ModuleManager::isModuleInstalled('sale')
+)
+{
+	$syspages = \Bitrix\Landing\Syspage::get($landing->getSiteId(), true);
+	if (
+		isset($syspages['compare']) &&
+		$settings['DISPLAY_COMPARE'] != 'N'
+	)
+	{
+		$settings['DISPLAY_COMPARE'] = 'Y';
+	}
+	else
+	{
+		$settings['DISPLAY_COMPARE'] = 'N';
+	}
+	if (isset($syspages['cart']))
+	{
+		$showCart = true;
+		$settings['ADD_TO_BASKET_ACTION'] = 'ADD';
+	}
+	if (isset($syspages['personal']) && \Bitrix\Landing\Manager::getUserId())
+	{
+		$settings['SHOW_PERSONAL_LINK'] = 'Y';
+	}
+	if (!isset($syspages['catalog']))
+	{
+		$settings['SECTION_URL'] = $settings['DETAIL_URL'] = '';
+	}
+}
+else
+{
+	$settings['DISPLAY_COMPARE'] = 'N';
 }
 ?>
 <?$APPLICATION->IncludeComponent(
@@ -47,51 +133,56 @@ else
 		'FILTER_NAME' => 'arrFilter'
 	)
 );?>
-<?if (!$editMode && ModuleManager::isModuleInstalled('sale')):?>
-	<?/*$APPLICATION->IncludeComponent(
-		"bitrix:sale.basket.basket.line",
-		".default",
-		array(
-			"PATH_TO_BASKET" => "#system_cart",
-			"PATH_TO_PERSONAL" => "#system_personal",
-			"SHOW_PERSONAL_LINK" => "N",
-			"SHOW_NUM_PRODUCTS" => "Y",
-			"SHOW_TOTAL_PRICE" => "Y",
-			"SHOW_PRODUCTS" => "N",
-			"POSITION_FIXED" => "Y",
-			"SHOW_AUTHOR" => "N",
-			"PATH_TO_REGISTER" => "/auth/",
-			"PATH_TO_PROFILE" => "#system_personal",
-			"COMPONENT_TEMPLATE" => ".default",
-			"PATH_TO_ORDER" => "#system_order",
-			"SHOW_EMPTY_VALUES" => "Y",
-			"PATH_TO_AUTHORIZE" => "/auth/",
-			"POSITION_HORIZONTAL" => "left",
-			"POSITION_VERTICAL" => "bottom",
-			"HIDE_ON_BASKET_PAGES" => "Y"
-		),
-		false
-	);?>
-	<?$APPLICATION->IncludeComponent(
-		"bitrix:catalog.compare.list",
-		"",
-		array(
-			"IBLOCK_TYPE" => $iblockType,
-			"IBLOCK_ID" => $iblockId,
-			"NAME" => "CATALOG_COMPARE_LIST",
-			"DETAIL_URL" => "#system_catalogitem/#ELEMENT_CODE#/",
-			"COMPARE_URL" => "#system_compare",
-			"ACTION_VARIABLE" => "action",
-			"PRODUCT_ID_VARIABLE" => "id",
-			'POSITION_FIXED' => "Y",
-			'POSITION' => 'top left'
-		),
-		false
-	);*/?>
+
+<?if ($showCart && $first):?>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:sale.basket.basket.line",
+	".default",
+	array(
+		"PATH_TO_BASKET" => "#system_cart",
+		"PATH_TO_PERSONAL" => "#system_personal",
+		"SHOW_PERSONAL_LINK" => "N",
+		"SHOW_NUM_PRODUCTS" => "Y",
+		"SHOW_TOTAL_PRICE" => "Y",
+		"SHOW_PRODUCTS" => "N",
+		"POSITION_FIXED" => "Y",
+		"SHOW_AUTHOR" => $settings['SHOW_PERSONAL_LINK'],
+		"SHOW_REGISTRATION" => "N",
+		"PATH_TO_REGISTER" => "",
+		"PATH_TO_PROFILE" => "#system_personal",
+		"COMPONENT_TEMPLATE" => ".default",
+		"PATH_TO_ORDER" => "#system_order",
+		"SHOW_EMPTY_VALUES" => "N",
+		"PATH_TO_AUTHORIZE" => "#system_personal?SECTION=private",
+		"POSITION_HORIZONTAL" => "left",
+		"POSITION_VERTICAL" => "bottom",
+		"HIDE_ON_BASKET_PAGES" => "Y"
+	),
+	false
+);?>
 <?endif;?>
+
+<?if ($settings['DISPLAY_COMPARE'] == 'Y' && $first):?>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.compare.list",
+	"",
+	array(
+		"IBLOCK_ID" => $settings['IBLOCK_ID'],
+		"NAME" => "CATALOG_COMPARE_LIST",
+		"DETAIL_URL" => "#system_catalogitem/#ELEMENT_CODE#/",
+		"COMPARE_URL" => "#system_compare",
+		"ACTION_VARIABLE" => "action",
+		"PRODUCT_ID_VARIABLE" => "id",
+		'POSITION_FIXED' => "Y",
+		'POSITION' => 'top left'
+	),
+	false
+);?>
+<?endif;?>
+
 <section class="landing-block g-pt-20 g-pb-20">
 	<div class="container">
-		<div class="tab-content g-pt-20">
+		<div class="tab-content">
 			<div class="tab-pane fade show active">
 				<div class="landing-component">
 				<?$APPLICATION->IncludeComponent(
@@ -99,9 +190,9 @@ else
 					"bootstrap_v4",
 					array(
 						"IBLOCK_TYPE" => "",
-						"IBLOCK_ID" => $iblockId,
-						"SECTION_ID" => "",
-						"SECTION_CODE" => "",
+						"IBLOCK_ID" => $settings['IBLOCK_ID'],
+						"SECTION_ID" => $sectionId,
+						"SECTION_CODE" => $sectionCode,
 						"SECTION_USER_FIELDS" => array(),
 						"ELEMENT_SORT_FIELD" => "sort",
 						"ELEMENT_SORT_ORDER" => "desc",
@@ -147,8 +238,8 @@ else
 						"MESS_BTN_SUBSCRIBE" => "",
 						"MESS_BTN_DETAIL" => "",
 						"MESS_NOT_AVAILABLE" => "",
-						"SECTION_URL" => "#system_catalog#SECTION_CODE_PATH#/",
-						"DETAIL_URL" => "#system_catalogitem/#ELEMENT_CODE#/",
+						"SECTION_URL" => $settings['SECTION_URL'],
+						"DETAIL_URL" => $settings['DETAIL_URL'],
 						"SECTION_ID_VARIABLE" => "SECTION_CODE",
 						"AJAX_MODE" => "N",
 						"AJAX_OPTION_JUMP" => "Y",
@@ -247,7 +338,8 @@ else
 						"MESS_RELATIVE_QUANTITY_MANY" => "",
 						"MESS_RELATIVE_QUANTITY_FEW" => "",
 						"USE_COMPARE_LIST" => "Y",
-						"STRICT_SECTION_CHECK" => "Y",
+						"STRICT_SECTION_CHECK" => "N",
+						"CHECK_LANDING_PRODUCT_SECTION" => "Y",
 						"PREDICT_ELEMENT_COUNT" => "Y",
 						"COMPARE_PATH" => "#system_compare",
 						"HIDE_NOT_AVAILABLE" => $settings['HIDE_NOT_AVAILABLE'],
@@ -265,7 +357,8 @@ else
 						"USE_ENHANCED_ECOMMERCE" => $settings['USE_ENHANCED_ECOMMERCE'],
 						"DATA_LAYER_NAME" => $settings['DATA_LAYER_NAME'],
 						"BRAND_PROPERTY" => $settings['BRAND_PROPERTY'],
-						"CUSTOM_SITE_ID" => $siteId
+						"CUSTOM_SITE_ID" => $siteId,
+						"SECTIONS_CHAIN_START_FROM" => 1
 					),
 					false
 				);?>

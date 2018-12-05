@@ -64,4 +64,5 @@ body.fill_bg_y .top_big_one_banner { max-width: 1710px; margin: 0 auto; }
 	.start_promo .item{padding-bottom:17%;}
 
 	.detail .gallery-block .bigs.flexslider .slides .item{height:828px;line-height:825px;}
+	.footer_bottom_inner > .right_block{padding-left: 338px;}
 }

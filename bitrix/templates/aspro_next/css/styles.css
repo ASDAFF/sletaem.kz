@@ -1037,6 +1037,9 @@ body .flex-direction-nav li .flex-next { background-position: -27px -50px; }
 .absolute .flex-direction-nav li.flex-nav-prev { left: -30px; }
 .absolute .flex-direction-nav li.flex-nav-next { right: -30px; }
 
+body .top_slider_wrapp .box[data-video_source="LINK"] .video.cover{left:auto;}
+body .top_slider_wrapp .box .video.cover{max-height:none;position:static;min-height:none;}
+
 /*countdown*/
 .view_sale_block { margin: 10px 0px 0px; white-space: nowrap;font-size:0px; }
 .view_sale_block > div { display: inline-block; vertical-align: top; font-size: 0px; }

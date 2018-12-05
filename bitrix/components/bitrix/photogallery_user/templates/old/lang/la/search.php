@@ -1,3 +1,3 @@
 <?
-$MESS ['P_TITLE'] = "Buscar";
+$MESS["P_TITLE"] = "Buscar";
 ?>

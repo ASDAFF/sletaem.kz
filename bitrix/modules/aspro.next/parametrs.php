@@ -1155,6 +1155,13 @@ $moduleClass::$arParametrsList = array(
 						'THEME' => 'Y',
 						'CONDITIONAL_VALUE' => 'Y',
 					),
+					'SHOW_REGION_CONTACT' => array(
+						'TITLE' => GetMessage('SHOW_REGION_CONTACT_TITLE'),
+						'TYPE' => 'checkbox',
+						'DEFAULT' => 'N',
+						'THEME' => 'N',
+						'CONDITIONAL_VALUE' => 'Y',
+					),
 					'REGIONALITY_FILTER_ITEM' => array(
 						'TITLE' => GetMessage('REGIONALITY_FILTER_ITEM_TITLE'),
 						'TYPE' => 'checkbox',
@@ -1295,6 +1302,12 @@ $moduleClass::$arParametrsList = array(
 				'TYPE' => 'checkbox',
 				'DEFAULT' => 'Y',
 				'THEME' => 'Y',
+			),
+			'CATALOG_COMPARE' => array(
+				'TITLE' => GetMessage('CATALOG_COMPARE_TITLE'),
+				'TYPE' => 'checkbox',
+				'DEFAULT' => 'Y',
+				'THEME' => 'N',
 			),
 			'CATALOG_PAGE_DETAIL' => array(
 				'TITLE' => GetMessage('CATALOG_DETAIL_PAGE_TITLE'),

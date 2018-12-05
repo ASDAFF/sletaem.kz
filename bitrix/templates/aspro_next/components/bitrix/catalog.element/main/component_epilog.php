@@ -126,9 +126,19 @@ use Bitrix\Main\ModuleManager;
 						var arSearch=parseUrlQuery();
 						$('.tab-content .tab-pane .stores_wrapp').html(data);
 						if("oid" in arSearch)
+						{
 							$('.stores_tab .sku_stores_'+arSearch.oid).show();
+						}
 						else
-							$('.stores_tab .stores_wrapp > div:first').show();
+						{
+							var obSKU = window['<?=$templateData['STR_ID']?>'];
+							if(typeof obSKU == "object")
+							{
+								obSKU.setStoreBlock(obSKU.offers[obSKU.offerNum].ID)
+							}
+							else
+								$('.stores_tab .stores_wrapp > div:first').show();
+						}
 
 					}
 				});

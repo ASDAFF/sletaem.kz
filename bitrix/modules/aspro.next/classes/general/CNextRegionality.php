@@ -18,17 +18,7 @@ if(!class_exists('CNextRegionality'))
 		public static function checkUseRegionality(){
 			if(\Bitrix\Main\Loader::includeModule(ASPRO_NEXT_MODULE_ID))
 			{
-				if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
-				{
-					return CNext::GetFrontParametrValue('USE_REGIONALITY');
-				}
-				else
-				{
-					if(CNext::GetFrontParametrValue('REGIONALITY_TYPE') !== 'ONE_DOMAIN')
-						return CNext::GetFrontParametrValue('USE_REGIONALITY');
-					else
-						return 'N';
-				}
+				return CNext::GetFrontParametrValue('USE_REGIONALITY');
 			}
 			return 'N';
 		}

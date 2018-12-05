@@ -1,7 +1,7 @@
 <?
 $MESS["CT_SPG_TPL_ELEMENT_DELETE_CONFIRM"] = "Damit werden alle Informationen gelöscht, die mit diesem Eintrag zusammenhängen. Fortfahren?";
 $MESS["CT_SPG_TPL_MESS_BTN_BUY"] = "Kaufen";
-$MESS["CT_SPG_TPL_MESS_BTN_CHOOSE"] = "Ausw?hlen";
+$MESS["CT_SPG_TPL_MESS_BTN_CHOOSE"] = "Auswählen";
 $MESS["CT_SPG_TPL_MESS_BTN_ADD_TO_BASKET"] = "In den Warenkorb";
 $MESS["CT_SPG_TPL_MESS_PRODUCT_NOT_AVAILABLE"] = "Nicht am Lager";
 $MESS["CT_SPG_TPL_MESS_BTN_DETAIL"] = "Details";

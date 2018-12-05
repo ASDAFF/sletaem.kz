@@ -4,6 +4,9 @@ function checkNavColor(slider){
 		slider.find('.flex-control-nav').addClass('flex-dark');
 	else
 		slider.find('.flex-control-nav').removeClass('flex-dark');
+
+	var eventdata = {slider: slider};
+	BX.onCustomEvent('onSlide', [eventdata]);
 }
 function checkHeight(){
 	/*if($('.col-m-pull-60').length)
@@ -60,6 +63,7 @@ $(document).ready(function(){
 		try{
 			ignoreResize.push(true);
 			checkHeight();
+			CoverPlayerHtml()
 		}
 		catch(e){}
 		finally{

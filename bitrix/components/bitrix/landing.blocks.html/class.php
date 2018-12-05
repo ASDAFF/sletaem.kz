@@ -12,6 +12,11 @@ class LandingBlocksHtmlComponent extends \CBitrixComponent
 	 */
 	public function executeComponent()
 	{
+		$this->arParams['~HTML_CODE'] = str_replace(
+			'&lt;script',
+			'&lt;script data-skip-moving="true"',
+			$this->arParams['~HTML_CODE']
+		);
 		$this->IncludeComponentTemplate();
 	}
 }

@@ -18,4 +18,15 @@ $MESS["MAIN_MAIL_CONFIRM_INVALID_EMAIL"] = "Dirección de correo electrónico no
 $MESS["MAIN_MAIL_CONFIRM_EMPTY_CODE"] = "Ingrese el código de verificación";
 $MESS["MAIN_MAIL_CONFIRM_INVALID_CODE"] = "Código de verificación incorrecto";
 $MESS["MAIN_MAIL_CONFIRM_MESSAGE_SUBJECT"] = "Confirmar dirección de e-mail";
+$MESS["MAIN_MAIL_CONFIRM_EMAIL_HINT_SMTP"] = "Ingrese su nombre y correo electrónico en los campos a continuación. Se enviará un mensaje con el código de verificación a esta dirección. Puede ingresar el código para verificar el correo electrónico, o <a href=\"#\" class=\"new-from-email-dialog-smtp-link\">proporcionar detalles del servidor SMTP</a>.";
+$MESS["MAIN_MAIL_CONFIRM_SMTP_SERVER"] = "Servidor";
+$MESS["MAIN_MAIL_CONFIRM_SMTP_LOGIN"] = "Usuario";
+$MESS["MAIN_MAIL_CONFIRM_SMTP_PASSWORD"] = "Contraseña";
+$MESS["MAIN_MAIL_CONFIRM_EMPTY_SMTP_SERVER"] = "Ingrese la dirección del servidor SMTP";
+$MESS["MAIN_MAIL_CONFIRM_INVALID_SMTP_SERVER"] = "La dirección del servidor SMTP no es válida";
+$MESS["MAIN_MAIL_CONFIRM_EMPTY_SMTP_PORT"] = "Ingrese al puerto del servidor SMTP";
+$MESS["MAIN_MAIL_CONFIRM_INVALID_SMTP_PORT"] = "El puerto del servidor SMTP no es válido";
+$MESS["MAIN_MAIL_CONFIRM_EMPTY_SMTP_LOGIN"] = "Ingrese al inicio de sesión del servidor SMTP";
+$MESS["MAIN_MAIL_CONFIRM_EMPTY_SMTP_PASSWORD"] = "Ingrese la contraseña del servidor SMTP";
+$MESS["MAIN_MAIL_CONFIRM_SMTP_WARNING"] = "¡Importante! Asegúrese de que los detalles del servidor SMTP que proporcionó sean correctos. De lo contrario, el correo no será entregado.";
 ?>

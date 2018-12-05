@@ -1,4 +1,4 @@
-<h2 style="text-align: center;"><b><span style="color: #003562;">Популярные страны</span></b></h2>
+<h1 style="text-align: center;"><span style="color: #003562; font-size: 20pt;">Горящие туры на популярные курорты</span></h1>
 <?if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();?>
 <?global $isShowMiddleAdvBottomBanner;?>
 <?if($isShowMiddleAdvBottomBanner):?>

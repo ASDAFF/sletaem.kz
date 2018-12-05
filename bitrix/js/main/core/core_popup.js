@@ -2032,7 +2032,15 @@ BX.PopupMenuWindow.prototype.__createPopup = function()
 		angle: false,
 		autoHide: true,
 		offsetTop: 1,
-		offsetLeft: 0
+		offsetLeft: 0,
+		animationOptions: {
+			show: {
+				type: "opacity"
+			},
+			close: {
+				type: "opacity"
+			}
+		}
 	};
 
 	var options = BX.mergeEx(defaults, this.params);

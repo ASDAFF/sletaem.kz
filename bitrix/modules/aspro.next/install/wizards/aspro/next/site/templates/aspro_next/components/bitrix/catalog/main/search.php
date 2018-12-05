@@ -1,4 +1,12 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+
+<?
+/* hide compare link from module options */
+if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+	$arParams["USE_COMPARE"] = 'N';
+/**/
+?>
+
 <?$APPLICATION->SetTitle(GetMessage("CMP_TITLE"));?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.search",
@@ -15,7 +23,7 @@
 			"PROPERTY_CODE" => $arParams["LIST_PROPERTY_CODE"],
 
 			"OFFERS_CART_PROPERTIES" => $arParams["OFFERS_CART_PROPERTIES"],
-			"OFFERS_LIMIT" => $arParams["OFFERS_LIMIT"],
+			"OFFERS_LIMIT" => $arParams["LIST_OFFERS_LIMIT"],
 
 			"SHOW_ARTICLE_SKU" => $arParams["SHOW_ARTICLE_SKU"],
 			"SHOW_MEASURE_WITH_RATIO" => $arParams["SHOW_MEASURE_WITH_RATIO"],

@@ -1,4 +1,5 @@
 <?
+$MESS["CC_BSC1_IMPORT_COMPLETE"] = "Importation terminée";
 $MESS["CC_BCI1_GENERATE_PREVIEW"] = "Générer automatiquement l'image de l'annonce";
 $MESS["CC_BCI1_USE_OFFERS"] = "Tenir la liste des offres dans un bloc d'information à part";
 $MESS["CC_BSC1_ERROR_SESSION_ID_CHANGE"] = "Le changement de l'ID des sessions est activé. Dans le fichier de connexion de l'élément d'échange, avant de connecter le prologue, définissez la constante BX_SESSION_ID_CHANGE: define ('BX_SESSION_ID_CHANGE', faux);";
@@ -28,7 +29,7 @@ $MESS["CC_BSC1_ERROR_UNKNOWN_COMMAND"] = "Ordre inconnu.";
 $MESS["CC_BCI1_NONE"] = "aucun";
 $MESS["CC_BSC1_FILE_PROGRESS"] = "Traité #PERCENT#% du fichier.";
 $MESS["CC_BSC1_ERROR_AUTHORIZE"] = "Erreur de l'autorisation. Nom de l'utilisateur ou mot de passe incorrect.";
-$MESS["CC_BSC1_DEACTIVATION_ERROR"] = "Chec de désactivation des éléments.";
+$MESS["CC_BSC1_DEACTIVATION_ERROR"] = "Échec de désactivation des éléments.";
 $MESS["CC_BSC1_ERROR_FILE_WRITE"] = "Erreur d'enregistrement dans le fichier #FILE_NAME#.";
 $MESS["CC_BSC1_METADATA_ERROR"] = "Erreur d'importation de métadonnées.";
 $MESS["CC_BSC1_ERROR_INIT"] = "Erreur d'initialisation du catalogue temporaire.";
@@ -59,5 +60,4 @@ $MESS["CC_BSC1_ERROR_DATABASE_SERVER_TIME"] = "La différence entre le temps de 
 $MESS["CC_BSC1_DONE"] = "léments a été importé avec succès.";
 $MESS["CC_BSC1_PROGRESS"] = "#DONE#  éléments traités de  #TOTAL#.";
 $MESS["CC_BCI1_DISABLE_CHANGE_PRICE_NAME"] = "Ne changez pas le nom du type de prix si une ID externe est utilisée (XML_ID)";
-$MESS["CC_BSC1_IMPORT_COMPLETE"] = "Importation terminée";
 ?>

@@ -1,4 +1,5 @@
 <?
+$MESS["SALE_SHIPMENT_ITEM_ERR_QUANTITY_EMPTY"] = "Кількість #BASKET_ITEM_NAME# не може бути меншою або рівною 0";
 $MESS["SALE_SHIPMENT_ITEM_BARCODE_MORE_ITEM_QUANTITY"] = "Штрих-кодів більше, ніж кількості товару";
 $MESS["SALE_SHIPMENT_ITEM_SHIPMENT_ALREADY_SHIPPED_CANNOT_EDIT"] = "Відвантаження вже відправлено. Зміни неможливі.";
 $MESS["SALE_SHIPMENT_ITEM_SHIPMENT_ALREADY_SHIPPED_CANNOT_DELETE"] = "Відвантаження вже відправлено. Видалення товару \"#PRODUCT_NAME#\" неможливо.";

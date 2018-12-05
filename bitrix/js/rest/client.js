@@ -1,22 +1,41 @@
+'use strict';
+
 ;(function(){
-	'use strict';
 
-	BX.namespace('BX.rest');
+	/****************** ATTENTION *******************************
+	 * Please do not use Bitrix CoreJS in this class.
+	 * This class can be called on page without Bitrix Framework
+	*************************************************************/
 
-	var endpoint = '/rest';
-
-	if(!!BX.rest.callMethod)
+	if (!window.BX)
+	{
+		window.BX = {};
+	}
+	else if (window.BX.RestClient)
 	{
 		return;
 	}
 
-	BX.rest.callMethod = function(method, params, callback, sendCallback)
+	var BX = window.BX;
+
+	BX.RestClient = function (options)
+	{
+		options = options || {};
+
+		this.endpoint = options.endpoint || '/rest';
+		this.queryParams = options.queryParams || '';
+	};
+
+	BX.RestClient.prototype.callMethod = function(method, params, callback, sendCallback, logTag)
 	{
 		return ajax({
 			method: method,
 			data: params,
 			callback: callback,
-			sendCallback: sendCallback
+			sendCallback: sendCallback,
+			logTag: logTag,
+			endpoint: this.endpoint,
+			queryParams: this.queryParams
 		});
 	};
 
@@ -25,14 +44,13 @@
 	calls = [{method:method,params:params},[method,params]];
 	calls = {call_id:[method,params],...};
 	*/
-	BX.rest.callBatch = function(calls, callback, bHaltOnError, sendCallback)
+	BX.RestClient.prototype.callBatch = function(calls, callback, bHaltOnError, sendCallback, logTag)
 	{
-		var cmd = BX.type.isArray(calls) ? [] : {};
+		var cmd = Utils.isArray(calls) ? [] : {};
 		var cnt = 0;
-		var cb = function(cmd)
-		{
-			ajax.batch(cmd, callback, bHaltOnError, sendCallback);
-		};
+		var cb = function(cmd) {
+			ajax.batch(cmd, callback, bHaltOnError, sendCallback, this.endpoint, this.queryParams, logTag);
+		}.bind(this);
 
 		for(var i in calls)
 		{
@@ -40,7 +58,7 @@
 
 			if(!!calls[i] && calls.hasOwnProperty(i))
 			{
-				if(BX.type.isArray(calls[i]))
+				if(Utils.isArray(calls[i]))
 				{
 					method = calls[i][0];
 					params = calls[i][1];
@@ -81,15 +99,153 @@
 		}
 	};
 
+	BX.RestClient.prototype.setEndpoint = function(url)
+	{
+		this.endpoint = url;
+	};
+
+	BX.RestClient.prototype.setQueryParams = function(params)
+	{
+		this.queryParams = params;
+	};
+
+	/* self init for bitrix env */
+	if (typeof BX.namespace !== 'undefined')
+	{
+		var BXRest = new BX.RestClient();
+
+		if (typeof BX.rest == 'undefined')
+		{
+			BX.rest = {};
+		}
+
+		BX.rest.callMethod = function (method, params, callback, sendCallback, logTag)
+		{
+			return BXRest.callMethod(method, params, callback, sendCallback, logTag);
+		};
+
+		/*
+		calls = [[method,params],[method,params]];
+		calls = [{method:method,params:params},[method,params]];
+		calls = {call_id:[method,params],...};
+		*/
+		BX.rest.callBatch = function (calls, callback, bHaltOnError, sendCallback, logTag)
+		{
+			return BXRest.callBatch(calls, callback, bHaltOnError, sendCallback, logTag);
+		};
+	}
+
+	var Utils = {
+		isArray: function(item) {
+			return item && Object.prototype.toString.call(item) == "[object Array]";
+		},
+		isFunction: function(item) {
+			return item === null ? false : (typeof (item) == "function" || item instanceof Function);
+		},
+		isString: function(item) {
+			return item === '' ? true : (item ? (typeof (item) == "string" || item instanceof String) : false);
+		},
+		isDomNode: function(item) {
+			return item && typeof (item) == "object" && "nodeType" in item;
+		},
+		isDate: function(item) {
+			return item && Object.prototype.toString.call(item) == "[object Date]";
+		},
+		buildQueryString: function(params)
+		{
+			var result = '';
+			for (var key in params)
+			{
+				if (!params.hasOwnProperty(key))
+				{
+					continue;
+				}
+				var value = params[key];
+				if(this.isArray(value))
+				{
+					value.forEach(function(valueElement, index)
+					{
+						result += encodeURIComponent(key + "[" + index + "]") + "=" + encodeURIComponent(valueElement) + "&";
+					});
+				}
+				else
+				{
+					result += encodeURIComponent(key) + "=" + encodeURIComponent(value) + "&";
+				}
+			}
+
+			if(result.length > 0)
+			{
+				result = result.substr(0, result.length - 1);
+			}
+			return result;
+		},
+		clone: function(obj, bCopyObj)
+		{
+			var _obj, i, l;
+			if (bCopyObj !== false)
+				bCopyObj = true;
+
+			if (obj === null)
+				return null;
+
+			if (this.isDomNode(obj))
+			{
+				_obj = obj.cloneNode(bCopyObj);
+			}
+			else if (typeof obj == 'object')
+			{
+				if (this.isArray(obj))
+				{
+					_obj = [];
+					for (i=0,l=obj.length;i<l;i++)
+					{
+						if (typeof obj[i] == "object" && bCopyObj)
+							_obj[i] = this.clone(obj[i], bCopyObj);
+						else
+							_obj[i] = obj[i];
+					}
+				}
+				else
+				{
+					_obj =  {};
+					if (obj.constructor)
+					{
+						if (this.isDate(obj))
+							_obj = new Date(obj);
+						else
+							_obj = new obj.constructor();
+					}
+
+					for (i in obj)
+					{
+						if (typeof obj[i] == "object" && bCopyObj)
+							_obj[i] = this.clone(obj[i], bCopyObj);
+						else
+							_obj[i] = obj[i];
+					}
+				}
+
+			}
+			else
+			{
+				_obj = obj;
+			}
+
+			return _obj;
+		}
+	};
+
 	var ajax = function(config)
 	{
-		var hasCallback = !!config.callback && BX.type.isFunction(config.callback);
-		var promise = hasCallback? null: new BX.Promise();
+		var hasCallback = !!config.callback && Utils.isFunction(config.callback);
+		var promise = typeof BX.Promise === 'undefined' || hasCallback? null: new BX.Promise();
 		var sendCallback = config.sendCallback || function() {};
+		var withoutRestoringCsrf = config.withoutRestoringCsrf || false;
 
 		var xhr = ajax.xhr();
 
-		var url = endpoint + '/' + ajax.escape(config.method) + '.json';
+		var url = config.endpoint + '/' + ajax.escape(config.method) + '.json'+(config.logTag? '?logTag='+config.logTag: '');
 
 		xhr.open('POST', url);
 		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -106,12 +262,11 @@
 			if(bRequestCompleted)
 				return;
 
-			xhr.onload = BX.DoNothing;
+			xhr.onload = function() {};
 
 			var bSuccess = ajax.isSuccess(xhr);
 
 			var status = xhr.status;
-
 			if(bSuccess)
 			{
 				var data = xhr.responseText;
@@ -127,9 +282,34 @@
 						bSuccess = false;
 					}
 				}
-				else if (status == 200)
+
+				if (status == 401)
 				{
-					data = {result: {}};
+					if (data.sessid && !withoutRestoringCsrf)
+					{
+						BX.message({'bitrix_sessid': data.sessid});
+						console.warn('BX.rest: your csrf-token has expired, send query with a new token');
+
+						config.withoutRestoringCsrf = true;
+
+						if (!hasCallback)
+						{
+							config.callback = function(result)
+							{
+								if (result.error())
+								{
+									promise.reject(result);
+								}
+								else
+								{
+									promise.fulfill(result);
+								}
+							}
+						}
+						ajax(config);
+
+						return true;
+					}
 				}
 				else if (status == 0)
 				{
@@ -137,7 +317,17 @@
 				}
 				else
 				{
-					data = {result: {}, error: "BLANK_ANSWER_WITH_ERROR_CODE", error_description: 'Blank answer with error http code: '+status};
+					if (status == 200)
+					{
+						if (data.length <= 0)
+						{
+							data = {result: {}};
+						}
+					}
+					else if (data.length <= 0)
+					{
+						data = {result: {}, error: "BLANK_ANSWER_WITH_ERROR_CODE", error_description: 'Blank answer with error http code: '+status};
+					}
 				}
 			}
 
@@ -196,7 +386,15 @@
 			}
 		};
 
-		var query_data = 'sessid=' + BX.bitrix_sessid();
+		var query_data = '';
+		if (config.queryParams)
+		{
+			query_data = Utils.buildQueryString(config.queryParams);
+		}
+		else if (typeof BX.bitrix_sessid !== 'undefined')
+		{
+			query_data = 'sessid=' + BX.bitrix_sessid();
+		}
 
 		if(typeof config.start !== 'undefined')
 		{
@@ -218,10 +416,10 @@
 			sendCallback(xhr);
 		}
 
-		return hasCallback? xhr: promise;
+		return hasCallback || !promise? xhr: promise;
 	};
 
-	ajax.batch = function(calls, callback, bHaltOnError, sendCallback)
+	ajax.batch = function(calls, callback, bHaltOnError, sendCallback, endpoint, queryParams, logTag)
 	{
 		return ajax({
 			method: 'batch',
@@ -232,21 +430,21 @@
 				{
 					var error = res.error();
 					var data = res.data();
-					var result = BX.type.isArray(calls) ? [] : {};
+					var result = Utils.isArray(calls) ? [] : {};
 
 					for(var i in calls)
 					{
 						if(!!calls[i] && calls.hasOwnProperty(i))
 						{
-							if(BX.type.isString(calls[i]))
+							if(Utils.isString(calls[i]))
 							{
 								var q = calls[i].split('?');
 							}
 							else
 							{
 								q = [
-									BX.type.isArray(calls[i]) ? calls[i][0] : calls[i].method,
-									BX.type.isArray(calls[i]) ? calls[i][1] : calls[i].data
+									Utils.isArray(calls[i]) ? calls[i][0] : calls[i].method,
+									Utils.isArray(calls[i]) ? calls[i][1] : calls[i].data
 								];
 							}
 
@@ -261,19 +459,23 @@
 								}, {
 									method: q[0],
 									data: q[1],
-									callback: callback
+									callback: callback,
+									endpoint: endpoint,
+									queryParams: queryParams
 								}, res.status);
 							}
 							else if (error)
 							{
 								result[i] = new ajaxResult({
 									result: {},
-									error: {error: error.ex.error, description: error.ex.error_description},
+									error: error.ex,
 									total: 0
 								}, {
 									method: q[0],
 									data: q[1],
-									callback: callback
+									callback: callback,
+									endpoint: endpoint,
+									queryParams: queryParams
 								}, res.status);
 							}
 						}
@@ -282,7 +484,10 @@
 					callback.apply(window, [result]);
 				}
 			},
-			sendCallback: sendCallback
+			sendCallback: sendCallback,
+			endpoint: endpoint,
+			queryParams: queryParams,
+			logTag: logTag
 		});
 	};
 
@@ -293,13 +498,13 @@
 
 	ajax.escape = function(str)
 	{
-		return BX.util.urlencode(str);
+		return encodeURIComponent(str);
 	};
 
 	ajax.prepareData = function(arData, prefix, callback)
 	{
 		var data = '', objects = [];
-		if(BX.type.isString(arData) || arData === null)
+		if(Utils.isString(arData) || arData === null)
 		{
 			callback.call(document, arData || '');
 		}
@@ -354,7 +559,7 @@
 				var cnt1 = cnt;
 				for(var i = 0; i < cnt1; i++)
 				{
-					if(BX.type.isDomNode(objects[i][1]))
+					if(Utils.isDomNode(objects[i][1]))
 					{
 						if(objects[i][1].tagName.toUpperCase() === 'INPUT' && objects[i][1].type === 'file')
 						{
@@ -364,7 +569,7 @@
 								{
 									return function(result)
 									{
-										if(BX.type.isArray(result) && result.length > 0)
+										if(Utils.isArray(result) && result.length > 0)
 										{
 											cb(name + '[0]=' + ajax.escape(result[0]) + '&' + name + '[1]=' + ajax.escape(result[1]));
 										}
@@ -385,11 +590,11 @@
 							cb('');
 						}
 					}
-					else if(BX.type.isDate(objects[i][1]))
+					else if(Utils.isDate(objects[i][1]))
 					{
 						cb(objects[i][0] + '=' + ajax.escape(objects[i][1].toJSON()));
 					}
-					else if(BX.type.isArray(objects[i][1]) && objects[i][1].length <= 0)
+					else if(Utils.isArray(objects[i][1]) && objects[i][1].length <= 0)
 					{
 						cb(objects[i][0] + '=');
 					}
@@ -414,7 +619,7 @@
 	var ajaxResult = function(answer, query, status)
 	{
 		this.answer = answer;
-		this.query = BX.clone(query);
+		this.query = Utils.clone(query);
 		this.status = status;
 
 		if(typeof this.answer.next !== 'undefined')
@@ -464,7 +669,7 @@
 		{
 			this.query.start = this.answer.next;
 
-			if(!!cb && BX.type.isFunction(cb))
+			if(!!cb && Utils.isFunction(cb))
 			{
 				this.query.callback = cb;
 			}
@@ -499,7 +704,6 @@
 				: ''
 		) + ' (' + this.status + ')';
 	};
-
 
 	var fileReader = function(fileInput, cb)
 	{

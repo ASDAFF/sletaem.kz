@@ -67,7 +67,10 @@
 		</div>
 		<div class="col-md-9 col-sm-9 big">
 			<?if($arRegion):?>
-				<?=$arRegion['DETAIL_TEXT'];?>
+				<?$frame = new \Bitrix\Main\Page\FrameHelper('text-regionality-block');?>
+				<?$frame->begin();?>
+					<?=$arRegion['DETAIL_TEXT'];?>
+				<?$frame->end();?>
 			<?else:?>
 				<?$APPLICATION->IncludeComponent("bitrix:main.include", "front", Array("AREA_FILE_SHOW" => "file","PATH" => SITE_DIR."include/mainpage/company/front_info.php","EDIT_TEMPLATE" => ""));?>
 			<?endif;?>

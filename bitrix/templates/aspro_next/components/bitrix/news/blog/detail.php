@@ -95,6 +95,13 @@ if($arParams["SHOW_NEXT_ELEMENT"] == "Y")
 	}
 	?>
 
+	<?
+	/* hide compare link from module options */
+	if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+		$arParams["DISPLAY_COMPARE"] = 'N';
+	/**/
+	?>
+	
 	<div class="detail <?=($templateName = $component->{'__template'}->{'__name'})?>">
 		<?if($arParams["USE_SHARE"] == "Y" && $arElement):?>
 			<div class="line_block share top <?=($arParams['USE_RSS'] !== 'N' ? 'rss-block' : '');?>">

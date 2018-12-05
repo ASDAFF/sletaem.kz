@@ -11,7 +11,7 @@
 										</div>
 									</div>
 								</div><?endif;?>
-								<?if($isHideLeftBlock):?>
+								<?if($isHideLeftBlock && !$isWidePage):?>
 									</div> <?// .maxwidth-theme?>
 								<?endif;?>
 								</div> <?// .container?>

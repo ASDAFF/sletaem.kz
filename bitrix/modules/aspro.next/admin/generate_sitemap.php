@@ -257,6 +257,8 @@ if($RIGHT >= "R"){
 																	$arLandings[$LID]['PROPERTY_QUERY_VALUE']
 																);
 
+																$url = str_replace('&', '%26', $url);
+
 																if(strpos($url, 'http') === false){
 																	$url = (CMain::isHTTPS() ? 'https://' : 'http://').str_replace('//', '/', $siteMapUrl.$url);
 																}

@@ -1,11 +1,11 @@
 <section class="g-bg-primary g-pt-100 g-pb-100">
 	<div class="container">
 		<section class="js-carousel"
-				 data-pagi-classes="u-carousel-indicators-v1 g-absolute-centered--x g-bottom-30">
+				 data-pagi-classes="u-carousel-indicators-v1--white-inverse g-absolute-centered--x g-bottom-30">
 			<div class="landing-block-node-card js-slide">
 				<!-- Article -->
 				<article class="row flex-items-middle text-center">
-					<div class="col-lg-6 align-self-center g-mb-50">
+					<div class="col-lg-6 align-self-center g-mb-0 g-mb-50--lg">
 						<div class="text-uppercase text-center u-heading-v5-3 u-heading-v5-color-primary u-heading-v5-rounded-50x g-mb-20">
 							<h4 class="landing-block-node-card-subtitle g-font-weight-700 g-font-size-12 g-color-white-opacity-0_7 g-mb-15">From
 								chef</h4>
@@ -39,7 +39,7 @@
 			<div class="landing-block-node-card js-slide">
 				<!-- Article -->
 				<article class="row flex-items-middle text-center">
-					<div class="col-lg-6 align-self-center g-mb-50">
+					<div class="col-lg-6 align-self-center g-mb-0 g-mb-50--lg">
 						<div class="text-uppercase text-center u-heading-v5-3 u-heading-v5-color-primary u-heading-v5-rounded-50x g-mb-20">
 							<h4 class="landing-block-node-card-subtitle g-font-weight-700 g-font-size-12 g-color-white-opacity-0_7 g-mb-15">From
 								chef</h4>
@@ -73,7 +73,7 @@
 			<div class="landing-block-node-card js-slide">
 				<!-- Article -->
 				<article class="row flex-items-middle text-center">
-					<div class="col-lg-6 align-self-center g-mb-50">
+					<div class="col-lg-6 align-self-center g-mb-0 g-mb-50--lg">
 						<div class="text-uppercase text-center u-heading-v5-3 u-heading-v5-color-primary u-heading-v5-rounded-50x g-mb-20">
 							<h4 class="landing-block-node-card-subtitle g-font-weight-700 g-font-size-12 g-color-white-opacity-0_7 g-mb-15">From
 								chef</h4>
@@ -107,7 +107,7 @@
 			<div class="landing-block-node-card js-slide">
 				<!-- Article -->
 				<article class="row flex-items-middle text-center">
-					<div class="col-lg-6 align-self-center g-mb-50">
+					<div class="col-lg-6 align-self-center g-mb-0 g-mb-50--lg">
 						<div class="text-uppercase text-center u-heading-v5-3 u-heading-v5-color-primary u-heading-v5-rounded-50x g-mb-20">
 							<h4 class="landing-block-node-card-subtitle g-font-weight-700 g-font-size-12 g-color-white-opacity-0_7 g-mb-15">From
 								chef</h4>
@@ -141,7 +141,7 @@
 			<div class="landing-block-node-card js-slide">
 				<!-- Article -->
 				<article class="row flex-items-middle text-center">
-					<div class="col-lg-6 align-self-center g-mb-50">
+					<div class="col-lg-6 align-self-center g-mb-0 g-mb-50--lg">
 						<div class="text-uppercase text-center u-heading-v5-3 u-heading-v5-color-primary u-heading-v5-rounded-50x g-mb-20">
 							<h4 class="landing-block-node-card-subtitle g-font-weight-700 g-font-size-12 g-color-white-opacity-0_7 g-mb-15">From
 								chef</h4>

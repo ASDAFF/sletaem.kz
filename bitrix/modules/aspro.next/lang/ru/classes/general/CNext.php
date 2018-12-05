@@ -85,6 +85,7 @@ $MESS["JS_COMPARE_TITLE"] = "Сравнение товаров";
 $MESS["CALLBACK"] = "Заказать звонок";
 $MESS["NEXT_T_MENU_CALLBACK"] = "Телефоны";
 $MESS["NEXT_T_MENU_REGIONS"] = "Города";
+$MESS["CATALOG_ECONOMY"] = "Экономия";
 
 $MESS["M_SECTIONS_TYPE_VIEW"] = "Шаблон страницы блока списка разделов";
 $MESS["M_SECTION_TYPE_VIEW"] = "Шаблон страницы блока списка подразделов";

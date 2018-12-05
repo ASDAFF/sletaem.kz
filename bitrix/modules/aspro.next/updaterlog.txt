@@ -247,3 +247,32 @@
 05.10.2018 19:30:53 START UPDATE 1.2.9 -> 1.3.0
 
 05.10.2018 19:30:56 Update /catalog/index.php
+
+03.12.2018 22:48:26 START UPDATE 1.3.0 -> 1.3.1
+
+03.12.2018 22:48:47 Update /contacts/page_contacts_1.php
+03.12.2018 22:48:47 Update /contacts/page_contacts_2.php
+03.12.2018 22:48:47 Update /contacts/page_contacts_3.php
+03.12.2018 22:48:47 Update /contacts/page_contacts_4.php
+03.12.2018 22:48:47 Update /include/share_buttons.php
+03.12.2018 22:48:47 Update /include/mainpage/comp_catalog_ajax.php
+03.12.2018 22:48:47 Update /include/top_page/comp_basket_top.php
+03.12.2018 22:48:47 Update /indexblocks_index1.php
+03.12.2018 22:48:47 Update /indexblocks_index2.php
+03.12.2018 22:48:47 Update /indexblocks_index3.php
+03.12.2018 22:48:47 Update /indexblocks_index4.php
+03.12.2018 22:48:47 Update /ajax/goals.php
+03.12.2018 22:48:47 Update /ajax/js_item_detail.php
+03.12.2018 22:48:47 Update /services/.left.menu_ext.php
+03.12.2018 22:48:47 IBLOCK_ID: 3. Add SHOW_VIDEO property=227
+03.12.2018 22:48:47 IBLOCK_ID: 3. Add VIDEO_SOURCE property=228
+03.12.2018 22:48:47 IBLOCK_ID: 3. Add VIDEO property=229
+03.12.2018 22:48:47 IBLOCK_ID: 3. Add VIDEO_AUTOSTART property=230
+03.12.2018 22:48:47 IBLOCK_ID: 3. Add VIDEO_COVER property=231
+03.12.2018 22:48:47 IBLOCK_ID: 3. Add VIDEO_DISABLE_SOUND property=232
+03.12.2018 22:48:48 IBLOCK_ID: 3. Add VIDEO_LOOP property=233
+03.12.2018 22:48:48 IBLOCK_ID: 3. Add VIDEO_SRC property=234
+03.12.2018 22:48:48 IBLOCK_ID: 3. Add BUTTON_VIDEO_TEXT property=235
+03.12.2018 22:48:48 IBLOCK_ID: 3. Add BUTTON_VIDEO_CLASS property=236
+03.12.2018 22:48:48 Update /footer.php
+03.12.2018 22:48:48 Update /header.php

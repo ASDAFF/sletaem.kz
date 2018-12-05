@@ -106,6 +106,11 @@ if($arTheme["GRUPPER_PROPS"]["VALUE"] != "NOT")
 		$arParams["GRUPPER_PROPS"] = "NOT";
 }
 
+/* hide compare link from module options */
+if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+	$arParams["USE_COMPARE"] = 'N';
+/**/
+
 if($bFastViewMode)
 	include_once('element_fast_view.php');
 else

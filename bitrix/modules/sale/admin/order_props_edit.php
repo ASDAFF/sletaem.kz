@@ -419,7 +419,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST["apply"]) || isset($_P
 
 		$propertyForDB = array();
 		foreach ($commonSettings + $inputSettings + $stringSettings + $locationSettings as $name => $input)
+		{
+			if (is_string($property[$name]))
+			{
+				$property[$name] = trim($property[$name]);
+			}
+
 			$propertyForDB[$name] = Input\Manager::getValue($input, $property[$name]);
+		}
 
 		$propertyForDB['SETTINGS'] = array_intersect_key($propertyForDB, $inputSettings);
 		$propertyForDB = array_diff_key($propertyForDB, $propertyForDB['SETTINGS']);

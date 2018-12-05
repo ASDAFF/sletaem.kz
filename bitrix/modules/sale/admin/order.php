@@ -4136,6 +4136,7 @@ $lAdmin->DisplayList();
 echo BeginNote();
 ?>
 <span id="order_sum"><? echo $order_sum;?></span>
+<?echo EndNote();?>
 
 <script type="text/javascript">
 	function sendDeliveryRequestsForCurrentOrders(selectedOnly)
@@ -4171,5 +4172,4 @@ echo BeginNote();
 	}
 </script>
 
-<?echo EndNote();
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_admin.php");
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_admin.php");

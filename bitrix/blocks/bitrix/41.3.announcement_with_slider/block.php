@@ -10,8 +10,8 @@
 				<div class="row g-mx-minus-5">
 					<div class="col-md-4 g-px-5 g-mb-20 g-mb-0--md">
 						<div class="media">
-							<div class="media-left d-flex align-self-center g-mr-20">
-								<i class="landing-block-node-date-icon fa fa-calendar g-font-size-27 g-color-white-opacity-0_5"></i>
+							<div class="landing-block-node-date-icon-container media-left d-flex align-self-center g-mr-20 g-color-white-opacity-0_5 g-font-size-27">
+								<i class="landing-block-node-date-icon fa fa-calendar"></i>
 							</div>
 
 							<div class="media-body text-uppercase">
@@ -25,8 +25,8 @@
 
 					<div class="col-md-5 g-px-5 g-mb-20 g-mb-0--md">
 						<div class="media">
-							<div class="media-left d-flex align-self-center g-mr-20">
-								<i class="landing-block-node-place-icon fa fa-map-marker g-font-size-27 g-color-white-opacity-0_5"></i>
+							<div class="landing-block-node-place-icon-container media-left d-flex align-self-center g-mr-20 g-color-white-opacity-0_5 g-font-size-27">
+								<i class="landing-block-node-place-icon fa fa-map-marker"></i>
 							</div>
 
 							<div class="media-body text-uppercase">

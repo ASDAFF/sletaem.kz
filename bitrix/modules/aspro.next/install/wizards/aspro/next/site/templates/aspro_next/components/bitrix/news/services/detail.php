@@ -7,7 +7,7 @@ $arItemFilter = CNext::GetCurrentElementFilter($arResult['VARIABLES'], $arParams
 global $APPLICATION;
 $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/css/animation/animate.min.css');
 
-$arElement = CNextCache::CIblockElement_GetList(array('CACHE' => array('TAG' => CNextCache::GetIBlockCacheTag($arParams['IBLOCK_ID']), 'MULTI' => 'N')), $arItemFilter, false, false, array('ID', 'PREVIEW_TEXT', 'IBLOCK_SECTION_ID', 'PREVIEW_PICTURE', 'DETAIL_PICTURE', 'DETAIL_PAGE_URL', 'LIST_PAGE_URL', 'PROPERTY_LINK_PROJECTS', 'PROPERTY_LINK_GOODS', 'PROPERTY_LINK_REVIEWS', 'PROPERTY_LINK_STAFF', 'PROPERTY_LINK_SERVICES'));
+$arElement = CNextCache::CIblockElement_GetList(array('CACHE' => array('TAG' => CNextCache::GetIBlockCacheTag($arParams['IBLOCK_ID']), 'MULTI' => 'N')), $arItemFilter, false, false, array('ID', 'PREVIEW_TEXT', 'IBLOCK_SECTION_ID', 'PREVIEW_PICTURE', 'DETAIL_PICTURE', 'DETAIL_PAGE_URL', 'LIST_PAGE_URL', 'PROPERTY_LINK_PROJECTS', 'PROPERTY_LINK_GOODS', 'PROPERTY_LINK_REVIEWS', 'PROPERTY_LINK_STAFF', 'PROPERTY_FORM_QUESTION', 'PROPERTY_LINK_SERVICES'));
 
 if($arParams["SHOW_NEXT_ELEMENT"] == "Y")
 {
@@ -55,6 +55,12 @@ if($arParams["SHOW_NEXT_ELEMENT"] == "Y")
 			'og:image' => (($arElement['PREVIEW_PICTURE'] || $arElement['DETAIL_PICTURE']) ? CFile::GetPath(($arElement['PREVIEW_PICTURE'] ? $arElement['PREVIEW_PICTURE'] : $arElement['DETAIL_PICTURE'])) : false),
 		)
 	);?>
+	<?
+	/* hide compare link from module options */
+	if(CNext::GetFrontParametrValue('CATALOG_COMPARE') == 'N')
+		$arParams["DISPLAY_COMPARE"] = 'N';
+	/**/
+	?>
 	<div class="detail <?=($templateName = $component->{'__template'}->{'__name'})?>">
 		<?if($arParams["USE_SHARE"] == "Y" && $arElement):?>
 			<div class="line_block share top <?=($arParams['USE_RSS'] !== 'N' ? 'rss-block' : '');?>">
@@ -80,29 +86,39 @@ if($arParams["SHOW_NEXT_ELEMENT"] == "Y")
 		CNext::CheckAdditionalChainInMultiLevel($arResult, $arParams, $arElement);
 	}*/
 	?>
-<?endif;?>
-<div style="clear:both"></div>
-<hr class="bottoms" />
-<?if($arParams["SHOW_NEXT_ELEMENT"] == "Y"):?>
-	<div class="row links-block">
-		<div class="col-md-12 links">
-			<a class="back-url url-block" href="<?=$arResult['FOLDER'].$arResult['URL_TEMPLATES']['news']?>"><i class="fa fa-angle-left"></i><span><?=($arParams["T_PREV_LINK"] ? $arParams["T_PREV_LINK"] : GetMessage('BACK_LINK'));?></span></a>
-			<?if($arElementNext):?>
-				<a class="next-url url-block" href="<?=$arElementNext['DETAIL_PAGE_URL']?>"><i class="fa fa-angle-right"></i><span><?=($arParams["T_NEXT_LINK"] ? $arParams["T_NEXT_LINK"] : GetMessage('NEXT_LINK'));?></span></a>
-			<?endif;?>
-		</div>
-	</div>
-<?else:?>
-	<div class="row">
-		<div class="col-md-6 share">
-			<?if($arParams["USE_SHARE"] == "Y" && $arElement):?>
-				<div class="line_block">
-					<?$APPLICATION->IncludeFile(SITE_DIR."include/share_buttons.php", Array(), Array("MODE" => "html", "NAME" => GetMessage('CT_BCE_CATALOG_SOC_BUTTON')));?>
+	
+	<?global $isHideLeftBlock;?>
+	<?if(in_array('FORM_QUESTION', $arParams['DETAIL_PROPERTY_CODE']) && $arElement['PROPERTY_FORM_QUESTION_VALUE'] && $isHideLeftBlock):?>
+		<div class="row">
+			<div class="col-md-9">
+	<?endif;?>
+		<div style="clear:both"></div>
+		<hr class="bottoms" />
+		<?if($arParams["SHOW_NEXT_ELEMENT"] == "Y"):?>
+			<div class="row links-block">
+				<div class="col-md-12 links">
+					<a class="back-url url-block" href="<?=$arResult['FOLDER'].$arResult['URL_TEMPLATES']['news']?>"><i class="fa fa-angle-left"></i><span><?=($arParams["T_PREV_LINK"] ? $arParams["T_PREV_LINK"] : GetMessage('BACK_LINK'));?></span></a>
+					<?if($arElementNext):?>
+						<a class="next-url url-block" href="<?=$arElementNext['DETAIL_PAGE_URL']?>"><i class="fa fa-angle-right"></i><span><?=($arParams["T_NEXT_LINK"] ? $arParams["T_NEXT_LINK"] : GetMessage('NEXT_LINK'));?></span></a>
+					<?endif;?>
 				</div>
-			<?endif;?>
-		</div>
-		<div class="col-md-6">
-			<a class="back-url url-block" href="<?=$arResult['FOLDER'].$arResult['URL_TEMPLATES']['news']?>"><i class="fa fa-angle-left"></i><span><?=($arParams["T_PREV_LINK"] ? $arParams["T_PREV_LINK"] : GetMessage('BACK_LINK'));?></span></a>
-		</div>
-	</div>
+			</div>
+		<?else:?>
+			<div class="row">
+				<div class="col-md-6 share">
+					<?if($arParams["USE_SHARE"] == "Y" && $arElement):?>
+						<div class="line_block">
+							<?$APPLICATION->IncludeFile(SITE_DIR."include/share_buttons.php", Array(), Array("MODE" => "html", "NAME" => GetMessage('CT_BCE_CATALOG_SOC_BUTTON')));?>
+						</div>
+					<?endif;?>
+				</div>
+				<div class="col-md-6">
+					<a class="back-url url-block" href="<?=$arResult['FOLDER'].$arResult['URL_TEMPLATES']['news']?>"><i class="fa fa-angle-left"></i><span><?=($arParams["T_PREV_LINK"] ? $arParams["T_PREV_LINK"] : GetMessage('BACK_LINK'));?></span></a>
+				</div>
+			</div>
+		<?endif;?>
+	<?if(in_array('FORM_QUESTION', $arParams['DETAIL_PROPERTY_CODE']) && $arElement['PROPERTY_FORM_QUESTION_VALUE'] && $isHideLeftBlock):?>
+		</div></div>
+	<?endif;?>
+	
 <?endif;?>

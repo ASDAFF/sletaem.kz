@@ -35,25 +35,6 @@
 	),
 	false
 );?>
-
-<br />
-<div class="wrapper_inner">
-<script type="text/javascript" src="//ui.sletat.ru/module-5.0/app.js" charset="utf-8"></script>
-<script type="text/javascript">sletat.createModule5('Search', {
-  city              : 1312,
-  country           : 90,
-  files             : ["//ui.sletat.ru/module-5.0/theme/sea_dec2015.min.css"],
-  currency          : "USD",
-  agencyContact1    : {
-    logo            : "https://www.chocotravel.com/media/v3/media/images/chocotravel-logo_03.png\"",
-    content         : "Chocotravel.com – туристический портал, созданный для Казахстанцев!"
-  },
-  enabledCurrencies : ["USD", "KZT"],
-  useCard           : false
-});</script>
-<span class="sletat-copyright">Идет загрузка модуля <a href="http://sletat.ru/" title="поиск туров" target="_blank">поиска туров</a> &hellip;</span>
-</div>
-
 <div class="grey_block small-padding">
 	<div class="maxwidth-theme">
 		<?$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
@@ -160,7 +141,10 @@
 			</div>
 			<div class="col-md-9 col-sm-9 big">
 				<?if($arRegion):?>
-					<?=$arRegion['DETAIL_TEXT'];?>
+					<?$frame = new \Bitrix\Main\Page\FrameHelper('text-regionality-block');?>
+						<?$frame->begin();?>
+							<?=$arRegion['DETAIL_TEXT'];?>
+						<?$frame->end();?>
 				<?else:?>
 					<?$APPLICATION->IncludeComponent("bitrix:main.include", "front", Array("AREA_FILE_SHOW" => "file","PATH" => SITE_DIR."include/mainpage/company/front_info.php","EDIT_TEMPLATE" => ""));?>
 				<?endif;?>
